@@ -20,8 +20,8 @@ let render
 =
 Layout.render
 ~use_swiper:true
-~title:"Welcome to a World of OCaml"
-~description:"OCaml is a general-purpose, industrial-strength programming language with an emphasis on expressiveness and safety."
+~title:"Welcome to a World of Rocq"
+~description:"Rocq is a general-purpose, industrial-strength interactive theorem prover."
 ~canonical:"" @@
 <div class="lg:py-24 py-2">
   <div class="container-fluid space-y-24 lg:space-y-32">
@@ -31,13 +31,13 @@ Layout.render
           OCaml
         </h1>
         <p class="my-7 text-2xl text-content dark:text-dark-content">
-          An industrial-strength functional programming language
-          with an emphasis on expressiveness and safety
+          An industrial-strength interactive theorem prover and dependently-typed programming language
+          for mathematics, computer science and mechanised reasoning in general.
         </p>
         <div class="space-x-0 lg:space-x-6">
           <a class="btn btn-lg mb-4 lg:mb-0" href="<%s Url.install %>">Install</a>
           <a class="btn btn-lg btn-ghost" href="<%s Url.about %>">
-            About OCaml
+            About Rocq
           </a>
         </div>
         <div class="mt-6">
@@ -113,16 +113,16 @@ Layout.render
     <div class="text-center">
       <h2 class="font-bold text-title dark:text-dark-title">Trusted by Industry Leaders</h2>
       <div class="text-content dark:text-dark-content text-base mt-3">
-        These companies and organisations rely on OCaml every day — along with thousands of other developers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
+        These companies and organisations rely on Rocq every day — along with hundreds of other researchers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
       </div>
       <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
-          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/facebook.svg" %>" alt="Facebook">
+          <!-- <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/bluerock.svg" %>" alt="BlueRock">
           </div>
           <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/microsoft.svg" %>" alt="Microsoft">
-          </div>
-          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalvindications.svg" %>" alt="FormalVindications">
+          </div> -->
+          <!-- <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
               <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/docker.svg" %>" alt="Docker">
           </div>
           <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
@@ -136,7 +136,7 @@ Layout.render
           </div>
           <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
               <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/ahrefs.svg" %>" alt="Ahrefs">
-          </div>
+          </div> -->
       </div>
     </div>
   </div>
@@ -159,11 +159,16 @@ Layout.render
               <p class="text-title dark:text-dark-title font-bold">Powerful Type Safety Made Simple</p>
             </h3>
             <p class="my-4 text-lg text-content dark:text-dark-content">
-              OCaml’s lightweight but highly expressive type system catches more bugs at compile time while garbage collection allows you to focus on application logic instead of memory management.
-              Large, complex codebases become easy to maintain and refactor.
-              OCaml empowers you to create mission-critical software with
+              Rocq's highly expressive type system and proof language enable fully mechanised verification 
+              of programs with respect to strong specifications and of mathematical statements. 
+              Its well-studied core type theory implemented in a well-delimited kernel using the performant 
+              and safe OCaml programming language provides the highest possible guarantees on mechanised artifacts. 
+              The core type theory is itself formalised in Rocq in the MetaRocq project, a verified reference checker 
+              is proven correct and complete with respect to this specification and can be extracted to reduce the 
+              trusted code base of any formalization to the specification of Rocq's theory and the user specification.
+              <!-- OCaml empowers you to create mission-critical software with
               highest security- and safety-requirements in environments with
-              ever-changing requirements!
+              ever-changing requirements! -->
             </p>
           </div>
         </div>
