@@ -28,7 +28,7 @@ Layout.render
     <div class="flex flex-col lg:flex-row gap-6">
       <div class="lg:flex-1 lg:mt-16 my-12">
         <h1 class="lg:pr-10 text-7xl font-bold text-title dark:text-dark-title">
-          OCaml
+          Rocq
         </h1>
         <p class="my-7 text-2xl text-content dark:text-dark-content">
           An industrial-strength interactive theorem prover and dependently-typed programming language
@@ -116,12 +116,6 @@ Layout.render
         These companies and organisations rely on Rocq every day — along with hundreds of other researchers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
       </div>
       <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
-          <!-- <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/bluerock.svg" %>" alt="BlueRock">
-          </div>
-          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalvindications.svg" %>" alt="FormalVindications">
-          </div> -->
           <!-- <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
               <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/docker.svg" %>" alt="Docker">
           </div>
