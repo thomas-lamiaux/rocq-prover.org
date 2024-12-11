@@ -95,7 +95,7 @@ let cookbook_recipe ~task_slug slug = "/cookbook/" ^ task_slug ^ "/" ^ slug
 
 let github_opam_file package_name package_version =
   Printf.sprintf
-    "https://github.com/ocaml/opam-repository/blob/master/packages/%s/%s.%s/opam"
+    "https://github.com/coq/opam/blob/master/released/packages/%s/%s.%s/opam"
     package_name package_name package_version
 
 let is_ocaml_yet id = Printf.sprintf "/docs/is-ocaml-%s-yet" id

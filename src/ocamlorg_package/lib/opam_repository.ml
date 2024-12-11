@@ -41,6 +41,8 @@ end
 let clone_path = Config.opam_repository_path
 let exists () = Result.get_ok (Bos.OS.Path.exists clone_path)
 
+let packages_path = Fpath.(clone_path / "released" / "packages")
+
 let git_cmd args =
   ("git", Array.of_list ("git" :: "-C" :: Fpath.to_string clone_path :: args))
 
@@ -59,7 +61,8 @@ let clone () =
         [|
           "git";
           "clone";
-          "https://github.com/ocaml/opam-repository.git";
+          "--depth"; "1";
+          "https://github.com/coq/opam.git";
           Fpath.to_string clone_path;
         |] )
   in
@@ -100,10 +103,10 @@ let ls_dir_in_dir directory =
     [] directory
 
 let list_package_versions package =
-  ls_dir_in_dir Fpath.(to_string (clone_path / "packages" / package))
+  ls_dir_in_dir Fpath.(to_string (packages_path / package))
 
 let list_packages_and_versions () =
-  let directory = Fpath.(to_string (clone_path / "packages")) in
+  let directory = Fpath.(to_string (packages_path)) in
   fold_dir
     (fun x acc ->
       match list_package_versions x with
@@ -113,7 +116,7 @@ let list_packages_and_versions () =
   |> Option.value ~default:[]
 
 let list_packages () =
-  ls_dir_in_dir Fpath.(to_string (clone_path / "packages"))
+  ls_dir_in_dir Fpath.(to_string (packages_path))
   |> Option.value ~default:[]
 
 let process_opam_file f =
@@ -124,7 +127,7 @@ let process_opam_file f =
 
 let opam_file package_name package_version =
   let opam_file =
-    Fpath.(clone_path / "packages" / package_name / package_version / "opam")
+    Fpath.(packages_path / package_name / package_version / "opam")
   in
   process_opam_file opam_file
 
