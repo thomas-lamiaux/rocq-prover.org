@@ -53,8 +53,8 @@ in
     <ul class="order-0 space space-x-5 xl:space-x-8 items-center flex text-content font-medium dark:text-title dark:text-opacity-60 dark:font-semibold">
       <li style="width:132px">
         <a href="<%s Url.index %>" class="block pb-2">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" width="132" alt="OCaml logo" class="dark:hidden">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-white.svg" %>" width="132" alt="OCaml logo" class="hidden dark:inline">
+          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" width="132" alt="Rocq logo" class="dark:hidden">
+          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-white.svg" %>" width="132" alt="Rocq logo" class="hidden dark:inline">
         </a>
       </li>
     </ul>
@@ -65,7 +65,7 @@ in
           action="/packages/search" method="GET">
           <%s! Forms.search_input
             ~name:"q"
-            ~label:"Search OCaml packages"
+            ~label:"Search Rocq packages"
             ~button_attrs:{|type="submit"|}
             ~input_attrs:({|@keydown.stop |} ^ Packages_autocomplete_fragment.input_attributes ~target_sel:"#header-search-results" ~indicator_sel:"#header-search-indicator")
             ~dropdown_html:(search_dropdown ())
@@ -103,8 +103,8 @@ in
     <ul class="text-content p-6 font-semibold">
       <li class="flex justify-between items-center">
         <a href="<%s Url.index %>">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" width="132" alt="OCaml logo" class="dark:hidden">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-white.svg" %>" width="132" alt="OCaml logo" class="hidden dark:inline">
+          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" width="132" alt="Rocq logo" class="dark:hidden">
+          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-white.svg" %>" width="132" alt="Rocq logo" class="hidden dark:inline">
         </a>
 
         <div class=""
@@ -118,7 +118,7 @@ in
         <form action="/packages/search" method="GET">
           <%s! Forms.search_input
             ~name:"q"
-            ~label:"Search OCaml packages"
+            ~label:"Search Rocq packages"
             ~button_attrs:{|type="submit"|}
             ""
             %>
@@ -136,13 +136,16 @@ in
       </li>
       <li>
         <div class="space-x-6 text-2xl flex items-center">
-          <a aria-label="OCaml's Discord" href="https://discord.gg/cCYQbqN" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
-            <%s! Icons.discord "w-6 h-6" %>
+          <a aria-label="Rocq's Zulip" href="https://coq.zulipchat.com" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+            <%s! Icons.zulip "w-6 h-6" %>
           </a>
-          <a aria-label="The OCaml Compiler on GitHub" href="https://github.com/ocaml/ocaml" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+          <a aria-label="Rocq's Discourse" href="https://coq.discourse.group" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+            <%s! Icons.discourse "w-6 h-6" %>
+          </a>
+          <a aria-label="The Rocq Prover on GitHub" href="https://github.com/coq/coq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.github "w-6 h-6" %>
           </a>
-          <a aria-label="The OCaml Language Twitter Account" href="https://twitter.com/ocaml_org" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+          <a aria-label="The Rocq Prover Twitter Account" href="https://twitter.com/coq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.twitter "w-6 h-6" %>
           </a>
         </div>

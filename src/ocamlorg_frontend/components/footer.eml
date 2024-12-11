@@ -1,13 +1,13 @@
-let about_ocaml = [
+let about_rocq = [
   (Url.changelog, "Changelog");
   (Url.releases, "Releases");
   (Url.industrial_users, "Industrial Users");
   (Url.academic_users, "Academic Users");
-  (Url.about, "Why OCaml");
+  (Url.about, "Why Rocq");
   ]
 
 let resources = [
-  (Url.install, "Install OCaml");
+  (Url.install, "Install Rocq");
   (Url.getting_started, "Get Started");
   (Url.learn_platform, "Platform Tools");
   (Url.manual, "Language Manual");
@@ -15,7 +15,7 @@ let resources = [
   (Url.books, "Books");
   (Url.exercises, "Exercises");
   (Url.papers, "Papers");
-  (Url.playground, "OCaml Playground");
+  (Url.playground, "Rocq Playground");
   (Url.logos, "Logo");
   ]
 
@@ -23,7 +23,7 @@ let ecosystem = [
   (Url.packages, "Packages");
   (Url.community, "Community");
   (Url.events, "Events");
-  (Url.ocaml_planet, "OCaml Planet");
+  (* (Url.ocaml_planet, "OCaml Planet"); *)
   (Url.jobs, "Jobs");
   ]
 
@@ -35,11 +35,12 @@ let policies = [
   ]
 
 let socials = [
+  ("https://coq.zulipchat.com", "Zulip", Icons.zulip);
   ("https://github.com/ocaml", "GitHub", Icons.github);
-  ("https://discord.gg/cCYQbqN", "Discord", Icons.discord);
-  ("https://twitter.com/ocaml_org", "Twitter", Icons.twitter);
-  ("https://watch.ocaml.org/", "Peertube", Icons.peertube);
-  ("/planet.xml", "RSS", Icons.rss);
+  ("https://coq.discourse.group", "Discourse", Icons.discourse);
+  ("https://x.com/CoqLang", "X", Icons.x_icon);
+  (* ("https://watch.ocaml.org/", "Peertube", Icons.peertube);
+  ("/planet.xml", "RSS", Icons.rss); *)
 ]
 
 module LightDarkModeSwitch = struct
@@ -169,9 +170,9 @@ let primary_footer () =
         <div class="mt-8 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 class="text-base font-semibold leading-6 text-title dark:text-dark-content">About OCaml</h3>
+              <h3 class="text-base font-semibold leading-6 text-title dark:text-dark-content">About Rocq</h3>
               <ul class="mt-6 space-y-4">
-                <% about_ocaml |> List.iter (fun (href, name) -> %>
+                <% about_rocq |> List.iter (fun (href, name) -> %>
                 <%s! footer_link ~href ~name %>
                 <% ); %>
               </ul>
@@ -247,7 +248,7 @@ let secondary_footer () =
       <div class="flex flex-col gap-1">
         <div class="flex flex-col">
           <h5 class="font-bold text-base leading-7 py-2.5 text-title dark:text-dark-title">About</h5>
-          <% about_ocaml |> List.iter (fun (href, name) -> %>
+          <% about_rocq |> List.iter (fun (href, name) -> %>
           <%s! footer_link ~href ~name %>
           <% ); %>
         </div>
