@@ -2,34 +2,34 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 const figma_colors = {
     // Color Light Mode https://www.figma.com/file/bSwyo5pUnarg1lquxQxWAE/Design-System-Draft?type=design&node-id=300-2086&mode=design&t=gjqG6OhhB92AFg51-0
-    primary: "#D54000",
-    primary_40: "#D5400066",
-    primary_25: "#D5400040",
-    primary_dark: "#842800",
-    primary_nav_block_hover_10:"#C24F1E1A",
+    primary: "#260085",
+    primary_40: "#3A00CC",
+    primary_25: "#500AFF",
+    primary_dark: "#170052",
+    primary_nav_block_hover_10:"#89B6E6",
 
-    secondary: "#2B7866",
-    secondary_25: "#06706540",
-    secondary_bt_hover: "#004039",
+    secondary: "#FF540A",
+    secondary_25: "#FF7E47",
+    secondary_bt_hover: "#FF7033",
 
-    tertiary: "#3882B7",
-    tertiary_lighter: "#D3D5F9",
-    tertiary_25: "#0E2A4940",
-    tertiary_bt_hover: "#111827",
-    tertiary_blue_hover: "#0C3B8C",
+    tertiary: "#c9c2ba",
+    tertiary_lighter: "#c9c9c9",
+    tertiary_25: "#c9c9c940",
+    tertiary_bt_hover: "#aaa5a3",
+    tertiary_blue_hover: "#aaa5a3",
 
-    title: "#111827",
+    title: "#260085",
     content: "#555659",
 
     separator_20: "#00000033",
     card_border: "#00000033",
     white: "#FFFFFF",
     light:"#FCFCFC",
-    mild_blue: "#0E183A",
+    mild_blue: "#500AFF",
 
     background: "white",
-    sand: "#FAF8F3",
-    code_window: "#2B2A2A",
+    sand: "#ededed",
+    code_window: "#0d0d0d",
 
     search_keyboard_cursor:"#0C3B8C",
     search_term_highlight:"#F36528",
@@ -159,8 +159,8 @@ module.exports = {
         '8xl': '90rem',
       },
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-        mono: ["Roboto Mono", ...defaultTheme.fontFamily.mono]
+        sans: ["Instrument Rocq", ...defaultTheme.fontFamily.sans],
+        mono: ["Source Code Pro", ...defaultTheme.fontFamily.mono]
       },
       colors: {
         ...figma_colors,

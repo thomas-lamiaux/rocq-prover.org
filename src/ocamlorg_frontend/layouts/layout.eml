@@ -89,8 +89,8 @@ inner =
       <% ) | None -> %>
       <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/main.css" %>">
       <% ); %>
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/inter.css" %>">
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/roboto-mono.css" %>">
+      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/instrument-rocq.css" %>">
+      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/source-code-pro.css" %>">
       <script defer src="<%s Ocamlorg_static.Asset.url "vendors/alpine-clipboard.js" %>"></script>
       <script defer src="<%s Ocamlorg_static.Asset.url "vendors/alpine.min.js" %>"></script>
       <script defer src="<%s Ocamlorg_static.Asset.url "vendors/htmx.min.js" %>"></script>

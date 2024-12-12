@@ -26,7 +26,7 @@
 
 body {
   @apply bg-sand dark:bg-dark-background text-title dark:text-dark-title;
-  font-family: "Inter", sans-serif;
+  font-family: "Instrument Rocq", sans-serif;
 }
 
 .container-fluid {
