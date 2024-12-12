@@ -1,7 +1,8 @@
 let render (release : Data.Release.t) =
+  let name = Data.Release.name_of_kind release.kind in (* Coq or Rocq *)
 Layout.render
-~title:(Printf.sprintf "OCaml %s Release Notes" release.version)
-~description:(Printf.sprintf "OCaml %s was released on %s. Learn more about this in the release notes." release.version release.date)
+~title:(Printf.sprintf "%s %s Release Notes" name release.version)
+~description:(Printf.sprintf "%s %s was released on %s. Learn more about this in the release notes." name release.version release.date)
 ~canonical:(Url.release release.version) @@
 <div class="intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
@@ -12,7 +13,7 @@ Layout.render
                     <%s! Icons.arrow_left "h-5 w-5 inline-block" %>
                     <div>All Releases</div>
                 </a>
-                <h2 class="font-bold text-title dark:text-dark-title pb-6">OCaml <%s release.version %></h2>
+                <h2 class="font-bold text-title dark:text-dark-title pb-6"><%s name %> <%s release.version %></h2>
                 <div class="prose dark:prose-invert prose-orange lg:prose-lg mx-auto max-w-5xl">
                     <%s! release.intro_html %>
                 </div>

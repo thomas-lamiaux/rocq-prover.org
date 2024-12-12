@@ -440,15 +440,27 @@ module Paper = struct
 end
 
 module Release = struct
-  type kind = [ `Compiler ] [@@deriving show]
+  type kind = [ `Compiler | `Coq | `Rocq ] [@@deriving show]
 
   let kind_of_string = function
     | "compiler" -> Ok `Compiler
+    | "coq" -> Ok `Coq
+    | "rocq" -> Ok `Rocq
     | s -> Error (`Msg ("Unknown release type: " ^ s))
 
   let kind_of_yaml = function
     | `String s -> kind_of_string s
     | _ -> Error (`Msg "Expected a string for release type")
+
+  let string_of_kind = function
+  | `Compiler -> "ocaml"
+  | `Coq -> "coq"
+  | `Rocq -> "rocq"
+
+  let name_of_kind = function
+  | `Compiler -> "OCaml"
+  | `Coq -> "Coq"
+  | `Rocq -> "Rocq"
 
   type t = {
     kind : kind;

@@ -1,14 +1,14 @@
 let render ?(search = "") (releases : Data.Release.t list) =
 Tools_layout.single_column_layout
-~title:"OCaml Releases"
-~description:"The history of OCaml releases with a summary and a complete changelog, as well as the manual at that time."
+~title:"Rocq Releases"
+~description:"The history of Rocq releases with a summary and a complete changelog, as well as the manual at that time."
 ~canonical:Url.releases
 ~current:Releases @@
 <div class="intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="w-full m-auto">
             <h1 class="font-bold text-title dark:text-dark-title">Releases</h1>
-            <p class="text-content dark:text-dark-content lg:text-lg">The history of OCaml releases with a summary and a complete changelog, as well as the manual at that time.</p>
+            <p class="text-content dark:text-dark-content lg:text-lg">The history of Rocq releases with a summary and a complete changelog, as well as the manual at that time.</p>
         </div>
     </div>
 </div>
@@ -66,8 +66,8 @@ Tools_layout.single_column_layout
                                 <a href="<%s Url.release release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Release Notes
                                 </a>
-                                <a href="<%s Url.Package.overview "ocaml" ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
-                                    OCaml Package
+                                <a href="<%s Url.ocaml_org ^ Url.Package.overview (Data.Release.string_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
+                                    Opam Package
                                 </a>
                                 <a href="<%s Url.manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Language Manual

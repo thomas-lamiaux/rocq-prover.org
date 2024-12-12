@@ -10,7 +10,7 @@ let tabs
   in
   let title_of_section = function
     | Overview -> "Overview"
-    | Releases -> "Compiler Releases"
+    | Releases -> "Releases"
   in
   Layout.subnav_tabs ~title:"Tools" ~current ~sections:[Overview; Releases] ~url_of_section ~title_of_section
 

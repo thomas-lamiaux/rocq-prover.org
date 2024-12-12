@@ -4,6 +4,8 @@ let packages = "/packages"
 let packages_search = "/packages/search"
 let packages_autocomplete_fragment = "/packages/autocomplete"
 
+let ocaml_org = "https://ocaml.org"
+
 module Package : sig
   val overview : ?hash:string -> ?version:string -> string -> string
   val versions : ?hash:string -> ?version:string -> string -> string
