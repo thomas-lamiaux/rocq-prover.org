@@ -1,6 +1,7 @@
 h1 {
   @apply text-4xl lg:text-5xl;
   line-height: 110%;
+  font-weight: 700;
 }
 
 h2 {

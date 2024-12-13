@@ -1,0 +1,54 @@
+@font-face {
+	font-family: "Instrument Rocq";
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+		src: url('InstrumentRocq-Regular.woff2') format('woff2'),
+		 url('InstrumentRocq-Regular.woff') format('woff'),
+		 url('InstrumentRocq-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Instrument Rocq";
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+		src: url('InstrumentRocq-ItalicRegular.woff2') format('woff2'),
+		 url('InstrumentRocq-ItalicRegular.woff') format('woff'),
+		 url('InstrumentRocq-ItalicRegular.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Instrument Rocq";
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+		src: url('InstrumentRocq-Medium.woff2') format('woff2'),
+		 url('InstrumentRocq-Medium.woff') format('woff'),
+		 url('InstrumentRocq-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Instrument Rocq";
+	font-weight: 500;
+	font-style: italic;
+	font-stretch: normal;
+		src: url('InstrumentRocq-ItalicMedium.woff2') format('woff2'),
+		 url('InstrumentRocq-ItalicMedium.woff') format('woff'),
+		 url('InstrumentRocq-ItalicMedium.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Instrument Rocq";
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+		src: url('InstrumentRocq-Bold.woff2') format('woff2'),
+		 url('InstrumentRocq-Bold.woff') format('woff'),
+		 url('InstrumentRocq-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Instrument Rocq";
+	font-weight: 700;
+	font-style: italic;
+	font-stretch: normal;
+		src: url('InstrumentRocq-ItalicBold.woff2') format('woff2'),
+		 url('InstrumentRocq-ItalicBold.woff') format('woff'),
+		 url('InstrumentRocq-ItalicBold.ttf') format('truetype');
+}
