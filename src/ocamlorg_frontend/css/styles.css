@@ -56,7 +56,7 @@ body {
 }
 
 .bg-acm-award {
-  background-image: url("/img/acm_award_banner/acm_award_banner.svg");
+  background-color: #2C3083;
   background-size: cover;
 }
 

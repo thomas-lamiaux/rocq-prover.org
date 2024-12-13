@@ -327,9 +327,9 @@ Layout.render
 <div class="py-28 bg-background dark:bg-dark-background">
   <div class="container-fluid">
     <div class="px-15">
-      <h2 class="text-title dark:text-dark-title font-bold mb-6">Users of OCaml</h2>
+      <h2 class="text-title dark:text-dark-title font-bold mb-6">Users of Rocq</h2>
       <p class="text-lg text-content dark:text-dark-content mb-16">
-        OCaml is used by thousands of developers, companies, research labs, teachers, and more. Learn how it fits your use case.
+        Rocq is used by hundreds of developers, companies, research labs, teachers, and more. Learn how it fits your use case.
       </p>
     </div>
     <div class="flex flex-col lg:flex-row justify-between lg:space-x-20 space-y-10 lg:space-y-0">
