@@ -4,9 +4,9 @@ const figma_colors = {
     // Color Light Mode https://www.figma.com/file/bSwyo5pUnarg1lquxQxWAE/Design-System-Draft?type=design&node-id=300-2086&mode=design&t=gjqG6OhhB92AFg51-0
     primary: "#260085",
     primary_40: "#3A00CC",
-    primary_25: "#500AFF",
+    primary_25: "#B0BEFF",
     primary_dark: "#170052",
-    primary_nav_block_hover_10:"#89B6E6",
+    primary_nav_block_hover_10:"#f0dad1",
 
     secondary: "#FF540A",
     secondary_25: "#FF7E47",
@@ -25,7 +25,7 @@ const figma_colors = {
     card_border: "#00000033",
     white: "#FFFFFF",
     light:"#FCFCFC",
-    mild_blue: "#500AFF",
+    mild_blue: "#260085",
 
     background: "white",
     sand: "#ededed",

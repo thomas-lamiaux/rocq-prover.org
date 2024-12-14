@@ -1,10 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" preserveAspectRatio="none" viewBox="0 0 1440 430" fill="none">
-<mask id="mask0_3730_1626" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="430">
-<path d="M0 0H1440V430H0V0Z" fill="#F6F9FD"/>
-</mask>
-<g mask="url(#mask0_3730_1626)">
-<path d="M0 0H1440V430H0V0Z" fill="#FFEBD3"/>
-<path d="M0 560V359.329C655.059 394.587 1232.94 327.134 1440 289V560H0Z" fill="#E4C6A2"/>
-<path d="M1440 382.359C525.199 426.527 11.4589 333.054 0 331V520H1440V382.359Z" fill="#EDD2B3"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1440 430">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #ff540a;
+      }
+
+      .st2 {
+        fill: #f6e6e1;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" y="0" width="1440" height="430"/>
+    </clipPath>
+  </defs>
+  <g class="st3">
+    <g>
+      <rect class="st1" x="-33.6" y="-32.7" width="1484.2" height="514"/>
+      <path class="st2" d="M591.6-668.4v97.3H-210.1c26.2,69.5,61,134.4,104.3,194.6h697.5v97.3H-82.7c-37.1,103.5-55.6,206.2-55.6,308.2,0,149.9,35.5,289.7,106.6,419.4,71,129.8,166.8,234.8,287.3,315.1l470.4-470.4c108.1-108.1,227.1-162.2,356.8-162.2s193.5,29.4,274.6,88.1c81.1,58.7,137.9,135.2,170.3,229.4,69.5-129.8,104.3-269.6,104.3-419.4s-39.8-308.5-119.3-443.7c-79.6-135.2-186.9-242.5-322.1-322.1-135.2-79.5-283.1-119.3-443.8-119.3l-1014.9-2.3c3.1,66.4,12.3,129.8,27.8,190h831.9,0ZM1121.1-333.6c19.3-19.3,42.9-29,70.7-29s51.3,9.7,70.7,29c19.3,19.3,29,42.9,29,70.7s-9.7,51.4-29,70.7-42.9,29-70.7,29-51.4-9.6-70.7-29c-19.3-19.3-29-42.9-29-70.7s9.6-51.3,29-70.7h0Z"/>
+    </g>
+  </g>
 </svg>

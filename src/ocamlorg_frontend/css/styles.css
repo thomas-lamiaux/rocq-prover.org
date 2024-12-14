@@ -110,7 +110,7 @@ body {
 }
 
 .code-preview {
-  font-family: Roboto Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Source Code Pro,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 .code-blue {
     color: #569CD6;
@@ -188,11 +188,12 @@ body {
 }
 
 tt {
-  font-family: Roboto Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Source Code Pro,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .sidebar a.active {
-  @apply text-primary bg-primary_nav_block_hover_10;
+  @apply text-primary bg-primary_nav_block_hover_10 dark:bg-dark-primary_nav_block_hover_10;
+
 }
 
 table a:hover {

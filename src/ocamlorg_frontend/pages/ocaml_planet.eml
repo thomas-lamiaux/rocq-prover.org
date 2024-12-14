@@ -30,7 +30,7 @@ let render_blog_post (post : Data.Planet.entry) =
                 <a href="<%s p.url %>">
                   <div class="relative w-full h-[194px] overflow-hidden bg-event-5">
                     <div class="flex flex-col justify-center items-center z-10 absolute top-0 right-0 bottom-0 left-0">
-                      <img class="w-[60px] mb-2" src="<%s! Ocamlorg_static.Asset.url "img/community/camel.svg" %>" alt="camel head illustration">
+                      <img class="w-[60px] mb-2" src="<%s! Ocamlorg_static.Asset.url "img/community/rocq-icon.svg" %>" alt="camel head illustration">
                       <p class="uppercase lg:text-4xl text-2xl tracking-widest text-white"> [ARTICLE]</p>
                     </div>
                     <div class="absolute inset-0 bg-[#C546000D] clip-triangle"></div>

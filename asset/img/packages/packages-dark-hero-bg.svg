@@ -1,10 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" viewBox="0 0 1440 430" preserveAspectRatio="none" fill="none">
-<mask id="mask0_3766_1956" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="430">
-<path d="M0 0H1440V430H0V0Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_3766_1956)">
-<path d="M-1 0H1439V430H-1V0Z" fill="#1A110E"/>
-<path d="M-1 560V359.329C654.059 394.587 1231.94 327.134 1439 289V560H-1Z" fill="#A07F72" fill-opacity="0.47"/>
-<path d="M1439 382.359C524.199 426.527 10.4589 333.054 -1 331V520H1439V382.359Z" fill="#372822"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1440 430">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #260085;
+      }
+
+      .st2 {
+        fill: #1d1d1b;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" width="1440" height="430"/>
+    </clipPath>
+  </defs>
+  <g class="st3">
+    <g>
+      <rect class="st2" x="-33.6" y="-32.7" width="1484.2" height="514"/>
+      <path class="st1" d="M591.6-647v97.3H-210.1c26.2,69.5,61,134.4,104.3,194.6h697.5v97.3H-82.7c-37.1,103.5-55.6,206.2-55.6,308.2,0,149.9,35.5,289.7,106.6,419.4,71,129.8,166.8,234.8,287.3,315.1l470.4-470.4c108.1-108.1,227.1-162.2,356.8-162.2s193.5,29.4,274.6,88.1c81.1,58.7,137.9,135.2,170.3,229.4,69.5-129.8,104.3-269.6,104.3-419.4s-39.8-308.5-119.3-443.7c-79.6-135.2-186.9-242.5-322.1-322.1-135.2-79.5-283.1-119.3-443.8-119.3l-1014.9-2.3c3.1,66.4,12.3,129.8,27.8,190h831.9ZM1121.1-312.2c19.3-19.3,42.9-29,70.7-29s51.3,9.7,70.7,29c19.3,19.3,29,42.9,29,70.7s-9.7,51.4-29,70.7c-19.3,19.3-42.9,29-70.7,29s-51.4-9.6-70.7-29c-19.3-19.3-29-42.9-29-70.7s9.6-51.3,29-70.7Z"/>
+    </g>
+  </g>
 </svg>

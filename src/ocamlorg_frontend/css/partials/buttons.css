@@ -1,6 +1,6 @@
 @layer components {
   .btn {
-    @apply rounded bg-primary border border-primary font-normal text-lg text-white whitespace-nowrap transition-colors inline-flex items-center justify-center space-x-3 dark:border-dark-primary dark:bg-dark-primary dark:text-dark-white;
+    @apply rounded-full bg-primary border border-primary font-normal text-lg text-white whitespace-nowrap transition-colors inline-flex items-center justify-center space-x-3 dark:border-dark-primary dark:bg-dark-primary dark:text-dark-white;
   }
 
   .btn {
@@ -8,7 +8,7 @@
   }
 
   .btn-lg {
-    @apply px-7 h-16 space-x-4;
+    @apply px-7 h-12 space-x-4;
   }
 
   .btn-sm {
