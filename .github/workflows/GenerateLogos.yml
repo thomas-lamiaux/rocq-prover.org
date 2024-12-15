@@ -1,0 +1,17 @@
+name: Generate logos
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Generate logos zip file'
+        default: 'yes'
+        required: true
+        type: string
+jobs:
+  -name: Upload a Build Artifact
+  uses: actions/upload-artifact@v4.4.3
+  with:
+    name: rocq-logos
+    path: rocq-id
+          
