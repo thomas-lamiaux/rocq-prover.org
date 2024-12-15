@@ -1,8 +1,14 @@
-# OCaml.org
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="rocq-id/logos/SVG/logo-rocq-white.svg">
+  <source media="(prefers-color-scheme: light)" srcset="rocq-id/logos/SVG/logo-rocq-orange_blue.svg">
+  <img alt="Rocq logo" src="rocq-id/logos/SVG/logo-rocq-orange_blue.svg" width="70%">
+</picture>
+
+# rocq-prover.org
 
 [![Actions Status](https://github.com/ocaml/ocaml.org/workflows/CI/badge.svg)](https://github.com/ocaml/ocaml.org/actions)
 
-This repository contains the sources of the OCaml website. It is served at https://ocaml.org/.
+This repository contains the sources of the Rocq website. It is served at https://rocq-prover.org/.
 
 ## Features
 
