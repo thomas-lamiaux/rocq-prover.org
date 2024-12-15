@@ -26,10 +26,9 @@ Layout.render
 <div class="lg:py-24 py-2">
   <div class="container-fluid space-y-24 lg:space-y-32">
     <div class="flex flex-col lg:flex-row gap-6">
-      <div class="lg:flex-1 my-2 justify-center text-center">
-        <h1 class="flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" alt="Rocq logo" class="dark:hidden max-w-xl">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-orange-white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
+      <div class="lg:flex-1 lg:mt-16 my-12">
+        <h1 class="lg:pr-10 text-7xl font-bold text-title dark:text-dark-title">
+          ROCQ
         </h1>
         <p class="my-7 text-2xl text-content dark:text-dark-content">
           An industrial-strength interactive theorem prover and dependently-typed programming language
@@ -42,61 +41,100 @@ Layout.render
           </a>
         </div>
         <div class="mt-6">
-          <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_release.version %>">Latest release: <%s latest_release.version %></a>
+          <a class="text-2xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_release.version %>">Latest release: <%s latest_release.version %></a>
         </div>
-        <!--<div class="mt-2">
+        <div class="mt-2">
           <a class="text-2xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release lts_release.version %>">Long Term Support release: <%s lts_release.version %></a>
         </div>
-      -->
-
+      </div>
+      <div class="lg:flex-1 flex justify-center">
+        <div class="bg-code-background flex flex-col w-full max-w-xl min-w-xl rounded-3xl codebox">
+          <div class="border-solid border-b border-gray-50 border-opacity-30 p-5">
+            <div class="flex space-x-2 mt-2">
+              <div class="h-3 w-3 rounded-full border-2 border-solid border-orange-500 border-opacity-80"></div>
+              <div class="h-3 w-3 rounded-full border-2 border-solid border-yellow-500 border-opacity-80"></div>
+              <div class="h-3 w-3 rounded-full border-2 border-solid border-green-500 border-opacity-80"></div>
+            </div>
+          </div>
+          <div style="flex: 1 1 50%" class="py-2 px-6 text-white text-opacity-50 overflow-auto">
+            <div class="text-left overflow-auto">
+              <pre id="output" class="flex flex-col w-full code-preview text-white text-sm space-y-1 font-medium">
+<code><span title="prompt">#</span> <span><span class="text-blue-500 ">let</span> <span class="text-code-yellow ">square</span> x = x * x</span>
+<span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content "><%s "val square : int -> int = < fun >" %></i></span>
+<span><span title="prompt">#</span> square 3</span>
+<span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content ">- : int = 9</i></span>
+<span><span title="prompt">#</span> <span class="text-blue-500 ">let rec</span> <span class="text-code-yellow ">fac</span> x =</span>
+<span><span class="text-blue-500  ml-4">if</span> <%s "x <= 1" %> <span class="text-blue-500 ">then</span> 1 <span class="text-blue-500">else</span> x * fac (x - 1)</span>
+<span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content"><%s "val fac : int -> int = < fun >" %></i></span>
+<span><span title="prompt">#</span> fac 5</span>
+<span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content ">- : int = 120</i></span>
+<span><span title="prompt">#</span> square 120</span>
+<span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content">- : int = 14400</i></span></code>
+              </pre>
+            </div>
+          </div>
+          <div class="flex-1 flex py-2 px-6 text-white text-opacity-50">
+            <a
+              href="<%s Url.playground %>"
+              class="px-4 ml-2 h-10 text-sm items-center text-white border border-gray-100 rounded-lg border-opacity-50 flex">
+              <%s! Icons.edit "h-5 w-5 mr-2" %>
+              Try the Playground
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<!--
+<div class="py-8 md:py-12 py-2 bg-acm-award">
+  <div class="container-fluid space-y-24 lg:space-y-32">
+    <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
+      <div class="md:w-60">
+        <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_award_cup.svg" %>" alt="illustration of a cup">
+      </div>
+      <div class="space-y-6">
+        <h2 class="font-regular text-white">The <strong>OCaml Compiler</strong> has been <strong>recognised</strong> by <strong>SIGPLAN</strong> for their prestigious Programming Languages Software Award</h2>
+        <div class="text-xl text-white mt-3 italic">
+          <strong>Fourteen core OCaml developers</strong> are featured for their
+          significant contributions to the project
+        </div>
+        <div class="inline-flex md:flex gap-8">
+        <a class="btn btn-md" href="<%s Url.news_post "sigplan_announcement" %>">Read more</a>
+        <div class="hidden md:block md:flex-grow">
+          <img class="ml-auto" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo.png" %>" alt="illustration of a cup">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
 <div class="py-12 lg:py-24 py-2">
-  <div class="items-center container-fluid flex">
-    <div class=" items-center lg:flex-1 lg:mt-16 my-12">
+  <div class="container-fluid space-y-24 lg:space-y-32">
+    <div class="text-center">
       <h2 class="font-bold text-title dark:text-dark-title">Trusted by Industry Leaders</h2>
       <div class="text-content dark:text-dark-content text-base mt-3">
         These companies and organisations rely on Rocq every day — along with hundreds of other researchers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
       </div>
-    </div>
-      <div class="lg:flex-1 flex justify-center">
-            <div class="bg-code-background flex flex-col w-full max-w-xl min-w-xl rounded-3xl codebox">
-              <div class="border-solid border-b border-gray-50 border-opacity-30 p-5">
-                <div class="flex space-x-2 mt-2">
-                  <div class="h-3 w-3 rounded-full border-2 border-solid border-orange-500 border-opacity-80"></div>
-                  <div class="h-3 w-3 rounded-full border-2 border-solid border-yellow-500 border-opacity-80"></div>
-                  <div class="h-3 w-3 rounded-full border-2 border-solid border-green-500 border-opacity-80"></div>
-                </div>
-              </div>
-              <div style="flex: 1 1 50%" class="py-2 px-6 text-white text-opacity-50 overflow-auto">
-                <div class="text-left overflow-auto">
-                  <pre id="output" class="flex flex-col w-full code-preview text-white text-sm space-y-1 font-medium">
-    <code><span title="prompt">#</span> <span><span class="text-blue-500 ">let</span> <span class="text-code-yellow ">square</span> x = x * x</span>
-    <span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content "><%s "val square : int -> int = < fun >" %></i></span>
-    <span><span title="prompt">#</span> square 3</span>
-    <span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content ">- : int = 9</i></span>
-    <span><span title="prompt">#</span> <span class="text-blue-500 ">let rec</span> <span class="text-code-yellow ">fac</span> x =</span>
-    <span><span class="text-blue-500  ml-4">if</span> <%s "x <= 1" %> <span class="text-blue-500 ">then</span> 1 <span class="text-blue-500">else</span> x * fac (x - 1)</span>
-    <span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content"><%s "val fac : int -> int = < fun >" %></i></span>
-    <span><span title="prompt">#</span> fac 5</span>
-    <span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content ">- : int = 120</i></span>
-    <span><span title="prompt">#</span> square 120</span>
-    <span aria-label="OCaml responds with"><i class="text-content dark:text-dark-content">- : int = 14400</i></span></code>
-                  </pre>
-                </div>
-              </div>
-              <div class="flex-1 flex py-2 px-6 text-white text-opacity-50">
-                <a
-                  href="<%s Url.playground %>"
-                  class="px-4 ml-2 h-10 text-sm items-center text-white border border-gray-100 rounded-lg border-opacity-50 flex">
-                  <%s! Icons.edit "h-5 w-5 mr-2" %>
-                  Try the Playground
-                </a>
-              </div>
-            </div>
+      <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
+          <!-- <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/docker.svg" %>" alt="Docker">
           </div>
+          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/janestreet.svg" %>" alt="Jane Street">
+          </div>
+          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/bloomberg.svg" %>" alt="Bloomberg">
+          </div>
+          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/tezos.svg" %>" alt="Tezos">
+          </div>
+          <div class="mx-8 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/ahrefs.svg" %>" alt="Ahrefs">
+          </div> -->
+      </div>
+    </div>
   </div>
 </div>
 
@@ -134,6 +172,7 @@ Layout.render
           <img src="<%s Ocamlorg_static.Asset.url "img/home/safe-stable.svg" %>" alt="An example OCaml program defining nested lists in OCaml. A terminal output also shows the compiler catching a type error where a pattern-match was not exhaustive.">
         </div>
       </div>
+
       <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
          <div class="lg:flex-1 mt-10 lg:mt-0 flex items-center">
           <div class="text-base">

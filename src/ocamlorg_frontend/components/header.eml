@@ -54,7 +54,7 @@ in
       <li style="width:170px">
         <a href="<%s Url.index %>" class="block pb-2">
           <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" width="170" alt="Rocq logo" class="dark:hidden">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-white.svg" %>" width="170" alt="Rocq logo" class="hidden dark:inline">
+          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-orange-white.svg" %>" width="170" alt="Rocq logo" class="hidden dark:inline">
         </a>
       </li>
     </ul>
