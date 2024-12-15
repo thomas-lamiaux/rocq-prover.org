@@ -1,12 +1,19 @@
-name: Generate logos
+name: Zip Files
 
-on: push
-
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Generate logos zip file'
+        default: 'yes'
+        required: true
+        type: string
 jobs:
-  build:
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: 'rocq-logos'
-        path: | 
-          rocq-id
+  zip-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: vimtor/action-zip@v1.2
+        with:
+          files: rocq-id/ 
+          dest: rocq-logos.zip
