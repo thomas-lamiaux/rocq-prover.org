@@ -2,9 +2,9 @@
 
 Welcome to the ROCQ Identity Guidelines and Logos sub repository. This repository provides comprehensive guidance on the visual and branding standards for ROCQ. The ROCQ Identity Guidelines focus on maintaining consistency in the use of logos, typography, and color palettes. These standards are essential for creating a cohesive visual identity that represents the ROCQ community across all platforms and applications.
 
-> **Download Logos**: [Logos Directory](https://github.com/coq/rocq-prover.org/tree/main/rocq-id/rocq-logos.zip)
+> **Download Logos**: [Logos Zip](https://github.com/coq/rocq-prover.org/raw/refs/heads/main/rocq-id/rocq-logos.zip)
 
-> **Identity Guidelines**: [Rocq Id PDF](https://github.com/coq/rocq-prover.org/tree/main/rocq-id/ROCQ_ID-guidelines.pdf)
+> **Identity Guidelines**: [Rocq Id PDF](https://github.com/coq/rocq-prover.org/raw/refs/heads/main/rocq-id/ROCQ_ID-guidelines.pdf)
 
 
 ## Contents
