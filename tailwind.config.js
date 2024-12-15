@@ -1,7 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
 const figma_colors = {
-    // Color Light Mode https://www.figma.com/file/bSwyo5pUnarg1lquxQxWAE/Design-System-Draft?type=design&node-id=300-2086&mode=design&t=gjqG6OhhB92AFg51-0
     primary: "#260085",
     primary_40: "#3A00CC",
     primary_25: "#B0BEFF",
@@ -35,16 +34,15 @@ const figma_colors = {
     search_term_highlight:"#F36528",
 
     dark: {
-      // Color Dark Mode https://www.figma.com/file/bSwyo5pUnarg1lquxQxWAE/Design-System-Draft?type=design&node-id=300-2170&mode=design&t=gjqG6OhhB92AFg51-0
-      primary: "#C24F1E",
-      primary_40: "#D5400066",
-      primary_20: "#D5400033",
-      primary_10: "#D5400019",
-      primary_nav_block_hover_10:"#C24F1E1A",
+      primary: "#fd530b",
+      primary_40: "#ff540a66",
+      primary_20: "#ff540a33",
+      primary_10: "#ff540a19",
+      primary_nav_block_hover_10:"#fd530b1A",
 
-      secondary: "#00838A",
-      secondary_bt_hover: "#004039",
-      secondary_bt_pressed: "#00231F",
+      secondary: "#260085",
+      secondary_bt_hover: "#4912d3",
+      secondary_bt_pressed: "#5227be",
 
       tertiary: "#007AD0",
       tertiary_lighter: "#007BC7",
@@ -57,7 +55,7 @@ const figma_colors = {
       card: "#1C1C1C",
 
       separator_30: "#FFFFFF4D",
-      background: "#121212", 
+      background: "#131313", 
       background_navigation: "#070707",
       code_window: "#2B2A2A",    
     }
@@ -170,34 +168,34 @@ module.exports = {
       },
       backgroundColor: {
         avatar: {
-          0: "#bb452a",
-          1: "#a35829",
-          2: "#926229",
-          3: "#746e29",
-          4: "#367a28",
-          5: "#2a7a54",
-          6: "#2c786d",
-          7: "#2e7587",
-          8: "#336db7",
-          9: "#6855e3",
-          10: "#ad35bc",
-          11: "#c62d69"
+          0: "#15004c",
+          1: "#ffa27a",
+          2: "#1c0066",
+          3: "#ff7b43",
+          4: "#15004c",
+          5: "#702100",
+          6: "#15004c",
+          7: "#ff540a",
+          8: "#d23f00",
+          9: "#3958ff",
+          10: "#a63200",
+          11: "#ff7b43"
         },
         event:{
-          0: "#F9CC82",
-          1: "#F9BD72",
-          2: "#F9AE62",
-          3: "#F99F52",
-          4: "#F99042",
-          5: "#FA8654"
+          0: "#15004c",
+          1: "#1c0066",
+          2: "#a63200",
+          3: "#ff7b43",
+          4: "#702100",
+          5: "#ff540a"
         },
 
         code: {
-          background: "rgba(30, 30, 30, 1)",
+          background: "rgba(13, 13, 13, 1)",
         },
       },
       boxShadow: {
-        'custom': '0 4px 8px rgba(213, 64, 0, 0.5)'
+        'custom': '0 4px 8px rgba(255, 84, 10, 0.5)'
       },
 
       clipPath: {

@@ -153,12 +153,12 @@ body {
 }
 
 .prose :is(h1:target, h2:target, h3:target, h4:target, h5:target, h6:target) {
-  background:rgb(255, 243, 173);
+  background:#ffece4;
   padding: 0.2rem 0rem;
 }
 
 .dark :is(h1:target, h2:target, h3:target, h4:target, h5:target, h6:target) {
-  background:#003357;
+  background:#1b2b4c;
   padding: 0.2rem 0rem;
 }
 

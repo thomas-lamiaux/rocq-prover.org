@@ -9,7 +9,7 @@
     @apply bg-mild_blue border-b border-t;
   }
   .dark-section-strong-contrast {
-    background: linear-gradient(45deg, #010105, #10162D);
+    background: linear-gradient(181deg, #260086, #1d1d1b);
     @apply border-none;
   }
 
@@ -28,12 +28,12 @@
   }
 
   .section-blue-gradient {
-    background: linear-gradient(45deg, #0B1228, #0F264F);
+    background: linear-gradient(45deg, #120c61, #260085);
     @apply border-none;
   }
 
   .dark-section-blue-gradient {
-    background: linear-gradient(45deg, #022E50, #0063A8);
+    background: linear-gradient(45deg, #120c61, #260085);
     @apply border-none;
   }
 
@@ -52,12 +52,12 @@
     @apply pt-16 pb-16 bg-dark-background_navigation;
   }
  .deep-blue-gradient {
-  background: linear-gradient(45deg, #0B1229, #0F254C);
+  background: linear-gradient(45deg, #120c61, #260085);
   @apply border-none;
  }
 
  .dark-deep-blue-gradient {
-  background: linear-gradient(45deg, #0B1228, #0E254E);
+  background: linear-gradient(45deg, #120c61, #260085);
   @apply border-none;
 }
 }
