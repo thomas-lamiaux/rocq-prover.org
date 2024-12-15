@@ -1,4 +1,8 @@
-![logo-rocq-orange_blue](logos/PNG/logo-rocq-orange_blue.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="logos/SVG/logo-rocq-white.svg">
+  <source media="(prefers-color-scheme: light)" srcset="logos/SVG/logo-rocq-orange_blue.svg">
+  <img alt="Rocq logo" src="logos/SVG/logo-rocq-orange_blue.svg">
+</picture>
 
 # ROCQ Identity 
 
