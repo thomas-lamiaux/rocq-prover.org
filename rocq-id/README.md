@@ -1,10 +1,11 @@
-# ROCQ Identity Guidelines
+# ROCQ Identity 
 
-Welcome to the ROCQ Identity Guidelines sub repository. This repository provides comprehensive guidance on the visual and branding standards for ROCQ, ensuring a unified and professional identity across all platforms and applications.
+Welcome to the ROCQ Identity Guidelines and Logos sub repository. This repository provides comprehensive guidance on the visual and branding standards for ROCQ. The ROCQ Identity Guidelines focus on maintaining consistency in the use of logos, typography, and color palettes. These standards are essential for creating a cohesive visual identity that represents the ROCQ community across all platforms and applications.
 
-## Overview
+> **Download Logos**: [Logos Directory](https://github.com/coq/rocq-prover.org/tree/main/rocq-id)
 
-The ROCQ Identity Guidelines focus on maintaining consistency in the use of logos, typography, and color palettes. These standards are essential for creating a cohesive visual identity that represents the ROCQ community.
+> **Identity Guidelines**: [Rocq Id PDF](https://github.com/coq/rocq-prover.org/tree/main/rocq-id/ROCQ_ID-guidelines.pdf)
+
 
 ## Contents
 
@@ -18,7 +19,6 @@ The ROCQ Identity Guidelines focus on maintaining consistency in the use of logo
 - Maintain clear space (2x the height of the bird icon).
 - Avoid modifications such as stretching, rotating, altering colors, or adding effects (e.g., shadows, gradients).
 
-> **Download Logos**: [Logos Directory](https://github.com/coq/rocq-prover.org/tree/main/rocq-id)
 
 ### 2. **Typography**
 - **Primary Font**: *Instrument Rocq*  
@@ -34,10 +34,14 @@ The ROCQ Identity Guidelines focus on maintaining consistency in the use of logo
 
 ### 3. **Color Palette**
 The ROCQ brand uses a distinct and minimalist color palette:
-- **Rocq Blue**: `RGB 38, 0, 133` | `HEX #260085`
-- **Rocq Orange**: `RGB 255, 84, 10` | `HEX #FF540A`
-- **Cream (Background)**: `RGB 246, 230, 225` | `HEX #F6E6E1`
-- **Charcoal Black (Text)**: `RGB 13, 13, 13` | `HEX #0D0D0D`
+
+![#260085](https://placehold.co/15x15/260085/260085.png) **Rocq Blue** `RGB 38, 0, 133` | `HEX #260085`
+
+![#FF540A](https://placehold.co/15x15/FF540A/FF540A.png) **Rocq Orange** `RGB 255, 84, 10` | `HEX #FF540A`
+
+![#F6E6E1](https://placehold.co/15x15/F6E6E1/F6E6E1.png) **Cream (Background)** `RGB 246, 230, 225` | `HEX #F6E6E1`
+
+![#0D0D0D](https://placehold.co/15x15/0D0D0D/0D0D0D.png) **Charcoal Black (Text)** `RGB 13, 13, 13` | `HEX #0D0D0D`
 
 ### 4. **Improper Usage**
 The following practices are strictly prohibited to ensure brand integrity:
