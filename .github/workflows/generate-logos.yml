@@ -17,3 +17,7 @@ jobs:
         with:
           files: rocq-id/ 
           dest: rocq-logos.zip
+      - uses: actions/upload-artifact@v1.1
+        with:
+          name: rocq-logos
+          path: ${{ github.workspace }}/rocq-id/rocq-logos.zip
