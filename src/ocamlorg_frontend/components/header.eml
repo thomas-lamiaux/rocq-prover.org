@@ -49,7 +49,7 @@ in
 <header
   class="fixed top-0 z-50 w-full h-20 flex items-center "
   x-data="{ open: false }">
-  <nav class="bg-sand container-fluid dark:bg-dark-background_navigation flex gap-5 h-20 header items-center justify-between rounded-b-lg shadow-sm wide xl:gap-8">
+  <nav class="bg-background container-fluid dark:bg-dark-background_navigation flex gap-5 h-20 header items-center justify-between rounded-b-lg shadow-sm wide xl:gap-8">
     <ul class="order-0 space space-x-5 xl:space-x-8 items-center flex text-content font-medium dark:text-title dark:text-opacity-60 dark:font-semibold">
       <li style="width:170px">
         <a href="<%s Url.index %>" class="block pb-2">

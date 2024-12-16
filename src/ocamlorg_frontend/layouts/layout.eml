@@ -31,7 +31,7 @@ let subnav_tabs
   in
     <%s! breadcrumb_options current %>
     <div class="hidden md:flex">
-      <nav class="bg-secondary dark:bg-[#111827] rounded-b-lg container-fluid wide flex flex-wrap">
+      <nav class="lg:-mt-[10px] lg:pt-[10px] bg-secondary dark:bg-[#111827] rounded-b-lg container-fluid wide flex flex-wrap">
         <%s! sections |> List.map (fun section -> link ~href:(url_of_section section) ~title:(title_of_section section) ~current:(current = section)) |> String.concat "" %>
       </nav>
     </div>
