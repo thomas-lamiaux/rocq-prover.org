@@ -1,12 +1,12 @@
 let render () =
 Layout.render
-~title:"Why OCaml?"
-~description:"OCaml is a mature, statically-typed, functional programming language. Learn more about its rich history and what makes it unique."
+~title:"Why Rocq?"
+~description:"Rocq is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about its rich history and what makes it unique."
 ~canonical:Url.about @@
 <div class="intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
     <div class="text-center w-full lg:w-2/3 m-auto">
-      <h1 class="font-bold mb-6 text-title dark:text-dark-title">Why OCaml?</h1>
+      <h1 class="font-bold mb-6 text-title dark:text-dark-title">Why Rocq?</h1>
       <div class="flex items-center justify-center space-x-8 mt-11 lg:space-x-24">
         <div>
           <a
@@ -44,7 +44,7 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
-        <h2 id="strength">Why OCaml?</h2>
+        <h2 id="strength">Why Rocq?</h2>
         <div class="space-y-10">
           <p>
             Programming languages matter. They affect the reliability, security, and efficiency of the code you write,
