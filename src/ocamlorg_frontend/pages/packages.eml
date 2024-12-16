@@ -14,7 +14,7 @@ let search_dropdown () =
     <%s! Icons.arrow_top_right_on_square "w-6 h-6"%>
   </a>
 in
-<div class="-mt-20 pt-24 w-full border-b bg-sand md:bg-transparent dark:border-none bg-cover bg-[url('/img/packages/packages-hero-bg.svg')] dark:bg-[url('/img/packages/packages-dark-hero-bg.svg')]">
+<div class="lg:-mt-20 pt-24 w-full border-b bg-sand md:bg-transparent dark:border-none bg-cover bg-[url('/img/packages/packages-hero-bg.svg')] dark:bg-[url('/img/packages/packages-dark-hero-bg.svg')]">
     <div class="w-full max-w-[88rem] mx-auto md:bg-[position:30%_100%] lg:bg-right-bottom bg-no-repeat">
         <div class="container-fluid py-8 md:py-28 md:flex md:gap-20">
             <div class="border-b border-card_border dark:border-dark-separator_30 pb-8 md:pb-0 md:border-none md:flex-grow">

@@ -17,7 +17,7 @@ Community_layout.single_column_layout
 ~description:"Looking to interact with people who are also interested in OCaml? Find out about upcoming events, read up on blogs from the community, sign up for OCaml mailing lists, and discover even more places to engage with people from the community!"
 ~canonical:Url.community
 ~current:Overview @@
-<div class="w-full border-b md:bg-transparent dark:border-none bg-cover bg-[url('/img/community/hero-background.svg')] dark:bg-[url('/img/community/dark-hero-background.svg')]">
+<div class="lg:-mt-32 lg:pt-28 w-full border-b md:bg-transparent dark:border-none bg-cover bg-[url('/img/community/hero-background.svg')] dark:bg-[url('/img/community/dark-hero-background.svg')]">
   <div class="w-full max-w-[88rem] mx-auto md:bg-[position:30%_100%] lg:bg-right-bottom bg-no-repeat">
       <div class="container-fluid py-8 md:py-28 md:flex md:gap-20">
           <div class="md:flex-grow">

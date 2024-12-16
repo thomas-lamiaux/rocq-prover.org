@@ -10,7 +10,7 @@ Community_layout.single_column_layout
 ~description:(Printf.sprintf "A description of the conference %s held on %s" conference.title conference.date)
 ~canonical:(Url.conference conference.slug)
 ~current:Conferences @@
-<div class="intro-section-simple dark:dark-intro-section-simple">
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
     <div class="flex flex-col lg:flex-row justify-between items-center">
       <div>

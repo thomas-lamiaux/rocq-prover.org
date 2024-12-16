@@ -104,7 +104,7 @@ Community_layout.single_column_layout
 ~description:"This is a record of all past OCaml Conferences. We provide resources for the individual talks, such as slides or video recordings of the talks."
 ~canonical:Url.conferences
 ~current:Conferences @@
-<div class="w-full intro-section-simple dark:dark-intro-section-simple">
+<div class="lg:-mt-32 lg:pt-44 w-full intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="w-full m-auto">
             <h1 class="text-title dark:text-dark-title font-bold mb-2">OCaml Conferences</h1>

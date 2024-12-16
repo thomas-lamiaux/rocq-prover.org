@@ -3,7 +3,7 @@ Layout.render
 ~title:"Rocq Logos"
 ~description:"Here are some of the logos related to the Rocq programming language."
 ~canonical:Url.about @@
-<div class="intro-section-simple dark:dark-intro-section-simple">
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
     <div class="w-full m-auto">
       <h1 class="text-title dark:text-dark-title font-bold mb-2">The Rocq Logo</h1>

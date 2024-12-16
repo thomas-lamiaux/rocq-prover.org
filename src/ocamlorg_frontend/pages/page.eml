@@ -1,6 +1,6 @@
 let render ~title ~description ~meta_title ~meta_description ~content ~canonical =
 Layout.render ~title:meta_title ~description:meta_description ~canonical @@
-<div class="intro-section-simple dark:dark-intro-section-simple">
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
     <div class="w-full m-auto">
       <h1 class="font-bold mb-2 text-title dark:text-dark-title"><%s! title %></h1>

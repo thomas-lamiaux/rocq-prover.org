@@ -4,7 +4,7 @@ News_layout.single_column_layout
 ~canonical:(Url.changelog ^ if pagination_info.page_number = 1 then "" else "?p=" ^ string_of_int pagination_info.page_number)
 ~description:"Read the latest releases and updates from the OCaml ecosystem."
 ~current:Changelog @@
-<div class="intro-section-simple dark:dark-intro-section-simple py-12">
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple py-12">
   <div class="container-fluid">
     <div class="flex items-center">
       <h1 class="m-0 font-sans text-3xl font-extrabold tracking-normal leading-8 capitalize lg:text-5xl lg:tracking-tight md:text-4xl text-title dark:text-dark-title">

@@ -11,7 +11,7 @@ Layout.render
 ~title:"Academic Institutions"
 ~description:"Many more academic institutions teach OCaml"
 ~canonical:(Url.academic_institutions) @@
-<div class="intro-section-simple dark:dark-intro-section-simple">
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
     <div class="mx-auto px-4 sm:px-6">
       <div class="flex justify-between">

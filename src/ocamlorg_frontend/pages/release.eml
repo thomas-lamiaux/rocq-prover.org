@@ -4,7 +4,7 @@ Layout.render
 ~title:(Printf.sprintf "%s %s Release Notes" name release.version)
 ~description:(Printf.sprintf "%s %s was released on %s. Learn more about this in the release notes." name release.version release.date)
 ~canonical:(Url.release release.version) @@
-<div class="intro-section-simple dark:dark-intro-section-simple">
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="flex md:flex-row lg:px-6 items-center md:space-x-36 flex-col-reverse">
             <div class="text-left md:mt-10 lg:mt-0 mt-0">
