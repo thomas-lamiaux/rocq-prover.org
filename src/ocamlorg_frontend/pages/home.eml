@@ -249,32 +249,39 @@ Layout.render
           <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
         </div>
       </div>
-      <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-        <div class="text-base">
-           <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
-              <%s! Icons.lightning "h-7 w-7 m-auto" %>
-            </div>
-            <h3>
-              <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">DIVERSITY AND OPENNESS</div>
-              <div class="text-title dark:text-dark-title font-bold">
-                From Low-Level Verification to Homotopy Type Theory
-              </div>
-            </h3>
-            <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-              Rocq enables a very wide variety of developments to coexist in the same system, ranging from 
-              end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
-              Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
-              the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated 
-              Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art 
-              framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for 
-              teaching logic and computer science: thousands of students have gone through the Software Foundations 
-              series developed collaboratively by Rocq users. 
-              Rocq's development is entirely open-source and a large and diverse community of users participate in its
-              continued evolution.
-            </p>
-          </div>
+      <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
+        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+          <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt=""/>
+          <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt=""/>
         </div>
-      </div>  
+        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+          <div class="text-base">
+            <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
+                <%s! Icons.lightning "h-7 w-7 m-auto" %>
+              </div>
+              <h3>
+                <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">DIVERSITY AND OPENNESS</div>
+                <div class="text-title dark:text-dark-title font-bold">
+                  From Low-Level Verification to Homotopy Type Theory
+                </div>
+              </h3>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                Rocq enables a very wide variety of developments to coexist in the same system, ranging from 
+                end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
+                Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
+                the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated 
+                Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art 
+                framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for 
+                teaching logic and computer science: thousands of students have gone through the Software Foundations 
+                series developed collaboratively by Rocq users. 
+                Rocq's development is entirely open-source and a large and diverse community of users participate in its
+                continued evolution.
+              </p>
+            </div>
+          </div>
+          
+        </div>  
+      </div>
     </div>
   </div>
 </div>
