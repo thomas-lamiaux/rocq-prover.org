@@ -24,7 +24,7 @@ Layout.render
 ~description:"Rocq is a general-purpose, industrial-strength interactive theorem prover."
 ~use_alectryon:true
 ~canonical:"" @@
-<div class="lg:-mt-20 lg:pb-32 lg:pt-44 py-2 bg-home-hero dark:bg-dark-home-hero ">
+<div class="lg:-mt-20 lg:pb-16 lg:pt-44 py-2 bg-home-hero dark:bg-dark-home-hero ">
   <div class="container-fluid space-y-24 lg:space-y-32">
     <div class="flex flex-col lg:flex-row gap-6">
       <div class="lg:flex-1 my-2 justify-center text-center">
@@ -32,7 +32,7 @@ Layout.render
           <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" alt="Rocq logo" class="dark:hidden max-w-xl">
           <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-orange-white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
         </h1>
-        <p class="my-7 text-2xl text-content dark:text-dark-content">
+        <p class="dark:text-dark-content max-w-3xl mx-auto my-7 text-2xl text-content">
           A trustworthy, industrial-strength interactive theorem prover and dependently-typed programming language
           for mechanised reasoning in mathematics, computer science and more.
         </p>
