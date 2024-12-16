@@ -22,7 +22,8 @@ SOFTWARE.
 */
 
 /*******************************/
-/* CSS reset for .alectryon-io */
+/* CSS reset for .alectryon-io
+*/
 /*******************************/
 
 .alectryon-io blockquote {
@@ -153,6 +154,9 @@ In any case, make an exception for comments:
     padding: 0.1em 0; /* Enlarge the hitbox slightly to fill interline gaps */
     color: #000000 /* Name.Function */ /* Rocq blue ?  #260085 */
 }
+.dark .alectryon-io .alectryon-input {
+    color: #ffffff /* Name.Function */ /* Rocq blue ?  #260085 */
+}
 
 .alectryon-io .alectryon-sentence.alectryon-target .alectryon-input {
     /* FIXME if keywords were ‘bolder’ we wouldn't need !important */
@@ -217,7 +221,7 @@ In any case, make an exception for comments:
 
     .alectryon-io label.alectryon-input:hover {
         text-decoration: underline dotted #babdb6;
-	    text-shadow: 0 0 1px rgb(46, 52, 54, 0.3); /* #2e3436 + opacity */
+       text-shadow: 0 0 1px rgb(46, 52, 54, 0.3); /* #2e3436 + opacity */
     }
 
     .alectryon-io .alectryon-sentence:hover .alectryon-output {
@@ -295,8 +299,8 @@ In any case, make an exception for comments:
 
 .alectryon-io .alectryon-goals,
 .alectryon-io .alectryon-messages {
-    background: #eeeeec;
-	border: thin solid #d3d7cf; /* Convenient when pre's background is already #EEE */
+    background: #ffebe3;
+    border: thin solid #d3d7cf; /* Convenient when pre's background is already #EEE */
     display: block;
     padding: 0.25em;
 }
@@ -362,7 +366,7 @@ In any case, make an exception for comments:
 .alectryon-io .alectryon-goal,
 .alectryon-io .alectryon-message {
     align-items: center;
-    background: #d3d7cf;
+    background: hsl(17 100% 86% / 1);
     display: block;
     flex-direction: column;
     margin: 0.25em;
