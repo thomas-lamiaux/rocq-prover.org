@@ -1,17 +1,16 @@
 let package_card ~href ~img_path ~name description =
-  <a href="<%s href %>" target="_blank"
-    class="bg-background dark:bg-dark-background text-title dark:text-dark-title  p-4 rounded-xl flex md:gap-2 items-center card dark:dark-card">
-      <div class="w-4/12">
-        <img src="<%s Ocamlorg_static.Asset.url img_path %>" alt="<%s name %> logo" class="w-1/2 md:w-2/3">
+  <a href="<%s href %>" target="_blank" class="bg-background dark:bg-dark-background text-title dark:text-dark-title  p-4 rounded-xl flex md:gap-2 items-center card dark:dark-card">
+    <div class="w-4/12">
+      <img src="<%s Ocamlorg_static.Asset.url img_path %>" alt="<%s name %> logo" class="w-1/2 md:w-2/3">
+    </div>
+    <div class="flex-col w-8/12">
+      <div class="text-base font-semibold"><%s name %></div>
+      <div class="font-normal text-xs mt-1">
+        <%s description %>
       </div>
-      <div class="flex-col w-8/12">
-        <div class="text-base font-semibold"><%s name %></div>
-        <div class="font-normal text-xs mt-1">
-          <%s description %>
-        </div>
-      </div>
+    </div>
   </a>
-  
+
 let render
   ~(latest_release: Data.Release.t)
   ~(lts_release: Data.Release.t)
@@ -49,45 +48,31 @@ Layout.render
           <a class="text-2xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release lts_release.version %>">Long Term Support release: <%s lts_release.version %></a>
         </div>
       -->
-
       </div>
     </div>
   </div>
 </div>
 <div class="pt-2 lg:pt-24">
-  <div class="items-center container-fluid flex">
-    <div class=" items-center lg:flex-1 lg:mt-16 ">
-      <h2 class="font-bold text-title dark:text-dark-title">Trusted in Academia and Industry</h2>
-      <div class="text-content dark:text-dark-content text-base mt-3">
-        These organisations and companies rely on Rocq every day — along with hundreds of other researchers and engineers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
+ 
+<div class="border-b border-separator_30 dark:border-dark-separator_30 lg:pt-8">
+  <div class="container-fluid space-y-24 lg:space-y-32">
+    <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
+      <div class=" items-center lg:flex-1 lg:mt-8 ">
+        <h2 class="font-bold text-title dark:text-dark-title">A short introduction to ROCQ</h2>
+        <div class="text-content dark:text-dark-content text-base mt-3">
+          Rocq is a proof assistant. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either Objective Caml or Haskell source code.
+        </div>
       </div>
-      <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
-        <!-- Add Inria, MPI, Aarhus, UPenn, Harvard, ... -->
-        <!-- Add Mitsubishi, Facebook ? -->
-          <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-12" src="<%s Ocamlorg_static.Asset.url "logos/bluerock-logo.png" %>" alt="BlueRock">
-          </div>
-          <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalv_logo.svg" %>" alt="Formal Vindication">
-          </div>
-          <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/Google_logo.svg" %>" alt="Google">
-          </div>
-      </div>
-
-    </div>
       <div class="lg:flex-1 flex justify-center">
-            <div class="bg-code-background flex flex-col w-full max-w-xl min-w-xl rounded-3xl codebox">
-              <div class="border-solid border-b border-gray-50 border-opacity-30 p-5">
-                <div class="flex space-x-2 mt-2">
-                  <div class="h-3 w-3 rounded-full border-2 border-solid border-orange-500 border-opacity-80"></div>
-                  <div class="h-3 w-3 rounded-full border-2 border-solid border-yellow-500 border-opacity-80"></div>
-                  <div class="h-3 w-3 rounded-full border-2 border-solid border-green-500 border-opacity-80"></div>
-                </div>
-              </div>
-              <div style="flex: 1 1 50%" class="py-2 px-6 text-opacity-50 overflow-auto bg-code_window dark:bg-dark-code_window">
-                
-
+        <div class="bg-code-background flex flex-col w-full max-w-xl min-w-xl rounded-3xl codebox">
+          <div class="border-solid border-b border-gray-50 border-opacity-30 p-5">
+            <div class="flex space-x-2 mt-2">
+              <div class="h-3 w-3 rounded-full border-2 border-solid border-orange-500 border-opacity-80"></div>
+              <div class="h-3 w-3 rounded-full border-2 border-solid border-yellow-500 border-opacity-80"></div>
+              <div class="h-3 w-3 rounded-full border-2 border-solid border-green-500 border-opacity-80"></div>
+            </div>
+          </div>
+          <div style="flex: 1 1 50%" class="py-2 px-6 text-opacity-50 overflow-auto bg-code_window dark:bg-dark-code_window">
                 <div class="alectryon-root alectryon-centered"><div class="document">
 <pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><span class="alectryon-input"><span class="kn">Definition</span> <span class="nf">square</span> <span class="nv">x</span> := x * x.</span><span class="alectryon-wsp">
 </span></span><span class="alectryon-sentence"><input class="alectryon-toggle" id="square-v-chk0" style="display: none" type="checkbox"><label class="alectryon-input" for="square-v-chk0"><span class="kn">Eval</span> <span class="nb">compute</span> <span class="kr">in</span> square <span class="mi">3</span>.</label><small class="alectryon-output"><div><div class="alectryon-messages"><blockquote class="alectryon-message">= <span class="mi">9</span>
@@ -106,154 +91,174 @@ Layout.render
 </span></span><span class="alectryon-wsp">   </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="square-v-chk7" style="display: none" type="checkbox"><label class="alectryon-input" for="square-v-chk7">-</label><small class="alectryon-output"><div><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><span><var>n</var><span class="hyp-type"><b>: </b><span>nat</span></span></span><br><span><var>IHn</var><span class="hyp-type"><b>: </b><span>n &gt; <span class="mi">0</span> -&gt; square n &gt; <span class="mi">0</span></span></span></span><br></div><span class="goal-separator"><hr></span><div class="goal-conclusion">S n &gt; <span class="mi">0</span> -&gt; square (S n) &gt; <span class="mi">0</span></div></blockquote></div></div></small><span class="alectryon-wsp"> </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="bp">now</span> <span class="nb">unfold</span> square; <span class="bp">lia</span>.</span><span class="alectryon-wsp">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="kn">Qed</span>.</span></span>
 </pre>
-                
-                </div>
-              </div>
-              <div class="flex-1 flex py-2 px-6 text-white text-opacity-50">
-                <a
-                  href="<%s Url.playground %>"
-                  class="px-4 ml-2 h-10 text-sm items-center text-white border border-gray-100 rounded-lg border-opacity-50 flex">
-                  <%s! Icons.edit "h-5 w-5 mr-2" %>
-                  Try the Playground
-                </a>
-              </div>
+                                        </div>
+            </div>
+            <div class="flex-1 flex  dark:text-white dark:text-opacity-50">
+              <a href="<%s Url.playground %>" class="border border-opacity-50 dark:border-gray-100 dark:text-white flex h-10 items-center mt-5 px-4 rounded-lg text-sm">
+                <%s! Icons.edit "h-5 w-5 mr-2" %>
+                Try the Playground
+              </a>
             </div>
           </div>
-  </div>
-</div>
-
-<div class="py-8 md:py-12 py-2 bg-primary_dark">
-  <div class="container-fluid space-y-24 lg:space-y-32">
-    <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
-      <div class="md:w-60">
-        <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/price.svg" %>" alt="price">
-          <img class="ml-auto mt-5" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo_white.svg" %>" alt="acm logo">
-      </div>
-      <div class="space-y-6">
-        <h2 class="font-regular text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by <strong>SIGPLAN</strong> for their prestigious Programming Languages Software Award</h2>
-        <div class="text-xl text-white mt-3 italic">
-          The recipients of the award are thanking all developers who contributed to the success of the Rocq Prover.
-        </div>
-        <div class="inline-flex md:flex gap-8">
-        <a class="btn btn-outline rounded-3xl" href="https://coq.inria.fr/news/coq-received-acm-software-system-2013-award.html">Read more</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="lg:flex-1 lg:mt-16">
+  <div class="container-fluid text-center items-center">
+    <h2 class="font-bold text-title dark:text-dark-title">Trusted in Academia and Industry</h2>
+    <div class="text-content dark:text-dark-content text-base mt-3">
+      These organisations and companies rely on Rocq every day — along with hundreds of other researchers and engineers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
+    </div>
+    <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
+      <!-- Add Inria, MPI, Aarhus, UPenn, Harvard, ... -->
+      <!-- Add Mitsubishi, Facebook ? -->
+      <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+        <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/bluerock-logo.png" %>" alt="BlueRock">
+      </div>
+      <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+        <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalv_logo.svg" %>" alt="Formal Vindication">
+      </div>
+      <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+        <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/Google_logo.svg" %>" alt="Google">
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="bg-background dark:bg-dark-background">
-  <div class="container-fluid">
-    <h2 class="font-bold text-center text-title dark:text-dark-title pt-12">Why Rocq?</h2>
-    <div class="pt-4 pb-24 lg:pt-24 space-y-20 md:space-y-40">
-      <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
-        <div class="lg:flex-1 mt-10 lg:mt-0">
-          <div class="text-base">
-            <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-blue-400 to-blue-600">
-              <%s! Icons.shield_check "h-7 w-7 m-auto" %>
-            </div>
-            <h3>
-              <div class="text-lg my-4 font-bold" style="color: #225b90">
-                RELIABILITY
+
+  <div class="py-8 md:py-12 py-2 bg-primary_dark">
+    <div class="container-fluid space-y-24 lg:space-y-32">
+      <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
+        <div class="md:w-60">
+          <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/price.svg" %>" alt="price">
+          <img class="ml-auto mt-5" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo_white.svg" %>" alt="acm logo">
+        </div>
+        <div class="space-y-6">
+          <h2 class="font-regular text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by <strong>SIGPLAN</strong> for their prestigious Programming Languages Software Award</h2>
+          <div class="text-xl text-white mt-3 italic">
+            The recipients of the award are thanking all developers who contributed to the success of the Rocq Prover.
+          </div>
+          <div class="inline-flex md:flex gap-8">
+            <a class="btn btn-outline rounded-3xl" href="https://coq.inria.fr/news/coq-received-acm-software-system-2013-award.html">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-background dark:bg-dark-background">
+    <div class="container-fluid">
+      <div class="pt-4 pb-24 lg:pt-24 space-y-20 md:space-y-40">
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
+          <div class="lg:flex-1 mt-10 lg:mt-0">
+            <div class="text-base">
+              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-blue-400 to-blue-600">
+                <%s! Icons.shield_check "h-7 w-7 m-auto" %>
               </div>
-              <p class="text-title dark:text-dark-title font-bold">A Powerful Type Theory</p>
-            </h3>
-            <p class="my-4 text-lg text-content dark:text-dark-content">
-              Rocq's highly expressive type system and proof language enable fully mechanised verification 
-              of programs with respect to strong specifications in a wide variety of languages. Through the 
-              Curry-Howard lens, it simultaneously provides a rich logic and foundational computational 
-              theory for mathematical developments, supported by a flexible proof environment.
-              Its well-studied core type theory, resulting from over 40 years of research, is implemented in a 
-              well-delimited kernel using the performant and safe OCaml programming language, providing the 
-              highest possible guarantees on mechanised artifacts. 
-              The core type theory is itself formalised in Rocq in the MetaRocq project, a verified reference checker 
-              is proven correct and complete with respect to this specification and can be extracted to reduce the 
-              trusted code base of any formalization to the specification of Rocq's theory and the user specification.
-              <!-- OCaml empowers you to create mission-critical software with
+              <h3>
+                <div class="text-lg my-4 font-bold" style="color: #225b90">
+                  RELIABILITY
+                </div>
+                <p class="text-title dark:text-dark-title font-bold">A Powerful Type Theory</p>
+              </h3>
+              <p class="my-4 text-lg text-content dark:text-dark-content">
+                Rocq's highly expressive type system and proof language enable fully mechanised verification
+                of programs with respect to strong specifications in a wide variety of languages. Through the
+                Curry-Howard lens, it simultaneously provides a rich logic and foundational computational
+                theory for mathematical developments, supported by a flexible proof environment.
+                Its well-studied core type theory, resulting from over 40 years of research, is implemented in a
+                well-delimited kernel using the performant and safe OCaml programming language, providing the
+                highest possible guarantees on mechanised artifacts.
+                The core type theory is itself formalised in Rocq in the MetaRocq project, a verified reference checker
+                is proven correct and complete with respect to this specification and can be extracted to reduce the
+                trusted code base of any formalization to the specification of Rocq's theory and the user specification.
+                <!-- OCaml empowers you to create mission-critical software with
               highest security- and safety-requirements in environments with
               ever-changing requirements! -->
-            </p>
+              </p>
+            </div>
+          </div>
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <img src="<%s Ocamlorg_static.Asset.url "img/home/safe-stable.svg" %>" alt="An example OCaml program defining nested lists in OCaml. A terminal output also shows the compiler catching a type error where a pattern-match was not exhaustive.">
           </div>
         </div>
-        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "img/home/safe-stable.svg" %>" alt="An example OCaml program defining nested lists in OCaml. A terminal output also shows the compiler catching a type error where a pattern-match was not exhaustive.">
-        </div>
-      </div>
-      <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
-         <div class="lg:flex-1 mt-10 lg:mt-0 flex items-center">
-          <div class="text-base">
-            <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-purple-400 to-purple-600">
-              <%s! Icons.home_tooling "h-7 w-7 m-auto" %>
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
+          <div class="lg:flex-1 mt-10 lg:mt-0 flex items-center">
+            <div class="text-base">
+              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-purple-400 to-purple-600">
+                <%s! Icons.home_tooling "h-7 w-7 m-auto" %>
+              </div>
+              <div class="text-lg my-4 font-bold text-purple-600">
+                PRODUCTIVITY
+              </div>
+              <h3 class="text-title dark:text-dark-title font-bold">
+                First-Class Editor and Tooling
+              </h3>
+              <p class="my-4 text-lg text-content dark:text-dark-content">
+                Rocq comes with deep integrations for VS Code, Vim or Emacs to provide
+                indispensable interactive support during development and proofs.
+                Between Opam, a popular package manager; and <code>Alectryon</code>,
+                an easy-to-use documentation generator, Rocq users have access to a complete, modern developer experience.
+              </p>
             </div>
-            <div class="text-lg my-4 font-bold text-purple-600">
-              PRODUCTIVITY
-            </div>
-            <h3 class="text-title dark:text-dark-title font-bold">
-              First-Class Editor and Tooling
-            </h3>
-            <p class="my-4 text-lg text-content dark:text-dark-content">
-              Rocq comes with deep integrations for VS Code, Vim or Emacs to provide
-              indispensable interactive support during development and proofs.
-              Between Opam, a popular package manager; and <code>Alectryon</code>,
-              an easy-to-use documentation generator, Rocq users have access to a complete, modern developer experience.
-            </p>
           </div>
-        </div>
-        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-          <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div>
-                  <img src="<%s Ocamlorg_static.Asset.url "logos/vscode.svg" %>" width="56" alt="VS Code">
-                  <img src="<%s Ocamlorg_static.Asset.url "img/home/vscode-preview.png" %>" alt="">
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <img src="<%s Ocamlorg_static.Asset.url "logos/vscode.svg" %>" width="56" alt="VS Code">
+                    <img src="<%s Ocamlorg_static.Asset.url "img/home/vscode-preview.png" %>" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="<%s Ocamlorg_static.Asset.url "logos/vim.svg" %>" width="56" alt="Vim">
+                    <img src="<%s Ocamlorg_static.Asset.url "img/home/vim-preview.png" %>" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="<%s Ocamlorg_static.Asset.url "logos/emacs.svg" %>" width="56" alt="Emacs">
+                    <img src="<%s Ocamlorg_static.Asset.url "img/home/emac-preview.png" %>" alt="">
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div>
-                <img src="<%s Ocamlorg_static.Asset.url "logos/vim.svg" %>" width="56" alt="Vim">
-                <img src="<%s Ocamlorg_static.Asset.url "img/home/vim-preview.png" %>" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div>
-                <img src="<%s Ocamlorg_static.Asset.url "logos/emacs.svg" %>" width="56" alt="Emacs">
-                <img src="<%s Ocamlorg_static.Asset.url "img/home/emac-preview.png" %>" alt="">
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between">
-        <div class="lg:flex-1">
-          <div class="text-base">
-            <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
-              <%s! Icons.lightning "h-7 w-7 m-auto" %>
-            </div>
-            <h3>
-              <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">PERFORMANCE</div>
-              <div class="text-title dark:text-dark-title font-bold">
-                Fast Proof Checker and Applications
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between">
+          <div class="lg:flex-1">
+            <div class="text-base">
+              <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
+                <%s! Icons.lightning "h-7 w-7 m-auto" %>
               </div>
-            </h3>
-            <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-              Rocq offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
-              with efficient bytecode and native conversion checkers relying on the OCaml runtime.
-              It can also interoperate with code written in other languages thanks to its unique extraction facilities.
-            </p>
+              <h3>
+                <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">PERFORMANCE</div>
+                <div class="text-title dark:text-dark-title font-bold">
+                  Fast Proof Checker and Applications
+                </div>
+              </h3>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                Rocq offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
+                with efficient bytecode and native conversion checkers relying on the OCaml runtime.
+                It can also interoperate with code written in other languages thanks to its unique extraction facilities.
+              </p>
+            </div>
+          </div>
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
           </div>
         </div>
-        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
-        </div>
-      </div>
-      <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
-        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt=""/>
-        </div>
-        <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-          <div class="text-base">
-            <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="" />
+          </div>
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <div class="text-base">
+              <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
                 <%s! Icons.lightning "h-7 w-7 m-auto" %>
               </div>
               <h3>
@@ -263,21 +268,20 @@ Layout.render
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                Rocq enables a very wide variety of developments to coexist in the same system, ranging from 
+                Rocq enables a very wide variety of developments to coexist in the same system, ranging from
                 end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
                 Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
-                the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated 
-                Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art 
-                framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for 
-                teaching logic and computer science: thousands of students have gone through the Software Foundations 
-                series developed collaboratively by Rocq users. 
+                the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated
+                Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art
+                framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for
+                teaching logic and computer science: thousands of students have gone through the Software Foundations
+                series developed collaboratively by Rocq users.
                 Rocq's development is entirely open-source and a large and diverse community of users participate in its
                 continued evolution.
               </p>
             </div>
           </div>
-          
-        </div>  
+        </div>
       </div>
     </div>
   </div>
@@ -285,83 +289,81 @@ Layout.render
 <div class="py-24 overflow-hidden">
   <div class="container-fluid">
     <div class="prose dark:prose-invert mx-auto">
-        <h2 class="font-bold">Exceptionally Robust and Reliable</h2>
-        <blockquote class="font-normal">
+      <h2 class="font-bold">Exceptionally Robust and Reliable</h2>
+      <blockquote class="font-normal">
         Despite all this testing, we have never had a single XenServer defect reported from
         internal testing or from the field that can be traced back to a bug in the
         OCaml runtime or compiler. (During development we did once find a minor compiler bug,
         triggered when compiling auto-generated OCaml code with many function arguments,
         but this was already fixed in the development branch by the time we reported it
         and so no interaction with the maintainers at INRIA was required.)
-        </blockquote>
+      </blockquote>
 
-        -- Scott, D. & Sharp, R. & Gazagnaire, T. & Madhavapeddy, A. (2010).
-          <a href="https://anil.recoil.org/papers/2010-icfp-xen.pdf">Using Functional Programming within an Industrial Product Group: Perspectives and Perceptions.</a>
-          ACM SIGPLAN Notices. 45. 87-92. 10.1145/1863543.1863557.
+      -- Scott, D. & Sharp, R. & Gazagnaire, T. & Madhavapeddy, A. (2010).
+      <a href="https://anil.recoil.org/papers/2010-icfp-xen.pdf">Using Functional Programming within an Industrial Product Group: Perspectives and Perceptions.</a>
+      ACM SIGPLAN Notices. 45. 87-92. 10.1145/1863543.1863557.
     </div>
   </div>
 </div>
 <div class="bg-background dark:bg-dark-background pt-24 pb-14 overflow-hidden">
-  <div class="container-fluid grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch mb-14"> 
-      <div class="flex flex-col">
-        <h3 class="font-bold text-title dark:text-dark-title">Releases</h3>
-        <div class="flex-grow p-10 mt-7 bg-white dark:bg-dark-card border rounded-2xl h-full">
+  <div class="container-fluid grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch mb-14">
+    <div class="flex flex-col">
+      <h3 class="font-bold text-title dark:text-dark-title">Releases</h3>
+      <div class="flex-grow p-10 mt-7 bg-white dark:bg-dark-card border rounded-2xl h-full">
         <div class="text-primary dark:text-dark-primary text-sm mb-4 uppercase">Recent Releases</div>
-      
         <% releases |> List.iter (fun (item : Data.Release.t) -> %>
-          <div class="mb-4">
+        <div class="mb-4">
           <a href="<%s Url.release item.version %>">
             <h3 class="font-bold mb-6 text-title dark:text-dark-title hover:underline">
               <%s item.version %> <span class="text-sm">(<%s item.date %>)</span>
             </h3>
           </a>
           <div class="prose dark:prose-invert prose-sm"><%s! item.highlights_html %></div>
-           </div>
+        </div>
         <% ); %>
-       
-          <a href="<%s Url.releases %>" class="btn btn-ghost rounded mt-8">
-            <span>See All Releases</span>
-            <%s! Icons.chevron_right "h-5 w-5" %>
-          </a>
-       </div>
+        <a href="<%s Url.releases %>" class="btn btn-ghost rounded mt-8">
+          <span>See All Releases</span>
+          <%s! Icons.chevron_right "h-5 w-5" %>
+        </a>
       </div>
-      <div class="flex flex-col">
-          <h3 class="font-bold text-title dark:text-dark-title">Changelog</h3>
-          <div class="flex-grow p-10 mt-7 bg-white dark:bg-dark-card border rounded-2xl h-full">
-            <a href="<%s Url.changelog %>">
-            <div class="text-primary dark:text-dark-primary text-sm mb-4 uppercase">Releases & Updates</div>
-            <h3 class="font-bold mb-6 text-title dark:text-dark-title">
-              Compiler and Platform Tools
-            </h3>
-            </a>
-            <% let changelogs_length = List.length changelogs in changelogs |> 
+    </div>
+    <div class="flex flex-col">
+      <h3 class="font-bold text-title dark:text-dark-title">Changelog</h3>
+      <div class="flex-grow p-10 mt-7 bg-white dark:bg-dark-card border rounded-2xl h-full">
+        <a href="<%s Url.changelog %>">
+          <div class="text-primary dark:text-dark-primary text-sm mb-4 uppercase">Releases & Updates</div>
+          <h3 class="font-bold mb-6 text-title dark:text-dark-title">
+            Compiler and Platform Tools
+          </h3>
+        </a>
+        <% let changelogs_length = List.length changelogs in changelogs |> 
                     List.iteri (fun index (item : Data.Changelog.t) -> %>
-            <div class="<%s if index = changelogs_length - 1 then "pl-8" else "pl-8 border-l-2 border-separator_20 dark:border-dark-separator_30" %>">
-              <div class="flex flex-col">   
-                <div class="mb-6">
-                    <div class="relative pb-2">
-                        <div class="absolute block -left-11 w-6 h-6 mt-0.5 text-primary dark:text-dark-primary bg-white dark:bg-dark-card">
-                          <%s! Icons.changelog "w-6 h-6" %>
-                        </div>
-                        <a href="<%s Url.changelog_entry item.slug %>" class="my-0 font-sans text-xl tracking-normal font-extrabold leading-7 changelog-title whitespace-normal break-all text-title dark:text-dark-title hover:underline"><%s item.title %></a>
-                        <time datetime="<%s item.date %>" class="block mt-1 font-sans text-sm text-content dark:text-dark-content"><%s Utils.human_date item.date %></time>
-                    </div>
-                    <p class="prose dark:prose-invert prose-orange">
-                      <%s! String.sub item.body 0 (min (String.length item.body - 1) 100) %>...
-                    </p>
-                    <a href="<%s Url.changelog %>" class="text-primary dark:text-dark-primary mt-2 hover:underline">
-                      See full changelog
-                    </a>
+        <div class="<%s if index = changelogs_length - 1 then "pl-8" else "pl-8 border-l-2 border-separator_20 dark:border-dark-separator_30" %>">
+          <div class="flex flex-col">
+            <div class="mb-6">
+              <div class="relative pb-2">
+                <div class="absolute block -left-11 w-6 h-6 mt-0.5 text-primary dark:text-dark-primary bg-white dark:bg-dark-card">
+                  <%s! Icons.changelog "w-6 h-6" %>
                 </div>
+                <a href="<%s Url.changelog_entry item.slug %>" class="my-0 font-sans text-xl tracking-normal font-extrabold leading-7 changelog-title whitespace-normal break-all text-title dark:text-dark-title hover:underline"><%s item.title %></a>
+                <time datetime="<%s item.date %>" class="block mt-1 font-sans text-sm text-content dark:text-dark-content"><%s Utils.human_date item.date %></time>
               </div>
+              <p class="prose dark:prose-invert prose-orange">
+                <%s! String.sub item.body 0 (min (String.length item.body - 1) 100) %>...
+              </p>
+              <a href="<%s Url.changelog %>" class="text-primary dark:text-dark-primary mt-2 hover:underline">
+                See full changelog
+              </a>
             </div>
-            <% ); %>
-            <a href="<%s Url.changelog %>" class="btn btn-ghost rounded mt-8">
-            <span>See Full Changelog</span>
-            <%s! Icons.chevron_right "h-5 w-5" %>
-            </a>
           </div>
+        </div>
+        <% ); %>
+        <a href="<%s Url.changelog %>" class="btn btn-ghost rounded mt-8">
+          <span>See Full Changelog</span>
+          <%s! Icons.chevron_right "h-5 w-5" %>
+        </a>
       </div>
+    </div>
   </div>
 </div>
 <div class="py-28 bg-background dark:bg-dark-background">
@@ -468,7 +470,10 @@ Layout.render
 <script>
   var swiper = new Swiper(".mySwiper", {
     loop: true,
-    autoplay: { delay: 5000, disableOnInteraction: false, },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     slidesPerView: 'auto',
     spaceBetween: 10,
     thumbs: {
