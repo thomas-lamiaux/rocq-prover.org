@@ -68,7 +68,7 @@ Layout.render
               <img class="h-12" src="<%s Ocamlorg_static.Asset.url "logos/bluerock-logo.png" %>" alt="BlueRock">
           </div>
           <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalv_logo.gif" %>" alt="Formal Vindication">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalv_logo.svg" %>" alt="Formal Vindication">
           </div>
           <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
               <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/Google_logo.svg" %>" alt="Google">
@@ -126,7 +126,8 @@ Layout.render
   <div class="container-fluid space-y-24 lg:space-y-32">
     <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
       <div class="md:w-60">
-        <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_award_cup.svg" %>" alt="illustration of a cup">
+        <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/price.svg" %>" alt="price">
+          <img class="ml-auto mt-5" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo_white.svg" %>" alt="acm logo">
       </div>
       <div class="space-y-6">
         <h2 class="font-regular text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by <strong>SIGPLAN</strong> for their prestigious Programming Languages Software Award</h2>
@@ -134,10 +135,7 @@ Layout.render
           The recipients of the award are thanking all developers who contributed to the success of the Rocq Prover.
         </div>
         <div class="inline-flex md:flex gap-8">
-        <a class="btn btn-md" href="https://coq.inria.fr/news/coq-received-acm-software-system-2013-award.html">Read more</a>
-        <div class="hidden md:block md:flex-grow">
-          <img class="ml-auto" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo.png" %>" alt="illustration of a cup">
-        </div>
+        <a class="btn btn-outline rounded-3xl" href="https://coq.inria.fr/news/coq-received-acm-software-system-2013-award.html">Read more</a>
         </div>
       </div>
     </div>
