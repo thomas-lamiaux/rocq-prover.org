@@ -54,6 +54,7 @@ Layout.render
     </div>
   </div>
 </div>
+
 <div class="py-12 lg:py-24 py-2">
   <div class="items-center container-fluid flex">
     <div class=" items-center lg:flex-1 lg:mt-16 my-12">
@@ -61,6 +62,18 @@ Layout.render
       <div class="text-content dark:text-dark-content text-base mt-3">
         These companies and organisations rely on Rocq every day — along with hundreds of other researchers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
       </div>
+      <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
+          <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-12" src="<%s Ocamlorg_static.Asset.url "logos/bluerock-logo.png" %>" alt="BlueRock">
+          </div>
+          <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalv_logo.gif" %>" alt="Formal Vindication">
+          </div>
+          <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
+              <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/Google_logo.svg" %>" alt="Google">
+          </div>
+      </div>
+
     </div>
       <div class="lg:flex-1 flex justify-center">
             <div class="bg-code-background flex flex-col w-full max-w-xl min-w-xl rounded-3xl codebox">
@@ -105,6 +118,28 @@ Layout.render
               </div>
             </div>
           </div>
+  </div>
+</div>
+
+<div class="py-8 md:py-12 py-2 bg-acm-award">
+  <div class="container-fluid space-y-24 lg:space-y-32">
+    <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
+      <div class="md:w-60">
+        <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_award_cup.svg" %>" alt="illustration of a cup">
+      </div>
+      <div class="space-y-6">
+        <h2 class="font-regular text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by <strong>SIGPLAN</strong> for their prestigious Programming Languages Software Award</h2>
+        <div class="text-xl text-white mt-3 italic">
+          The recipients of the award are thanking all developers who contributed to the success of the Rocq Prover.
+        </div>
+        <div class="inline-flex md:flex gap-8">
+        <a class="btn btn-md" href="https://coq.inria.fr/news/coq-received-acm-software-system-2013-award.html">Read more</a>
+        <div class="hidden md:block md:flex-grow">
+          <img class="ml-auto" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo.png" %>" alt="illustration of a cup">
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
