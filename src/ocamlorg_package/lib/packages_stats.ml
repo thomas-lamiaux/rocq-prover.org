@@ -18,14 +18,14 @@ type t = {
 
 let package_of_path p =
   match Fpath.segs p with
-  | "packages" :: namespace :: name_version :: _ ->
+  | "released" :: "packages" :: namespace :: name_version :: _ ->
       OpamPackage.of_string_opt name_version
       |> Option.map (fun pkg -> (namespace, pkg))
   | _ -> None
 
 let package_namespace_of_path p =
   match Fpath.segs p with
-  | "packages" :: namespace :: _ -> Some namespace
+  | "released" :: "packages" :: namespace :: _ -> Some namespace
   | _ -> None
 
 (** Make a {!package_stat} from a {!OpamPackage.t}. *)
