@@ -61,7 +61,6 @@ let clone () =
         [|
           "git";
           "clone";
-          "--depth"; "1";
           "https://github.com/coq/opam.git";
           Fpath.to_string clone_path;
         |] )
