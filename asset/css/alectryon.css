@@ -151,6 +151,7 @@ In any case, make an exception for comments:
 
 .alectryon-io .alectryon-input {
     padding: 0.1em 0; /* Enlarge the hitbox slightly to fill interline gaps */
+    color: #000000 /* Name.Function */ /* Rocq blue ?  #260085 */
 }
 
 .alectryon-io .alectryon-sentence.alectryon-target .alectryon-input {
