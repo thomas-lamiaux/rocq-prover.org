@@ -33,8 +33,8 @@ Layout.render
           <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-orange-white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
         </h1>
         <p class="my-7 text-2xl text-content dark:text-dark-content">
-          An industrial-strength interactive theorem prover and dependently-typed programming language
-          for mathematics, computer science and mechanised reasoning in general.
+          A trustworthy, industrial-strength interactive theorem prover and dependently-typed programming language
+          for mechanised reasoning in mathematics, computer science and more.
         </p>
         <div class="space-x-0 lg:space-x-6">
           <a class="btn btn-lg mb-4 lg:mb-0" href="<%s Url.install %>">Install</a>
@@ -57,11 +57,13 @@ Layout.render
 <div class="pt-2 lg:pt-24">
   <div class="items-center container-fluid flex">
     <div class=" items-center lg:flex-1 lg:mt-16 ">
-      <h2 class="font-bold text-title dark:text-dark-title">Trusted by Industry Leaders</h2>
+      <h2 class="font-bold text-title dark:text-dark-title">Trusted in Academia and Industry</h2>
       <div class="text-content dark:text-dark-content text-base mt-3">
-        These companies and organisations rely on Rocq every day — along with hundreds of other researchers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
+        These organisations and companies rely on Rocq every day — along with hundreds of other researchers and engineers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
       </div>
       <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
+        <!-- Add Inria, MPI, Aarhus, UPenn, Harvard, ... -->
+        <!-- Add Mitsubishi, Facebook ? -->
           <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
               <img class="h-12" src="<%s Ocamlorg_static.Asset.url "logos/bluerock-logo.png" %>" alt="BlueRock">
           </div>
@@ -156,13 +158,16 @@ Layout.render
               <div class="text-lg my-4 font-bold" style="color: #225b90">
                 RELIABILITY
               </div>
-              <p class="text-title dark:text-dark-title font-bold">Powerful Type Safety Made Simple</p>
+              <p class="text-title dark:text-dark-title font-bold">A Powerful Type Theory</p>
             </h3>
             <p class="my-4 text-lg text-content dark:text-dark-content">
               Rocq's highly expressive type system and proof language enable fully mechanised verification 
-              of programs with respect to strong specifications and of mathematical statements. 
-              Its well-studied core type theory implemented in a well-delimited kernel using the performant 
-              and safe OCaml programming language provides the highest possible guarantees on mechanised artifacts. 
+              of programs with respect to strong specifications in a wide variety of languages. Through the 
+              Curry-Howard lens, it simultaneously provides a rich logic and foundational computational 
+              theory for mathematical developments, supported by a flexible proof environment.
+              Its well-studied core type theory, resulting from over 40 years of research, is implemented in a 
+              well-delimited kernel using the performant and safe OCaml programming language, providing the 
+              highest possible guarantees on mechanised artifacts. 
               The core type theory is itself formalised in Rocq in the MetaRocq project, a verified reference checker 
               is proven correct and complete with respect to this specification and can be extracted to reduce the 
               trusted code base of any formalization to the specification of Rocq's theory and the user specification.
@@ -189,7 +194,8 @@ Layout.render
               First-Class Editor and Tooling
             </h3>
             <p class="my-4 text-lg text-content dark:text-dark-content">
-              Rocq comes with deep integrations for VS Code, Vim or Emacs to provide type inspection, autocomplete and more.
+              Rocq comes with deep integrations for VS Code, Vim or Emacs to provide
+              indispensable interactive support during development and proofs.
               Between Opam, a popular package manager; and <code>Alectryon</code>,
               an easy-to-use documentation generator, Rocq users have access to a complete, modern developer experience.
             </p>
@@ -229,14 +235,13 @@ Layout.render
             <h3>
               <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">PERFORMANCE</div>
               <div class="text-title dark:text-dark-title font-bold">
-                Fast Compiler and Applications
+                Fast Proof Checker and Applications
               </div>
             </h3>
             <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-              OCaml offers great runtime performance without compromising on developer experience:
-              The bytecode compiler generates small, highly portable executables blazingly fast;
-              the native code compiler produces highly-efficient machine code. Despite this focus
-              on performance, the OCaml compiler has always been exceptionally reliable and stable
+              Rocq offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
+              with efficient bytecode and native conversion checkers relying on the OCaml runtime.
+              It can also interoperate with code written in other languages thanks to its unique extraction facilities.
             </p>
           </div>
         </div>
@@ -244,6 +249,32 @@ Layout.render
           <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
         </div>
       </div>
+      <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+        <div class="text-base">
+           <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
+              <%s! Icons.lightning "h-7 w-7 m-auto" %>
+            </div>
+            <h3>
+              <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">DIVERSITY AND OPENNESS</div>
+              <div class="text-title dark:text-dark-title font-bold">
+                From Low-Level Verification to Homotopy Type Theory
+              </div>
+            </h3>
+            <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+              Rocq enables a very wide variety of developments to coexist in the same system, ranging from 
+              end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
+              Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
+              the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated 
+              Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art 
+              framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for 
+              teaching logic and computer science: thousands of students have gone through the Software Foundations 
+              series developed collaboratively by Rocq users. 
+              Rocq's development is entirely open-source and a large and diverse community of users participate in its
+              continued evolution.
+            </p>
+          </div>
+        </div>
+      </div>  
     </div>
   </div>
 </div>
