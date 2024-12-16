@@ -37,6 +37,20 @@
     @apply border-none;
   }
 
+  .bg-home-hero {
+    background-image: url("/img/home/home-background.svg"), radial-gradient(#ffff, #ffe2d5);
+    background-size: cover;
+  }
+  
+  .bg-dark-home-hero {
+    background-image: url("/img/home/home-dark-background.svg"), linear-gradient(45deg,#010105,#10162d);
+    background-size: cover;
+  }
+  
+  .bg-dark-code_window{
+    background: linear-gradient(177deg, #0d0d0d, #141721);
+  }
+  
   .intro-section-simple {
     background: url("/img/innerbottombg.png") left bottom no-repeat, url("/img/innertopbg.png") right top no-repeat;
     @apply pt-16 pb-16 bg-sand;
