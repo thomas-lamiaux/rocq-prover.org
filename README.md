@@ -6,16 +6,23 @@
 
 # rocq-prover.org
 
-[![Actions Status](https://github.com/ocaml/ocaml.org/workflows/CI/badge.svg)](https://github.com/ocaml/ocaml.org/actions)
+[![Actions Status](https://github.com/coq/rocq-prover.org/workflows/CI/badge.svg)](https://github.com/coq/rocq-prover.org/actions)
 
 This repository contains the sources of the Rocq website. It is served at https://rocq-prover.org/.
+
+## Acknowledgments
+
+This website is a fork and customization of the [https://github.com/ocaml/ocaml.org](OCaml.org) website, 
+reusing its infrastructure and package managment facilities. We are very thankful and grateful for the 
+great work done by the OCaml developers! Please consult that repository for acknowledgments of the 
+website developers of the original website.
 
 ## Features
 
 - **Integrated documentation and package management:** The site combines the
-  package management (currently opam.ocaml.org) with a new central
-  documentation source (codenamed 'docs.ocaml.org') for all 14000+ opam packages
-  directly within the OCaml.org site.
+  package management (currently coq.inria.fr/opam) with a new central
+  documentation source (codenamed 'docs.ocaml.org') for all 400+ opam packages
+  directly within the rocq-prover.org site.
 
 - **Responsive and accessible:** The site design also takes into account modern
   web-design principles, restructuring the old content in accordance with methods
@@ -49,7 +56,17 @@ make start
 
 ## Maintainers
 
-The OCaml.org maintainers team is composed of the following community members:
+The rocq-prover.org maintainer's team is composed of the following community members:
+
+- Matthieu Sozeau [mattam82](https:/github.com/mattam82), Owner (Inria)
+- Nicolas Tabareau [ntabareau](https:/github.com/tabareau), Owner (Inria)
+- Théo Zimmermann [Zimmi48](https:/github.com/Zimmi48), Owner (Télécom Paris)
+
+The original graphic design and Rocq Prover identity are due to Bastien Sozeau [bsozeau](https://github.com/bsozeau), 
+from the [Noir Blanc Rouge](https://noirblancrouge.com/) type foundry.
+
+The rocq-prover.org website benefits from the work of the upstream OCaml.org maintainers, their team 
+being composed of the following community members:
 
 - Anil Madhavapeddy ([@avsm](https://github.com/avsm)), Owner (University of Cambridge)
 - Thibaut Mattio ([@tmattio](https://github.com/tmattio)), Lead Maintainer (Tarides)
@@ -57,47 +74,13 @@ The OCaml.org maintainers team is composed of the following community members:
 - Cuihtlauac Alvarado ([@cuihtlauac](https://github.com/cuihtlauac)), Maintainer (Tarides)
 - Sabine Schmaltz ([@sabine](https://github.com/sabine)), Maintainer (Tarides)
 
-The roles and responsibilities are explained in the governance, don't hesitate to [have a look](https://ocaml.org/governance) for more details.
+The roles and responsibilities are explained in the governance, don't hesitate to [have a look](https://rocq-prover.org/governance) for more details.
 
-We're always looking for new maintainers! If you're interested in helping us make OCaml.org the best resource to learn OCaml and discover the ecosystem, [reach out to us](mailto:thibaut@tarides.com)!
-
-## Acknowlegements
-
-Thank you to everyone who contributed to the development of this new version of the website!
-
-In particular:
-
-For the groundwork on rethinking the sitemap, user flows, new content, design, and frontend, and package docs:
-- Ashish Agarwal (Solvuu)
-- Kanishka Azimi (Solvuu)
-- Richard Davison (Solvuu)
-- Patrick Ferris (OCaml Labs)
-- Gemma Gordon (OCaml Labs)
-- Isabella Leandersson (OCaml Labs)
-- Thibaut Mattio (Tarides)
-- Anil Madhavapeddy (University of Cambridge)
-
-For the work on the package site infrastructure and UI:
-- Jon Ludlam (OCaml Labs)
-- Jules Aguillon (Tarides)
-- Lucas Pluvinage (Tarides)
-
-For meticulously going through the website to find issues:
-- Paul-Elliot Anglès d’Auriac (Tarides)
-
-For the work on the frontend designs and bringing them to life:
-- Isabella Leandersson (OCaml Labs)
-- Asaad Mahmood (Tarides)
-
-For the work on the new content and reviewing the existing one:
-- Christine Rose (Tarides)
-- Isabella Leandersson (OCaml Labs)
-
-We’d also like to thank the major funders who supported work on revamping the website. Grants from the Tezos Foundation and Jane Street facilitated the bulk of the work. Thank you! And if anyone else wishes to help support it on an ongoing basis, then donations to the OCaml Software Foundation and grants to the maintenance teams mentioned above are always welcomed.
+We're always looking for new maintainers! If you're interested in helping us make rocq-prover.org the best resource to learn Rocq and discover the ecosystem, [reach out to us](mailto:rocq-website@rocq-prover.org)!
 
 ## Contributing
 
-We'd love your help improving OCaml.org!
+We'd love your help improving rocq-prover.org!
 
 See our contributing guide in [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
@@ -107,10 +90,11 @@ See our contributing guide in [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 - The data is released under CC BY-SA 4.0.
 - Code examples within the content are released under UNLICENSE.
 - The OCaml logo is released under UNLICENSE.
+- The Rocq logo is released under TODO.
 - The vendored files are listed with their licenses in [`LICENSE-3RD-PARTY`](./LICENSE-3RD-PARTY).
 
 See our [`LICENSE`](./LICENSE) for the complete licenses.
 
 ## Code of Conduct
 
-This project follows the [OCaml Code of Conduct](https://github.com/ocaml/ocaml.org/blob/main/CODE_OF_CONDUCT.md).
+This project follows the [Rocq Code of Conduct](https://github.com/coq/rocq-prover.org/blob/main/CODE_OF_CONDUCT.md).
