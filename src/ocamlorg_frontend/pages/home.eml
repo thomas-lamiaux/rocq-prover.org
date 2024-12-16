@@ -252,7 +252,6 @@ Layout.render
       <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
         <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
           <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt=""/>
-          <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt=""/>
         </div>
         <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
           <div class="text-base">
