@@ -68,7 +68,7 @@ inner_html
     <div class="container-fluid wide pt-10">
     <div class="flex flex-col lg:flex-row lg:gap-6 xl:gap-12">
       <div
-        class="z-20 bg-background dark:bg-dark-background flex-col fixed h-screen overflow-auto lg:flex left-0 top-0 lg:sticky <%s Option.fold ~none:"" ~some:(fun _ -> "p-6 lg:px-0 w-80 lg:w-72 lg:px-0 lg:pt-6 lg:pb-72") left_sidebar_html %>"
+        class="z-20 bg-background dark:bg-dark-background flex-col fixed h-screen overflow-auto lg:flex left-0 top-20 lg:sticky <%s Option.fold ~none:"" ~some:(fun _ -> "p-6 lg:px-0 w-80 lg:w-72 lg:px-0 lg:pt-6 lg:pb-72") left_sidebar_html %>"
         x-show="sidebar" x-transition:enter="transition duration-200 ease-out"
         x-transition:enter-start="-translate-x-full" x-transition:leave="transition duration-100 ease-in"
         x-transition:leave-end="-translate-x-full">
@@ -79,7 +79,7 @@ inner_html
         <%s! inner_html %>
         <%s! Footer.secondary_footer () %>
       </div>
-      <div class="hidden xl:block top-0 sticky h-screen overflow-auto lg:pt-6">
+      <div class="hidden xl:block top-20 sticky h-screen overflow-auto lg:pt-6">
         <div class="<%s Option.fold ~none:"" ~some:(fun _ -> "w-60 lg:pb-72") right_sidebar_html %>">
           <%s! Option.value ~default:"" right_sidebar_html %>
         </div>

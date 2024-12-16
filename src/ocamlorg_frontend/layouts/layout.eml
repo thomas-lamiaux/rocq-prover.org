@@ -30,8 +30,8 @@ let subnav_tabs
     </nav>
   in
     <%s! breadcrumb_options current %>
-    <div class="bg-secondary dark:bg-[#111827] hidden md:flex">
-      <nav class="container-fluid wide flex flex-wrap">
+    <div class="hidden md:flex">
+      <nav class="bg-secondary dark:bg-[#111827] rounded-b-lg container-fluid wide flex flex-wrap">
         <%s! sections |> List.map (fun section -> link ~href:(url_of_section section) ~title:(title_of_section section) ~current:(current = section)) |> String.concat "" %>
       </nav>
     </div>
@@ -103,11 +103,11 @@ inner =
       <% ); %>
       <% if use_alectryon then ( %>
       <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/alectryon.css" %>" type="text/css" />
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/docutils_basic.css" %>" type="text/css" />
+      <!--<link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/docutils_basic.css" %>" type="text/css" />-->
       <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/pygments.css" %>" type="text/css" />
       <script type="text/javascript" src="<%s Ocamlorg_static.Asset.url "vendors/alectryon.js" %>"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/IBM-type/0.5.4/css/ibm-type.min.css" integrity="sha512-sky5cf9Ts6FY1kstGOBHSybfKqdHR41M0Ldb0BjNiv3ifltoQIsg0zIaQ+wwdwgQ0w9vKFW7Js50lxH9vqNSSw==" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" />
+      <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" />-->
       <% ); %>
       <link rel="search" href="<%s Ocamlorg_static.Open_search.manifest %>" type="application/opensearchdescription+xml" title="OCaml">
       <title><%s title %></title>
@@ -142,7 +142,7 @@ inner =
       <% ); %>
 
       <%s! Header.render ~show_get_started ?active_top_nav_item () %>
-      <main class="bg-background dark:bg-dark-background"><%s! inner %></main>
+      <main class="dark:bg-dark-background pt-[80px]"><%s! inner %></main>
 
       <button class="fixed bottom-8 right-10 md:bottom-[5rem] lg:bottom-[8.37rem] lg:right-[6.5rem] border-0 hidden focus:outline-none z-50 rounded-full shadow-custom p-4 bg-primary dark:bg-dark-primary" onclick="scrollToTop()" id="scrollToTop" title="Scroll to top"><%s! Icons.arrow_up "h-6 w-6"%></button>
 
