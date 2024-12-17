@@ -5,7 +5,7 @@ description: |
   Predefined Types, Variants, Records, and Pattern Matching
 category: "Introduction"
 prerequisite_tutorials:
-  - "tour-of-ocaml"
+  - "tour-of-rocq"
   - "values-and-functions"
 ---
 
