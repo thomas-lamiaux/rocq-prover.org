@@ -60,17 +60,17 @@ Learn_layout.single_column_layout
 
     <div class="grid gap-6 md:gap-10 mt-6 md:grid-cols-2">
       <%s! Learn_components.tutorial_block
-              ~icon:Learn_components.beginner_section_icon ~title:"GET STARTED" ~heading:"Introduction To OCaml"
-              ~description:"Install OCaml and gain a high-level understanding of the language"
+              ~icon:Learn_components.beginner_section_icon ~title:"GET STARTED" ~heading:"Introduction To Rocq"
+              ~description:"Install Rocq and gain a high-level understanding of the language"
               ~tutorial_links:[
-                  {href = Url.tutorial "installing-ocaml"; title = "Installing OCaml"};
-                  {href = Url.tutorial "tour-of-ocaml"; title = "A Tour of OCaml"};
+                  {href = Url.tutorial "installing-rocq"; title = "Installing Rocq"};
+                  {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"};
                   {href = Url.tutorial "your-first-program"; title = "Your First OCaml Program"};
                   {href = Url.tutorial "opam-switch-introduction"; title = "Introduction to opam Switches"}
               ]
               ~see_more:{href = Url.getting_started; title = "Get Started"}
               %>
-      <%s! Learn_components.tutorial_block ~icon:Learn_components.beginner_section_icon ~title:"LANGUAGE" ~heading:"The OCaml Language" 
+      <%s! Learn_components.tutorial_block ~icon:Learn_components.beginner_section_icon ~title:"LANGUAGE" ~heading:"The Rocq Prover" 
               ~description:"An in-depth explanation of language features and data structures from the Standard Library" 
               ~tutorial_links:[
                   {href = Url.tutorial "values-and-functions"; title = "Values and Functions"};
@@ -109,14 +109,11 @@ Learn_layout.single_column_layout
 
   <div class="section-mild-contrast bg-sand dark:dark-section-strong-contrast">
     <div class="container-fluid flex flex-col py-9">
-      <%s! Learn_components.block_heading ~icon:"" ~title:"PLATFORM TOOLS" ~heading:"The OCaml Platform" %>
+      <%s! Learn_components.block_heading ~icon:"" ~title:"PLATFORM TOOLS" ~heading:"The Rocq Platform" %>
       <div class="mt-10 flex flex-col md:flex-row gap-10">
         <%s! Learn_components.tool_card ~img_src:"img/learn/opam_logo.png"
-            ~title:"opam" ~text:"OCaml's package manager for managing OCaml compilers and libraries"
+            ~title:"opam" ~text:"OCaml's package manager for managing Rocq and libraries"
             ~url:"https://opam.ocaml.org" %>
-        <%s! Learn_components.tool_card ~img_src:"img/learn/dune_logo.svg"
-          ~title:"Dune" ~text:"Dune is a user-friendly and efficient build system for developing OCaml projects"
-          ~url:"https://dune.build/" %>
       </div>
       <a class="pt-6 pb-3 text-primary dark:text-dark-title hover:underline dark:underline dark:hover:text-dark-primary" href="<%s Url.learn_platform %>">Go to Platform Tools Documentation</a>
     </div>

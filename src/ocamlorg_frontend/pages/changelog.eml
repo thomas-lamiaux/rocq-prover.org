@@ -1,14 +1,14 @@
 let render ~tags ?current_tag ~(pagination_info : Pagination.t) (news : Data.Changelog.t list) =
 News_layout.single_column_layout
-~title:"OCaml Changelog"
+~title:"Rocq Changelog"
 ~canonical:(Url.changelog ^ if pagination_info.page_number = 1 then "" else "?p=" ^ string_of_int pagination_info.page_number)
-~description:"Read the latest releases and updates from the OCaml ecosystem."
+~description:"Read the latest releases and updates from the Rocq ecosystem."
 ~current:Changelog @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple py-12">
   <div class="container-fluid">
     <div class="flex items-center">
       <h1 class="m-0 font-sans text-3xl font-extrabold tracking-normal leading-8 capitalize lg:text-5xl lg:tracking-tight md:text-4xl text-title dark:text-dark-title">
-        OCaml Changelog
+        Rocq Changelog
       </h1>
       <a href="/changelog.xml" class="text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary ml-4 lg:ml-6">
         <span class="sr-only">RSS</span>
@@ -16,10 +16,10 @@ News_layout.single_column_layout
       </a>
     </div>
 
-    <p class="text-lg text-content dark:text-dark-content mt-6">Read the latest releases and updates from the OCaml ecosystem.</p>
+    <p class="text-lg text-content dark:text-dark-content mt-6">Read the latest releases and updates from the Rocq ecosystem.</p>
 
     <div class="flex flex-wrap gap-2 mt-6">
-      <a href="?t=ocaml" class="group whitespace-nowrap h-12 flex p-3 px-4 items-center bg-white dark:bg-dark-card hover:bg-primary dark:hover:bg-dark-primary hover:text-white dark:hover:text-dark-title drop-shadow hover:drop-shadow-xl border-primary dark:border-dark-primary border-2 rounded-lg text-title dark:text-dark-title text-sm">
+      <a href="?t=rocq" class="group whitespace-nowrap h-12 flex p-3 px-4 items-center bg-white dark:bg-dark-card hover:bg-primary dark:hover:bg-dark-primary hover:text-white dark:hover:text-dark-title drop-shadow hover:drop-shadow-xl border-primary dark:border-dark-primary border-2 rounded-lg text-title dark:text-dark-title text-sm">
         <span class="flex-grow">Compiler</span>
       </a>
       <a href="?t=platform" class="group whitespace-nowrap h-12 flex p-3 px-4 items-center bg-white dark:bg-dark-card hover:bg-primary dark:hover:bg-dark-primary hover:text-white dark:hover:text-dark-title drop-shadow hover:drop-shadow-xl border-primary dark:border-dark-primary border-2 rounded-lg text-title dark:text-dark-title text-sm">
@@ -31,8 +31,8 @@ News_layout.single_column_layout
       <a href="?t=infrastructure" class="group whitespace-nowrap h-12 flex p-3 px-4 items-center bg-white dark:bg-dark-card hover:bg-primary dark:hover:bg-dark-primary hover:text-white dark:hover:text-dark-title drop-shadow hover:drop-shadow-xl border-primary dark:border-dark-primary border-2 rounded-lg text-title dark:text-dark-title text-sm">
         <span class="flex-grow">Infrastructure</span>
       </a>
-      <a href="?t=ocaml-org" class="group whitespace-nowrap h-12 flex p-3 px-4 items-center bg-white dark:bg-dark-card hover:bg-primary dark:hover:bg-dark-primary hover:text-white dark:hover:text-dark-title drop-shadow hover:drop-shadow-xl border-primary dark:border-dark-primary border-2 rounded-lg text-title dark:text-dark-title text-sm">
-        <span class="flex-grow">OCaml.org</span>
+      <a href="?t=rocq-org" class="group whitespace-nowrap h-12 flex p-3 px-4 items-center bg-white dark:bg-dark-card hover:bg-primary dark:hover:bg-dark-primary hover:text-white dark:hover:text-dark-title drop-shadow hover:drop-shadow-xl border-primary dark:border-dark-primary border-2 rounded-lg text-title dark:text-dark-title text-sm">
+        <span class="flex-grow">rocq-prover.org</span>
       </a>
     </div>
   </div>
@@ -93,7 +93,7 @@ News_layout.single_column_layout
       </div>
     </div>
     <div class="prose dark:prose-invert max-w-none mt-8">
-          If you want to contribute to a new release announcement, check out the <a href="https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md#content-changelog" target="_blank">Contributing Guide</a> on GitHub.
+          If you want to contribute to a new release announcement, check out the <a href="https://github.com/coq/coq/blob/master/CONTRIBUTING.md" target="_blank">Contributing Guide</a> on GitHub.
         </div>
   </div>
 </div>

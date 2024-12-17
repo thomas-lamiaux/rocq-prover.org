@@ -6,7 +6,7 @@ description: |
 category: "Introduction"
 prerequisite_tutorials:
   - "toplevel-introduction"
-  - "installing-ocaml"
+  - "installing-rocq"
 ---
 
 ## Introduction

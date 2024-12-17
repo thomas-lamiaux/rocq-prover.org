@@ -4,7 +4,7 @@ let packages = "/packages"
 let packages_search = "/packages/search"
 let packages_autocomplete_fragment = "/packages/autocomplete"
 
-let ocaml_org = "https://ocaml.org"
+let rocq_org = "https://rocq-prover.org"
 
 module Package : sig
   val overview : ?hash:string -> ?version:string -> string -> string
@@ -87,7 +87,7 @@ let tool_page name = "/tools/" ^ name
 let tutorial name = "/docs/" ^ name
 let tutorial_search = "/docs/search"
 let getting_started = "/docs/get-started"
-let installing_ocaml = "/docs/installing-ocaml"
+let installing_rocq = "/docs/installing-rocq"
 let exercises = "/exercises"
 let outreachy = "/outreachy"
 let logos = "/logo"

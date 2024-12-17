@@ -64,7 +64,7 @@ Tools_layout.three_column_layout
     <p>
       Detailed instructions to install OCaml and the
       Platform tools are available in <a class="text-primary"
-      href="<%s Url.installing_ocaml %>">"Installing OCaml"</a>.
+      href="<%s Url.installing_rocq %>">"Installing OCaml"</a>.
     <h2 class="font-bold mt-8 text-title dark:text-dark-title">The Tools of the OCaml Platform</h2>
     <p>
       The individual OCaml Platform Tools go through a lifecycle from incubation to deprecation.

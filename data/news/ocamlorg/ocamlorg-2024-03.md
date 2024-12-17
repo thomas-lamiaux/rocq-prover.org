@@ -103,9 +103,9 @@ The process of selecting an Outreachy intern involved creating and managing 15 i
 
 **Relevant PRs and Activities:**
 - (WIP) we're moving the OCaml Language Manual from v2.ocaml.org to ocaml.org
-- set up dlvr.it to automatically post RSS feed items from OCaml Planet and OCaml Changelog to new ocaml_org Twitter account
+- set up dlvr.it to automatically post RSS feed items from OCaml Planet and OCaml Changelog to new rocq_org Twitter account
 - [Link to recently added videos on watch.ocaml.org](https://github.com/ocaml/ocaml.org/pull/2128) by @sabine
-- [Change twitter account from OCamlLang to ocaml_org](https://github.com/ocaml/ocaml.org/pull/2111) by @sabine
+- [Change twitter account from OCamlLang to rocq_org](https://github.com/ocaml/ocaml.org/pull/2111) by @sabine
 - [fix: small improvements on news.eml](https://github.com/ocaml/ocaml.org/pull/2295) by @sabine
 - [is yet category slug](https://github.com/ocaml/ocaml.org/pull/2303) by @cuihtlauac
 - [Add a badge from the green web foundation to the carbon footprint page](https://github.com/ocaml/ocaml.org/pull/2241) by @0xrotense
