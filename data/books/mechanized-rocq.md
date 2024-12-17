@@ -14,7 +14,7 @@ language:
 links:
   - description: Read Online
     uri: https://ilyasergey.net/pnp/
-difficulty: beginner
+difficulty: intermediate
 pricing: free
 ---
 
