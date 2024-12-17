@@ -3,22 +3,22 @@ let render
 ~(latest_version : string)
 =
 Learn_layout.single_column_layout
-~title:"Learn OCaml"
-~description:"Getting started with the OCaml programming language. Read the official tutorials, exercices, and language manual."
+~title:"Learn Rocq"
+~description:"Getting started with the Rocq prover. Read the official tutorials, exercices, and language manual."
 ~canonical:Url.learn
 ~current:Overview @@
   <div class="lg:-mt-32 lg:pt-28 w-full border-b md:bg-transparent dark:border-none bg-cover bg-[url('/img/learn/hero-background.svg')] dark:bg-[url('/img/learn/hero-background-dark.svg')]">
     <div class="container-fluid py-10 md:py-24 md:flex md:gap-20 bg-left-bottom bg-no-repeat">
       <div class="md:flex-grow">
-        <h1 class="text-title dark:text-dark-title tracking-wider">Explore the OCaml Documentation</h1>
+        <h1 class="text-title dark:text-dark-title tracking-wider">Explore the Rocq Documentation</h1>
 
         <div class="text-content dark:text-dark-content my-6 max-w-md">
-          You can explore the OCaml documentation, Platform Tools, guides, exercises, and books to enhance your knowledge.
+          You can explore the Rocq documentation, Platform Tools, guides, exercises, and books to enhance your knowledge.
         </div>
         <form action="<%s Url.tutorial_search %>" method="GET" class="max-w-[32rem]">
           <%s! Hero_section.search_input
             ~name:"q"
-            ~label:"Search inside the OCaml documentation"
+            ~label:"Search inside the Rocq documentation"
             ~button_attrs:{|type="submit"|}
             "mb-4" %>
         </form>
@@ -65,7 +65,7 @@ Learn_layout.single_column_layout
               ~tutorial_links:[
                   {href = Url.tutorial "installing-rocq"; title = "Installing Rocq"};
                   {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"};
-                  {href = Url.tutorial "your-first-program"; title = "Your First OCaml Program"};
+                  {href = Url.tutorial "set-up-editor"; title = "Configuring Your Editor"};
                   {href = Url.tutorial "opam-switch-introduction"; title = "Introduction to opam Switches"}
               ]
               ~see_more:{href = Url.getting_started; title = "Get Started"}
