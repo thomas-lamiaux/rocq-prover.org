@@ -197,13 +197,14 @@ Layout.render
                 PRODUCTIVITY
               </div>
               <h3 class="text-title dark:text-dark-title font-bold">
-                First-Class Editor and Tooling
+                First-Class Editor and Tooling Support
               </h3>
               <p class="my-4 text-lg text-content dark:text-dark-content">
                 Rocq comes with deep integrations for VS Code, Vim or Emacs to provide
                 indispensable interactive support during development and proofs.
-                Between Opam, a popular package manager; and <code>Alectryon</code>,
-                an easy-to-use documentation generator, Rocq users have access to a complete, modern developer experience.
+                Between Opam, a popular package manager; the <code>coqdoc</code> and <code>Alectryon</code>
+                documentation tools, and the Docker-Rocq integration toolset, users have access to a complete, 
+                modern developer experience.
               </p>
             </div>
           </div>
