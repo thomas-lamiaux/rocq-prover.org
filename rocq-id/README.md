@@ -66,6 +66,11 @@ For a full list of prohibited practices, refer to the Logo Usage section.
 - **Official Website**: [rocq-prover.org](https://rocq-prover.org)
 - **Repository for Assets**: [Logos Directory](https://github.com/coq/rocq-prover.org/tree/main/rocq-id)
 
+## License
+
+- The Rocq logo is released under UNLICENSE.
+
+See our [`LICENSE`](./LICENSE) for the complete licenses.
 
 ---
 

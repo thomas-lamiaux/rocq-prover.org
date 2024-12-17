@@ -4,8 +4,8 @@ Licenses
 - Content is released under CC BY-SA 4.0.
 - Code that implements the various tools in this repository is released under the ISC license.
 - Code examples within content are released under the UNLICENSE.
-- Design of the site. All rights reserved by the OCaml.org project.
-- OCaml logo is released under the UNLICENSE.
+- Design of the site. All rights reserved by the rocq-prover.org project.
+- Rocq logo is released under the UNLICENSE.
 - Abstracts, slides from meetings. Rights retained by contributor.
 
 * CC BY-SA 4.0
@@ -68,7 +68,7 @@ For more information, please refer to <https://unlicense.org/>
 * ISC
 
 ISC License (ISC)
-Copyright (c) 2021, OCaml.org project
+Copyright (c) 2021, rocq-prover.org project
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
