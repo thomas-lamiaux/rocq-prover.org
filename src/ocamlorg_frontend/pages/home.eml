@@ -137,7 +137,7 @@ Layout.render
         </div>
         <div class="space-y-6 flex-1">
         <h2 class="font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
-        <div class="text-xl dark:text-white mt-3 italic">
+        <div class="text-xl dark:text-white mt-3">
           The recipients of the awards are thanking all developers who contributed to the success of the Rocq Prover, 
           the users who illustrated how to use Coq for so many impressive projects in formal certification, programming, logic, 
           formalization of mathematics and teaching as well as the whole surrounding scientific community in proof theory, 
@@ -157,11 +157,11 @@ Layout.render
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
           <div class="lg:flex-1 mt-10 lg:mt-0">
             <div class="text-base">
-              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-blue-400 to-blue-600">
+              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-blue-800 to-[#260085]">
                 <%s! Icons.shield_check "h-7 w-7 m-auto" %>
               </div>
               <h3>
-                <div class="text-lg my-4 font-bold" style="color: #225b90">
+                <div class="font-bold my-4 text-lg tracking-wide">
                   RELIABILITY
                 </div>
                 <p class="text-title dark:text-dark-title font-bold">A Powerful Type Theory</p>
@@ -190,10 +190,10 @@ Layout.render
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
           <div class="lg:flex-1 mt-10 lg:mt-0 flex items-center">
             <div class="text-base">
-              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-purple-400 to-purple-600">
+              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-orange-600 to-[#ff540a]">
                 <%s! Icons.home_tooling "h-7 w-7 m-auto" %>
               </div>
-              <div class="text-lg my-4 font-bold text-purple-600">
+              <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">
                 PRODUCTIVITY
               </div>
               <h3 class="text-title dark:text-dark-title font-bold">
@@ -236,11 +236,11 @@ Layout.render
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between">
           <div class="lg:flex-1">
             <div class="text-base">
-              <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
+            <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-blue-800 to-[#260085]">
                 <%s! Icons.lightning "h-7 w-7 m-auto" %>
               </div>
               <h3>
-                <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">PERFORMANCE</div>
+                <div class="font-bold my-4 text-lg tracking-wide">PERFORMANCE</div>
                 <div class="text-title dark:text-dark-title font-bold">
                   Fast Proof Checker and Applications
                 </div>
@@ -259,11 +259,11 @@ Layout.render
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
           <div class="lg:flex-1 mt-10 lg:mt-0 flex">
             <div class="text-base">
-              <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
+              <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-orange-600 to-[#ff540a]">
                 <%s! Icons.lightning "h-7 w-7 m-auto" %>
               </div>
               <h3>
-                <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">DIVERSITY AND OPENNESS</div>
+                <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">DIVERSITY AND OPENNESS</div>
                 <div class="text-title dark:text-dark-title font-bold">
                   From Low-Level Verification to Homotopy Type Theory
                 </div>
@@ -450,32 +450,32 @@ Layout.render
         </p>
       </div>
       <div class="grid lg:grid-cols-3 gap-8 lg:gap-16">
-        <a href="<%s Url.install %>" class="card dark:dark-card p-4 text-title dark:text-dark-title">
+        <a href="<%s Url.install %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.play_circle "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Getting Started</p>
           <p>Install OCaml, set up your favorite text editor and start your first project.</p>
         </a>
-        <a href="<%s Url.manual %>" class="card dark:dark-card p-4 text-title dark:text-dark-title">
+        <a href="<%s Url.manual %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.document "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Language Manual</p>
           <p>Read the reference manual of the language and documentation on the compiler.</p>
         </a>
-        <a href="<%s Url.books %>" class="card dark:dark-card p-4 text-title dark:text-dark-title">
+        <a href="<%s Url.books %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.book "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Books</p>
           <p>Discover OCaml books from expert programmers and researchers - from beginner level to advanced topics.</p>
         </a>
-        <a href="<%s Url.api %>" class="card dark:dark-card p-4 text-title dark:text-dark-title">
+        <a href="<%s Url.api %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.command_line "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Standard Library</p>
           <p>Searchable API documentation.</p>
         </a>
-        <a href="<%s Url.exercises %>" class="card dark:dark-card p-4 text-title dark:text-dark-title">
+        <a href="<%s Url.exercises %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.hand_palm "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Exercises</p>
           <p>Learn OCaml by solving problems on a variety of topics, from easy to challenging.</p>
         </a>
-        <a href="<%s Url.papers %>" class="card dark:dark-card p-4 text-title dark:text-dark-title">
+        <a href="<%s Url.papers %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.papers "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Papers</p>
           <p>Explore papers that have influenced OCaml and other functional programming languages.</p>
