@@ -29,7 +29,7 @@ Layout.render
       <div class="lg:flex-1 my-2 justify-center text-center">
         <h1 class="flex justify-center">
           <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq logo" class="dark:hidden max-w-xl">
-        <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
+          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
         </h1>
         <p class="dark:text-dark-content max-w-3xl mx-auto my-7 text-2xl text-content">
           A trustworthy, industrial-strength interactive theorem prover and dependently-typed programming language
@@ -114,14 +114,17 @@ Layout.render
     <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
       <!-- Add Inria, MPI, Aarhus, UPenn, Harvard, ... -->
       <!-- Add Mitsubishi, Facebook ? -->
-      <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-        <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/bluerock-logo.png" %>" alt="BlueRock">
+      <div class="mx-4 my-4 py-4 px-12">
+        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock">
+        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock">
       </div>
-      <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-        <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/formalv_logo.svg" %>" alt="Formal Vindication">
+      <div class="mx-4 my-4 py-4 px-12">
+        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication">
+        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication">
       </div>
-      <div class="mx-4 my-4 dark:bg-dark-white py-4 px-12 rounded-md">
-        <img class="h-8" src="<%s Ocamlorg_static.Asset.url "logos/Google_logo.svg" %>" alt="Google">
+      <div class="mx-4 my-4 py-4 px-12">
+        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/google.svg" %>" alt="Google">
+        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/google.svg" %>" alt="Google">
       </div>
     </div>
   </div>
