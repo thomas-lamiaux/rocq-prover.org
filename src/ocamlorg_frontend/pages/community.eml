@@ -13,25 +13,25 @@ let social_list_item ?(extra_html="") ?(text="") ?(href="") ~left_icon ~title _c
 
 let render ?(selected_event = "All") ~old_conferences ~(events: Data.Event.t list * string list) ~outreachy_latest_project (jobs_with_count : Data.Job.t list * int) =
 Community_layout.single_column_layout
-~title:"The OCaml Community"
-~description:"Looking to interact with people who are also interested in OCaml? Find out about upcoming events, read up on blogs from the community, sign up for OCaml mailing lists, and discover even more places to engage with people from the community!"
+~title:"The Rocq Community"
+~description:"Looking to interact with people who are also interested in Rocq? Find out about upcoming events, sign up for Rocq's Zulip and discover even more places to engage with people from the community!"
 ~canonical:Url.community
 ~current:Overview @@
 <div class="lg:-mt-32 lg:pt-28 w-full border-b md:bg-transparent dark:border-none bg-cover bg-[url('/img/community/hero-background.svg')] dark:bg-[url('/img/community/dark-hero-background.svg')]">
   <div class="w-full max-w-[88rem] mx-auto md:bg-[position:30%_100%] lg:bg-right-bottom bg-no-repeat">
       <div class="container-fluid py-8 md:py-28 md:flex md:gap-20">
           <div class="md:flex-grow">
-              <h1 class="text-title dark:text-dark-title text-2xl md:text-5xl tracking-wider">The OCaml Community</h1>
+              <h1 class="text-title dark:text-dark-title text-2xl md:text-5xl tracking-wider">The Rocq Community</h1>
                 <p class="text-content dark:text-dark-content text-lg my-4 md:my-6 max-w-[80%]">
                  Explore events, community blogs, mailing lists, and more to connect with fellow enthusiasts!
               </p>
               <div class="md:flex-row flex-col flex w-full md:max-w-[70%]">
                <div class="flex lg:flex-row mt-8 mr-4">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.discourse "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Discuss</b>") ~text:("With the Community") ~href:("https://discuss.ocaml.org/") "" %>
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.zulip "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Meet</b>") ~text:("With the Community") ~href:("https://coq.discourse.group/") "" %>
                </div>
-               <div class="flex lg:flex-row mt-8 mr-4">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.peertube "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Watch</b>") ~text:("OCaml Videos") ~href:("https://watch.ocaml.org/") "" %>
-               </div>
+               <!-- <div class="flex lg:flex-row mt-8 mr-4">
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.peertube "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Watch</b>") ~text:("Rocq Videos") ~href:("https://watch.ocaml.org/") "" %>
+               </div> --> 
               </div>
           </div>
       </div>    
@@ -39,19 +39,20 @@ Community_layout.single_column_layout
 </div>
 <div class="w-full">
   <div class="container-fluid pt-6 pb-6">
-      <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium my-4">OCaml on the internet</p>
+      <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium my-4">Rocq on the internet</p>
       <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-4">Join Our Communities!</h2>
-      <p class="text-content dark:text-dark-content mt-4 mb-6">Ask and answer questions, share and discuss OCaml-related articles and posts, let people know about your projects and find collaborators</p>
+      <p class="text-content dark:text-dark-content mt-4 mb-6">Ask and answer questions, share and discuss Rocq-related articles and posts, let people know about your projects and find collaborators</p>
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Discussion</p>
-        <%s! social_list_item ~text:("Discuss with the community, ask questions and share your work on OCaml - ") ~href:("https://discuss.ocaml.org/") ~left_icon:(Icons.discourse "w-10 h-10") ~title:("Discuss") "" %>
-        <%s! social_list_item ~text:("Subreddit for discussions, memes, project updates, and sharing web articles and news - ") ~href:("https://reddit.com/r/ocaml/") ~left_icon:(Icons.reddit "w-10 h-10") ~title:("Reddit") "" %>
+        <%s! social_list_item ~text:("Meet developers and users for discussions, technical questions, collaborative projects and news - ") ~href:("https://coq.zulipchat.com") ~left_icon:(Icons.zulip "w-10 h-10") ~title:("Zulip") "" %>
+        <%s! social_list_item ~text:("Discuss with the community, ask questions and share your work on Rocq - ") ~href:("https://coq.discourse.group/") ~left_icon:(Icons.discourse "w-10 h-10") ~title:("Discourse") "" %>
       </ul>
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Development</p>
-        <%s! social_list_item ~text:("Submit bug reports and feature requests for the OCaml compiler - ") ~href:("https://github.com/ocaml") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
-        <%s! social_list_item ~text:("Ask and help answer OCaml questions - ") ~href:("https://stackoverflow.com/questions/tagged/ocaml") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stackoverflow") "" %>
+        <%s! social_list_item ~text:("Submit bug reports and feature requests for the Rocq Prover - ") ~href:("https://github.com/rocq") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
+        <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://stackoverflow.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stackoverflow") "" %>
       </ul>
+      <!-- 
       <ul>
         <p class="text-title dark:text-dark-title font-mono text-xl mb-2">Chat</p>
         <%s! social_list_item ~text:("Chat with other members of the community on Discord - ") ~href:("https://discord.gg/cCYQbqN") ~left_icon:(Icons.discord "w-10 h-10") ~title:("Discord") "" %>
@@ -62,27 +63,28 @@ Community_layout.single_column_layout
             Matrix chat room, or join the <a class='text-primary dark:text-dark-primary hover:underline' href='https://matrix.to/#/#ocaml-space:matrix.org'>#ocaml-space</a> Matrix space
           </p>
           |}) ~left_icon:(Icons.matrix "h-8 mr-0") ~title:("Matrix") "" %>    
-      </ul>
+      </ul> -->
       <ul>
         <p class="text-title dark:text-dark-title font-mono text-xl mb-2">Video</p>
-        <%s! social_list_item ~text:("Community videos such as previous OCaml Conference presentation - ") ~href:("https://watch.ocaml.org/videos/recently-added") ~left_icon:(Icons.peertube "w-10 h-10") ~title:("Watch") "" %>
-        <%s! social_list_item ~text:("Live Streams about OCaml - ") ~href:("https://twitch.tv/search?term=ocaml") ~left_icon:(Icons.twitch "w-10 h-10") ~title:("Twitch") "" %>
-        <%s! social_list_item ~text:("OCaml on YouTube - ") ~href:("https://www.youtube.com/results?search_query=OCaml") ~left_icon:(Icons.youtube "w-10 h-10") ~title:("YouTube") "" %>
+        <!-- 
+        <%s! social_list_item ~text:("Community videos such as previous Coq Conference presentations - ") ~href:("https://watch.ocaml.org/videos/recently-added") ~left_icon:(Icons.peertube "w-10 h-10") ~title:("Watch") "" %>
+        <%s! social_list_item ~text:("Live Streams about Coq - ") ~href:("https://twitch.tv/search?term=ocaml") ~left_icon:(Icons.twitch "w-10 h-10") ~title:("Twitch") "" %> -->
+        <%s! social_list_item ~text:("Coq on YouTube - ") ~href:("https://www.youtube.com/results?search_query=Coq") ~left_icon:(Icons.youtube "w-10 h-10") ~title:("YouTube") "" %>
       </ul>
       <ul>
         <p class="text-title dark:text-dark-title font-mono text-xl mb-2">Microblogging</p>
-        <%s! social_list_item ~text:("Latest announcements and events from the community - ") ~href:("https://twitter.com/rocq_org") ~left_icon:(Icons.twitter "w-10 h-10") ~title:("Twitter") "" %>
-        <%s! social_list_item ~text:("OCaml on Bluesky - ") ~href:("https://bsky.app/profile/ocaml.org") ~left_icon:(Icons.bluesky "w-10 h-10") ~title:("Bluesky") "" %>
+        <%s! social_list_item ~text:("Latest announcements and events from the community - ") ~href:("https://twitter.com/CoqLang") ~left_icon:(Icons.twitter "w-10 h-10") ~title:("Twitter") "" %>
+        <!-- <%s! social_list_item ~text:("Rocq on Bluesky - ") ~href:("https://bsky.app/profile/ocaml.org") ~left_icon:(Icons.bluesky "w-10 h-10") ~title:("Bluesky") "" %> -->
         <%s! social_list_item ~extra_html:({|
           <p class='text-content dark:text-dark-content'> Both the <a class='text-primary dark:text-dark-primary hover:underline' href='https://types.pl/'>types.pl</a>
           and <a class='text-primary dark:text-dark-primary hover:underline' href='https://discuss.systems/'>discuss.systems</a> Mastodon homeservers enjoy popularity
           </p>|}
           ) ~left_icon:(Icons.mastodon "h-8 mr-0") ~title:("Mastodon") "" %>   
       </ul>
-      <ul>
+      <!-- <ul>
         <p class="text-title text-xl font-mono dark:text-dark-title mb-2">Mailing Lists</p>
         <%s! social_list_item ~text:("Share experience, exchange ideas and code, and report on applications - ") ~href:("https://inbox.vuxu.org/caml-list") ~left_icon:(Icons.email "w-10 h-10") ~title:("Caml User's Mailing List") "" %>
-      </ul>
+      </ul> -->
   </div>
 </div>
 <%s! Cards.Event.script %>
@@ -118,7 +120,7 @@ Community_layout.single_column_layout
   <% let (jobs, jobs_count) = jobs_with_count in %>
     <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium my-4">Jobs</p>
        <h5 class="font-bold text-title dark:text-dark-white mb-4">
-           <%s Printf.sprintf "OCaml Jobs (%i)" jobs_count %>
+           <%s Printf.sprintf "Rocq Jobs (%i)" jobs_count %>
         </h5>   
     <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
       <% jobs |> List.iter (fun (job : Data.Job.t) -> %>
@@ -135,8 +137,9 @@ Community_layout.single_column_layout
       <div class="flex flex-col">
         <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium my-4">Conference records</p>
         <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-4">Past Conference Recordings & Materials</h2>
-        <p class="text-content dark:text-dark-content mb-6">Join us annually for the highly anticipated OCaml Conference! It's an opportunity for you to immerse yourself in knowledge, connect with like-minded individuals, and  unlock new possibilities. Don't miss the chance to be part of this  international learning adventure.</p>
-        <p class="text-content dark:text-dark-content">Below, you can find slides and documents from previous OCaml Conferences.</p>
+        <p class="text-content dark:text-dark-content mb-6">Join us annually at the CoqPL workshop collocated with the Principles of Programming Languages Conference and
+         the Coq Workshop associated with the Interactive Theorem Proving Conference!</p>
+        <p class="text-content dark:text-dark-content">Below, you can find slides and documents from previous Rocq events.</p>
         <% old_conferences |> List.iter (fun (conference : Data.Conference.t) -> %>
         <a href="<%s Url.conference conference.slug %>"  class="card dark:dark-card p-5 rounded-xl mt-4">
             <p class="text-title dark:text-dark-title mb-2"><%s conference.title %></p>
@@ -154,7 +157,7 @@ Community_layout.single_column_layout
         <a href="/conferences" class="text-primary dark:text-dark-white hover:text-primary pr-2 flex mt-4 items-center dark:hover:text-dark-primary hover:underline group dark:underline"> View Conferences <%s! Icons.arrow_small_right "h-5 w-5 ml-2 text-primary  dark:text-dark-white group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %>
         </a> 
       </div> 
-      <div class="flex flex-col">
+      <!-- <div class="flex flex-col">
         <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium my-4">Internships</p>
         <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-4">OCaml Outreachy Internships</h2>
         <p class="text-content dark:text-dark-content mb-6">Outreachy provides internships in open source and open science to people subject to systemic bias and  impacted by underrepresentation in the technical industry where they are  living.This is a record of OCaml Community Outreachy Internship projects.</p>
@@ -175,7 +178,7 @@ Community_layout.single_column_layout
         <% ); %>
         <a href="<%s Url.outreachy %>" class="text-primary dark:text-dark-white hover:text-primary pr-2 flex mt-4 items-center dark:hover:text-dark-primary hover:underline group dark:underline"> View Internship <%s! Icons.arrow_small_right "h-5 w-5 ml-2 text-primary dark:text-dark-white group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %>
         </a> 
-      </div>
+      </div> -->
      
   </div>
  </div>
