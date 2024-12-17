@@ -14,7 +14,7 @@ Rocq has plugins for many editors, but the most actively maintained are for Visu
 > TL;DR
 > Install the package `vsrocq-language-server` in your [opam switch](/docs/opam-switch-introduction).
 
-For VSCode, install the [Roqc Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq) from the Visual Studio Marketplace. The extension depends on Rocq LSP. To install it in your switch, you can run:
+For VSCode, install the [Rocq Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq) from the Visual Studio Marketplace. The extension depends on Rocq LSP. To install it in your switch, you can run:
 
 ```shell
 $ opam install vsrocq-language-server
@@ -43,3 +43,9 @@ See their webpage for installation instructions.
 
 **Vim/NeoVim users** can use the [Coqtail](https://github.com/whonore/Coqtail) extension. 
 NeoVim users can also test the experimental support for [VsCoq's `vscoqtop` server](https://github.com/tomtomjhj/vscoq.nvim) or for [`coq-lsp`](https://github.com/tomtomjhj/coq-lsp.nvim).
+
+## Standalone interfaces
+
+Alternatively, you can use [CoqIDE](https://coq.inria.fr/refman/practical-tools/coqide.html), a standalone desktop application which is developed and distributed alongside Rocq.
+
+As a way to try Rocq without installing anything, you can use [JsCoq](https://jscoq.github.io/). JsCoq loads Rocq entirely in your browser.
