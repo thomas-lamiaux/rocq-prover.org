@@ -27,6 +27,12 @@
 body {
   @apply bg-sand dark:bg-dark-background text-title dark:text-dark-title;
   font-family: "Instrument Rocq", sans-serif;
+  font-feature-settings: "kern" on, "ss01" on,"ss02" on, "ss07" on, "liga" on;
+  -moz-font-feature-settings: "kern" on, "ss01" on,"ss02" on, "ss07" on, "liga" on;
+  -webkit-font-feature-settings: "kern" on, "ss01" on,"ss02" on, "ss07" on, "liga" on;
+  -ms-font-feature-settings: "kern" on, "ss01" on,"ss02" on, "ss07" on, "liga" on;
+  -o-font-feature-settings: "kern" on, "ss01" on,"ss02" on, "ss07" on, "liga" on;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container-fluid {

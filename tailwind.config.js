@@ -28,7 +28,7 @@ const figma_colors = {
 
     background: "white",
     sand: "#ededed",
-    code_window: "#ffebe3",
+    code_window: "#2B2A2A",
 
     search_keyboard_cursor:"#0C3B8C",
     search_term_highlight:"#F36528",

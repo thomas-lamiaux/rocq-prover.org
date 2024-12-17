@@ -72,7 +72,7 @@ Layout.render
               <div class="h-3 w-3 rounded-full border-2 border-solid dark:border-gray-400 border-green-500 border-opacity-80"></div>
             </div>
           </div>
-          <div style="flex: 1 1 50%" class="py-2 px-6 text-opacity-50 overflow-auto bg-code_window dark:bg-dark-code_window">
+          <div style="flex: 1 1 50%" class="py-2 px-6 text-opacity-50 overflow-auto bg-primary_nav_block_hover_10 dark:bg-dark-code_window">
                 <div class="alectryon-root alectryon-centered"><div class="document">
 <pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><span class="alectryon-input"><span class="kn">Definition</span> <span class="nf">square</span> <span class="nv">x</span> := x * x.</span><span class="alectryon-wsp">
 </span></span><span class="alectryon-sentence"><input class="alectryon-toggle" id="square-v-chk0" style="display: none" type="checkbox"><label class="alectryon-input" for="square-v-chk0"><span class="kn">Eval</span> <span class="nb">compute</span> <span class="kr">in</span> square <span class="mi">3</span>.</label><small class="alectryon-output"><div><div class="alectryon-messages"><blockquote class="alectryon-message">= <span class="mi">9</span>
@@ -128,16 +128,16 @@ Layout.render
 </div>
 
 
-  <div class="py-8 md:py-12 py-2 bg-primary_dark">
+  <div class="py-8 md:py-12 py-2 section-sand-gradient dark:dark-section-blue-gradient">
     <div class="container-fluid space-y-24 lg:space-y-32">
       <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
-        <div class="md:w-60">
-          <img class="mx-auto w-40" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/price.svg" %>" alt="price">
-          <img class="ml-auto mt-5" src="<%s Ocamlorg_static.Asset.url "img/acm_award_banner/acm_logo_white.svg" %>" alt="acm logo">
+        <div class="md:w-60 dark:text-white">
+          <%s! Icons.price_icon "mx-auto w-40" %>
+          <%s! Icons.acm_logo "ml-auto mt-5" %>
         </div>
-        <div class="space-y-6">
-        <h2 class="font-regular text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
-        <div class="text-xl text-white mt-3 italic">
+        <div class="space-y-6 flex-1">
+        <h2 class="font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
+        <div class="text-xl dark:text-white mt-3 italic">
           The recipients of the awards are thanking all developers who contributed to the success of the Rocq Prover, 
           the users who illustrated how to use Coq for so many impressive projects in formal certification, programming, logic, 
           formalization of mathematics and teaching as well as the whole surrounding scientific community in proof theory, 

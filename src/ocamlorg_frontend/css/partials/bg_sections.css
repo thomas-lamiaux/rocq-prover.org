@@ -33,8 +33,12 @@
   }
 
   .dark-section-blue-gradient {
-    background: linear-gradient(45deg, #120c61, #260085);
+    background: linear-gradient(45deg,#010105,#10162d);
     @apply border-none;
+  }
+
+  .section-sand-gradient {
+    background: radial-gradient(#ffff, #ffe2d5);
   }
 
   .bg-home-hero {
