@@ -354,6 +354,10 @@ In any case, make an exception for comments:
     display: none;
 }
 
+.alectryon-wsp {
+    font-size: 0.64rem;
+}
+
 .alectryon-io .alectryon-messages,
 .alectryon-io .alectryon-message,
 .alectryon-io .alectryon-goals,
