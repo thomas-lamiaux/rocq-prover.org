@@ -197,13 +197,13 @@ Layout.render
                 PRODUCTIVITY
               </div>
               <h3 class="text-title dark:text-dark-title font-bold">
-                First-Class Editor and Tooling Support
+                First-Class Editor and Tooling
               </h3>
               <p class="my-4 text-lg text-content dark:text-dark-content">
                 Rocq comes with deep integrations for VS Code, Vim or Emacs to provide
                 indispensable interactive support during development and proofs.
-                Between Opam, a popular package manager; the <code>coqdoc</code> and <code>Alectryon</code>
-                documentation tools, and the Docker-Rocq integration toolset, users have access to a complete, 
+                Between Opam, a popular package manager, the <code>coqdoc</code> and <code>Alectryon</code>
+                documentation tools and the Docker-Rocq integration toolset, users have access to a complete, 
                 modern developer experience.
               </p>
             </div>
@@ -256,12 +256,10 @@ Layout.render
             <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
           </div>
         </div>
-        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="" />
-          </div>
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
+          <div class="lg:flex-1 mt-10 lg:mt-0 flex items-center">
             <div class="text-base">
+            
               <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-teal-400 to-teal-600">
                 <%s! Icons.lightning "h-7 w-7 m-auto" %>
               </div>
@@ -283,6 +281,34 @@ Layout.render
                 Rocq's development is entirely open-source and a large and diverse community of users participate in its
                 continued evolution.
               </p>
+            </div>
+          </div>
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- <div class="swiper-slide">
+                  <div>
+                    <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" width="100" alt="Iris" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">COMPCERT</div>
+                    <img src="<%s Ocamlorg_static.Asset.url "img/home/compcert-diagram.png" %>" width="500" alt="">
+                  </div>
+                </div>
+                -->
+                <div class="swiper-slide">
+                  <div>
+                    <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">Mathematical Components</div>
+                    <div style="flex: 1 1 50%" class="py-2 px-6 w-1/3 text-opacity-50 overflow-auto bg-code_window dark:bg-dark-code_window">
+                    <div class="text-xs">
+                      <%s! Mathcomp_fourcolor.render %>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
