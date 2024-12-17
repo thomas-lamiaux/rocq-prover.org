@@ -83,7 +83,7 @@ inner =
       <% | None -> ()); (match alternate with | Some { href; title; type_ } -> %>
       <link rel="alternate" href="<%s href %>" title="<%s title %>" type="<%s type_ %>">
       <% | None -> ()); %>
-      <link rel="icon" type="image/x-icon" href="<%s Ocamlorg_static.Asset.url "favicon.ico" %>">
+      <link rel="icon" type="image/x-icon" href="<%s Ocamlorg_static.Asset.url "logos/favicon.ico" %>">
       <link rel="manifest" href="/manifest.json">
       <% (match styles with | Some styles -> styles |> List.iter (fun style -> %>
       <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url style %>">

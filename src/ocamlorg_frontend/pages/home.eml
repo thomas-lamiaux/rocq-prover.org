@@ -28,8 +28,8 @@ Layout.render
     <div class="flex flex-col lg:flex-row gap-6">
       <div class="lg:flex-1 my-2 justify-center text-center">
         <h1 class="flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name.svg" %>" alt="Rocq logo" class="dark:hidden max-w-xl">
-          <img src="<%s Ocamlorg_static.Asset.url "logo-with-name-orange-white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
+          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq logo" class="dark:hidden max-w-xl">
+        <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
         </h1>
         <p class="dark:text-dark-content max-w-3xl mx-auto my-7 text-2xl text-content">
           A trustworthy, industrial-strength interactive theorem prover and dependently-typed programming language

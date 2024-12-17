@@ -16,7 +16,7 @@ let render ~default_code =
     <meta name="robots" content="noindex, nofollow">
     <meta name="ahrefs-site-verification" content="6ff715b377cdcd566334b44ae8888791189ce24640c8a403eacdc3bcbaa9449b">
     <link rel="canonical" href="https://ocaml.org<%s Url.playground %>">
-    <link rel="icon" type="image/x-icon" href="<%s Ocamlorg_static.Asset.url "favicon.ico" %>">
+    <link rel="icon" type="image/x-icon" href="<%s Ocamlorg_static.Asset.url "logos/favicon.ico" %>">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/main.css" %>">
     <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/codemirror.css" %>">
