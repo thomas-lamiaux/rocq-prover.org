@@ -5,7 +5,6 @@ description: |
   Functions, values, definitions, environments, scopes, closures, and shadowing. This tutorial will help you master the fundamentals.
 category: "Introduction"
 prerequisite_tutorials:
-  - "toplevel-introduction"
   - "installing-rocq"
 ---
 
