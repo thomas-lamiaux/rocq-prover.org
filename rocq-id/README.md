@@ -70,7 +70,7 @@ For a full list of prohibited practices, refer to the Logo Usage section.
 
 - The Rocq logo is released under UNLICENSE.
 
-See our [`LICENSE`](./LICENSE) for the complete licenses.
+See our [`LICENSE`](https://github.com/coq/rocq-prover.org/tree/main/LICENSE) for the complete licenses.
 
 ---
 
