@@ -134,7 +134,7 @@ let lang_manual_banner =
           Language Manual
         </h3>
         <p class="mt-4 text-white font-normal max-w-xl text-base leading-7">
-          The OCaml language manual is a comprehensive guide covering syntax, features, and usage. It assists developers and learners in understanding capabilities, best practices, and language features.
+          The Rocq prover manual is a comprehensive guide covering syntax, features, and usage. It assists developers and learners in understanding capabilities, best practices, and language features.
         </p>
         <div class="w-full md:w-80 mt-6 py-2 bg-white rounded-xl text-center text-primary dark:text-dark-primary hover:underline font-bold text-lg">
           Take Me There
