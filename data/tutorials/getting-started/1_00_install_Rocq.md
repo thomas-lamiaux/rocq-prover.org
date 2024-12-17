@@ -2,22 +2,22 @@
 id: installing-rocq
 title: Installing the Rocq Prover
 description: |
-  This page will help you install OCaml and the OCaml Platform Tools. |
+  This page will help you install Rocq and the Rocq Platform Tools. |
   These instructions work on Windows, and Unix systems like Linux, and macOS.
 category: "First Steps"
 ---
 
-This guide will walk you through a minimum installation of OCaml. That includes installing a package manager and [the compiler](#installation-on-unix-and-macos) itself. We'll also install some platform tools like a build system, support for your editor, and a few other important ones.
+This guide will walk you through a minimum installation of Rocq. That includes installing a package manager and the  Rocq Prover itself. We'll also install some platform tools like a build system, support for your editor, and a few other important ones.
 
 On this page, you'll find installation instructions for Linux, macOS, Windows, and &ast;BSD for recent OCaml versions. For Docker, Linux instructions apply, except when setting up opam.
 
-**Note**: You'll be installing OCaml and its tools through a [command line interface (CLI), or shell](https://www.youtube.com/watch?v=0PxTAn4g20U)
+**Note**: You'll be installing Rocq and its tools through a [command line interface (CLI), or shell](https://www.youtube.com/watch?v=0PxTAn4g20U)
 
 ## Install opam
 
-OCaml has an official package manager, [opam](https://opam.ocaml.org/), which allows users to download and install OCaml tools and libraries. Opam also makes it practical to deal with different projects which require different versions of OCaml.
+Rocq and OCaml has an official package manager, [opam](https://opam.ocaml.org/), which allows users to download and install Rocq tools and libraries. Opam also makes it practical to deal with different projects which require different versions of the Rocq prover.
 
-Opam also installs the OCaml compiler. Alternatives exist, but opam is the best way to install OCaml. Although OCaml is available as a package in most Linux distributions, it is often outdated. 
+Opam also installs the OCaml compiler and the Rocq prover. 
 
 To install opam, you can [use your system package manager](https://opam.ocaml.org/doc/Install.html#Using-your-distribution-39-s-package-system) or download the [binary distribution](https://opam.ocaml.org/doc/Install.html#Binary-distribution). The details are available in these links, but for convenience, we use package distributions:
 
@@ -114,46 +114,62 @@ Opam initialisation may take several minutes. While waiting for its installation
 
 **Any problems installing?** Be sure to read the [latest release notes](https://opam.ocaml.org/blog/opam-2-2-0/). You can file an issue at https://github.com/ocaml/opam/issues or https://github.com/ocaml-windows/papercuts/issues.
 
-## Install Platform Tools
+## Install the Rocq Prover
 
-Now that we've successfully installed the OCaml compiler and the opam package manager, let's install some of the [OCaml Platform tools](https://ocaml.org/docs/platform), which you'll need to get the full developer experience in OCaml:
 
-- [UTop](https://github.com/ocaml-community/utop), a modern interactive toplevel (REPL: Read-Eval-Print Loop)
-- [Dune](https://dune.build), a fast and full-featured build system
-- [`ocaml-lsp-server`](https://github.com/ocaml/ocaml-lsp) implements the Language Server Protocol to enable editor support for OCaml, e.g., in VS Code, Vim, or Emacs.
-- [`odoc`](https://github.com/ocaml/odoc) to generate documentation from OCaml code
-- [OCamlFormat](https://opam.ocaml.org/packages/ocamlformat/) to automatically format OCaml code
-
-All these tools can be installed using a single command:
-```shell
-$ opam install ocaml-lsp-server odoc ocamlformat utop
+To install Rocq, simply run the following command. It will pin the Rocq package to version 9.0.0 and install it.
+Note that installing Rocq using opam will build it from sources, 
+which will take several minutes to complete:
+ 
+ ```shell
+$ opam pin add rocq 9.0.0
 ```
 
-You're now all set and ready to start hacking.
+Pinning prevents opam from upgrading Rocq automatically, to avoid causing inadvertent breakage in your Rocq projects. 
+You can upgrade Rocq explicitly to `$NEW_VERSION` with essentially the same command:
+
+ ```shell
+$ opam pin add rocq $NEW_VERSION
+```
+
+To ensure that installation was successful, check that `rocq -v` prints the expected version of Rocq.
+
+## Install Platform Tools
+
+VsRocq is an extension for [Visual Studio Code]("https://code.visualstudio.com/) (VS Code) and 
+[VSCodium](https://vscodium.com/) which provides support for the Rocq prover. 
+
+It is built around a language server which natively speaks the 
+[LSP protocol](https://learn.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol?view=vs-2022).
+
+To install it in your current opam switch, run this command:
+
+ ```shell
+$ opam install vsrocq-language-server
+```
+You can alternatively install [rocq-lsp](https://github.com/ejgallego/coq-lsp).
+
+Now you are ready to write some Rocq code and proofs!
 
 ## Check Installation
 
-To check that everything is working properly, you can start the UTop toplevel:
+To check that everything is working properly, you can start the Rocq toplevel:
 ```shell
-$ utop
-────────┬─────────────────────────────────────────────────────────────┬─────────
-        │ Welcome to utop version 2.13.1 (using OCaml version 5.1.0)! │
-        └─────────────────────────────────────────────────────────────┘
+$ rocq repl
+Welcome to Rocq 9.0.O
 
-Type #utop_help for help about using utop.
-
-─( 00:00:00 )─< command 0 >──────────────────────────────────────{ counter: 0 }─
-utop #
+Rocq <
 ```
 
-You're now in an OCaml toplevel, and you can start typing OCaml expressions. For instance, try typing `21 * 2;;` at the `#` prompt, then hit `Enter`. You'll see the following:
-```ocaml
-# 21 * 2;;
-- : int = 42
+You're now in an Rocq toplevel, and you can start typing Rocq expressions. For instance, try typing `Eval compute in 2*10.` at the `>` prompt, then hit `Enter`. You'll see the following:
+```coq
+Rocq > Eval compute in 2*10.
+     = 20
+     : nat
 ```
 
-**Congratulations**! You've installed OCaml! 🎉
+**Congratulations**! You've installed Rocq! 🎉
 
 ## Join the Community
 
-Make sure you [join the OCaml community](/community). You'll find many community members on [Discuss](https://discuss.ocaml.org/) or [Discord](https://discord.com/invite/cCYQbqN). These are great places to ask for help if you have any issues.
+Make sure you [join the Rocq community](/community). You'll find many community members on [Discuss](https://discuss.rocq.org/) or [Discord](https://discord.com/invite/cCYQbqN). These are great places to ask for help if you have any issues.
