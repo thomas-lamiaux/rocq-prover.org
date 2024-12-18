@@ -42,18 +42,6 @@ in
   <p class="font-normal uppercase mb-4 text-title dark:text-dark-title">Exercise Categories</p>
     <hr class="border-separator_20 dark:border-dark-title">
     <%s! exercise_sidebar_links_by_tag ~tag:"list" "Lists" %>
-    <hr class="border-separator_20 dark:border-dark-title">
-    <%s! exercise_sidebar_links_by_tag ~tag:"arithmetic" "Arithmetic" %>
-    <hr class="border-separator_20 dark:border-dark-title">
-    <%s! exercise_sidebar_links_by_tag ~tag:"logic" "Logic and Codes" %>
-    <hr class="border-separator_20 dark:border-dark-title">
-    <%s! exercise_sidebar_links_by_tag ~tag:"binary-tree" "Binary Trees" %>
-    <hr class="border-separator_20 dark:border-dark-title">
-    <%s! exercise_sidebar_links_by_tag ~tag:"multiway-tree" "Multiway Trees" %>
-    <hr class="border-separator_20 dark:border-dark-title">
-    <%s! exercise_sidebar_links_by_tag ~tag:"graph" "Graphs" %>
-    <hr class="border-separator_20 dark:border-dark-title">
-    <%s! exercise_sidebar_links_by_tag "Miscellaneous" %>
   </div>
 
 let statement_solution_switch =
@@ -127,18 +115,15 @@ Learn_layout.three_column_layout
     <h1 class="font-normal text-4xl text-title mb-8">Exercises</h1>
     <div class="prose prose-orange dark:prose-invert max-w-full mb-5">
       <p>
-        This section is inspired by
-        <a href="https://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html">
-          Ninety-Nine Lisp Problems</a>
-        which in turn was based on “<a href="https://sites.google.com/site/prologsite/prolog-problems/">Prolog problem
-          list</a>” by Werner Hett. For
-        each of these questions, some simple tests are shown—they may also serve
-        to make the question clearer if needed. To work on these problems, we
-        recommend you first <a href="<%s Url.getting_started %>">install OCaml</a> or use it <a
+        This section is very much work in progress. 
+      </p>
+      <p>        
+        To work on these problems, we
+        recommend you first <a href="<%s Url.getting_started %>">install the Rocq prover</a> or use it <a
           href="<%s Url.playground %>">inside
           your browser</a>. The source of the following
         problems is available on
-        <a href="https://github.com/ocaml/ocaml.org/tree/main/data/exercises">GitHub</a>.
+        <a href="https://github.com/rocq/rocq-prover.org/tree/main/data/exercises">GitHub</a>.
       </p>
       <p>
         Every exercise has a difficulty level, ranging from beginner to advanced.

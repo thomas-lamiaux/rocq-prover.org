@@ -9,21 +9,25 @@ tutorials: [ "lists"]
 
 # Solution
 
-```ocaml
-# let rec last = function 
-  | [] -> None
-  | [ x ] -> Some x
-  | _ :: t -> last t;;
-val last : 'a list -> 'a option = <fun>
+```rocq
+Open Scope list_scope.
+
+Fixpoint last {A} (l:list A) (d:A) : A :=
+  match l with
+    | [] => d
+    | [a] => a
+    | a :: l => last l d
+  end.
 ```
 
 # Statement
 
-Write a function `last : 'a list -> 'a option` that returns the last element of a list
+Write a function `last : forall {A:Type}, list A -> A -> A` where `last l d` returns the last element of the list `l`, or the default value `d` if `l` is empty.
+the last element of a list
 
-```ocaml
-# last ["a" ; "b" ; "c" ; "d"];;
-- : string option = Some "d"
-# last [];;
-- : 'a option = None
+```rocq
+> Eval comute in last [1 ; 2 ; 3 ] 0;;
+  = 3 : nat
+> Eval compute in last [] 0.
+  = 0 : nat
 ```
