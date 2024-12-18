@@ -38,7 +38,7 @@ Layout.render
         <div class="space-x-0 lg:space-x-6">
           <a class="btn btn-lg font-medium lg:mb-0 mb-4" href="<%s Url.install %>">Install</a>
           <a class="btn btn-lg btn-ghost" href="<%s Url.about %>">
-            About Rocq
+            About the Rocq prover
           </a>
         </div>
         <div class="mt-6">
@@ -58,9 +58,9 @@ Layout.render
   <div class="container-fluid space-y-24 lg:space-y-32">
     <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
       <div class=" items-center lg:flex-1 lg:mt-8 ">
-        <h2 class="font-bold text-title dark:text-dark-title">A short introduction to ROCQ</h2>
+        <h2 class="font-bold text-title dark:text-dark-title">A short introduction to the Rocq prover</h2>
         <div class="text-content dark:text-dark-content text-base mt-3">
-          Rocq is a proof assistant. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either Objective Caml or Haskell source code.
+          The Rocq prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either Objective Caml or Haskell source code.
         </div>
       </div>
       <div class="lg:flex-1 flex justify-center">
@@ -203,7 +203,7 @@ Layout.render
                 First-Class Editor and Tooling
               </h3>
               <p class="my-4 text-lg text-content dark:text-dark-content">
-                Rocq comes with deep integrations for VS Code, Vim or Emacs to provide
+                The Rocq prover comes with deep integrations for VS Code, Vim or Emacs to provide
                 indispensable interactive support during development and proofs.
                 Between Opam, a popular package manager, the <code>coqdoc</code> and <code>Alectryon</code>
                 documentation tools and the Docker-Rocq integration toolset, users have access to a complete, 
@@ -249,7 +249,7 @@ Layout.render
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                Rocq offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
+                The Rocq prover offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
                 with efficient bytecode and native conversion checkers relying on the OCaml runtime.
                 It can also interoperate with code written in other languages thanks to its unique extraction facilities.
               </p>
@@ -272,7 +272,7 @@ Layout.render
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                Rocq enables a very wide variety of developments to coexist in the same system, ranging from
+                The Rocq prover enables a very wide variety of developments to coexist in the same system, ranging from
                 end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
                 Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
                 the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated
