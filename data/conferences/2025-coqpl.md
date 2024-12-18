@@ -1,7 +1,7 @@
 ---
 title: CoqPL 2025
 date: 2025-01-25
-location: Tbilisi, Georgia
+location: Denver, Co, USA
 important_dates:
   - date: 2024-10-25
     info: Abstract submission deadline 
