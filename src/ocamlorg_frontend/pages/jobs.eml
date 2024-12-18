@@ -1,18 +1,18 @@
 let render ?(location = "All") ~locations (jobs : Data.Job.t list) =
 Community_layout.single_column_layout
-~title:"OCaml Jobs"
+~title:"Rocq Jobs"
 ~description:"This is a space where groups, companies, and organisations can advertise their projects directly to the
-OCaml community."
+Rocq community."
 ~canonical:Url.jobs
 ~current:Jobs @@
 <div class="lg:-mt-32 lg:pt-44 w-full intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="w-full m-auto">
-            <h1 class="text-title dark:text-dark-title font-bold mb-2">OCaml Job Board</h1>
+            <h1 class="text-title dark:text-dark-title font-bold mb-2">Rocq Job Board</h1>
             <p class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">This is a space where groups, companies, and organisations can advertise their projects directly to the
-                OCaml community.</p>
+                Rocq community.</p>
                <div class="flex lg:flex-row mt-8 mr-4 max-w-[230px]">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.edit "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add a Job Offer") ~href:("https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md#content-job") "" %>
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.edit "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add a Job Offer") ~href:("https://github.com/rocq/rocq.org/blob/main/CONTRIBUTING.md#content-job") "" %>
                </div> 
         </div>
     </div>
