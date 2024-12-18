@@ -24,7 +24,7 @@ let tabs
     | Overview -> "Overview"
     | GetStarted -> "Get Started"
     | Language -> "Language"
-    | Platform -> "Platform Docs"
+    | Platform -> "Documentation"
     | Guides -> "Guides"
     | Cookbook -> "Cookbook"
     | Exercises -> "Exercises"
