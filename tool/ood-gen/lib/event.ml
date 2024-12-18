@@ -86,7 +86,7 @@ let all () =
 
 module EventsFeed = struct
   let create_entry (log : t) =
-    let authors = (Syndic.Atom.author "OCaml Events", []) in
+    let authors = (Syndic.Atom.author "Rocq Events", []) in
     let event_type = show_event_type log.event_type in
     let textual_location = log.city ^ ", " ^ log.country in
     let start_date_str =
