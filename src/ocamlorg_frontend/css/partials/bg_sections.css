@@ -1,11 +1,11 @@
 /* different page section backgrounds from Figma */
 @layer utilities {
   .section-mild-contrast {
-    background: url("/img/innerbottombg.png") left bottom no-repeat, url("/img/innertopbg.png") right top no-repeat;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat;
     @apply bg-sand border-b border-t;
   }
   .dark-section-mild-contrast{
-    background: url("/img/innerbottombg.png") left bottom no-repeat, url("/img/innertopbg.png") right top no-repeat;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat;
     @apply bg-mild_blue border-b border-t;
   }
   .dark-section-strong-contrast {
@@ -14,11 +14,11 @@
   }
 
   .dark-blue-section-mild-contrast {
-    background: url("/img/innerbottombg.png") left bottom no-repeat, url("/img/innertopbg.png") right top no-repeat, linear-gradient(273deg, rgba(14, 25, 62, 0.90) -0.63%, #0E193E 98.13%);;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat, linear-gradient(273deg, rgba(14, 25, 62, 0.90) -0.63%, #0E193E 98.13%);;
   }
 
   .pkg-section-mild-contrast {
-    background: url("/img/innerbottombg.png") left bottom no-repeat, url("/img/innertopbg.png") right top no-repeat;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat
     @apply bg-sand border-b border-t;
   }
 
@@ -56,7 +56,7 @@
   }
   
   .intro-section-simple {
-    background: url("/img/innerbottombg.png") left bottom no-repeat, url("/img/innertopbg.png") right top no-repeat;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat;
     @apply pt-16 pb-16 bg-sand;
   }
 
