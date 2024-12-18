@@ -5,7 +5,6 @@ description: >
   Hop on the Rocq sightseeing bus. This absolute beginner tutorial will drive you through the marvels and wonders of the Rocq prover. 
 category: "First Steps"
 recommended_next_tutorials:
-  - "basic-data-types"
 ---
 
 
