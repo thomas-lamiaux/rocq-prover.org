@@ -99,11 +99,7 @@ Learn_layout.single_column_layout
       <%s! Learn_components.exercises_block
         ~icon:Learn_components.beginner_section_icon
         ~heading:"Exercises for Beginners"
-        [ Data.Exercise.get_by_slug "1" |> Option.get
-        ; Data.Exercise.get_by_slug "5" |> Option.get
-        ; Data.Exercise.get_by_slug "6" |> Option.get
-        ; Data.Exercise.get_by_slug "8" |> Option.get
-        ] %>
+        [ ] %>
     </div>
     -->
   </div>
@@ -167,11 +163,7 @@ Learn_layout.single_column_layout
       <%s! Learn_components.exercises_block
         ~icon:Learn_components.intermediate_section_icon
         ~heading:"Practice with Exercises"
-        [ Data.Exercise.get_by_slug "55" |> Option.get
-        ; Data.Exercise.get_by_slug "64" |> Option.get
-        ; Data.Exercise.get_by_slug "68" |> Option.get
-        ; Data.Exercise.get_by_slug "81" |> Option.get
-        ] %>
+        [ ] %>
     </div>
     -->
 
