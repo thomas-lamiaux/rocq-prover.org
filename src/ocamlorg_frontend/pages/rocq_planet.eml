@@ -1,0 +1,119 @@
+let resource_link ~link icon title =
+  <a href="<%s link %>" class="text-primary dark:text-dark-primary flex items-center dark:hover:text-dark-primary hover:underline group"> <%s! icon "h-5 w-5 mr-1 text-primary dark:text-dark-primary group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %><span><%s title %></span></a>
+
+let render_blog_post (post : Data.Planet.entry) =
+  <div class="flex flex-col lg:flex-row lg:gap-12 dark:bg-dark-card dark:rounded-lg p-6 border-b border-separator_20 dark:border-none md:border-none mb-4">
+      <div class="space-y-3 mt-2 lg:mt-0 flex flex-col flex-1">
+          <a href="<%s match post with | BlogPost p -> p.url | Video v -> v.url %>"
+              class="block text-xl text-title dark:text-dark-title hover:text-primary dark:hover:text-dark-primary"><%s match post with | BlogPost p -> p.title | Video v -> v.title %></a>
+          <p class="text-content dark:text-dark-content truncate-2-lines">
+              <%s match post with | BlogPost p -> Option.value ~default:"" p.description | Video v -> v.description %>
+          </p>
+          <div class="flex items-center flex-wrap gap-[4px]">
+              <p class="text-content dark:text-dark-content text-sm mr-8 font-bold">
+                <%s match post with | BlogPost p -> Utils.human_time p.date | Video v -> Utils.human_time v.published %>
+              </p>
+              <p class="text-content dark:text-dark-content font-bold text-sm mr-8">
+                <%s match post with | BlogPost p -> p.source.name | Video v -> v.source_title %>
+              </p>
+              <% (match post with | BlogPost p -> %>
+                <%s! resource_link ~link:p.url Icons.link "Read Article" %>
+              <% | Video v -> %>
+                <%s! resource_link ~link:v.url Icons.video "View Video" %>
+              <% ); %>
+          </div>
+      </div>
+      <div class="flex justify-center w-100 items-center mt-4 md:mt-4">
+        <% (match post with | BlogPost p -> %>
+          <% (match p.preview_image with | None -> %>                 
+            <div class="w-full lg:w-[300px]">
+                <a href="<%s p.url %>">
+                  <div class="relative w-full h-[194px] overflow-hidden bg-event-5">
+                    <div class="flex flex-col justify-center items-center z-10 absolute top-0 right-0 bottom-0 left-0">
+                      <img class="w-[60px] mb-2" src="<%s! Ocamlorg_static.Asset.url "img/community/rocq-icon.svg" %>" alt="camel head illustration">
+                      <p class="uppercase lg:text-4xl text-2xl tracking-widest text-white"> [ARTICLE]</p>
+                    </div>
+                    <div class="absolute inset-0 bg-[#C546000D] clip-triangle"></div>
+                  </div>
+                </a>
+            </div>
+          <% | Some image -> %>
+              <div class="w-full lg:w-[300px]">
+                  <a href="<%s p.url %>"><img class="w-full" src="<%s image %>" alt=""></a>
+              </div>   
+          <% ); %>
+        <% | Video v -> %>
+            <div class="w-full lg:w-[300px]">
+                <a href="<%s v.url %>"><img class="w-full" src="<%s v.thumbnail %>" alt=""></a>
+            </div>  
+        <% ); %>
+      </div>
+  </div>
+
+let render ?(category = "All") ~(pagination_info : Pagination.t) (planet : Data.Planet.entry list) =
+News_layout.single_column_layout
+~title:"The Rocq Planet"
+~description:"The RSS aggregator for the Rocq community."
+~canonical:(Url.rocq_planet ^ if pagination_info.page_number = 1 then "" else "?p=" ^ string_of_int pagination_info.page_number)
+~alternate:{ href = "/planet.xml"; title = "The Rocq Planet"; type_ = "application/atom+xml" }
+~current:RocqPlanet @@
+<div class="bg-white dark:bg-dark-background py-12">
+  <div class="container-fluid wide">
+    <div class="grid grid:cols-1 lg:grid-cols-3 gap-4">
+        <div class="col-span-1 lg:flex flex-col p-4 lg:order-2">
+          <div class="border-b border-separator_20 dark:border-dark-separator_30 pb-4 mb-4">
+            <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium mb-2">Blog</p>
+            <h1 class="font-bold text-2xl text-title dark:text-dark-title mb-2">The Rocq Planet</h1>
+            <p class="text-content dark:text-dark-content mb-4">
+              Articles and videos contributed by both experts, companies and passionate developers from the Rocq community.
+              From in-depth technical articles, project highlights, community news, or insights into Open Source projects,
+              the Rocq Planet RSS feed aggregator has something for everyone.
+            </p>
+          </div>
+          <div class="mt-4">
+            <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-2">Want your Blog Posts or Videos to Show Here?</h2>
+            <p class="text-content dark:text-dark-content mb-2">
+              To contribute a blog post, or add your RSS feed, check out the Contributing Guide on GitHub.
+            </p>
+            <div class="flex lg:flex-row mt-8 mr-4">
+              <%s!  Hero_section.hero_button ~left_icon:(Icons.edit "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add your RSS feed!") ~href:("https://github.com/rocq/rocq.org/blob/main/CONTRIBUTING.md#rocq-planet") "" %>
+             </div>
+          </div>
+        </div>
+        <div class="col-span-2 lg:order-1">
+          <div class="h-max mt-2 border-primary dark:border-primary flex mb-4">
+            <form class="flex flex-col md:flex-row w-max gap-2" action="<%s Url.rocq_planet %>" method="GET">
+                  <label for="category" class="sr-only mb-2 md:mb-0">Location</label>
+                  <%s! Forms.select
+                    ~attrs:{|id="category" name="category" onchange="this.form.submit()"|}
+                    ~options:([("All", "All"); ("Article", "Article"); ("Video", "Video")])
+                    ~selected:category
+                   "" %>
+            </form>
+          </div>
+          <div class="flex flex-col">
+            <%s! planet
+              |> List.map (fun (item : Data.Planet.entry) -> render_blog_post item )
+              |> String.concat "\n" ; %>
+          </div>
+          <div class="flex items-start">
+            <%s! Pagination.render pagination_info %> 
+          </div>
+        </div> 
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

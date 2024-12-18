@@ -565,7 +565,7 @@ let conference req =
   in
   Dream.html (Ocamlorg_frontend.conference conference)
 
-let ocaml_planet req =
+let rocq_planet req =
   let category = Dream.query req "category" in
   let matches_criteria (item : Data.Planet.entry) cat =
     match cat with
@@ -588,13 +588,13 @@ let ocaml_planet req =
       {
         total_page_count;
         page_number;
-        base_url = Url.ocaml_planet;
+        base_url = Url.rocq_planet;
         queries = query_param ~name:"category" category;
       }
   in
 
   Dream.html
-    (Ocamlorg_frontend.ocaml_planet ~pagination_info ?category current_items)
+    (Ocamlorg_frontend.rocq_planet ~pagination_info ?category current_items)
 
 let news req =
   let page_number, total_page_count, current_items =

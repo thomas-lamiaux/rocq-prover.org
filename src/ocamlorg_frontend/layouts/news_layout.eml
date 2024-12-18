@@ -1,7 +1,7 @@
 type section =
   (* | Overview *)
   | Changelog
-  | OCamlPlanet
+  | RocqPlanet
   | Newsletters
   | OpamBlog
 
@@ -11,17 +11,17 @@ let tabs
     (*| Overview -> *)
     | Changelog -> Url.changelog
     | Newsletters -> Url.news
-    | OCamlPlanet -> Url.ocaml_planet
+    | RocqPlanet -> Url.rocq_planet
     | OpamBlog -> Url.local_blog "opam"
   in
   let title_of_section = function
     (*| Overview -> "Overview"*)
     | Changelog -> "Changelog"
     | Newsletters -> "Newsletters"
-    | OCamlPlanet -> "OCaml Planet"
+    | RocqPlanet -> "Rocq Planet"
     | OpamBlog -> "Opam Blog"
   in
-  Layout.subnav_tabs ~title:"News" ~current ~sections:[Changelog; OCamlPlanet; Newsletters] ~url_of_section ~title_of_section
+  Layout.subnav_tabs ~title:"News" ~current ~sections:[Changelog; RocqPlanet; Newsletters] ~url_of_section ~title_of_section
 
 let single_column_layout
 ?use_swiper

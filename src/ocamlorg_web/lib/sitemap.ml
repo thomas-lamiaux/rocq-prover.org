@@ -8,7 +8,7 @@ let urls =
     Url.about;
     Url.academic_users;
     Url.academic_institutions;
-    Url.ocaml_planet;
+    Url.rocq_planet;
     Url.books;
     Url.carbon_footprint;
     Url.changelog;

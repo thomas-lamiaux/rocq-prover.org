@@ -57,11 +57,11 @@ let from_v2 =
     ("/community/mailing_lists.fr.html", Url.community);
     ("/community/mailing_lists.html", Url.community);
     ("/community/media.html", Url.community);
-    ("/community/planet.html", Url.ocaml_planet);
-    ("/community/planet/index.html", Url.ocaml_planet);
-    ("/community/planet", Url.ocaml_planet);
-    ("/community/planet/older.html", Url.ocaml_planet);
-    ("/community/planet/syndication.html", Url.ocaml_planet);
+    ("/community/planet.html", Url.rocq_planet);
+    ("/community/planet/index.html", Url.rocq_planet);
+    ("/community/planet", Url.rocq_planet);
+    ("/community/planet/older.html", Url.rocq_planet);
+    ("/community/planet/syndication.html", Url.rocq_planet);
     ("/community/support.fr.html", Url.community);
     ("/community/support.html", Url.community);
     ("/consortium/index.fr.html", Url.index);

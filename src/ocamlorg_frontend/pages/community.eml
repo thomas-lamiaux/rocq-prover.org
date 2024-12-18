@@ -185,11 +185,11 @@ Community_layout.single_column_layout
 </div>
 <div class="w-full bg-white dark:bg-dark-background hidden md:block">
   <div class="container-fluid py-12">
-    <a href="<%s Url.ocaml_planet %>" class="block bg-gradient-to-r from-[#C54B21] dark:from-[#773E21] to-[#E18C34] dark:to-[#E7B573] hover:from-[#B63701] hover:to-[#EE8703] dark:hover:from-[#803814] dark:hover:to-[#F1B566] rounded-3xl">
+    <a href="<%s Url.rocq_planet %>" class="block bg-gradient-to-r from-[#C54B21] dark:from-[#773E21] to-[#E18C34] dark:to-[#E7B573] hover:from-[#B63701] hover:to-[#EE8703] dark:hover:from-[#803814] dark:hover:to-[#F1B566] rounded-3xl">
       <div class="bg-[url('/img/learn/banner-background.svg')] bg-cover flex justify-between px-14 py-9">
         <div>   
           <p class="uppercase text-sm text-white dark:text-dark-white tracking-widest font-medium my-4">Blog</p>
-          <h2 class="font-bold text-2xl text-white dark:text-dark-white mb-4">OCaml Planet</h2>
+          <h2 class="font-bold text-2xl text-white dark:text-dark-white mb-4">Rocq Planet</h2>
           <p class="text-sm text-white dark:text-dark-white font-medium my-4">Read Blog Posts and Watch Videos from the OCaml community!</p>   
         </div>
         <div>
