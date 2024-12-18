@@ -9,7 +9,7 @@ tutorials: [ "lists"]
 
 # Solution
 
-```rocq
+```ocaml
 Open Scope list_scope.
 
 Fixpoint last {A} (l:list A) (d:A) : A :=
@@ -25,7 +25,7 @@ Fixpoint last {A} (l:list A) (d:A) : A :=
 Write a function `last : forall {A:Type}, list A -> A -> A` where `last l d` returns the last element of the list `l`, or the default value `d` if `l` is empty.
 the last element of a list
 
-```rocq
+```ocaml
 > Eval comute in last [1 ; 2 ; 3 ] 0;;
   = 3 : nat
 > Eval compute in last [] 0.
