@@ -48,7 +48,19 @@ Once opam is installed, you can set up the project with the following command:
 make switch
 ```
 
-And run it with:
+Or alternatively (using your current switch):
+
+```
+opam install . --deps-only --with-test --with-doc
+```
+
+Users of NixOS can get all external dependencies needed to run the above commands by running:
+
+```
+nix-shell -p binutils pkg-config curl gmp libev oniguruma
+```
+
+Then, you can build and run the website with:
 
 ```
 make start
