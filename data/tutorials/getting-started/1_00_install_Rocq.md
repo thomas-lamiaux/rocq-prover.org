@@ -11,7 +11,10 @@ This guide will walk you through a minimum installation of Rocq. That includes i
 
 On this page, you'll find installation instructions for Linux, macOS, Windows, and &ast;BSD for recent OCaml versions. For Docker, Linux instructions apply, except when setting up opam.
 
-**Note**: You'll be installing Rocq and its tools through a [command line interface (CLI), or shell](https://www.youtube.com/watch?v=0PxTAn4g20U)
+**Note**: You'll be installing Rocq and its tools through a [command line interface (CLI), or shell](https://www.youtube.com/watch?v=0PxTAn4g20U). 
+
+Beginners are encouraged to install the [Rocq Platform](/install#rocq_platform) using one of the binary installers: we provide binary installers for Windows and macOS.
+
 
 ## Install opam
 
