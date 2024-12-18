@@ -76,5 +76,11 @@
  .dark-deep-blue-gradient {
   background: linear-gradient(45deg, #120c61, #260085);
   @apply border-none;
-}
+  }
+
+  @media (min-width:40em){
+    .bg-home-hero, .bg-dark-home-hero {
+      background-position: 60% 100%;
+    }
+  }
 }

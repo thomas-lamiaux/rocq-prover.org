@@ -52,7 +52,7 @@ Layout.render
     </div>
   </div>
 </div>
-<div class="pt-2 lg:pt-24">
+<div class="pt-12 lg:pt-24">
  
 <div class="border-b border-separator_30 dark:border-dark-separator_30 lg:pt-8">
   <div class="container-fluid space-y-24 lg:space-y-32">
@@ -105,7 +105,7 @@ Layout.render
     </div>
   </div>
 </div>
-<div class="lg:flex-1 lg:mt-16">
+<div class="lg:flex-1 mt-16">
   <div class="container-fluid text-center items-center">
     <h2 class="font-bold text-title dark:text-dark-title">Trusted in Academia and Industry</h2>
     <div class="text-content dark:text-dark-content text-base mt-3">
@@ -136,11 +136,11 @@ Layout.render
       <div class="text-center md:text-left flex flex-col md:flex-row gap-6">
         <div class="md:w-60 dark:text-white">
           <%s! Icons.price_icon "mx-auto w-40" %>
-          <%s! Icons.acm_logo "ml-auto mt-5" %>
+          <%s! Icons.acm_logo "ml-auto mt-5 mx-auto w-40" %>
         </div>
         <div class="space-y-6 flex-1">
-        <h2 class="font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
-        <div class="text-xl dark:text-white mt-3">
+        <h2 class="md:text-3xl text-xl font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
+        <div class="sm:text-sm text-lg dark:text-white mt-3">
           The recipients of the awards are thanking all developers who contributed to the success of the Rocq Prover, 
           the users who illustrated how to use Coq for so many impressive projects in formal certification, programming, logic, 
           formalization of mathematics and teaching as well as the whole surrounding scientific community in proof theory, 
@@ -509,6 +509,7 @@ Layout.render
 <script>
   var swiper = new Swiper(".mySwiper", {
     loop: true,
+    autoHeight: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -518,6 +519,7 @@ Layout.render
   });
   var swiper_simple = new Swiper(".mySwiper_simple", {
     loop: false,
+    autoHeight: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: true,
