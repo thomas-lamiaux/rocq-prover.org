@@ -38,14 +38,14 @@ let render
 ?(language = "All")
 books =
 Learn_layout.single_column_layout
-~title:"OCaml Books"
-~description:"A selection of books to learn the OCaml programming language."
+~title:"Rocq Books"
+~description:"A selection of books to learn how to write programs and proofs with the Rocq prover."
 ~canonical:Url.books
 ~current:Books @@
 <div class="bg-background dark:bg-dark-background">
     <div class="container-fluid pt-10">
         <div class="prose dark:prose-invert mb-10">
-            <h1 class="font-normal text-4xl">Books On OCaml (<%s string_of_int (List.length books) %>)</h2>
+            <h1 class="font-normal text-4xl">Books On Rocq (<%s string_of_int (List.length books) %>)</h2>
         </div>
         <form action="<%s Url.books %>" method="GET">
             <div class="flex mb-0 flex-col gap-4 sm:flex-row">
@@ -72,7 +72,7 @@ Learn_layout.single_column_layout
             <% ); %>
         </div>
         <div class="prose dark:prose-invert">
-            If you want to add a new book, check out the <a href="https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md#content-book" target="_blank">Contributing Guide</a> on GitHub.     
+            If you want to add a new book, check out the <a href="https://github.com/rocq/rocq-prover.org/blob/main/CONTRIBUTING.md#content-book" target="_blank">Contributing Guide</a> on GitHub.     
         </div>
     </div>
 </div>
