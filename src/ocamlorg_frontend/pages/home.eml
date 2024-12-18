@@ -147,7 +147,7 @@ Layout.render
           type theory, programming languages, interactive theorem proving.
         </div>
           <div class="inline-flex md:flex gap-8">
-            <a class="btn btn-outline rounded-3xl" href="https://coq.inria.fr/news/coq-received-acm-software-system-2013-award.html">Read more</a>
+            <a class="btn btn-outline rounded-3xl" href=news/sigplan_announcement>Read more</a>
           </div>
         </div>
       </div>
