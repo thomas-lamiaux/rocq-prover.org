@@ -9,12 +9,12 @@
     @apply bg-mild_blue border-b border-t;
   }
   .dark-section-strong-contrast {
-    background: linear-gradient(181deg, #260086, #1d1d1b);
+    background: linear-gradient(181deg, #10162D, #1d1d1b);
     @apply border-none;
   }
 
   .dark-blue-section-mild-contrast {
-    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat, linear-gradient(273deg, rgba(14, 25, 62, 0.90) -0.63%, #0E193E 98.13%);;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat, linear-gradient(273deg, rgba(14, 25, 62, 0.90) -0.63%, #10162D 98.13%);;
   }
 
   .pkg-section-mild-contrast {
@@ -28,7 +28,7 @@
   }
 
   .section-blue-gradient {
-    background: linear-gradient(45deg, #120c61, #260085);
+    background: linear-gradient(45deg, #010105, #10162D);
     @apply border-none;
   }
 
@@ -51,6 +51,10 @@
     background-size: cover;
   }
   
+  .bg-code_window{
+    background: linear-gradient(0deg, #fdf6f2, #fff6f3, #fff5f3, #fcf1f0, #faf7f7);
+  }
+
   .bg-dark-code_window{
     background: linear-gradient(177deg, #0d0d0d, #141721);
   }
@@ -69,12 +73,12 @@
     @apply pt-16 pb-16 bg-dark-background_navigation;
   }
  .deep-blue-gradient {
-  background: linear-gradient(45deg, #120c61, #260085);
+  background: linear-gradient(45deg, #010105, #10162D);
   @apply border-none;
  }
 
  .dark-deep-blue-gradient {
-  background: linear-gradient(45deg, #120c61, #260085);
+  background: linear-gradient(45deg,#010105, #10162D);
   @apply border-none;
   }
 
