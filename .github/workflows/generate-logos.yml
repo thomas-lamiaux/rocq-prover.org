@@ -1,0 +1,33 @@
+name: Zip Folder and Push
+
+on:
+  workflow_dispatch:
+
+jobs:
+  zip-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Create zip file rocq-logos.zip
+        run: |
+          if [ -d "rocq-id/avatar" ] && [ -d "rocq-id/badges" ] && [ -d "rocq-id/logos" ] && [ -f "rocq-id/ROCQ_ID-guidelines.pdf" ]; then
+            zip -r rocq-logos.zip rocq-id/avatar rocq-id/badges rocq-id/logos rocq-id/ROCQ_ID-guidelines.pdf
+          else
+            echo "One or more specified folders/files do not exist. Exiting."
+            exit 1
+          fi
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Move zip file and commit
+        run: |
+          mv rocq-logos.zip rocq-id/
+          git add rocq-id/rocq-logos.zip
+          git commit -m "Add zipped rocq-logos folder"
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  
