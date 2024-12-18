@@ -26,7 +26,7 @@ Write a function `last : forall {A:Type}, list A -> A -> A` where `last l d` ret
 the last element of a list
 
 ```ocaml
-> Eval comute in last [1 ; 2 ; 3 ] 0;;
+> Eval compute in last [1 ; 2 ; 3 ] 0;;
   = 3 : nat
 > Eval compute in last [] 0.
   = 0 : nat
