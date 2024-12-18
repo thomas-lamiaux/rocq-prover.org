@@ -72,7 +72,7 @@ Learn_layout.three_column_layout
     <div class="prose dark:prose-invert mb-10">
       <h1 class="font-normal text-4xl">OCaml Cookbook Recipes</h2>
       <p>
-        The OCaml Cookbook is a place where OCaml developers share how to solve
+        The Rocq Cookbook is a place where Rocq developers share how to solve
         common tasks using packages from the ecosystem.</p>
       <p>
         A task is something that needs to be done inside a project. A recipe is
@@ -81,12 +81,10 @@ Learn_layout.three_column_layout
         different combination of libraries, each is a different recipe. Tasks
         don't describe how to use the standard library or language features.</p>
         <p>
-        OCaml developers are warmly invited to contribute categories, tasks, and
+        Rocq developers are warmly invited to contribute categories, tasks, and
         recipes. See the Cookbook section of the <a
-        href="https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md#content-cookbook">CONTRIBUTING.md</a> file in our GitHub repo.
+        href="https://github.com/rocq/rocq-prover.org/blob/main/CONTRIBUTING.md#content-cookbook">CONTRIBUTING.md</a> file in our GitHub repo.
         <p>
-        The OCaml guides are recommend reading, for instance recipes handle errors
-        as described in the Error Handling guide.
     </div>
     <div class="flex flex-col gap-6">
       <% categories |> List.iter (fun (category: Data.Cookbook.category) -> %>
