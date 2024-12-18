@@ -86,7 +86,7 @@ in
     <% ); %>
     <ul class="order-1 lg:hidden flex items-center">
       <li
-        class="h-12 w-12 hover:bg-primary_25 dark:hover:bg-primary_20 flex items-center justify-center rounded-full text-content dark:text-dark-title">
+        class="h-12 w-12 hover:bg-tertiary_25 dark:hover:bg-primary_20 flex items-center justify-center rounded-full text-content dark:text-dark-title">
         <button aria-label="open menu" @click="open = ! open">
           <%s! Icons.hamburger_menu "h-8 w-8" %>
         </button>

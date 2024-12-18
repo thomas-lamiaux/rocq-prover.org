@@ -23,20 +23,20 @@ Layout.render
 ~description:"Rocq is a general-purpose, industrial-strength interactive theorem prover."
 ~use_alectryon:true
 ~canonical:"" @@
-<div class="lg:-mt-20 lg:pb-16 lg:pt-44 py-2 bg-home-hero dark:bg-dark-home-hero ">
+<div class="bg-home-hero dark:bg-dark-home-hero lg:-mt-20 lg:pb-16 pb-8 lg:pt-44 pt-16 py-2">
   <div class="container-fluid space-y-24 lg:space-y-32">
     <div class="flex flex-col lg:flex-row gap-6">
       <div class="lg:flex-1 my-2 justify-center text-center">
         <h1 class="flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq logo" class="dark:hidden max-w-xl">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline max-w-xl">
+          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq logo" class="dark:hidden lg:max-w-xl max-w-[80%]">
+          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline lg:max-w-xl max-w-[80%]">
         </h1>
-        <p class="dark:text-dark-content max-w-3xl mx-auto my-7 text-2xl text-content">
+        <p class="dark:text-dark-content max-w-3xl mx-auto my-7 lg:text-2xl text-xl text-content">
           A trustworthy, industrial-strength interactive theorem prover and dependently-typed programming language
           for mechanised reasoning in mathematics, computer science and more.
         </p>
         <div class="space-x-0 lg:space-x-6">
-          <a class="btn btn-lg mb-4 lg:mb-0" href="<%s Url.install %>">Install</a>
+          <a class="btn btn-lg font-medium lg:mb-0 mb-4" href="<%s Url.install %>">Install</a>
           <a class="btn btn-lg btn-ghost" href="<%s Url.about %>">
             About Rocq
           </a>
