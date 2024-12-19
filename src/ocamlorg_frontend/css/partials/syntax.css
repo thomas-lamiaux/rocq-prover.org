@@ -84,7 +84,8 @@ span[class*="keyword"],
 .highlight .k { color: #FF540A; font-weight: bold } /* Keyword */
 .highlight .l { color: #000000 } /* Literal */
 .highlight .n { color: #000000 } /* Name */
-.highlight .o { color: #FF540A; font-weight: bold } /* Operator */
+span[class*=operator],
+.highlight .o { color: #a13304; font-weight: bold } /* Operator */
 .highlight .x { color: #000000 } /* Other */
 .highlight .p { color: #000000; font-weight: bold } /* Punctuation */
 span[class*="comment"] ,
@@ -174,7 +175,8 @@ span[class*="support"],
 .dark .highlight .k { color: #FF540A; font-weight: bold } /* Keyword */
 .dark .highlight .l { color: #ffffff } /* Literal */
 .dark .highlight .n { color: #ffffff } /* Name */
-.dark .highlight .o { color: #ffffff } /* Operator */
+.dark span[class*=operator],
+.dark .highlight .o { color: #0055ff } /* Operator */
 .dark .highlight .x { color: #ffffff } /* Other */
 .dark .highlight .p { color: #ffffff } /* Punctuation */
 .dark span[class*="comment"],
