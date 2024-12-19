@@ -97,6 +97,10 @@ Layout.render
       <!-- Add Inria, MPI, Aarhus, UPenn, Harvard, ... -->
       <!-- Add Mitsubishi, Facebook ? -->
       <div class="mx-4 my-4 py-4 px-12">
+        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/inr_logo_rouge.svg" %>" alt="Inria">
+        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/inr_logo_blanc.svg" %>" alt="Inria">
+      </div>
+      <div class="mx-4 my-4 py-4 px-12">
         <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock">
         <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock">
       </div>
