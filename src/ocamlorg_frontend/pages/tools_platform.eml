@@ -71,7 +71,7 @@ Tools_layout.three_column_layout
     
     <p>
       See the <a href= tools/platform-principles>Guiding Principles</a> for more on the Platform concept, and
-      <a href="https://github.com/coq/ceps/blob/master/text/052-platform-release-cycle.md">CEP 52</a>
+      <a href= tools/compiler-release-cycle>Rocq and Rocq platform release cycle</a>
       for more on how the Platform is related to the Rocq release cycle.
     </p>
 
