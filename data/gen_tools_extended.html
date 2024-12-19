@@ -1,0 +1,194 @@
+<details>
+  <summary><a href='https://github.com/mit-plv/bedrock2'>coq-bedrock2-compiler.0.0.8</a>
+(0.0.8) A work-in-progress language and compiler for verified low-level programming (compiler part)</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology Kevix SiFive</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/bedrock2'>homepage</a>)
+      (<a href='https://github.com/mit-plv/bedrock2/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-bedrock2-compiler/coq-bedrock2-compiler.0.0.8/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>bedrock2 is a low-level systems programming language. This language is<br>equipped with a simple program logic for proving correctness of the<br>programs.  This package includes a verified compiler targeting RISC-V<br>from this language.<br><br>The project has similar goals as bedrock, but uses a different design.<br>No code is shared between bedrock and bedrock2.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/mit-plv/bedrock2'>coq-bedrock2.0.0.8</a>
+(0.0.8) A work-in-progress language and compiler for verified low-level programming</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology Kevix SiFive</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/bedrock2'>homepage</a>)
+      (<a href='https://github.com/mit-plv/bedrock2/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-bedrock2/coq-bedrock2.0.0.8/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>bedrock2 is a low-level systems programming language. This language is<br>equipped with a simple program logic for proving correctness of the<br>programs.  A verified compiler targeting RISC-V from this language<br>exists in the coq-bedrock2-compiler package on opam.<br><br>The project has similar goals as bedrock, but uses a different design.<br>No code is shared between bedrock and bedrock2.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/mit-plv/coqutil'>coq-coqutil.0.0.6</a>
+(0.0.6) Coq library for tactics, basic definitions, sets, maps</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/coqutil'>homepage</a>)
+      (<a href='https://github.com/mit-plv/coqutil/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-coqutil/coq-coqutil.0.0.6/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>### coqutil -- Various Coq Utilities<br><br>Contents:<br>* [Datatypes](https://github.com/mit-plv/coqutil/tree/master/src/coqutil/Datatypes): Some utilities for existing datatypes, and new datatypes.<br>* [Decidable](https://github.com/mit-plv/coqutil/blob/master/src/coqutil/Decidable.v): `BoolSpec`-based decidability typeclasses. Allows one to write `if MyType_eqb a b then ... else ...` where `MyType_eqb a b` returns a `bool`, instead of writing `if MyType_eq_dec a b then ... else ...` where `MyType_eq_dec a b` returns a `sumbool`, while still getting `a = b` and `a <lt;>gt; b` as hypotheses (as opposed to `MyType_eqb a b = true` and `MyType_eqb a b = false`) after destructing the `if` (need to use [`destr`](https://github.com/mit-plv/coqutil/blob/master/src/coqutil/Tactics/destr.v) instead of `destruct`). So one gets the benefits of `Sumbool` without getting its disadvantage of having to carry around proof terms, which can cause a blow-up under reduction if one is not careful.<br>* [Map](https://github.com/mit-plv/coqutil/tree/master/src/coqutil/Map): A typeclass based map library allowing one to abstract over the concrete implementation of maps. The implementations have to be extensional, which excludes certain efficient implementations, but simplifies proofs, because one can `replace mapA with mapB` if one can prove that `mapA` and `mapB` have the same contents. Comes with a [solver](https://github.com/mit-plv/coqutil/blob/master/src/coqutil/Map/Solver.v) which works reasonably fast on most map goals we have encountered so far.<br>* [Tactics](https://github.com/mit-plv/coqutil/tree/master/src/coqutil/Tactics): A collection of useful general-purpose tactics.<br>* [Word](https://github.com/mit-plv/coqutil/tree/master/src/coqutil/Word): Fixed width words for any width, in the same typeclass based style as the map library. Designed for the case where all words have the same (potentially abstract) bit width. Therefore, it does not provide functions to concatenate and split words, which is better addressed by [bbv](https://github.com/mit-plv/bbv/).<br>* [Z](https://github.com/mit-plv/coqutil/tree/master/src/coqutil/Z): Utilities to work with the `Z` type from Coq'apos;s standard library, including a tactic to prove `Z` equalities by splitting the equality into equalities on bit index ranges, a tactic to make `lia` capable of reasoning about goals with division and modulo, and a tactic to simplify expressions containing nested occurrences of `mod`, and more misc utilities.<br>* Various macros, notations, and desirable default settings.<br><br>Each feature is intended to be as minimal and as independent of the other features as possible, so that users can pick just what they need.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/arthuraa/deriving'>coq-deriving.0.2.0</a>
+(0.2.0) Generic instances of MathComp classes</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Arthur Azevedo de Amorim</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/arthuraa/deriving'>homepage</a>)
+      (<a href='https://github.com/arthuraa/deriving/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-deriving/coq-deriving.0.2.0/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>Deriving provides generic instances of MathComp classes for<br>inductive data types.  It includes native support for eqType,<br>choiceType, countType and finType instances, and it allows users to<br>define their own instances for other classes.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/arthuraa/extructures'>coq-extructures.0.4.0</a>
+(0.4.0) Finite sets, maps, and other data structures with extensional reasoning</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Arthur Azevedo de Amorim</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/arthuraa/extructures'>homepage</a>)
+      (<a href='https://github.com/arthuraa/extructures/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-extructures/coq-extructures.0.4.0/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd></dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/mit-plv/fiat-crypto'>coq-fiat-crypto.0.1.3</a>
+(0.1.3) Cryptographic Primitive Code Generation by Fiat</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Andres Erbsen <lt;andreser@mit.edu>gt; - Google Inc. - Jade Philipoom <lt;jadep@mit.edu>gt; <lt;jade.philipoom@gmail.com>gt; - Massachusetts Institute of Technology - Zoe Paraskevopoulou <lt;zoe.paraskevopoulou@gmail.com>gt;</dd>
+    <dt><b>license</b></dt><dd> MIT OR Apache-2.0 OR BSD-1-Clause - see <a href="https://github.com/mit-plv/fiat-crypto" target="_blank">homepage</a> for details</dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/fiat-crypto'>homepage</a>)
+      (<a href='https://github.com/mit-plv/fiat-crypto/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-fiat-crypto/coq-fiat-crypto.0.1.3/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>Coq code and proofs for a command-line binary that can synthesize proven-correct<br>big-integer modular field arithmetic operations for cryptography.<br>Target languages include C, Rust, Zig, Go, and bedrock2.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://metacoq.github.io/metacoq'>coq-metacoq.1.3.1+8.19</a>
+(1.3.1+8.19) A meta-programming framework for Coq</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Abhishek Anand <lt;aa755@cs.cornell.edu>gt; - Danil Annenkov <lt;danil.v.annenkov@gmail.com>gt; - Simon Boulier <lt;simon.boulier@inria.fr>gt; - Cyril Cohen <lt;cyril.cohen@inria.fr>gt; - Yannick Forster <lt;forster@ps.uni-saarland.de>gt; - Jason Gross <lt;jgross@mit.edu>gt; - Fabian Kunze <lt;fkunze@fakusb.de>gt; - Meven Lennon-Bertrand <lt;Meven.Bertrand@univ-nantes.fr>gt; - Kenji Maillard <lt;kenji.maillard@inria.fr>gt; - Gregory Malecha <lt;gmalecha@gmail.com>gt; - Jakob Botsch Nielsen <lt;Jakob.botsch.nielsen@gmail.com>gt; - Matthieu Sozeau <lt;matthieu.sozeau@inria.fr>gt; - Nicolas Tabareau <lt;nicolas.tabareau@inria.fr>gt; - Théo Winterhalter <lt;theo.winterhalter@inria.fr>gt;</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://metacoq.github.io/metacoq'>homepage</a>)
+      (<a href='https://github.com/MetaCoq/metacoq/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-metacoq/coq-metacoq.1.3.1+8.19/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>MetaCoq is a meta-programming framework for Coq.<br><br>The meta-package includes the template-coq library,<br>the PCUIC development including a verified equivalence between Coq and PCUIC,<br>a safe type checker and verified erasure for PCUIC and example translations.<br><br>See individual packages for more detailed descriptions.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/tchajed/coq-record-update'>coq-record-update.0.3.4</a>
+(0.3.4) Generic support for updating record fields in Coq</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Tej Chajed</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/tchajed/coq-record-update'>homepage</a>)
+      (<a href='https://github.com/tchajed/coq-record-update/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-record-update/coq-record-update.0.3.4/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>While Coq provides projections for each field of a record, it has no<br>convenient way to update a single field of a record. This library provides a<br>generic way to update a field by name, where the user only has to implement a<br>simple typeclass that lists out the record fields.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/coq-community/reduction-effects'>coq-reduction-effects.0.1.5</a>
+(0.1.5) A Coq plugin to add reduction side effects to some Coq reduction strategies</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Hugo Herbelin</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MPL-2.0.html" target="_blank">MPL-2.0</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/coq-community/reduction-effects'>homepage</a>)
+      (<a href='https://github.com/coq-community/reduction-effects/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-reduction-effects/coq-reduction-effects.0.1.5/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd></dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/mit-plv/rewriter'>coq-rewriter.0.0.11</a>
+(0.0.11) Reflective PHOAS rewriting/pattern-matching-compilation framework for simply-typed equalities and let-lifting, experimental and tailored for use in Fiat Cryptography</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Google Inc. Massachusetts Institute of Technology</dd>
+    <dt><b>license</b></dt><dd> MIT OR Apache-2.0 OR BSD-1-Clause - see <a href="https://github.com/mit-plv/rewriter" target="_blank">homepage</a> for details</dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/rewriter'>homepage</a>)
+      (<a href='https://github.com/mit-plv/rewriter/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-rewriter/coq-rewriter.0.0.11/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd></dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/mit-plv/riscv-coq'>coq-riscv.0.0.5</a>
+(0.0.5) RISC-V Specification in Coq, somewhat experimental</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/BSD-3-Clause.html" target="_blank">BSD-3-Clause</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/riscv-coq'>homepage</a>)
+      (<a href='https://github.com/mit-plv/riscv-coq/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-riscv/coq-riscv.0.0.5/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd></dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/mit-plv/rupicola'>coq-rupicola.0.0.10</a>
+(0.0.10) Gallina to imperative code compilation, currently in design phase</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Clément Pit-Claudel <lt;clement.pitclaudel@live.com>gt; - Jade Philipoom - Dustin Jamner - Andres Erbsen - Adam Chlipala</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/mit-plv/rupicola'>homepage</a>)
+      (<a href='https://github.com/mit-plv/rupicola/issues'>bug reports</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-rupicola/coq-rupicola.0.0.10/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd></dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/ejgallego/coq-serapi'>coq-serapi.8.19.0+0.19.2</a>
+(8.19.0+0.19.2) Serialization library and protocol for machine interaction with the Coq proof assistant</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Emilio Jesús Gallego Arias - Karl Palmskog - Clément Pit-Claudel - Kaiyu Yang</dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/LGPL-2.1-or-later.html" target="_blank">LGPL-2.1-or-later</a></dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/ejgallego/coq-serapi'>homepage</a>)
+      (<a href='https://github.com/ejgallego/coq-serapi/issues'>bug reports</a>)
+      (<a href='https://opam.ocaml.org/packages/coq-serapi/coq-serapi.8.19.0+0.19.2/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>SerAPI is a library for machine-to-machine interaction with the<br>Coq proof assistant, with particular emphasis on applications in IDEs,<br>code analysis tools, and machine learning. SerAPI provides automatic<br>serialization of Coq'apos;s internal OCaml datatypes from/to JSON or<br>S-expressions (sexps).</dd>
+  </dl>
+</details>
