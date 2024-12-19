@@ -60,7 +60,7 @@ Layout.render
       <div class=" items-center lg:flex-1 lg:mt-8 ">
         <h2 class="font-bold text-title dark:text-dark-title">A short introduction to the Rocq prover</h2>
         <div class="text-content dark:text-dark-content text-base mt-3">
-          The Rocq prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either Objective Caml or Haskell source code.
+          The Rocq prover is an interactive theorem prover, or proof assistant. This means that it is designed to develop mathematical proofs, and especially to write formal specifications: programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.
         </div>
       </div>
       <div class="lg:flex-1 flex justify-center">
@@ -91,7 +91,7 @@ Layout.render
   <div class="container-fluid text-center items-center">
     <h2 class="font-bold text-title dark:text-dark-title">Trusted in Academia and Industry</h2>
     <div class="text-content dark:text-dark-content text-base mt-3">
-      These organisations and companies rely on Rocq every day — along with hundreds of other researchers and engineers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
+      These organisations and companies rely on Rocq every day — along with hundreds of other researchers and engineers.
     </div>
     <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
       <!-- Add MPI, Aarhus, Harvard, ... -->
@@ -170,7 +170,7 @@ Layout.render
         <h2 class="md:text-3xl text-xl font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
         <div class="sm:text-sm text-lg dark:text-white mt-3">
           The recipients of the awards are thanking all developers who contributed to the success of the Rocq Prover, 
-          the users who illustrated how to use Coq for so many impressive projects in formal certification, programming, logic, 
+          the users who illustrated how to use Rocq for so many impressive projects in formal certification, programming, logic,
           formalization of mathematics and teaching as well as the whole surrounding scientific community in proof theory, 
           type theory, programming languages, interactive theorem proving.
         </div>
