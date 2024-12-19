@@ -219,75 +219,6 @@ Layout.render
           </div>
         </div>
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
-          <div class="lg:flex-1 mt-10 lg:mt-0 flex items-center">
-            <div class="text-base">
-              <div class="h-12 w-12 text-white rounded-xl flex bg-gradient-to-br from-orange-600 to-[#ff540a]">
-                <%s! Icons.home_tooling "h-7 w-7 m-auto" %>
-              </div>
-              <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">
-                PRODUCTIVITY
-              </div>
-              <h3 class="text-title dark:text-dark-title font-bold">
-                First-Class Editor and Tooling
-              </h3>
-              <p class="my-4 text-lg text-content dark:text-dark-content">
-                The Rocq prover comes with deep integrations for VS Code, Vim or Emacs to provide
-                indispensable interactive support during development and proofs.
-                Between Opam, a popular package manager, the <code>coqdoc</code> and <code>Alectryon</code>
-                documentation tools and the Docker-Rocq integration toolset, users have access to a complete, 
-                modern developer experience.
-              </p>
-            </div>
-          </div>
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div>
-                    <img src="<%s Ocamlorg_static.Asset.url "logos/vscode.svg" %>" width="56" alt="VS Code">
-                    <img src="<%s Ocamlorg_static.Asset.url "img/home/vscode-preview.png" %>" alt="">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div>
-                    <img src="<%s Ocamlorg_static.Asset.url "logos/vim.svg" %>" width="56" alt="Vim">
-                    <img src="<%s Ocamlorg_static.Asset.url "img/home/vim-preview.png" %>" alt="">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div>
-                    <img src="<%s Ocamlorg_static.Asset.url "logos/emacs.svg" %>" width="56" alt="Emacs">
-                    <img src="<%s Ocamlorg_static.Asset.url "img/home/emac-preview.png" %>" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between">
-          <div class="lg:flex-1">
-            <div class="text-base">
-            <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-blue-800 to-[#260085]">
-                <%s! Icons.lightning "h-7 w-7 m-auto" %>
-              </div>
-              <h3>
-                <div class="font-bold my-4 text-lg tracking-wide">PERFORMANCE</div>
-                <div class="text-title dark:text-dark-title font-bold">
-                  Fast Proof Checker and Applications
-                </div>
-              </h3>
-              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                The Rocq prover offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
-                with efficient bytecode and native conversion checkers relying on the OCaml runtime.
-                It can also interoperate with code written in other languages thanks to its unique extraction facilities.
-              </p>
-            </div>
-          </div>
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
-          </div>
-        </div>
-        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
           <div class="lg:flex-1 mt-10 lg:mt-0 flex">
             <div class="text-base">
               <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-orange-600 to-[#ff540a]">
@@ -345,6 +276,29 @@ Layout.render
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between">
+          <div class="lg:flex-1">
+            <div class="text-base">
+            <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-blue-800 to-[#260085]">
+                <%s! Icons.lightning "h-7 w-7 m-auto" %>
+              </div>
+              <h3>
+                <div class="font-bold my-4 text-lg tracking-wide">PERFORMANCE</div>
+                <div class="text-title dark:text-dark-title font-bold">
+                  Fast Proof Checker
+                </div>
+              </h3>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                The Rocq prover offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
+                with efficient bytecode and native conversion checkers relying on the OCaml runtime.
+                It can also interoperate with code written in other languages thanks to its unique extraction facilities.
+              </p>
+            </div>
+          </div>
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
           </div>
         </div>
       </div>
