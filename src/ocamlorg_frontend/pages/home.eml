@@ -436,9 +436,9 @@ Layout.render
         </div>
         <div>
           <p class="text-base text-title dark:text-dark-title">
-            With its mathematical roots, OCaml has always had strong ties to academia.
+            With its mathematical roots, the Rocq prover has always had strong ties to academia.
             It is taught in universities around the world, and has accrued an ever-growing body of research.
-            Learn more about the academic rigor that defines the culture of OCaml.
+            Learn more about the academic rigor that defines the culture of Rocq.
           </p>
           <a class="btn mt-10 py-8" href="<%s Url.academic_users %>">Learn more</a>
         </div>
@@ -449,9 +449,9 @@ Layout.render
         </div>
         <div>
           <p class="text-base text-content dark:text-dark-content">
-            OCaml's powerful compile-time guarantees and high performance empower
-            companies to provide reliable and speedy services and products.
-            Learn more about how OCaml is used in the industry: explore success stories and discover companies that use OCaml.
+            Rocq's strong correctness guarantees and high performance empower
+            companies to provide reliable services and products.
+            Learn more about how Rocq is used in the industry.
           </p>
           <a class="btn mt-10 py-8" href="<%s Url.industrial_users %>">Learn more</a>
         </div>
@@ -465,14 +465,14 @@ Layout.render
       <div class="">
         <h2 class="font-bold text-title dark:text-dark-title mb-6">Curated Resources</h2>
         <p class="text-lg text-content dark:text-dark-content mb-16">
-          Get up to speed quickly to enjoy the benefits of the OCaml programming language across your projects.
+          Get up to speed quickly to enjoy the benefits of the Rocq prover across your projects.
         </p>
       </div>
       <div class="grid lg:grid-cols-3 gap-8 lg:gap-16">
         <a href="<%s Url.install %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.play_circle "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Getting Started</p>
-          <p>Install OCaml, set up your favorite text editor and start your first project.</p>
+          <p>Install the Rocq prover, set up your favorite text editor and start your first project.</p>
         </a>
         <a href="<%s Url.manual %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.document "h-16 w-16 mb-8" %>
@@ -482,7 +482,7 @@ Layout.render
         <a href="<%s Url.books %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.book "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Books</p>
-          <p>Discover OCaml books from expert programmers and researchers - from beginner level to advanced topics.</p>
+          <p>Discover Rocq books from expert programmers and researchers - from beginner level to advanced topics.</p>
         </a>
         <a href="<%s Url.api %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.command_line "h-16 w-16 mb-8" %>
@@ -492,12 +492,12 @@ Layout.render
         <a href="<%s Url.exercises %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.hand_palm "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Exercises</p>
-          <p>Learn OCaml by solving problems on a variety of topics, from easy to challenging.</p>
+          <p>Learn Rocq by solving problems on a variety of topics, from easy to challenging.</p>
         </a>
         <a href="<%s Url.papers %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.papers "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Papers</p>
-          <p>Explore papers that have influenced OCaml and other functional programming languages.</p>
+          <p>Explore papers that have influenced or used Rocq.</p>
         </a>
       </div>
     </div>
