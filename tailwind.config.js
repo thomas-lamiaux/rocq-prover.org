@@ -140,7 +140,11 @@ module.exports = {
             },
             'h2, h3, h4, h5, h6, code': {
               color: theme('colors.dark.title'),
-            }//,
+            },
+            strong': {
+              color: theme('colors.dark.title'),
+            },
+            //,
             //pre: {
             //  backgroundColor: theme('colors.dark.code_window'),
             //},
