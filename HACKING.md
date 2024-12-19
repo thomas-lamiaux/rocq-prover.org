@@ -1,4 +1,4 @@
-# Hacking on OCaml.org
+# Hacking on rocq-prover.org
 
 ## Setup and Development
 
@@ -10,7 +10,7 @@ Before starting to hack, you need a properly configured development environment.
 * OpenSSL: https://www.openssl.org/
 * GNU Multiple Precision: https://gmplib.org/
 
-The project [`Dockerfile`](./Dockerfile) contains up-to-date system configuration instructions, as used to ship into production. It is written for the Alpine Linux distribution, but it is meant to be adapted to other environments such as Ubuntu, macOS+Homebrew, or others. The GitHub workflow file [`.github/workflows/ci.yml`](.github/workflows/ci.yml) also contains useful commands for Ubuntu and macOS. Since OCaml.org is mostly written in OCaml, a properly configured OCaml development environment is also required, but is not detailed here. Although Docker is used to ship, it is not a requirement to begin hacking. Currently, OCaml.org doesn't yet compile using OCaml 5; version 4.14 of the language is used. It is possible to run workflow files in `.github/workflows` using the [`nektos/act`](https://github.com/nektos/act) tool. For instance, the following command runs the CI checks through GitHub on each pull request (where `ghghgh` is replace by an _ad-hoc_ GitHub token, see: https://github.com/nektos/act#github_token)
+The project [`Dockerfile`](./Dockerfile) contains up-to-date system configuration instructions, as used to ship into production. It is written for the Alpine Linux distribution, but it is meant to be adapted to other environments such as Ubuntu, macOS+Homebrew, or others. The GitHub workflow file [`.github/workflows/ci.yml`](.github/workflows/ci.yml) also contains useful commands for Ubuntu and macOS. Since rocq-prover.org is mostly written in OCaml, a properly configured OCaml development environment is also required, but is not detailed here. Although Docker is used to ship, it is not a requirement to begin hacking. It is possible to run workflow files in `.github/workflows` using the [`nektos/act`](https://github.com/nektos/act) tool. For instance, the following command runs the CI checks through GitHub on each pull request (where `ghghgh` is replace by an _ad-hoc_ GitHub token, see: https://github.com/nektos/act#github_token)
 ```
 act -s GITHUB_TOKEN=ghghgh .github/workflows/ci.yml -j build
 ```
@@ -19,15 +19,15 @@ act -s GITHUB_TOKEN=ghghgh .github/workflows/ci.yml -j build
 The Makefile contains many commands that can get you up and running. A typical workflow is to clone the repository after forking it.
 
 ```
-git clone https://github.com/<username>/OCaml.org.git
-cd OCaml.org
+git clone https://github.com/<username>/rocq-prover.org.git
+cd rocq-prover.org
 ```
 
-Ensure you have `opam` installed. Opam will manage the OCaml compiler along with all of the OCaml packages needed to build and run the project. By this point, we should all be using some Unix-like system (Linux, macOS, WSL2), so you should [run the opam install script](https://opam.OCaml.org/doc/Install.html#Binary-distribution). There are also manual instructions for people that don't want to run a script from the internet. We assume you are using `opam.2.1.0` or later, which provides a cleaner, friendlier experience when installing system dependencies.
+Ensure you have `opam` installed. Opam will manage the OCaml compiler along with all of the OCaml packages needed to build and run the project. By this point, we should all be using some Unix-like system (Linux, macOS, WSL2), so you should [run the opam install script](https://opam.ocaml.org/doc/Install.html#Binary-distribution). There are also manual instructions for people that don't want to run a script from the internet. We assume you are using `opam.2.1.0` or later, which provides a cleaner, friendlier experience when installing system dependencies.
 
 With opam installed, you can now initialise opam with `opam init`. Note that in containers or WSL2, you will have to run `opam init --disable-sandboxing`. Opam might complain about some missing system dependencies like `unzip`, `cc` (a C compiler like `gcc`), etc. Make sure to install these before `opam init`.
 
-Finally from the root of your project, you can setup a [local opam switch](https://opam.OCaml.org/doc/Manual.html#Switches) and install the dependencies. There is a single `make` target to do just that.
+Finally from the root of your project, you can setup a [local opam switch](https://opam.ocaml.org/doc/Manual.html#Switches) and install the dependencies. There is a single `make` target to do just that.
 
 ```
 make switch
@@ -39,7 +39,7 @@ If you don't want a local opam switch and are happy to install everything global
 make deps
 ```
 
-Opam will likely ask questions about installing system dependencies. Ror the project to work, you will have to answer yes to installing these.
+Opam will likely ask questions about installing system dependencies. For the project to work, you will have to answer yes to installing these.
 
 ### Running the Server
 
@@ -84,15 +84,15 @@ After the dependencies have been installed, simply build the project to regenera
 make playground
 ```
 
-Once the compilation is complete and successuful, commit the newly-generated assets in OCaml.org's Git repo and merge the pull request. 
+Once the compilation is complete and successuful, commit the newly-generated assets in rocq-prover.org's Git repo and merge the pull request. 
 
 ### Deploying
 
 Commits added on some branches are automatically deployed:
-- `main` on <https://OCaml.org/>
-- `staging` on <https://staging.OCaml.org/>
+- `main` on <https://rocq-prover.org/>
+- `staging` on <https://staging.rocq-prover.org/>
 
-The deployment pipeline is managed in <https://github.com/ocurrent/ocurrent-deployer>, which listens to the `main` and `staging` branches and builds the site using the `Dockerfile` at the project's root. You can monitor the state of each deployment on [`deploy.ci.OCaml.org`](https://deploy.ci.OCaml.org/?repo=ocaml/OCaml.org).
+The deployment pipeline is managed in <https://github.com/ocurrent/ocurrent-deployer>, which listens to the `main` and `staging` branches and builds the site using the `Dockerfile` at the project's root. You can monitor the state of each deployment on [`deploy.ci.rocq-prover.org`](https://deploy.ci.rocq-prover.org/?repo=rocq-prover/rocq-prover.org).
 
 To test the deployment locally, run the following commands:
 
@@ -119,14 +119,14 @@ before they get merged.
 
 ### Managing Dependencies
 
-OCaml.org is using an opam switch that is local and bound to a pinned commit in `opam-repository`. This is intended to protect the build from upstream regressions. The opam repository is specified in three (3) places:
+rocq-prover.org is using an opam switch that is local and bound to a pinned commit in `opam-repository`. This is intended to protect the build from upstream regressions. The opam repository is specified in three (3) places:
 ```
 Dockerfile
 Makefile
 .github/workflows/*.yml
 ```
 
-When bringing up OCaml.org to a newer pin, the commit hash found it those files must be changed all at once.
+When bringing up rocq-prover.org to a newer pin, the commit hash found in those files must be changed all at once.
 
 Once the opam repo pin is updated, the local switch must be updated using the following command:
 ```sh
@@ -150,7 +150,7 @@ The following snippet describes the repository structure:
 |   The static assets served by the site.
 │
 ├── data/
-|   Data used by OCaml.org in Yaml and Markdown format.
+|   Data used by rocq-prover.org in Yaml and Markdown format.
 │
 ├── playground/
 │   The source and generated assets for the OCaml Playground
