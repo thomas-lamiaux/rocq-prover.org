@@ -508,14 +508,14 @@ module Success_story = struct
 end
 
 module Tool = struct
-  type lifecycle = [ `Incubate | `Active | `Sustain | `Deprecate ]
+  type lifecycle = [ `Extended | `Full | `Optional | `Dependency ]
   [@@deriving show]
 
   let lifecycle_of_string = function
-    | "incubate" -> Ok `Incubate
-    | "active" -> Ok `Active
-    | "sustain" -> Ok `Sustain
-    | "deprecate" -> Ok `Deprecate
+    | "extended" -> Ok `Extended
+    | "full" -> Ok `Full
+    | "optional" -> Ok `Optional
+    | "dependency" -> Ok `Dependency
     | s -> Error (`Msg ("Unknown lifecycle type: " ^ s))
 
   let lifecycle_of_yaml = function
