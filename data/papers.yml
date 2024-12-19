@@ -12,8 +12,12 @@ papers:
       - extraction
     year: 2024
     links:
-      - description: "Download PDF"
+      - description: "ACM Digital Library"
+        uri: https://dl.acm.org/doi/10.1145/3656379
+      - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-04329663/
+      - description: "PLDI Talk"
+        uri: "https://youtu.be/RBU3dkSv7rg?list=PLyrlk8Xaylp6XYPbTIscsn49yFEFlxUp-&t=11946"
     featured: true
   - title: "Correct and Complete Type Checking and Certified Erasure for Coq, in Coq"
     publication: Journal of the ACM
@@ -31,7 +35,9 @@ papers:
       - type-checker
     year: 2024
     links:
-      - description: "Download PDF"
+      - description: "Journal of the ACM"
+        uri: https://dl.acm.org/doi/10.1145/3706056
+      - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-04077552
     featured: true
   - title: "Trocq: Proof Transfer for Free, With or Without Univalence"
@@ -47,7 +53,7 @@ papers:
       - Proof Transfer
     year: 2024
     links:
-      - description: "Download PDF"
+      - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-04177913v5
     featured: true
   - title: "Proof Repair across Type Equivalences"
@@ -66,6 +72,46 @@ papers:
       - proof repair
     year: 2021
     links:
-      - description: "Download PDF"
+      - description: "ACM Digital Library"
+        uri: https://dl.acm.org/doi/10.1145/3453483.3454033      
+      - description: "Download PDF on Arxiv"
+        uri: https://arxiv.org/abs/2010.00774
+      - description: "PLDI Talk"
+        uri: https://youtu.be/zG-Jc62WqFk?si=47mUgl_-RgvIGE71
+    featured: no
+  - title: "Equations Reloaded: High-Level Dependently-Typed Functional Programming and Proving in Coq"
+    publication: International Conference on Functional Programming (ICFP)
+    abstract: >
+      Equations is a plugin for the Coq proof assistant which provides a notation for defining programs by dependent pattern-matching and structural or well-founded recursion. It additionally derives useful high-level proof principles for demonstrating properties about them, abstracting away from the implementation details of the function and its compiled form. We present a general design and implementation that provides a robust and expressive function definition package as a definitional extension to the Coq kernel. At the core of the system is a new simplifier for dependent equalities based on an original handling of the no-confusion property of constructors.
+    authors:
+      - Matthieu Sozeau
+      - Cyprien Mangin
+    tags:
+      - ICFP
+      - Dependent pattern-matching
+    year: 2019
+    links:
+      - description: "ACM Digital Library"
+        uri: https://dl.acm.org/doi/10.1145/3341690
+      - description: "Download PDF on Arxiv"
         uri: https://arxiv.org/abs/2010.00774
     featured: no
+  - title: "Definitional Proof-Irrelevance without K"
+    publication: Principles of Programming Languages (POPL)
+    abstract: >
+      Definitional equality—or conversion—for a type theory with a decidable type checking is the simplest tool to prove that two objects are the same, letting the system decide just using computation. Therefore, the more things are equal by conversion, the simpler it is to use a language based on type theory. Proof-irrelevance, stating that any two proofs of the same proposition are equal, is a possible way to extend conversion to make a type theory more powerful. However, this new power comes at a price if we integrate it naively, either by making type checking undecidable or by realizing new axioms—such as uniqueness of identity proofs (UIP)—that are incompatible with other extensions, such as univalence. In this paper, taking inspiration from homotopy type theory, we propose a general way to extend a type theory with definitional proof irrelevance, in a way that keeps type checking decidable and is compatible with univalence. We provide a new criterion to decide whether a proposition can be eliminated over a type (correcting and improving the so-called singleton elimination of Coq) by using techniques coming from recent development on dependent pattern matching without UIP. We show the generality of our approach by providing implementations for both Coq and Agda, both of which are planned to be integrated in future versions of those proof assistants.
+    authors:
+      - Gaëtan Gilbert
+      - Jesper Cockx
+      - Matthieu Sozeau
+      - Nicolas Tabareau
+    tags:
+      - POPL
+      - Proof-Irrelevance
+    year: 2019
+    links:
+      - description: "ACM Digital Library"
+        uri: https://dl.acm.org/doi/10.1145/3290316
+      - description: "HAL-Inria"
+        uri: https://inria.hal.science/hal-01859964
+    featured: no    
