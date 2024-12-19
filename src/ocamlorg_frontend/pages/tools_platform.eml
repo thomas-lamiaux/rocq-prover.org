@@ -80,8 +80,8 @@ Tools_layout.three_column_layout
     of scripts to compile and/or install opam, Coq and the platform contents on macOS,
     Windows and many Linux distributions in a reliable way with consistent results.
     In addition pre-compiled binary packages or installers are provided for macOS and
-    Windows. 
-    <\p>
+    Windows.
+    </p>
   
     <p>
       The Rocq Platform combines the core Rocq compiler with

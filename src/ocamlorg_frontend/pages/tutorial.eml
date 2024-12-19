@@ -64,8 +64,8 @@ commit_hash
 =
 let href, description = match tutorial.external_tutorial with
   | None ->
-    "https://github.com/ocaml/ocaml.org/blob/"^ commit_hash ^"/data/"^ tutorial.fpath,
-    "All OCaml docs are open source. See something that's wrong or unclear? Submit a pull request."
+    "https://github.com/rocq-prover/rocq-prover.org/blob/"^ commit_hash ^"/data/"^ tutorial.fpath,
+    "All Rocq docs are open source. See something that's wrong or unclear? Submit a pull request."
   | Some external_tutorial ->
     external_tutorial.contribute_link.url,
     external_tutorial.contribute_link.description

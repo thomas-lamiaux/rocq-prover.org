@@ -10,4 +10,4 @@ This is a set of reasonable guidelines for writing Rocq
 programs and proofs that reflect the consensus among veteran Rocq
 programmers.
 
-Work in progress
+🚧 Work in progress
