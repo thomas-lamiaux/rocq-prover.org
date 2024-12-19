@@ -1,9 +1,28 @@
 tools:
-  - name: odoc
-    source: https://github.com/ocaml/odoc
-    license: ISC
-    synopsis: Documentation Generator for OCaml
+  - name: coq-aac-tactics
+    source: https://github.com/coq-community/aac-tactics
+    license: LGPL-3.0-or-later
+    synopsis: Coq tactics for rewriting universally quantified equations, modulo associative (and possibly commutative and idempotent) operators
     description: >
-      Documentation Generator for OCaml
+      This Coq plugin provides tactics for rewriting and proving universally
+      quantified equations modulo associativity and commutativity of some operator,
+      with idempotent commutative operators enabling additional simplifications.
+      The tactics can be applied for custom operators by registering the operators and
+      their properties as type class instances. Instances for many commonly used operators,
+      such as for binary integer arithmetic and booleans, are provided with the plugin.
+    lifecycle: full
+  - name: coq-bignums
+    source: https://github.com/coq-community/bignums
+    license: LGPL-2.1-only
+    synopsis: Bignums, the Coq library of arbitrarily large numbers
+    description: >
+      Bignums, the Coq library of arbitrarily large numbers
+    lifecycle: full
+  - name: coq-coqeal
+    source: https://github.com/coq-community/coqeal
+    license: MIT
+    synopsis: The Coq Effective Algebra Library
+    description: >
+      The Coq Effective Algebra Library
     lifecycle: full
 
