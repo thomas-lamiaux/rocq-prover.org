@@ -25,7 +25,7 @@ let match_action (input : Data.Paper.link) : string =
   | "read" | "view" -> link ~icon:Icons.video ~link:input
   | _ -> link ~icon:Icons.blog ~link:input
 
-let render ~(featured_institutions : Data.Academic_institution.t list) ~papers ~books ~testimonials  =
+let render ~(featured_institutions : Data.Academic_institution.t list) ~papers ~books =
 Layout.render
 ~use_swiper:true
 ~title:"Academic Users of the Rocq Prover"
@@ -139,7 +139,7 @@ Layout.render
     </div>
   </div>
 </div>
-<div class="w-full bg-sand dark:dark-deep-blue-gradient py-8 border-b border-separator_20 dark:border-separator_30">
+<div class="w-full bg-white dark:dark-deep-blue-gradient py-8 border-b border-separator_20 dark:border-separator_30">
   <div class="container-fluid">
     <p class="text-title dark:text-dark-title text-2xl font-bold mb-2">Research Papers</p>
     <p class="text-content dark:text-dark-content mb-2">Understand the theoretical foundations of the Rocq programming language and compiler</p>
@@ -171,41 +171,6 @@ Layout.render
       <%s! Icons.arrow_small_right "h-6 w-6 text-primary dark:text-dark-white group-hover:text-primary group-hover:text-dark-primary max-w-[7%]" %>
     </div>
   </div>
-</div>
-<div class="w-full bg-white dark:dark-section-navigation py-8 border-b border-separator_20 dark:border-separator_30">
-  <div class="container-fluid">
-  <div class="flex flex-col lg:flex-row gap-2 items-center w-full" x-data="{swiper: null}"
-      x-init="swiper = new Swiper('#testimonialSwiper', {loop: true,slidesPerView: 'auto',autoHeight: true,spaceBetween: 10,breakpoints: {640: {slidesPerView:'auto',
-          spaceBetween: 10,},768: {slidesPerView: 2},},})">
-    <%s! render_nav_btn ~btn_type:"prev" "hidden lg:flex" %> 
-    <div class="w-full lg:w-11/12">
-      <h3 class="text-title dark:text-dark-title font-bold">What Researchers Say About Rocq</h3>
-      <div class="flex w-full overflow-hidden">
-        <div id="testimonialSwiper" class="swiper-container relative overflow-hidden">
-          <div class="mt-6 swiper-wrapper">
-            <% testimonials |> List.iter (fun (item : Data.Academic_testimonial.t) -> %>
-              <div class="flex flex-col swiper-slide">
-                <span class=""><%s! Icons.quote_icon "" %></span>
-                <p class="text-content italic dark:text-dark-content leading-7 pl-10"><%s item.testimony %></p>
-                <div class="flex mt-4 pl-10">
-                  <div>
-                  <p class="text-title dark:text-dark-title"><span><%s item.authors %></span>(<span><%s item.year %></span>)</p>
-                  <p class="text-content dark:text-dark-content"><%s item.publication %></p>
-                  </div>
-                </div>
-              </div>
-            <% ); %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <%s! render_nav_btn ~btn_type:"next" "hidden lg:flex" %>
-    <div class="flex mt-5 lg:hidden">
-      <%s! render_nav_btn ~btn_type:"prev" "flex lg:hidden mr-2" %>
-      <%s! render_nav_btn ~btn_type:"next" "flex lg:hidden" %>
-    </div>
-  </div>
- </div>
 </div>
 <div class="py-8 bg-sand dark:dark-deep-blue-gradient">
   <% let (recommended_books, total) = books in %>

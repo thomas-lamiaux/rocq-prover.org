@@ -352,7 +352,7 @@ let academic_users _req =
   let featured_institutions = Data.Academic_institution.featured in
   let papers = Data.Paper.featured |> Ocamlorg.Import.List.take 3 in
   let books = Data.Book.all |> Ocamlorg.Import.List.take 2 in
-  let testimonials = Data.Academic_testimonial.all in
+(*  let testimonials = Data.Academic_testimonial.all in*)
   let books_with_count = (books, List.length Data.Book.all) in
   (* let extract_courses_with_university
       (institutions : Data.Academic_institution.t list) =
@@ -371,7 +371,7 @@ let academic_users _req =
   in *)
   Dream.html
     (Ocamlorg_frontend.academic_users ~featured_institutions ~papers
-       ~books:books_with_count ~testimonials) 
+       ~books:books_with_count) 
 
 let academic_institutions req =
   let query = Dream.query req "q" in
