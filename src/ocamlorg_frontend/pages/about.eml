@@ -29,10 +29,10 @@ Layout.render
         <div>
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
-            href="#features"
+            href="#Name"
           >
             <%s! Icons.features "h-10 w-10 mb-4 m-auto mt-6" %>
-            <div class="font-semibold text-lg text-content dark:text-dark-content">Features</div>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Name</div>
           </a>
         </div>
       </div>
@@ -86,7 +86,7 @@ Layout.render
           <p>
             Rocq is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
           </p>
-          <h2 id="history">An Overview of the Name's Evolution</h2>
+          <h2 id="Name">An Overview of the Name's Evolution</h2>
           <p>
           The Rocq prover was formerly known as the Coq proof assistant. 
           The name "Coq" referenced the Calculus of Constructions (CoC), 
