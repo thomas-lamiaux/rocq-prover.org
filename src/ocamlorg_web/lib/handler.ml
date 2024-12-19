@@ -354,7 +354,7 @@ let academic_users _req =
   let books = Data.Book.all |> Ocamlorg.Import.List.take 2 in
   let testimonials = Data.Academic_testimonial.all in
   let books_with_count = (books, List.length Data.Book.all) in
-  let extract_courses_with_university
+  (* let extract_courses_with_university
       (institutions : Data.Academic_institution.t list) =
     List.fold_left
       (fun acc (institution : Data.Academic_institution.t) ->
@@ -368,15 +368,10 @@ let academic_users _req =
             (institution.name, course) :: acc (* Add the first course found *)
         | None -> acc)
       [] institutions
-  in
-  let top_courses =
-    extract_courses_with_university featured_institutions
-    |> Ocamlorg.Import.List.take 3
-  in
-
+  in *)
   Dream.html
     (Ocamlorg_frontend.academic_users ~featured_institutions ~papers
-       ~books:books_with_count ~testimonials ~top_courses)
+       ~books:books_with_count ~testimonials) 
 
 let academic_institutions req =
   let query = Dream.query req "q" in
