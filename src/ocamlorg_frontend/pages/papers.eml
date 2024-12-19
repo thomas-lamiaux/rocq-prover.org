@@ -1,6 +1,6 @@
 let render ?(search = "") ~(recommended_papers : Data.Paper.t list) (papers : Data.Paper.t list) =
 Layout.render
-~title:"OCaml Papers"
+~title:"Rocq Papers"
 ~description:"A selection of papers grouped by popular categories."
 ~canonical:Url.papers
 ~active_top_nav_item:Header.Learn @@
@@ -9,8 +9,10 @@ Layout.render
         <div class="w-full m-auto">
             <h1 class="font-bold text-title dark:text-dark-title mb-2"">Papers</h1>
             <p class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">
-                With its strong academic roots, OCaml is known to be a spearhead in the development of Programming Language Theory.
-                This page contains a selection of papers that have influenced OCaml and other functional programming languages.
+                With its strong academic roots, Rocq is known to be a spearhead in the development of 
+                Dependently-Typed Programming and Interactive Theorem Provers.
+                This page contains a selection of papers that have influenced Rocq, its libraries and other 
+                interactive theorem provers and dependently-typed programming languages.
             </p>
         </div>
     </div>
