@@ -94,51 +94,63 @@ Layout.render
       These organisations and companies rely on Rocq every day — along with hundreds of other researchers and engineers. See <a href="<%s Url.industrial_users %>" class="text-primary dark:text-dark-primary">Success Stories</a>
     </div>
     <div class="flex flex-row justify-center m-auto flex-wrap py-8 items-center">
-      <!-- Add Inria, MPI, Aarhus, UPenn, Harvard, ... -->
+      <!-- Add MPI, Aarhus, Harvard, ... -->
       <!-- Add Mitsubishi, Facebook ? -->
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/inr_logo_rouge.svg" %>" alt="Inria"/>
         <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/inr_logo_blanc.svg" %>" alt="Inria"/>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.irif.fr/">
           <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/universite-paris-cite.svg" %>" alt="Université de Paris"/>
           <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/universite-paris-cite-white.svg" %>" alt="Université de Paris"/>
         </a>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.college-de-france.fr">
           <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/college-de-france-logo.svg" %>" alt="Collège de France"/>
           <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/college-de-france-logo-white.svg" %>" alt="Collège de France"/>
         </a>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://www.upenn.edu/">
+          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/penn-university.svg" %>" alt="University of Pennsylvania"/>
+          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/penn-university-white.svg" %>" alt="University of Pennsylvania"/>
+        </a>
+      </div>
+      <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://web.mit.edu/">
+          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/massachusetts-institute-of-technology.svg" %>" alt="MIT Massachusetts Institute of Technology"/>
+          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/massachusetts-institute-of-technology-white.svg" %>" alt="MIT Massachusetts Institute of Technology"/>
+        </a>
+      </div>
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.mpi-sws.org/">
           <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/mpi-sws-blue.svg" %>" alt="Max Planck Institute for Software Systems"/>
           <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/mpi-sws-white.svg" %>" alt="Max Planck Institute for Software Systems"/>
         </a>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://cs.au.dk/">
           <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/arhus-logo.svg" %>" alt="Arhus University"/>
           <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/arhus-logo.svg" %>" alt="Arhus University"/>
         </a>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://absint.com/">
           <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/ABSINT-logo-blue.svg" %>" alt="AbsInt"/>
           <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/ABSINT-logo-white.svg" %>" alt="AbsInt"/>
         </a>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock"/>
         <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock"/>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
         <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
       </div>
-      <div class="mx-4 my-4 py-4 px-8">
+      <div class="mx-4 my-4 py-4 px-4">
         <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/google.svg" %>" alt="Google"/>
         <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/google.svg" %>" alt="Google"/>
       </div>
