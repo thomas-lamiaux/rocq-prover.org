@@ -72,7 +72,7 @@ dark: {
 }
 
 .dark .bg-code_window, .dark pre{
-  background: linear-gradient(177deg, #0d0d0d, #141721);
+  background: linear-gradient(177deg, #1d1d27, #151522);
   color:white;
 }
 /** rocq-hi-light **/
@@ -81,7 +81,7 @@ dark: {
 .highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
 .highlight .g { color: #000000 } /* Generic */
 span[class*="keyword"],
-.highlight .k { color: #204a87; font-weight: bold } /* Keyword */
+.highlight .k { color: #FF540A; font-weight: bold } /* Keyword */
 .highlight .l { color: #000000 } /* Literal */
 .highlight .n { color: #000000 } /* Name */
 .highlight .o { color: #FF540A; font-weight: bold } /* Operator */
