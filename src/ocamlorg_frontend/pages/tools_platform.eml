@@ -77,7 +77,7 @@ Tools_layout.three_column_layout
 
     <p>
     The Rocq Platform is based on the OCaml package manager opam and provides a set
-    of scripts to compile and/or install opam, Coq and the platform contents on macOS,
+    of scripts to compile and/or install opam, Rocq and the platform contents on macOS,
     Windows and many Linux distributions in a reliable way with consistent results.
     In addition pre-compiled binary packages or installers are provided for macOS and
     Windows.
@@ -98,7 +98,7 @@ Tools_layout.three_column_layout
     </p>
     <p>
       Tools with a status of "full level" are considered stable, well maintained and suitable as basis for your own developments. 
-      The full level adds many commonly used coq libraries, plug-ins and developments.
+      The full level adds many commonly used Rocq libraries, plug-ins and developments.
     </p>
     <p>
       The "optional" packages have the same maturity and maintenance level as the packages in the full level, 
@@ -109,7 +109,7 @@ Tools_layout.three_column_layout
     <p>
      The "extended level" contains packages which are in a beta stage or otherwise don't yet have the level 
      of maturity or support required for inclusion in the full level, 
-     but there are plans to move them to the full level in a future release of Coq Platform. 
+     but there are plans to move them to the full level in a future release of Rocq Platform. 
      The main point of the extended level is advertisement: users are important to bring a development 
      from a beta to a release state.
     </p>
@@ -119,7 +119,7 @@ Tools_layout.three_column_layout
       <hr class="mt-12 mb-6 border-separator_20 border-t border-separator_30">
       <h4 class="text-title dark:text-dark-title font-bold">Full Level</h4>
       <div class="text-content dark:text-dark-content mt-3">
-        The full level adds many commonly used coq libraries, plug-ins and developments.
+        The full level adds many commonly used Rocq libraries, plug-ins and developments.
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
         <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Full) |> List.iter (fun (item : Data.Tool.t) -> %>
@@ -147,7 +147,7 @@ Tools_layout.three_column_layout
       <div class="text-content dark:text-dark-content mt-3">
         The extended level contains packages which are in a beta stage or otherwise don't yet 
         have the level of maturity or support required for inclusion in the full level, but there 
-        are plans to move them to the full level in a future release of Coq Platform. 
+        are plans to move them to the full level in a future release of Rocq Platform. 
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
         <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Extended) |> List.iter (fun (item : Data.Tool.t) -> %>
