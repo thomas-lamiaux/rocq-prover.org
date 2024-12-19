@@ -12,46 +12,53 @@ The Rocq prover is an interactive theorem prover. It means that it is designed t
 
 Properties, programs and proofs are formalized in the same language called the Calculus of Inductive Constructions (CIC). Then, all logical judgments in Rocq are typing judgments: the very heart of Rocq is in fact a type-checking algorithm.
 
-## The language of Rocq
+# The language of Rocq
 
 Rocq objects are sorted into three categories: the Prop sort, the SProp sort and the Type sort:
 
 
-- `Prop` is the sort for propositions, i.e. well-formed propositions are of type `Prop`. Typical propositions are:
+- {coq}`Prop` is the sort for propositions, i.e. well-formed propositions are of type {coq}`Prop`. Typical propositions are:
 
-```ocaml
+```{coq} none
+Require Import Utf8.
+Require Import ZArith. 
+Require Import NArith.
+Open Scope N_scope.
+```
+
+```coq
 ∀ A B : Prop, A /\ B -> B \/ B
 ∀ x y : Z, x * y = 0 -> x = 0 \/ y = 0
 ```
 
 and new predicates can be defined either inductively, e.g.:
 
-```ocaml
+```{coq}
 Inductive even : N -> Prop :=
   | even_0 : even 0
   | even_S n : odd n -> even (n + 1)
-  with odd : N -> Prop :=
+with odd : N -> Prop :=
   | odd_S n : even n -> odd (n + 1).
 ```
 
 or by abstracting over other existing propositions, e.g.:
 
-```ocaml
-Definition divide (x y:N) := ∃ z, x * z = y.
+```{coq}
+Definition divide (x y:N) := exists z, x * z = y.
 Definition prime x := ∀ y, divide y x -> y = 1 \/ y = x.
 ```
 
 - `Type` is the sort for datatypes and mathematical structures, i.e. well-formed types or structures are of type Type. Here is e.g. a basic example of type:
-
-```ocaml
- Z -> Z * Z
- ```
+{coq}`Z -> Z * Z`
 
  Types can be inductive structures, e.g.:
 
- ```ocaml
+```{coq} none
+Module inddecls.
+```
+```{coq}
 Inductive nat : Set :=
-  | 0 : nat
+  | O : nat
   | S : nat -> nat.
 
 Inductive list (A:Type) : Type :=
@@ -61,7 +68,7 @@ Inductive list (A:Type) : Type :=
 
  or types for tuples, e.g.:
 
- ```ocaml
+ ```{coq}
 Structure monoid := { 
     dom : Type ; 
     op : dom -> dom -> dom where "x * y" := (op x y); 
@@ -74,13 +81,16 @@ Structure monoid := {
 
  or a form of subset types called Σ-types, e.g. the type of even natural numbers:
 
-```ocaml
- {n : N | even n}
+```{coq}
+Check {n : N | even n}.
+```
+```{coq} none
+End inddecls.
 ```
 
-rocq implements a functional programming language supporting these types. For instance, the pairing function of type `Z -> Z * Z` is written `fun x => (x,x)` and `cons (S (S O)) (cons (S O) nil)` (shortened to `2::1::nil` in Rocq) denotes a list of type list nat made of the two elements `2` and `1`.
+Rocq implements a functional programming language supporting these types. For instance, the pairing function of type `Z -> Z * Z` is written `fun x => (x,x)` and `cons (S (S O)) (cons (S O) nil)` (shortened to `2::1::nil` in Rocq) denotes a list of type list nat made of the two elements `2` and `1`.
 Using Σ-types, a sorting function over lists of natural numbers can be given the type:
-```ocaml
+```coq
 sort : ∀ (l : list nat), {l' : list nat | sorted l' /\ same_elements l l'}
 ```
 
@@ -88,7 +98,12 @@ Such a type (specification) enforces the user to write the proofs of predicates 
 
 Then, functions over inductive types are expressed using a case analysis:
 
-```ocaml
+
+```{coq} none
+Local Open Scope nat_scope.
+```
+
+```{coq}
 Fixpoint plus (n m:nat) {struct n} : nat :=
   match n with
   | O => m
@@ -99,21 +114,21 @@ where "p + m" := (plus p m).
 
 Rocq can now be used as an interactive evaluator. Issuing the command
 
-```ocaml
-Eval compute in (43+55)
+```{coq}
+Eval compute in (43+55).
 ```
 
 (where 43 and 55 denote the natural numbers with respectively 43 and 55 successors) returns
 
-```ocaml
+```coq
  98 : nat
  ```
 
- ## Proving in Rocq
+# Proving in Rocq
 
 Proof development in rocq is done through a language of tactics that allows a user-guided proof process. At the end, the curious user can check that tactics build lambda-terms. For example the tactic intro n, where n is of type nat, builds the term (with a hole):
 
-```ocaml
+```coq
 fun (n:nat) => _ 
 ```
 
@@ -121,7 +136,7 @@ where `_` represents a term that will be constructed after, using other tactics.
 
 Here is an example of a proof in the Coq system:
 
-```ocaml
+```{coq}
   Inductive seq : nat -> Set :=
   | niln : seq 0
   | consn : forall n : nat, nat -> seq n -> seq (S n).
@@ -166,7 +181,7 @@ Here is an example of a proof in the Coq system:
 ```
 
 Using the `Print` command, the user can look at the proof-term generated using the tactics:
-```ocaml
+```coq
   length_corr =
     fun (n : nat) (s : seq n) =>
       seq_ind (fun (n0 : nat) (s0 : seq n0) => length n0 s0 = n0) 
