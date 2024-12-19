@@ -51,7 +51,7 @@ let upcoming_conference_card (conference: Data.Event.t) =
 
 let upcoming_conference_card_mobile (conference: Data.Event.t) = 
   <div class="flex lg:hidden flex-col rounded-lg p-4 border border-card_border dark:border-none bg-[#00000003] dark:bg-dark-card mb-4">
-    <p class="font-bold text-2xl text-title dark:text-dark-title mb-2">OCaml Users and Developers Conference 2024</p>
+    <p class="font-bold text-2xl text-title dark:text-dark-title mb-2"><%s conference.title %></p>
     <div class="flex flex-col mb-2">
         <div class="flex">
           <%s! Icons.calendar "h-5 w-5 text-primary dark:text-dark-primary mr-2" %>
@@ -101,14 +101,14 @@ let upcoming_conference_card_mobile (conference: Data.Event.t) =
 let render ~upcoming_conferences (past_conferences: Data.Conference.t list) =
 Community_layout.single_column_layout
 ~title:"Conferences"
-~description:"This is a record of all past OCaml Conferences. We provide resources for the individual talks, such as slides or video recordings of the talks."
+~description:"This is a record of all past Rocq Conferences. We provide resources for the individual talks, such as slides or video recordings of the talks."
 ~canonical:Url.conferences
 ~current:Conferences @@
 <div class="lg:-mt-32 lg:pt-44 w-full intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="w-full m-auto">
-            <h1 class="text-title dark:text-dark-title font-bold mb-2">OCaml Conferences</h1>
-            <p class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">We list upcoming OCaml conferences and provide resources from past OCaml conferences, such as slides or video recordings of the talks.</p>
+            <h1 class="text-title dark:text-dark-title font-bold mb-2">Rocq Conferences</h1>
+            <p class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">We list upcoming Rocq conferences and provide resources from past Rocq conferences, such as slides or video recordings of the talks.</p>
         </div>
     </div>
 </div>

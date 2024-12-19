@@ -1,9 +1,8 @@
 ---
-title: CoqPL 2025
-date: 2025-01-25
-location: Denver, Co, USA
+title: "CoqPL 2025"
+location: "Denver, Co, USA"
 important_dates:
-  - date: 2024-10-25
+  - date:
     info: Abstract submission deadline 
   - date: 2024-11-22
     info: Author notification
@@ -49,3 +48,4 @@ Topics in scope include:
 - IDEs, profilers, tracers, debuggers, and testing tools
 - Reports on ongoing proof efforts conducted via (or in the context of) the Coq proof assistant
 - Experience reports from Coq usage in educational or industrial contexts
+
