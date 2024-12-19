@@ -51,14 +51,6 @@
     background-size: cover;
   }
   
-  .bg-code_window{
-    background: linear-gradient(0deg, #fdf6f2, #fff6f3, #fff5f3, #fcf1f0, #faf7f7);
-  }
-
-  .bg-dark-code_window{
-    background: linear-gradient(177deg, #0d0d0d, #141721);
-  }
-  
   .intro-section-simple {
     background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat;
     @apply pt-16 pb-16 bg-sand;

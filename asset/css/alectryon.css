@@ -64,7 +64,6 @@ SOFTWARE.
 .alectryon-toggle-label, .alectryon-banner {
     font-family: 'Source Code Pro', monospace;
     font-feature-settings: "COQX" 1 /* Coq ligatures */, "XV00" 1 /* Legacy */, "calt" 1 /* Fallback */;
-    line-height: initial;
 }
 
 .alectryon-io, .alectryon-block, .alectryon-toggle-label, .alectryon-banner {
@@ -152,7 +151,6 @@ In any case, make an exception for comments:
 
 .alectryon-io .alectryon-input {
     padding: 0.1em 0; /* Enlarge the hitbox slightly to fill interline gaps */
-    color: #000000 /* Name.Function */ /* Rocq blue ?  #260085 */
 }
 .dark .alectryon-io .alectryon-input {
     color: #ffffff /* Name.Function */ /* Rocq blue ?  #260085 */
@@ -300,9 +298,13 @@ In any case, make an exception for comments:
 .alectryon-io .alectryon-goals,
 .alectryon-io .alectryon-messages {
     background: #ffebe3;
-    border: thin solid #d3d7cf; /* Convenient when pre's background is already #EEE */
+    /* border: thin solid #d3d7cf; */ /* Convenient when pre's background is already #EEE */
     display: block;
     padding: 0.25em;
+}
+.dark .alectryon-io .alectryon-goals,
+.dark .alectryon-io .alectryon-messages {
+    background: #141620;
 }
 
 .alectryon-message::before {
@@ -370,7 +372,6 @@ In any case, make an exception for comments:
 .alectryon-io .alectryon-goal,
 .alectryon-io .alectryon-message {
     align-items: center;
-    background: hsl(17 100% 86% / 1);
     display: block;
     flex-direction: column;
     margin: 0.25em;
@@ -395,7 +396,7 @@ In any case, make an exception for comments:
 
 .alectryon-io .goal-hyps > span,
 .alectryon-io .goal-conclusion {
-    background: #eeeeec;
+    /* background: #eeeeec; */
     display: inline-block;
     padding: 0.15em 0.35em;
 }

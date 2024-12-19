@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const figma_colors = {
     primary: "#260085",
     primary_40: "#3A00CC",
-    primary_25: "#B0BEFF",
+    primary_25: "#3e3bc6",
     primary_dark: "#170052",
     primary_nav_block_hover_10:"#f0dad1",
 
@@ -28,7 +28,7 @@ const figma_colors = {
 
     background: "white",
     sand: "#ededed",
-    code_window: "#2B2A2A",
+    //code_window: "#2B2A2A",
 
     search_keyboard_cursor:"#0C3B8C",
     search_term_highlight:"#F36528",
@@ -57,7 +57,7 @@ const figma_colors = {
       separator_30: "#FFFFFF4D",
       background: "#050610", 
       background_navigation: "#070608",
-      code_window: "#2B2A2A",    
+      //code_window: "#2B2A2A",    
     }
 }
 
@@ -110,13 +110,13 @@ module.exports = {
             },
             'a:hover': {
               textDecoration: "underline",
-            },
-            pre: {
-              backgroundColor: theme('colors.code_window'),
-            },
-            'pre > code': {
-              color: theme('colors.white'),
-            }
+            }//,
+            //pre: {
+            //  backgroundColor: theme('colors.code_window'),
+            //},
+            //'pre > code': {
+            //  color: theme('colors.white'),
+            //}
           },{
             '--tw-prose-bullets': figma_colors.content,
             '--tw-prose-invert-bullets': figma_colors.dark.content,
@@ -140,13 +140,13 @@ module.exports = {
             },
             'h2, h3, h4, h5, h6, code': {
               color: theme('colors.dark.title'),
-            },
-            pre: {
-              backgroundColor: theme('colors.dark.code_window'),
-            },
-            'pre > code, strong': {
-              color: theme('colors.dark.title'),
-            },
+            }//,
+            //pre: {
+            //  backgroundColor: theme('colors.dark.code_window'),
+            //},
+            //'pre > code, strong': {
+            //  color: theme('colors.dark.title'),
+            //},
           },
         }
       }),
@@ -190,9 +190,9 @@ module.exports = {
           5: "#ff540a"
         },
 
-        code: {
-          background: "rgba(13, 13, 13, 1)",
-        },
+        //code: {
+        //  background: "rgba(13, 13, 13, 1)",
+        //},
       },
       boxShadow: {
         'custom': '0 4px 8px rgba(255, 84, 10, 0.5)'
