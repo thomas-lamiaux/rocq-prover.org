@@ -38,7 +38,10 @@ Layout.render
         <div class="space-x-0 lg:space-x-6">
           <a class="btn btn-lg font-medium lg:mb-0 mb-4" href="<%s Url.install %>">Install</a>
           <a class="btn btn-lg btn-ghost" href="<%s Url.about %>">
-            About the Rocq prover
+            About The Rocq Prover
+          </a>
+          <a class="btn btn-lg btn-ghost" href="<%s Url.why %>">
+            Why Rocq?
           </a>
         </div>
         <div class="mt-6">
@@ -214,8 +217,12 @@ Layout.render
               </p>
             </div>
           </div>
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <img src="<%s Ocamlorg_static.Asset.url "img/home/safe-stable.svg" %>" alt="An example OCaml program defining nested lists in OCaml. A terminal output also shows the compiler catching a type error where a pattern-match was not exhaustive.">
+          <div class="lg:flex-1  bg-black/100 lg:mt-0 mt-10 flex justify-center">
+            <div class="grid grid-cols-1">
+              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/type-cumul-const.png" %>" alt=""/></div>
+              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/lemma-red-confluence.png" %>" alt=""/></div>
+              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/subject-reduction-proof.png" %>" alt=""/></div>
+            </div>
           </div>
         </div>
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
@@ -301,24 +308,10 @@ Layout.render
                 structures. The Rocq Prover provides many mechanisms to tailor the environment to one's 
                 requirements and structure developments. Rocq comes with a built-in lightweight scoped 
                 notation system, a coercion system and typeclass systems that allow user-defined extension
-                of the elaboration phases. The built-in Ltac2 typed tactic programming language enables 
-                the design of predictable and comfortable automation for proofs at a high-level of 
-                abstraction, with native handling of the proof state and backtracking.
-                This support is essential for developing embedded domain-specific logics and languages, 
-                as exemplified in the very succesful <a href="iris-project.org">Iris</a> project, where 
-                a whole new proof mode was designed and used to reason about effectul programming 
-                languages like <a href="https://www.rust-lang.org">Rust</a> in variants of separation logics.
-              </p>
-              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                As part of the Rocq Platform, two alternative languages are available.
-                A lower level of abstraction is provided by the MetaRocq project which allows directly 
-                working with the core term syntax and prove meta-theorems on the typing 
-                judgments of Rocq inside Rocq. An alternative high-level language is provided by Rocq-Elpi, 
-                which interfaces Rocq with λ-prolog, a logic programming language allowing to naturally 
-                express proof-search, unification and elaboration problems. Rocq-Elpi is at the core of 
-                Hierarchy-Builder, a metaprogramming tool that allows the effective development of 
-                hierarchies of structures in Rocq in an entirely declarative fashion. It handles in 
-                particular all structures used in the Mathematical Components libraries.
+                of the elaboration phases. This support is essential for developing embedded domain-specific logics and languages, 
+                as exemplified in the <a href="iris-project.org">Iris</a> project which allows to reason about
+                effectul programs in languages like <a href="https://www.rust-lang.org">Rust</a> 
+                using sophisticated variants of separation logic.
               </p>
             </div>
           </div>

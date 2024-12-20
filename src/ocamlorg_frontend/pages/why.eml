@@ -1,0 +1,109 @@
+let render () =
+Layout.render
+~title:"Why Rocq?"
+~description:"Rocq is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about what makes it unique."
+~canonical:Url.about @@
+<div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
+  <div class="container-fluid">
+    <div class="text-center w-full lg:w-2/3 m-auto">
+      <h1 class="font-bold mb-6 text-title dark:text-dark-title">Why Rocq?</h1>
+      <div class="flex items-center justify-center space-x-8 mt-11 lg:space-x-24">
+        <div>
+          <a
+            class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 rounded-lg h-28 w-28 inline-block transition-colors"
+            href="#strengths"
+          >
+            <%s! Icons.lightning "h-10 w-10 mb-4 m-auto mt-6" %>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Strengths</div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
+            href="#features"
+          >
+            <%s! Icons.features "h-10 w-10 mb-4 m-auto mt-6" %>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Features</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-background dark:bg-dark-background">
+  <div class="py-10 lg:py-28">
+    <div class="container-fluid">
+      <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
+        <h2 id="strengths">Why Rocq?</h2>
+        <div class="space-y-10">
+
+
+          <P> 
+            The Rocq prover implements a program specification and mathematical higher-level language called Gallina that is based on an expressive 
+            formal language called the Calculus of Inductive Constructions that itself combines both a higher-order logic and a 
+            richly-typed functional programming language. Through a vernacular language of commands, Rocq allows:
+          </p>
+          <ul>
+            <li> to define functions or predicates, that can be evaluated efficiently;</li>
+            <li> to state mathematical theorems and software specifications;</li>
+            <li> to interactively develop formal proofs of these theorems;</li>
+            <li> to machine-check these proofs by a relatively small certification "kernel";</li>
+            <li> to extract certified programs to languages like OCaml, Haskell or Scheme.</li>
+          </ul>
+
+          <p>
+            As a proof development system, the Rocq prover provides interactive proof methods, decision and semi-decision algorithms, 
+            and a tactic language for letting the user define its own proof methods. 
+            Connection with external computer algebra system or theorem provers is available.
+          </p>
+
+          <p>
+            As a platform for the formalization of mathematics or the development of programs, 
+            the Rocq prover provides support for high-level notations, implicit contents and various other useful kind of language mechanisms for 
+            formalization at scale.
+          </p>          
+          <h2 id="features">Features</h2>
+          <ul>
+            <li>
+              <strong>Certified Type Theory and Extraction:</strong>
+              The Rocq prover is based on the formal verification of its type theory implementation and extraction system, 
+              minimizing the trusted code base and increasing user confidence in results.
+            </li>
+            <li>
+              <strong>Universe and Sort Polymorphism:</strong>
+            </li>
+            <li>
+              <strong>Implicit Cumulativity:</strong>
+            </li>
+            <li>
+              <strong>Definitional Proof Irrelevance:</strong>
+            </li>
+            <li>
+              <strong>Efficient Definitional Equality Checkers:</strong>
+            </li>
+            <li>
+              <strong>Metaprogramming support</strong>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">                
+                The built-in Ltac2 typed tactic programming language enables 
+                the design of predictable and comfortable automation for proofs at a high-level of 
+                abstraction, with native handling of the proof state and backtracking.
+              </p>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                As part of the Rocq Platform, two alternative languages are available.
+                A lower level of abstraction is provided by the MetaRocq project which allows directly 
+                working with the core term syntax and prove meta-theorems on the typing 
+                judgments of Rocq inside Rocq. An alternative high-level language is provided by Rocq-Elpi, 
+                which interfaces Rocq with λ-prolog, a logic programming language allowing to naturally 
+                express proof-search, unification and elaboration problems. Rocq-Elpi is at the core of 
+                Hierarchy-Builder, a metaprogramming tool that allows the effective development of 
+                hierarchies of structures in Rocq in an entirely declarative fashion. It handles in 
+                particular all structures used in the Mathematical Components libraries.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

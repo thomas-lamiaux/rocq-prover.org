@@ -1,12 +1,12 @@
 let render () =
 Layout.render
-~title:"Why Rocq?"
-~description:"Rocq is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about its rich history and what makes it unique."
+~title:"About The Rocq Prover"
+~description:"Rocq is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about its rich history."
 ~canonical:Url.about @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
     <div class="text-center w-full lg:w-2/3 m-auto">
-      <h1 class="font-bold mb-6 text-title dark:text-dark-title">Why Rocq?</h1>
+      <h1 class="font-bold mb-6 text-title dark:text-dark-title">About The Rocq Prover</h1>
       <div class="flex items-center justify-center space-x-8 mt-11 lg:space-x-24">
         <div>
           <a
@@ -44,13 +44,13 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
-        <h2 id="strength">Why Rocq?</h2>
+        <h2 id="strength">What is the Rocq Prover?</h2>
         <div class="space-y-10">
 
 
           <P> 
             The Rocq prover implements a program specification and mathematical higher-level language called Gallina that is based on an expressive 
-            formal language called the Calculus of Inductive Constructions that itself combines both a higher-order logic and a 
+            formal language called the Polymorphic, Cumulative Calculus of Inductive Constructions that itself combines both a higher-order logic and a 
             richly-typed functional programming language. Through a vernacular language of commands, Rocq allows:
           </p>
           <ul>
@@ -69,7 +69,7 @@ Layout.render
 
           <p>
             As a platform for the formalization of mathematics or the development of programs, 
-            the Rocq prover provides support for high-level notations, implicit contents and various other useful kinds of macros.
+            the Rocq prover provides support for high-level notations, implicit contents and other mechanisms for formalization at scale.
           </p>
           <h2 id="history">A Brief History</h2>
           <p>
