@@ -487,18 +487,18 @@ Layout.render
         </a>
         <a href="<%s Url.manual %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.document "h-16 w-16 mb-8" %>
-          <p class="font-semibold text-xl mb-3">Language Manual</p>
-          <p>Read the reference manual of the language.</p>
+          <p class="font-semibold text-xl mb-3">Reference Manual</p>
+          <p>The authoritative reference for the Rocq prover (not learning oriented).</p>
         </a>
         <a href="<%s Url.books %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.book "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Books</p>
           <p>Discover Rocq books from expert programmers and researchers - from beginner level to advanced topics.</p>
         </a>
-        <a href="<%s Url.api %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
+        <a href="<%s Url.stdlib %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.command_line "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Standard Library</p>
-          <p>Searchable API documentation.</p>
+          <p>The documentation of the standard library.</p>
         </a>
         <a href="<%s Url.exercises %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.hand_palm "h-16 w-16 mb-8" %>
@@ -508,7 +508,7 @@ Layout.render
         <a href="<%s Url.papers %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.papers "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Papers</p>
-          <p>Explore papers that have influenced or used Rocq.</p>
+          <p>Explore papers that have influenced or used the Rocq prover.</p>
         </a>
       </div>
     </div>

@@ -70,10 +70,10 @@ Tools_layout.single_column_layout
                                     Opam Package
                                 </a>
                                 <a href="<%s Url.manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">
-                                    Language Manual
+                                    Reference Manual
                                 </a>
-                                <a href="<%s Url.api_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">
-                                    Standard Library API
+                                <a href="<%s Url.stdlib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">
+                                    Standard Library
                                 </a>
                             </div>
                         </div>

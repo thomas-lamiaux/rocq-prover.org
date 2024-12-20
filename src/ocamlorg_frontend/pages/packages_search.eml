@@ -35,7 +35,7 @@ let render ~total ~search ~(pagination_info : Pagination.t) (packages : Package.
           <ul class="text-title dark:text-dark-content">
             <li>The search does not correct typos automatically (yet). Be sure to use correct spelling for keywords or package names.</li>
             <li>Looking for a tutorial or guide, and not a package? Check out our <a class="text-primary dark:text-dark-primary" href="<%s Url.learn %>">Learn area</a>.</li>
-            <li>Looking for the standard library API? It's <a class="text-primary dark:text-dark-primary" href="<%s Url.api %>">here</a>.</li>
+            <li>Looking for the standard library documentation? It's <a class="text-primary dark:text-dark-primary" href="<%s Url.stdlib %>">here</a>.</li>
           </ul>
           </div>
           <% ); %>

@@ -14,18 +14,18 @@ let no_trailing_slash next_handler request =
 let language_manual_version next_handler request =
   let open Data in
   let init_path = request |> Dream.target |> String.split_on_char '/' in
-  let minor (release : Release.t) = Ocamlorg.Url.minor release.version in
+  let patch (release : Release.t) = Ocamlorg.Url.patch release.version in
   let release str =
     str |> Release.get_by_version
     |> Option.value ~default:Release.latest
-    |> minor
+    |> patch
   in
   let release_path = function
-    | [] -> (minor Release.latest, [ "index.html" ])
+    | [] -> (patch Release.latest, [ "index.html" ])
     | x :: u -> (
         match Release.get_by_version x with
-        | None -> (minor Release.latest, x :: u)
-        | Some v -> (minor v, u))
+        | None -> (patch Release.latest, x :: u)
+        | Some v -> (patch v, u))
   in
   let tweak_base u =
     match List.rev u with
@@ -35,12 +35,15 @@ let language_manual_version next_handler request =
   in
   let path =
     match init_path with
-    | "" :: ("manual" | "htmlman") :: path ->
+    | "" :: ("manual" | "refman") :: path ->
         let version, path = release_path path in
-        "" :: "manual" :: version :: tweak_base path
+        "" :: "doc" :: ("V" ^ version) :: "refman" :: tweak_base path
+    | "" :: "stdlib" :: path ->
+        let version, path = release_path path in
+        "" :: "doc" :: ("V" ^ version) :: "stdlib" :: tweak_base path
     | "" :: "api" :: path ->
         let version, path = release_path path in
-        "" :: "manual" :: version :: "api" :: tweak_base path
+        "" :: "doc" :: ("V" ^ version) :: "api" :: tweak_base path
     | [ ""; "releases"; version; "index.html" ] -> [ ""; "releases"; version ]
     | [ ""; "releases"; something ]
       when String.ends_with ~suffix:".html" something ->

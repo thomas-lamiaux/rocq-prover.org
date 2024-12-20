@@ -3,7 +3,6 @@ let install = "/install"
 let packages = "/packages"
 let packages_search = "/packages/search"
 let packages_autocomplete_fragment = "/packages/autocomplete"
-
 let rocq_org = "https://rocq-prover.org"
 
 module Package : sig
@@ -48,12 +47,19 @@ let about = "/about"
 let minor v =
   match String.split_on_char '.' v with
   | x :: y :: _ -> x ^ "." ^ y
-  | _ -> invalid_arg (v ^ ": invalid OCaml version")
+  | _ -> invalid_arg (v ^ ": invalid  version")
+
+let patch v =
+  match String.split_on_char '.' v with
+  | x :: y :: z :: _ -> x ^ "." ^ y ^ "." ^ z
+  | _ -> invalid_arg (v ^ ": invalid  version")
 
 let v2 = "https://v2.ocaml.org"
-let manual_with_version v = "/manual/" ^ minor v ^ "/index.html"
-let manual = "/manual"
-let api_with_version v = "/manual/" ^ minor v ^ "/api/index.html"
+let manual_with_version v = "/doc/V" ^ patch v ^ "/refman/index.html"
+let manual = "/refman"
+let stdlib_with_version v = "/doc/V" ^ patch v ^ "/stdlib/index.html"
+let stdlib = "/stdlib"
+let api_with_version v = "/doc/V" ^ patch v ^ "/api/index.html"
 let api = "/api"
 let books = "/books"
 let changelog = "/changelog"
