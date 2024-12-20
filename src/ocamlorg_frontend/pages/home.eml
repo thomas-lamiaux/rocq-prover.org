@@ -336,7 +336,8 @@ Layout.render
             </div>
           </div>
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt="">
+            TODO by PMP: Perf graph to his glory
+            <!-- <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt=""> -->
           </div>
         </div>
       </div>
