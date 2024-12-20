@@ -8,8 +8,8 @@ category: "Rocq Consortium"
 
 The Rocq Consortium comprises the following levels of Membership, depending on a yearly financial contribution:
 
-- Gold membership: 20k€
-- Platinum membership: 50k€
+- **Gold membership: 20k€**
+- **Platinum membership: 50k€**
 
 This contribution supports the development of Rocq, on priorities defined by the Consortium assembly. 
 Gold members get one vote for each ballot at the assembly, Platinum members get three votes.

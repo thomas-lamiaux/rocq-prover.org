@@ -42,17 +42,27 @@ Consortium_layout.three_column_layout
 ~current:Overview
 @@
   <div class="prose prose-orange max-w-none dark:prose-invert">
-    <h1>The Rocq Consortium</h1>
+    <h1>Sustaining the evolution of Coq while giving a voice to stakeholders</h1>
     <p>
-    The Rocq Consortium is a distribution of the Rocq prover together with a selection of
-    libraries and plugins. The main goal of the Rocq Consortium is to provide a
-    distribution for developing and teaching with Rocq that is:
+    For many years, the development of Coq has been supported and funded almost exclusively 
+    by French academic institutions, most notably Inria. But today, there are intensive Coq users, 
+    and thus major stakeholders, in universities and companies all over the world.
     </p>
-    <ul>
-      <li> operating system independent </li>
-      <li> dependable </li>
-      <li> easy to install </li>
-      <li> comprehensive </li>
-    </ul>
+    <p>
+    The objective of the Consortium is to empower this community of users, whose research and 
+    development critically rely on the Coq system. For these users, making sure that the system's 
+    maintenance is well funded is essential. They can do so by providing resources either as donations, 
+    Consortium membership or support service subscriptions. Furthermore, Consortium members and support 
+    service subscribers get a voice in the evolution of Coq, by determining where some engineering resources are allocated.
+    </p>
+    <p>
+    To summarize, on the one hand, we wish to establish transparent ways of contributing financially 
+    and technically to the development of the system; on the other hand we wish to make sure that the 
+    most pressing needs of major stakeholders are addressed efficiently by providing a fantastic working 
+    environment to competent Coq developers.
+    </p>
+    <p>
+    The Rocq Consortium is hosted by Inria (the French national institute for research in digital science and technology), 
+    the premier actor behind the development of the Rocq prover.
   </div>
 
