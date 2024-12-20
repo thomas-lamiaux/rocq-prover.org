@@ -195,7 +195,7 @@ Layout.render
                 <div class="font-bold my-4 text-lg tracking-wide">
                   RELIABILITY
                 </div>
-                <p class="text-title dark:text-dark-title font-bold">A Powerful Type Theory</p>
+                <p class="text-title dark:text-dark-title font-bold">A Foundationally Sound, Trustworthy Formal Language and Implementation</p>
               </h3>
               <p class="my-4 text-lg text-content dark:text-dark-content">
                 Rocq's highly expressive type system and proof language enable fully mechanised verification
@@ -225,7 +225,7 @@ Layout.render
                 <%s! Icons.lightning "h-7 w-7 m-auto" %>
               </div>
               <h3>
-                <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">DIVERSITY AND OPENNESS</div>
+                <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">DIVERSITY OF APPLICATIONS</div>
                 <div class="text-title dark:text-dark-title font-bold">
                   From Low-Level Verification to Homotopy Type Theory
                 </div>
@@ -234,11 +234,11 @@ Layout.render
                 The Rocq prover enables a very wide variety of developments to coexist in the same system, ranging from
                 end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
                 Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
-                the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated
-                Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art
-                framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for
-                teaching logic and computer science: thousands of students have gone through the Software Foundations
-                series developed collaboratively by Rocq users.
+                the Four-Color and Feith-Thompson theorems; the verified CompCert C compiler and the associated
+                Verified Software Toolchain for proofs of C-like programs, or the development of Homotopy Type Theory 
+                and Univalent Foundations of mathematics. Rocq is also a great vehicle for
+                teaching logic and computer science as exemplified by the thousands of students that have gone 
+                through the <a href="/books">Software Foundations</a> series of books.
                 Rocq's development is entirely open-source and a large and diverse community of users participate in its
                 continued evolution.
               </p>
@@ -248,11 +248,6 @@ Layout.render
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
             <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div>
-                    <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" />
-                  </div>
-                </div>
                 <div class="swiper-slide">
                   <div>
                     <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">COMPCERT</div>
@@ -274,7 +269,53 @@ Layout.render
                     </div>
                   </div>
                 </div>
+                <div class="swiper-slide">
+                  <div>
+                    <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">HOMOTOPY TYPE THEORY</div>
+                    TODO
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
+          <div class="lg:flex-1 mt-10 lg:mt-0">
+            <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" />
+            <!-- <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" />
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <!--<div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center" style="max-width: calc(50vw - 5rem);">  Other fix max width calculation-->
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
+            <div class="text-base">
+              <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-orange-600 to-[#ff540a]">
+                <%s! Icons.lightning "h-7 w-7 m-auto" %>
+              </div>
+              <h3>
+                <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">EXTENSIBILITY AND CUSTOMIZABILITY</div>
+                <div class="text-title dark:text-dark-title font-bold">
+                  Metaprogramming and Embedded Domain-Specific Logics and Languages
+                </div>
+              </h3>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                The Rocq prover enables a very wide variety of developments to coexist in the same system, ranging from
+                end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
+                Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
+                the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated
+                Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art
+                framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for
+                teaching logic and computer science: thousands of students have gone through the Software Foundations
+                series developed collaboratively by Rocq users.
+                Rocq's development is entirely open-source and a large and diverse community of users participate in its
+                continued evolution.
+              </p>
             </div>
           </div>
         </div>

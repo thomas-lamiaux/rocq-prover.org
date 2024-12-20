@@ -61,7 +61,9 @@ let decode (fpath, (head, body_md)) =
   in
   let doc = Markdown.Content.of_string body_md in
   let toc = Markdown.Toc.generate ~start_level:2 ~max_level:4 doc in
-  let body_html = Markdown.Content.render ~syntax_highlighting:true doc in
+  let body_html = 
+    (* TODO plug in alectryon here *)
+     Markdown.Content.render ~syntax_highlighting:true doc in
   Result.map
     (of_metadata ~fpath ~section ~toc:(toc_toc toc) ~body_md ~body_html)
     metadata
