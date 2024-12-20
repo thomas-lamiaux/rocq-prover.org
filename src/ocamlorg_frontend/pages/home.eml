@@ -279,21 +279,12 @@ Layout.render
             </div>
           </div>
         </div>
-        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
-          <div class="lg:flex-1 mt-10 lg:mt-0">
+
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between items-center">
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
             <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" />
-            <!-- <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div>
-                    <img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" />
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
-          <!--<div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center" style="max-width: calc(50vw - 5rem);">  Other fix max width calculation-->
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
+          <div class="lg:flex-1 mt-10 lg:mt-0">
             <div class="text-base">
               <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-orange-600 to-[#ff540a]">
                 <%s! Icons.lightning "h-7 w-7 m-auto" %>
@@ -318,8 +309,8 @@ Layout.render
               </p>
             </div>
           </div>
-        </div>
-        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row-reverse justify-between">
+        </div>              
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between items-center">
           <div class="lg:flex-1">
             <div class="text-base">
             <div class="h-12 w-12 text-white dark:text-dark-white rounded-xl flex bg-gradient-to-br from-blue-800 to-[#260085]">
