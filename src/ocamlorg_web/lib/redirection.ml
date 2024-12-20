@@ -377,8 +377,6 @@ let t =
        make (List.map fwd_v2 v2_assets);
        make [ ("/blog", "/ocaml-planet") ];
        make ~permanent:true [ ("/opportunities", "/jobs") ];
-       make ~permanent:true
-         [ ("/carbon-footprint", "/policies/carbon-footprint") ];
        make ~permanent:true [ ("/privacy-policy", "/policies/privacy-policy") ];
        make ~permanent:true
          [ ("/code-of-conduct", "/policies/code-of-conduct") ];

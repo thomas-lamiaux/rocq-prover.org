@@ -80,7 +80,6 @@ let donation = "/donation"
 let membership = "/memrbship"
 let governance = "/governance"
 let governance_team id = "/governance/" ^ id
-let carbon_footprint = "/policies/carbon-footprint"
 let privacy_policy = "/policies/privacy-policy"
 let governance_policy = "/policies/governance"
 let code_of_conduct = "/policies/code-of-conduct"

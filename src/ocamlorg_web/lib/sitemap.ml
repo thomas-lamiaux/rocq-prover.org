@@ -10,7 +10,6 @@ let urls =
     Url.academic_institutions;
     Url.rocq_planet;
     Url.books;
-    Url.carbon_footprint;
     Url.changelog;
     Url.code_of_conduct;
     Url.community;

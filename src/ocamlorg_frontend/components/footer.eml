@@ -28,7 +28,6 @@ let ecosystem = [
   ]
 
 let policies = [
-  (Url.carbon_footprint, "Carbon Footprint");
   (Url.governance, "Governance");
   (Url.privacy_policy, "Privacy");
   (Url.code_of_conduct, "Code of Conduct");
