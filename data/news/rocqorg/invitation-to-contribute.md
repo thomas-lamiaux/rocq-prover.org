@@ -13,7 +13,7 @@ Are you passionate about the Rocq prover and eager to showcase your exciting pro
 
 ![](/media/news/contribute.jpg)
 
-[Discuss](https://discuss.rocq.org/) serves as a central platform for the Rocq community, where individuals from all backgrounds come together to share knowledge, discuss ideas, and collaborate on Rocq-related endeavors. As an open and inclusive community, we welcome your unique perspectives, experiences, and contributions.
+[Zulip](https://coq.zulipchat.com/) serves as a central platform for the Rocq community, where individuals from all backgrounds come together to share knowledge, discuss ideas, and collaborate on Rocq-related endeavors. As an open and inclusive community, we welcome your unique perspectives, experiences, and contributions.
 
 
 Join us in shaping the future of Rocq and fostering a vibrant community! Together, we can inspire, educate, and empower developers, enthusiasts, and learners around the world.
