@@ -166,7 +166,7 @@ people may feel distressed even without a clear infraction of our standards. We
 hope to make a community where discussing such situations personally with other
 members can resolve such distress, but we recognize this may not always be
 possible. If the Code of Conduct has not been violated but you wish to discuss
-such an issue, please feel free to contact `coc-help@ocaml.org`.
+such an issue, please feel free to contact <coq-conduct@inria.fr>.
 
 ## Questions? ##
 
