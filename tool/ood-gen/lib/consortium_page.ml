@@ -43,7 +43,6 @@ let template () =
 
   Format.asprintf {|
 include Data_intf.Consortium_page
-fheoiuzhfizou
 let all = %a
 |}
     (Fmt.brackets (Fmt.list pp ~sep:Fmt.semi))

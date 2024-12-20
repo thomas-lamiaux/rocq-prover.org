@@ -327,7 +327,7 @@
    %{workspace_root}
    (with-stdout-to
     %{target}
-    (run %{ood_gen} tool_page)))))
+    (run %{ood_gen} consortium_page)))))
 
 (rule
  (target video.ml)

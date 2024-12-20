@@ -1,9 +1,10 @@
 ---
-id: "member"
-title: "Rocq and Rocq platform release cycle"
-description: An overview of how the Rocq platform gets released.
+id: "membership"
+title: "Current members"
+description: Current members
 category: "Rocq Consortium"
 ---
 
+# Gold Members 
 
-# Summary
+Curren gold members are: BlueRock, Formal Vincation and Google.
