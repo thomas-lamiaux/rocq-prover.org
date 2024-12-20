@@ -292,20 +292,33 @@ Layout.render
               <h3>
                 <div class="font-bold my-4 text-lg tracking-wide text-secondary dark:text-[#ff540a]">EXTENSIBILITY AND CUSTOMIZABILITY</div>
                 <div class="text-title dark:text-dark-title font-bold">
-                  Metaprogramming and Embedded Domain-Specific Logics and Languages
+                  Elaboration, Metaprogramming and Embedded Domain-Specific Logics and Languages
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                The Rocq prover enables a very wide variety of developments to coexist in the same system, ranging from
-                end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
-                Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
-                the Four-Color and Feith-Thompson theorems, the verified CompCert C compiler and the associated
-                Verified Software Toolchain for proofs of C-like programs, and the Iris program logic, a state of the art
-                framework for the study of modern programming languages like Rust. Rocq is also a great vehicle for
-                teaching logic and computer science: thousands of students have gone through the Software Foundations
-                series developed collaboratively by Rocq users.
-                Rocq's development is entirely open-source and a large and diverse community of users participate in its
-                continued evolution.
+                Developping formal proofs and verified programs often requires extending the core 
+                language with domain-specific notations, proof strategies and application-specific 
+                structures. The Rocq Prover provides many mechanisms to tailor the environment to one's 
+                requirements and structure developments. Rocq comes with a built-in lightweight scoped 
+                notation system, a coercion system and typeclass systems that allow user-defined extension
+                of the elaboration phases. The built-in Ltac2 typed tactic programming language enables 
+                the design of predictable and comfortable automation for proofs at a high-level of 
+                abstraction, with native handling of the proof state and backtracking.
+                This support is essential for developing embedded domain-specific logics and languages, 
+                as exemplified in the very succesful <a href="iris-project.org">Iris</a> project, where 
+                a whole new proof mode was designed and used to reason about effectul programming 
+                languages like <a href="https://www.rust-lang.org">Rust</a> in variants of separation logics.
+              </p>
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                As part of the Rocq Platform, two alternative languages are available.
+                A lower level of abstraction is provided by the MetaRocq project which allows directly 
+                working with the core term syntax and prove meta-theorems on the typing 
+                judgments of Rocq inside Rocq. An alternative high-level language is provided by Rocq-Elpi, 
+                which interfaces Rocq with λ-prolog, a logic programming language allowing to naturally 
+                express proof-search, unification and elaboration problems. Rocq-Elpi is at the core of 
+                Hierarchy-Builder, a metaprogramming tool that allows the effective development of 
+                hierarchies of structures in Rocq in an entirely declarative fashion. It handles in 
+                particular all structures used in the Mathematical Components libraries.
               </p>
             </div>
           </div>
