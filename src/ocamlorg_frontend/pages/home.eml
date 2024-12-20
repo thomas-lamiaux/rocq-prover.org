@@ -214,8 +214,12 @@ Layout.render
               </p>
             </div>
           </div>
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <img src="<%s Ocamlorg_static.Asset.url "img/home/safe-stable.svg" %>" alt="An example OCaml program defining nested lists in OCaml. A terminal output also shows the compiler catching a type error where a pattern-match was not exhaustive.">
+          <div class="lg:flex-1  bg-black/100 lg:mt-0 mt-10 flex justify-center">
+            <div class="grid grid-cols-1">
+              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/type-cumul-const.png" %>" alt=""/></div>
+              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/lemma-red-confluence.png" %>" alt=""/></div>
+              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/subject-reduction-proof.png" %>" alt=""/></div>
+            </div>
           </div>
         </div>
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
