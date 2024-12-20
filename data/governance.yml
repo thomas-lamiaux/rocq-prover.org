@@ -1,489 +1,411 @@
 teams:
-- id: compiler
-  name: Compiler
-  description: The OCaml Compiler team, responsible for the development and maintenance
-    of the language, the standard library, and the compiler tools.
-  contacts:
-  - name: Mailing List
-    link: https://sympa.inria.fr/sympa/subscribe/caml-list
-    kind: email
-  - name: GitHub
-    link: https://github.com/ocaml/ocaml/issues
-    kind: github
-  members:
-  - name: Xavier Leroy
-    github: xavierleroy
-    role: Maintainer
-  - name: Damien Doligez
-    github: damiendoligez
-    role: Maintainer
-  - name: Alain Frisch
-    github: alainfrisch
-    role: Maintainer
-  - name: "Arma\xEBl Gu\xE9neau"
-    github: Armael
-    role: Maintainer
-  - name: David Allsopp
-    github: dra27
-    role: Maintainer
-  - name: Enguerrand
-    github: Engil
-    role: Maintainer
-  - name: Florian Angeletti
-    github: Octachron
-    role: Maintainer
-  - name: "Fr\xE9d\xE9ric Bour"
-    github: let-def
-    role: Maintainer
-  - name: Gabriel Scherer
-    github: gasche
-    role: Maintainer
-  - name: Jacques Garrigue
-    github: garrigue
-    role: Maintainer
-  - name: Jacques-Henri Jourdan
-    github: jhjourdan
-    role: Maintainer
-  - name: Jeremy Yallop
-    github: yallop
-    role: Maintainer
-  - name: KC Sivaramakrishnan
-    github: kayceesrk
-    role: Maintainer
-  - name: Leo White
-    github: lpw25
-    role: Maintainer
-  - name: Luc Maranget
-    github: maranget
-    role: Maintainer
-  - name: Mark Shinwell
-    github: mshinwell
-    role: Maintainer
-  - name: "Nicol\xE1s Ojeda B\xE4r"
-    github: nojb
-    role: Maintainer
-  - name: Pierre Chambart
-    github: chambart
-    role: Maintainer
-  - name: Sadiq Jaffer
-    github: sadiqj
-    role: Maintainer
-  - name: Stephen Dolan
-    github: stedolan
-    role: Maintainer
-  - name: "S\xE9bastien Hinderer"
-    github: shindere
-    role: Maintainer
-  - name: Thomas Refis
-    github: trefis
-    role: Maintainer
-  - name: Vincent Laviron
-    github: lthls
-    role: Maintainer
-  - name: Olivier Nicole
-    github: OlivierNicole
-    role: Maintainer
-- id: platform
-  name: Platform
-  description: The Platform team is responsible for the development and maintenance
-    of the OCaml Platform, the official OCaml developer toolchain.
-  contacts:
-  - name: Mailing List
-    link: https://lists.ocaml.org/listinfo/platform
-    kind: email
-  members:
-  - name: Anil Madhavapeddy
-    github: avsm
-    role: Owner
+- id: governance
+  name: Governance
+  description: The governance is ensured by the project leader, with the help of the
+    coordination team, and by the core team.
+  contacts: []
   subteams:
-  - id: dune-dev
-    name: Dune
-    description: A composable build system for OCaml
+  - id: coordination
+    name: Coordination
+    description: The Coordination team is appointed by the Rocq project leader to help
+      coordinate the activities of the other teams, and the project roadmap.
+    contacts: []
+    # contacts:
+    # - name: Mailing List
+    #   link: https://sympa.inria.fr/sympa/subscribe/caml-list
+    #   kind: email
+    # - name: GitHub
+    #   link: https://github.com/ocaml/ocaml/issues
+    #   kind: github
+    members:
+    - name: Matthieu Sozeau
+      github: mattam82
+      role: Project Leader
+    - name: Yves Bertot
+      github: ybertot
+      role: Member
+    - name: Nicolas Tabareau
+      github: tabareau
+      role: Member
+    - name: Théo Zimmermann
+      github: Zimmi48
+      role: Member
+  - id: core
+    name: Core
+    description: The Core team is composed of long-term contributors to the Rocq project.
+    contacts: []
     dev-meeting:
-      date: Every other Wednesday
-      time: Alternating 9:00 AM CET and 5:00 PM CET (see wiki)
-      link: https://us06web.zoom.us/j/85096877776?pwd=cWNhU1dHQ1ZNSjZuOUZCQ0h2by9Udz09
-      notes: https://github.com/ocaml/dune/wiki
+      date: Every Tuesday
+      time: 4:00 PM CET (see wiki) Open to all
+      calendar: https://github.com/coq/coq/wiki/Coq-Calls
+      link: https://rendez-vous.renater.fr/coq-call
+      notes: https://github.com/coq/coq/wiki/Coq-Calls
+    members:
+    - name: Matthieu Sozeau
+      github: mattam82
+      role: Project Leader
+    - name: Yves Bertot
+      github: ybertot
+      role: Member
+    - name: Emilio Jesús Gallego Arias
+      github: ejgallego
+      role: Member
+    - name: Gaëtan Gilbert
+      github: SkySkimmer
+      role: Member
+    - name: Jason Gross
+      github: JasonGross
+      role: Member
+    - name: Hugo Herbelin
+      github: herbelin
+      role: Member
+    - name: Guillaume Melquiond
+      github: silene
+      role: Member
+    - name: Pierre-Marie Pédrot
+      github: ppedrot
+      role: Member
+    - name: Pierre Roux
+      github: proux01
+      role: Member
+    - name: Nicolas Tabareau
+      github: tabareau
+      role: Member
+    - name: Enrico Tassi
+      github: gares
+      role: Member
+    - name: Théo Zimmermann
+      github: Zimmi48
+      role: Member
+- id: community
+  name: Community
+  description: The Community team is responsible for managing forums, social media, and community events.
+  contacts: []
+  subteams:
+  - id: code-of-conduct
+    name: Code of Conduct Enforcement
+    description: The Code of Conduct Enforcement team is responsible for enforcing the
+      Code of Conduct across all Rocq project spaces.
+    contacts:
+    - name: Code of Conduct Enforcement Team
+      link: mailto:coq-conduct@inria.fr
+      kind: email
+    members:
+    - name: Matthieu Sozeau
+      github: mattam82
+      role: Member
+    - name: Nicolas Tabareau
+      github: tabareau
+      role: Member
+    - name: Théo Zimmermann
+      github: Zimmi48
+      role: Member
+  - id: Discourse
+    name: Discourse administration and moderation
+    description: The Discourse team is responsible for the administration and moderation of the Rocq Discourse forum.
+    contacts: []
+    members:
+    - name: Théo Zimmermann
+      github: Zimmi48
+      role: Admin
+    - name: Yannick Forster
+      github: yforster
+      role: Moderator
+    - name: Yishuai Li
+      github: liyishuai
+      role: Moderator
+    - name: Emilio Jesús Gallego Arias
+      github: ejgallego
+      role: Moderator
+  - id: Zulip
+    name: Zulip administration and moderation
+    description: The Zulip team is responsible for the administration and moderation
+      of the Rocq Zulip chat. Moderators on Zulip are in charge of moving discussions to appropriate streams and topics.
+    contacts: []
+    members:
+    - name: Cyril Cohen
+      github: CyrilCohen
+      role: Admin
+    - name: Théo Zimmermann
+      github: Zimmi48
+      role: Admin
+    - name: Ali Caglayan
+      github: Alizter
+      role: Moderator
+    - name: Emilio Jesús Gallego Arias
+      github: ejgallego
+      role: Moderator
+    - name: Thomas Lamiaux
+      github: thomas-lamiaux
+      role: Moderator
+    - name: Karl Palmskog
+      github: palmskog
+      role: Moderator
+    - name: Michael Soegtrop
+      github: MSoegtropIMC
+      role: Moderator
+  - id: workshops
+    name: Workshops
+    description: The Workshops Steering Committee is responsible for organizing and coordinating the Rocq workshops.
+    contacts: []
+    members:
+    - name: Yves Bertot
+      github: ybertot
+      role: Co-chair
+    - name: Matthieu Sozeau
+      github: mattam82
+      role: Co-chair
+- id: rocq-runtime
+  name: Rocq Runtime
+  description: The Rocq Runtime team is responsible for the development and maintenance of the Rocq kernel and elaboration (rocq-runtime and rocq-equations).
+  contacts:
+  - name: GitHub
+    link: https://github.com/coq/coq
+    kind: github
+  subteams:
+  - id: kernel
+    name: Rocq Kernel and Trusted Code Base
+    description: The kernel-maintainers, universes-maintainers, and vm-native-maintainers teams.
+    contacts: []
+    members:
+    - name: Gaëtan Gilbert
+      github: SkySkimmer
+      role: Maintainer (kernel, universes)
+    - name: Erik Martin-Dorel
+      github: erikmd
+      role: Maintainer (vm-native)
+    - name: Guillaume Melquiond
+      github: silene
+      role: Maintainer (vm-native)
+    - name: Pierre-Marie Pédrot
+      github: ppedrot
+      role: Maintainer (kernel, universes, vm-native)
+    - name: Pierre Roux
+      github: proux01
+      role: Maintainer (vm-native)
+    - name: Matthieu Sozeau
+      github: mattam82
+      role: Maintainer (universes)
+  - id: elaboration
+    name: Rocq Elaboration
+    description: The engine-maintainers, extensible-syntax-maintainers, ltac-maintainers, pretyper-maintainers, tactics-maintainers, typeclasses-maintainers, and vernac-maintainers teams.
+    contacts: []
+    members:
+    - name: Ali Caglayan
+      github: Alizter
+      role: Maintainer (vernac)
+    - name: Emilio Jesús Gallego Arias
+      github: ejgallego
+      role: Maintainer (engine, extensible-syntax, vernac)
+    - name: Gaëtan Gilbert
+      github: SkySkimmer
+      role: Maintainer (engine, ltac, vernac)
+    - name: Hugo Herbelin
+      github: herbelin
+      role: Maintainer (engine, extensible-syntax, ltac, tactics)
+    - name: Pierre-Marie Pédrot
+      github: ppedrot
+      role: Maintainer (engine, ltac, pretyper, tactics, typeclasses)
+    - name: Pierre Roux
+      github: proux01
+      role: Maintainer (extensible-syntax)
+    - name: Matthieu Sozeau
+      github: mattam82
+      role: Maintainer (extensible-syntax, pretyper, tactics, typeclasses, vernac)
+    - name: Enrico Tassi
+      github: gares
+      role: Maintainer (pretyper)
+  - id: ltac2
+    name: Ltac2
+    description: The Ltac2 tactic language team.
+    contacts: []
+    members:
+    - name: Tej Chajed
+      github: tchajed
+      role: Maintainer
+    - name: Gaëtan Gilbert
+      github: SkySkimmer
+      role: Maintainer
+    - name: Jason Gross
+      github: JasonGross
+      role: Maintainer
+    - name: Kenji Maillard
+      github: kyoDralliam
+      role: Maintainer
+    - name: Pierre-Marie Pédrot
+      github: ppedrot
+      role: Maintainer
+    - name: Michael Soegtrop
+      github: MSoegtropIMC
+      role: Maintainer
+  - id: ssreflect
+    name: Ssreflect
+    description: The SSReflect proof language team.
+    contacts: []
+    members:
+    - name: Cyril Cohen
+      github: CyrilCohen
+      role: Maintainer
+    - name: Georges Gonthier
+      github: ggonthier
+      role: Maintainer
+    - name: Enrico Tassi
+      github: gares
+      role: Maintainer
+  - id: equations
+    name: Equations
+    description: The Equations plugin team.
     contacts:
     - name: GitHub
-      link: https://github.com/ocaml/dune
+      link: https://github.com/mattam82/Coq-Equations
       kind: github
     members:
-    - name: Rudi Grinberg
-      github: rgrinberg
+    - name: Matthieu Sozeau
+      github: mattam82
       role: Maintainer
+- id: interfaces
+  name: User Interfaces
+  description: The User Interfaces team is responsible for the development and maintenance of the Rocq document managers and user interfaces.
+  contacts: []
+  subteams:
+  - id: document-managers
+    name: Document Managers and top-level interfaces
+    description: The stm-maintainers and toplevel-maintainers teams.
+    contacts: []
+    members:
+    - name: Emilio Jesús Gallego Arias
+      github: ejgallego
+      role: Maintainer (toplevel)
+    - name: Gaëtan Gilbert
+      github: SkySkimmer
+      role: Maintainer (stm)
+    - name: Enrico Tassi
+      github: gares
+      role: Maintainer (stm, toplevel)
+  - id: vsrocq
+    name: VS Rocq
+    description: The Visual Studio Code Rocq plugin team.
+    contacts:
+    - name: GitHub
+      link: https://github.com/coq/vscoq
+      kind: github
+    members:
+    - name: Enrico Tassi
+      github: gares
+      role: Maintainer
+    - name: Romain Tetley
+      github: rtetley
+      role: Maintainer
+  - id: rocqide
+    name: RocqIDE
+    description: The historical standalone IDE for the Rocq prover.
+    contacts: []
+    members:
     - name: Ali Caglayan
       github: Alizter
       role: Maintainer
-    - name: Nicolás Ojeda Bär
-      github: nojb
-      role: Maintainer
-    - name: Marek Kubica
-      github: Leonidas-from-XIV
-      role: Maintainer
-    - name: Etienne Millon
-      github: emillon
-      role: Maintainer
-    - name: Stephen Sherratt
-      github: gridbugs
-      role: Maintainer
-    - name: Antonio Nuno Monteiro
-      github: anmonteiro
-      role: Maintainer
-    - name: Javier Chávarri
-      github: jchavarri
-      role: Maintainer
-    - name: Andrey Mokhov
-      github: snowleopard
+    - name: Jim Fehrle
+      github: jfehrle
       role: Maintainer
     - name: Emilio Jesús Gallego Arias
       github: ejgallego
       role: Maintainer
-    - name: Françoit Botot
-      github: bobot
+    - name: Hugo Herbelin
+      github: herbelin
       role: Maintainer
-  - id: opam-dev
+    - name: Pierre-Marie Pédrot
+      github: ppedrot
+      role: Maintainer
+    - name: Michael Soegtrop
+      github: MSoegtropIMC
+      role: Maintainer
+- id: extensions
+  name: Extensions
+  description: The official extensions to the Rocq prover.
+  contacts: []
+  subteams:
+  - id: stdlib
+    name: Rocq Standard Library
+    description: The Rocq Corelib and Standard Library team.
+    contacts: []
+    members: []
+- id: distribution
+  name: Packaging and Distribution
+  description: The Packaging and Distribution team is responsible for the packaging and distribution of the Rocq prover.
+  contacts: []
+  subteams:
+  - id: platform
+    name: Rocq Platform
+    description: The Rocq Platform is the official distribution of the Rocq prover and curated packages.
+    contacts:
+    - name: GitHub
+      link: https://github.com/coq/platform
+      kind: github
+    members: []
+  - id: opam
     name: opam
-    description: Opam is a source-based package manager. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow.
-    dev-meeting:
-      date: Every Monday
-      time: 2:00 PM CET
-      link: https://us06web.zoom.us/j/84185730263?pwd=TTYrY2puc0dST0lBMjZ5ZHNTaThoZz09
-      notes: https://github.com/ocaml/opam/wiki#dev-meetings
-    contacts:
-    - name: Mailing List
-      link: https://lists.ocaml.org/listinfo/opam-devel
-      kind: email
-    - name: GitHub
-      link: https://github.com/ocaml/opam
-      kind: github
-    members:
-    - name: Louis Gesbert 
-      github: AltGr
-      role: Maintainer
-    - name: Raja Boujbel
-      github: rjbou
-      role: Maintainer
-    - name: David Allsopp 
-      github: dra27
-      role: Maintainer
-    - name: Kate Deplaix
-      github: kit-ty-kate
-      role: Maintainer
-    - name: Thomas Gazagnaire
-      github: samoht
-      role: Maintainer
-  - id: ocaml-lsp-dev
-    name: OCaml-LSP
-    description: The OCaml Language Server Protocol (LSP) implementation
-    dev-meeting:
-      date: Every Month
-      time: Alternating 9:00 AM CET and 6:00 PM CET
-      link: https://discuss.ocaml.org/search?q=tags%3Adev-meetings%2Beditor
-      notes: https://github.com/ocaml/merlin/wiki/Public-dev%E2%80%90meetings
+    description: The opam team maintains the Rocq opam packages and repository for user-contributed packages.
     contacts:
     - name: GitHub
-      link: https://github.com/ocaml/ocaml-lsp
+      link: https://github.com/coq/opam
       kind: github
-    members:
-    - name: Rudi Grinberg
-      github: rgrinberg
-      role: Maintainer
-    - name: Corentin Leruth
-      github: tatchi
-      role: Maintainer
-    - name: Ulysse
-      github: voodoos
-      role: Maintainer
-    - name: Rafał Gwoździński
-      github: 3Rafal
-      role: Maintainer
-    - name: Xavier Van de Woestyne
-      github: xvw
-      role: Maintainer
-  - id: merlin-dev
-    name: Merlin
-    description: Context sensitive completion for OCaml in Vim and Emacs
-    dev-meeting:
-      date: Every Month
-      time: Alternating 9:00 AM CET and 6:00 PM CET
-      link: https://discuss.ocaml.org/search?q=tags%3Adev-meetings%2Beditor
-      notes: https://github.com/ocaml/merlin/wiki/Public-dev%E2%80%90meetings
-    contacts:
-    - name: Mailing List
-      link: https://lists.ocaml.org/listinfo/merlin
-      kind: email
-    - name: GitHub
-      link: https://github.com/ocaml/merlin
-      kind: github
-    members:
-    - name: Ulysse Gérard
-      github: voodoos
-      role: Maintainer
-    - name: Sonja Heinze
-      github: pitag-ha
-      role: Maintainer
-    - name: "Fr\xE9d\xE9ric Bour"
-      github: let-def
-      role: Maintainer
-    - name: Thomas Refis
-      github: trefis
-      role: Maintainer
-    - name: Xavier Van de Woestyne
-      github: xvw
-      role: Maintainer
-  - id: odoc-dev
-    name: odoc
-    description: Documentation compiler for OCaml and Reason
-    dev-meeting:
-      date: Weekly on Wednesdays
-      time: 14:00 / 2:00 PM CET
-      link: https://www.google.com/url?q=https://us06web.zoom.us/j/7989424717?pwd%3DLzlUdWVTN3dlcWpHYlVTNjJyc01EZz09&sa=D&source=calendar&ust=1719044946737160&usg=AOvVaw1FuCIyvahK1Go_IG-6j9yT
-      notes: https://hackmd.io/WgTSaqlrRoqAlEGLsDcXsA
+    members: []
+  - id: docker
+    name: Docker
+    description: The Docker team maintains the Rocq Docker images.
+    contacts: []
+    members: []
+- id: documentation
+  name: Documentation
+  description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.
+  contacts: []
+  subteams:
+  - id: refman
+    name: Reference Manual
+    description: The Reference Manual team is responsible for the development and maintenance of the Rocq reference manual.
+    contacts: []
+    members: []
+  - id: platform-docs
+    name: Rocq Platform Docs
+    description: A collection of short, action-oriented tutorials and how-to guides for the Rocq prover and its Platform.
     contacts:
     - name: GitHub
-      link: https://github.com/ocaml/odoc
+      link: https://github.com/coq/platform-docs
       kind: github
-    members:
-    - name: Jon Ludlam
-      github: jonludlam
-      role: Maintainer
-    - name: "Daniel B\xFCnzli"
-      github: dbuenzli
-      role: Maintainer
-    - name: Leo White
-      github: lpw25
-      role: Maintainer
-    - name: Thomas Refis
-      github: trefis
-      role: Maintainer
-    - name: Jules Aguillon
-      github: Julow
-      role: Maintainer
-    - name: Paul-Elliot Anglès D'Auriac
-      github: panglesd
-      role: Maintainer
-    - name: Emile Trotignon
-      github: EmileTrotignon
-      role: Maintainer
-    - name: Guillaume Petiot
-      github: gpetiot
-      role: Maintainer
-  - id: ppxlib-dev
-    name: Ppxlib
-    description: Base library and tools for PPX rewriters
+    members: []
+  - id: website
+    name: Website
+    description: The Website team is responsible for the development and maintenance of the rocq-prover.org website.
     contacts:
     - name: GitHub
-      link: https://github.com/ocaml-ppx/ppxlib
+      link: https://github.com/coq/rocq-prover.org
       kind: github
-    dev-meeting:
-      date: Every third Tuesday
-      time: 6:00 PM CET
-      link: https://meet.google.com/bwy-fyqo-dnf
-      calendar: https://calendar.google.com/calendar/u/4?cid=Y19iMDA5ZDA4MDg0YzIwYWMzMDQ4NjJhN2FkZWJiYjdmOTU0NGIxYzEwMmU0MDMyMTAzMDFiY2ZhYjcwMDBmMjNlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
-      notes: https://github.com/ocaml-ppx/ppxlib/wiki
-    members:
-    - name: Sonja Heinze
-      github: pitag-ha
-      role: Maintainer
-    - name: Carl Eastlund
-      github: ceastlund
-      role: Maintainer
-    - name: "Paul-Elliot Angl\xE8s d'Auriac"
-      github: panglesd
-      role: Maintainer
-  - id: utop-dev
-    name: UTop
-    description: Universal toplevel for OCaml
-    contacts:
-    - name: GitHub
-      link: https://github.com/ocaml-community/utop
-      kind: github
-    members:
-    - name: Etienne Millon
-      github: emillon
-      role: Maintainer
-    - name: Rudi Grinberg
-      github: rgrinberg
-      role: Maintainer
-  - id: opam-publish-dev
-    name: opam-publish
-    description: A tool to ease contributions to opam repositories
-    contacts:
-    - name: GitHub
-      link: https://github.com/ocaml-opam/opam-publish
-      kind: github
-    members:
-    - name: Louis Gesbert
-      github: AltGr
-      role: Maintainer
-    - name: Raja Boujbel
-      github: rjbou
-      role: Maintainer
-    - name: Kate
-      github: kit-ty-kate
-      role: Maintainer
-    - name: Thomas Gazagnaire
-      github: samoht
-      role: Maintainer
-  - id: ocamlformat-dev
-    name: OCamlFormat
-    description: Auto-formatter for OCaml code
-    contacts:
-    - name: Mailing List
-      link: https://lists.ocaml.org/listinfo/ocamlformat-dev
-      kind: email
-    - name: GitHub
-      link: https://github.com/ocaml-ppx/ocamlformat
-      kind: github
-    members:
-    - name: Guillaume Petiot
-      github: gpetiot
-      role: Maintainer
-    - name: Jules Aguillon
-      github: Julow
-      role: Maintainer
-    - name: Emile Trotignon
-      github: EmileTrotignon
-      role: Maintainer
-  - id: dune-release-dev
-    name: dune-release
-    description: Streamlining the release of Dune packages to opam
-    contacts:
-    - name: GitHub
-      link: https://github.com/tarides/dune-release
-      kind: github
-    members:
-    - name: Etienne Millon
-      github: emillon
-      role: Maintainer
-    - name: Marek Kubica
-      github: Leonidas-from-XIV
-      role: Maintainer
-    - name: Thomas Gazagnaire
-      github: samoht
-      role: Maintainer
-  - id: mdx-dev
-    name: MDX
-    description: Execute code blocks inside your documentation
-    contacts:
-    - name: GitHub
-      link: https://github.com/realworldocaml/mdx
-      kind: github
-    members:
-    - name: Marek Kubica
-      github: Leonidas-from-XIV
-      role: Maintainer
-    - name: Thomas Gazagnaire
-      github: samoht
-      role: Maintainer
-  - id: ocp-indent-dev
-    name: ocp-indent
-    description: Indentation tool for OCaml to be used with editors like Emacs and Vim.
-    contacts:
-    - name: GitHub
-      link: https://github.com/OCamlPro/ocp-indent
-      kind: github
-    members:
-    - name: Louis Gesbert 
-      github: AltGr
-      role: Maintainer
-  - id: ocamlfind-dev
-    name: OCamlFind
-    description: The OCaml findlib library manager 
-    contacts:
-    - name: GitHub
-      link: https://github.com/ocaml/ocamlfind
-      kind: github
-    members:
-    - name: Gerd Stolpmann
-      github: gerdstolpmann
-      role: Maintainer
-    - name: David Allsopp
-      github: dra27
-      role: Maintainer
-- id: packaging
-  name: Packaging
-  description: The Packaging team is responsible to ensure the quality of the OCaml
-    packages ecosystem, and in particular, to review submissions to the opam repository.
-  contacts:
-  - name: GitHub
-    link: https://github.com/ocaml/opam-repository
-    kind: github
-  members:
-  - name: Anil Madhavapeddy
-    github: avsm
-    role: Maintainer
-  - name: Marcello Seri
-    github: mseri
-    role: Maintainer
-  - name: Raphaël Proust
-    github: raphael-proust
-    role: Maintainer
-  - name: Thomas Gazagnaire
-    github: samoht
-    role: Maintainer
-  - name: Shon Feder
-    github: shonfeder
-    role: Maintainer
+    members: []
 - id: infrastructure
   name: Infrastructure
-  description: The infrastructure team is responsible for the maintenance and evolution of the infrastructure
-    powering the official OCaml projects, including the servers for OCaml.org and
-    the opam-repository CI.
-  contacts:
-  - name: GitHub
-    link: https://github.com/ocaml/infrastructure/issues
-    kind: github
-  members:
-  - name: Anil Madhavapeddy
-    github: avsm
-    role: Owner
-  - name: Mark Elvers
-    github: mtelvers
-    role: Maintainer
-  - name: Thomas Gazagnaire
-    github: samoht
-    role: Maintainer
-  - name: Shon Feder
-    github: shonfeder
-    role: Maintainer
-  - name: Puneeth Chaganti
-    github: punchagan
-    role: Maintainer
-- id: ocamlorg
-  name: OCaml.org
-  description: The OCaml.org team is responsible for the development and maintenance of
-    the official OCaml websites, in particular OCaml.org and its subdomains.
-  contacts:
-  - name: GitHub
-    link: https://github.com/ocaml/ocaml.org
-    kind: github
-  - name: "#ocaml.org on the OCaml Discord"
-    link: https://discord.gg/cCYQbqN
-    kind: discord
-  dev-meeting:
-    date: Weekly on Mondays
-    time: 8:15 AM CET
-    link: https://us06web.zoom.us/j/88375318760?pwd=TUUsVXPFMreM96cnMR3am8oSWj6Yhk.1
-    calendar: https://us06web.zoom.us/meeting/tZwucOyrrzMtHNT2s4W_iVDN-qjfaKEq4ikn/ics
-    notes: https://docs.google.com/document/d/1ricnsicOB35TmuOM86guYr6HWo8A1iyVrHdb0cNxOXg/edit
-  members:
-  - name: Anil Madhavapeddy
-    github: avsm
-    role: Owner
-  - name: Thibaut Mattio
-    github: tmattio
-    role: Maintainer
-  - name: Sabine Schmaltz
-    github: sabine
-    role: Maintainer
-  - name: Cuihtlauac Alvarado
-    github: cuihtlauac
-    role: Maintainer
-  - name: Christine Rose
-    github: christinerose
-    role: Maintainer
+  description: The Infrastructure team is responsible for the development and maintenance of the infrastructure that supports the Rocq project and community.
+  contacts: []
+  subteams:
+  - id: admin
+    name: Administration
+    description: The Administration team is responsible for the administration of the Rocq project organizations on GitHub, GitLab, and other platforms.
+    contacts: []
+    members: []
+  - id: ci
+    name: Continuous Integration
+    description: The Continuous Integration team is responsible for the development and maintenance of the CI infrastructure of the Rocq project.
+    contacts: []
+    members: []
+  - id: bot
+    name: ROCQbot
+    description: The ROCQbot team is responsible for the development and maintenance of the Rocq development bot.
+    contacts: []
+    members: []
+  - id: action
+    name: Docker Opam Action
+    description: The Docker Opam Action helps users to build and test their projects with Rocq using GitHub Actions.
+    contacts: []
+    members: []
 working-groups:
 - id: wg-eio
   name: Eio Working Group

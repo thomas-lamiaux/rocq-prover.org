@@ -54,7 +54,7 @@ and what makes it unique." @@
   <p class="text-lg text-content dark:text-dark-content">See who the maintainers of the various OCaml projects are. We present a comprehensive list structured by project / purpose</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
     <% teams |> List.iter (fun (team : Data.Governance.team) -> %>
-    <%s! render_team_card team "maintainers" %>
+    <%s! render_team_card team "members" %>
     <% );%>
   </div>
 </div>
