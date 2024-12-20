@@ -453,6 +453,7 @@ let academic_institutions req =
        ?resource_type ~pagination_info institutions)
 
 let about _req = Dream.html (Ocamlorg_frontend.about ())
+let why _req = Dream.html (Ocamlorg_frontend.why ())
 
 let books req =
   let language = Dream.query req "language" in
