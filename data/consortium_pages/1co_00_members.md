@@ -1,6 +1,7 @@
 ---
 id: "membership"
-title: "Current members"
+title: "Current members of the Rocq Consortium"
+short_title: "Current members"
 description: Current members
 category: "Rocq Consortium"
 ---
