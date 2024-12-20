@@ -4,7 +4,7 @@ let render_sidebar
 ()
 =
   let render_page_link ~title ~slug =
-    Sidebar.sidebar_link ~title ~href:(Url.tool_page slug) ~current:(current_page = Some slug)
+    Sidebar.sidebar_link ~title ~href:(Url.platform_page slug) ~current:(current_page = Some slug)
   in
   let render_page (page : Data.Tool_page.t) = render_page_link ~title:page.short_title ~slug:page.slug ~tag:None in
   let pages_by_category category =
@@ -26,7 +26,7 @@ let render_sidebar
       <%s! Sidebar.sidebar_link_group category
         (
           (if category = "Rocq Platform" then Sidebar.sidebar_link ~current:(current_page = Some "platform") ~title:"The Rocq Platform" ~href:Url.platform ~tag:None else "")
-          ^ pages_by_category category) %>
+            ^ pages_by_category category) %>
     <% ); %>
   </div>
 
@@ -47,7 +47,7 @@ let render
 ~(pages : Data.Tool_page.t list)
 (tools : Data.Tool.t list)
 =
-Tools_layout.three_column_layout
+Platform_layout.three_column_layout
 ~title:"Rocq Platform"
 ~description:"The Rocq Platform represents the best way for developers, both new and old, to write software in Rocq."
 ~canonical:Url.platform

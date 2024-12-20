@@ -1,7 +1,7 @@
-let render_title (page: Data.Tool_page.t) = 
+let render_title (page: Data.Consortium_page.t) = 
     <h1 id="<%s page.slug %>" ><a class="anchor" aria-hidden="true" href="#<%s page.slug %>"></a><%s page.title %></h1>
 
-let rec toc_to_frontend_toc (toc : Data.Tool_page.toc) =
+let rec toc_to_frontend_toc (toc : Data.Consortium_page.toc) =
   Toc.{
     title = toc.title;
     href = toc.href;
@@ -9,18 +9,18 @@ let rec toc_to_frontend_toc (toc : Data.Tool_page.toc) =
   }
 
 let right_sidebar
-(page : Data.Tool_page.t)
+(page : Data.Consortium_page.t)
 =
   <%s! Toc.render (List.map toc_to_frontend_toc page.toc) %>
 
 let left_sidebar ~pages ~current_page =
   <div class="flex flex-col gap-5">
-    <%s! Platform.render_sidebar ~pages ~current_page () %>
+    <%s! Consortium.render_sidebar ~pages ~current_page () %>
   </div>
 
 let render
 commit_hash
-(page : Data.Tool_page.t)
+(page : Data.Consortium_page.t)
 ~pages
 ~canonical
 =

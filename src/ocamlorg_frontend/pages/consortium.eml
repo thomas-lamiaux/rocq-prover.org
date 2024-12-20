@@ -1,0 +1,58 @@
+let render_sidebar
+~pages
+?current_page
+()
+=
+  let render_page_link ~title ~slug =
+    Sidebar.sidebar_link ~title ~href:(Url.consortium_page slug) ~current:(current_page = Some slug)
+  in
+  let render_page (page : Data.Consortium_page.t) = render_page_link ~title:page.short_title ~slug:page.slug ~tag:None in
+  let pages_by_category category =
+    pages |> List.filter (fun (x : Data.Consortium_page.t) -> x.category = category) |> List.map render_page |> String.concat "\n"
+  in
+  let categories =
+    let unique lst =
+      let rec unique' acc = function
+        | [] -> List.rev acc
+        | h::t -> unique' (if List.mem h acc then acc else h :: acc) t
+      in
+      unique' [] lst
+    in
+    pages |> List.map (fun (page : Data.Consortium_page.t) -> page.category) |> unique
+  in
+
+  <div class="flex flex-col gap-5">
+    <% categories |> List.iter (fun category -> %>
+      <%s! Sidebar.sidebar_link_group category
+        (
+          (if category = "Consortium" then Sidebar.sidebar_link ~current:(current_page = Some "consortium") ~title:"The Rocq Consortium" ~href:Url.consortium ~tag:None else "")
+            ^ pages_by_category category) %>
+    <% ); %>
+  </div>
+
+let render
+~(pages : Data.Consortium_page.t list)
+=
+Consortium_layout.three_column_layout
+~title:"Rocq Consortium"
+~description:"The Rocq Consortium."
+~canonical:Url.consortium
+~left_sidebar_html:(Some((render_sidebar ~pages ~current_page:"consortium") ()))
+~right_sidebar_html:None
+~current:Overview
+@@
+  <div class="prose prose-orange max-w-none dark:prose-invert">
+    <h1>The Rocq Consortium</h1>
+    <p>
+    The Rocq Consortium is a distribution of the Rocq prover together with a selection of
+    libraries and plugins. The main goal of the Rocq Consortium is to provide a
+    distribution for developing and teaching with Rocq that is:
+    </p>
+    <ul>
+      <li> operating system independent </li>
+      <li> dependable </li>
+      <li> easy to install </li>
+      <li> comprehensive </li>
+    </ul>
+  </div>
+

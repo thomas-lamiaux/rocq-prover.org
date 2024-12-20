@@ -27,6 +27,7 @@ let term_templates =
     ("resource", Resource.template);
     ("success_story", Success_story.template);
     ("tool", Tool.template);
+    ("consortium_page", Consortium_page.template);
     ("tool_page", Tool_page.template);
     ("tutorial", Tutorial.template);
     ("video", Video.template);

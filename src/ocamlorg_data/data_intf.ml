@@ -555,6 +555,27 @@ module Tool_page = struct
   [@@deriving show]
 end
 
+module Consortium_page = struct
+  type toc = { title : string; href : string; children : toc list }
+  [@@deriving of_yaml, show]
+
+  type contribute_link = { url : string; description : string }
+  [@@deriving of_yaml, show]
+
+  type t = {
+    title : string;
+    short_title : string;
+    fpath : string;
+    slug : string;
+    description : string;
+    category : string;
+    body_md : string;
+    toc : toc list;
+    body_html : string;
+  }
+  [@@deriving show]
+end
+
 module Tutorial = struct
   module Section = struct
     type t = GetStarted | Language | Platform | Guides [@@deriving show]

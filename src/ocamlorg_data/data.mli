@@ -183,6 +183,13 @@ module Tool : sig
   val get_by_slug : string -> t option
 end
 
+module Consortium_page : sig
+  include module type of Consortium_page
+
+  val all : t list
+  val get_by_slug : string -> t option
+end
+
 module Tool_page : sig
   include module type of Tool_page
 

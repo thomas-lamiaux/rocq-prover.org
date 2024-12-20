@@ -14,6 +14,7 @@ let urls =
     Url.changelog;
     Url.code_of_conduct;
     Url.community;
+    Url.consortium;
     Url.events;
     Url.exercises;
     Url.getting_started;
@@ -49,7 +50,8 @@ let urlables =
       Urlable (News.all, fun r -> to_url @@ Url.news_post r.slug);
       Urlable (Release.all, fun r -> to_url @@ Url.release r.version);
       Urlable (Success_story.all, fun r -> to_url @@ Url.success_story r.slug);
-      Urlable (Tool_page.all, fun r -> to_url @@ Url.tool_page r.slug);
+      Urlable (Tool_page.all, fun r -> to_url @@ Url.platform_page r.slug);
+      Urlable (Tool_page.all, fun r -> to_url @@ Url.consortium_page r.slug);
       Urlable (Tutorial.all, fun r -> to_url @@ Url.tutorial r.slug);
       Urlable (Conference.all, fun r -> to_url @@ Url.conference r.slug);
     ]

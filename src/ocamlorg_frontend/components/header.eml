@@ -1,28 +1,31 @@
 type nav_item =
   | Learn
-  | Tools
+  | Platform
   | Packages
   | Community
+  | Consortium
   | News
   | Playground
 
 let string_of_nav_item = function
   | Learn -> "Learn"
-  | Tools -> "Platform"
+  | Platform -> "Platform"
   | Packages -> "Packages"
   | Community -> "Community"
+  | Consortium -> "Consortium"
   | News -> "News"
   | Playground -> "Play"
 
 let url_of_nav_item = function
   | Learn -> Url.learn
-  | Tools -> Url.tools
+  | Platform -> Url.platform
   | Packages -> Url.packages
   | Community -> Url.community
+  | Consortium -> Url.consortium
   | News -> Url.changelog
   | Playground -> Url.playground
 
-let nav_items = [ Learn; Tools; Packages; Community; News; Playground ]
+let nav_items = [ Learn; Platform; Packages; Community; Consortium; News; Playground ]
 
 let menu_link
 ~(active: bool)

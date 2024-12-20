@@ -64,9 +64,6 @@ let from_v2 =
     ("/community/planet/syndication.html", Url.rocq_planet);
     ("/community/support.fr.html", Url.community);
     ("/community/support.html", Url.community);
-    ("/consortium/index.fr.html", Url.index);
-    ("/consortium/index.html", Url.index);
-    ("/consortium", Url.index);
     ("/contributors.fr.html", Url.index);
     ("/contributors.html", Url.index);
     ("/docs/cheat_sheets.html", Url.learn);
@@ -324,9 +321,9 @@ let from_v2 =
     ("/releases/caml-light/releases/0.75.html", Url.index);
     ("/releases/index.fr.html", Url.releases);
     ("/docs/platform", Url.platform);
-    ("/docs/platform-principles", Url.tool_page "platform-principles");
-    ("/docs/platform-users", Url.tool_page "platform-users");
-    ("/docs/platform-roadmap", Url.tool_page "platform-roadmap");
+    ("/docs/platform-principles", Url.platform_page "platform-principles");
+    ("/docs/platform-users", Url.platform_page "platform-users");
+    ("/docs/platform-roadmap", Url.platform_page "platform-roadmap");
   ]
 
 let make ?(permanent = false) t =

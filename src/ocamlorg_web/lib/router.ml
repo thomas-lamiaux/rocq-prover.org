@@ -36,6 +36,8 @@ let page_routes t =
         (Url.cookbook_recipe ~task_slug:":task_slug" ":slug")
         Handler.cookbook_recipe;
       Dream.get Url.community Handler.community;
+      Dream.get Url.consortium Handler.consortium;
+      Dream.get (Url.consortium_page ":id") (Handler.consortium_page Commit.hash);
       Dream.get Url.events Handler.events;
       Dream.get Url.changelog Handler.changelog;
       Dream.get (Url.changelog_entry ":id") Handler.changelog_entry;
@@ -64,9 +66,8 @@ let page_routes t =
       Dream.get Url.governance_policy Handler.governance_policy;
       Dream.get Url.papers Handler.papers;
       Dream.get Url.exercises Handler.exercises;
-      Dream.get Url.tools Handler.tools;
-      Dream.get Url.platform Handler.tools_platform;
-      Dream.get (Url.tool_page ":id") (Handler.tool_page Commit.hash);
+      Dream.get Url.platform Handler.platform;
+      Dream.get (Url.platform_page ":id") (Handler.platform_page Commit.hash);
       Dream.get (Url.tutorial "is-ocaml-web-yet") (Handler.is_ocaml_yet t "web");
       Dream.get (Url.tutorial "is-ocaml-gui-yet") (Handler.is_ocaml_yet t "gui");
       Dream.get Url.tutorial_search Handler.learn_documents_search;

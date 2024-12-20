@@ -691,19 +691,29 @@ let papers req =
 let resources _req =
   Dream.html (Ocamlorg_frontend.resources ~resources:Data.Resource.all)
 
-let tools req = Dream.redirect req ~code:307 Url.platform
-
-let tools_platform _req =
+let platform _req =
   let tools = Data.Tool.all in
-  Dream.html (Ocamlorg_frontend.tools_platform ~pages:Data.Tool_page.all tools)
+  Dream.html (Ocamlorg_frontend.platform ~pages:Data.Tool_page.all tools)
 
-let tool_page commit_hash req =
+let platform_page commit_hash req =
   let slug = Dream.param req "id" in
   let</>? page = Data.Tool_page.get_by_slug slug in
   let pages = Data.Tool_page.all in
   Dream.html
-    (Ocamlorg_frontend.tool_page commit_hash ~pages
-       ~canonical:(Url.tool_page page.slug) page)
+    (Ocamlorg_frontend.platform_page commit_hash ~pages
+       ~canonical:(Url.platform_page page.slug) page)
+
+let consortium _req =
+  Dream.html (Ocamlorg_frontend.consortium ~pages:Data.Consortium_page.all)
+
+let consortium_page commit_hash req =
+  let slug = Dream.param req "id" in
+  let</>? page = Data.Consortium_page.get_by_slug slug in
+  let pages = Data.Consortium_page.all in
+  Dream.html
+    (Ocamlorg_frontend.consortium_page commit_hash ~pages
+       ~canonical:(Url.consortium_page page.slug) page)
+
 
 let tutorial commit_hash req =
   let slug = Dream.param req "id" in

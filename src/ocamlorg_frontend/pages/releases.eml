@@ -1,5 +1,5 @@
 let render ?(search = "") (releases : Data.Release.t list) =
-Tools_layout.single_column_layout
+Platform_layout.single_column_layout
 ~title:"Rocq Releases"
 ~description:"The history of Rocq and Rocq Platform releases with a summary and a complete changelog, as well as the manual at that time."
 ~canonical:Url.releases

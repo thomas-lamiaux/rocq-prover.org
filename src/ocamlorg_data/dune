@@ -318,6 +318,18 @@
     (run %{ood_gen} tool_page)))))
 
 (rule
+ (target consortium_page.ml)
+ (deps
+  (source_tree %{workspace_root}/data/consortium_pages)
+  (:ood_gen %{workspace_root}/tool/ood-gen/bin/gen.exe))
+ (action
+  (chdir
+   %{workspace_root}
+   (with-stdout-to
+    %{target}
+    (run %{ood_gen} tool_page)))))
+
+(rule
  (target video.ml)
  (deps
   %{workspace_root}/data/video-watch.yml
