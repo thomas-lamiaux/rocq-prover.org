@@ -1,7 +1,7 @@
 let render ~(pagination_info : Pagination.t) (news : Data.News.t list) =
 News_layout.single_column_layout
-~title:"News from the OCaml teams"
-~description:"Read the latest news, releases, and updates from the OCaml compiler and platform developers."
+~title:"News from the Rocq teams"
+~description:"Read the latest news, releases, and updates from the Rocq Prover and Platform developers."
 ~canonical:(Url.news ^ if pagination_info.page_number = 1 then "" else "?p=" ^ string_of_int pagination_info.page_number)
 ~current:Newsletters @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple py-12">
@@ -17,7 +17,7 @@ News_layout.single_column_layout
       </a>
     </div>
 
-    <p class="text-lg text-content dark:text-dark-content mt-6">The latest news from the OCaml teams.</p>
+    <p class="text-lg text-content dark:text-dark-content mt-6">The latest news from the Rocq teams.</p>
   </div>
 </div>
 <div class="bg-background dark:bg-dark-background py-10">
