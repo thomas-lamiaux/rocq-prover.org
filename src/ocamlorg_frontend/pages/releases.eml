@@ -1,6 +1,12 @@
+let base_of_kind r =
+  let open Data.Release in
+  match r.kind with
+  | `Compiler | `Coq | `Rocq -> Url.ocaml_org
+  | `CoqPlatform | `RocqPlatform -> Url.rocq_org
+
 let render ?(search = "") (releases : Data.Release.t list) =
 Platform_layout.single_column_layout
-~title:"Rocq Releases"
+~title:"Rocq and Rocq Platform Releases"
 ~description:"The history of Rocq and Rocq Platform releases with a summary and a complete changelog, as well as the manual at that time."
 ~canonical:Url.releases
 ~current:Releases @@
@@ -52,7 +58,7 @@ Platform_layout.single_column_layout
                     <div class="flex flex-col lg:flex-row">
                         <div class="py-4 px-6 font-semibold text-title dark:text-dark-title lg:w-2/3 w-full">
                             <div class="font-semibold">
-                                <%s release.version %>
+                                <%s Data_intf.Release.name_of_kind release.kind %> <%s release.version %>
                             </div>
                             <div class="prose dark:prose-invert prose-orange font-normal">
                                 <%s! release.highlights_html %>
@@ -66,7 +72,7 @@ Platform_layout.single_column_layout
                                 <a href="<%s Url.release release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Release Notes
                                 </a>
-                                <a href="<%s Url.rocq_org ^ Url.Package.overview (Data.Release.string_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
+                                <a href="<%s (base_of_kind release) ^ Url.Package.overview (Data.Release.string_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Opam Package
                                 </a>
                                 <a href="<%s Url.manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">

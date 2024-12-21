@@ -440,12 +440,14 @@ module Paper = struct
 end
 
 module Release = struct
-  type kind = [ `Compiler | `Coq | `Rocq ] [@@deriving show]
+  type kind = [ `Compiler | `Coq | `Rocq | `CoqPlatform | `RocqPlatform ] [@@deriving show]
 
   let kind_of_string = function
     | "compiler" -> Ok `Compiler
     | "coq" -> Ok `Coq
     | "rocq" -> Ok `Rocq
+    | "coq-platform" -> Ok `CoqPlatform
+    | "rocq-platform" -> Ok `RocqPlatform
     | s -> Error (`Msg ("Unknown release type: " ^ s))
 
   let kind_of_yaml = function
@@ -456,11 +458,15 @@ module Release = struct
   | `Compiler -> "ocaml"
   | `Coq -> "coq"
   | `Rocq -> "rocq"
+  | `CoqPlatform -> "coq-platform"
+  | `RocqPlatform -> "rocq-platform"
 
   let name_of_kind = function
   | `Compiler -> "OCaml"
   | `Coq -> "Coq"
   | `Rocq -> "Rocq"
+  | `CoqPlatform -> "Coq Platform"
+  | `RocqPlatform -> "Rocq Platform"
 
   type t = {
     kind : kind;
@@ -476,6 +482,7 @@ module Release = struct
     body_html : string;
   }
   [@@deriving show]
+
 end
 
 module Resource = struct

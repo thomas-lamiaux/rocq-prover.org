@@ -3,6 +3,9 @@ let install = "/install"
 let packages = "/packages"
 let packages_search = "/packages/search"
 let packages_autocomplete_fragment = "/packages/autocomplete"
+
+let ocaml_org = "https://ocaml.org"
+
 let rocq_org = "https://rocq-prover.org"
 
 module Package : sig
