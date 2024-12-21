@@ -320,7 +320,7 @@ let success_story req =
   let</>? success_story = Data.Success_story.get_by_slug slug in
   Dream.html (Ocamlorg_frontend.success_story success_story)
 
-let industrial_users _req =
+(* let industrial_users _req =
   let sort_by_priority_desc lst =
     List.sort
       (fun (a : Data.Success_story.t) (b : Data.Success_story.t) ->
@@ -342,7 +342,9 @@ let industrial_users _req =
 
   Dream.html
     (Ocamlorg_frontend.industrial_users ~users ~success_stories ~top_story
-       ~testimonials ~jobs_with_count)
+       ~testimonials ~jobs_with_count) *)
+let industrial_users _req = 
+  Dream.html (Ocamlorg_frontend.industrial_users ())
 
 let industrial_businesses _req =
   let businesses = Data.Industrial_user.all in

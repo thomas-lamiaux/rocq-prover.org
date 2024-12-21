@@ -53,7 +53,26 @@ let job_card (job: Data.Job.t) =
     </div>
   </a>
   
-let render ~(users : Data.Industrial_user.t list) ~success_stories ~(top_story: Data.Success_story.t) ~(testimonials: Data.Testimonial.t list) ~jobs_with_count =
+let render () =
+Layout.render
+~use_swiper:true
+~title:"OCaml in Industry"
+~description:"With its strong safety guarantees, several \
+companies rely on Rocq to verify software or build certified tools. 
+On this page, you can get an overview of the companies in \
+the community and learn more about how they use Rocq."
+~canonical:Url.industrial_users @@
+  <div class="w-full border-b bg-[#DDEAFC] dark:bg-[#101B3F] md:bg-transparent dark:border-none md:bg-[length:100%_100%] ">
+    <div class="container-fluid py-4 md:py-8 md:flex md:gap-20">
+      <div class="w-full py-4 md:py-16 bg-[length:50%] bg-right bg-no-repeat">
+        <div class="flex flex-col md:flex-grow">
+          <div>In Construction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+let old_render ~(users : Data.Industrial_user.t list) ~success_stories ~(top_story: Data.Success_story.t) ~(testimonials: Data.Testimonial.t list) ~jobs_with_count =
 Layout.render
 ~use_swiper:true
 ~title:"OCaml in Industry"
@@ -326,3 +345,5 @@ the community and learn more about how they use OCaml."
       };
   }
 </script>
+
+
