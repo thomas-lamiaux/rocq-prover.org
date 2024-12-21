@@ -17,8 +17,11 @@ COPY --chown=opam:opam . .
 RUN opam exec -- dune build @install --profile=release
 
 # Launch project in order to generate the package state cache
+RUN git clone https://github.com/coq/opam.git rocq-opam-repository
+
 RUN cd opam-repository && git checkout master && git pull origin master && opam update
-ENV OCAMLORG_REPO_PATH opam-repository
+
+ENV OCAMLORG_REPO_PATH rocq-opam-repository
 ENV OCAMLORG_PKG_STATE_PATH package.state
 RUN touch package.state && ./init-cache package.state
 
@@ -29,7 +32,7 @@ RUN apk update && apk add --update libev gmp git
 RUN chmod -R 755 /var
 
 COPY --from=build /home/opam/package.state /var/package.state
-COPY --from=build /home/opam/opam-repository /var/opam-repository
+COPY --from=build /home/opam/rocq-opam-repository /var/opam-repository
 COPY --from=build /home/opam/_build/default/src/ocamlorg_web/bin/main.exe /bin/server
 
 COPY playground/asset playground/asset
