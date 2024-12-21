@@ -90,6 +90,11 @@ Layout.render
             </li>
           </ul>
         </div>
+
+        <h2 id="features">Future</h2>
+        <div class="space-y-10">
+          See our <a href="/roadmap">roadmap</a> for upcoming developments improving the Rocq Prover and Platform.
+        </div>
       </div>
     </div>
   </div>
