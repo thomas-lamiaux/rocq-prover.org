@@ -32,7 +32,7 @@ teams:
       role: Member
   - id: core
     name: Core
-    description: The Core team is composed of long-term contributors to the Rocq project.
+    description: The Core team is composed of long-term, significant contributors to the Rocq project.
     contacts: []
     dev-meeting:
       date: Every Tuesday

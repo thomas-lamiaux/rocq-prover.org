@@ -10,15 +10,6 @@ Layout.render
       <div class="flex items-center justify-center space-x-8 mt-11 lg:space-x-24">
         <div>
           <a
-            class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 rounded-lg h-28 w-28 inline-block transition-colors"
-            href="#strength"
-          >
-            <%s! Icons.lightning "h-10 w-10 mb-4 m-auto mt-6" %>
-            <div class="font-semibold text-lg text-content dark:text-dark-content">Strengths</div>
-          </a>
-        </div>
-        <div>
-          <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
             href="#history"
           >
@@ -44,17 +35,17 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
-        <h2 id="strength">What is the Rocq Prover?</h2>
+        <h2 id="strength">What is The Rocq Prover?</h2>
         <div class="space-y-10">
 
 
           <P> 
-            The Rocq prover implements a program specification and mathematical higher-level language called Gallina that is based on an expressive 
+            The Rocq Prover implements a high-level program specification and mathematical language called Gallina that is based on an expressive 
             formal language called the Polymorphic, Cumulative Calculus of Inductive Constructions that itself combines both a higher-order logic and a 
             richly-typed functional programming language. Through a vernacular language of commands, Rocq allows:
           </p>
           <ul>
-            <li> to define functions or predicates, that can be evaluated efficiently;</li>
+            <li> to define data structures, functions or predicates, that can be evaluated efficiently;</li>
             <li> to state mathematical theorems and software specifications;</li>
             <li> to interactively develop formal proofs of these theorems;</li>
             <li> to machine-check these proofs by a relatively small certification "kernel";</li>

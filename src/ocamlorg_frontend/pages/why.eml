@@ -35,35 +35,15 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
-        <h2 id="strengths">Why Rocq?</h2>
+        <h2 id="strengths">Strengths</h2>
         <div class="space-y-10">
-
-
-          <P> 
-            The Rocq prover implements a program specification and mathematical higher-level language called Gallina that is based on an expressive 
-            formal language called the Calculus of Inductive Constructions that itself combines both a higher-order logic and a 
-            richly-typed functional programming language. Through a vernacular language of commands, Rocq allows:
+          <p> 
+            The Rocq Prover follows from over 40 years of research in Dependent Type Theory and Interactive Theorem Proving.
+            ...
           </p>
-          <ul>
-            <li> to define functions or predicates, that can be evaluated efficiently;</li>
-            <li> to state mathematical theorems and software specifications;</li>
-            <li> to interactively develop formal proofs of these theorems;</li>
-            <li> to machine-check these proofs by a relatively small certification "kernel";</li>
-            <li> to extract certified programs to languages like OCaml, Haskell or Scheme.</li>
-          </ul>
-
-          <p>
-            As a proof development system, the Rocq prover provides interactive proof methods, decision and semi-decision algorithms, 
-            and a tactic language for letting the user define its own proof methods. 
-            Connection with external computer algebra system or theorem provers is available.
-          </p>
-
-          <p>
-            As a platform for the formalization of mathematics or the development of programs, 
-            the Rocq prover provides support for high-level notations, implicit contents and various other useful kind of language mechanisms for 
-            formalization at scale.
-          </p>          
-          <h2 id="features">Features</h2>
+        </div>
+        <h2 id="features">Features</h2>
+        <div class="space-y-10">
           <ul>
             <li>
               <strong>Certified Type Theory and Extraction:</strong>
@@ -83,22 +63,29 @@ Layout.render
               <strong>Efficient Definitional Equality Checkers:</strong>
             </li>
             <li>
-              <strong>Metaprogramming support</strong>
+              <strong>Metaprogramming Languages</strong>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">                
                 The built-in Ltac2 typed tactic programming language enables 
                 the design of predictable and comfortable automation for proofs at a high-level of 
                 abstraction, with native handling of the proof state and backtracking.
               </p>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                As part of the Rocq Platform, two alternative languages are available.
-                A lower level of abstraction is provided by the MetaRocq project which allows directly 
-                working with the core term syntax and prove meta-theorems on the typing 
-                judgments of Rocq inside Rocq. An alternative high-level language is provided by Rocq-Elpi, 
-                which interfaces Rocq with λ-prolog, a logic programming language allowing to naturally 
-                express proof-search, unification and elaboration problems. Rocq-Elpi is at the core of 
-                Hierarchy-Builder, a metaprogramming tool that allows the effective development of 
-                hierarchies of structures in Rocq in an entirely declarative fashion. It handles in 
-                particular all structures used in the Mathematical Components libraries.
+                As part of the Rocq Platform, two alternative languages are available:
+                <ul>
+                  <li>
+                    A low level of abstraction is provided by the MetaRocq project which uses Rocq itself 
+                    as the metaprogramming language. It allows directly working with the core term syntax 
+                    and prove meta-theorems on the typing judgments of Rocq inside Rocq.
+                  </li>
+                  <li>
+                    An alternative high-level language is provided by Rocq-Elpi, 
+                    which interfaces Rocq with λ-prolog, a logic programming language allowing to naturally 
+                    express proof-search, unification and elaboration problems. Rocq-Elpi is at the core of 
+                    Hierarchy-Builder, a metaprogramming tool that allows the effective development of 
+                    hierarchies of structures in Rocq in an entirely declarative fashion. It handles in 
+                    particular all structures used in the Mathematical Components libraries.
+                  </li>
+                </ul>
               </p>
             </li>
           </ul>
