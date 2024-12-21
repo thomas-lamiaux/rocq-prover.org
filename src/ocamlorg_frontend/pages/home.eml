@@ -146,16 +146,22 @@ Layout.render
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
-        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock"/>
-        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock"/>
+        <a href="https://bluerock.io">
+          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock"/>
+          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock"/>
+        </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
-        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
-        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
+        <a href="https://formalv.com">
+          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
+          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
+        </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://google.com">
         <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/google.svg" %>" alt="Google"/>
         <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/google.svg" %>" alt="Google"/>
+        </a>
       </div>
     </div>
   </div>
