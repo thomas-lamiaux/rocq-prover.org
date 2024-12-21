@@ -4,7 +4,7 @@ let render
 ~(pagination_info : Pagination.t)
 (documents : Data.Tutorial.search_document list) =
 Learn_layout.single_column_layout
-~title:"OCaml Tutorial Documents Search"
+~title:"Rocq Tutorial Documents Search"
 ~description:""
 ~canonical:Url.tutorial_search
 ~current:Guides @@
@@ -15,7 +15,7 @@ Learn_layout.single_column_layout
           <form action="<%s Url.tutorial_search %>" method="GET">
               <%s! Forms.search_input
                   ~name:"q"
-                  ~label:"Search inside the OCaml documentation"
+                  ~label:"Search inside the Rocq documentation"
                   ~input_attrs:("value=\"" ^ Dream.html_escape search ^ "\"")
                   ~button_attrs:{|type="submit"|}
                   "mb-4" %>

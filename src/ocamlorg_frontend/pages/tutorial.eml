@@ -78,7 +78,7 @@ let render_external_tutorial_banner (opt_external_tutorial : Data.Tutorial.exter
     </a>
 in
 Learn_layout.three_column_layout
-~title:(Printf.sprintf "%s · OCaml Documentation" tutorial.short_title)
+~title:(Printf.sprintf "%s · Rocq Documentation" tutorial.short_title)
 ~description:tutorial.description
 ~canonical
 ~left_sidebar_html:(Some(left_sidebar ~current_tutorial:(Some tutorial.slug) ~tutorials ~section:(of_tutorial_section tutorial.section)))

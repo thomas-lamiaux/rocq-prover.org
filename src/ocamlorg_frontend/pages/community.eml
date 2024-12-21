@@ -46,11 +46,12 @@ Community_layout.single_column_layout
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Discussion</p>
         <%s! social_list_item ~text:("Meet developers and users for discussions, technical questions, collaborative projects and news - ") ~href:("https://coq.zulipchat.com") ~left_icon:(Icons.zulip "w-10 h-10") ~title:("Zulip") "" %>
         <%s! social_list_item ~text:("Discuss with the community, ask questions and share your work on Rocq - ") ~href:("https://coq.discourse.group/") ~left_icon:(Icons.discourse "w-10 h-10") ~title:("Discourse") "" %>
+        <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://proofassistants.stackexchange.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Proof Assistants Stack Exchange") "" %>
       </ul>
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Development</p>
         <%s! social_list_item ~text:("Submit bug reports and feature requests for the Rocq Prover - ") ~href:("https://github.com/rocq") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
-        <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://stackoverflow.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stackoverflow") "" %>
+        <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://stackoverflow.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stack Overflow") "" %>        
       </ul>
       <!-- 
       <ul>
@@ -77,7 +78,7 @@ Community_layout.single_column_layout
         <!-- <%s! social_list_item ~text:("Rocq on Bluesky - ") ~href:("https://bsky.app/profile/ocaml.org") ~left_icon:(Icons.bluesky "w-10 h-10") ~title:("Bluesky") "" %> -->
         <%s! social_list_item ~extra_html:({|
           <p class='text-content dark:text-dark-content'> Both the <a class='text-primary dark:text-dark-primary hover:underline' href='https://types.pl/'>types.pl</a>
-          and <a class='text-primary dark:text-dark-primary hover:underline' href='https://discuss.systems/'>discuss.systems</a> Mastodon homeservers enjoy popularity
+          and <a class='text-primary dark:text-dark-primary hover:underline' href='https://discuss.systems/'>discuss.systems</a> Mastodon servers are home to Rocq-related discussions.
           </p>|}
           ) ~left_icon:(Icons.mastodon "h-8 mr-0") ~title:("Mastodon") "" %>   
       </ul>

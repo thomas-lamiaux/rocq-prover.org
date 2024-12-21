@@ -381,7 +381,7 @@ Layout.render
         <div class="mb-4">
           <a href="<%s Url.release item.version %>">
             <h3 class="font-bold mb-6 text-title dark:text-dark-title hover:underline">
-              <%s item.version %> <span class="text-sm">(<%s item.date %>)</span>
+              <%s Data.Release.name_of_kind item.kind %> <%s item.version %> <span class="text-sm">(<%s item.date %>)</span>
             </h3>
           </a>
           <div class="prose dark:prose-invert prose-sm"><%s! item.highlights_html %></div>

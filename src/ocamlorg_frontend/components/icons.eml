@@ -624,3 +624,5 @@ let quote_icon class_ =
   </clipPath>
   </defs>
   </svg>
+
+let wiki class_ = github class_

@@ -210,6 +210,12 @@ let contribute_footer ~href ~description ~recommended_next_tutorials =
           >
         </div>
         <div class="mb-2 text-sm">
+          <a href="<%s Url.wiki %>"  class="flex items-center gap-2 font-normal sm:text-lg no-underline bg-transparent cursor-pointer hover:underline">
+            <%s! Icons.wiki "h-5 w-5" %>
+            Search the Rocq Wiki</a
+          >
+        </div>
+        <div class="mb-2 text-sm">
           <a href="https://github.com/rocq/rocq-prover.org/issues/new" class="flex items-center gap-3 font-normal sm:text-lg no-underline bg-transparent cursor-pointer hover:underline">
             <%s! Icons.github_issue "h-4 w-4" %>
             Open an Issue</a
