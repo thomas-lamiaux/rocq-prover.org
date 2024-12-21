@@ -399,7 +399,7 @@ Layout.render
         <a href="<%s Url.changelog %>">
           <div class="text-primary dark:text-dark-primary text-sm mb-4 uppercase">Releases & Updates</div>
           <h3 class="font-bold mb-6 text-title dark:text-dark-title">
-            Compiler and Platform Tools
+            Rocq and Rocq Platform
           </h3>
         </a>
         <% let changelogs_length = List.length changelogs in changelogs |> 

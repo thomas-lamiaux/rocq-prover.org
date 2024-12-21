@@ -82,8 +82,8 @@ let all () =
 module ChangelogFeed = struct
   let create_entry (log : t) =
     let content = Syndic.Atom.Html (None, log.body_html) in
-    let id = Uri.of_string ("https://ocaml.org/changelog/" ^ log.slug) in
-    let authors = (Syndic.Atom.author "Ocaml.org", []) in
+    let id = Uri.of_string ("https://rocq-prover.org/changelog/" ^ log.slug) in
+    let authors = (Syndic.Atom.author "rocq-prover.org", []) in
     let updated = Syndic.Date.of_rfc3339 (log.date ^ "T00:00:00-00:00") in
     Syndic.Atom.entry ~content ~id ~authors ~title:(Syndic.Atom.Text log.title)
       ~updated
@@ -94,7 +94,7 @@ module ChangelogFeed = struct
     let open Rss in
     () |> all
     |> create_entries ~create_entry ~days:365
-    |> entries_to_feed ~id:"changelog.xml" ~title:"OCaml Changelog"
+    |> entries_to_feed ~id:"changelog.xml" ~title:"Rocq Changelog"
     |> feed_to_string
 end
 
