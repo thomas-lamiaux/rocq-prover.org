@@ -52,14 +52,25 @@ let all () =
   Utils.map_md_files decode "releases/*.md"
   |> List.sort sort_by_decreasing_version
 
+let is_coq_or_rocq (r : t) = r.kind == `Coq || r.kind == `Rocq
+let is_coq_or_rocq_platform (r : t) = r.kind == `CoqPlatform || r.kind == `RocqPlatform
+
 let template () =
   let all = all () in
   let latest =
-    try List.find (fun (r : t) -> r.is_latest) all
+    try List.find (fun (r : t) -> is_coq_or_rocq r && r.is_latest) all
     with Not_found ->
       raise
         (Invalid_argument
-           "none of the releases in data/releases is marked with is_latest: \
+           "none of the Coq/Rocq releases in data/releases is marked with is_latest: \
+            true")
+  in
+  let latest_platform =
+    try List.find (fun (r : t) -> is_coq_or_rocq_platform r && r.is_latest) all
+    with Not_found ->
+      raise
+        (Invalid_argument
+           "none of the Coq/Rocq Platform releases in data/releases is marked with is_latest: \
             true")
   in
   let lts =
@@ -74,7 +85,8 @@ let template () =
 include Data_intf.Release
 let all = %a
 let latest = %a
+let latest_platform = %a
 let lts = %a
 |}
     (Fmt.brackets (Fmt.list pp ~sep:Fmt.semi))
-    all pp latest pp lts
+    all pp latest pp latest_platform pp lts

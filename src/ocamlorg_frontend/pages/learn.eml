@@ -1,6 +1,7 @@
 let render
 ~(papers : Data.Paper.t list)
 ~(latest_version : string)
+~(latest_platform_version : string)
 =
 Learn_layout.single_column_layout
 ~title:"Learn Rocq"
@@ -13,7 +14,7 @@ Learn_layout.single_column_layout
         <h1 class="text-title dark:text-dark-title tracking-wider">Explore the Rocq Documentation</h1>
 
         <div class="text-content dark:text-dark-content my-6 max-w-md">
-          You can explore the Rocq documentation, Platform Tools, guides, exercises, and books to enhance your knowledge.
+          You can explore the Rocq & Rocq Platform packages documentation, guides, exercises, and books to enhance your knowledge.
         </div>
         <form action="<%s Url.tutorial_search %>" method="GET" class="max-w-[32rem]">
           <%s! Hero_section.search_input
@@ -25,7 +26,9 @@ Learn_layout.single_column_layout
       </div>
 
       <div class="flex flex-col gap-4 md:gap-6 md:w-80">
-        <%s!  Hero_section.hero_button ~left_icon:(Icons.rocq "w-5 h-5") ~right_icon:(Icons.download "w-5 h-5") ~text:("Install Rocq " ^ latest_version) ~href:(Url.install) "" %>
+        <%s!  Hero_section.hero_button ~left_icon:(Icons.rocq "w-5 h-5") ~right_icon:(Icons.download "w-5 h-5") ~text:("Install Rocq " ^ latest_version) ~href:(Url.installing_rocq) "" %>
+        <%s!  Hero_section.hero_button ~left_icon:(Icons.rocq "w-5 h-5") ~right_icon:(Icons.download "w-5 h-5") ~text:("Install Rocq Platform " ^ latest_platform_version) 
+          ~href:(Url.install) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Standard Library") ~href:(Url.stdlib) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Reference Manual") ~href:(Url.manual) "" %>
       </div>
