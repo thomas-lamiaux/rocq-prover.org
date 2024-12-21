@@ -52,9 +52,11 @@ doc: ## Generate odoc documentation
 fmt: ## Format the codebase with ocamlformat
 	opam exec -- dune build --root . --auto-promote @fmt
 
+DOC_PATH=`pwd`/../doc/
+	
 .PHONY: watch
 watch: ## Watch for the filesystem and rebuild on every change
-	opam exec -- dune build @run -w --force --no-buffer
+	DOC_PATH=${DOC_PATH} opam exec -- dune build @run -w --force --no-buffer
 
 .PHONY: utop
 utop: ## Run a REPL and link with the project's libraries
