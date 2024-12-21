@@ -468,6 +468,14 @@ module Release = struct
   | `CoqPlatform -> "Coq Platform"
   | `RocqPlatform -> "Rocq Platform"
 
+  let id x = x
+  let github_of_kind = function 
+  | `Compiler -> "https://github.com/ocaml/ocaml", id
+  | `Coq -> "https://github.com/coq/coq", (fun x -> "V" ^ x)
+  | `Rocq -> "https://github.com/rocq-prover/rocq-prover", id
+  | `CoqPlatform -> "https://github.com/coq/platform", id
+  | `RocqPlatform -> "https://github.com/rocq-prover/platform", id
+
   type t = {
     kind : kind;
     version : string;
@@ -482,6 +490,11 @@ module Release = struct
     body_html : string;
   }
   [@@deriving show]
+
+  let github_release release =
+    let url, v = github_of_kind release.kind in
+    url ^ "/releases/tag/" ^ v release.version
+
 
 end
 

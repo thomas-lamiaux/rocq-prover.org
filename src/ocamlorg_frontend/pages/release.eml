@@ -17,6 +17,10 @@ Layout.render
                 <div class="prose dark:prose-invert prose-orange lg:prose-lg mx-auto max-w-5xl">
                     <%s! release.intro_html %>
                 </div>
+                <div class="font-bold pb-6">
+                    <a href="<%s! Data.Release.github_release release %>">
+                    <%s! Icons.github "h-5 w-5 inline-block" %>Github release</a>                        
+                </div>
             </div>
         </div>
     </div>
