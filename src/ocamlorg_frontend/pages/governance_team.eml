@@ -42,14 +42,14 @@ let render_subteam (team : Data.Governance.team) =
     <h3 class="gradient font-semibold text-3xl mb-4 text-title dark:text-dark-title"><%s team.name %></h3>
     <p class="text-content dark:text-dark-content my-4"><%s team.description %></p>
     <% (if List.length team.contacts > 0 then %>
-      <div class="flex gap-x-8">
+      <span class="flex gap-x-8">
       <% team.contacts |> List.iter (fun (contact : Data.Governance.contact) -> %>
         <a class="btn gap-1" href="<%s contact.link %>" target="_blank">
           <%s! contact_icon contact.kind "w-6 h-6" %>
           <%s contact.name %>
         </a>
         <% ); %>
-      </div>
+      </span>
       <% ); %>
     <% (match team.dev_meeting with | None -> () | Some dev_meeting -> %>
     <div class="py-4 mt-6">
