@@ -430,10 +430,14 @@ module Paper = struct
     title : string;
     slug : string;
     container_title: string option;
+    collection_title: string option;
     publication : string option;
     authors : string list;
+    author : string list;
+    editors : string list;
     abstract : string;
     tags : string list;
+    keyword : string option;
     year : int option;
     links : link list;
     doi: string option;
@@ -442,6 +446,7 @@ module Paper = struct
     issue : int option;
     volume : int option;
     issued : int option;
+    publisher: string option;
     page: string option;
     type_: string option;
   }
@@ -463,6 +468,7 @@ module Paper = struct
   [@@deriving show]
 
   let record_to_t r = 
+    let authors = r.Record.authors @ r.Record.author in
     let publication = 
       let pub =
         match r.Record.publication with
@@ -491,12 +497,13 @@ module Paper = struct
         { description = "DOI"; uri = "https://dx.doi.org/" ^ doi} :: r.Record.links
       | None -> r.Record.links
     in
+    let tags = r.Record.tags @ (Option.fold ~none:[] ~some:(String.split_on_char ',') r.Record.keyword) in
     { title = r.Record.title;
       slug = r.Record.slug;
       publication;
-      authors = r.Record.authors;
+      authors;
       abstract = r.Record.abstract;
-      tags = r.Record.tags;
+      tags;
       year;
       links;
       featured = r.Record.featured;

@@ -222,4 +222,37 @@ papers:
       The notion of type encompasses the usual notion of date type, but allows as well 
       arbitrarily complex algorithmic specifications. We develop the basic theory of a 
       calculus of constructions, and prove a strong normalization theorem showing that all
-      computations terminate. Finally, we suggest various extensions to stronger calculi. 
+      computations terminate. Finally, we suggest various extensions to stronger calculi.
+  - abstract: Type Classes have met a large success in Haskell and
+      Isabelle, as a solution for sharing notations by overloading and for
+      specifying with abstract structures by quantification on contexts.
+      However, both systems are limited by second-class implementations of
+      these constructs, and these limitations are only overcomed by ad-hoc
+      extensions to the respective systems. We propose an embedding of
+      type classes into a dependent type theory that is first-class and
+      supports some of the most popular extensions right away. The
+      implementation is correspondingly cheap, general and very well
+      integrated inside the system, as we have experimented in Coq. We
+      show how it can be used to help structured programming and proving
+      by way of examples.
+    author:
+    - family: Sozeau
+      given: Matthieu
+    - family: Oury
+      given: Nicolas
+    collection-title: LNCS
+    container-title: TPHOLs
+    doi: 10.1007/978-3-540-71067-7_23
+    editor:
+    - family: Otmane Ait Mohamed
+      given: César Muñoz
+    - family: Tahar
+      given: Sofiène
+    id: sozeau.Coq/classes/fctc
+    issued: 2008
+    keyword: Type classes
+    page: 278-293
+    publisher: Springer
+    title: First-Class Type Classes
+    type: paper-conference
+    volume: 5170

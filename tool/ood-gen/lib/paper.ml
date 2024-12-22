@@ -22,18 +22,23 @@ let parse_authors yaml =
 type metadata = {
   title : string;
   publication : string option [@default None];
-  authors : string list [@of_yaml parse_authors];
+  authors : string list [@default []] [@of_yaml parse_authors];
+  author : string list [@default []] [@of_yaml parse_authors];
+  editors : string list [@default []] [@of_yaml parse_authors] [@key "editor"];
   abstract : string [@default ""];
   tags : string list [@default []];
+  keyword : string option [@default None];
   year : int option [@default None];
   links : link list [@default []];
   featured : bool [@default false];
   container_title : string option [@default None] [@key "container-title"];
+  collection_title : string option [@default None] [@key "collection-title"];
   doi: string option [@default None];
   id: string option [@default None];
   issue: int option [@default None];
   volume : int option [@default None];
   issued: int option [@default None];
+  publisher : string option [@default None];
   page: string option [@default None];
   type_: string option [@default None] [@key "type"];
 }
