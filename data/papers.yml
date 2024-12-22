@@ -256,3 +256,27 @@ papers:
     title: First-Class Type Classes
     type: paper-conference
     volume: 5170
+
+  - author:
+    - family: Poiret
+      given: Josselin
+    - family: Gilbert
+      given: Gaëtan
+    - family: Maillard
+      given: Kenji
+    - family: Pédrot
+      given: Pierre-Marie
+    - family: Sozeau
+      given: Matthieu
+    - family: Tabareau
+      given: Nicolas
+    - given: Éric
+      family: Tanter
+    container-title: POPL'25
+    id: allyourbase
+    issued: 2025
+    note: To appear
+    title: "All Your Base are Belong to Us: Sort Polymorphism for Proof
+      Assistants"
+    type: article-journal
+    url: "https://nantes-universite.hal.science/hal-04801739"

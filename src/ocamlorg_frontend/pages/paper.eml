@@ -32,7 +32,8 @@ Layout.render
       <div class="w-full m-auto">
         <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s! paper.title %></h1>
         <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title inline-block">
-          <div class="text-primary"><%s! print_authors paper.authors %>, <%s paper.publication %> &mdash; <%i paper.year %></div>
+          <div class="text-primary"><%s! print_authors paper.authors %>, <%s paper.publication %> &mdash; <%i paper.year %>
+          <div class="italic"><%s! Option.fold ~none:"" ~some:(fun s -> s) paper.note %></div></div>
         </div>
         <div class="py-4 px-6 align-top">
           <h4 class="font-bold">Links</h4>

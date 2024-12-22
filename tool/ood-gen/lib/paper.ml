@@ -34,6 +34,7 @@ type metadata = {
   container_title : string option [@default None] [@key "container-title"];
   collection_title : string option [@default None] [@key "collection-title"];
   doi: string option [@default None];
+  url: string option [@default None];
   id: string option [@default None];
   issue: int option [@default None];
   volume : int option [@default None];
@@ -41,6 +42,7 @@ type metadata = {
   publisher : string option [@default None];
   page: string option [@default None];
   type_: string option [@default None] [@key "type"];
+  note : string option [@default None];
 }
 [@@deriving of_yaml ~skip_unknown, stable_record ~version:Record.t ~add:[ slug ]]
 

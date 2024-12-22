@@ -441,6 +441,7 @@ module Paper = struct
     year : int option;
     links : link list;
     doi: string option;
+    url: string option;
     id : string option;
     featured : bool;
     issue : int option;
@@ -449,6 +450,7 @@ module Paper = struct
     publisher: string option;
     page: string option;
     type_: string option;
+    note: string option;
   }
   [@@deriving show]
   end
@@ -464,6 +466,7 @@ module Paper = struct
     links : link list;
     featured : bool;
     type_: string;
+    note : string option;
   }
   [@@deriving show]
 
@@ -497,9 +500,16 @@ module Paper = struct
         { description = "DOI"; uri = "https://dx.doi.org/" ^ doi} :: r.Record.links
       | None -> r.Record.links
     in
+    let links = 
+      match r.Record.url with
+      | Some url -> 
+        { description = "URL"; uri = url } :: links
+      | None -> links
+    in
     let tags = r.Record.tags @ (Option.fold ~none:[] ~some:(String.split_on_char ',') r.Record.keyword) in
     { title = r.Record.title;
       slug = r.Record.slug;
+      note = r.Record.note;
       publication;
       authors;
       abstract = r.Record.abstract;
