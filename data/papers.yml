@@ -210,3 +210,16 @@ papers:
     featured: no
     tags:
       - Foundations
+    abstract: >
+      The calculus of constructions is a higher-order formalism for constructive proofs in natural deduction style. Every proof is a A-expression, typed
+      with propositions of the underlying logic. By removing types we get a pure
+      λ-expression, expressing its associated algorithm. Computing this
+      λ-expression corresponds roughly to cut-elimination. It is our thesis that
+      (as already advocated by Martin-Löf) the Curry-Howard correspondence between 
+      propositions and types is a powerful paradigm for computer science. In the 
+      case of constructions, we obtain the notion of a very highlevel functional 
+      programming language, with complex polymorphism wellsuited for module specification. 
+      The notion of type encompasses the usual notion of date type, but allows as well 
+      arbitrarily complex algorithmic specifications. We develop the basic theory of a 
+      calculus of constructions, and prove a strong normalization theorem showing that all
+      computations terminate. Finally, we suggest various extensions to stronger calculi. 

@@ -1,6 +1,28 @@
+let list_sep_last l =
+  let rec aux acc l =
+    match l with
+    | [] -> raise (Invalid_argument "empty list")
+    | [x] -> List.rev acc, x
+    | x :: xs -> aux (x :: acc) xs
+  in aux [] l
+
+let no_authors =
+  <%s "No authors" %>
+
+let one_author author =
+  <div class="text-primary"><%s author %></div>
+
+let print_authors l = 
+match l with
+| [] -> no_authors
+| [author] -> one_author author
+| authors -> 
+let authors, last = list_sep_last authors in
+  <%s! String.concat ", " authors ^ " and " ^ last %>
+
 let render (paper : Data.Paper.t) =
 Layout.render
-~title:paper.title
+~title:("Rocq Papers: " ^ paper.title)
 ~description:"Information about an article."
 ~canonical:(Url.paper paper.slug)
 ~active_top_nav_item:Header.Learn @@
@@ -8,17 +30,9 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="w-full m-auto">
-        <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s paper.title %></h1>
-        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
-          <h4 class="font-bold">Authors</h2>
-          <ul>
-            <% paper.authors |> List.iter (fun (author) -> %>
-            <li><%s author %></li>
-                <% ); %>
-          </ul>
-        </div>
-        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
-          <%s paper.publication %> &mdash; <%i paper.year %>
+        <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s! paper.title %></h1>
+        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title inline-block">
+          <div class="text-primary"><%s! print_authors paper.authors %>, <%s paper.publication %> &mdash; <%i paper.year %></div>
         </div>
         <div class="py-4 px-6 align-top">
           <h4 class="font-bold">Links</h4>
@@ -30,6 +44,10 @@ Layout.render
               <% ); %>
           </ul>
         </div>
+        <h2 class="font-bold pt-6">Abstract</h4>
+        <div class="text-content dark:text-dark-content text-xl pt-6 lg:max-w-[80%]">
+          <%s paper.abstract %>
+        </div>
         <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
           <div class="flex flex-wrap">
             <% paper.tags |> List.iter (fun (tag : string) -> %>
@@ -39,9 +57,6 @@ Layout.render
                 </div>
                 <% ); %>
           </div>
-        </div>
-        <div class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">
-          <%s paper.abstract %>
         </div>
       </div>
     </div>

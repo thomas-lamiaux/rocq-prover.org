@@ -43,7 +43,7 @@ Layout.render
             formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
             and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
             and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
-            The Calculus of Constructions [<a href="/papers/the-calculus-of-constructions">1984</a>], due to Thierry Coquand and Gérard Huet,
+            The Calculus of Constructions [<a href="/papers/the-calculus-of-constructions">1988</a>], due to Thierry Coquand and Gérard Huet,
             is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
             with a infinite, predicative and cumulative hierarchy of universes Type@{i} for computational types
             and two impredicative propositional universes, Prop and SProp for proof-irrelevant and definitionally proof-irrelevant 
@@ -73,10 +73,10 @@ Layout.render
               <strong>Universes, Typical Ambiguity, and Implicit Cumulativity</strong>
               The Gallina surface language of the Rocq Prover supports the notion of typical ambiguity for universes,
               going back to the seminal work of Alfred North Whitehead and Bertrand Russell in Principia Mathematica (1910-1913),
-              which allows implicit handling of the relation between universes. An anonymous <pre>Type</pre> occurrence 
+              which allows implicit handling of the relation between universes. An anonymous <verb>Type</verb> occurrence 
               represents a <emph>floating</emph> universe variable that can get constrained depending on its use in 
-              the rest of the code. The predicative universe hierarchy <pre>Type@{i}</pre> is cumulative, hence uses of 
-              universes can results in inclusion constraints, showing that e.g. <pre>Type@{i} <= Type@{j}</pre>.
+              the rest of the code. The predicative universe hierarchy <verb>Type@{i}</verb> is cumulative, hence uses of 
+              universes can results in inclusion constraints, showing that e.g. <verb>Type@{i} <= Type@{j}</verb>.
               The Rocq Prover handles this graph of universes and constraints incrementaly and checks that the 
               universe graph is acyclic at all times, ensuring consistency of the definitions. The user can hence write formal 
               developments without ever needing to annotate universes, letting the Rocq elaboration engine take care of it.
