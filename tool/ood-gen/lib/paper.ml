@@ -1,18 +1,46 @@
 open Data_intf.Paper
 
+type author_entry = 
+  { family : string; given : string }
+[@@deriving of_yaml ]
+let inline_author { family; given } =
+  given ^ " " ^ family
+type author_entries = author_entry list
+[@@deriving of_yaml]
+
+type author_inline_list = string list
+[@@deriving of_yaml]
+
+let parse_authors yaml =
+  match author_inline_list_of_yaml yaml with
+  | Error _ ->
+    (match author_entries_of_yaml yaml with
+    | Error e -> Error e
+    | Ok l -> Ok (List.map inline_author l))
+  | Ok l -> Ok l
+
 type metadata = {
   title : string;
-  publication : string;
-  authors : string list;
-  abstract : string;
-  tags : string list;
-  year : int;
-  links : link list;
-  featured : bool;
+  publication : string option [@default None];
+  authors : string list [@of_yaml parse_authors];
+  abstract : string [@default ""];
+  tags : string list [@default []];
+  year : int option [@default None];
+  links : link list [@default []];
+  featured : bool [@default false];
+  container_title : string option [@default None] [@key "container-title"];
+  doi: string option [@default None];
+  id: string option [@default None];
+  issue: int option [@default None];
+  volume : int option [@default None];
+  issued: int option [@default None];
+  page: string option [@default None];
+  type_: string option [@default None] [@key "type"];
 }
-[@@deriving of_yaml, stable_record ~version:t ~add:[ slug ]]
+[@@deriving of_yaml ~skip_unknown, stable_record ~version:Record.t ~add:[ slug ]]
 
-let of_metadata m = metadata_to_t m ~slug:(Utils.slugify m.title)
+let of_metadata m = record_to_t (metadata_to_Record_t m ~slug:(Utils.slugify m.title))
+
 let decode s = Result.map of_metadata (metadata_of_yaml s)
 
 let all () =

@@ -43,7 +43,8 @@ Layout.render
             formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
             and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
             and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
-            It is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
+            The Calculus of Constructions [<a href="/papers/the-calculus-of-constructions">1984</a>], due to Thierry Coquand and Gérard Huet,
+            is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
             with a infinite, predicative and cumulative hierarchy of universes Type@{i} for computational types
             and two impredicative propositional universes, Prop and SProp for proof-irrelevant and definitionally proof-irrelevant 
             propositions. Based on this distinction between computations and proofs, PCUIC supports a well-behaved notion of erasure
@@ -61,7 +62,8 @@ Layout.render
             <li>
               <strong>(Co-)Inductive Type Families, mutual and nested:</strong>
               PCUIC is an evolution of the Calculus of Inductive Constructions introduced by 
-              Thierry Coquand and <a href="/papers/paulinTLCA93">Christine Paulin-Mohring</a>
+              Thierry Coquand and Christine Paulin-Mohring in [<a href="/papers/inductively-defined-types">1988</a>, 
+              <a href="/papers/inductive-definitions-in-the-system-coq---rules-and-properties">1993</a>]
               as an extension of the Calculus of Constructions with schemes for inductive types and families.
               Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
               like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.

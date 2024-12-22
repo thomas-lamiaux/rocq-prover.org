@@ -178,4 +178,35 @@ papers:
       - description: "DOI"
         uri: https://doi.org/10.1007/BFb0037116
     featured: no
-  
+  - title: "Inductively Defined Types"
+    publication: International Conference on Computer Logic
+    year: 1988
+    page: 50-66
+    authors:
+      - Thierry Coquand
+      - Christine Paulin-Mohring
+    tags:
+      - Inductive types
+    links:
+      - description: "DOI"
+        uri: https://doi.org/10.5555/646125.758641
+      - description: "Springer"
+        uri: https://link.springer.com/content/pdf/10.1007/3-540-52335-9_47.pdf
+    featured: no
+  - authors:
+      - family: Coquand
+        given: Thierry
+      - family: Huet
+        given: Gérard
+    container-title: Information and Computation
+    doi: 10.1016/0890-5401(88)90005-3
+    id: COQUAND88
+    issue: 2
+    issued: 1988
+    page: 95-120
+    title: The Calculus of Constructions
+    type: article-journal
+    volume: 76
+    featured: no
+    tags:
+      - Foundations

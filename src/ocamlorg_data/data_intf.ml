@@ -425,6 +425,29 @@ end
 module Paper = struct
   type link = { description : string; uri : string } [@@deriving of_yaml, show]
 
+  module Record = struct
+  type t = {
+    title : string;
+    slug : string;
+    container_title: string option;
+    publication : string option;
+    authors : string list;
+    abstract : string;
+    tags : string list;
+    year : int option;
+    links : link list;
+    doi: string option;
+    id : string option;
+    featured : bool;
+    issue : int option;
+    volume : int option;
+    issued : int option;
+    page: string option;
+    type_: string option;
+  }
+  [@@deriving show]
+  end
+
   type t = {
     title : string;
     slug : string;
@@ -435,8 +458,51 @@ module Paper = struct
     year : int;
     links : link list;
     featured : bool;
+    type_: string;
   }
   [@@deriving show]
+
+  let record_to_t r = 
+    let publication = 
+      let pub =
+        match r.Record.publication with
+        | Some pub -> pub
+        | None -> 
+          match r.Record.container_title with
+          | None -> raise (Invalid_argument "Yaml record does not contain any of the publication or container_title fields" )
+          | Some pub -> pub
+      in 
+      pub
+      ^ Option.fold ~none:"" ~some:(fun p -> ", Issue " ^ string_of_int p) r.Record.issue
+      ^ Option.fold ~none:"" ~some:(fun p -> ", Volume " ^ string_of_int p) r.Record.volume
+      ^ Option.fold ~none:"" ~some:(fun p -> ": " ^ p) r.Record.page
+    in
+    let year = 
+      match r.Record.year with
+      | Some i -> i 
+      | None -> 
+        match r.Record.issued with
+        | None -> raise (Invalid_argument "Yaml record does not contain any of the year or issued fields" )
+        | Some i -> i        
+    in
+    let links = 
+      match r.Record.doi with
+      | Some doi -> 
+        { description = "DOI"; uri = "https://dx.doi.org/" ^ doi} :: r.Record.links
+      | None -> r.Record.links
+    in
+    { title = r.Record.title;
+      slug = r.Record.slug;
+      publication;
+      authors = r.Record.authors;
+      abstract = r.Record.abstract;
+      tags = r.Record.tags;
+      year;
+      links;
+      featured = r.Record.featured;
+      type_ = Option.value r.Record.type_ ~default:"article"
+    }
+
 end
 
 module Release = struct

@@ -6,27 +6,29 @@ Layout.render
 ~active_top_nav_item:Header.Learn @@
 <div class="bg-background dark:bg-dark-background">
   <div class="py-10 lg:py-28">
-
     <div class="container-fluid">
       <div class="w-full m-auto">
         <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s paper.title %></h1>
         <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
-          <%s paper.publication %> &mdash; <%i paper.year %>
-        </div>
-        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
-          <h3 class="font-bold">Authors</h2>
+          <h4 class="font-bold">Authors</h2>
           <ul>
             <% paper.authors |> List.iter (fun (author) -> %>
             <li><%s author %></li>
                 <% ); %>
           </ul>
         </div>
+        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
+          <%s paper.publication %> &mdash; <%i paper.year %>
+        </div>
         <div class="py-4 px-6 align-top">
+          <h4 class="font-bold">Links</h4>
+          <ul>
           <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
-              <a href="<%s link.uri %>" class="text-primary dark:text-dark-white dark:underline hover:text-underline dark:hover:text-dark-primary font-medium block whitespace-nowrap">
+              <li><a href="<%s link.uri %>" class="text-primary dark:text-dark-white dark:underline hover:text-underline dark:hover:text-dark-primary font-medium block whitespace-nowrap">
                   <%s link.description %>
-              </a>
+              </a></li>
               <% ); %>
+          </ul>
         </div>
         <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
           <div class="flex flex-wrap">
