@@ -10,7 +10,7 @@ Layout.render
             <h1 class="font-bold text-title dark:text-dark-title mb-2"">Papers</h1>
             <p class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">
                 With its strong academic roots, Rocq is known to be a spearhead in the development of 
-                Dependently-Typed Programming and Interactive Theorem Provers.
+                Dependent Type Theory and Interactive Theorem Provers.
                 This page contains a selection of papers that have influenced Rocq, its libraries and other 
                 interactive theorem provers and dependently-typed programming languages.
             </p>

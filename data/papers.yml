@@ -1,4 +1,53 @@
 papers:
+  - title: "The Coq Proof Assistant Version 8.20.0"
+    publication: Zenodo
+    abstract: >
+      Coq version 8.20 adds a new rewrite rule mechanism along with a few new features, a host of improvements to the virtual machine, the notation system, Ltac2 and the standard library.
+    authors: 
+      - Yves Bertot
+      - Frédéric Besson
+      - Ana Borges
+      - Ali Caglayan 
+      - Tej Chajed
+      - Cyril Cohen
+      - Pierre Corbineau
+      - Pierre Courtieu
+      - Andres Erbsen
+      - Jim Fehrle
+      - Julien Forest
+      - Emilio Jesús Gallego Arias
+      - Gaëtan Gilbert
+      - Georges Gonthier
+      - Benjamin Grégoire
+      - Jason Gross
+      - Hugo Herbelin
+      - Vincent Laporte
+      - Olivier Laurent
+      - Assia Mahboubi
+      - Kenji Maillard
+      - Erik Martin-Dorel
+      - Guillaume Melquiond
+      - Pierre-Marie Pédrot
+      - Clément Pit-Claudel
+      - Pierre Roux
+      - Kazuhiko Sakaguchi
+      - Vincent Semeria
+      - Michael Soegtrop
+      - Matthieu Sozeau
+      - Arnaud Spiwack
+      - Nicolas Tabareau
+      - Enrico Tassi
+      - Laurent Théry
+      - Anton Trunov
+      - Xia Li-yao
+      - Théo Zimmermann
+    year: 2024
+    tags:
+      - Release
+    links:
+      - description: "Zenodo"
+        uri: "https://zenodo.org/records/14542673"
+    featured: true
   - title: "Verified Extraction from Coq to OCaml"
     publication: Programming Language Design and Implementation (PLDI)
     abstract: >
