@@ -1,0 +1,47 @@
+let render (paper : Data.Paper.t) =
+Layout.render
+~title:paper.title
+~description:"Information about an article."
+~canonical:(Url.paper paper.slug)
+~active_top_nav_item:Header.Learn @@
+<div class="bg-background dark:bg-dark-background">
+  <div class="py-10 lg:py-28">
+
+    <div class="container-fluid">
+      <div class="w-full m-auto">
+        <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s paper.title %></h1>
+        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
+          <%s paper.publication %> &mdash; <%i paper.year %>
+        </div>
+        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
+          <h3 class="font-bold">Authors</h2>
+          <ul>
+            <% paper.authors |> List.iter (fun (author) -> %>
+            <li><%s author %></li>
+                <% ); %>
+          </ul>
+        </div>
+        <div class="py-4 px-6 align-top">
+          <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
+              <a href="<%s link.uri %>" class="text-primary dark:text-dark-white dark:underline hover:text-underline dark:hover:text-dark-primary font-medium block whitespace-nowrap">
+                  <%s link.description %>
+              </a>
+              <% ); %>
+        </div>
+        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
+          <div class="flex flex-wrap">
+            <% paper.tags |> List.iter (fun (tag : string) -> %>
+                <div
+                    class="tag">
+                    <%s tag %>
+                </div>
+                <% ); %>
+          </div>
+        </div>
+        <div class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">
+          <%s paper.abstract %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

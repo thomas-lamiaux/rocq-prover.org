@@ -693,6 +693,11 @@ let papers req =
   let recommended_papers = Data.Paper.featured in
   Dream.html (Ocamlorg_frontend.papers ?search ~recommended_papers papers)
 
+let paper req =
+  let slug = Dream.param req "id" in
+  let</>? paper = Data.Paper.get_by_slug slug in
+  Dream.html (Ocamlorg_frontend.paper paper)
+
 let resources _req =
   Dream.html (Ocamlorg_frontend.resources ~resources:Data.Resource.all)
 

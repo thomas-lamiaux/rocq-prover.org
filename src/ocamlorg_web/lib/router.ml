@@ -66,6 +66,7 @@ let page_routes t =
       Dream.get (Url.governance_team ":id") Handler.governance_team;
       Dream.get Url.governance_policy Handler.governance_policy;
       Dream.get Url.papers Handler.papers;
+      Dream.get (Url.paper ":id") Handler.paper;
       Dream.get Url.exercises Handler.exercises;
       Dream.get Url.platform Handler.platform;
       Dream.get (Url.platform_page ":id") (Handler.platform_page Commit.hash);

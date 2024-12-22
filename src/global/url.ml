@@ -89,6 +89,8 @@ let governance_policy = "/policies/governance"
 let code_of_conduct = "/policies/code-of-conduct"
 let playground = "https://x80.org/rhino-down/"
 let papers = "/papers"
+
+let paper id = "/papers/" ^ id
 let learn = "/docs"
 let learn_get_started = "/docs/get-started"
 let learn_docs = "/docs/docs"

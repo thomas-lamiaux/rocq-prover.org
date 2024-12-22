@@ -35,6 +35,7 @@ let packages_search = Packages_search.render
 let package_versions = Package_versions.render
 let page = Page.render
 let papers = Papers.render
+let paper = Paper.render
 let playground = Playground.render
 let exercises = Exercises.render
 let release = Release.render

@@ -39,28 +39,62 @@ Layout.render
         <div class="space-y-10">
           <p> 
             The Rocq Prover follows from over 40 years of research in Dependent Type Theory and Interactive Theorem Proving.
-            ...
+            It is based on the Predicative, Polymorphic and Cumulative Calculus of Inductive Constructions (PCUIC), a dependently-typed 
+            formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
+            and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
+            and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
+            It is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
+            with a infinite, predicative and cumulative hierarchy of universes Type@{i} for computational types
+            and two impredicative propositional universes, Prop and SProp for proof-irrelevant and definitionally proof-irrelevant 
+            propositions. Based on this distinction between computations and proofs, PCUIC supports a well-behaved notion of erasure
+            used by its extraction mechanisms, allowing to produce efficient programs in standard programming languages from formal 
+            developments. While being based on constructive mathematical foundations, PCUIC also accomodates using classical axioms 
+            in its propositional universes without affecting its good theoretical properties. PCUIC supports sort and universe polymorphism
+            allowing to write generic definitions depending on universes. Beyond this, the system supports a notion of primitive types 
+            including 63-bit integers, IEEE-754 floats, persistent arrays and strings for efficient computation with primitive values.
+            The following section details these features in more details.
           </p>
         </div>
         <h2 id="features">Features</h2>
         <div class="space-y-10">
           <ul>
             <li>
-              <strong>Certified Type Theory and Extraction:</strong>
-              The Rocq prover is based on the formal verification of its type theory implementation and extraction system, 
-              minimizing the trusted code base and increasing user confidence in results.
+              <strong>(Co-)Inductive Type Families, mutual and nested:</strong>
+              PCUIC is an evolution of the Calculus of Inductive Constructions introduced by 
+              Thierry Coquand and <a href="/papers/paulinTLCA93">Christine Paulin-Mohring</a>
+              as an extension of the Calculus of Constructions with schemes for inductive types and families.
+              Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
+              like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.
+              The inductive 
+            </li>
+            <li>
+              <strong>Universes, Typical Ambiguity, and Implicit Cumulativity</strong>
+              The Gallina surface language of the Rocq Prover supports the notion of typical ambiguity for universes,
+              going back to the seminal work of Alfred North Whitehead and Bertrand Russell in Principia Mathematica (1910-1913),
+              which allows implicit handling of the relation between universes. An anonymous <pre>Type</pre> occurrence 
+              represents a <emph>floating</emph> universe variable that can get constrained depending on its use in 
+              the rest of the code. The predicative universe hierarchy <pre>Type@{i}</pre> is cumulative, hence uses of 
+              universes can results in inclusion constraints, showing that e.g. <pre>Type@{i} <= Type@{j}</pre>.
+              The Rocq Prover handles this graph of universes and constraints incrementaly and checks that the 
+              universe graph is acyclic at all times, ensuring consistency of the definitions. The user can hence write formal 
+              developments without ever needing to annotate universes, letting the Rocq elaboration engine take care of it.
             </li>
             <li>
               <strong>Universe and Sort Polymorphism:</strong>
-            </li>
-            <li>
-              <strong>Implicit Cumulativity:</strong>
+              
             </li>
             <li>
               <strong>Definitional Proof Irrelevance:</strong>
             </li>
             <li>
               <strong>Efficient Definitional Equality Checkers:</strong>
+            </li>
+            
+            <li>
+              <strong>Certified Type Theory and Extraction:</strong>
+              The Rocq Prover is based on the formal verification of its type theory implementation and extraction system,
+              developed in the <a href="metacoq.github.io">MetaRocq</a> project, which provides an alternative, certified 
+              proof checker that minimize the trusted code base and increases user confidence in its results.
             </li>
             <li>
               <strong>Metaprogramming Languages</strong>

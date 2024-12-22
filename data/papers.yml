@@ -163,4 +163,19 @@ papers:
         uri: https://dl.acm.org/doi/10.1145/3290316
       - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-01859964
-    featured: no    
+    featured: no
+  - title: "Inductive Definitions in the System Coq - Rules and Properties"
+    publication: Typed Lambda Calculi and Applications (TLCA)
+    abstract: >
+      In the pure Calculus of Constructions, it is possible to represent data structures and predicates using higher-order quantification. However, this representation is not satisfactory, from the point of view of both the efficiency of the underlying programs and the power of the logical system. For these reasons, the calculus was extended with a primitive notion of inductive definitions. This paper describes the rules for inductive definitions in the system Coq. They are general enough to be seen as one formulation of adding inductive definitions to a typed lambda-calculus. We prove strong normalization for a subsystem of Coq corresponding to the pure Calculus of Constructions plus Inductive Definitions with only weak eliminations.
+    authors:
+      - Christine Paulin-Mohring
+    tags:
+      - TLCA
+      - Inductive types
+    year: 1993
+    links:
+      - description: "DOI"
+        uri: https://doi.org/10.1007/BFb0037116
+    featured: no
+  

@@ -90,6 +90,7 @@ Layout.render
                                 <td class="py-0 lg:py-4 px-6 font-semibold">
                                     <div class="text-xl text-title dark:text-dark-title lg:text-base font-semibold">
                                         <%s paper.title %>
+                                        <%s paper.slug %>
                                     </div>
                                     <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
                                         <%s paper.abstract %>
