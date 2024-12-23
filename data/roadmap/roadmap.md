@@ -1,7 +1,3 @@
----
-title: Rocq Long Term Roadmap
----
-
 ## Vision
 
 The Rocq Development Team, building on 40 years of experience with
