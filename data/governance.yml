@@ -9,6 +9,7 @@ teams:
     name: Coordination
     description: The Coordination team is appointed by the Rocq project leader to help
       coordinate the activities of the other teams, and the project roadmap.
+    default_role: Coordinator
     contacts: []
     # contacts:
     # - name: Mailing List
@@ -23,16 +24,14 @@ teams:
       role: Project Leader
     - name: Yves Bertot
       github: ybertot
-      role: Member
     - name: Nicolas Tabareau
       github: tabareau
-      role: Member
     - name: Théo Zimmermann
       github: Zimmi48
-      role: Member
   - id: core
     name: Core
     description: The Core team is composed of long-term, significant contributors to the Rocq project.
+    default_role: Core developer
     contacts: []
     dev-meeting:
       date: Every Tuesday
@@ -53,6 +52,7 @@ teams:
     name: Code of Conduct Enforcement
     description: The Code of Conduct Enforcement team is responsible for enforcing the
       Code of Conduct across all Rocq project spaces.
+    default_role: Member
     contacts:
     - name: Code of Conduct Enforcement Team
       link: mailto:coq-conduct@inria.fr
@@ -60,6 +60,7 @@ teams:
   - id: Discourse
     name: Discourse administration and moderation
     description: The Discourse team is responsible for the administration and moderation of the Rocq Discourse forum.
+    default_role: Moderator
     contacts: []
     members:
     - name: Théo Zimmermann
@@ -67,17 +68,15 @@ teams:
       role: Admin
     - name: Yannick Forster
       github: yforster
-      role: Moderator
     - name: Yishuai Li
       github: liyishuai
-      role: Moderator
     - name: Emilio Jesús Gallego Arias
       github: ejgallego
-      role: Moderator
   - id: Zulip
     name: Zulip administration and moderation
     description: The Zulip team is responsible for the administration and moderation
       of the Rocq Zulip chat. Moderators on Zulip are in charge of moving discussions to appropriate streams and topics.
+    default_role: Moderator
     contacts: []
     members:
     - name: Cyril Cohen
@@ -88,19 +87,14 @@ teams:
       role: Admin
     - name: Ali Caglayan
       github: Alizter
-      role: Moderator
     - name: Emilio Jesús Gallego Arias
       github: ejgallego
-      role: Moderator
     - name: Thomas Lamiaux
       github: thomas-lamiaux
-      role: Moderator
     - name: Karl Palmskog
       github: palmskog
-      role: Moderator
     - name: Michael Soegtrop
       github: MSoegtropIMC
-      role: Moderator
   - id: workshops
     name: Workshops
     description: The Workshops Steering Committee is responsible for organizing and coordinating the Rocq workshops.
@@ -123,7 +117,6 @@ teams:
   - id: kernel
     name: Rocq Kernel and Trusted Code Base
     description: The kernel-maintainers, library-maintainers (vo file loading), universes-maintainers, and vm-native-maintainers teams.
-    default_role: Maintainer
     contacts: []
     subteams:
     - id: kernel-maintainers
@@ -145,7 +138,6 @@ teams:
   - id: elaboration
     name: Rocq Elaboration
     description: The derive-maintainers, engine-maintainers, extensible-syntax-maintainers, funind-maintainers, ltac-maintainers, parsing-maintainers, pretyper-maintainers, tactics-maintainers, typeclasses-maintainers, and vernac-maintainers teams.
-    default_role: Maintainer
     contacts: []
     members: []
     subteams:
@@ -192,7 +184,6 @@ teams:
   - id: ltac2-maintainers
     name: Ltac2
     description: The Ltac2 tactic language team.
-    default_role: Maintainer
     contacts: []
     members:
     - name: Pierre-Marie Pédrot
@@ -201,7 +192,6 @@ teams:
   - id: ssreflect-maintainers
     name: SSReflect
     description: The SSReflect proof language team.
-    default_role: Maintainer
     contacts: []
     members: []
   - id: equations
@@ -214,7 +204,7 @@ teams:
     members:
     - name: Matthieu Sozeau
       github: mattam82
-      role: Maintainer
+      role: Team leader
 - id: interfaces
   name: User Interfaces
   description: The User Interfaces team is responsible for the development and maintenance of the Rocq document managers and user interfaces.
@@ -223,7 +213,6 @@ teams:
   - id: document-managers
     name: Document Managers and top-level interfaces
     description: The stm-maintainers and toplevel-maintainers teams.
-    default_role: Maintainer
     contacts: []
     subteams:
     - id: stm-maintainers
@@ -356,7 +345,10 @@ teams:
     name: Docker
     description: The Docker team maintains the Rocq Docker images.
     contacts: []
-    members: []
+    members:
+    - name: Erik Martin-Dorel
+      github: erikmd
+      role: Team leader
 - id: documentation
   name: Documentation
   description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.

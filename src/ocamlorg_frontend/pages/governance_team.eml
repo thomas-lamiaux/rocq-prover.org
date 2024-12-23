@@ -4,7 +4,7 @@ let contact_icon (kind : Data.Governance.contact_kind) = match kind with
   | Discord -> Icons.discord
   | Chat -> Icons.chat
 
-let render_team_member ?(default_role = "Member") (member : Data.Governance.Member.t) =
+let render_team_member ?(default_role = "Maintainer") (member : Data.Governance.Member.t) =
   <a href="https://github.com/<%s member.github %>" class="flex gap-x-2 p-4 card dark:dark-card">
     <img src="https://github.com/<%s member.github %>.png" alt="" class="h-32 w-32 mr-3 inline-block rounded-full">
     <div class="flex flex-col h-full">
@@ -66,7 +66,7 @@ let flatten_subteams (team : Data.Governance.team) =
            Member.role =
              Some
                (Option.value
-                  ~default:(Option.value ~default:"Member" team.default_role)
+                  ~default:(Option.value ~default:"Maintainer" team.default_role)
                   member.Member.role
                ^ " ("
                ^ String.concat ", " (List.rev subteams)
