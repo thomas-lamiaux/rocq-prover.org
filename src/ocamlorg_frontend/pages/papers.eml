@@ -81,18 +81,24 @@ Layout.render
                             <th class="py-4 px-6">Years</th>
                             <th class="py-4 px-6 w-40">Tags</th>
                             <th class="py-4 px-6 w-56">Authors</th>
-                            <th class="py-4 px-6 rounded-r-lg">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="block lg:table-row-group">
                         <% papers |> List.iter (fun (paper : Data.Paper.t) -> %>
-                            <tr class="flex flex-col lg:table-row mb-4 lg:mb-0 border-b  dark:border-b-dark-separator_30 lg:border-none">
+                            <tr class="align-top flex flex-col lg:table-row mb-4 lg:mb-0 border-b  dark:border-b-dark-separator_30 lg:border-none">
                                 <td class="py-0 lg:py-4 px-6 font-semibold">
                                     <div class="text-xl text-title dark:text-dark-title lg:text-base font-semibold">
                                       <a href="<%s "/papers/" ^ paper.slug %>"><%s paper.title %></a>
                                     </div>
                                     <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
                                         <%s paper.abstract %>
+                                    </div>
+                                    <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
+                                    <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
+                                        <a href="<%s link.uri %>" class="text-primary dark:text-dark-white dark:underline hover:text-underline dark:hover:text-dark-primary font-medium block whitespace-nowrap">
+                                        <%s link.description %>
+                                        </a>
+                                    <% ); %>
                                     </div>
                                 </td>
                                 <td class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
@@ -111,13 +117,6 @@ Layout.render
                                 <td class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
                                     <% paper.authors |> List.iter (fun (author) -> %>
                                     <li><%s author %></li>
-                                        <% ); %>
-                                </td>
-                                <td class="py-4 px-6 align-top">
-                                    <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
-                                        <a href="<%s link.uri %>" class="text-primary dark:text-dark-white dark:underline hover:text-underline dark:hover:text-dark-primary font-medium block whitespace-nowrap">
-                                            <%s link.description %>
-                                        </a>
                                         <% ); %>
                                 </td>
                             </tr>
