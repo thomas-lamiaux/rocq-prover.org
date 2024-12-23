@@ -32,7 +32,6 @@ jq '{
     description: .description,
     contacts: [],
     members: .members.nodes | map({github: .login, name: (.name // "")})
-  }),
-  "working-groups": []
+  })
 }' data/github-teams.json > data/github-teams-simplified.json
 ```

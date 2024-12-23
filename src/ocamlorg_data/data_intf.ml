@@ -297,10 +297,10 @@ module Governance = struct
   type team = {
     id : string;
     name : string;
-    description : string;
-    default_role : string option;
-    contacts : contact list;
-    dev_meeting : dev_meeting option; [@default None] [@key "dev-meeting"]
+    description : string; [@default ""]
+    default_role : string; [@default "Maintainer"]
+    contacts : contact list; [@default []]
+    dev_meeting : dev_meeting option; [@default None]
     members : Member.t list; [@default []]
     subteams : team list; [@default []]
   }

@@ -3,21 +3,12 @@ teams:
   name: Governance
   description: The governance is ensured by the project leader, with the help of the
     coordination team, and by the core team.
-  contacts: []
   subteams:
   - id: coordination
     name: Coordination
     description: The Coordination team is appointed by the Rocq project leader to help
       coordinate the activities of the other teams, and the project roadmap.
     default_role: Coordinator
-    contacts: []
-    # contacts:
-    # - name: Mailing List
-    #   link: https://sympa.inria.fr/sympa/subscribe/caml-list
-    #   kind: email
-    # - name: GitHub
-    #   link: https://github.com/ocaml/ocaml/issues
-    #   kind: github
     members:
     - name: Matthieu Sozeau
       github: mattam82
@@ -32,8 +23,7 @@ teams:
     name: Core
     description: The Core team is composed of long-term, significant contributors to the Rocq project.
     default_role: Core developer
-    contacts: []
-    dev-meeting:
+    dev_meeting:
       date: Every Tuesday
       time: 4:00 PM CET (see wiki) Open to all
       calendar: https://github.com/coq/coq/wiki/Coq-Calls
@@ -46,7 +36,6 @@ teams:
 - id: community
   name: Community
   description: The Community team is responsible for managing forums, social media, and community events.
-  contacts: []
   subteams:
   - id: code-of-conduct-team
     name: Code of Conduct Enforcement
@@ -61,7 +50,6 @@ teams:
     name: Discourse administration and moderation
     description: The Discourse team is responsible for the administration and moderation of the Rocq Discourse forum.
     default_role: Moderator
-    contacts: []
     members:
     - name: Théo Zimmermann
       github: Zimmi48
@@ -77,7 +65,6 @@ teams:
     description: The Zulip team is responsible for the administration and moderation
       of the Rocq Zulip chat. Moderators on Zulip are in charge of moving discussions to appropriate streams and topics.
     default_role: Moderator
-    contacts: []
     members:
     - name: Cyril Cohen
       github: CyrilCohen
@@ -98,7 +85,6 @@ teams:
   - id: workshops
     name: Workshops
     description: The Workshops Steering Committee is responsible for organizing and coordinating the Rocq workshops.
-    contacts: []
     members:
     - name: Yves Bertot
       github: ybertot
@@ -117,74 +103,42 @@ teams:
   - id: kernel
     name: Rocq Kernel and Trusted Code Base
     description: The kernel-maintainers, library-maintainers (vo file loading), universes-maintainers, and vm-native-maintainers teams.
-    contacts: []
     subteams:
     - id: kernel-maintainers
       name: kernel
-      description: ""
-      contacts: []
     - id: library-maintainers
       name: library
-      description: ""
-      contacts: []
     - id: universes-maintainers
       name: universes
-      description: ""
-      contacts: []
     - id: vm-native-maintainers
       name: vm-native
-      description: ""
-      contacts: []
   - id: elaboration
     name: Rocq Elaboration
     description: The derive-maintainers, engine-maintainers, extensible-syntax-maintainers, funind-maintainers, ltac-maintainers, parsing-maintainers, pretyper-maintainers, tactics-maintainers, typeclasses-maintainers, and vernac-maintainers teams.
-    contacts: []
-    members: []
     subteams:
     - id: derive-maintainers
       name: derive
-      description: ""
-      contacts: []
     - id: engine-maintainers
       name: engine
-      description: ""
-      contacts: []
     - id: extensible-syntax-maintainers
       name: extensible-syntax
-      description: ""
-      contacts: []
     - id: funind-maintainers
       name: funind
-      description: ""
-      contacts: []
     - id: ltac-maintainers
       name: ltac
-      description: ""
-      contacts: []
     - id: parsing-maintainers
       name: parsing
-      description: ""
-      contacts: []
     - id: pretyper-maintainers
       name: pretyper
-      description: ""
-      contacts: []
     - id: tactics-maintainers
       name: tactics
-      description: ""
-      contacts: []
     - id: typeclasses-maintainers
       name: typeclasses
-      description: ""
-      contacts: []
     - id: vernac-maintainers
       name: vernac
-      description: ""
-      contacts: []
   - id: ltac2-maintainers
     name: Ltac2
     description: The Ltac2 tactic language team.
-    contacts: []
     members:
     - name: Pierre-Marie Pédrot
       github: ppedrot
@@ -192,8 +146,6 @@ teams:
   - id: ssreflect-maintainers
     name: SSReflect
     description: The SSReflect proof language team.
-    contacts: []
-    members: []
   - id: equations
     name: Equations
     description: The Equations plugin team.
@@ -208,21 +160,15 @@ teams:
 - id: interfaces
   name: User Interfaces
   description: The User Interfaces team is responsible for the development and maintenance of the Rocq document managers and user interfaces.
-  contacts: []
   subteams:
   - id: document-managers
     name: Document Managers and top-level interfaces
     description: The stm-maintainers and toplevel-maintainers teams.
-    contacts: []
     subteams:
     - id: stm-maintainers
       name: stm
-      description: ""
-      contacts: []
     - id: toplevel-maintainers
       name: toplevel
-      description: ""
-      contacts: []
   - id: vscoq-maintainers
     name: VS Rocq
     description: The Visual Studio Code Rocq plugin team.
@@ -230,86 +176,56 @@ teams:
     - name: GitHub
       link: https://github.com/coq/vscoq
       kind: github
-    members: []
   - id: coqide-maintainers
     name: RocqIDE
     description: The historical standalone IDE for the Rocq prover.
-    contacts: []
-    members: []
 - id: extensions
   name: Extensions
   description: The official extensions to the Rocq prover.
-  contacts: []
   subteams:
   - id: stdlib-maintainers
     name: Rocq Standard Library
     description: The Rocq Corelib and Standard Library team.
-    contacts: []
-    members: []
   - id: number-maintainers
     name: Numbers
     description: The Numbers library and notations.
-    contacts: []
-    members: []
   - id: reals-library-maintainers
     name: Reals
     description: The maintainers of the Reals library.
-    contacts: []
-    members: []
   - id: extraction-maintainers
     name: Rocq Extraction
     description: The Rocq Extraction plugin team.
-    contacts: []
-    members: []
   - id: cc-maintainers
     name: The congruence tactic
     description: The maintainers of the congruence plugin.
-    contacts: []
-    members: []
   - id: firstorder-maintainers
     name: The firstorder tactic
     description: The maintainers of the firstorder plugin.
-    contacts: []
-    members: []
   - id: micromega-maintainers
     name: The lia and nia tactics
     description: The maintainers of the micromega plugin.
-    contacts: []
-    members: []
   - id: nsatz-maintainers
     name: The nsatz tactic
     description: The maintainers of the nsatz plugin.
-    contacts: []
-    members: []
   - id: ring-maintainers
     name: The ring tactic
     description: The maintainers of the ring plugin.
-    contacts: []
-    members: []
   - id: rtauto-maintainers
     name: The rtauto tactic
     description: The maintainers of the rtauto plugin.
-    contacts: []
-    members: []
 - id: tools
   name: Tools
   description: The official tools for working with the Rocq prover.
-  contacts: []
   subteams:
   - id: coqdoc-maintainers
     name: rocq doc
     description: The tool to generate HTML documentation from Rocq source files.
-    contacts: []
-    members: []
   - id: coq-makefile-maintainers
     name: rocq makefile
     description: The tool to generate Makefiles for Rocq projects.
-    contacts: []
-    members: []
   - id: action
     name: Docker Opam Action
     description: The Docker Opam Action helps users to build and test their projects with Rocq using GitHub Actions.
-    contacts: []
     members:
     - name: Erik Martin-Dorel
       github: erikmd
@@ -326,7 +242,6 @@ teams:
     - name: GitHub
       link: https://github.com/coq/platform
       kind: github
-    members: []
   - id: opam-maintainer
     name: opam
     description: The opam team maintains the Rocq opam packages and repository for user-contributed packages.
@@ -344,7 +259,6 @@ teams:
   - id: docker
     name: Docker
     description: The Docker team maintains the Rocq Docker images.
-    contacts: []
     members:
     - name: Erik Martin-Dorel
       github: erikmd
@@ -352,13 +266,10 @@ teams:
 - id: documentation
   name: Documentation
   description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.
-  contacts: []
   subteams:
   - id: doc-maintainers
     name: Reference Manual
     description: The Reference Manual team is responsible for the development and maintenance of the Rocq reference manual.
-    contacts: []
-    members: []
   - id: platform-docs
     name: Rocq Platform Docs
     description: A collection of short, action-oriented tutorials and how-to guides for the Rocq prover and its Platform.
@@ -377,31 +288,22 @@ teams:
     - name: GitHub
       link: https://github.com/coq/rocq-prover.org
       kind: github
-    members: []
   - id: plugin-tutorial-maintainers
     name: Plugin Tutorial
     description: The maintainers of the Rocq plugin tutorial.
-    contacts: []
-    members: []
   - id: zenodo-maintainers
     name: Zenodo
     description: The maintainers of the Zenodo record for Rocq Prover releases.
-    contacts: []
-    members: []
 - id: infrastructure
   name: Infrastructure
   description: The Infrastructure team is responsible for the development and maintenance of the infrastructure that supports the Rocq project and community.
-  contacts: []
   subteams:
   - id: admin
     name: Administration
     description: The Administration team is responsible for the administration of the Rocq project organizations on GitHub, GitLab, and other platforms.
-    contacts: []
-    members: []
   - id: coqbot-maintainers
     name: ROCQbot
     description: The ROCQbot team is responsible for the development and maintenance of the Rocq development bot.
-    contacts: []
     members:
     - name: Théo Zimmermann
       github: Zimmi48
@@ -409,26 +311,16 @@ teams:
   - id: ci-maintainers
     name: Continuous Integration
     description: The infrastructure to continuously build and test the Rocq project, including compatibility with reverse dependencies.
-    contacts: []
-    members: []
   - id: bench-maintainers
     name: Benchmark infrastructure
     description: The infrastructure used to run benchmarks for the Rocq project.
-    contacts: []
-    members: []
   - id: build-maintainers
     name: Build infrastructure
     description: The infrastructure used to build the Rocq project.
-    contacts: []
-    members: []
   - id: test-suite-maintainers
     name: Test Suite
     description: The test suite of the Rocq project.
-    contacts: []
-    members: []
   - id: dev-tools-maintainers
     name: Development Tools
     description: The tools used by Rocq developers to work on the project.
-    contacts: []
-    members: []
-working-groups: []
+working_groups: []

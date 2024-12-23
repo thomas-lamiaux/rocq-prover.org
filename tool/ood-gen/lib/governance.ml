@@ -4,7 +4,7 @@ open Member
 
 type metadata = {
   teams : team list;
-  working_groups : team list; [@key "working-groups"]
+  working_groups : team list; [@default []]
 }
 [@@deriving of_yaml]
 
