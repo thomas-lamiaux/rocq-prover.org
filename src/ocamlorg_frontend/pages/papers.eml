@@ -21,7 +21,7 @@ Layout.render
     <div class="container-fluid">
         <div class=" ">
             <div class="">
-                <h2 class="font-bold text-white dark:text-dark-title mb-8">Recommended Papers</h2>
+                <h2 class="font-bold dark:text-dark-title mb-8">Recommended Papers</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 <% recommended_papers |> List.iter (fun (paper : Data.Paper.t) -> %>

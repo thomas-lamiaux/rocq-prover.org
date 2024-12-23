@@ -5,8 +5,8 @@
     @apply bg-sand border-b border-t;
   }
   .dark-section-mild-contrast{
-    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat;
-    @apply bg-mild_blue border-b border-t;
+    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat, linear-gradient(45deg, #010105, #10162D);
+    @apply border-b border-t;
   }
   .dark-section-strong-contrast {
     background: linear-gradient(181deg, #10162D, #1d1d1b);
@@ -28,7 +28,8 @@
   }
 
   .section-blue-gradient {
-    background: linear-gradient(45deg, #010105, #10162D);
+    /* background: linear-gradient(45deg, #010105, #10162D); */
+    background: linear-gradient(76deg, #f1dad1, #ededed);
     @apply border-none;
   }
 
