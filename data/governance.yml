@@ -195,24 +195,22 @@ teams:
   - id: extraction-maintainers
     name: Rocq Extraction
     description: The Rocq Extraction plugin team.
-  - id: cc-maintainers
-    name: The congruence tactic
-    description: The maintainers of the congruence plugin.
-  - id: firstorder-maintainers
-    name: The firstorder tactic
-    description: The maintainers of the firstorder plugin.
-  - id: micromega-maintainers
-    name: The lia and nia tactics
-    description: The maintainers of the micromega plugin.
-  - id: nsatz-maintainers
-    name: The nsatz tactic
-    description: The maintainers of the nsatz plugin.
-  - id: ring-maintainers
-    name: The ring tactic
-    description: The maintainers of the ring plugin.
-  - id: rtauto-maintainers
-    name: The rtauto tactic
-    description: The maintainers of the rtauto plugin.
+  - id: tactic-plugins
+    name: Automatic Tactic Plugins
+    description: The maintainers of the official plugins providing automatic tactics.
+    subteams:
+    - id: cc-maintainers
+      name: congruence
+    - id: firstorder-maintainers
+      name: firstorder
+    - id: micromega-maintainers
+      name: micromega
+    - id: nsatz-maintainers
+      name: nsatz
+    - id: ring-maintainers
+      name: ring
+    - id: rtauto-maintainers
+      name: rtauto
 - id: tools
   name: Tools
   description: The official tools for working with the Rocq prover.
@@ -308,12 +306,16 @@ teams:
     - name: Théo Zimmermann
       github: Zimmi48
       role: Team leader
-  - id: ci-maintainers
-    name: Continuous Integration
-    description: The infrastructure to continuously build and test the Rocq project, including compatibility with reverse dependencies.
-  - id: bench-maintainers
-    name: Benchmark infrastructure
-    description: The infrastructure used to run benchmarks for the Rocq project.
+  - id: ci
+    name: Continuous Integration and Benchmarking
+    description: The infrastructure to continuously build, test and benchmark the Rocq project, including compatibility with reverse dependencies.
+    subteams:
+    - id: bench-maintainers
+      name: Benchmark infrastructure
+    - id: ci-maintainers
+      name: CI
+    - id: windows-build-maintainers
+      name: Windows
   - id: build-maintainers
     name: Build infrastructure
     description: The infrastructure used to build the Rocq project.
