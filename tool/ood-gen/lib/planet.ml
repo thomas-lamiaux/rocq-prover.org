@@ -51,7 +51,7 @@ module GlobalFeed = struct
     match events with
     | [] -> None
     | _ ->
-        let authors = (Syndic.Atom.author "OCaml Events", []) in
+        let authors = (Syndic.Atom.author "Rocq Events", []) in
         let render_single_event (event : Data_intf.Event.t) =
           let textual_location = event.city ^ ", " ^ event.country in
           let start_date_str =
@@ -88,13 +88,13 @@ module GlobalFeed = struct
               (Syndic.Date.day start) (Syndic.Date.year start)
           in
 
-          Uri.of_string ("https://ocaml.org/events#" ^ id_date_str)
+          Uri.of_string ("https://rocq-prover.org/events#" ^ id_date_str)
         in
         Some
           (Syndic.Atom.entry ~id ~authors
-             ~title:(Syndic.Atom.Text "Upcoming OCaml Events") ~updated:start
+             ~title:(Syndic.Atom.Text "Upcoming Rocq Events") ~updated:start
              ~links:
-               [ Syndic.Atom.link (Uri.of_string "https://ocaml.org/events") ]
+               [ Syndic.Atom.link (Uri.of_string "https://rocq-prover.org/events") ]
              ~categories:[ Syndic.Atom.category "events" ]
              ~content:(Syndic.Atom.Html (None, content))
              ())
@@ -153,10 +153,10 @@ module GlobalFeed = struct
     match create_events_announcement_entry () with
     | None ->
         entries
-        |> entries_to_feed ~id:"planet.xml" ~title:"The OCaml Planet"
+        |> entries_to_feed ~id:"planet.xml" ~title:"The Rocq Prover Planet"
         |> feed_to_string
     | Some event_announcements ->
         entries @ [ event_announcements ]
-        |> entries_to_feed ~id:"planet.xml" ~title:"The OCaml Planet"
+        |> entries_to_feed ~id:"planet.xml" ~title:"The Rocq Prover Planet"
         |> feed_to_string
 end
