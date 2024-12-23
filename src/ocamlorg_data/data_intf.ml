@@ -687,11 +687,7 @@ module Roadmap = struct
   [@@deriving show]
 
   type t = {
-    title : string;
-    short_title : string;
     fpath : string;
-    slug : string;
-    description : string;
     body_md : string;
     toc : toc list;
     body_html : string;

@@ -207,6 +207,11 @@ module Tutorial : sig
   val search_documents : string -> search_document list
 end
 
+module Roadmap : sig
+  include module type of Roadmap
+
+  val roadmap : t
+end
 module Video : sig
   include module type of Video
 

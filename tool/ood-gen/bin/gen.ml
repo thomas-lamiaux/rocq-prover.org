@@ -25,6 +25,7 @@ let term_templates =
     ("planet", Planet.template);
     ("release", Release.template);
     ("resource", Resource.template);
+    ("roadmap", Roadmap.template);
     ("success_story", Success_story.template);
     ("tool", Tool.template);
     ("consortium_page", Consortium_page.template);

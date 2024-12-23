@@ -57,3 +57,4 @@ let cookbook = Cookbook.render
 let cookbook_task = Cookbook_task.render
 let cookbook_recipe = Cookbook_recipe.render
 let why = Why.render
+let roadmap = Roadmap.render

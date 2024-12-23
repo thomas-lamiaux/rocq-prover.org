@@ -1,8 +1,5 @@
 ---
 title: Rocq Long Term Roadmap
-description: "Long-term Roadmap for the Rocq Prover and Platform."
-meta_title: Rocq Roadmap
-meta_description: Long-term Roadmap for the Rocq Prover and Platform.
 ---
 
 ## Vision

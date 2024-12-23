@@ -235,6 +235,10 @@ module Tutorial = struct
     |> List.map fst
 end
 
+module Roadmap = struct
+  include Roadmap
+end
+
 module Video = Video
 
 module Conference = struct
