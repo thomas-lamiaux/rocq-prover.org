@@ -253,7 +253,7 @@ end
 
 module Governance = struct
   module Member = struct
-    type t = { name : string; github : string; role : string }
+    type t = { name : string; github : string; role : string option }
     [@@deriving of_yaml, show]
 
     let compare a b = String.compare a.github b.github
@@ -298,6 +298,7 @@ module Governance = struct
     id : string;
     name : string;
     description : string;
+    default_role : string option;
     contacts : contact list;
     dev_meeting : dev_meeting option; [@default None] [@key "dev-meeting"]
     members : Member.t list; [@default []]

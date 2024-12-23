@@ -8,17 +8,14 @@
       "members": [
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -31,12 +28,10 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         }
       ]
@@ -49,22 +44,18 @@
       "members": [
         {
           "github": "anton-trunov",
-          "role": "Member",
           "name": "Anton Trunov"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -77,12 +68,10 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "PierreCorbineau",
-          "role": "Member",
           "name": "Pierre Corbineau"
         }
       ]
@@ -95,22 +84,18 @@
       "members": [
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -123,17 +108,14 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "tabareau",
-          "role": "Member",
           "name": "nicolas tabareau"
         }
       ]
@@ -146,12 +128,10 @@
       "members": [
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         }
       ]
@@ -164,12 +144,10 @@
       "members": [
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         }
       ]
@@ -182,347 +160,278 @@
       "members": [
         {
           "github": "Janno",
-          "role": "Member",
           "name": "Jan-Oliver Kaiser"
         },
         {
           "github": "kyoDralliam",
-          "role": "Member",
           "name": "Kenji Maillard"
         },
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "pi8027",
-          "role": "Member",
           "name": "Kazuhiko Sakaguchi"
         },
         {
           "github": "spitters",
-          "role": "Member",
           "name": "Bas Spitters"
         },
         {
           "github": "Blaisorblade",
-          "role": "Member",
           "name": "Paolo G. Giarrusso"
         },
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "Armael",
-          "role": "Member",
           "name": "Armaël Guéneau"
         },
         {
           "github": "RalfJung",
-          "role": "Member",
           "name": "Ralf Jung"
         },
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "palmskog",
-          "role": "Member",
           "name": "Karl Palmskog"
         },
         {
           "github": "gasche",
-          "role": "Member",
           "name": "Gabriel Scherer"
         },
         {
           "github": "robbertkrebbers",
-          "role": "Member",
           "name": "Robbert Krebbers"
         },
         {
           "github": "yurug",
-          "role": "Member",
           "name": "Yann Régis Gianas"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "aa755",
-          "role": "Member",
           "name": "Abhishek Anand"
         },
         {
           "github": "pirbo",
-          "role": "Member",
           "name": "Pierre Boutillier"
         },
         {
           "github": "bgregoir",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "corwin-of-amber",
-          "role": "Member",
           "name": "Shachar Itzhaky"
         },
         {
           "github": "llelf",
-          "role": "Member",
           "name": "antonio nikishaev"
         },
         {
           "github": "andres-erbsen",
-          "role": "Member",
           "name": "Andres Erbsen"
         },
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "barras",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "jfehrle",
-          "role": "Member",
           "name": "Jim Fehrle"
         },
         {
           "github": "tchajed",
-          "role": "Member",
           "name": "Tej Chajed"
         },
         {
           "github": "thierry-martinez",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "LasseBlaauwbroek",
-          "role": "Member",
           "name": "Lasse Blaauwbroek"
         },
         {
           "github": "aspiwack",
-          "role": "Member",
           "name": "Arnaud Spiwack"
         },
         {
           "github": "tabareau",
-          "role": "Member",
           "name": "nicolas tabareau"
         },
         {
           "github": "rlepigre",
-          "role": "Member",
           "name": "Rodolphe Lepigre"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "bollu",
-          "role": "Member",
           "name": "Siddharth"
         },
         {
           "github": "jashug",
-          "role": "Member",
           "name": "Jasper Hugunin"
         },
         {
           "github": "cmangin",
-          "role": "Member",
           "name": "Cyprien Mangin"
         },
         {
           "github": "psteckler",
-          "role": "Member",
           "name": "Paul Steckler"
         },
         {
           "github": "anton-trunov",
-          "role": "Member",
           "name": "Anton Trunov"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "amahboubi",
-          "role": "Member",
           "name": "Assia Mahboubi"
         },
         {
           "github": "Lysxia",
-          "role": "Member",
           "name": "Xia Li-yao"
         },
         {
           "github": "vbgl",
-          "role": "Member",
           "name": "Vincent Laporte"
         },
         {
           "github": "ybertot",
-          "role": "Member",
           "name": "Yves Bertot"
         },
         {
           "github": "fakusb",
-          "role": "Member",
           "name": "Fabian Kunze"
         },
         {
           "github": "Matafou",
-          "role": "Member",
           "name": "Pierre Courtieu"
         },
         {
           "github": "amintimany",
-          "role": "Member",
           "name": "Amin Timany"
         },
         {
           "github": "TheoWinterhalter",
-          "role": "Member",
           "name": "Théo Winterhalter"
         },
         {
           "github": "fajb",
-          "role": "Member",
           "name": "Frédéric Besson"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         },
         {
           "github": "liyishuai",
-          "role": "Member",
           "name": "Yishuai Li"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "cpitclaudel",
-          "role": "Member",
           "name": "Clément Pit-Claudel"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         },
         {
           "github": "tlringer",
-          "role": "Member",
           "name": "Talia Ringer"
         },
         {
           "github": "erikmd",
-          "role": "Member",
           "name": "Erik Martin-Dorel"
         },
         {
           "github": "ggonthier",
-          "role": "Member",
           "name": "Georges Gonthier"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         },
         {
           "github": "hendriktews",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "VincentSe",
-          "role": "Member",
           "name": "Vincent Semeria"
         },
         {
           "github": "ana-borges",
-          "role": "Member",
           "name": "Ana de Almeida Borges"
         },
         {
           "github": "forestjulien",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "olaure01",
-          "role": "Member",
           "name": "Olivier Laurent"
         },
         {
           "github": "mrhaandi",
-          "role": "Member",
           "name": "Andrej Dudenhefner"
         },
         {
           "github": "rtetley",
-          "role": "Member",
           "name": "Romain Tetley"
         },
         {
           "github": "PierreCorbineau",
-          "role": "Member",
           "name": "Pierre Corbineau"
         },
         {
           "github": "yannl35133",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "rnollet",
-          "role": "Member",
           "name": "Rémi Nollet"
         },
         {
           "github": "Villetaneuse",
-          "role": "Member",
           "name": "Pierre Rousselin"
         }
       ]
@@ -535,17 +444,14 @@
       "members": [
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         }
       ]
@@ -558,17 +464,14 @@
       "members": [
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -581,22 +484,18 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "Lysxia",
-          "role": "Member",
           "name": "Xia Li-yao"
         }
       ]
@@ -609,32 +508,26 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "jfehrle",
-          "role": "Member",
           "name": "Jim Fehrle"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -647,62 +540,50 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "tabareau",
-          "role": "Member",
           "name": "nicolas tabareau"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ybertot",
-          "role": "Member",
           "name": "Yves Bertot"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         }
       ]
@@ -715,17 +596,14 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "aspiwack",
-          "role": "Member",
           "name": "Arnaud Spiwack"
         }
       ]
@@ -738,27 +616,22 @@
       "members": [
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -771,27 +644,22 @@
       "members": [
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "jfehrle",
-          "role": "Member",
           "name": "Jim Fehrle"
         },
         {
           "github": "cpitclaudel",
-          "role": "Member",
           "name": "Clément Pit-Claudel"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         }
       ]
@@ -804,22 +672,18 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         }
       ]
@@ -832,22 +696,18 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         }
       ]
@@ -860,12 +720,10 @@
       "members": [
         {
           "github": "pi8027",
-          "role": "Member",
           "name": "Kazuhiko Sakaguchi"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         }
       ]
@@ -878,12 +736,10 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "PierreCorbineau",
-          "role": "Member",
           "name": "Pierre Corbineau"
         }
       ]
@@ -896,12 +752,10 @@
       "members": [
         {
           "github": "Matafou",
-          "role": "Member",
           "name": "Pierre Courtieu"
         },
         {
           "github": "forestjulien",
-          "role": "Member",
           "name": ""
         }
       ]
@@ -914,12 +768,10 @@
       "members": [
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         }
       ]
@@ -932,12 +784,10 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         }
       ]
@@ -950,12 +800,10 @@
       "members": [
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         }
       ]
@@ -968,17 +816,14 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         }
       ]
@@ -991,32 +836,26 @@
       "members": [
         {
           "github": "kyoDralliam",
-          "role": "Member",
           "name": "Kenji Maillard"
         },
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "tchajed",
-          "role": "Member",
           "name": "Tej Chajed"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         }
       ]
@@ -1029,12 +868,10 @@
       "members": [
         {
           "github": "fajb",
-          "role": "Member",
           "name": "Frédéric Besson"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         }
       ]
@@ -1047,17 +884,14 @@
       "members": [
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -1070,17 +904,14 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         }
       ]
@@ -1093,22 +924,18 @@
       "members": [
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         },
         {
           "github": "ana-borges",
-          "role": "Member",
           "name": "Ana de Almeida Borges"
         }
       ]
@@ -1121,52 +948,42 @@
       "members": [
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "clarus",
-          "role": "Member",
           "name": "Guillaume Claret"
         },
         {
           "github": "RalfJung",
-          "role": "Member",
           "name": "Ralf Jung"
         },
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "palmskog",
-          "role": "Member",
           "name": "Karl Palmskog"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "fblanqui",
-          "role": "Member",
           "name": "Frédéric Blanqui"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         }
       ]
@@ -1179,17 +996,14 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         }
       ]
@@ -1202,52 +1016,42 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "pi8027",
-          "role": "Member",
           "name": "Kazuhiko Sakaguchi"
         },
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "amahboubi",
-          "role": "Member",
           "name": "Assia Mahboubi"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         },
         {
           "github": "MevenBertrand",
-          "role": "Member",
           "name": "Meven Lennon-Bertrand"
         },
         {
           "github": "thomas-lamiaux",
-          "role": "Member",
           "name": "Thomas Lamiaux"
         },
         {
           "github": "Tragicus",
-          "role": "Member",
           "name": "Quentin VERMANDE"
         },
         {
           "github": "Villetaneuse",
-          "role": "Member",
           "name": "Pierre Rousselin"
         }
       ]
@@ -1260,17 +1064,14 @@
       "members": [
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "thomas-lamiaux",
-          "role": "Member",
           "name": "Thomas Lamiaux"
         },
         {
           "github": "Villetaneuse",
-          "role": "Member",
           "name": "Pierre Rousselin"
         }
       ]
@@ -1283,17 +1084,14 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "MevenBertrand",
-          "role": "Member",
           "name": "Meven Lennon-Bertrand"
         },
         {
           "github": "thomas-lamiaux",
-          "role": "Member",
           "name": "Thomas Lamiaux"
         }
       ]
@@ -1306,7 +1104,6 @@
       "members": [
         {
           "github": "thomas-lamiaux",
-          "role": "Member",
           "name": "Thomas Lamiaux"
         }
       ]
@@ -1319,32 +1116,26 @@
       "members": [
         {
           "github": "pi8027",
-          "role": "Member",
           "name": "Kazuhiko Sakaguchi"
         },
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "amahboubi",
-          "role": "Member",
           "name": "Assia Mahboubi"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         },
         {
           "github": "thomas-lamiaux",
-          "role": "Member",
           "name": "Thomas Lamiaux"
         },
         {
           "github": "Tragicus",
-          "role": "Member",
           "name": "Quentin VERMANDE"
         }
       ]
@@ -1357,17 +1148,14 @@
       "members": [
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "rtetley",
-          "role": "Member",
           "name": "Romain Tetley"
         }
       ]
@@ -1380,27 +1168,22 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ybertot",
-          "role": "Member",
           "name": "Yves Bertot"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         }
       ]
@@ -1413,17 +1196,14 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         }
       ]
@@ -1436,187 +1216,150 @@
       "members": [
         {
           "github": "kyoDralliam",
-          "role": "Member",
           "name": "Kenji Maillard"
         },
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "pi8027",
-          "role": "Member",
           "name": "Kazuhiko Sakaguchi"
         },
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "JasonGross",
-          "role": "Member",
           "name": "Jason Gross"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "bgregoir",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "andres-erbsen",
-          "role": "Member",
           "name": "Andres Erbsen"
         },
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "jfehrle",
-          "role": "Member",
           "name": "Jim Fehrle"
         },
         {
           "github": "tchajed",
-          "role": "Member",
           "name": "Tej Chajed"
         },
         {
           "github": "aspiwack",
-          "role": "Member",
           "name": "Arnaud Spiwack"
         },
         {
           "github": "tabareau",
-          "role": "Member",
           "name": "nicolas tabareau"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "anton-trunov",
-          "role": "Member",
           "name": "Anton Trunov"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "amahboubi",
-          "role": "Member",
           "name": "Assia Mahboubi"
         },
         {
           "github": "Lysxia",
-          "role": "Member",
           "name": "Xia Li-yao"
         },
         {
           "github": "ybertot",
-          "role": "Member",
           "name": "Yves Bertot"
         },
         {
           "github": "Matafou",
-          "role": "Member",
           "name": "Pierre Courtieu"
         },
         {
           "github": "fajb",
-          "role": "Member",
           "name": "Frédéric Besson"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "cpitclaudel",
-          "role": "Member",
           "name": "Clément Pit-Claudel"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         },
         {
           "github": "erikmd",
-          "role": "Member",
           "name": "Erik Martin-Dorel"
         },
         {
           "github": "ggonthier",
-          "role": "Member",
           "name": "Georges Gonthier"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         },
         {
           "github": "VincentSe",
-          "role": "Member",
           "name": "Vincent Semeria"
         },
         {
           "github": "ana-borges",
-          "role": "Member",
           "name": "Ana de Almeida Borges"
         },
         {
           "github": "forestjulien",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "olaure01",
-          "role": "Member",
           "name": "Olivier Laurent"
         },
         {
           "github": "PierreCorbineau",
-          "role": "Member",
           "name": "Pierre Corbineau"
         },
         {
           "github": "Villetaneuse",
-          "role": "Member",
           "name": "Pierre Rousselin"
         }
       ]
@@ -1629,27 +1372,22 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "VincentSe",
-          "role": "Member",
           "name": "Vincent Semeria"
         }
       ]
@@ -1662,22 +1400,18 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "bgregoir",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "amahboubi",
-          "role": "Member",
           "name": "Assia Mahboubi"
         },
         {
           "github": "thery",
-          "role": "Member",
           "name": "Laurent Théry"
         }
       ]
@@ -1690,12 +1424,10 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "PierreCorbineau",
-          "role": "Member",
           "name": "Pierre Corbineau"
         }
       ]
@@ -1708,17 +1440,14 @@
       "members": [
         {
           "github": "CohenCyril",
-          "role": "Member",
           "name": "Cyril Cohen"
         },
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "ggonthier",
-          "role": "Member",
           "name": "Georges Gonthier"
         }
       ]
@@ -1731,32 +1460,26 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "andres-erbsen",
-          "role": "Member",
           "name": "Andres Erbsen"
         },
         {
           "github": "anton-trunov",
-          "role": "Member",
           "name": "Anton Trunov"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         },
         {
           "github": "olaure01",
-          "role": "Member",
           "name": "Olivier Laurent"
         },
         {
           "github": "Villetaneuse",
-          "role": "Member",
           "name": "Pierre Rousselin"
         }
       ]
@@ -1769,12 +1492,10 @@
       "members": [
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         }
       ]
@@ -1787,17 +1508,14 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         }
       ]
@@ -1810,22 +1528,18 @@
       "members": [
         {
           "github": "herbelin",
-          "role": "Member",
           "name": "Hugo Herbelin"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -1838,12 +1552,10 @@
       "members": [
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         }
       ]
@@ -1856,12 +1568,10 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         }
       ]
@@ -1874,17 +1584,14 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         }
       ]
@@ -1897,22 +1604,18 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "SkySkimmer",
-          "role": "Member",
           "name": "Gaëtan Gilbert"
         },
         {
           "github": "ejgallego",
-          "role": "Member",
           "name": "Emilio Jesús Gallego Arias"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -1925,22 +1628,18 @@
       "members": [
         {
           "github": "ppedrot",
-          "role": "Member",
           "name": "Pierre-Marie Pédrot"
         },
         {
           "github": "silene",
-          "role": "Member",
           "name": "Guillaume Melquiond"
         },
         {
           "github": "erikmd",
-          "role": "Member",
           "name": "Erik Martin-Dorel"
         },
         {
           "github": "proux01",
-          "role": "Member",
           "name": "Pierre Roux"
         }
       ]
@@ -1953,12 +1652,10 @@
       "members": [
         {
           "github": "gares",
-          "role": "Member",
           "name": "Enrico Tassi"
         },
         {
           "github": "rtetley",
-          "role": "Member",
           "name": "Romain Tetley"
         }
       ]
@@ -1971,17 +1668,14 @@
       "members": [
         {
           "github": "palmskog",
-          "role": "Member",
           "name": "Karl Palmskog"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "Alizter",
-          "role": "Member",
           "name": "Ali Caglayan"
         }
       ]
@@ -1994,12 +1688,10 @@
       "members": [
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         },
         {
           "github": "MSoegtropIMC",
-          "role": "Member",
           "name": ""
         }
       ]
@@ -2012,12 +1704,10 @@
       "members": [
         {
           "github": "mattam82",
-          "role": "Member",
           "name": "Matthieu Sozeau"
         },
         {
           "github": "Zimmi48",
-          "role": "Member",
           "name": "Théo Zimmermann"
         }
       ]

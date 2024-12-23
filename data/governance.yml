@@ -182,43 +182,21 @@ teams:
     - name: Enrico Tassi
       github: gares
       role: Maintainer (pretyper)
-  - id: ltac2
+  - id: ltac2-maintainers
     name: Ltac2
     description: The Ltac2 tactic language team.
+    default_role: Maintainer
     contacts: []
     members:
-    - name: Tej Chajed
-      github: tchajed
-      role: Maintainer
-    - name: Gaëtan Gilbert
-      github: SkySkimmer
-      role: Maintainer
-    - name: Jason Gross
-      github: JasonGross
-      role: Maintainer
-    - name: Kenji Maillard
-      github: kyoDralliam
-      role: Maintainer
     - name: Pierre-Marie Pédrot
       github: ppedrot
-      role: Maintainer
-    - name: Michael Soegtrop
-      github: MSoegtropIMC
-      role: Maintainer
-  - id: ssreflect
-    name: Ssreflect
+      role: Team leader
+  - id: ssreflect-maintainers
+    name: SSReflect
     description: The SSReflect proof language team.
+    default_role: Maintainer
     contacts: []
-    members:
-    - name: Cyril Cohen
-      github: CyrilCohen
-      role: Maintainer
-    - name: Georges Gonthier
-      github: ggonthier
-      role: Maintainer
-    - name: Enrico Tassi
-      github: gares
-      role: Maintainer
+    members: []
   - id: equations
     name: Equations
     description: The Equations plugin team.
