@@ -67,7 +67,11 @@ Layout.render
               as an extension of the Calculus of Constructions with schemes for inductive types and families.
               Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
               like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.
-              The inductive 
+              In the Gallina language, inductive types can be consumed by fixpoint computations that are checked to be terminating thanks 
+              to a so-called syntactic guard condition. The Rocq tactics allow to perform induction and inversion reasoning on these 
+              inductive structures. Co-inductive types and co-recursion are also available to model infinite structures and judgments, 
+              like bisimulation relations. A high-level dependent pattern-matching compiler is available through the Equations package
+              as part of the Rocq platform.
             </li>
             <li>
               <strong>Universes, Typical Ambiguity, and Implicit Cumulativity</strong>
@@ -83,7 +87,9 @@ Layout.render
             </li>
             <li>
               <strong>Universe and Sort Polymorphism:</strong>
-              
+              Since Rocq 9, both universes and sorts can be abstracted over in inductive types, definitions and proofs.
+              This polymorphism allows to share between predicative and impredicative, proof-relevant or proof-irrelevant 
+              universes. 
             </li>
             <li>
               <strong>Definitional Proof Irrelevance:</strong>
