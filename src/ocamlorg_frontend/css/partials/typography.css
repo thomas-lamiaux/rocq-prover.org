@@ -44,3 +44,8 @@ h5 {
 h6 {
   @apply text-xl leading-tight;
 }
+
+code,kbd,pre,samp {
+    font-family: 'Source Code Pro', monospace;
+    font-feature-settings: "dlig" 1 /* Rocq ligatures */, "COQX" 1 /* Coq ligatures */, "XV00" 1 /* Legacy */, "calt" 1 /* Fallback */;
+}
