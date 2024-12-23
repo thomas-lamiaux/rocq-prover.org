@@ -1,0 +1,92 @@
+let rec tutorial_toc_to_toc (toc : Data.Tutorial.toc) =
+  Toc.{
+    title = toc.title;
+    href = toc.href;
+    children = List.map tutorial_toc_to_toc toc.children
+  }
+(*
+let right_sidebar
+(tutorial : Data.Tutorial.t)
+=
+  <%s! Toc.render (List.map tutorial_toc_to_toc tutorial.toc) %>
+
+let left_sidebar ~tutorials ~current_tutorial ~section =
+  <div class="flex flex-col gap-5">
+    <%s! Learn_layout.render_sidebar ~tutorials ~current_tutorial ~section %>
+  </div>
+
+let of_tutorial_section (s: Data.Tutorial.Section.t) =
+  match s with
+  | GetStarted -> Learn_layout.GetStarted
+  | Language -> Learn_layout.Language
+  | Platform -> Learn_layout.Platform
+  | Guides -> Learn_layout.Guides
+
+let render_related_exercises exercises =
+  if List.length exercises > 0 then
+    <div class='related-exercises'>
+      <h3>Related exercises :</h3>
+      <ul>
+        <% exercises |> List.iter (fun (exercise : Data.Exercise.t) -> %>
+          <li><a href='/exercises#<%s exercise.slug %>'><%s exercise.title %></a></li>
+        <% ); %>
+      </ul>
+    </div>
+  else
+    ""
+
+let render_prerequisite_tutorials tutorials =
+  if List.length tutorials > 0 then
+    <div class="mb-6 pt-8 border-t border-separator_20 dark:border-dark-separator_30">
+        <h2 class="mb-4 mt-0 text-lg font-bold leading-6"">Prerequisites</h2>
+        <ul class="list-disc marker:text-primary dark:marker:text-dark-primary">
+          <% tutorials |> List.iter (fun (tutorial : Data.Tutorial.t) -> %>
+            <li class="mb-1">
+              <a href='/docs/<%s tutorial.slug %>'><%s tutorial.title %></a>
+            </li>
+          <% ); %>
+        </ul>
+      </div>
+  else
+    ""
+
+let render
+commit_hash
+(tutorial : Data.Tutorial.t)
+~tutorials
+~related_exercises
+~recommended_next_tutorials
+~prerequisite_tutorials
+~canonical
+=
+let href, description = match tutorial.external_tutorial with
+  | None ->
+    "https://github.com/rocq-prover/rocq-prover.org/blob/"^ commit_hash ^"/data/"^ tutorial.fpath,
+    "All Rocq docs are open source. See something that's wrong or unclear? Submit a pull request."
+  | Some external_tutorial ->
+    external_tutorial.contribute_link.url,
+    external_tutorial.contribute_link.description
+in
+let render_external_tutorial_banner (opt_external_tutorial : Data.Tutorial.external_tutorial option) = match opt_external_tutorial with
+  | None -> ""
+  | Some external_tutorial ->
+    <a href="<%s external_tutorial.banner.url %>" target="_blank">
+      <img src="<%s Ocamlorg_static.Media.url external_tutorial.banner.image %>" alt="<%s external_tutorial.banner.alt %>">
+    </a>
+in
+Learn_layout.three_column_layout
+~title:(Printf.sprintf "%s · Rocq Documentation" tutorial.short_title)
+~description:tutorial.description
+~canonical
+~left_sidebar_html:(Some(left_sidebar ~current_tutorial:(Some tutorial.slug) ~tutorials ~section:(of_tutorial_section tutorial.section)))
+~right_sidebar_html:(Some(right_sidebar tutorial))
+~current:(of_tutorial_section tutorial.section) @@
+  <div class="prose prose-orange dark:prose-invert max-w-full">
+    <%s! render_external_tutorial_banner tutorial.external_tutorial %>
+    <%s! render_title tutorial %>
+    <%s! render_prerequisite_tutorials prerequisite_tutorials %>
+    <%s! tutorial.body_html %>
+    <%s! render_related_exercises related_exercises %>
+    <%s! Learn_components.contribute_footer ~href ~description ~recommended_next_tutorials %>
+  </div>
+*)

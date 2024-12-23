@@ -682,6 +682,23 @@ module Consortium_page = struct
   [@@deriving show]
 end
 
+module Roadmap = struct
+  type toc = { title : string; href : string; children : toc list }
+  [@@deriving show]
+
+  type t = {
+    title : string;
+    short_title : string;
+    fpath : string;
+    slug : string;
+    description : string;
+    body_md : string;
+    toc : toc list;
+    body_html : string;
+  }
+  [@@deriving show]
+end
+
 module Tutorial = struct
   module Section = struct
     type t = GetStarted | Language | Platform | Guides [@@deriving show]
