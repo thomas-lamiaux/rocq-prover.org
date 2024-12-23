@@ -73,10 +73,10 @@ Layout.render
               to a so-called syntactic guard condition. The Rocq tactics allow to perform induction and inversion reasoning on these 
               inductive structures. Co-inductive types and co-recursion are also available to model infinite structures and judgments, 
               like bisimulation relations. A high-level dependent pattern-matching compiler is available through the Equations package
-              as part of the Rocq platform.
+              as part of the Rocq Platform.
             </li>
             <li>
-              <strong>Universes, Typical Ambiguity, and Implicit Cumulativity</strong>
+              <strong>Universes, Typical Ambiguity, and Implicit Cumulativity:</strong>
               The Gallina surface language of the Rocq Prover supports the notion of typical ambiguity for universe levels,
               going back to the seminal work of Alfred North Whitehead and Bertrand Russell in Principia Mathematica (1910-1913),
               which allows implicit handling of the relation between universe levels (in their case, ordinals of sets/classes). 
@@ -89,7 +89,7 @@ Layout.render
             </li>
             <li>
               <strong>Universe and Sort Polymorphism:</strong>
-              Since Rocq 9, both universes and sorts can be abstracted over in inductive types, definitions and proofs.
+              Since Rocq 9.0, both universes and sorts can be abstracted over in inductive types, definitions and proofs.
               This polymorphism allows to share constructions between predicative and impredicative, proof-relevant or 
               proof-irrelevant, and even user-defined universes. See the 
               <a href="/papers/all-your-base-are-belong-to-us-sort-polymorphism-for-proof-assistants">paper</a> 
@@ -105,7 +105,7 @@ Layout.render
             </li>
             <li>
               <strong>Efficient Definitional Equality and Recuction Machines:</strong>
-              Rocq includes two efficient definitional equality checkers: <verb>vm_compute</verb> and <verb>native_compute</verb>.
+              The Rocq Prover includes two efficient definitional equality checkers: <verb>vm_compute</verb> and <verb>native_compute</verb>.
               The <a href="/papers/a-compiled-implementation-of-strong-reduction"><verb>vm_compute</verb> checker</a> uses a tailor-made compilation of 
               call-by-value strong reduction to bytecode close to OCaml's bytecode interpreter. 
               The <a href="/papers/tude-formelle-dalgorithmes-efficaces-en-algbre-linaire"><verb>native_compute</verb> checker</a> uses a 
@@ -119,14 +119,14 @@ Layout.render
               proof checker that minimize the trusted code base and increases user confidence in its results.
             </li>
             <li>
-              <strong>Metaprogramming Languages</strong>
-              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">                
+              <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
+                <strong>Metaprogramming Languages:</strong>
                 The built-in Ltac2 typed tactic programming language enables 
                 the design of predictable and comfortable automation for proofs at a high-level of 
                 abstraction, with native handling of the proof state and backtracking.
               </p>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                As part of the Rocq Platform, two alternative languages are available:
+                As part of the Rocq Platform, two additional metaprogramming languages are available:
                 <ul>
                   <li>
                     A low level of abstraction is provided by the MetaRocq project which uses Rocq itself 
