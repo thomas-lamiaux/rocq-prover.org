@@ -44,39 +44,6 @@ teams:
     - name: Matthieu Sozeau
       github: mattam82
       role: Project Leader
-    - name: Yves Bertot
-      github: ybertot
-      role: Member
-    - name: Emilio Jesús Gallego Arias
-      github: ejgallego
-      role: Member
-    - name: Gaëtan Gilbert
-      github: SkySkimmer
-      role: Member
-    - name: Jason Gross
-      github: JasonGross
-      role: Member
-    - name: Hugo Herbelin
-      github: herbelin
-      role: Member
-    - name: Guillaume Melquiond
-      github: silene
-      role: Member
-    - name: Pierre-Marie Pédrot
-      github: ppedrot
-      role: Member
-    - name: Pierre Roux
-      github: proux01
-      role: Member
-    - name: Nicolas Tabareau
-      github: tabareau
-      role: Member
-    - name: Enrico Tassi
-      github: gares
-      role: Member
-    - name: Théo Zimmermann
-      github: Zimmi48
-      role: Member
 - id: community
   name: Community
   description: The Community team is responsible for managing forums, social media, and community events.

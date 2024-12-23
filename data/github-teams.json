@@ -2,7 +2,7 @@
     "data": {
       "organization": {
         "teams": {
-          "totalCount": 56,
+          "totalCount": 59,
           "nodes": [
             {
               "slug": "bench-maintainers",
@@ -165,6 +165,291 @@
               }
             },
             {
+              "slug": "contributors",
+              "name": "Contributors",
+              "description": "Regular contributors: can triage issues and PRs (label, close, edit comments, push to a PR branch if activated by the PR author...)",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Janno",
+                    "name": "Jan-Oliver Kaiser"
+                  },
+                  {
+                    "login": "kyoDralliam",
+                    "name": "Kenji Maillard"
+                  },
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "pi8027",
+                    "name": "Kazuhiko Sakaguchi"
+                  },
+                  {
+                    "login": "spitters",
+                    "name": "Bas Spitters"
+                  },
+                  {
+                    "login": "Blaisorblade",
+                    "name": "Paolo G. Giarrusso"
+                  },
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "Armael",
+                    "name": "Armaël Guéneau"
+                  },
+                  {
+                    "login": "RalfJung",
+                    "name": "Ralf Jung"
+                  },
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "palmskog",
+                    "name": "Karl Palmskog"
+                  },
+                  {
+                    "login": "gasche",
+                    "name": "Gabriel Scherer"
+                  },
+                  {
+                    "login": "robbertkrebbers",
+                    "name": "Robbert Krebbers"
+                  },
+                  {
+                    "login": "yurug",
+                    "name": "Yann Régis Gianas"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "aa755",
+                    "name": "Abhishek Anand"
+                  },
+                  {
+                    "login": "pirbo",
+                    "name": "Pierre Boutillier"
+                  },
+                  {
+                    "login": "bgregoir",
+                    "name": null
+                  },
+                  {
+                    "login": "corwin-of-amber",
+                    "name": "Shachar Itzhaky"
+                  },
+                  {
+                    "login": "llelf",
+                    "name": "antonio nikishaev"
+                  },
+                  {
+                    "login": "andres-erbsen",
+                    "name": "Andres Erbsen"
+                  },
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "barras",
+                    "name": null
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "jfehrle",
+                    "name": "Jim Fehrle"
+                  },
+                  {
+                    "login": "tchajed",
+                    "name": "Tej Chajed"
+                  },
+                  {
+                    "login": "thierry-martinez",
+                    "name": null
+                  },
+                  {
+                    "login": "LasseBlaauwbroek",
+                    "name": "Lasse Blaauwbroek"
+                  },
+                  {
+                    "login": "aspiwack",
+                    "name": "Arnaud Spiwack"
+                  },
+                  {
+                    "login": "tabareau",
+                    "name": "nicolas tabareau"
+                  },
+                  {
+                    "login": "rlepigre",
+                    "name": "Rodolphe Lepigre"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "bollu",
+                    "name": "Siddharth"
+                  },
+                  {
+                    "login": "jashug",
+                    "name": "Jasper Hugunin"
+                  },
+                  {
+                    "login": "cmangin",
+                    "name": "Cyprien Mangin"
+                  },
+                  {
+                    "login": "psteckler",
+                    "name": "Paul Steckler"
+                  },
+                  {
+                    "login": "anton-trunov",
+                    "name": "Anton Trunov"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "amahboubi",
+                    "name": "Assia Mahboubi"
+                  },
+                  {
+                    "login": "Lysxia",
+                    "name": "Xia Li-yao"
+                  },
+                  {
+                    "login": "vbgl",
+                    "name": "Vincent Laporte"
+                  },
+                  {
+                    "login": "ybertot",
+                    "name": "Yves Bertot"
+                  },
+                  {
+                    "login": "fakusb",
+                    "name": "Fabian Kunze"
+                  },
+                  {
+                    "login": "Matafou",
+                    "name": "Pierre Courtieu"
+                  },
+                  {
+                    "login": "amintimany",
+                    "name": "Amin Timany"
+                  },
+                  {
+                    "login": "TheoWinterhalter",
+                    "name": "Théo Winterhalter"
+                  },
+                  {
+                    "login": "fajb",
+                    "name": "Frédéric Besson"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  },
+                  {
+                    "login": "liyishuai",
+                    "name": "Yishuai Li"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "cpitclaudel",
+                    "name": "Clément Pit-Claudel"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  },
+                  {
+                    "login": "tlringer",
+                    "name": "Talia Ringer"
+                  },
+                  {
+                    "login": "erikmd",
+                    "name": "Erik Martin-Dorel"
+                  },
+                  {
+                    "login": "ggonthier",
+                    "name": "Georges Gonthier"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  },
+                  {
+                    "login": "hendriktews",
+                    "name": null
+                  },
+                  {
+                    "login": "VincentSe",
+                    "name": "Vincent Semeria"
+                  },
+                  {
+                    "login": "ana-borges",
+                    "name": "Ana de Almeida Borges"
+                  },
+                  {
+                    "login": "forestjulien",
+                    "name": null
+                  },
+                  {
+                    "login": "olaure01",
+                    "name": "Olivier Laurent"
+                  },
+                  {
+                    "login": "mrhaandi",
+                    "name": "Andrej Dudenhefner"
+                  },
+                  {
+                    "login": "rtetley",
+                    "name": "Romain Tetley"
+                  },
+                  {
+                    "login": "PierreCorbineau",
+                    "name": "Pierre Corbineau"
+                  },
+                  {
+                    "login": "yannl35133",
+                    "name": null
+                  },
+                  {
+                    "login": "rnollet",
+                    "name": "Rémi Nollet"
+                  },
+                  {
+                    "login": "Villetaneuse",
+                    "name": "Pierre Rousselin"
+                  }
+                ]
+              }
+            },
+            {
               "slug": "coq-makefile-maintainers",
               "name": "coq-makefile-maintainers",
               "description": "The code owners for the coq_makefile tool.",
@@ -260,6 +545,63 @@
                   {
                     "login": "Alizter",
                     "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "core",
+              "name": "Core",
+              "description": "",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "tabareau",
+                    "name": "nicolas tabareau"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ybertot",
+                    "name": "Yves Bertot"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
                   }
                 ]
               }
@@ -907,6 +1249,163 @@
                   {
                     "login": "ppedrot",
                     "name": "Pierre-Marie Pédrot"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "pushers",
+              "name": "Pushers",
+              "description": "Maintainers (of components) who have the responsibility of merging pull requests.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "kyoDralliam",
+                    "name": "Kenji Maillard"
+                  },
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "pi8027",
+                    "name": "Kazuhiko Sakaguchi"
+                  },
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "bgregoir",
+                    "name": null
+                  },
+                  {
+                    "login": "andres-erbsen",
+                    "name": "Andres Erbsen"
+                  },
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "jfehrle",
+                    "name": "Jim Fehrle"
+                  },
+                  {
+                    "login": "tchajed",
+                    "name": "Tej Chajed"
+                  },
+                  {
+                    "login": "aspiwack",
+                    "name": "Arnaud Spiwack"
+                  },
+                  {
+                    "login": "tabareau",
+                    "name": "nicolas tabareau"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "anton-trunov",
+                    "name": "Anton Trunov"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "amahboubi",
+                    "name": "Assia Mahboubi"
+                  },
+                  {
+                    "login": "Lysxia",
+                    "name": "Xia Li-yao"
+                  },
+                  {
+                    "login": "ybertot",
+                    "name": "Yves Bertot"
+                  },
+                  {
+                    "login": "Matafou",
+                    "name": "Pierre Courtieu"
+                  },
+                  {
+                    "login": "fajb",
+                    "name": "Frédéric Besson"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "cpitclaudel",
+                    "name": "Clément Pit-Claudel"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  },
+                  {
+                    "login": "erikmd",
+                    "name": "Erik Martin-Dorel"
+                  },
+                  {
+                    "login": "ggonthier",
+                    "name": "Georges Gonthier"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  },
+                  {
+                    "login": "VincentSe",
+                    "name": "Vincent Semeria"
+                  },
+                  {
+                    "login": "ana-borges",
+                    "name": "Ana de Almeida Borges"
+                  },
+                  {
+                    "login": "forestjulien",
+                    "name": null
+                  },
+                  {
+                    "login": "olaure01",
+                    "name": "Olivier Laurent"
+                  },
+                  {
+                    "login": "PierreCorbineau",
+                    "name": "Pierre Corbineau"
+                  },
+                  {
+                    "login": "Villetaneuse",
+                    "name": "Pierre Rousselin"
                   }
                 ]
               }

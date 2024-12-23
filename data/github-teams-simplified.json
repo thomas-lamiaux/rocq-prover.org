@@ -175,6 +175,359 @@
       ]
     },
     {
+      "id": "contributors",
+      "name": "Contributors",
+      "description": "Regular contributors: can triage issues and PRs (label, close, edit comments, push to a PR branch if activated by the PR author...)",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Janno",
+          "role": "Member",
+          "name": "Jan-Oliver Kaiser"
+        },
+        {
+          "github": "kyoDralliam",
+          "role": "Member",
+          "name": "Kenji Maillard"
+        },
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "pi8027",
+          "role": "Member",
+          "name": "Kazuhiko Sakaguchi"
+        },
+        {
+          "github": "spitters",
+          "role": "Member",
+          "name": "Bas Spitters"
+        },
+        {
+          "github": "Blaisorblade",
+          "role": "Member",
+          "name": "Paolo G. Giarrusso"
+        },
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "Armael",
+          "role": "Member",
+          "name": "Armaël Guéneau"
+        },
+        {
+          "github": "RalfJung",
+          "role": "Member",
+          "name": "Ralf Jung"
+        },
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "palmskog",
+          "role": "Member",
+          "name": "Karl Palmskog"
+        },
+        {
+          "github": "gasche",
+          "role": "Member",
+          "name": "Gabriel Scherer"
+        },
+        {
+          "github": "robbertkrebbers",
+          "role": "Member",
+          "name": "Robbert Krebbers"
+        },
+        {
+          "github": "yurug",
+          "role": "Member",
+          "name": "Yann Régis Gianas"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "aa755",
+          "role": "Member",
+          "name": "Abhishek Anand"
+        },
+        {
+          "github": "pirbo",
+          "role": "Member",
+          "name": "Pierre Boutillier"
+        },
+        {
+          "github": "bgregoir",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "corwin-of-amber",
+          "role": "Member",
+          "name": "Shachar Itzhaky"
+        },
+        {
+          "github": "llelf",
+          "role": "Member",
+          "name": "antonio nikishaev"
+        },
+        {
+          "github": "andres-erbsen",
+          "role": "Member",
+          "name": "Andres Erbsen"
+        },
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "barras",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "jfehrle",
+          "role": "Member",
+          "name": "Jim Fehrle"
+        },
+        {
+          "github": "tchajed",
+          "role": "Member",
+          "name": "Tej Chajed"
+        },
+        {
+          "github": "thierry-martinez",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "LasseBlaauwbroek",
+          "role": "Member",
+          "name": "Lasse Blaauwbroek"
+        },
+        {
+          "github": "aspiwack",
+          "role": "Member",
+          "name": "Arnaud Spiwack"
+        },
+        {
+          "github": "tabareau",
+          "role": "Member",
+          "name": "nicolas tabareau"
+        },
+        {
+          "github": "rlepigre",
+          "role": "Member",
+          "name": "Rodolphe Lepigre"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "bollu",
+          "role": "Member",
+          "name": "Siddharth"
+        },
+        {
+          "github": "jashug",
+          "role": "Member",
+          "name": "Jasper Hugunin"
+        },
+        {
+          "github": "cmangin",
+          "role": "Member",
+          "name": "Cyprien Mangin"
+        },
+        {
+          "github": "psteckler",
+          "role": "Member",
+          "name": "Paul Steckler"
+        },
+        {
+          "github": "anton-trunov",
+          "role": "Member",
+          "name": "Anton Trunov"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "amahboubi",
+          "role": "Member",
+          "name": "Assia Mahboubi"
+        },
+        {
+          "github": "Lysxia",
+          "role": "Member",
+          "name": "Xia Li-yao"
+        },
+        {
+          "github": "vbgl",
+          "role": "Member",
+          "name": "Vincent Laporte"
+        },
+        {
+          "github": "ybertot",
+          "role": "Member",
+          "name": "Yves Bertot"
+        },
+        {
+          "github": "fakusb",
+          "role": "Member",
+          "name": "Fabian Kunze"
+        },
+        {
+          "github": "Matafou",
+          "role": "Member",
+          "name": "Pierre Courtieu"
+        },
+        {
+          "github": "amintimany",
+          "role": "Member",
+          "name": "Amin Timany"
+        },
+        {
+          "github": "TheoWinterhalter",
+          "role": "Member",
+          "name": "Théo Winterhalter"
+        },
+        {
+          "github": "fajb",
+          "role": "Member",
+          "name": "Frédéric Besson"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        },
+        {
+          "github": "liyishuai",
+          "role": "Member",
+          "name": "Yishuai Li"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "cpitclaudel",
+          "role": "Member",
+          "name": "Clément Pit-Claudel"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        },
+        {
+          "github": "tlringer",
+          "role": "Member",
+          "name": "Talia Ringer"
+        },
+        {
+          "github": "erikmd",
+          "role": "Member",
+          "name": "Erik Martin-Dorel"
+        },
+        {
+          "github": "ggonthier",
+          "role": "Member",
+          "name": "Georges Gonthier"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        },
+        {
+          "github": "hendriktews",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "VincentSe",
+          "role": "Member",
+          "name": "Vincent Semeria"
+        },
+        {
+          "github": "ana-borges",
+          "role": "Member",
+          "name": "Ana de Almeida Borges"
+        },
+        {
+          "github": "forestjulien",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "olaure01",
+          "role": "Member",
+          "name": "Olivier Laurent"
+        },
+        {
+          "github": "mrhaandi",
+          "role": "Member",
+          "name": "Andrej Dudenhefner"
+        },
+        {
+          "github": "rtetley",
+          "role": "Member",
+          "name": "Romain Tetley"
+        },
+        {
+          "github": "PierreCorbineau",
+          "role": "Member",
+          "name": "Pierre Corbineau"
+        },
+        {
+          "github": "yannl35133",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "rnollet",
+          "role": "Member",
+          "name": "Rémi Nollet"
+        },
+        {
+          "github": "Villetaneuse",
+          "role": "Member",
+          "name": "Pierre Rousselin"
+        }
+      ]
+    },
+    {
       "id": "coq-makefile-maintainers",
       "name": "coq-makefile-maintainers",
       "description": "The code owners for the coq_makefile tool.",
@@ -283,6 +636,74 @@
           "github": "Alizter",
           "role": "Member",
           "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "name": "Core",
+      "description": "",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "tabareau",
+          "role": "Member",
+          "name": "nicolas tabareau"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ybertot",
+          "role": "Member",
+          "name": "Yves Bertot"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
         }
       ]
     },
@@ -1004,6 +1425,199 @@
           "github": "ppedrot",
           "role": "Member",
           "name": "Pierre-Marie Pédrot"
+        }
+      ]
+    },
+    {
+      "id": "pushers",
+      "name": "Pushers",
+      "description": "Maintainers (of components) who have the responsibility of merging pull requests.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "kyoDralliam",
+          "role": "Member",
+          "name": "Kenji Maillard"
+        },
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "pi8027",
+          "role": "Member",
+          "name": "Kazuhiko Sakaguchi"
+        },
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "bgregoir",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "andres-erbsen",
+          "role": "Member",
+          "name": "Andres Erbsen"
+        },
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "jfehrle",
+          "role": "Member",
+          "name": "Jim Fehrle"
+        },
+        {
+          "github": "tchajed",
+          "role": "Member",
+          "name": "Tej Chajed"
+        },
+        {
+          "github": "aspiwack",
+          "role": "Member",
+          "name": "Arnaud Spiwack"
+        },
+        {
+          "github": "tabareau",
+          "role": "Member",
+          "name": "nicolas tabareau"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "anton-trunov",
+          "role": "Member",
+          "name": "Anton Trunov"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "amahboubi",
+          "role": "Member",
+          "name": "Assia Mahboubi"
+        },
+        {
+          "github": "Lysxia",
+          "role": "Member",
+          "name": "Xia Li-yao"
+        },
+        {
+          "github": "ybertot",
+          "role": "Member",
+          "name": "Yves Bertot"
+        },
+        {
+          "github": "Matafou",
+          "role": "Member",
+          "name": "Pierre Courtieu"
+        },
+        {
+          "github": "fajb",
+          "role": "Member",
+          "name": "Frédéric Besson"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "cpitclaudel",
+          "role": "Member",
+          "name": "Clément Pit-Claudel"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        },
+        {
+          "github": "erikmd",
+          "role": "Member",
+          "name": "Erik Martin-Dorel"
+        },
+        {
+          "github": "ggonthier",
+          "role": "Member",
+          "name": "Georges Gonthier"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        },
+        {
+          "github": "VincentSe",
+          "role": "Member",
+          "name": "Vincent Semeria"
+        },
+        {
+          "github": "ana-borges",
+          "role": "Member",
+          "name": "Ana de Almeida Borges"
+        },
+        {
+          "github": "forestjulien",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "olaure01",
+          "role": "Member",
+          "name": "Olivier Laurent"
+        },
+        {
+          "github": "PierreCorbineau",
+          "role": "Member",
+          "name": "Pierre Corbineau"
+        },
+        {
+          "github": "Villetaneuse",
+          "role": "Member",
+          "name": "Pierre Rousselin"
         }
       ]
     },

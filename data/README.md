@@ -7,7 +7,7 @@ To generate the `github_teams.json` file, run the following GraphQL query (for i
 ```graphql
 query {
   organization(login: "coq") {
-    teams(first: 100, query: "-") {
+    teams(first: 100) {
       totalCount
       nodes {
         slug

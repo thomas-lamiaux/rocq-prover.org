@@ -1,5 +1,6 @@
 open Ocamlorg.Import
 open Data_intf.Governance
+open Member
 
 type metadata = {
   teams : team list;
@@ -20,12 +21,24 @@ let merge_teams (reference : team list) (additions : team list) =
       match reference with
       | [] -> []
       | r :: rs ->
-        if r.id = team.id then
-          { r with members = List.append r.members team.members } :: rs
-        else if r.subteams = [] then
-          r :: (merge_subteam rs team)
-        else
-          { r with subteams = merge_subteam r.subteams team } :: (merge_team rs team)
+          if r.id = team.id then
+            {
+              r with
+              members =
+                List.append r.members
+                  (List.filter
+                     (fun m ->
+                       not
+                         (List.exists
+                            (fun m' -> m'.github = m.github)
+                            r.members))
+                     team.members);
+            }
+            :: rs
+          else if r.subteams = [] then r :: merge_subteam rs team
+          else
+            { r with subteams = merge_subteam r.subteams team }
+            :: merge_team rs team
     in
     merge_subteam reference team
   in
