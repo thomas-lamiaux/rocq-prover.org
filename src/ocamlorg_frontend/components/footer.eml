@@ -3,7 +3,7 @@ let about_rocq = [
   (Url.releases, "Releases");
   (Url.industrial_users, "Industrial Users");
   (Url.academic_users, "Academic Users");
-  (Url.about, "History");
+  (Url.about ^ "#history", "History");
   (Url.why, "Why Rocq?");
   (Url.roadmap, "Roadmap");
   ]

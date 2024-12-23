@@ -3,7 +3,7 @@ let open Cite in
 let cite = Citations.start () in
 Layout.render
 ~title:"Why Rocq?"
-~description:"Rocq is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about what makes it unique."
+~description:"The Rocq Prover is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about what makes it unique."
 ~canonical:Url.about @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
   <div class="container-fluid">
@@ -37,6 +37,7 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
+        <p>See also <a href="<%s Url.about %>">About Rocq</a> for a more high-level introduction to the Rocq Prover.</p>
         <h2 id="strengths">Strengths</h2>
         <div class="space-y-10">
           <p> 

@@ -35,14 +35,14 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
-        <h2 id="strength">What is The Rocq Prover?</h2>
+        <h2 id="strength">What is the Rocq Prover?</h2>
         <div class="space-y-10">
 
 
           <P> 
             The Rocq Prover implements a high-level program specification and mathematical language called Gallina that is based on an expressive 
             formal language called the Polymorphic, Cumulative Calculus of Inductive Constructions that itself combines both a higher-order logic and a 
-            richly-typed functional programming language. Through a vernacular language of commands, Rocq allows:
+            richly-typed functional programming language. Through a vernacular language of commands, the Rocq Prover allows:
           </p>
           <ul>
             <li> to define data structures, functions or predicates, that can be evaluated efficiently;</li>
@@ -55,13 +55,15 @@ Layout.render
           <p>
             As a proof development system, the Rocq prover provides interactive proof methods, decision and semi-decision algorithms, 
             and a tactic language for letting the user define its own proof methods. 
-            Connection with external computer algebra system or theorem provers is available.
+            Connection with external computer algebra systems or theorem provers is available.
           </p>
 
           <p>
             As a platform for the formalization of mathematics or the development of programs, 
             the Rocq prover provides support for high-level notations, implicit contents and other mechanisms for formalization at scale.
           </p>
+          <p>
+            Read more about the features that make the Rocq prover unique in the <a href="<%s Url.why %>">Why Rocq?</a> section.
           <h2 id="history">A Brief History</h2>
           <p>
             The Rocq prover is the result of more than 40 years of research. It started in 1984 from an implementation of the Calculus of Constructions 
@@ -70,12 +72,10 @@ Layout.render
           </p>
           <p>
             The <a href="<%s Url.governance %>">Rocq Team</a> is responsible for the development of
-            Rocq and integration of contributions. See credits for a detailed list of contributors over the years, the history and 
-            recent changes chapters in the Rocq Reference Manual for detailed information about changes in the system or the synthetic 
-            <a href="https://coq.inria.fr/who-did-what-in-coq">who did what</a> table for an overview of the systems contributors.
+            Rocq and integration of contributions. See <a href="/refman/changes.html">the changelog</a> for a detailed list of contributors in each release of Rocq and <a href="/refman/history.html">the history page in the reference manual</a> for the early history of Rocq.
           </p>
           <p>
-            Rocq is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
+            The Rocq prover is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
           </p>
           <h2 id="Name">An Overview of the Name's Evolution</h2>
           <p>
