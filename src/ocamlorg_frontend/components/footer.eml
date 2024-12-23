@@ -5,6 +5,7 @@ let about_rocq = [
   (Url.academic_users, "Academic Users");
   (Url.about, "History");
   (Url.why, "Why Rocq?");
+  (Url.roadmap, "Roadmap");
   ]
 
 let resources = [
@@ -24,7 +25,7 @@ let ecosystem = [
   (Url.packages, "Packages");
   (Url.community, "Community");
   (Url.events, "Events");
-  (* (Url.rocq_planet, "Rocq Planet"); *)
+  (Url.rocq_planet, "Rocq Planet");
   (Url.jobs, "Jobs");
   ]
 

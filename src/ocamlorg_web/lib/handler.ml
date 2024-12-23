@@ -10,6 +10,7 @@ let ( let</>? ) opt = http_or_404 opt
 let index _req =
   Dream.html
     (Ocamlorg_frontend.home ~latest_release:Data.Release.latest
+       ~latest_platform_release:Data.Release.latest_platform
        ~lts_release:Data.Release.lts
        ~releases:(List.take 2 Data.Release.all)
        ~changelogs:(List.take 3 Data.Changelog.all))
