@@ -44,11 +44,11 @@ Here are the different categories of expected stakeholders for the Rocq Platform
 
 ## Package inclusion process
 
-- Packages are typically included on user request via a github issue.
+- Packages are typically included on user request via a [GitHub issue](https://github.com/coq/platform/issues?q=is%3Aissue+label%3A%22kind%3A+package+inclusion%22).
 
 - Requests should contain a justification. Good justifications are usage of the package in a regular course or a course with more than 25 attendees or usage of the package as prerequisite in at least three other packages or research developments by authors other than the author of the original package.
 
-- The author(s) or current maintainer(s) of the package shall agree to the inclusion of their package in the Rocq Platform. This means that they agree to put reasonable effort into releasing a version of the package compatible with each new Rocq release shortly after every Rocq release and to maintain some relative stability between each release. The agreement of the authors is given via a comment in the respective github issue.
+- The author(s) or current maintainer(s) of the package shall agree to the inclusion of their package in the Rocq Platform. This means that they agree to put reasonable effort into releasing a version of the package compatible with each new Rocq Prover release shortly after every release and to maintain some relative stability between each release. The agreement of the authors is given via a comment in the respective GitHub issue.
 
 - All the dependencies of a Platform package are also officially part of the Platform. This means in particular that, apart from dependencies that are outside the Rocq ecosystem and are well-known to be stable and well supported, the maintainers of the dependencies should also agree to the inclusion in the Platform and commit to keep producing new compatible releases which are relatively stable. As part of the stability commitment, maintainers should refrain from adding new dependencies that are not already part of the Platform without raising the question with the Platform maintainers.
 
@@ -56,13 +56,13 @@ Here are the different categories of expected stakeholders for the Rocq Platform
 
 - The exclusion of a package shall be a rare event.
 
-- In case the package authors / maintainers cannot maintain compatibility to a new Rocq release in the expected time, for one release the curator will try to organize maintenance otherwise. The Platform curator will also have timely discussions with the Rocq team in case changes in the Rocq Prover might lead to substantial maintenance effort in a Platform package. If the maintenance problem continues for the next release, the curator can remove a package from the Platform. The Platform users shall be informed about such a decision as early as possible, at least 1 month before a Platform release.
+- In case the package authors / maintainers cannot maintain compatibility to a new Rocq Prover release in the expected time, for one release the curator will try to organize maintenance otherwise. The Platform curator will also have timely discussions with the Rocq team in case changes in the Rocq Prover might lead to substantial maintenance effort in a Platform package. If the maintenance problem continues for the next release, the curator can remove a package from the Platform. The Platform users shall be informed about such a decision as early as possible, at least 1 month before a Platform release.
 
 ## Questions to be resolved
 
 ### Quality constraints for included packages
 
-For now, we haven't set any quality constraints beyond the fact that the packages are sufficiently used and stable. But other constraints, such as the existence of complete documentation, might be set in the future.
+For now, we haven't set any quality constraints beyond the fact that the packages are sufficiently used and stable. But other constraints, such as the existence of complete documentation, might be set in the future. The [Rocq Platform Docs](/docs/platform-docs) project aims to eventually provide tutorials and how-to guides covering the full extent of the Rocq Platform.
 
 ### Licensing constraints for included packages
 
@@ -70,7 +70,7 @@ The current Platform includes packages under a variety of licenses, including no
 
 ### Several tiers
 
-If it turns out that it would help providing timely releases or solving the licensing questions raised above, we might decide to provide several tiers of the Rocq Platform. For instance, we could provide both a core Rocq Platform that would be released only weeks after a Rocq release and provide a basic set of Rocq packages with strict inclusion criteria, and an extended Rocq Platform that would be released months after and provide a larger set of packages with more lax inclusion criteria. If we were to provide several tiers, the naming scheme for those is still to be determined.
+If it turns out that it would help providing timely releases or solving the licensing questions raised above, we might decide to provide several tiers of the Rocq Platform. For instance, we could provide both a core Rocq Platform that would be released only weeks after a Rocq Prover release and provide a basic set of Rocq packages with strict inclusion criteria, and an extended Rocq Platform that would be released months after and provide a larger set of packages with more lax inclusion criteria. If we were to provide several tiers, the naming scheme for those is still to be determined.
 
 ### Other questions?
 
@@ -78,7 +78,7 @@ If you do see other questions that should be addressed in the Platform charter, 
 
 ## The Rocq Platform from a technical point of view
 
-Technically the Rocq Platform is a GitHub repo containing:
+Technically the Rocq Platform is a [GitHub repository](https://github.com/coq/platform) containing:
 
 - Information on packages included in the Platform and their versions, sources, build instructions. This information is either given as an opam repo, or there will be automated scripts to generate the opam repo from it.
 
