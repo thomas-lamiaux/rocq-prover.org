@@ -288,3 +288,42 @@ summary::-webkit-details-marker {
 .overlay {
   backdrop-filter: blur(1px);
 }
+
+.iris-container {
+  position: relative;
+  top: 10%;
+  left: 0;
+  width: 400px;
+  height: 600px;
+}
+
+.iris-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.iris-proof-script {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  display: block;
+  z-index: 1;
+}
+
+.iris-proof-goal {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 95%;
+  height: 95%;
+  display: none;
+  z-index: 3;
+}
+
+.iris-container:hover .iris-proof-goal {
+  display: block;
+}
