@@ -37,6 +37,42 @@ let render_dev_meeting (dev_meeting : Data.Governance.dev_meeting) _class =
       <% ; %>
     </div>
   </div>
+
+(* Define a string index map for members *)
+module MemberMap = Map.Make (String)
+
+let flatten_subteams (team : Data.Governance.team) =
+  let open Data.Governance in
+  List.fold_left
+    (fun acc subteam ->
+      List.fold_left
+        (fun acc member ->
+          MemberMap.update
+            (member.Member.github : string)
+            (fun m ->
+              match m with
+              | None -> Some (member, [ subteam.name ])
+              | Some (m, subteams) -> Some (m, subteam.name :: subteams))
+            acc)
+        acc subteam.members)
+    (team.members
+    |> List.map (fun m -> (m.Member.github, (m, [])))
+    |> MemberMap.of_list)
+    team.subteams
+  |> MemberMap.bindings |> List.map snd
+  |> List.map (fun (member, subteams) ->
+         {
+           member with
+           Member.role =
+             Some
+               (Option.value
+                  ~default:(Option.value ~default:"Member" team.default_role)
+                  member.Member.role
+               ^ " ("
+               ^ String.concat ", " (List.rev subteams)
+               ^ ")");
+         })
+
 let render_subteam (team : Data.Governance.team) =
   <div class="border-b last:border-b-0 border-separator_20 dark:border-dark-separator_30">
     <h3 class="gradient font-semibold text-3xl mb-4 text-title dark:text-dark-title"><%s team.name %></h3>
@@ -58,7 +94,9 @@ let render_subteam (team : Data.Governance.team) =
     </div>
     <% ); %>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-6 mb-4 pb-12">
-      <%s! team.members |> List.map (fun (member : Data.Governance.Member.t) -> render_team_member ?default_role:team.default_role member ) |> String.concat "\n" %>
+      <%s! (if List.is_empty team.subteams then team.members else flatten_subteams team)
+      |> List.map (fun (member : Data.Governance.Member.t) -> render_team_member ?default_role:team.default_role member )
+      |> String.concat "\n" %>
     </div>
   </div>
 

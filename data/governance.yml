@@ -49,7 +49,7 @@ teams:
   description: The Community team is responsible for managing forums, social media, and community events.
   contacts: []
   subteams:
-  - id: code-of-conduct
+  - id: code-of-conduct-team
     name: Code of Conduct Enforcement
     description: The Code of Conduct Enforcement team is responsible for enforcing the
       Code of Conduct across all Rocq project spaces.
@@ -57,16 +57,6 @@ teams:
     - name: Code of Conduct Enforcement Team
       link: mailto:coq-conduct@inria.fr
       kind: email
-    members:
-    - name: Matthieu Sozeau
-      github: mattam82
-      role: Member
-    - name: Nicolas Tabareau
-      github: tabareau
-      role: Member
-    - name: Théo Zimmermann
-      github: Zimmi48
-      role: Member
   - id: Discourse
     name: Discourse administration and moderation
     description: The Discourse team is responsible for the administration and moderation of the Rocq Discourse forum.
@@ -132,56 +122,73 @@ teams:
   subteams:
   - id: kernel
     name: Rocq Kernel and Trusted Code Base
-    description: The kernel-maintainers, universes-maintainers, and vm-native-maintainers teams.
+    description: The kernel-maintainers, library-maintainers (vo file loading), universes-maintainers, and vm-native-maintainers teams.
+    default_role: Maintainer
     contacts: []
-    members:
-    - name: Gaëtan Gilbert
-      github: SkySkimmer
-      role: Maintainer (kernel, universes)
-    - name: Erik Martin-Dorel
-      github: erikmd
-      role: Maintainer (vm-native)
-    - name: Guillaume Melquiond
-      github: silene
-      role: Maintainer (vm-native)
-    - name: Pierre-Marie Pédrot
-      github: ppedrot
-      role: Maintainer (kernel, universes, vm-native)
-    - name: Pierre Roux
-      github: proux01
-      role: Maintainer (vm-native)
-    - name: Matthieu Sozeau
-      github: mattam82
-      role: Maintainer (universes)
+    subteams:
+    - id: kernel-maintainers
+      name: kernel
+      description: ""
+      contacts: []
+    - id: library-maintainers
+      name: library
+      description: ""
+      contacts: []
+    - id: universes-maintainers
+      name: universes
+      description: ""
+      contacts: []
+    - id: vm-native-maintainers
+      name: vm-native
+      description: ""
+      contacts: []
   - id: elaboration
     name: Rocq Elaboration
-    description: The engine-maintainers, extensible-syntax-maintainers, ltac-maintainers, pretyper-maintainers, tactics-maintainers, typeclasses-maintainers, and vernac-maintainers teams.
+    description: The derive-maintainers, engine-maintainers, extensible-syntax-maintainers, funind-maintainers, ltac-maintainers, parsing-maintainers, pretyper-maintainers, tactics-maintainers, typeclasses-maintainers, and vernac-maintainers teams.
+    default_role: Maintainer
     contacts: []
-    members:
-    - name: Ali Caglayan
-      github: Alizter
-      role: Maintainer (vernac)
-    - name: Emilio Jesús Gallego Arias
-      github: ejgallego
-      role: Maintainer (engine, extensible-syntax, vernac)
-    - name: Gaëtan Gilbert
-      github: SkySkimmer
-      role: Maintainer (engine, ltac, vernac)
-    - name: Hugo Herbelin
-      github: herbelin
-      role: Maintainer (engine, extensible-syntax, ltac, tactics)
-    - name: Pierre-Marie Pédrot
-      github: ppedrot
-      role: Maintainer (engine, ltac, pretyper, tactics, typeclasses)
-    - name: Pierre Roux
-      github: proux01
-      role: Maintainer (extensible-syntax)
-    - name: Matthieu Sozeau
-      github: mattam82
-      role: Maintainer (extensible-syntax, pretyper, tactics, typeclasses, vernac)
-    - name: Enrico Tassi
-      github: gares
-      role: Maintainer (pretyper)
+    members: []
+    subteams:
+    - id: derive-maintainers
+      name: derive
+      description: ""
+      contacts: []
+    - id: engine-maintainers
+      name: engine
+      description: ""
+      contacts: []
+    - id: extensible-syntax-maintainers
+      name: extensible-syntax
+      description: ""
+      contacts: []
+    - id: funind-maintainers
+      name: funind
+      description: ""
+      contacts: []
+    - id: ltac-maintainers
+      name: ltac
+      description: ""
+      contacts: []
+    - id: parsing-maintainers
+      name: parsing
+      description: ""
+      contacts: []
+    - id: pretyper-maintainers
+      name: pretyper
+      description: ""
+      contacts: []
+    - id: tactics-maintainers
+      name: tactics
+      description: ""
+      contacts: []
+    - id: typeclasses-maintainers
+      name: typeclasses
+      description: ""
+      contacts: []
+    - id: vernac-maintainers
+      name: vernac
+      description: ""
+      contacts: []
   - id: ltac2-maintainers
     name: Ltac2
     description: The Ltac2 tactic language team.
@@ -216,17 +223,17 @@ teams:
   - id: document-managers
     name: Document Managers and top-level interfaces
     description: The stm-maintainers and toplevel-maintainers teams.
+    default_role: Maintainer
     contacts: []
-    members:
-    - name: Emilio Jesús Gallego Arias
-      github: ejgallego
-      role: Maintainer (toplevel)
-    - name: Gaëtan Gilbert
-      github: SkySkimmer
-      role: Maintainer (stm)
-    - name: Enrico Tassi
-      github: gares
-      role: Maintainer (stm, toplevel)
+    subteams:
+    - id: stm-maintainers
+      name: stm
+      description: ""
+      contacts: []
+    - id: toplevel-maintainers
+      name: toplevel
+      description: ""
+      contacts: []
   - id: vscoq-maintainers
     name: VS Rocq
     description: The Visual Studio Code Rocq plugin team.
@@ -409,7 +416,7 @@ teams:
       role: Team leader
   - id: ci-maintainers
     name: Continuous Integration
-    description: The Continuous Integration team is responsible for the development and maintenance of the CI infrastructure of the Rocq project.
+    description: The infrastructure to continuously build and test the Rocq project, including compatibility with reverse dependencies.
     contacts: []
     members: []
   - id: bench-maintainers
