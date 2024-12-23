@@ -70,7 +70,7 @@ dark: {
 .bg-code_window, pre{
   background: linear-gradient(0deg, #fdf6f2, #fff6f3, #fff5f3, #fcf1f0, #faf7f7);
 }
-
+.dark-bg-code_window,
 .dark .bg-code_window, .dark pre{
   background: linear-gradient(177deg, #1d1d27, #151522);
   color:white;

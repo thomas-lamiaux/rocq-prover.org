@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const figma_colors = {
     primary: "#260085",
     primary_40: "#3A00CC",
-    primary_25: "#3e3bc6",
+    primary_25: "#f0dad1",
     primary_dark: "#170052",
     primary_nav_block_hover_10:"#f0dad1",
 
