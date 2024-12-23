@@ -360,7 +360,7 @@ teams:
   description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.
   contacts: []
   subteams:
-  - id: refman
+  - id: doc-maintainers
     name: Reference Manual
     description: The Reference Manual team is responsible for the development and maintenance of the Rocq reference manual.
     contacts: []
@@ -373,7 +373,7 @@ teams:
       link: https://github.com/coq/platform-docs
       kind: github
     members: []
-  - id: website
+  - id: website-maintainers
     name: Website
     description: The Website team is responsible for the development and maintenance of the rocq-prover.org website.
     contacts:

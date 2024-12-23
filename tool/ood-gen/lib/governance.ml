@@ -7,6 +7,30 @@ type metadata = {
 }
 [@@deriving of_yaml]
 
+let merge_teams (reference : team list) (additions : team list) =
+  (* The team ids are used to determine if a team is already present
+   * in the reference list, including as a subteam.
+   * If that's the case, we merge the members of the two teams.
+   * The github keys are used to determine if a member is already present
+   * in the reference team. *)
+  (* For each team in the additions list, we check if it is already present
+   * in the reference list (including as a subteam). *)
+  let rec merge_team reference team =
+    let rec merge_subteam reference team =
+      match reference with
+      | [] -> []
+      | r :: rs ->
+        if r.id = team.id then
+          { r with members = List.append r.members team.members } :: rs
+        else if r.subteams = [] then
+          r :: (merge_subteam rs team)
+        else
+          { r with subteams = merge_subteam r.subteams team } :: (merge_team rs team)
+    in
+    merge_subteam reference team
+  in
+  List.fold_left merge_team reference additions
+
 let teams file =
   let file = file in
   let result =
@@ -29,6 +53,6 @@ let teams = %a
 let working_groups = %a
 |}
     (Fmt.brackets (Fmt.list pp_team ~sep:Fmt.semi))
-    github_teams.teams
+    (merge_teams governance.teams github_teams.teams)
     (Fmt.brackets (Fmt.list pp_team ~sep:Fmt.semi))
     governance.working_groups
