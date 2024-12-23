@@ -280,3 +280,41 @@ papers:
       Assistants"
     type: article-journal
     url: "https://nantes-universite.hal.science/hal-04801739"
+  - abstract: Motivated by applications to proof assistants based on
+      dependent types, we develop and prove correct a strong reducer and
+      β-equivalence checker for the λ-calculus with
+      products, sums, and guarded fixpoints. Our approach is based on
+      compilation to the bytecode of an abstract machine performing weak
+      reductions on non-closed terms, derived with minimal modifications
+      from the ZAM machine used in the Objective Caml bytecode
+      interpreter, and complemented by a recursive "read back" procedure.
+      An implementation in the Coq proof assistant demonstrates important
+      speed-ups compared with the original interpreter-based
+      implementation of strong reduction in Coq.
+    author:
+    - family: Grégoire
+      given: Benjamin
+    - family: Leroy
+      given: Xavier
+    container-title: International Conference on Functional Programming
+    id: Gregoire-Leroy-02
+    issued: 2002
+    page: 235-246
+    publisher: ACM Press
+    title: A compiled implementation of strong reduction
+    type: paper-conference
+    url: "http://pauillac.inria.fr/\\~xleroy/publi/strong-reduction.pdf"
+    doi: 10.1145/581478.581501
+  - author:
+    - family: Dénès
+      given: Maxime
+    id: "denes:tel-00945775"
+    issued: 2013
+    month: 11
+    keyword: Formalized mathematics, Certified algorithms, Linear
+      algebra, Formal proofs, Efficient verified computations, Homology
+    number: 2013NICE4103
+    publisher: Université Nice Sophia Antipolis
+    title: "Étude formelle d'algorithmes efficaces en algèbre linéaire"
+    type: thesis
+    url: "https://theses.hal.science/tel-00945775"    

@@ -478,7 +478,10 @@ module Paper = struct
         | Some pub -> pub
         | None -> 
           match r.Record.container_title with
-          | None -> raise (Invalid_argument "Yaml record does not contain any of the publication or container_title fields" )
+          | None -> 
+            (match r.Record.publisher with
+            | Some pub -> pub
+            | None -> raise (Invalid_argument "Yaml record does not contain any of the publication, publisher or container_title fields" ))
           | Some pub -> pub
       in 
       pub
