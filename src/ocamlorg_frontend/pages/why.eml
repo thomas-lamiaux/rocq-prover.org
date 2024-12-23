@@ -46,7 +46,7 @@ Layout.render
             formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
             and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
             and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
-            The Calculus of Constructions [<a href="<%s Citations.cite cite "the-calculus-of-constructions" %>">1988</a>], due to Thierry Coquand and Gérard Huet,
+            The Calculus of Constructions <sup><a class="font-bold" href="<%s Citations.cite cite "the-calculus-of-constructions" %>">1</a></sup>, due to Thierry Coquand and Gérard Huet,
             is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
             with a infinite, predicative and cumulative hierarchy of universes Type@{i} for computational types
             and two impredicative propositional universes, Prop and SProp for proof-irrelevant and definitionally proof-irrelevant 
@@ -65,8 +65,7 @@ Layout.render
             <li>
               <strong>(Co-)Inductive Type Families, mutual and nested:</strong>
               PCUIC is an evolution of the Calculus of Inductive Constructions introduced by 
-              Thierry Coquand and Christine Paulin-Mohring in [<a href="/papers/inductively-defined-types">1988</a>, 
-              <a href="/papers/inductive-definitions-in-the-system-coq---rules-and-properties">1993</a>]
+              Thierry Coquand and Christine Paulin-Mohring in <sup><a class="font-bold" href="<%s Citations.cite cite "inductively-defined-types" %>">2</a></sup>, <sup><a class="font-bold" href="<%s Citations.cite cite "inductive-definitions-in-the-system-coq---rules-and-properties" %>">3</a></sup>
               as an extension of the Calculus of Constructions with schemes for inductive types and families.
               Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
               like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.
@@ -111,8 +110,7 @@ Layout.render
               call-by-value strong reduction to bytecode close to OCaml's bytecode interpreter. 
               The <a href="/papers/tude-formelle-dalgorithmes-efficaces-en-algbre-linaire"><code class="language-{coq}">native_compute</code> checker</a> uses a 
               compilation scheme that directly links to the native OCaml compiler, for heavy-duty computations. 
-            </li>
-            
+            </li>        
             <li>
               <strong>Certified Type Theory and Extraction:</strong>
               The Rocq Prover is based on the formal verification of its type theory implementation and extraction system,
@@ -147,18 +145,19 @@ Layout.render
             </li>
           </ul>
         </div>
-
         <h2 id="features">Future</h2>
         <div class="space-y-10">
           See our <a href="/roadmap">roadmap</a> for upcoming developments improving the Rocq Prover and Platform.
         </div>
       </div>
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
-        <h4>Bibliography</h4> <!-- FIXME -->
+        <h4 class="pt-12 pb-4">Bibliography</h4> <!-- FIXME -->
         <% Citations.citations cite |> List.iter (fun (number, label, slug) ->
           let paper = Data.Paper.get_by_slug slug in  %>
-          <div id="<%s label %>">
-            [<%s number %>] <div class="inline-block font-bold text-title dark:text-dark-title mb-2""><a href="/papers/<%s slug %>"><%s! (Option.get paper).title %></a>, <%s! Paper.build_citation (Option.get paper) %></div>
+          <div id="<%s label %>" class="mb-4 ">
+            <sup class="font-bold"><%s number %></sup> <div class="text-sm mb-2 inline">
+              <a class="font-bold" href="/papers/<%s slug %>"><%s! (Option.get paper).title %></a>, <%s! Paper.build_citation (Option.get paper) %>
+            </div>
           </div>
         <% ); %>
       </div>

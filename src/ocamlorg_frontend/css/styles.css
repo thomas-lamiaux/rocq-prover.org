@@ -33,6 +33,9 @@ body {
   -o-font-feature-settings: "kern" on, "ss01" on,"ss02" on, "ss07" on, "liga" on;
   -webkit-font-smoothing: antialiased;
 }
+body.dark {
+ color: white;
+}
 
 .container-fluid {
   @apply md:max-w-7xl w-full mx-auto px-4;

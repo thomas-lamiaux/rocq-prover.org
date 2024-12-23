@@ -6,26 +6,20 @@ let list_sep_last l =
     | x :: xs -> aux (x :: acc) xs
   in aux [] l
 
-let no_authors =
-  <%s "No authors" %>
-
-let one_author author =
-  <div class="text-primary"><%s author %></div>
 
 let print_authors l = 
-match l with
-| [] -> no_authors
-| [author] -> one_author author
-| authors -> 
-let authors, last = list_sep_last authors in
-  <%s! String.concat ", " authors ^ " and " ^ last %>
+  match l with
+  | [] -> "no Authors"
+  | [author] -> author
+  | authors -> 
+  let authors, last = list_sep_last authors in
+  String.concat ", " authors ^ " and " ^ last
   
 let build_citation (paper : Data.Paper.t) =
-  <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title inline-block">
-    <div class="text-primary"><%s! print_authors paper.authors %>, <%s paper.publication %> &mdash; <%i paper.year %>
-      <div class="italic"><%s! Option.fold ~none:"" ~some:(fun s -> s) paper.note %></div>
-    </div>
+  <div class="inline"><%s! print_authors paper.authors ^ ", " ^ paper.publication %> &mdash; <%i paper.year %>
+    <div class="italic"><%s! Option.fold ~none:"" ~some:(fun s -> s) paper.note %></div>
   </div>
+  
 
 let render (paper : Data.Paper.t) =
 let citation = build_citation paper in
@@ -39,25 +33,28 @@ Layout.render
     <div class="container-fluid">
       <div class="w-full m-auto">
         <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s! paper.title %></h1><%s! citation %>
-        <div class="py-4 px-6 align-top">
-          <h4 class="font-bold">Links</h4>
-          <ul>
+        <h4 class="pt-8 font-bold">Links</h4>
+        <div class="py-4 align-top flex gap-4">
           <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
-              <li><a href="<%s link.uri %>" class="text-primary dark:text-dark-white dark:underline hover:text-underline dark:hover:text-dark-primary font-medium block whitespace-nowrap">
-                  <%s link.description %>
-              </a></li>
+              <a href="<%s link.uri %>" class="flex flex-col gap-1 border-2 rounded-md px-4 py-2 bg-white dark:bg-dark-card hover:border-primary dark:hover-dark-border-primary hover:ring-2 hover:ring-primary_nav_block_hover_10 dark:hover:ring-dark-primary_nav_block_hover_10">
+                <div class="flex gap-4 items-center">
+                  <%s! Icons.papers "h-5 w-5 text-primary dark:text-dark-primary" %>
+                  <div class="text-primary dark:text-dark-primary text-lg font-normal whitespace-nowrap"><%s link.description %></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-dark-primary" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                  </svg>
+                </div>
+              </a>
               <% ); %>
-          </ul>
         </div>
         <h2 class="font-bold pt-6">Abstract</h4>
         <div class="text-content dark:text-dark-content text-xl pt-6 lg:max-w-[80%]">
           <%s paper.abstract %>
         </div>
-        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
+        <div class="pt-4 lg:py-4 pr-6 font-medium align-top text-title dark:text-dark-title">
           <div class="flex flex-wrap">
             <% paper.tags |> List.iter (fun (tag : string) -> %>
-                <div
-                    class="tag">
+                <div class="tag">
                     <%s tag %>
                 </div>
                 <% ); %>
