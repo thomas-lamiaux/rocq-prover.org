@@ -72,7 +72,7 @@ Learn_layout.single_column_layout
             <% ); %>
         </div>
         <div class="prose dark:prose-invert">
-            If you want to add a new book, check out the <a href="https://github.com/rocq/rocq-prover.org/blob/main/CONTRIBUTING.md#content-book" target="_blank">Contributing Guide</a> on GitHub.     
+            If you want to add a new book, check out the <a href="https://github.com/rocq-prover/rocq-prover.org/blob/main/CONTRIBUTING.md#content-book" target="_blank">Contributing Guide</a> on GitHub.
         </div>
     </div>
 </div>

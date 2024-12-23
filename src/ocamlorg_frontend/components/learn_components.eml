@@ -216,7 +216,7 @@ let contribute_footer ~href ~description ~recommended_next_tutorials =
           >
         </div>
         <div class="mb-2 text-sm">
-          <a href="https://github.com/rocq/rocq-prover.org/issues/new" class="flex items-center gap-3 font-normal sm:text-lg no-underline bg-transparent cursor-pointer hover:underline">
+          <a href="https://github.com/rocq-prover/rocq-prover.org/issues/new" class="flex items-center gap-3 font-normal sm:text-lg no-underline bg-transparent cursor-pointer hover:underline">
             <%s! Icons.github_issue "h-4 w-4" %>
             Open an Issue</a
           >
