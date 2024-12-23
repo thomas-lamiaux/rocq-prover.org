@@ -22,8 +22,10 @@ let resources = [
   ]
 
 let ecosystem = [
+  (Url.platform, "Platform");
   (Url.packages, "Packages");
   (Url.community, "Community");
+  (Url.consortium, "Consortium");
   (Url.events, "Events");
   (Url.rocq_planet, "Rocq Planet");
   (Url.jobs, "Jobs");

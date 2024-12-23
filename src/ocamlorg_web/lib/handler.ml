@@ -44,13 +44,6 @@ let learn_guides req =
   in
   Dream.redirect req (Url.tutorial (List.hd tutorials).slug)
 
-let learn_platform req =
-  let tutorials =
-    Data.Tutorial.all
-    |> List.filter (fun (t : Data.Tutorial.t) -> t.section = Platform)
-  in
-  Dream.redirect req (Url.tutorial (List.hd tutorials).slug)
-
 let community _req =
   let query = Dream.query _req "e" in
   let string_to_event_type s =
