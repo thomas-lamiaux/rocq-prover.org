@@ -19,8 +19,16 @@ match l with
 | authors -> 
 let authors, last = list_sep_last authors in
   <%s! String.concat ", " authors ^ " and " ^ last %>
+  
+let build_citation (paper : Data.Paper.t) =
+  <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title inline-block">
+    <div class="text-primary"><%s! print_authors paper.authors %>, <%s paper.publication %> &mdash; <%i paper.year %>
+      <div class="italic"><%s! Option.fold ~none:"" ~some:(fun s -> s) paper.note %></div>
+    </div>
+  </div>
 
 let render (paper : Data.Paper.t) =
+let citation = build_citation paper in
 Layout.render
 ~title:("Rocq Papers: " ^ paper.title)
 ~description:"Information about an article."
@@ -30,11 +38,7 @@ Layout.render
   <div class="py-10 lg:py-28">
     <div class="container-fluid">
       <div class="w-full m-auto">
-        <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s! paper.title %></h1>
-        <div class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title inline-block">
-          <div class="text-primary"><%s! print_authors paper.authors %>, <%s paper.publication %> &mdash; <%i paper.year %>
-          <div class="italic"><%s! Option.fold ~none:"" ~some:(fun s -> s) paper.note %></div></div>
-        </div>
+        <h1 class="font-bold text-title dark:text-dark-title mb-2""><%s! paper.title %></h1><%s! citation %>
         <div class="py-4 px-6 align-top">
           <h4 class="font-bold">Links</h4>
           <ul>

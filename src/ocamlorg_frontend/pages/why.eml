@@ -1,4 +1,6 @@
 let render () =
+let open Cite in
+let cite = Citations.start () in
 Layout.render
 ~title:"Why Rocq?"
 ~description:"Rocq is a mature, dependently-typed functional programming language and interactive theorem prover. Learn more about what makes it unique."
@@ -43,7 +45,7 @@ Layout.render
             formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
             and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
             and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
-            The Calculus of Constructions [<a href="/papers/the-calculus-of-constructions">1988</a>], due to Thierry Coquand and Gérard Huet,
+            The Calculus of Constructions [<a href="<%s Citations.cite cite "the-calculus-of-constructions" %>">1988</a>], due to Thierry Coquand and Gérard Huet,
             is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
             with a infinite, predicative and cumulative hierarchy of universes Type@{i} for computational types
             and two impredicative propositional universes, Prop and SProp for proof-irrelevant and definitionally proof-irrelevant 
@@ -149,6 +151,15 @@ Layout.render
         <div class="space-y-10">
           See our <a href="/roadmap">roadmap</a> for upcoming developments improving the Rocq Prover and Platform.
         </div>
+      </div>
+      <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
+        <h4>Bibliography</h4> <!-- FIXME -->
+        <% Citations.citations cite |> List.iter (fun (number, label, slug) ->
+          let paper = Data.Paper.get_by_slug slug in  %>
+          <div id="<%s label %>">
+            [<%s number %>] <div class="inline-block font-bold text-title dark:text-dark-title mb-2""><a href="/papers/<%s slug %>"><%s! (Option.get paper).title %></a>, <%s! Paper.build_citation (Option.get paper) %></div>
+          </div>
+        <% ); %>
       </div>
     </div>
   </div>
