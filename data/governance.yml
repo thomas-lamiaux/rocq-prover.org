@@ -227,59 +227,103 @@ teams:
     - name: Enrico Tassi
       github: gares
       role: Maintainer (stm, toplevel)
-  - id: vsrocq
+  - id: vscoq-maintainers
     name: VS Rocq
     description: The Visual Studio Code Rocq plugin team.
     contacts:
     - name: GitHub
       link: https://github.com/coq/vscoq
       kind: github
-    members:
-    - name: Enrico Tassi
-      github: gares
-      role: Maintainer
-    - name: Romain Tetley
-      github: rtetley
-      role: Maintainer
-  - id: rocqide
+    members: []
+  - id: coqide-maintainers
     name: RocqIDE
     description: The historical standalone IDE for the Rocq prover.
     contacts: []
-    members:
-    - name: Ali Caglayan
-      github: Alizter
-      role: Maintainer
-    - name: Jim Fehrle
-      github: jfehrle
-      role: Maintainer
-    - name: Emilio Jesús Gallego Arias
-      github: ejgallego
-      role: Maintainer
-    - name: Hugo Herbelin
-      github: herbelin
-      role: Maintainer
-    - name: Pierre-Marie Pédrot
-      github: ppedrot
-      role: Maintainer
-    - name: Michael Soegtrop
-      github: MSoegtropIMC
-      role: Maintainer
+    members: []
 - id: extensions
   name: Extensions
   description: The official extensions to the Rocq prover.
   contacts: []
   subteams:
-  - id: stdlib
+  - id: stdlib-maintainers
     name: Rocq Standard Library
     description: The Rocq Corelib and Standard Library team.
     contacts: []
     members: []
+  - id: number-maintainers
+    name: Numbers
+    description: The Numbers library and notations.
+    contacts: []
+    members: []
+  - id: reals-library-maintainers
+    name: Reals
+    description: The maintainers of the Reals library.
+    contacts: []
+    members: []
+  - id: extraction-maintainers
+    name: Rocq Extraction
+    description: The Rocq Extraction plugin team.
+    contacts: []
+    members: []
+  - id: cc-maintainers
+    name: The congruence tactic
+    description: The maintainers of the congruence plugin.
+    contacts: []
+    members: []
+  - id: firstorder-maintainers
+    name: The firstorder tactic
+    description: The maintainers of the firstorder plugin.
+    contacts: []
+    members: []
+  - id: micromega-maintainers
+    name: The lia and nia tactics
+    description: The maintainers of the micromega plugin.
+    contacts: []
+    members: []
+  - id: nsatz-maintainers
+    name: The nsatz tactic
+    description: The maintainers of the nsatz plugin.
+    contacts: []
+    members: []
+  - id: ring-maintainers
+    name: The ring tactic
+    description: The maintainers of the ring plugin.
+    contacts: []
+    members: []
+  - id: rtauto-maintainers
+    name: The rtauto tactic
+    description: The maintainers of the rtauto plugin.
+    contacts: []
+    members: []
+- id: tools
+  name: Tools
+  description: The official tools for working with the Rocq prover.
+  contacts: []
+  subteams:
+  - id: coqdoc-maintainers
+    name: rocq doc
+    description: The tool to generate HTML documentation from Rocq source files.
+    contacts: []
+    members: []
+  - id: coq-makefile-maintainers
+    name: rocq makefile
+    description: The tool to generate Makefiles for Rocq projects.
+    contacts: []
+    members: []
+  - id: action
+    name: Docker Opam Action
+    description: The Docker Opam Action helps users to build and test their projects with Rocq using GitHub Actions.
+    contacts: []
+    members:
+    - name: Erik Martin-Dorel
+      github: erikmd
+      role: Team leader
 - id: distribution
   name: Packaging and Distribution
   description: The Packaging and Distribution team is responsible for the packaging and distribution of the Rocq prover.
   contacts: []
   subteams:
-  - id: platform
+  - id: platform-maintainers
     name: Rocq Platform
     description: The Rocq Platform is the official distribution of the Rocq prover and curated packages.
     contacts:
@@ -287,14 +331,20 @@ teams:
       link: https://github.com/coq/platform
       kind: github
     members: []
-  - id: opam
+  - id: opam-maintainer
     name: opam
     description: The opam team maintains the Rocq opam packages and repository for user-contributed packages.
     contacts:
     - name: GitHub
       link: https://github.com/coq/opam
       kind: github
-    members: []
+    members:
+    - name: Enrico Tassi
+      github: gares
+      role: Team leader
+    - name: Karl Palmskog
+      github: palmskog
+      role: Team leader
   - id: docker
     name: Docker
     description: The Docker team maintains the Rocq Docker images.
@@ -317,7 +367,10 @@ teams:
     - name: GitHub
       link: https://github.com/coq/platform-docs
       kind: github
-    members: []
+    members:
+    - name: Thomas Lamiaux
+      github: thomas-lamiaux
+      role: Team leader
   - id: website-maintainers
     name: Website
     description: The Website team is responsible for the development and maintenance of the rocq-prover.org website.
@@ -325,6 +378,16 @@ teams:
     - name: GitHub
       link: https://github.com/coq/rocq-prover.org
       kind: github
+    members: []
+  - id: plugin-tutorial-maintainers
+    name: Plugin Tutorial
+    description: The maintainers of the Rocq plugin tutorial.
+    contacts: []
+    members: []
+  - id: zenodo-maintainers
+    name: Zenodo
+    description: The maintainers of the Zenodo record for Rocq Prover releases.
+    contacts: []
     members: []
 - id: infrastructure
   name: Infrastructure
@@ -336,19 +399,37 @@ teams:
     description: The Administration team is responsible for the administration of the Rocq project organizations on GitHub, GitLab, and other platforms.
     contacts: []
     members: []
-  - id: ci
+  - id: coqbot-maintainers
+    name: ROCQbot
+    description: The ROCQbot team is responsible for the development and maintenance of the Rocq development bot.
+    contacts: []
+    members:
+    - name: Théo Zimmermann
+      github: Zimmi48
+      role: Team leader
+  - id: ci-maintainers
     name: Continuous Integration
     description: The Continuous Integration team is responsible for the development and maintenance of the CI infrastructure of the Rocq project.
     contacts: []
     members: []
-  - id: bot
-    name: ROCQbot
-    description: The ROCQbot team is responsible for the development and maintenance of the Rocq development bot.
+  - id: bench-maintainers
+    name: Benchmark infrastructure
+    description: The infrastructure used to run benchmarks for the Rocq project.
     contacts: []
     members: []
-  - id: action
-    name: Docker Opam Action
-    description: The Docker Opam Action helps users to build and test their projects with Rocq using GitHub Actions.
+  - id: build-maintainers
+    name: Build infrastructure
+    description: The infrastructure used to build the Rocq project.
+    contacts: []
+    members: []
+  - id: test-suite-maintainers
+    name: Test Suite
+    description: The test suite of the Rocq project.
+    contacts: []
+    members: []
+  - id: dev-tools-maintainers
+    name: Development Tools
+    description: The tools used by Rocq developers to work on the project.
     contacts: []
     members: []
 working-groups: []
