@@ -66,7 +66,12 @@ dark: {
 .background_navigation{  color : #070608 }
 .code_window{  color : #2B2A2A }
 */
-
+pre, code{
+  color: #000000 !important
+}
+.dark pre,.dark  code{
+  color: #f8f8f8 !important
+}
 .bg-code_window, pre{
   background: linear-gradient(0deg, #fdf6f2, #fff6f3, #fff5f3, #fcf1f0, #faf7f7);
 }
