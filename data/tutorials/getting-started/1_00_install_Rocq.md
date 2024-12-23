@@ -18,9 +18,9 @@ Beginners are encouraged to install the [Rocq Platform](/install#rocq_platform) 
 
 ## Install opam
 
-Rocq and OCaml has an official package manager, [opam](https://opam.ocaml.org/), which allows users to download and install Rocq tools and libraries. Opam also makes it practical to deal with different projects which require different versions of the Rocq prover.
+Rocq and OCaml has an official package manager, [opam](https://opam.ocaml.org/), which allows users to download and install Rocq tools and libraries. Opam also makes it practical to deal with different projects which require different versions of the Rocq Prover.
 
-Opam also installs the OCaml compiler and the Rocq prover. 
+Opam also installs the OCaml compiler and the Rocq Prover. 
 
 To install opam, you can [use your system package manager](https://opam.ocaml.org/doc/Install.html#Using-your-distribution-39-s-package-system) or download the [binary distribution](https://opam.ocaml.org/doc/Install.html#Binary-distribution). The details are available in these links, but for convenience, we use package distributions:
 
@@ -140,7 +140,7 @@ To ensure that installation was successful, check that `rocq -v` prints the expe
 ## Install Platform Tools
 
 VsRocq is an extension for [Visual Studio Code]("https://code.visualstudio.com/) (VS Code) and 
-[VSCodium](https://vscodium.com/) which provides support for the Rocq prover. 
+[VSCodium](https://vscodium.com/) which provides support for the Rocq Prover. 
 
 It is built around a language server which natively speaks the 
 [LSP protocol](https://learn.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol?view=vs-2022).

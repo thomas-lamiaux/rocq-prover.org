@@ -86,7 +86,7 @@ key pillars:
 
 ## 2. Trustworthy
 
-- **Certified Type Theory and Extraction:** The Rocq prover is based
+- **Certified Type Theory and Extraction:** The Rocq Prover is based
   on the formal verification of its type theory implementation and
   extraction system, minimizing the trusted code base and increasing
   user confidence in results (C, D, E).

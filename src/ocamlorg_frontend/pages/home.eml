@@ -65,9 +65,9 @@ Layout.render
   <div class="container-fluid space-y-24 lg:space-y-32">
     <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between">
       <div class=" items-center lg:flex-1 lg:mt-8 ">
-        <h2 class="font-bold text-title dark:text-dark-title">A short introduction to the Rocq prover</h2>
+        <h2 class="font-bold text-title dark:text-dark-title">A short introduction to the Rocq Prover</h2>
         <div class="text-content dark:text-dark-content text-base mt-3">
-          The Rocq prover is an interactive theorem prover, or proof assistant. This means that it is designed to develop mathematical proofs, and especially to write formal specifications: programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.
+          The Rocq Prover is an interactive theorem prover, or proof assistant. This means that it is designed to develop mathematical proofs, and especially to write formal specifications: programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.
         </div>
       </div>
       <div class="lg:flex-1 flex justify-center">
@@ -248,7 +248,7 @@ Layout.render
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                The Rocq prover enables a very wide variety of developments to coexist in the same system, ranging from
+                The Rocq Prover enables a very wide variety of developments to coexist in the same system, ranging from
                 end-to-end verified software and hardware models to the development of higher-dimensional mathematics.
                 Flagship projects using Rocq include the Mathematical Components library and its derived proofs of
                 the Four-Color and Feith-Thompson theorems; the verified CompCert C compiler and the associated
@@ -352,7 +352,7 @@ Layout.render
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                The Rocq prover offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
+                The Rocq Prover offers a finely-tuned proof engine and kernel implementation allowing large-scale formalization,
                 with efficient bytecode and native conversion checkers relying on the OCaml runtime.
                 It can also interoperate with code written in other languages thanks to its unique extraction facilities.
               </p>
@@ -464,7 +464,7 @@ Layout.render
         </div>
         <div>
           <p class="text-base text-title dark:text-dark-title">
-            With its mathematical roots, the Rocq prover has always had strong ties to academia.
+            With its mathematical roots, the Rocq Prover has always had strong ties to academia.
             It is taught in universities around the world, and has accrued an ever-growing body of research.
             Learn more about the academic rigor that defines the culture of Rocq.
           </p>
@@ -493,19 +493,19 @@ Layout.render
       <div class="">
         <h2 class="font-bold text-title dark:text-dark-title mb-6">Curated Resources</h2>
         <p class="text-lg text-content dark:text-dark-content mb-16">
-          Get up to speed quickly to enjoy the benefits of the Rocq prover across your projects.
+          Get up to speed quickly to enjoy the benefits of the Rocq Prover across your projects.
         </p>
       </div>
       <div class="grid lg:grid-cols-3 gap-8 lg:gap-16">
         <a href="<%s Url.install %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.play_circle "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Getting Started</p>
-          <p>Install the Rocq prover, set up your favorite text editor and start your first project.</p>
+          <p>Install the Rocq Prover, set up your favorite text editor and start your first project.</p>
         </a>
         <a href="<%s Url.manual %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.document "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Reference Manual</p>
-          <p>The authoritative reference for the Rocq prover (not learning oriented).</p>
+          <p>The authoritative reference for the Rocq Prover (not learning oriented).</p>
         </a>
         <a href="<%s Url.books %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.book "h-16 w-16 mb-8" %>
@@ -525,7 +525,7 @@ Layout.render
         <a href="<%s Url.papers %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.papers "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Papers</p>
-          <p>Explore papers that have influenced or used the Rocq prover.</p>
+          <p>Explore papers that have influenced or used the Rocq Prover.</p>
         </a>
       </div>
     </div>

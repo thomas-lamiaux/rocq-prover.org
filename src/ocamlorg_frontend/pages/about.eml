@@ -62,20 +62,20 @@ Layout.render
           </ul>
 
           <p>
-            As a proof development system, the Rocq prover provides interactive proof methods, decision and semi-decision algorithms, 
+            As a proof development system, the Rocq Prover provides interactive proof methods, decision and semi-decision algorithms, 
             and a tactic language for letting the user define its own proof methods. 
             Connection with external computer algebra systems or theorem provers is available.
           </p>
 
           <p>
             As a platform for the formalization of mathematics or the development of programs, 
-            the Rocq prover provides support for high-level notations, implicit contents and other mechanisms for formalization at scale.
+            the Rocq Prover provides support for high-level notations, implicit contents and other mechanisms for formalization at scale.
           </p>
           <p>
-            Read more about the features that make the Rocq prover unique in the <a href="<%s Url.why %>">Why Rocq?</a> section.
+            Read more about the features that make the Rocq Prover unique in the <a href="<%s Url.why %>">Why Rocq?</a> section.
           <h2 id="history">A Brief History</h2>
           <p>
-            The Rocq prover is the result of more than 40 years of research. It started in 1984 from an implementation of the Calculus of Constructions 
+            The Rocq Prover is the result of more than 40 years of research. It started in 1984 from an implementation of the Calculus of Constructions 
             at INRIA-Rocquencourt by Thierry Coquand and Gérard Huet. In 1991, Christine Paulin extended it to the Calculus of Inductive Constructions. 
             All in all, more than 200 people have contributed to the development of Rocq.
           </p>
@@ -84,17 +84,17 @@ Layout.render
             Rocq and integration of contributions. See <a href="/refman/changes.html">the changelog</a> for a detailed list of contributors in each release of Rocq and <a href="/refman/history.html">the history page in the reference manual</a> for the early history of Rocq.
           </p>
           <p>
-            The Rocq prover is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
+            The Rocq Prover is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
           </p>
           <h2 id="Name">An Overview of the Name's Evolution</h2>
           <p>
-          The Rocq prover was formerly known as the Coq proof assistant. 
+          The Rocq Prover was formerly known as the Coq proof assistant. 
           The name "Coq" referenced the Calculus of Constructions (CoC), 
           the foundational system it is based on, as well as one of its creators, Thierry Coquand. 
           Additionally, it paid homage to the French national symbol, the rooster.
           </p>
           <p>
-          The new name, "the Rocq prover," honors Inria Rocquencourt, the original site where the prover was developed. 
+          The new name, "the Rocq Prover," honors Inria Rocquencourt, the original site where the prover was developed. 
           It also alludes to the mythological bird Roc (or Rokh), symbolizing strength and not so disconnected to a rooster. 
           Furthermore, the name conveys a sense of solidity, and its unintended connection to music adds a pleasant resonance.
           </p>
@@ -103,7 +103,7 @@ Layout.render
           <ul>
             <li>
               <strong>Certified Type Theory and Extraction:</strong>
-              The Rocq prover is based on the formal verification of its type theory implementation and extraction system, 
+              The Rocq Prover is based on the formal verification of its type theory implementation and extraction system, 
               minimizing the trusted code base and increasing user confidence in results.
             </li>
             <li>

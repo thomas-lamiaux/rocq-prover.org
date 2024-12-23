@@ -5,7 +5,7 @@ let render
 =
 Learn_layout.single_column_layout
 ~title:"Learn Rocq"
-~description:"Getting started with the Rocq prover. Read the official tutorials, exercices, and language manual."
+~description:"Getting started with the Rocq Prover. Read the official tutorials, exercices, and language manual."
 ~canonical:Url.learn
 ~current:Overview @@
   <div class="lg:-mt-32 lg:pt-28 w-full border-b md:bg-transparent dark:border-none bg-cover bg-[url('/img/learn/hero-background.svg')] dark:bg-[url('/img/learn/hero-background-dark.svg')]">

@@ -58,7 +58,7 @@ Platform_layout.three_column_layout
   <div class="prose prose-orange max-w-none dark:prose-invert">
     <h1>The Rocq Platform</h1>
     <p>
-    The Rocq Platform is a distribution of the Rocq prover together with a selection of
+    The Rocq Platform is a distribution of the Rocq Prover together with a selection of
     libraries and plugins. The main goal of the Rocq Platform is to provide a
     distribution for developing and teaching with Rocq that is:
     </p>
@@ -96,19 +96,19 @@ Platform_layout.three_column_layout
       Here is a list of all Platform packages sorted by their status.
     </p>
     <p>
-      Packages with a status of "full level" are considered stable, well maintained and suitable as basis for your own developments. 
+      Packages with a status of "full level" are considered stable, well-maintained and suitable as basis for your own developments. 
       The full level adds many commonly used Rocq libraries, plugins and developments.
     </p>
     <p>
       The "optional" packages have the same maturity and maintenance level as the packages in the full level, 
-      but either take a rather long time to build or have a non open source license or depend on packages 
-      with non open source license.
+      but either take a rather long time to build or have a non-open-source license or depend on packages 
+      with non-open-source license.
       The interactive installation script and the Windows installer explicitly ask if you want to install these packages.
     </p>
     <p>
      The "extended level" contains packages which are in a beta stage or otherwise don't yet have the level 
      of maturity or support required for inclusion in the full level, 
-     but there are plans to move them to the full level in a future release of Rocq Platform. 
+     but there are plans to move them to the full level in a future release of the Rocq Platform. 
      The main point of the extended level is advertisement: users are important to bring a development 
      from a beta to a release state.
     </p>
@@ -131,8 +131,8 @@ Platform_layout.three_column_layout
       <h4 class="font-bold text-title dark:text-dark-title">Optional</h4>
       <div class="text-content dark:text-dark-content mt-3">
         The optional packages have the same maturity and maintenance level as the packages in the full level, 
-        but either take a rather long time to build or have a non open source license or depend on 
-        packages with non open source license.
+        but either take a rather long time to build or have a non-open-source license or depend on 
+        packages with non-open-source license.
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
         <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Optional) |> List.iter (fun (item : Data.Tool.t) -> %>
@@ -146,7 +146,7 @@ Platform_layout.three_column_layout
       <div class="text-content dark:text-dark-content mt-3">
         The extended level contains packages which are in a beta stage or otherwise don't yet 
         have the level of maturity or support required for inclusion in the full level, but there 
-        are plans to move them to the full level in a future release of Rocq Platform. 
+        are plans to move them to the full level in a future release of the Rocq Platform. 
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
         <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Extended) |> List.iter (fun (item : Data.Tool.t) -> %>
