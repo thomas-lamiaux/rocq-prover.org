@@ -1,0 +1,1283 @@
+{
+    "data": {
+      "organization": {
+        "teams": {
+          "totalCount": 56,
+          "nodes": [
+            {
+              "slug": "bench-maintainers",
+              "name": "bench-maintainers",
+              "description": "The code owners for the benchmark infrastructure.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "btauto-maintainers",
+              "name": "btauto-maintainers",
+              "description": "The code owners for the btauto plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "build-maintainers",
+              "name": "build-maintainers",
+              "description": "The code owners for the new build system (dune-based).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "anton-trunov",
+                    "name": "Anton Trunov"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "cc-maintainers",
+              "name": "cc-maintainers",
+              "description": "The code owners for the congruence closure plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "PierreCorbineau",
+                    "name": "Pierre Corbineau"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "ci-maintainers",
+              "name": "ci-maintainers",
+              "description": "The code owners for the CI system.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "code-of-conduct-team",
+              "name": "code-of-conduct-team",
+              "description": "The code of conduct enforcement team (and code owners of CODE_OF_CONDUCT.md).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "tabareau",
+                    "name": "nicolas tabareau"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "compat-maintainers",
+              "name": "compat-maintainers",
+              "description": "The code owners for the compat infrastructure.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "contributing-process-maintainers",
+              "name": "contributing-process-maintainers",
+              "description": "The code owners for the contributing guide and the files in .github/",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "coq-makefile-maintainers",
+              "name": "coq-makefile-maintainers",
+              "description": "The code owners for the coq_makefile tool.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "coqbot-maintainers",
+              "name": "coqbot maintainers",
+              "description": "Maintainers of @coqbot",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "coqdoc-maintainers",
+              "name": "coqdoc-maintainers",
+              "description": "The code owners for the coqdoc tool.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "Lysxia",
+                    "name": "Xia Li-yao"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "coqide-maintainers",
+              "name": "coqide-maintainers",
+              "description": "The code owners for CoqIDE.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "jfehrle",
+                    "name": "Jim Fehrle"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "derive-maintainers",
+              "name": "derive-maintainers",
+              "description": "The code owners for the derive plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "aspiwack",
+                    "name": "Arnaud Spiwack"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "dev-tools-maintainers",
+              "name": "dev-tools-maintainers",
+              "description": "The code owners for the developer tools (dev/tools/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "doc-maintainers",
+              "name": "doc-maintainers",
+              "description": "The code owners for the documentation (doc/)",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "jfehrle",
+                    "name": "Jim Fehrle"
+                  },
+                  {
+                    "login": "cpitclaudel",
+                    "name": "Clément Pit-Claudel"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "engine-maintainers",
+              "name": "engine-maintainers",
+              "description": "The code owners for the proof engine (engine/ + proof/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "extensible-syntax-maintainers",
+              "name": "extensible-syntax-maintainers",
+              "description": "The code owners for the extensible syntax (interp/ + printing/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "extraction-maintainers",
+              "name": "extraction-maintainers",
+              "description": "The code owners for the extraction mechanism (plugin/extraction/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "pi8027",
+                    "name": "Kazuhiko Sakaguchi"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "firstorder-maintainers",
+              "name": "firstorder-maintainers",
+              "description": "The code owners for the firstorder plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "PierreCorbineau",
+                    "name": "Pierre Corbineau"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "funind-maintainers",
+              "name": "funind-maintainers",
+              "description": "The code owners for Function (funind plugin).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Matafou",
+                    "name": "Pierre Courtieu"
+                  },
+                  {
+                    "login": "forestjulien",
+                    "name": null
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "kernel-maintainers",
+              "name": "kernel-maintainers",
+              "description": "The code owners for the kernel and the checker.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "lib-maintainers",
+              "name": "lib-maintainers",
+              "description": "The code owners for the common functions (lib/ + clib/)",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "library-maintainers",
+              "name": "library-maintainers",
+              "description": "The code owners for the library saving and loading code (library/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "ltac-maintainers",
+              "name": "ltac-maintainers",
+              "description": "The code owners for the legacy Ltac tactic language.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "ltac2-maintainers",
+              "name": "ltac2-maintainers",
+              "description": "The code owners for the new Ltac2 tactic language.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "kyoDralliam",
+                    "name": "Kenji Maillard"
+                  },
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "tchajed",
+                    "name": "Tej Chajed"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "micromega-maintainers",
+              "name": "micromega-maintainers",
+              "description": "The code owners for the micromega plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "fajb",
+                    "name": "Frédéric Besson"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "nix-maintainers",
+              "name": "nix-maintainers",
+              "description": "The code owners for the Nix files (*.nix)",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "nsatz-maintainers",
+              "name": "nsatz-maintainers",
+              "description": "The code owners for the nsatz plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "number-maintainers",
+              "name": "number-maintainers",
+              "description": "Maintainers of the number libraries and number notations.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  },
+                  {
+                    "login": "ana-borges",
+                    "name": "Ana de Almeida Borges"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "opam-maintainer",
+              "name": "OPAM maintainer",
+              "description": "Write-access to the Coq opam archive.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "clarus",
+                    "name": "Guillaume Claret"
+                  },
+                  {
+                    "login": "RalfJung",
+                    "name": "Ralf Jung"
+                  },
+                  {
+                    "login": "JasonGross",
+                    "name": "Jason Gross"
+                  },
+                  {
+                    "login": "palmskog",
+                    "name": "Karl Palmskog"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "fblanqui",
+                    "name": "Frédéric Blanqui"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "parsing-maintainers",
+              "name": "parsing-maintainers",
+              "description": "The code owners for coqpp, the parsers, the notation system, etc.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "platform-docs",
+              "name": "platform-docs",
+              "description": "Maintainers and reviewers of the Platform Docs",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "pi8027",
+                    "name": "Kazuhiko Sakaguchi"
+                  },
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "amahboubi",
+                    "name": "Assia Mahboubi"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  },
+                  {
+                    "login": "MevenBertrand",
+                    "name": "Meven Lennon-Bertrand"
+                  },
+                  {
+                    "login": "thomas-lamiaux",
+                    "name": "Thomas Lamiaux"
+                  },
+                  {
+                    "login": "Tragicus",
+                    "name": "Quentin VERMANDE"
+                  },
+                  {
+                    "login": "Villetaneuse",
+                    "name": "Pierre Rousselin"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "platform-docs-admins",
+              "name": "platform-docs-admins",
+              "description": "Admins of the platform-docs repository.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "thomas-lamiaux",
+                    "name": "Thomas Lamiaux"
+                  },
+                  {
+                    "login": "Villetaneuse",
+                    "name": "Pierre Rousselin"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "platform-docs-equations",
+              "name": "platform-docs-equations",
+              "description": "Platform Docs Equations Reviewers",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "MevenBertrand",
+                    "name": "Meven Lennon-Bertrand"
+                  },
+                  {
+                    "login": "thomas-lamiaux",
+                    "name": "Thomas Lamiaux"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "platform-docs-general-reviewers",
+              "name": "platform-docs-general-reviewers",
+              "description": "General Reviewers: review from a non-expert point of view",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "thomas-lamiaux",
+                    "name": "Thomas Lamiaux"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "platform-docs-mathcomp",
+              "name": "platform-docs-mathcomp",
+              "description": "Platform Docs Mathcomp Reviewers",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "pi8027",
+                    "name": "Kazuhiko Sakaguchi"
+                  },
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "amahboubi",
+                    "name": "Assia Mahboubi"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  },
+                  {
+                    "login": "thomas-lamiaux",
+                    "name": "Thomas Lamiaux"
+                  },
+                  {
+                    "login": "Tragicus",
+                    "name": "Quentin VERMANDE"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "platform-maintainers",
+              "name": "platform-maintainers",
+              "description": "Maintainers of the coq/platform project",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "rtetley",
+                    "name": "Romain Tetley"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "plugin-tutorial-maintainers",
+              "name": "plugin-tutorial-maintainers",
+              "description": "The code owners for the plugins API tutorial.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ybertot",
+                    "name": "Yves Bertot"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "pretyper-maintainers",
+              "name": "pretyper-maintainers",
+              "description": "The code owners for the pretyper (pretyping/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "reals-library-maintainers",
+              "name": "reals-library-maintainers",
+              "description": "The code owners for the Reals library.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "VincentSe",
+                    "name": "Vincent Semeria"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "ring-maintainers",
+              "name": "ring-maintainers",
+              "description": "The code owners for the ring and field tactics.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "bgregoir",
+                    "name": null
+                  },
+                  {
+                    "login": "amahboubi",
+                    "name": "Assia Mahboubi"
+                  },
+                  {
+                    "login": "thery",
+                    "name": "Laurent Théry"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "rtauto-maintainers",
+              "name": "rtauto-maintainers",
+              "description": "The code owners for the rtauto plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "PierreCorbineau",
+                    "name": "Pierre Corbineau"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "ssreflect-maintainers",
+              "name": "ssreflect-maintainers",
+              "description": "The code owners for the SSReflect plugin.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "CohenCyril",
+                    "name": "Cyril Cohen"
+                  },
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "ggonthier",
+                    "name": "Georges Gonthier"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "stdlib-maintainers",
+              "name": "stdlib-maintainers",
+              "description": "The code owners for the standard library (theories/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "andres-erbsen",
+                    "name": "Andres Erbsen"
+                  },
+                  {
+                    "login": "anton-trunov",
+                    "name": "Anton Trunov"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  },
+                  {
+                    "login": "olaure01",
+                    "name": "Olivier Laurent"
+                  },
+                  {
+                    "login": "Villetaneuse",
+                    "name": "Pierre Rousselin"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "stm-maintainers",
+              "name": "stm-maintainers",
+              "description": "The code owners for the STM and the XML protocol.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "tactics-maintainers",
+              "name": "tactics-maintainers",
+              "description": "The code owners for the vanilla tactics.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "test-suite-maintainers",
+              "name": "test-suite-maintainers",
+              "description": "The code owners for the test-suite infrastructure.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "herbelin",
+                    "name": "Hugo Herbelin"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "toplevel-maintainers",
+              "name": "toplevel-maintainers",
+              "description": "The code owners for coqtop (toplevel/ + topbin/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "typeclasses-maintainers",
+              "name": "typeclasses-maintainers",
+              "description": "The code owners for the typeclass mechanism.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "universes-maintainers",
+              "name": "universes-maintainers",
+              "description": "The code owners for the universe code (in the kernel and the pretyper)",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "vernac-maintainers",
+              "name": "vernac-maintainers",
+              "description": "The code owners for the language of commands (vernac/).",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "SkySkimmer",
+                    "name": "Gaëtan Gilbert"
+                  },
+                  {
+                    "login": "ejgallego",
+                    "name": "Emilio Jesús Gallego Arias"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "vm-native-maintainers",
+              "name": "vm-native-maintainers",
+              "description": "The code owners for the VM and native compute code.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "ppedrot",
+                    "name": "Pierre-Marie Pédrot"
+                  },
+                  {
+                    "login": "silene",
+                    "name": "Guillaume Melquiond"
+                  },
+                  {
+                    "login": "erikmd",
+                    "name": "Erik Martin-Dorel"
+                  },
+                  {
+                    "login": "proux01",
+                    "name": "Pierre Roux"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "vscoq-maintainers",
+              "name": "vscoq-maintainers",
+              "description": "Maintainers of VSCoq",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "gares",
+                    "name": "Enrico Tassi"
+                  },
+                  {
+                    "login": "rtetley",
+                    "name": "Romain Tetley"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "website-maintainers",
+              "name": "Website maintainers",
+              "description": "People with write access to the www repository.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "palmskog",
+                    "name": "Karl Palmskog"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "Alizter",
+                    "name": "Ali Caglayan"
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "windows-build-maintainers",
+              "name": "windows-build-maintainers",
+              "description": "The code owners of the Windows packaging code.",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "MSoegtropIMC",
+                    "name": null
+                  }
+                ]
+              }
+            },
+            {
+              "slug": "zenodo-maintainers",
+              "name": "Zenodo maintainers",
+              "description": "Owners of the community holding the Zenodo record for Coq (changes to the membership on Zenodo must be kept in sync with this GitHub team manually)",
+              "members": {
+                "nodes": [
+                  {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
+                    "login": "Zimmi48",
+                    "name": "Théo Zimmermann"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+}

@@ -113,6 +113,7 @@
  (target governance.ml)
  (deps
   %{workspace_root}/data/governance.yml
+  %{workspace_root}/data/github-teams-simplified.json
   (:ood_gen %{workspace_root}/tool/ood-gen/bin/gen.exe))
  (action
   (chdir

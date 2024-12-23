@@ -7,8 +7,8 @@ type metadata = {
 }
 [@@deriving of_yaml]
 
-let all () =
-  let file = "governance.yml" in
+let teams file =
+  let file = file in
   let result =
     let ( let* ) = Result.bind in
     let* yaml = Utils.yaml_file file in
@@ -19,7 +19,8 @@ let all () =
   |> Result.get_ok ~error:(fun (`Msg msg) -> Exn.Decode_error msg)
 
 let template () =
-  let t = all () in
+  let governance = teams "governance.yml" in
+  let github_teams = teams "github-teams-simplified.json" in
   Format.asprintf
     {|
 include Data_intf.Governance
@@ -28,6 +29,6 @@ let teams = %a
 let working_groups = %a
 |}
     (Fmt.brackets (Fmt.list pp_team ~sep:Fmt.semi))
-    t.teams
+    github_teams.teams
     (Fmt.brackets (Fmt.list pp_team ~sep:Fmt.semi))
-    t.working_groups
+    governance.working_groups

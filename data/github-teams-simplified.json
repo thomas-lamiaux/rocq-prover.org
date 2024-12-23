@@ -1,0 +1,1413 @@
+{
+  "teams": [
+    {
+      "id": "bench-maintainers",
+      "name": "bench-maintainers",
+      "description": "The code owners for the benchmark infrastructure.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "btauto-maintainers",
+      "name": "btauto-maintainers",
+      "description": "The code owners for the btauto plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        }
+      ]
+    },
+    {
+      "id": "build-maintainers",
+      "name": "build-maintainers",
+      "description": "The code owners for the new build system (dune-based).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "anton-trunov",
+          "role": "Member",
+          "name": "Anton Trunov"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "cc-maintainers",
+      "name": "cc-maintainers",
+      "description": "The code owners for the congruence closure plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "PierreCorbineau",
+          "role": "Member",
+          "name": "Pierre Corbineau"
+        }
+      ]
+    },
+    {
+      "id": "ci-maintainers",
+      "name": "ci-maintainers",
+      "description": "The code owners for the CI system.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "code-of-conduct-team",
+      "name": "code-of-conduct-team",
+      "description": "The code of conduct enforcement team (and code owners of CODE_OF_CONDUCT.md).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "tabareau",
+          "role": "Member",
+          "name": "nicolas tabareau"
+        }
+      ]
+    },
+    {
+      "id": "compat-maintainers",
+      "name": "compat-maintainers",
+      "description": "The code owners for the compat infrastructure.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        }
+      ]
+    },
+    {
+      "id": "contributing-process-maintainers",
+      "name": "contributing-process-maintainers",
+      "description": "The code owners for the contributing guide and the files in .github/",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        }
+      ]
+    },
+    {
+      "id": "coq-makefile-maintainers",
+      "name": "coq-makefile-maintainers",
+      "description": "The code owners for the coq_makefile tool.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "coqbot-maintainers",
+      "name": "coqbot maintainers",
+      "description": "Maintainers of @coqbot",
+      "contacts": [],
+      "members": [
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "coqdoc-maintainers",
+      "name": "coqdoc-maintainers",
+      "description": "The code owners for the coqdoc tool.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "Lysxia",
+          "role": "Member",
+          "name": "Xia Li-yao"
+        }
+      ]
+    },
+    {
+      "id": "coqide-maintainers",
+      "name": "coqide-maintainers",
+      "description": "The code owners for CoqIDE.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "jfehrle",
+          "role": "Member",
+          "name": "Jim Fehrle"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "derive-maintainers",
+      "name": "derive-maintainers",
+      "description": "The code owners for the derive plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "aspiwack",
+          "role": "Member",
+          "name": "Arnaud Spiwack"
+        }
+      ]
+    },
+    {
+      "id": "dev-tools-maintainers",
+      "name": "dev-tools-maintainers",
+      "description": "The code owners for the developer tools (dev/tools/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "doc-maintainers",
+      "name": "doc-maintainers",
+      "description": "The code owners for the documentation (doc/)",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "jfehrle",
+          "role": "Member",
+          "name": "Jim Fehrle"
+        },
+        {
+          "github": "cpitclaudel",
+          "role": "Member",
+          "name": "Clément Pit-Claudel"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        }
+      ]
+    },
+    {
+      "id": "engine-maintainers",
+      "name": "engine-maintainers",
+      "description": "The code owners for the proof engine (engine/ + proof/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        }
+      ]
+    },
+    {
+      "id": "extensible-syntax-maintainers",
+      "name": "extensible-syntax-maintainers",
+      "description": "The code owners for the extensible syntax (interp/ + printing/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        }
+      ]
+    },
+    {
+      "id": "extraction-maintainers",
+      "name": "extraction-maintainers",
+      "description": "The code owners for the extraction mechanism (plugin/extraction/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "pi8027",
+          "role": "Member",
+          "name": "Kazuhiko Sakaguchi"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        }
+      ]
+    },
+    {
+      "id": "firstorder-maintainers",
+      "name": "firstorder-maintainers",
+      "description": "The code owners for the firstorder plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "PierreCorbineau",
+          "role": "Member",
+          "name": "Pierre Corbineau"
+        }
+      ]
+    },
+    {
+      "id": "funind-maintainers",
+      "name": "funind-maintainers",
+      "description": "The code owners for Function (funind plugin).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Matafou",
+          "role": "Member",
+          "name": "Pierre Courtieu"
+        },
+        {
+          "github": "forestjulien",
+          "role": "Member",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "id": "kernel-maintainers",
+      "name": "kernel-maintainers",
+      "description": "The code owners for the kernel and the checker.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "lib-maintainers",
+      "name": "lib-maintainers",
+      "description": "The code owners for the common functions (lib/ + clib/)",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        }
+      ]
+    },
+    {
+      "id": "library-maintainers",
+      "name": "library-maintainers",
+      "description": "The code owners for the library saving and loading code (library/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "ltac-maintainers",
+      "name": "ltac-maintainers",
+      "description": "The code owners for the legacy Ltac tactic language.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "ltac2-maintainers",
+      "name": "ltac2-maintainers",
+      "description": "The code owners for the new Ltac2 tactic language.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "kyoDralliam",
+          "role": "Member",
+          "name": "Kenji Maillard"
+        },
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "tchajed",
+          "role": "Member",
+          "name": "Tej Chajed"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "id": "micromega-maintainers",
+      "name": "micromega-maintainers",
+      "description": "The code owners for the micromega plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "fajb",
+          "role": "Member",
+          "name": "Frédéric Besson"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        }
+      ]
+    },
+    {
+      "id": "nix-maintainers",
+      "name": "nix-maintainers",
+      "description": "The code owners for the Nix files (*.nix)",
+      "contacts": [],
+      "members": [
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "nsatz-maintainers",
+      "name": "nsatz-maintainers",
+      "description": "The code owners for the nsatz plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        }
+      ]
+    },
+    {
+      "id": "number-maintainers",
+      "name": "number-maintainers",
+      "description": "Maintainers of the number libraries and number notations.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        },
+        {
+          "github": "ana-borges",
+          "role": "Member",
+          "name": "Ana de Almeida Borges"
+        }
+      ]
+    },
+    {
+      "id": "opam-maintainer",
+      "name": "OPAM maintainer",
+      "description": "Write-access to the Coq opam archive.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "clarus",
+          "role": "Member",
+          "name": "Guillaume Claret"
+        },
+        {
+          "github": "RalfJung",
+          "role": "Member",
+          "name": "Ralf Jung"
+        },
+        {
+          "github": "JasonGross",
+          "role": "Member",
+          "name": "Jason Gross"
+        },
+        {
+          "github": "palmskog",
+          "role": "Member",
+          "name": "Karl Palmskog"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "fblanqui",
+          "role": "Member",
+          "name": "Frédéric Blanqui"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        }
+      ]
+    },
+    {
+      "id": "parsing-maintainers",
+      "name": "parsing-maintainers",
+      "description": "The code owners for coqpp, the parsers, the notation system, etc.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        }
+      ]
+    },
+    {
+      "id": "platform-docs",
+      "name": "platform-docs",
+      "description": "Maintainers and reviewers of the Platform Docs",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "pi8027",
+          "role": "Member",
+          "name": "Kazuhiko Sakaguchi"
+        },
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "amahboubi",
+          "role": "Member",
+          "name": "Assia Mahboubi"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        },
+        {
+          "github": "MevenBertrand",
+          "role": "Member",
+          "name": "Meven Lennon-Bertrand"
+        },
+        {
+          "github": "thomas-lamiaux",
+          "role": "Member",
+          "name": "Thomas Lamiaux"
+        },
+        {
+          "github": "Tragicus",
+          "role": "Member",
+          "name": "Quentin VERMANDE"
+        },
+        {
+          "github": "Villetaneuse",
+          "role": "Member",
+          "name": "Pierre Rousselin"
+        }
+      ]
+    },
+    {
+      "id": "platform-docs-admins",
+      "name": "platform-docs-admins",
+      "description": "Admins of the platform-docs repository.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "thomas-lamiaux",
+          "role": "Member",
+          "name": "Thomas Lamiaux"
+        },
+        {
+          "github": "Villetaneuse",
+          "role": "Member",
+          "name": "Pierre Rousselin"
+        }
+      ]
+    },
+    {
+      "id": "platform-docs-equations",
+      "name": "platform-docs-equations",
+      "description": "Platform Docs Equations Reviewers",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "MevenBertrand",
+          "role": "Member",
+          "name": "Meven Lennon-Bertrand"
+        },
+        {
+          "github": "thomas-lamiaux",
+          "role": "Member",
+          "name": "Thomas Lamiaux"
+        }
+      ]
+    },
+    {
+      "id": "platform-docs-general-reviewers",
+      "name": "platform-docs-general-reviewers",
+      "description": "General Reviewers: review from a non-expert point of view",
+      "contacts": [],
+      "members": [
+        {
+          "github": "thomas-lamiaux",
+          "role": "Member",
+          "name": "Thomas Lamiaux"
+        }
+      ]
+    },
+    {
+      "id": "platform-docs-mathcomp",
+      "name": "platform-docs-mathcomp",
+      "description": "Platform Docs Mathcomp Reviewers",
+      "contacts": [],
+      "members": [
+        {
+          "github": "pi8027",
+          "role": "Member",
+          "name": "Kazuhiko Sakaguchi"
+        },
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "amahboubi",
+          "role": "Member",
+          "name": "Assia Mahboubi"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        },
+        {
+          "github": "thomas-lamiaux",
+          "role": "Member",
+          "name": "Thomas Lamiaux"
+        },
+        {
+          "github": "Tragicus",
+          "role": "Member",
+          "name": "Quentin VERMANDE"
+        }
+      ]
+    },
+    {
+      "id": "platform-maintainers",
+      "name": "platform-maintainers",
+      "description": "Maintainers of the coq/platform project",
+      "contacts": [],
+      "members": [
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "rtetley",
+          "role": "Member",
+          "name": "Romain Tetley"
+        }
+      ]
+    },
+    {
+      "id": "plugin-tutorial-maintainers",
+      "name": "plugin-tutorial-maintainers",
+      "description": "The code owners for the plugins API tutorial.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ybertot",
+          "role": "Member",
+          "name": "Yves Bertot"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        }
+      ]
+    },
+    {
+      "id": "pretyper-maintainers",
+      "name": "pretyper-maintainers",
+      "description": "The code owners for the pretyper (pretyping/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        }
+      ]
+    },
+    {
+      "id": "reals-library-maintainers",
+      "name": "reals-library-maintainers",
+      "description": "The code owners for the Reals library.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "VincentSe",
+          "role": "Member",
+          "name": "Vincent Semeria"
+        }
+      ]
+    },
+    {
+      "id": "ring-maintainers",
+      "name": "ring-maintainers",
+      "description": "The code owners for the ring and field tactics.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "bgregoir",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "amahboubi",
+          "role": "Member",
+          "name": "Assia Mahboubi"
+        },
+        {
+          "github": "thery",
+          "role": "Member",
+          "name": "Laurent Théry"
+        }
+      ]
+    },
+    {
+      "id": "rtauto-maintainers",
+      "name": "rtauto-maintainers",
+      "description": "The code owners for the rtauto plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "PierreCorbineau",
+          "role": "Member",
+          "name": "Pierre Corbineau"
+        }
+      ]
+    },
+    {
+      "id": "ssreflect-maintainers",
+      "name": "ssreflect-maintainers",
+      "description": "The code owners for the SSReflect plugin.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "CohenCyril",
+          "role": "Member",
+          "name": "Cyril Cohen"
+        },
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "ggonthier",
+          "role": "Member",
+          "name": "Georges Gonthier"
+        }
+      ]
+    },
+    {
+      "id": "stdlib-maintainers",
+      "name": "stdlib-maintainers",
+      "description": "The code owners for the standard library (theories/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "andres-erbsen",
+          "role": "Member",
+          "name": "Andres Erbsen"
+        },
+        {
+          "github": "anton-trunov",
+          "role": "Member",
+          "name": "Anton Trunov"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        },
+        {
+          "github": "olaure01",
+          "role": "Member",
+          "name": "Olivier Laurent"
+        },
+        {
+          "github": "Villetaneuse",
+          "role": "Member",
+          "name": "Pierre Rousselin"
+        }
+      ]
+    },
+    {
+      "id": "stm-maintainers",
+      "name": "stm-maintainers",
+      "description": "The code owners for the STM and the XML protocol.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "tactics-maintainers",
+      "name": "tactics-maintainers",
+      "description": "The code owners for the vanilla tactics.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        }
+      ]
+    },
+    {
+      "id": "test-suite-maintainers",
+      "name": "test-suite-maintainers",
+      "description": "The code owners for the test-suite infrastructure.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "herbelin",
+          "role": "Member",
+          "name": "Hugo Herbelin"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "toplevel-maintainers",
+      "name": "toplevel-maintainers",
+      "description": "The code owners for coqtop (toplevel/ + topbin/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        }
+      ]
+    },
+    {
+      "id": "typeclasses-maintainers",
+      "name": "typeclasses-maintainers",
+      "description": "The code owners for the typeclass mechanism.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        }
+      ]
+    },
+    {
+      "id": "universes-maintainers",
+      "name": "universes-maintainers",
+      "description": "The code owners for the universe code (in the kernel and the pretyper)",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "vernac-maintainers",
+      "name": "vernac-maintainers",
+      "description": "The code owners for the language of commands (vernac/).",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "SkySkimmer",
+          "role": "Member",
+          "name": "Gaëtan Gilbert"
+        },
+        {
+          "github": "ejgallego",
+          "role": "Member",
+          "name": "Emilio Jesús Gallego Arias"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "vm-native-maintainers",
+      "name": "vm-native-maintainers",
+      "description": "The code owners for the VM and native compute code.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "ppedrot",
+          "role": "Member",
+          "name": "Pierre-Marie Pédrot"
+        },
+        {
+          "github": "silene",
+          "role": "Member",
+          "name": "Guillaume Melquiond"
+        },
+        {
+          "github": "erikmd",
+          "role": "Member",
+          "name": "Erik Martin-Dorel"
+        },
+        {
+          "github": "proux01",
+          "role": "Member",
+          "name": "Pierre Roux"
+        }
+      ]
+    },
+    {
+      "id": "vscoq-maintainers",
+      "name": "vscoq-maintainers",
+      "description": "Maintainers of VSCoq",
+      "contacts": [],
+      "members": [
+        {
+          "github": "gares",
+          "role": "Member",
+          "name": "Enrico Tassi"
+        },
+        {
+          "github": "rtetley",
+          "role": "Member",
+          "name": "Romain Tetley"
+        }
+      ]
+    },
+    {
+      "id": "website-maintainers",
+      "name": "Website maintainers",
+      "description": "People with write access to the www repository.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "palmskog",
+          "role": "Member",
+          "name": "Karl Palmskog"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "Alizter",
+          "role": "Member",
+          "name": "Ali Caglayan"
+        }
+      ]
+    },
+    {
+      "id": "windows-build-maintainers",
+      "name": "windows-build-maintainers",
+      "description": "The code owners of the Windows packaging code.",
+      "contacts": [],
+      "members": [
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        },
+        {
+          "github": "MSoegtropIMC",
+          "role": "Member",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "id": "zenodo-maintainers",
+      "name": "Zenodo maintainers",
+      "description": "Owners of the community holding the Zenodo record for Coq (changes to the membership on Zenodo must be kept in sync with this GitHub team manually)",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "role": "Member",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "Zimmi48",
+          "role": "Member",
+          "name": "Théo Zimmermann"
+        }
+      ]
+    }
+  ],
+  "working-groups": []
+}
