@@ -63,42 +63,41 @@ Platform_layout.three_column_layout
     distribution for developing and teaching with Rocq that is:
     </p>
     <ul>
-      <li> operating system independent </li>
+      <li> operating-system independent </li>
       <li> dependable </li>
       <li> easy to install </li>
       <li> comprehensive </li>
     </ul>
     
     <p>
-      See the <a href= tools/platform-principles>Guiding Principles</a> for more on the Platform concept, and
-      <a href= tools/compiler-release-cycle>Rocq and Rocq platform release cycle</a>
-      for more on how the Platform is related to the Rocq release cycle.
+      See the <a href= platform/platform-principles>Guiding Principles</a> for more on the Platform concept, and
+      <a href= platform/release-cycle>Rocq Prover and Rocq Platform release cycle</a>
+      for more on how the Platform is related to the Rocq Prover release cycle.
     </p>
 
     <p>
     The Rocq Platform is based on the OCaml package manager opam and provides a set
-    of scripts to compile and/or install opam, Rocq and the platform contents on macOS,
+    of scripts to compile and/or install opam, Rocq and the Platform contents on macOS,
     Windows and many Linux distributions in a reliable way with consistent results.
     In addition pre-compiled binary packages or installers are provided for macOS and
     Windows.
     </p>
   
     <p>
-      The Rocq Platform combines the core Rocq compiler with
-      a coherent set of tools, documentation, libraries, and testing resources.
+      The Rocq Platform combines the core Rocq Prover with
+      a coherent set of packages (plugins and libraries) to extend its features.
     </p>
     <p>
       Detailed instructions to install Rocq and the
-      Platform tools are available in <a class="text-primary"
-      href="<%s Url.installing_rocq %>">"Installing Rocq"</a>.
-    <h2 class="font-bold mt-8 text-title dark:text-dark-title">The Tools of the Rocq Platform</h2>
+      Platform are available in <a class="text-primary"
+      href="<%s Url.installing_rocq %>">Installing Rocq</a>.
+    <h2 class="font-bold mt-8 text-title dark:text-dark-title">Packages of the Rocq Platform</h2>
     <p>
-      The individual Rocq Platform Tools go through a lifecycle from incubation to deprecation.
-      Here is a list of all Platform Tools sorted by their lifecycle state.
+      Here is a list of all Platform packages sorted by their status.
     </p>
     <p>
-      Tools with a status of "full level" are considered stable, well maintained and suitable as basis for your own developments. 
-      The full level adds many commonly used Rocq libraries, plug-ins and developments.
+      Packages with a status of "full level" are considered stable, well maintained and suitable as basis for your own developments. 
+      The full level adds many commonly used Rocq libraries, plugins and developments.
     </p>
     <p>
       The "optional" packages have the same maturity and maintenance level as the packages in the full level, 
@@ -119,7 +118,7 @@ Platform_layout.three_column_layout
       <hr class="mt-12 mb-6 border-separator_20 border-t border-separator_30">
       <h4 class="text-title dark:text-dark-title font-bold">Full Level</h4>
       <div class="text-content dark:text-dark-content mt-3">
-        The full level adds many commonly used Rocq libraries, plug-ins and developments.
+        The full level adds many commonly used Rocq libraries, plugins and developments.
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
         <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Full) |> List.iter (fun (item : Data.Tool.t) -> %>
