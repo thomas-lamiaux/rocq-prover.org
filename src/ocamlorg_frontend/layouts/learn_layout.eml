@@ -100,6 +100,7 @@ inner_html
 =
   Layout.base
   ?use_swiper
+  ~use_alectryon:true
   ?styles
   ~title
   ~description
