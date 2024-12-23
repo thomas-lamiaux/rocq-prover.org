@@ -6,15 +6,15 @@ let base_of_kind r =
 
 let render ?(search = "") (releases : Data.Release.t list) =
 Platform_layout.single_column_layout
-~title:"Rocq and Rocq Platform Releases"
-~description:"The history of Rocq and Rocq Platform releases with a summary and a complete changelog, as well as the manual at that time."
+~title:"Rocq Prover and Rocq Platform releases"
+~description:"The history of Rocq Prover and Rocq Platform releases with a summary and a complete changelog, as well as the manual at that time."
 ~canonical:Url.releases
 ~current:Releases @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="w-full m-auto">
             <h1 class="font-bold text-title dark:text-dark-title">Releases</h1>
-            <p class="text-content dark:text-dark-content lg:text-lg">The history of Rocq and its Platform releases with a summary and a complete changelog, as well as the manual at that time.</p>
+            <p class="text-content dark:text-dark-content lg:text-lg">The history of the Rocq Prover and its Platform releases with a summary and a complete changelog, as well as the manual at that time.</p>
         </div>
     </div>
 </div>
