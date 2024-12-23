@@ -15,10 +15,10 @@ let decode (fpath, body_md) =
   { fpath = Fpath.to_string fpath; toc = (toc_toc toc); body_md; body_html }
 
 let roadmap () =
-  let fpath = Fpath.v "roadmap.md" in
+  let fpath = Fpath.v "roadmap/roadmap.md" in
   match Utils.read_file fpath with
   | Some content -> decode (fpath, content)
-  | None -> decode (fpath, "roadmap.md is absent") (* Silently fails when no roadmap is there *)
+  | None -> decode (fpath, "roadmap/roadmap.md is absent") (* Silently fails when no roadmap is there *)
 
 let template () =
   let _ = roadmap () in

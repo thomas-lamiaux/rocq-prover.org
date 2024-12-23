@@ -273,7 +273,7 @@
 (rule
  (target roadmap.ml)
  (deps
-  (source_tree %{workspace_root}/data/roadmap.md)
+  (source_tree %{workspace_root}/data/roadmap/roadmap.md)
   (:ood_gen %{workspace_root}/tool/ood-gen/bin/gen.exe))
  (action
   (chdir
@@ -281,7 +281,6 @@
    (with-stdout-to
     %{target}
     (run %{ood_gen} roadmap)))))
-
 
 (rule
  (target success_story.ml)
