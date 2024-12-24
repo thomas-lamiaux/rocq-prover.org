@@ -57,7 +57,7 @@ let flatten_subteams (team : Data.Governance.team) =
         acc subteam.members)
     (team.members
     |> List.map (fun m -> (m.Member.github, (m, [])))
-    |> MemberMap.of_list)
+    |> List.to_seq |> MemberMap.of_seq )
     team.subteams
   |> MemberMap.bindings |> List.map snd
   |> List.map (fun (member, subteams) ->
@@ -94,7 +94,7 @@ let render_subteam (team : Data.Governance.team) =
     </div>
     <% ); %>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-6 mb-4 pb-12">
-      <%s! (if List.is_empty team.subteams then team.members else flatten_subteams team)
+      <%s! (if team.subteams = [] then team.members else flatten_subteams team)
       |> List.map (fun (member : Data.Governance.Member.t) -> render_team_member ~default_role:team.default_role member )
       |> String.concat "\n" %>
     </div>
