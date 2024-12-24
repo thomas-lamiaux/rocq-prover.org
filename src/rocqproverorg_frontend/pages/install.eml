@@ -44,18 +44,17 @@ Layout.render
         <h2>
           Install Rocq using the Rocq Platform (recommended)
         </h2>
+        <p>
+          Rocq has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
+          The Rocq Platform provides an easy way to install Rocq and a consistent set of packages on Windows, macOS and Linux.
+        </p>
 
         <ol>
-          <li>
-
-            Rocq has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful. 
-            The Rocq Platform provides an easy way to install Rocq and a consistent set of packages on Windows, macOS and Linux.
-          </li>
 
           <li>
             Beginners are encouraged to use one of the binary installers: we provide binary installers for Windows and macOS. 
             <p>
-            <a target="_blank" href="https://github.com/coq/platform/releases">Windows and macOS installers</a>
+            <a href="<%s Url.release Data.Release.latest_platform.version %>#recommended-binary-installers" >Windows and macOS installers</a>
             </p>
           </li>
 
@@ -63,7 +62,7 @@ Layout.render
             Experienced users (and Linux users) are advised to run the Rocq Platform scripts to install from sources, 
             as this will allow them to install additional packages with opam.
            <p>
-            <a target="_blank" href="https://github.com/coq/platform">Platform scripts</a>
+            <a target="_blank" href="https://github.com/coq/platform#installation">Platform scripts</a>
             </p>
 
           </li>
