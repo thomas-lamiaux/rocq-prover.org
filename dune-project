@@ -2,10 +2,10 @@
 
 (name rocqproverorg)
 
-(documentation "https://ocaml.github.io/ocaml.org/")
+(documentation "https://rocq-prover.github.io/rocq-prover.org/")
 
 (source
- (github ocaml/ocaml.org))
+ (github rocq-prover/rocq-prover.org))
 
 (license ISC)
 
@@ -16,9 +16,13 @@
  "Ashish Agarwal"
  "Kanishka Azimi"
  "Richard Davison"
- "Jiae Kam")
+ "Jiae Kam"
+ "Bastien Sozeau"
+ "Matthieu Sozeau"
+ "Nicolas Tabareau"
+ "Théo Zimmermann")
 
-(maintainers "Thibaut Mattio" "Patrick Ferris")
+(maintainers "Matthieu Sozeau" "Nicolas Tabareau" "Théo Zimmermann")
 
 (generate_opam_files true)
 
@@ -26,9 +30,9 @@
 
 (package
  (name rocqproverorg)
- (synopsis "Official OCaml website")
+ (synopsis "Official Rocq Prover website")
  (description
-  "This repository contains the server that serves the official OCaml website at https://ocaml.org.")
+  "This repository contains the server that serves the official Rocq website at https://rocq-prover.org.")
  (depends
   (ocaml
    (>= 4.14.0))
