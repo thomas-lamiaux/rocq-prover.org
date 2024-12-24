@@ -1,8 +1,8 @@
 teams:
 - id: governance
   name: Governance
-  description: The governance is ensured by the project leader, with the help of the
-    coordination team, and by the core team.
+  description: The governance is ensured by the Project Leader, with the help of the
+    Coordination team, and by the Core team.
   subteams:
   - id: coordination
     name: Coordination

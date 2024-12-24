@@ -50,7 +50,7 @@ Layout.render
 </div>
 <div class="container-fluid py-10">
   <h2 class="font-bold text-2xl mb-2 text-title dark:text-dark-title">Teams</h2>
-  <p class="text-lg text-content dark:text-dark-content">See who the maintainers of the various Rocq projects are. We present a comprehensive list structured by project / purpose</p>
+  <p class="text-lg text-content dark:text-dark-content">See who the maintainers of the various official Rocq Projects are. We present a comprehensive list structured by project / purpose</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
     <% teams |> List.iter (fun (team : Data.Governance.team) -> %>
     <%s! render_team_card team "members" %>
