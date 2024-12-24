@@ -4,6 +4,7 @@ tags: [infrastructure]
 ---
 
 <video autoplay muted loop>
+  <source src="/media/news/introducing_the_rocq_prover.webm" "type="video/webm" />
   <source src="/media/news/introducing_the_rocq_prover.mp4" "type="video/mp4" />
 </video>
 
