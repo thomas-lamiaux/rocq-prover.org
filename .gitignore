@@ -12,3 +12,5 @@ _opam/
 *:OECustomProperty
 .DS_Store
 .nova
+
+.venv/

@@ -1,3 +1,18 @@
+<!--
+Instructions to generate 1_01_a_tour_of_rocq.md from 1_01_a_tour_of_rocq.md.orig:
+
+1. Install `coq-serapi.8.20.0+0.20.0` in your opam switch:
+   $ opam install coq-serapi.8.20.0+0.20.0
+2. Install `alectryon` and `myst_parser` in your virtual environment:
+   $ python3 -m venv .venv
+    $ source .venv/bin/activate
+    $ pip install alectryon myst_parser
+3. Run the following command:
+    $ alectryon --frontend md --backend webpage data/tutorials/getting-started/1_01_a_tour_of_rocq.md.orig -o data/tutorials/getting-started/1_01_a_tour_of_rocq.md
+4. Remove the untracked generated files:
+    $ rm data/tutorials/getting-started/alectryon.css data/tutorials/getting-started/alectryon.js data/tutorials/getting-started/docutils_basic.css data/tutorials/getting-started/pygments.css
+5. Remove the last `</div>`, `</body>`, and `</html>` closing tags of the generated 1_01_a_tour_of_rocq.md file.
+6. Remove everything before the following in the generated 1_01_a_tour_of_rocq.md file (as well as the closing comment marker):
 ---
 id: tour-of-rocq
 title: A Tour of Rocq
@@ -7,6 +22,10 @@ category: "First Steps"
 recommended_next_tutorials:
 ---
 
+<div class="alectryon-root alectryon-centered">
+<div class="document">
+<div class="alectryon-container docutils container">
+-->
 
 The Rocq prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.
 
@@ -48,7 +67,7 @@ Definition divide (x y:N) := exists z, x * z = y.
 Definition prime x := ∀ y, divide y x -> y = 1 \/ y = x.
 ```
 
-- `Type` is the sort for datatypes and mathematical structures, i.e. well-formed types or structures are of type Type. Here is e.g. a basic example of type:
+- {coq}`Type` is the sort for datatypes and mathematical structures, i.e. well-formed types or structures are of type {coq}`Type`. Here is e.g. a basic example of type:
 {coq}`Z -> Z * Z`
 
  Types can be inductive structures, e.g.:
@@ -88,13 +107,13 @@ Check {n : N | even n}.
 End inddecls.
 ```
 
-Rocq implements a functional programming language supporting these types. For instance, the pairing function of type `Z -> Z * Z` is written `fun x => (x,x)` and `cons (S (S O)) (cons (S O) nil)` (shortened to `2::1::nil` in Rocq) denotes a list of type list nat made of the two elements `2` and `1`.
+Rocq implements a functional programming language supporting these types. For instance, the pairing function of type {coq}`Z -> Z * Z` is written {coq}`fun x => (x,x)` and {coq}`cons (S (S O)) (cons (S O) nil)` (shortened to {coq}`2::1::nil` in Rocq) denotes a list of type list nat made of the two elements {coq}`2` and {coq}`1`.
 Using Σ-types, a sorting function over lists of natural numbers can be given the type:
 ```coq
 sort : ∀ (l : list nat), {l' : list nat | sorted l' /\ same_elements l l'}
 ```
 
-Such a type (specification) enforces the user to write the proofs of predicates `sorted l'` and `same_elements l l'` when writing a implementation for the function sort.
+Such a type (specification) enforces the user to write the proofs of predicates {coq}`sorted l'` and {coq}`same_elements l l'` when writing a implementation for the function sort.
 
 Then, functions over inductive types are expressed using a case analysis:
 
@@ -126,7 +145,7 @@ Eval compute in (43+55).
 
 # Proving in Rocq
 
-Proof development in rocq is done through a language of tactics that allows a user-guided proof process. At the end, the curious user can check that tactics build lambda-terms. For example the tactic intro n, where n is of type nat, builds the term (with a hole):
+Proof development in Rocq is done through a language of tactics that allows a user-guided proof process. At the end, the curious user can check that tactics build lambda-terms. For example the tactic intro n, where n is of type nat, builds the term (with a hole):
 
 ```coq
 fun (n:nat) => _ 
@@ -134,50 +153,50 @@ fun (n:nat) => _
 
 where `_` represents a term that will be constructed after, using other tactics.
 
-Here is an example of a proof in the Coq system:
+Here is an example of a proof in the Rocq Prover:
 
 ```{coq}
-  Inductive seq : nat -> Set :=
-  | niln : seq 0
-  | consn : forall n : nat, nat -> seq n -> seq (S n).
+Inductive seq : nat -> Set :=
+| niln : seq 0
+| consn : forall n : nat, nat -> seq n -> seq (S n).
 
-  Fixpoint length (n : nat) (s : seq n) {struct s} : nat := 
-    match s with
-    | niln => 0
-    | consn i _ s' => S (length i s')
-    end.
+Fixpoint length (n : nat) (s : seq n) {struct s} : nat :=
+  match s with
+  | niln => 0
+  | consn i _ s' => S (length i s')
+  end.
 
-  Theorem length_corr : forall (n : nat) (s : seq n), length n s = n.
-  Proof.
-    intros n s.
+Theorem length_corr : forall (n : nat) (s : seq n), length n s = n.
+Proof.
+  intros n s.
 
-    (* reasoning by induction over s. Then, we have two new goals
-       corresponding on the case analysis about s (either it is 
-       niln or some consn *)
-    induction s.
+  (* reasoning by induction over s. Then, we have two new goals
+      corresponding on the case analysis about s (either it is
+      niln or some consn *)
+  induction s.
 
-      (* We are in the case where s is void. We can reduce the 
-         term: length 0 niln *)
-      simpl. 
+    (* We are in the case where s is void. We can reduce the
+        term: length 0 niln *)
+    simpl.
 
-      (* We obtain the goal 0 = 0. *)
-      trivial.
+    (* We obtain the goal 0 = 0. *)
+    trivial.
 
-      (* now, we treat the case s = consn n e s with induction 
-         hypothesis IHs *)
-      simpl. 
+    (* now, we treat the case s = consn n e s with induction
+        hypothesis IHs *)
+    simpl.
 
-      (* The induction hypothesis has type length n s = n. 
-         So we can use it to perform some rewriting in the goal: *)
-      rewrite IHs. 
+    (* The induction hypothesis has type length n s = n.
+        So we can use it to perform some rewriting in the goal: *)
+    rewrite IHs.
 
-      (* Now the goal is the trivial equality: S n = S n *)
-      trivial.
+    (* Now the goal is the trivial equality: S n = S n *)
+    trivial.
 
-    (* Now all sub cases are closed, we perform the ultimate
-       step: typing the term built using tactics and save it as
-       a witness of the theorem. *)
-  Qed.	  
+  (* Now all sub cases are closed, we perform the ultimate
+      step: typing the term built using tactics and save it as
+      a witness of the theorem. *)
+Qed.
 ```
 
 Using the `Print` command, the user can look at the proof-term generated using the tactics:
