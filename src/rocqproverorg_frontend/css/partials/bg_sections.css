@@ -28,8 +28,8 @@
   }
 
   .section-blue-gradient {
-    /* background: linear-gradient(45deg, #010105, #10162D); */
-    background: linear-gradient(76deg, #f1dad1, #ededed);
+  background: linear-gradient(263deg, #260086, #0b0028); 
+ /*   background: linear-gradient(76deg, #f1dad1, #ededed);*/
     @apply border-none;
   }
 

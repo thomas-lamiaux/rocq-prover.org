@@ -421,28 +421,28 @@ let user_group class_ =
 
 let beaker_bubble class_ =
   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="118" viewBox="0 0 100 118" class="<%s class_ %>" fill="none">
-    <circle cx="61.42" cy="51.5" r="34.5" stroke="#C24F1E" stroke-width="2"/>
-    <circle cx="25.92" cy="29" r="24" stroke="#EF8901" stroke-width="2"/>
-    <circle cx="59.92" cy="5" r="5" fill="#C24F1E"/>
-    <circle cx="20.42" cy="61.5" r="2.5" fill="#EF8901"/>
+    <circle cx="61.42" cy="51.5" r="34.5" stroke="#260085" stroke-width="2"/>
+    <circle cx="25.92" cy="29" r="24" stroke="#ff540a" stroke-width="2"/>
+    <circle cx="59.92" cy="5" r="5" fill="#260085"/>
+    <circle cx="20.42" cy="61.5" r="2.5" fill="#ff540a"/>
     <path d="M61.7506 62.3132V79.4562C61.7506 80.3427 61.576 81.2205 61.2368 82.0395C60.8976 82.8585 60.4003 83.6027 59.7735 84.2295L47.4997 96.5033M61.7506 62.3132C60.9976 62.3822 60.2475 62.4632 59.5005 62.5592M61.7506 62.3132C66.2412 61.8956 70.7609 61.8956 75.2514 62.3132M47.4997 96.5033L49.8099 95.9242C56.0893 94.3725 62.7161 95.1097 68.501 98.0034C74.2859 100.897 80.9128 101.634 87.1922 100.082L91.9025 98.9034M47.4997 96.5033L40.8933 103.113C37.1941 106.806 38.9402 113.064 44.0945 113.943C52.027 115.299 60.1815 116.004 68.501 116.004C76.6801 116.007 84.8448 115.318 92.9075 113.943C98.0588 113.064 99.8049 106.806 96.1087 103.11L91.9025 98.9034M75.2514 62.3132V79.4562C75.2514 81.2473 75.9625 82.9664 77.2286 84.2295L91.9025 98.9034M75.2514 62.3132C76.0045 62.3822 76.7545 62.4632 77.5016 62.5592" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 
 let refresh_bubble class_ =
   <svg xmlns="http://www.w3.org/2000/svg" width="104" height="97" viewBox="0 0 104 97" class="<%s class_ %>" fill="none">
-    <circle cx="32.4983" cy="25" r="24" stroke="#C24F1E" stroke-width="2"/>
-    <circle cx="85.4983" cy="78" r="17" stroke="#EF8901" stroke-width="2"/>
-    <circle cx="27.4983" cy="14" r="5" fill="#C24F1E"/>
-    <circle cx="73.9983" cy="52.5" r="2.5" fill="#EF8901"/>
+    <circle cx="32.4983" cy="25" r="24" stroke="#260085" stroke-width="2"/>
+    <circle cx="85.4983" cy="78" r="17" stroke="#ff540a" stroke-width="2"/>
+    <circle cx="27.4983" cy="14" r="5" fill="#260085"/>
+    <circle cx="73.9983" cy="52.5" r="2.5" fill="#ff540a"/>
     <path d="M46.3332 57.2537H63.4983L52.5603 46.3089C49.0389 42.7874 44.6525 40.255 39.842 38.9663C35.0315 37.6775 29.9665 37.6779 25.1562 38.9674C20.346 40.2568 15.9599 42.7898 12.439 46.3118C8.91805 49.8339 6.38636 54.2207 5.09842 59.0314M1.50172 92.6567V75.4916M1.50172 75.4916H18.6668M1.50172 75.4916L12.4362 86.4364C15.9577 89.9579 20.3441 92.4903 25.1546 93.779C29.9651 95.0677 35.03 95.0674 39.8403 93.7779C44.6506 92.4885 49.0367 89.9555 52.5576 86.4334C56.0785 82.9114 58.6102 78.5246 59.8982 73.7139M63.4983 40.0886V57.2468" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 
 let sheild_bubble class_ =
   <svg xmlns="http://www.w3.org/2000/svg" width="84" height="86" viewBox="0 0 84 86" class="<%s class_ %>" fill="none">
-    <circle cx="25" cy="40.5" r="23.5" stroke="#C24F1E" stroke-width="2"/>
-    <circle cx="18.5" cy="16" r="15" stroke="#EF8901" stroke-width="2"/>
-    <circle cx="55.5" cy="13" r="5" fill="#C24F1E"/>
-    <circle cx="23" cy="75.5" r="2.5" fill="#EF8901"/>
+    <circle cx="25" cy="40.5" r="23.5" stroke="#260085" stroke-width="2"/>
+    <circle cx="18.5" cy="16" r="15" stroke="#ff540a" stroke-width="2"/>
+    <circle cx="55.5" cy="13" r="5" fill="#260085"/>
+    <circle cx="23" cy="75.5" r="2.5" fill="#ff540a"/>
     <path d="M46.5 58.108L53.25 64.858L64.5 49.108M55.5 28C48.7072 34.4507 39.6608 37.9887 30.294 37.858C29.1025 41.4879 28.4969 45.2845 28.5 49.105C28.5 65.881 39.972 79.975 55.5 83.974C71.028 79.978 82.5 65.884 82.5 49.108C82.5 45.178 81.87 41.395 80.706 37.855H80.25C70.662 37.855 61.95 34.111 55.5 28Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 

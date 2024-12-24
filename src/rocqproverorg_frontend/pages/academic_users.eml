@@ -31,7 +31,7 @@ Layout.render
 ~title:"Academic Users of the Rocq Prover"
 ~description:"Rocq is taught all around the world and used every day by programming language researchers and proof engineers. Learn more about the strong academic roots of the language."
 ~canonical:Url.academic_users @@
-<div class="w-full border-b bg-[#DDEAFC] dark:bg-[#101B3F] md:bg-transparent dark:border-none md:bg-[length:100%_100%] md:bg-[url('/img/academic/academic-hero-background.svg')] dark:md:bg-[url('/img/academic/academic-hero-background-dark.svg')]">
+<div class="w-full border-b bg-[#DDEAFC] dark:bg-[#101B3F] md:bg-transparent dark:border-none md:bg-cover md:bg-[url('/img/academic/academic-hero-background.svg')] dark:md:bg-[url('/img/academic/academic-hero-background-dark.svg')]">
   <div class="container-fluid py-2 md:py-4 md:flex md:gap-20">
     <div class="w-full py-6 md:py-20 bg-contain bg-right-bottom bg-no-repeat md:bg-[url('/img/academic/map.svg')]">
       <div class="md:flex-grow">

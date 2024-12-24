@@ -1,4 +1,22 @@
-<svg width="1440" height="430" viewBox="0 0 1440 430" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0H1439V430H0V0Z" fill="#EBF3FF"/>
-<path d="M0 0H1439L943 190L0 430V0Z" fill="#DDEAFC"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1440 430">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+
+      .st1 {
+        fill: #fff;
+        opacity: .1;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" x1="-22.59995" y1="215" x2="1461.59995" y2="215" gradientTransform="translate(0 429.88983) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f1dad1"/>
+    </linearGradient>
+  </defs>
+  <rect class="st0" x="-22.59995" y="-42.11016" width="1484.1999" height="513.99999"/>
+  <path class="st1" d="M0,0h1439l-496,190L0,430V0Z"/>
 </svg>

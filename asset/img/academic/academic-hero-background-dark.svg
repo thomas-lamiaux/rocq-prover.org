@@ -1,4 +1,32 @@
-<svg width="1440" height="430" viewBox="0 0 1440 430" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0H1439V430H0V0Z" fill="#1C2A58"/>
-<path d="M0 0H1439L943 190L0 430V0Z" fill="#101B3F"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1440 430">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Dégradé_sans_nom_2);
+      }
+
+      .st1 {
+        fill: #03040b;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_2" data-name="Dégradé sans nom 2" x1="0" y1="215" x2="1439" y2="215" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#010105"/>
+      <stop offset="0" stop-color="#03030a"/>
+      <stop offset=".2" stop-color="#060813"/>
+      <stop offset=".3" stop-color="#090c1a"/>
+      <stop offset=".4" stop-color="#0b0f20"/>
+      <stop offset=".5" stop-color="#0d1225"/>
+      <stop offset=".6" stop-color="#0f1529"/>
+      <stop offset=".7" stop-color="#10162c"/>
+      <stop offset=".7" stop-color="#10162c"/>
+      <stop offset=".8" stop-color="#10162c"/>
+      <stop offset=".9" stop-color="#10162d"/>
+      <stop offset=".9" stop-color="#10162d"/>
+      <stop offset="1" stop-color="#10162d"/>
+    </linearGradient>
+  </defs>
+  <path class="st1" d="M0,0h1439v430H0V0Z"/>
+  <path class="st0" d="M0,0h1439l-496,190L0,430V0Z"/>
 </svg>

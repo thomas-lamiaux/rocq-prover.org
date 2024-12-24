@@ -205,36 +205,36 @@ Community_layout.single_column_layout
 </div>     
 <div class="w-full section-blue-gradient dark:dark-no-mild-contrast">
   <div class="container-fluid pt-6 pb-12">
-    <p class="uppercase text-sm  dark:text-dark-content tracking-widest font-medium my-4">CODE OF CONDUCT</p>
-    <h2 class="font-bold text-2xl dark:text-dark-title mb-8">Rocq's Code of Conduct: Online & Event Guidelines</h2>
+    <p class="uppercase text-sm text-dark-content dark:text-dark-content tracking-widest font-medium my-4">CODE OF CONDUCT</p>
+    <h2 class="font-bold text-2xl text-white dark:text-dark-title mb-8">Rocq's Code of Conduct: Online & Event Guidelines</h2>
     <div class="flex justify-between flex-wrap md:flex-nowrap gap-5">
         <div class="flex flex-col">
           <div class="flex items-center">
-            <%s! Icons.legal "h-12 mr-4 text-primary dark:text-dark-primary" %>
-            <p class="dark:text-dark-title italic">Code of Conduct</p>
+            <%s! Icons.legal "h-12 mr-4 text-white dark:text-dark-primary" %>
+            <p class="text-white dark:text-dark-title italic">Code of Conduct</p>
           </div>
-          <p class=" dark:text-dark-content">We have a comprehensive Code of Conduct in place covering privacy, language choices, and prohibiting unrelated discussions.
+          <p class="text-dark-content dark:text-dark-content">We have a comprehensive Code of Conduct in place covering privacy, language choices, and prohibiting unrelated discussions.
           </p>
         </div> 
         <div class="flex flex-col">
           <div class="flex items-center">
-            <%s! Icons.environment "h-12 mr-4 text-primary dark:text-dark-primary" %>
-            <p class="dark:text-dark-title italic">Safe Environment</p>
+            <%s! Icons.environment "h-12 mr-4 text-white dark:text-dark-primary" %>
+            <p class="text-white dark:text-dark-title italic">Safe Environment</p>
           </div>
-          <p class=" dark:text-dark-content">Ground rules have been established to ensure a safe and welcoming atmosphere across platforms like GitHub and forums.
+          <p class="text-dark-content dark:text-dark-content">Ground rules have been established to ensure a safe and welcoming atmosphere across platforms like GitHub and forums.
           </p>
         </div> 
         <div class="flex flex-col">
           <div class="flex items-center">
-            <%s! Icons.lock "h-12 mr-4 text-primary dark:text-dark-primary" %>
-            <p class="dark:text-dark-title italic">Confidentiality</p>
+            <%s! Icons.lock "h-12 mr-4 text-white dark:text-dark-primary" %>
+            <p class="text-white dark:text-dark-title italic">Confidentiality</p>
           </div>
-          <p class=" dark:text-dark-content">Confidentiality is maintained during the reporting process to foster a positive, inclusive atmosphere for contributions.
+          <p class="text-dark-content dark:text-dark-content">Confidentiality is maintained during the reporting process to foster a positive, inclusive atmosphere for contributions.
           </p>
         </div> 
     </div>
-    <a href="<%s Url.code_of_conduct %>" class="dark:text-dark-white hover:text-primary pr-2 flex mt-4 items-center dark:hover:text-dark-primary underline group">
-      View Code Of Conduct <%s! Icons.arrow_small_right "h-5 w-5 ml-2 dark:text-dark-white group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %>
+    <a href="<%s Url.code_of_conduct %>" class="text-white dark:text-dark-white hover:text-primary pr-2 flex mt-4 items-center dark:hover:text-dark-primary underline group">
+      View Code Of Conduct <%s! Icons.arrow_small_right "h-5 w-5 ml-2 text-white dark:text-dark-white group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %>
     </a>    
     </div> 
   </div>
