@@ -90,7 +90,7 @@ let book_cover ~free cover_src =
       </div>
     </div>
     <% ); %>
-    <img src="<%s Ocamlorg_static.Media.url cover_src %>"
+    <img src="<%s Rocqproverorg_static.Media.url cover_src %>"
       class="w-full border z-10"
       alt="">
   </div>
@@ -171,7 +171,7 @@ let exercises_block ~icon ~heading (exercises: Data.Exercise.t list) =
 let tool_card ~img_src ~title ~text ~url =
   <a class="group p-5 flex flex-col card dark:bg-dark-card max-w-[32rem]" href="<%s url %>">
     <h3 class="flex gap-3 text-black dark:text-dark-title text-base font-bold">
-      <img src="<%s! Ocamlorg_static.Asset.url img_src %>" alt="">
+      <img src="<%s! Rocqproverorg_static.Asset.url img_src %>" alt="">
       <%s title %>
     </h3>
     <p class="text-content dark:text-dark-content py-6">

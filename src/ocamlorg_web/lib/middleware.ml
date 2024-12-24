@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 
 let no_trailing_slash next_handler request =
   let target = "///" ^ Dream.target request in
@@ -14,7 +14,7 @@ let no_trailing_slash next_handler request =
 let language_manual_version next_handler request =
   let open Data in
   let init_path = request |> Dream.target |> String.split_on_char '/' in
-  let patch (release : Release.t) = Ocamlorg.Url.patch release.version in
+  let patch (release : Release.t) = Rocqproverorg.Url.patch release.version in
   let release str =
     str |> Release.get_by_version
     |> Option.value ~default:Release.latest

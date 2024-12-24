@@ -1,4 +1,4 @@
-open Ocamlorg
+open Rocqproverorg
 
 let make ?(permanent = false) t =
   let status = if permanent then `Moved_Permanently else `See_Other in

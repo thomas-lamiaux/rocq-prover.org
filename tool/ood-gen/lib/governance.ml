@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 open Data_intf.Governance
 open Member
 

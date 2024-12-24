@@ -1,4 +1,4 @@
-open Ocamlorg_package.Import
+open Rocqproverorg_package.Import
 
 let json =
   {|{
@@ -47,8 +47,8 @@ let json =
 let test_case n = Alcotest.test_case n `Quick
 
 let () =
-  let module Package_info = Ocamlorg_package.Package_info in
-  Alcotest.run "ocamlorg"
+  let module Package_info = Rocqproverorg_package.Package_info in
+  Alcotest.run "rocqproverorg"
     [
       ( "test parsing and path generation",
         [

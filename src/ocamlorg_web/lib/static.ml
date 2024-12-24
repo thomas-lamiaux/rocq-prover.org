@@ -40,7 +40,7 @@ let loader ~read ~digest ?(not_cached = []) local_root path _request =
   let open Lwt.Syntax in
   let open Handler in
   let not_cached = List.mem path not_cached in
-  let maybe_static_file = Ocamlorg_static.of_url_path path in
+  let maybe_static_file = Rocqproverorg_static.of_url_path path in
   let</>? static_file = maybe_static_file in
   let filepath = static_file.filepath in
   let* result = read local_root filepath in

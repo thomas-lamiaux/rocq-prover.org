@@ -1,7 +1,7 @@
 let package_card ~href ~img_path ~name description =
   <a href="<%s href %>" target="_blank" class="bg-background dark:bg-dark-background text-title dark:text-dark-title  p-4 rounded-xl flex md:gap-2 items-center card dark:dark-card">
     <div class="w-4/12">
-      <img src="<%s Ocamlorg_static.Asset.url img_path %>" alt="<%s name %> logo" class="w-1/2 md:w-2/3">
+      <img src="<%s Rocqproverorg_static.Asset.url img_path %>" alt="<%s name %> logo" class="w-1/2 md:w-2/3">
     </div>
     <div class="flex-col w-8/12">
       <div class="text-base font-semibold"><%s name %></div>
@@ -29,8 +29,8 @@ Layout.render
     <div class="flex flex-col lg:flex-row gap-6">
       <div class="lg:flex-1 my-2 justify-center text-center">
         <h1 class="flex justify-center">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq logo" class="dark:hidden lg:max-w-xl max-w-[80%]">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline lg:max-w-xl max-w-[80%]">
+          <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq logo" class="dark:hidden lg:max-w-xl max-w-[80%]">
+          <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" alt="Rocq logo" class="hidden dark:inline lg:max-w-xl max-w-[80%]">
         </h1>
         <p class="dark:text-dark-content max-w-3xl mx-auto my-7 lg:text-2xl text-xl text-content">
           A trustworthy, industrial-strength interactive theorem prover and dependently-typed programming language
@@ -104,67 +104,67 @@ Layout.render
       <!-- Add MPI, Aarhus, Harvard, ... -->
       <!-- Add Mitsubishi, Facebook ? -->
       <div class="mx-4 my-4 py-4 px-4">
-        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/inr_logo_rouge.svg" %>" alt="Inria"/>
-        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/inr_logo_blanc.svg" %>" alt="Inria"/>
+        <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/inr_logo_rouge.svg" %>" alt="Inria"/>
+        <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/inr_logo_blanc.svg" %>" alt="Inria"/>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.irif.fr/">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/universite-paris-cite.svg" %>" alt="Université de Paris"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/universite-paris-cite-white.svg" %>" alt="Université de Paris"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/universite-paris-cite.svg" %>" alt="Université de Paris"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/universite-paris-cite-white.svg" %>" alt="Université de Paris"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.college-de-france.fr">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/college-de-france-logo.svg" %>" alt="Collège de France"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/college-de-france-logo-white.svg" %>" alt="Collège de France"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/college-de-france-logo.svg" %>" alt="Collège de France"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/college-de-france-logo-white.svg" %>" alt="Collège de France"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.upenn.edu/">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/penn-university.svg" %>" alt="University of Pennsylvania"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/penn-university-white.svg" %>" alt="University of Pennsylvania"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/penn-university.svg" %>" alt="University of Pennsylvania"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/penn-university-white.svg" %>" alt="University of Pennsylvania"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://web.mit.edu/">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/massachusetts-institute-of-technology.svg" %>" alt="MIT Massachusetts Institute of Technology"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/massachusetts-institute-of-technology-white.svg" %>" alt="MIT Massachusetts Institute of Technology"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/massachusetts-institute-of-technology.svg" %>" alt="MIT Massachusetts Institute of Technology"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/massachusetts-institute-of-technology-white.svg" %>" alt="MIT Massachusetts Institute of Technology"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.mpi-sws.org/">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/mpi-sws-blue.svg" %>" alt="Max Planck Institute for Software Systems"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/mpi-sws-white.svg" %>" alt="Max Planck Institute for Software Systems"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/mpi-sws-blue.svg" %>" alt="Max Planck Institute for Software Systems"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/mpi-sws-white.svg" %>" alt="Max Planck Institute for Software Systems"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://cs.au.dk/">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/arhus-logo.svg" %>" alt="Arhus University"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/arhus-logo.svg" %>" alt="Arhus University"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/arhus-logo.svg" %>" alt="Arhus University"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/arhus-logo.svg" %>" alt="Arhus University"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://absint.com/">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/ABSINT-logo-blue.svg" %>" alt="AbsInt"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/ABSINT-logo-white.svg" %>" alt="AbsInt"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/ABSINT-logo-blue.svg" %>" alt="AbsInt"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/ABSINT-logo-white.svg" %>" alt="AbsInt"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://bluerock.io">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/bluerock.svg" %>" alt="BlueRock"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/bluerock.svg" %>" alt="BlueRock"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://formalv.com">
-          <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
-          <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
         <a href="https://google.com">
-        <img class="h-8 dark:hidden" src="<%s Ocamlorg_static.Asset.url "logos/lightmode/google.svg" %>" alt="Google"/>
-        <img class="h-8 hidden dark:inline" src="<%s Ocamlorg_static.Asset.url "logos/darkmode/google.svg" %>" alt="Google"/>
+        <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/google.svg" %>" alt="Google"/>
+        <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/google.svg" %>" alt="Google"/>
         </a>
       </div>
     </div>
@@ -229,9 +229,9 @@ Layout.render
           </div>
           <div class="lg:flex-1  bg-black/100 lg:mt-0 mt-10 flex justify-center">
             <div class="grid grid-cols-1">
-              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/type-cumul-const.png" %>" alt=""/></div>
-              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/lemma-red-confluence.png" %>" alt=""/></div>
-              <div><img src="<%s Ocamlorg_static.Asset.url "img/home/subject-reduction-proof.png" %>" alt=""/></div>
+              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/type-cumul-const.png" %>" alt=""/></div>
+              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/lemma-red-confluence.png" %>" alt=""/></div>
+              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/subject-reduction-proof.png" %>" alt=""/></div>
             </div>
           </div>
         </div>
@@ -268,7 +268,7 @@ Layout.render
                 <div class="swiper-slide">
                   <div>
                     <div class="text-lg my-4 font-bold text-secondary dark:text-dark-secondary">COMPCERT</div>
-                    <img src="<%s Ocamlorg_static.Asset.url "img/home/compcert-diagram.png" %>">
+                    <img src="<%s Rocqproverorg_static.Asset.url "img/home/compcert-diagram.png" %>">
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -309,9 +309,9 @@ Layout.render
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between items-center">
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
             <div class="iris-container">
-              <div class="iris-logo"><img src="<%s Ocamlorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" /></div> 
-              <div class="iris-proof-script"><img src="<%s Ocamlorg_static.Asset.url "img/home/iris-proof-script.png" %>" alt="Iris Proof Script" /></div>
-              <div class="iris-proof-goal"><img src="<%s Ocamlorg_static.Asset.url "img/home/iris-proof-goal.png" %>" alt="Iris Proof Goal" /></div>
+              <div class="iris-logo"><img src="<%s Rocqproverorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" /></div> 
+              <div class="iris-proof-script"><img src="<%s Rocqproverorg_static.Asset.url "img/home/iris-proof-script.png" %>" alt="Iris Proof Script" /></div>
+              <div class="iris-proof-goal"><img src="<%s Rocqproverorg_static.Asset.url "img/home/iris-proof-goal.png" %>" alt="Iris Proof Goal" /></div>
             </div>
           </div>
           <div class="lg:flex-1 mt-10 lg:mt-0">
@@ -360,7 +360,7 @@ Layout.render
           </div>
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
             TODO by PMP: Perf graph to his glory
-            <!-- <img src="<%s Ocamlorg_static.Asset.url "img/home/workfaster.svg" %>" alt=""> -->
+            <!-- <img src="<%s Rocqproverorg_static.Asset.url "img/home/workfaster.svg" %>" alt=""> -->
           </div>
         </div>
       </div>

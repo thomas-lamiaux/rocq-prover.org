@@ -1,5 +1,5 @@
 (library
- (name ocamlorg_package)
+ (name rocqproverorg_package)
  (libraries
   opam-format
   bos

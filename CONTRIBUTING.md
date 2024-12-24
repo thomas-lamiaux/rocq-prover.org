@@ -6,7 +6,7 @@ This guide documents the best way to contribute to the project when adding thing
 
 - **Good First Issues**: if you are either new to the repository or still getting started with OCaml in general, issues marked as a `good first issue` are ideal.
 - **Suggesting Changes**: most of the site content is stored in the `data` directory as Markdown or YAML. To suggest a change or update this content, you can edit those files directly and rebuild the website, detailed in the [HACKING](./HACKING.md) guide. This will promote the content into their `.ml` counterparts. If you would like to suggest entirely new website content or code, please [open an issue](https://github.com/ocaml/ocaml.org/issues) to discuss it first.
-- **Implementing Pages**: most pages are implemented in `src/ocamlorg_frontend/pages` using the [.eml templating preprocessor](https://aantron.github.io/dream/#templates). This is mixture or OCaml and HTML.
+- **Implementing Pages**: most pages are implemented in `src/rocqproverorg_frontend/pages` using the [.eml templating preprocessor](https://aantron.github.io/dream/#templates). This is mixture or OCaml and HTML.
 
 ## Reporting Bugs
 

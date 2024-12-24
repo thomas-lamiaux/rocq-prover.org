@@ -1,5 +1,5 @@
-module Ocamlorg_web = Ocamlorg_web
-module Package = Ocamlorg_package
+module Rocqproverorg_web = Rocqproverorg_web
+module Package = Rocqproverorg_package
 
 let dependencies =
   [
@@ -86,21 +86,21 @@ let packages : Package.t list =
   ]
 
 let get_info_test () =
-  let deps = Ocamlorg_web.Graphql.get_info dependencies in
+  let deps = Rocqproverorg_web.Graphql.get_info dependencies in
   let num_of_deps_returned = List.length deps in
   Alcotest.(check int)
     "returns 6 dependencies" (List.length dependencies) num_of_deps_returned
 
 let is_in_range_test current_version from_version upto_version cond () =
   let is_in_range =
-    Ocamlorg_web.Graphql.is_in_range current_version from_version upto_version
+    Rocqproverorg_web.Graphql.is_in_range current_version from_version upto_version
   in
   Alcotest.(check bool) "returns true or false" cond is_in_range
 
 let is_valid_params_test limit offset cond () =
   let total_packages = List.length packages in
   let is_valid_params =
-    Ocamlorg_web.Graphql.is_valid_params limit offset total_packages
+    Rocqproverorg_web.Graphql.is_valid_params limit offset total_packages
   in
   let is_valid_params =
     match is_valid_params with
@@ -113,7 +113,7 @@ let is_valid_params_test limit offset cond () =
 let packages_list_test ?contains offset limit total_length () =
   let state = Package.mockup_state packages in
   let all_packages =
-    Ocamlorg_web.Graphql.packages_list ?contains offset limit packages state
+    Rocqproverorg_web.Graphql.packages_list ?contains offset limit packages state
   in
   let num_of_packages_returned = List.length all_packages in
   Alcotest.(check int)
@@ -122,7 +122,7 @@ let packages_list_test ?contains offset limit total_length () =
 let all_packages_result_test ?contains offset limit () =
   let state = Package.mockup_state packages in
   let all_packages =
-    Ocamlorg_web.Graphql.all_packages_result ?contains offset limit state
+    Rocqproverorg_web.Graphql.all_packages_result ?contains offset limit state
   in
   let num_of_packages_returned =
     match all_packages with
@@ -133,7 +133,7 @@ let all_packages_result_test ?contains offset limit () =
 
 let package_result_test name version expect () =
   let state = Package.mockup_state packages in
-  let package = Ocamlorg_web.Graphql.package_result name version state in
+  let package = Rocqproverorg_web.Graphql.package_result name version state in
   let result =
     match package with
     | Error _ -> "Not Found"
@@ -144,7 +144,7 @@ let package_result_test name version expect () =
 let package_versions_result_test name from upto total_packages () =
   let state = Package.mockup_state packages in
   let package_versions =
-    Ocamlorg_web.Graphql.package_versions_result name from upto state
+    Rocqproverorg_web.Graphql.package_versions_result name from upto state
   in
   let num_of_packages_returned =
     match package_versions with
@@ -157,7 +157,7 @@ let package_versions_result_test name from upto total_packages () =
 let state_test () =
   let state = Package.mockup_state packages in
   let pkg =
-    Package.search ~is_author_match:Ocamlorg_web.Handler.is_author_match state
+    Package.search ~is_author_match:Rocqproverorg_web.Handler.is_author_match state
       "abt"
     |> List.map Package.name
     |> List.map Package.Name.to_string
@@ -166,7 +166,7 @@ let state_test () =
   Alcotest.(check (list string)) "same package" expect pkg
 
 let () =
-  Alcotest.run "ocamlorg"
+  Alcotest.run "rocqproverorg"
     [
       ( "get_info_test",
         [
@@ -251,9 +251,9 @@ let () =
         [
           Alcotest.test_case "returns successfully" `Quick (fun () ->
               let req = Dream.request ~method_:`GET "/packages" in
-              let packages_state = Ocamlorg_package.mockup_state packages in
+              let packages_state = Rocqproverorg_package.mockup_state packages in
               let res =
-                Dream.test (Ocamlorg_web.Handler.packages packages_state) req
+                Dream.test (Rocqproverorg_web.Handler.packages packages_state) req
               in
               Dream.status res |> Dream.status_to_int
               |> Alcotest.(check int) "is 200" 200);

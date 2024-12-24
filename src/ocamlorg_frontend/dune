@@ -1,5 +1,5 @@
 (library
- (name ocamlorg_frontend)
- (libraries ocamlorg.global dream ocamlorg.data timedesc ocamlorg_static))
+ (name rocqproverorg_frontend)
+ (libraries rocqproverorg.global dream rocqproverorg.data timedesc rocqproverorg_static))
 
 (include_subdirs unqualified)

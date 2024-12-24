@@ -1,4 +1,4 @@
-module Package = Ocamlorg_package
+module Package = Rocqproverorg_package
 
 type package_info = { name : string; constraints : string option }
 type packages_success = { total_packages : int; packages : Package.t list }

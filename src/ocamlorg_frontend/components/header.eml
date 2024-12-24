@@ -56,8 +56,8 @@ in
     <ul class="order-0 space space-x-5 xl:space-x-8 items-center flex text-content font-medium dark:text-title dark:text-opacity-60 dark:font-semibold">
       <li style="width:170px">
         <a href="<%s Url.index %>" class="block">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" width="170" alt="Rocq logo" class="dark:hidden">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" width="170" alt="Rocq logo" class="hidden dark:inline">
+          <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" width="170" alt="Rocq logo" class="dark:hidden">
+          <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-orange_white.svg" %>" width="170" alt="Rocq logo" class="hidden dark:inline">
         </a>
       </li>
     </ul>
@@ -106,8 +106,8 @@ in
     <ul class="text-content p-6 font-semibold">
       <li class="flex justify-between items-center">
         <a href="<%s Url.index %>">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" width="132" alt="Rocq logo" class="dark:hidden">
-          <img src="<%s Ocamlorg_static.Asset.url "logos/logo-rocq-white.svg" %>" width="132" alt="Rocq logo" class="hidden dark:inline">
+          <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" width="132" alt="Rocq logo" class="dark:hidden">
+          <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-white.svg" %>" width="132" alt="Rocq logo" class="hidden dark:inline">
         </a>
 
         <div class=""

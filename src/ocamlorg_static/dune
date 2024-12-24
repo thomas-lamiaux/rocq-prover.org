@@ -1,5 +1,5 @@
 (library
- (name ocamlorg_static)
+ (name rocqproverorg_static)
  (libraries fmt dream))
 
 (rule

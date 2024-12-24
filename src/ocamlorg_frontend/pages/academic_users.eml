@@ -58,11 +58,11 @@ Layout.render
         <% let len = List.length featured_institutions in %>
         <% List.iteri (fun index (item : Data.Academic_institution.t) -> 
           let logo = match item.alternate_logo with
-            | Some x -> Ocamlorg_static.Media.url ("academic_institution/featured/" ^ x)
+            | Some x -> Rocqproverorg_static.Media.url ("academic_institution/featured/" ^ x)
             | None -> "" 
           in
           let greyed_logo = match item.alternate_logo with
-            | Some x -> Ocamlorg_static.Media.url ("academic_institution/featured/uncolored/" ^ x)
+            | Some x -> Rocqproverorg_static.Media.url ("academic_institution/featured/uncolored/" ^ x)
             | None -> "" 
           in
         %>
@@ -83,11 +83,11 @@ Layout.render
         <div class="swiper-wrapper">
           <% featured_institutions |> List.iter (fun (item : Data.Academic_institution.t) -> 
           let image = match item.image with
-            | Some x -> Ocamlorg_static.Media.url (x)
+            | Some x -> Rocqproverorg_static.Media.url (x)
             | None -> "" 
           in
           let logo = match item.alternate_logo with
-            | Some x -> Ocamlorg_static.Media.url ("academic_institution/featured/" ^ x)
+            | Some x -> Rocqproverorg_static.Media.url ("academic_institution/featured/" ^ x)
             | None -> "" 
           in
           %>

@@ -16,18 +16,18 @@ let render ~default_code =
     <meta name="robots" content="noindex, nofollow">
     <meta name="ahrefs-site-verification" content="6ff715b377cdcd566334b44ae8888791189ce24640c8a403eacdc3bcbaa9449b">
     <link rel="canonical" href="https://ocaml.org<%s Url.playground %>">
-    <link rel="icon" type="image/x-icon" href="<%s Ocamlorg_static.Asset.url "logos/favicon.ico" %>">
+    <link rel="icon" type="image/x-icon" href="<%s Rocqproverorg_static.Asset.url "logos/favicon.ico" %>">
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/main.css" %>">
-    <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/codemirror.css" %>">
-    <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/inter.css" %>">
-    <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/roboto-mono.css" %>">
-    <script defer src="<%s Ocamlorg_static.Asset.url "vendors/alpine.min.js" %>"></script>
+    <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "css/main.css" %>">
+    <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "css/codemirror.css" %>">
+    <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "vendors/font-files/inter.css" %>">
+    <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "vendors/font-files/roboto-mono.css" %>">
+    <script defer src="<%s Rocqproverorg_static.Asset.url "vendors/alpine.min.js" %>"></script>
     <script id="playground-script"
-      data-merlin-url="<%s Ocamlorg_static.Playground.url "merlin.min.js" %>"
-      data-worker-url="<%s Ocamlorg_static.Playground.url "worker.min.js" %>"
+      data-merlin-url="<%s Rocqproverorg_static.Playground.url "merlin.min.js" %>"
+      data-worker-url="<%s Rocqproverorg_static.Playground.url "worker.min.js" %>"
       data-default-code="<%s default_code %>"
-      src="<%s Ocamlorg_static.Playground.url "playground.min.js" %>" defer></script>
+      src="<%s Rocqproverorg_static.Playground.url "playground.min.js" %>" defer></script>
     <style>
 * {
   scrollbar-width: auto;

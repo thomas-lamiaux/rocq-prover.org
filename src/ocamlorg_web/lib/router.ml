@@ -1,23 +1,23 @@
-open Ocamlorg
+open Rocqproverorg
 
 let asset_loader =
   Static.loader
-    ~read:(fun _root path -> Ocamlorg_static.Asset.read path |> Lwt.return)
+    ~read:(fun _root path -> Rocqproverorg_static.Asset.read path |> Lwt.return)
     ~digest:(fun _root path ->
-      Option.map Dream.to_base64url (Ocamlorg_static.Asset.digest path))
+      Option.map Dream.to_base64url (Rocqproverorg_static.Asset.digest path))
     ~not_cached:[ "robots.txt"; "/robots.txt" ]
 
 let media_loader =
   Static.loader
-    ~read:(fun _root path -> Ocamlorg_static.Media.read path |> Lwt.return)
+    ~read:(fun _root path -> Rocqproverorg_static.Media.read path |> Lwt.return)
     ~digest:(fun _root path ->
-      Option.map Dream.to_base64url @@ Ocamlorg_static.Media.digest path)
+      Option.map Dream.to_base64url @@ Rocqproverorg_static.Media.digest path)
 
 let playground_loader =
   Static.loader
-    ~read:(fun _root path -> Ocamlorg_static.Playground.read path)
+    ~read:(fun _root path -> Rocqproverorg_static.Playground.read path)
     ~digest:(fun _root path ->
-      Option.map Dream.to_base64url @@ Ocamlorg_static.Playground.digest path)
+      Option.map Dream.to_base64url @@ Rocqproverorg_static.Playground.digest path)
 
 let page_routes t =
   Dream.scope ""
@@ -147,7 +147,7 @@ let router t =
         [ Dream_encoding.compress ]
         [
           Dream.get
-            (Ocamlorg_static.Playground.url_root ^ "/**")
+            (Rocqproverorg_static.Playground.url_root ^ "/**")
             (Dream.static ~loader:playground_loader "");
         ];
       Dream.scope ""

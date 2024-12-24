@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 open Data_intf.Blog
 
 (* external RSS feeds that we aggregate - they will all be scraped by the

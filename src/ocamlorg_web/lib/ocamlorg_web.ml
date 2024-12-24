@@ -10,7 +10,7 @@ let () =
 
 let run () =
   Mirage_crypto_rng_lwt.initialize (module Mirage_crypto_rng.Fortuna);
-  let state = Ocamlorg_package.init () in
+  let state = Rocqproverorg_package.init () in
   try
     Dream.run ~interface:"0.0.0.0" ~port:Config.http_port
     @@ Dream.logger @@ Middleware.no_trailing_slash
@@ -23,7 +23,7 @@ let run () =
       | EADDRINUSE ->
           Format.eprintf
             "Hint: Try changing the value of the environment variable \
-             OCAMLORG_HTTP_PORT@."
+             ROCQPROVERORG_HTTP_PORT@."
       | _ -> ());
       exit 2
   | exn ->

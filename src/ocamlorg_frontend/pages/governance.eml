@@ -73,7 +73,7 @@ Layout.render
         </div>
       </div>
       <div class="hidden md:flex h-[15rem] ml-auto w-[30%]">
-            <img src="<%s! Ocamlorg_static.Asset.url "img/packages/icon-rocq-white.png" %>" alt="rocq-icon">
+            <img src="<%s! Rocqproverorg_static.Asset.url "img/packages/icon-rocq-white.png" %>" alt="rocq-icon">
       </div>
   </div>
 </div>

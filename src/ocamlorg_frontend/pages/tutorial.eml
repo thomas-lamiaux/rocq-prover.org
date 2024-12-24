@@ -74,7 +74,7 @@ let render_external_tutorial_banner (opt_external_tutorial : Data.Tutorial.exter
   | None -> ""
   | Some external_tutorial ->
     <a href="<%s external_tutorial.banner.url %>" target="_blank">
-      <img src="<%s Ocamlorg_static.Media.url external_tutorial.banner.image %>" alt="<%s external_tutorial.banner.alt %>">
+      <img src="<%s Rocqproverorg_static.Media.url external_tutorial.banner.image %>" alt="<%s external_tutorial.banner.alt %>">
     </a>
 in
 Learn_layout.three_column_layout

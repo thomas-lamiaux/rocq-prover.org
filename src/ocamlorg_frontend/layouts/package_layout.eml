@@ -129,7 +129,7 @@ Layout.base
 </div>
 <%s! Toc.script %>
 <% (match search_index_digest with | Some(digest) -> %>
-<script src="<%s Ocamlorg_static.Asset. url "vendors/minisearch.min.js" %>"></script>
+<script src="<%s Rocqproverorg_static.Asset. url "vendors/minisearch.min.js" %>"></script>
 <script>
   function Fuse() {}
 </script>

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="src/ocamlorg_frontend"
+DIR="src/rocqproverorg_frontend"
 
 TMP_FILE="tmp.txt"
 

@@ -1,6 +1,6 @@
 (lang dune 3.15)
 
-(name ocamlorg)
+(name rocqproverorg)
 
 (documentation "https://ocaml.github.io/ocaml.org/")
 
@@ -25,7 +25,7 @@
 (using mdx 0.1)
 
 (package
- (name ocamlorg)
+ (name rocqproverorg)
  (synopsis "Official OCaml website")
  (description
   "This repository contains the server that serves the official OCaml website at https://ocaml.org.")

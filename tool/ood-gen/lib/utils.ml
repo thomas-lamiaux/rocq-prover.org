@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 
 let ( let* ) = Result.bind
 let ( <@> ) = Result.apply
@@ -48,7 +48,7 @@ let read_from_dir glob =
     failwith
       ("Did not find any files matching " ^ glob
      ^ "! All data folders need to be listed as dependencies of the \
-        corresponding ood-gen command in src/ocamlorg_data/dune");
+        corresponding ood-gen command in src/rocqproverorg_data/dune");
   results
 
 let where path (`Msg err) = `Msg ("data/" ^ path ^ " : " ^ err)

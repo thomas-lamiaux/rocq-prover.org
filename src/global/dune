@@ -1,3 +1,3 @@
 (library
- (name ocamlorg)
- (public_name ocamlorg.global))
+ (name rocqproverorg)
+ (public_name rocqproverorg.global))

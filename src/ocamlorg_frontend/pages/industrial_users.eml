@@ -8,7 +8,7 @@ let get_background_class (item: Data.Success_story.t) =
 
 let render_logo name url _class = 
   <div class="flex justify-center items-start w-4/5 px-4 pt-8 pb-12 swiper-slide">
-    <img class="w-4/5 <%s _class %>" src="<%s! Ocamlorg_static.Asset.url url %>" alt="<%s name %> logo">
+    <img class="w-4/5 <%s _class %>" src="<%s! Rocqproverorg_static.Asset.url url %>" alt="<%s name %> logo">
   </div>
 
 let render_nav_btn ~btn_type _class = 
@@ -19,7 +19,7 @@ let render_nav_btn ~btn_type _class =
   </button>
 
 let render_user (item: Data.Industrial_user.t) = 
-  let logo = match item.logo with | Some x -> Ocamlorg_static.Media.url x | None -> "" in
+  let logo = match item.logo with | Some x -> Rocqproverorg_static.Media.url x | None -> "" in
   <a href="<%s item.url %>" target="_blank" class="flex flex-col swiper-slide group">
     <div class="rounded-lg flex justify-center items-center border border-separator_20 dark:border-dark-separator_30 bg-white overflow-hidden py-4 h-[150px] group-hover:shadow-lg dark:group-hover:shadow-[0px_0px_12px_0px_#00000050]">
       <img class="max-h-16 m-auto" src="<%s logo %>" alt="<%s item.name %> logo">
@@ -140,7 +140,7 @@ the community and learn more about how they use OCaml."
     <div class="flex gap-4 mt-6">
       <div class="w-full md:max-w-[25%] flex flex-col">
         <div class="dark:bg-background rounded-lg dark:p-4 max-w-max mb-4">
-          <img class="w-28 h-12" src="<%s! Ocamlorg_static.Media.url top_story.logo %>" alt="logo">
+          <img class="w-28 h-12" src="<%s! Rocqproverorg_static.Media.url top_story.logo %>" alt="logo">
         </div>   
         <p class="text-content dark:text-dark-content mb-4"><%s top_story.title %></p>
         <div class="flex items-center">
@@ -162,21 +162,21 @@ the community and learn more about how they use OCaml."
       <a href="<%s Url.success_story top_story.slug %>" class="flex-1 relative hidden rounded-lg overflow-hidden md:flex max-h-[400px] group">
         <div class="absolute inset-0 z-10 flex flex-col justify-end text-dark-title p-6 <%s get_background_class (top_story) %>">
           <% let logo = Str.split (Str.regexp "/") top_story.logo |> List.rev |> List.hd in %>
-          <div class="h-8 mb-2"><img class="h-full" src='<%s Ocamlorg_static.Media.url ("/success-stories/white/" ^ logo) %>' alt=""></div>
+          <div class="h-8 mb-2"><img class="h-full" src='<%s Rocqproverorg_static.Media.url ("/success-stories/white/" ^ logo) %>' alt=""></div>
           <p class="mb-3 text-xl"><%s top_story.title %></p>
           <div class="flex items-center">
             <%s! Icons.blog "h-5" %>
             <p class="group-hover:underline ml-2 cursor-pointer">Read Story</p>
           </div>
         </div>
-        <img class="w-full object-cover transition-transform duration-500 ease-[cubic-bezier(.7,0,0,1)] scale-105 group-hover:scale-100" src="<%s! Ocamlorg_static.Media.url (top_story).background %>" alt="">
+        <img class="w-full object-cover transition-transform duration-500 ease-[cubic-bezier(.7,0,0,1)] scale-105 group-hover:scale-100" src="<%s! Rocqproverorg_static.Media.url (top_story).background %>" alt="">
       </a>
     </div>
   </div>
   <div class="container-fluid grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-    <% success_stories |> List.iter (fun (item : Data.Success_story.t) -> let logo = Ocamlorg_static.Media.url item.logo in %>
+    <% success_stories |> List.iter (fun (item : Data.Success_story.t) -> let logo = Rocqproverorg_static.Media.url item.logo in %>
       <a href="<%s Url.success_story item.slug %>" class="group relative rounded-lg overflow-hidden md:flex max-h-[300px] w-full group">
-        <img class="w-full object-cover transition-transform duration-500 ease-[cubic-bezier(.7,0,0,1)] scale-105 group-hover:scale-100" src="<%s! Ocamlorg_static.Media.url (item).background %>" alt="Image" />
+        <img class="w-full object-cover transition-transform duration-500 ease-[cubic-bezier(.7,0,0,1)] scale-105 group-hover:scale-100" src="<%s! Rocqproverorg_static.Media.url (item).background %>" alt="Image" />
         <div class="absolute inset-0 flex flex-col justify-end text-dark-title p-6 <%s get_background_class (item) %> z-10">
           <div class="h-8 mb-2"><img class="h-full" src="<%s logo %>" alt=""></div>
           <p class="mb-3 text-xl"><%s item.title %></p>
@@ -295,7 +295,7 @@ the community and learn more about how they use OCaml."
                 <p class="text-content italic dark:text-dark-content leading-7 pl-10"><%s item.testimony %></p>
                 <div class="flex mt-4 pl-10">
                   <div class="bg-white dark:bg-dark-white overflow-hidden rounded-full border border-separator_20 dark:border-none flex justify-center items-center mr-4 p-[5px] w-[44px] h-[44px]" >
-                  <img class="w-full" src="<%s! if String.starts_with ~prefix:"https" item.logo then item.logo else  Ocamlorg_static.Asset.url item.logo %>" alt="">   
+                  <img class="w-full" src="<%s! if String.starts_with ~prefix:"https" item.logo then item.logo else  Rocqproverorg_static.Asset.url item.logo %>" alt="">   
                   </div>
                   <div>
                   <p class="text-title dark:text-dark-title"><%s item.person %></p>

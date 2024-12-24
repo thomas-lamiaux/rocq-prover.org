@@ -1,5 +1,5 @@
 let image_url img =
-if String.starts_with ~prefix:"http" img then img else Ocamlorg_static.Media.url ("resources/" ^ img)
+if String.starts_with ~prefix:"http" img then img else Rocqproverorg_static.Media.url ("resources/" ^ img)
 
 let community_resource ~title ~desc ~online_url ~source_url ?(img="") () =
   <div class="flex flex-col card dark:dark-card rounded-lg border border-separator_30 overflow-hidden">
@@ -47,7 +47,7 @@ let job_card (job: Data.Job.t) =
     class="card dark:dark-card rounded-xl overflow-hidden p-4"
     :class="{ 'hidden': location != 'All' && ([<%s! String.concat "," (List.map (fun s -> "\'" ^ Dream.html_escape s ^ "\'") job.locations) %>].indexOf(location) == -1)  }">
     <div class="flex h-20 items-end mb-4">
-    <img class="h-full rounded max-w-[100px] bg-dark-white" src='<%s! if String.starts_with ~prefix:"https" job.company_logo then job.company_logo else Ocamlorg_static.Asset.url job.company_logo %>' alt="">
+    <img class="h-full rounded max-w-[100px] bg-dark-white" src='<%s! if String.starts_with ~prefix:"https" job.company_logo then job.company_logo else Rocqproverorg_static.Asset.url job.company_logo %>' alt="">
     <p class="text-base px-2 text-content dark:text-dark-content opacity-80">
     <%s job.company %></p>
     </div>
@@ -121,7 +121,7 @@ module Event = struct
     <a href="<%s event.url %>" class="card dark:dark-card rounded-xl overflow-hidden">
         <div class="relative w-full h-40 rounded-t-xl overflow-hidden bg-event-<%s string_of_int ((Hashtbl.hash event.city) mod 6 )%>">
           <div class="flex flex-col justify-center items-center z-10 absolute top-0 right-0 bottom-0 left-0">
-            <img class="w-[60px] mb-2" src="<%s! Ocamlorg_static.Asset.url "img/community/rocq-icon.svg" %>" alt="camel head illustration">
+            <img class="w-[60px] mb-2" src="<%s! Rocqproverorg_static.Asset.url "img/community/rocq-icon.svg" %>" alt="camel head illustration">
             <p class="uppercase lg:text-4xl text-2xl tracking-widest text-white">[<%s event.city %>]</p>
           </div>
           <div class="absolute inset-0 bg-[#c545001a] clip-triangle"></div>
@@ -157,7 +157,7 @@ module Event = struct
     <a href="<%s recurring_event.url %>" class="card dark:dark-card rounded-xl">
       <div class="relative w-full h-40 rounded-t-xl overflow-hidden bg-event-<%s string_of_int ((Hashtbl.hash recurring_event.city) mod 6 )%>">
         <div class="flex flex-col justify-center items-center z-10 absolute top-0 right-0 bottom-0 left-0">
-          <img class="w-[60px] mb-2" src="<%s! Ocamlorg_static.Asset.url "img/community/rocq-icon.svg" %>" alt="camel head illustration">
+          <img class="w-[60px] mb-2" src="<%s! Rocqproverorg_static.Asset.url "img/community/rocq-icon.svg" %>" alt="camel head illustration">
           <p class="uppercase lg:text-4xl text-2xl tracking-widest text-white"> [<%s recurring_event.city %>]</p>
         </div>
         <div class="absolute inset-0 bg-[#C546000D] clip-triangle"></div>

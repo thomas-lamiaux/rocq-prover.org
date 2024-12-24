@@ -2,8 +2,8 @@
  (name ood_gen)
  (libraries
   bos
-  ocamlorg.global
-  ocamlorg.data_intf
+  rocqproverorg.global
+  rocqproverorg.data_intf
   cmarkit
   ezjsonm
   yaml

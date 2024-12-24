@@ -9,7 +9,7 @@ RUN cd opam-repository && git pull origin c45f5bab71d3589f41f9603daca5acad14df0a
 WORKDIR /home/opam
 
 # Install Opam dependencies
-ADD ocamlorg.opam ocamlorg.opam
+ADD rocqproverorg.opam rocqproverorg.opam
 RUN opam install . --deps-only
 
 # Build project
@@ -21,8 +21,8 @@ RUN git clone https://github.com/coq/opam.git rocq-opam-repository
 
 RUN cd opam-repository && git checkout master && git pull origin master && opam update
 
-ENV OCAMLORG_REPO_PATH rocq-opam-repository
-ENV OCAMLORG_PKG_STATE_PATH package.state
+ENV ROCQPROVERORG_REPO_PATH rocq-opam-repository
+ENV ROCQPROVERORG_PKG_STATE_PATH package.state
 RUN touch package.state && ./init-cache package.state
 
 FROM alpine:3.20 as run
@@ -33,7 +33,7 @@ RUN chmod -R 755 /var
 
 COPY --from=build /home/opam/package.state /var/package.state
 COPY --from=build /home/opam/rocq-opam-repository /var/opam-repository
-COPY --from=build /home/opam/_build/default/src/ocamlorg_web/bin/main.exe /bin/server
+COPY --from=build /home/opam/_build/default/src/rocqproverorg_web/bin/main.exe /bin/server
 
 COPY playground/asset playground/asset
 
@@ -41,11 +41,11 @@ RUN git clone --depth=1 https://github.com/coq/doc /doc
 
 RUN git config --global --add safe.directory /var/opam-repository
 
-ENV OCAMLORG_REPO_PATH /var/opam-repository/
+ENV ROCQPROVERORG_REPO_PATH /var/opam-repository/
 ENV DOC_PATH /doc
-ENV OCAMLORG_PKG_STATE_PATH /var/package.state
+ENV ROCQPROVERORG_PKG_STATE_PATH /var/package.state
 ENV DREAM_VERBOSITY info
-ENV OCAMLORG_HTTP_PORT 8080
+ENV ROCQPROVERORG_HTTP_PORT 8080
 
 EXPOSE 8080
 

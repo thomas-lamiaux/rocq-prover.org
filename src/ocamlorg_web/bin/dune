@@ -1,9 +1,9 @@
 (executable
  (name main)
  (public_name server)
- (package ocamlorg)
+ (package rocqproverorg)
  (modules main)
- (libraries ocamlorg_web))
+ (libraries rocqproverorg_web))
 
 (rule
  (alias run)

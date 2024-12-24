@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 open Data_intf.Consortium_page
 
 type metadata = {

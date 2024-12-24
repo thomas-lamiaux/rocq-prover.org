@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 
 type section = { title : string; id : string }
 [@@deriving show { with_path = false }]

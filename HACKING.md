@@ -97,8 +97,8 @@ The deployment pipeline is managed in <https://github.com/ocurrent/ocurrent-depl
 To test the deployment locally, run the following commands:
 
 ```
-docker build -t ocamlorg .
-docker run -p 8080:8080  ocamlorg
+docker build -t rocqproverorg .
+docker run -p 8080:8080  rocqproverorg
 ```
 
 This will build the Docker image and run a Docker container with the port `8080` mapped to the HTTP server.
@@ -159,28 +159,28 @@ The following snippet describes the repository structure:
 │   ├── global
 │   │   Project wide definitions
 │   │
-│   ├── ocamlorg_data
+│   ├── rocqproverorg_data
 │   │   The result of compiling all of the information in `/data` into OCaml modules.
 │   │
-│   ├── ocamlorg_frontend
+│   ├── rocqproverorg_frontend
 │   │   All of the front-end code primarily using .eml files (OCaml + HTML).
 │   │
-│   ├── ocamlorg_package
+│   ├── rocqproverorg_package
 │   │   The library for constructing opam-repository statistics and information (e.g. rev deps).
 │   │
-│   └── ocamlorg_web
+│   └── rocqproverorg_web
 │       The main entry-point of the server.
 │
 ├── tool/
-│   Sources for development tools such as the `ocamlorg_data` code generator.
+│   Sources for development tools such as the `rocqproverorg_data` code generator.
 │
 ├── dune
 ├── dune-project
 │   Dune file used to mark the root of the project and define project-wide parameters.
 │   For the documentation of the syntax, see https://dune.readthedocs.io/en/stable/dune-files.html#dune-project.
 │
-├── ocamlorg.opam
-├── ocamlorg.opam.template
+├── rocqproverorg.opam
+├── rocqproverorg.opam.template
 │   opam package definitions.
 │
 ├── CONTRIBUTING.md

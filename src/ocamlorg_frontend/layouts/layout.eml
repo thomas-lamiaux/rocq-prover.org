@@ -67,14 +67,14 @@ inner =
       <% (match description with | Some description -> %>
       <meta name="twitter:description" content="<%s description %>">
       <% | None -> ()); %>
-      <meta name="twitter:image" content="https://rocq-prover.org<%s Ocamlorg_static.Asset.url "img/social/rocq-prover_org_social_media.png" %>">
+      <meta name="twitter:image" content="https://rocq-prover.org<%s Rocqproverorg_static.Asset.url "img/social/rocq-prover_org_social_media.png" %>">
       <meta property="og:site_name" content="Rocq">
       <meta property="og:type" content="object">
       <meta property="og:title" content="<%s title %>">
       <% (match description with | Some description -> %>
       <meta property="og:description" content="<%s description %>">
       <% | None -> ()); %>
-      <meta name="og:image" content="https://rocq-prover.org<%s Ocamlorg_static.Asset.url "img/social/rocq-prover_org_social_media.png" %>">
+      <meta name="og:image" content="https://rocq-prover.org<%s Rocqproverorg_static.Asset.url "img/social/rocq-prover_org_social_media.png" %>">
       <meta name="theme-color" content="#fff" >
       <meta name="color-scheme" content="white">
       <% (match canonical with | Some canonical -> %>
@@ -83,33 +83,33 @@ inner =
       <% | None -> ()); (match alternate with | Some { href; title; type_ } -> %>
       <link rel="alternate" href="<%s href %>" title="<%s title %>" type="<%s type_ %>">
       <% | None -> ()); %>
-      <link rel="icon" type="image/x-icon" href="<%s Ocamlorg_static.Asset.url "logos/favicon.ico" %>">
+      <link rel="icon" type="image/x-icon" href="<%s Rocqproverorg_static.Asset.url "logos/favicon.ico" %>">
       <link rel="manifest" href="/manifest.json">
       <% (match styles with | Some styles -> styles |> List.iter (fun style -> %>
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url style %>">
+      <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url style %>">
       <% ) | None -> %>
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/main.css" %>">
+      <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "css/main.css" %>">
       <% ); %>
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/instrument-rocq.css" %>">
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/font-files/source-code-pro.css" %>">
-      <script defer src="<%s Ocamlorg_static.Asset.url "vendors/alpine-clipboard.js" %>"></script>
-      <script defer src="<%s Ocamlorg_static.Asset.url "vendors/alpine.min.js" %>"></script>
-      <script defer src="<%s Ocamlorg_static.Asset.url "vendors/htmx.min.js" %>"></script>
+      <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "vendors/font-files/instrument-rocq.css" %>">
+      <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "vendors/font-files/source-code-pro.css" %>">
+      <script defer src="<%s Rocqproverorg_static.Asset.url "vendors/alpine-clipboard.js" %>"></script>
+      <script defer src="<%s Rocqproverorg_static.Asset.url "vendors/alpine.min.js" %>"></script>
+      <script defer src="<%s Rocqproverorg_static.Asset.url "vendors/htmx.min.js" %>"></script>
       <script defer data-domain="rocq-prover.org" src="https://plausible.ci.dev/js/script.js"></script>
       <% if use_swiper then ( %>
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "vendors/swiper-bundle.min.css" %>">
+      <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "vendors/swiper-bundle.min.css" %>">
       <link rel="alternate" type="application/rss+xml" title="Rocq Planet Feed" href="/planet.xml">
-      <script src="<%s Ocamlorg_static.Asset.url "vendors/swiper-bundle.min.js" %>"></script>
+      <script src="<%s Rocqproverorg_static.Asset.url "vendors/swiper-bundle.min.js" %>"></script>
       <% ); %>
       <% if use_alectryon then ( %>
-      <link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/alectryon.css" %>" type="text/css" />
-      <!--<link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/docutils_basic.css" %>" type="text/css" />-->
-      <!--<link rel="stylesheet" href="<%s Ocamlorg_static.Asset.url "css/pygments.css" %>" type="text/css" />-->
-      <script type="text/javascript" src="<%s Ocamlorg_static.Asset.url "vendors/alectryon.js" %>"></script>
+      <link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "css/alectryon.css" %>" type="text/css" />
+      <!--<link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "css/docutils_basic.css" %>" type="text/css" />-->
+      <!--<link rel="stylesheet" href="<%s Rocqproverorg_static.Asset.url "css/pygments.css" %>" type="text/css" />-->
+      <script type="text/javascript" src="<%s Rocqproverorg_static.Asset.url "vendors/alectryon.js" %>"></script>
       <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/IBM-type/0.5.4/css/ibm-type.min.css" integrity="sha512-sky5cf9Ts6FY1kstGOBHSybfKqdHR41M0Ldb0BjNiv3ifltoQIsg0zIaQ+wwdwgQ0w9vKFW7Js50lxH9vqNSSw==" crossorigin="anonymous" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" />-->
       <% ); %>
-      <link rel="search" href="<%s Ocamlorg_static.Open_search.manifest %>" type="application/opensearchdescription+xml" title="Rocq">
+      <link rel="search" href="<%s Rocqproverorg_static.Open_search.manifest %>" type="application/opensearchdescription+xml" title="Rocq">
       <title><%s title %></title>
     </head>
 

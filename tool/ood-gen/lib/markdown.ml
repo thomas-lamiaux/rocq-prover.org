@@ -1,4 +1,4 @@
-open Ocamlorg.Import
+open Rocqproverorg.Import
 
 module Toc = struct
   type t = { title : string; href : string; children : t list }

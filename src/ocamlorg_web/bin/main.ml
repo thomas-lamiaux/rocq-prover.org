@@ -1,3 +1,3 @@
 (** Main entry point for our application. *)
 
-let () = Ocamlorg_web.run ()
+let () = Rocqproverorg_web.run ()

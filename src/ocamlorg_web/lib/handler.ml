@@ -1,7 +1,7 @@
-open Ocamlorg
-open Ocamlorg.Import
+open Rocqproverorg
+open Rocqproverorg.Import
 
-let http_or_404 ?(not_found = Ocamlorg_frontend.not_found) opt f =
+let http_or_404 ?(not_found = Rocqproverorg_frontend.not_found) opt f =
   Option.fold ~none:(Dream.html ~code:404 (not_found ())) ~some:f opt
 
 (* short-circuiting 404 error operator *)
@@ -9,19 +9,19 @@ let ( let</>? ) opt = http_or_404 opt
 
 let index _req =
   Dream.html
-    (Ocamlorg_frontend.home ~latest_release:Data.Release.latest
+    (Rocqproverorg_frontend.home ~latest_release:Data.Release.latest
        ~latest_platform_release:Data.Release.latest_platform
        ~lts_release:Data.Release.lts
        ~releases:(List.take 2 Data.Release.all)
        ~changelogs:(List.take 3 Data.Changelog.all))
 
-let install _req = Dream.html (Ocamlorg_frontend.install ())
+let install _req = Dream.html (Rocqproverorg_frontend.install ())
 
 let learn _req =
   let papers = Data.Paper.featured in
   let latest_version = Data.Release.latest.version in
   let latest_platform_version = Data.Release.latest_platform.version in
-  Dream.html (Ocamlorg_frontend.learn ~papers ~latest_version ~latest_platform_version)
+  Dream.html (Rocqproverorg_frontend.learn ~papers ~latest_version ~latest_platform_version)
 
 let learn_get_started req =
   let tutorials =
@@ -80,7 +80,7 @@ let community _req =
                match selected_event with
                | None -> false
                | Some eventType -> event.event_type = eventType))
-    |> Ocamlorg.Import.List.take 6
+    |> Rocqproverorg.Import.List.take 6
   in
   let event_types =
     Data.Event.all
@@ -120,7 +120,7 @@ let community _req =
         | first_project :: _ -> [ (first_round.name, first_project) ])
   in
   Dream.html
-    (Ocamlorg_frontend.community ~old_conferences ~outreachy_latest_project
+    (Rocqproverorg_frontend.community ~old_conferences ~outreachy_latest_project
        ?selected_event:query ~events jobs_with_count)
 
 type common_event =
@@ -223,7 +223,7 @@ let events _req =
   in
 
   Dream.html
-    (Ocamlorg_frontend.events ~upcoming:filtered_upcoming_events
+    (Rocqproverorg_frontend.events ~upcoming:filtered_upcoming_events
        ~recurring_events:filtered_recurring_events ?event_type ?event_location
        ?recurring_event_type ?recurring_event_location ~upcoming_event_types
        ~recurring_event_types upcoming_event_locations recurring_event_locations)
@@ -258,7 +258,7 @@ let learn_documents_search req =
     paginate ~req ~n:50 search_results
   in
   let pagination_info =
-    Ocamlorg_frontend.Pagination.
+    Rocqproverorg_frontend.Pagination.
       {
         total_page_count;
         page_number;
@@ -267,7 +267,7 @@ let learn_documents_search req =
       }
   in
   Dream.html
-    (Ocamlorg_frontend.tutorial_search current_items ~total ~pagination_info
+    (Rocqproverorg_frontend.tutorial_search current_items ~total ~pagination_info
        ~search:(q |> Option.value ~default:""))
 
 let changelog req =
@@ -291,7 +291,7 @@ let changelog req =
     paginate ~req ~n:50 changes
   in
   let pagination_info =
-    Ocamlorg_frontend.Pagination.
+    Rocqproverorg_frontend.Pagination.
       {
         total_page_count;
         page_number;
@@ -301,18 +301,18 @@ let changelog req =
   in
 
   Dream.html
-    (Ocamlorg_frontend.changelog ?current_tag ~tags ~pagination_info
+    (Rocqproverorg_frontend.changelog ?current_tag ~tags ~pagination_info
        current_changes)
 
 let changelog_entry req =
   let slug = Dream.param req "id" in
   let</>? change = Data.Changelog.get_by_slug slug in
-  Dream.html (Ocamlorg_frontend.changelog_entry change)
+  Dream.html (Rocqproverorg_frontend.changelog_entry change)
 
 let success_story req =
   let slug = Dream.param req "id" in
   let</>? success_story = Data.Success_story.get_by_slug slug in
-  Dream.html (Ocamlorg_frontend.success_story success_story)
+  Dream.html (Rocqproverorg_frontend.success_story success_story)
 
 (* let industrial_users _req =
   let sort_by_priority_desc lst =
@@ -322,7 +322,7 @@ let success_story req =
       lst
   in
   let top_story = List.hd (sort_by_priority_desc Data.Success_story.all) in
-  let users = Data.Industrial_user.featured |> Ocamlorg.Import.List.take 6 in
+  let users = Data.Industrial_user.featured |> Rocqproverorg.Import.List.take 6 in
   let success_stories =
     match sort_by_priority_desc Data.Success_story.all with
     | [] -> []
@@ -335,20 +335,20 @@ let success_story req =
   let jobs_with_count = (jobs, List.length Data.Job.all) in
 
   Dream.html
-    (Ocamlorg_frontend.industrial_users ~users ~success_stories ~top_story
+    (Rocqproverorg_frontend.industrial_users ~users ~success_stories ~top_story
        ~testimonials ~jobs_with_count) *)
 let industrial_users _req = 
-  Dream.html (Ocamlorg_frontend.industrial_users ())
+  Dream.html (Rocqproverorg_frontend.industrial_users ())
 
 let industrial_businesses _req =
   let businesses = Data.Industrial_user.all in
 
-  Dream.html (Ocamlorg_frontend.industrial_businesses ~businesses)
+  Dream.html (Rocqproverorg_frontend.industrial_businesses ~businesses)
 
 let academic_users _req =
   let featured_institutions = Data.Academic_institution.featured in
-  let papers = Data.Paper.featured |> Ocamlorg.Import.List.take 3 in
-  let books = Data.Book.all |> Ocamlorg.Import.List.take 2 in
+  let papers = Data.Paper.featured |> Rocqproverorg.Import.List.take 3 in
+  let books = Data.Book.all |> Rocqproverorg.Import.List.take 2 in
 (*  let testimonials = Data.Academic_testimonial.all in*)
   let books_with_count = (books, List.length Data.Book.all) in
   (* let extract_courses_with_university
@@ -367,7 +367,7 @@ let academic_users _req =
       [] institutions
   in *)
   Dream.html
-    (Ocamlorg_frontend.academic_users ~featured_institutions ~papers
+    (Rocqproverorg_frontend.academic_users ~featured_institutions ~papers
        ~books:books_with_count) 
 
 let academic_institutions req =
@@ -434,7 +434,7 @@ let academic_institutions req =
     paginate ~req ~n:10 filtered_institutions
   in
   let pagination_info =
-    Ocamlorg_frontend.Pagination.
+    Rocqproverorg_frontend.Pagination.
       {
         total_page_count;
         page_number;
@@ -446,11 +446,11 @@ let academic_institutions req =
       }
   in
   Dream.html
-    (Ocamlorg_frontend.academic_institutions ?search:query ?continent
+    (Rocqproverorg_frontend.academic_institutions ?search:query ?continent
        ?resource_type ~pagination_info institutions)
 
-let about _req = Dream.html (Ocamlorg_frontend.about ())
-let why _req = Dream.html (Ocamlorg_frontend.why ())
+let about _req = Dream.html (Rocqproverorg_frontend.about ())
+let why _req = Dream.html (Rocqproverorg_frontend.why ())
 
 let books req =
   let language = Dream.query req "language" in
@@ -487,7 +487,7 @@ let books req =
   in
   let filtered_books = filter_books Data.Book.all language pricing difficulty in
   Dream.html
-    (Ocamlorg_frontend.books ?language ?pricing ?difficulty filtered_books)
+    (Rocqproverorg_frontend.books ?language ?pricing ?difficulty filtered_books)
 
 let releases req =
   let search_release pattern t =
@@ -518,12 +518,12 @@ let releases req =
     | None -> Data.Release.all
     | Some search -> search_release search Data.Release.all
   in
-  Dream.html (Ocamlorg_frontend.releases ?search releases)
+  Dream.html (Rocqproverorg_frontend.releases ?search releases)
 
 let release req =
   let version = Dream.param req "id" in
   let</>? version = Data.Release.get_by_version version in
-  Dream.html (Ocamlorg_frontend.release version)
+  Dream.html (Rocqproverorg_frontend.release version)
 
 let conferences _req =
   let past_conferences = Data.Conference.all in
@@ -544,10 +544,10 @@ let conferences _req =
                         e.yyyy_mm_dd)
                  |> Option.get >= current_date))
       Data.Event.all
-    |> Ocamlorg.Import.List.take 6
+    |> Rocqproverorg.Import.List.take 6
   in
   Dream.html
-    (Ocamlorg_frontend.conferences ~upcoming_conferences past_conferences)
+    (Rocqproverorg_frontend.conferences ~upcoming_conferences past_conferences)
 
 let conference req =
   let slug = Dream.param req "id" in
@@ -556,7 +556,7 @@ let conference req =
       (fun (x : Data.Conference.t) -> x.slug = slug)
       Data.Conference.all
   in
-  Dream.html (Ocamlorg_frontend.conference conference)
+  Dream.html (Rocqproverorg_frontend.conference conference)
 
 let rocq_planet req =
   let category = Dream.query req "category" in
@@ -577,7 +577,7 @@ let rocq_planet req =
     paginate ~req ~n:10 filtered_entries
   in
   let pagination_info =
-    Ocamlorg_frontend.Pagination.
+    Rocqproverorg_frontend.Pagination.
       {
         total_page_count;
         page_number;
@@ -587,22 +587,22 @@ let rocq_planet req =
   in
 
   Dream.html
-    (Ocamlorg_frontend.rocq_planet ~pagination_info ?category current_items)
+    (Rocqproverorg_frontend.rocq_planet ~pagination_info ?category current_items)
 
 let news req =
   let page_number, total_page_count, current_items =
     paginate ~req ~n:10 Data.News.all
   in
   let pagination_info =
-    Ocamlorg_frontend.Pagination.
+    Rocqproverorg_frontend.Pagination.
       { total_page_count; page_number; base_url = Url.news; queries = [] }
   in
-  Dream.html (Ocamlorg_frontend.news ~pagination_info current_items)
+  Dream.html (Rocqproverorg_frontend.news ~pagination_info current_items)
 
 let news_post req =
   let slug = Dream.param req "id" in
   let</>? news = Data.News.get_by_slug slug in
-  Dream.html (Ocamlorg_frontend.news_post news)
+  Dream.html (Rocqproverorg_frontend.news_post news)
 
 let jobs req =
   let location = Dream.query req "c" in
@@ -621,12 +621,12 @@ let jobs req =
     |> List.sort_uniq String.compare
   in
 
-  Dream.html (Ocamlorg_frontend.jobs ?location ~locations jobs)
+  Dream.html (Rocqproverorg_frontend.jobs ?location ~locations jobs)
 
 let page canonical (_req : Dream.request) =
   let page = Data.Page.get canonical in
   Dream.html
-    (Ocamlorg_frontend.page ~title:page.title ~description:page.description
+    (Rocqproverorg_frontend.page ~title:page.title ~description:page.description
        ~meta_title:page.meta_title ~meta_description:page.meta_description
        ~content:page.body_html ~canonical)
 
@@ -634,22 +634,22 @@ let privacy_policy = page Url.privacy_policy
 let governance_policy = page Url.governance_policy
 let code_of_conduct = page Url.code_of_conduct
 
-let roadmap _req = Dream.html (Ocamlorg_frontend.roadmap ())
+let roadmap _req = Dream.html (Rocqproverorg_frontend.roadmap ())
 
 let playground _req =
   let default = Data.Code_example.get "default.ml" in
   let default_code = default.body in
-  Dream.html (Ocamlorg_frontend.playground ~default_code)
+  Dream.html (Rocqproverorg_frontend.playground ~default_code)
 
 let governance _req =
   Dream.html
-    (Ocamlorg_frontend.governance ~teams:Data.Governance.teams
+    (Rocqproverorg_frontend.governance ~teams:Data.Governance.teams
        ~working_groups:Data.Governance.working_groups)
 
 let governance_team req =
   let id = Dream.param req "id" in
   let</>? team = Data.Governance.get_by_id id in
-  Dream.html (Ocamlorg_frontend.governance_team team)
+  Dream.html (Rocqproverorg_frontend.governance_team team)
 
 let papers req =
   let search_paper pattern t =
@@ -685,37 +685,37 @@ let papers req =
     | Some search -> search_paper search Data.Paper.all
   in
   let recommended_papers = Data.Paper.featured in
-  Dream.html (Ocamlorg_frontend.papers ?search ~recommended_papers papers)
+  Dream.html (Rocqproverorg_frontend.papers ?search ~recommended_papers papers)
 
 let paper req =
   let slug = Dream.param req "id" in
   let</>? paper = Data.Paper.get_by_slug slug in
-  Dream.html (Ocamlorg_frontend.paper paper)
+  Dream.html (Rocqproverorg_frontend.paper paper)
 
 let resources _req =
-  Dream.html (Ocamlorg_frontend.resources ~resources:Data.Resource.all)
+  Dream.html (Rocqproverorg_frontend.resources ~resources:Data.Resource.all)
 
 let platform _req =
   let tools = Data.Tool.all in
-  Dream.html (Ocamlorg_frontend.platform ~pages:Data.Tool_page.all tools)
+  Dream.html (Rocqproverorg_frontend.platform ~pages:Data.Tool_page.all tools)
 
 let platform_page commit_hash req =
   let slug = Dream.param req "id" in
   let</>? page = Data.Tool_page.get_by_slug slug in
   let pages = Data.Tool_page.all in
   Dream.html
-    (Ocamlorg_frontend.platform_page commit_hash ~pages
+    (Rocqproverorg_frontend.platform_page commit_hash ~pages
        ~canonical:(Url.platform_page page.slug) page)
 
 let consortium _req =
-  Dream.html (Ocamlorg_frontend.consortium ~pages:Data.Consortium_page.all)
+  Dream.html (Rocqproverorg_frontend.consortium ~pages:Data.Consortium_page.all)
 
 let consortium_page commit_hash req =
   let slug = Dream.param req "id" in
   let</>? page = Data.Consortium_page.get_by_slug slug in
   let pages = Data.Consortium_page.all in
   Dream.html
-    (Ocamlorg_frontend.consortium_page commit_hash ~pages
+    (Rocqproverorg_frontend.consortium_page commit_hash ~pages
        ~canonical:(Url.consortium_page page.slug) page)
 
 
@@ -750,7 +750,7 @@ let tutorial commit_hash req =
   let prerequisite_tutorials = all_tutorials |> List.filter is_prerequisite in
 
   Dream.html
-    (Ocamlorg_frontend.tutorial commit_hash ~tutorials
+    (Rocqproverorg_frontend.tutorial commit_hash ~tutorials
        ~canonical:(Url.tutorial tutorial.slug)
        ~related_exercises ~recommended_next_tutorials ~prerequisite_tutorials
        tutorial)
@@ -772,11 +772,11 @@ let exercises req =
   let filtered_exercises =
     List.filter (by_difficulty difficulty_level) all_exercises
   in
-  Dream.html (Ocamlorg_frontend.exercises ?difficulty_level filtered_exercises)
+  Dream.html (Rocqproverorg_frontend.exercises ?difficulty_level filtered_exercises)
 
 let cookbook _req =
   let categories = Data.Cookbook.top_categories in
-  Dream.html (Ocamlorg_frontend.cookbook categories)
+  Dream.html (Rocqproverorg_frontend.cookbook categories)
 
 let cookbook_task req =
   let task_slug = Dream.param req "task_slug" in
@@ -786,7 +786,7 @@ let cookbook_task req =
       Data.Cookbook.tasks
   in
   let recipe_list = Data.Cookbook.get_by_task ~task_slug in
-  Dream.html (Ocamlorg_frontend.cookbook_task task recipe_list)
+  Dream.html (Rocqproverorg_frontend.cookbook_task task recipe_list)
 
 let cookbook_recipe req =
   let task_slug = Dream.param req "task_slug" in
@@ -798,9 +798,9 @@ let cookbook_recipe req =
            c.task.slug = recipe.task.slug && c.slug <> recipe.slug)
   in
   Dream.html
-    (Ocamlorg_frontend.cookbook_recipe recipe other_recipes_for_this_task)
+    (Rocqproverorg_frontend.cookbook_recipe recipe other_recipes_for_this_task)
 
-let outreachy _req = Dream.html (Ocamlorg_frontend.outreachy Data.Outreachy.all)
+let outreachy _req = Dream.html (Rocqproverorg_frontend.outreachy Data.Outreachy.all)
 
 type package_kind = Package | Universe
 
@@ -809,27 +809,27 @@ module Package_helper = struct
       ?documentation_status ~latest_version ~versions info =
     let rev_deps =
       List.map
-        (fun (name, _, _versions) -> Ocamlorg_package.Name.to_string name)
-        info.Ocamlorg_package.Info.rev_deps
+        (fun (name, _, _versions) -> Rocqproverorg_package.Name.to_string name)
+        info.Rocqproverorg_package.Info.rev_deps
     in
     let owner name =
       Option.value
         (Data.Opam_user.find_by_name name)
         ~default:(Data.Opam_user.make ~name ())
     in
-    Ocamlorg_frontend.Package.
+    Rocqproverorg_frontend.Package.
       {
-        name = Ocamlorg_package.Name.to_string name;
+        name = Rocqproverorg_package.Name.to_string name;
         version =
           (if on_latest_url then Latest
-           else Specific (Ocamlorg_package.Version.to_string version));
+           else Specific (Rocqproverorg_package.Version.to_string version));
         versions;
         latest_version =
           Option.value ~default:"???"
-            (Option.map Ocamlorg_package.Version.to_string latest_version);
-        synopsis = info.Ocamlorg_package.Info.synopsis;
+            (Option.map Rocqproverorg_package.Version.to_string latest_version);
+        synopsis = info.Rocqproverorg_package.Info.synopsis;
         description =
-          info.Ocamlorg_package.Info.description
+          info.Rocqproverorg_package.Info.description
           |> Cmarkit.Doc.of_string ~strict:true
           |> Cmarkit_html.of_doc ~safe:true;
         tags = info.tags;
@@ -838,54 +838,54 @@ module Package_helper = struct
         maintainers = List.map owner info.maintainers;
         license = info.license;
         publication = info.publication;
-        homepages = info.Ocamlorg_package.Info.homepage;
+        homepages = info.Rocqproverorg_package.Info.homepage;
         source =
           Option.map
             (fun url ->
-              (url.Ocamlorg_package.Info.uri, url.Ocamlorg_package.Info.checksum))
-            info.Ocamlorg_package.Info.url;
+              (url.Rocqproverorg_package.Info.uri, url.Rocqproverorg_package.Info.checksum))
+            info.Rocqproverorg_package.Info.url;
         documentation_status =
           Option.value ~default:Unknown documentation_status;
       }
 
   (** Query all the versions of a package. *)
   let versions state name =
-    Ocamlorg_package.get_versions state name
-    |> List.map (fun (v : Ocamlorg_package.version_with_publication_date) ->
-           Ocamlorg_frontend.Package.
+    Rocqproverorg_package.get_versions state name
+    |> List.map (fun (v : Rocqproverorg_package.version_with_publication_date) ->
+           Rocqproverorg_frontend.Package.
              {
-               version = Ocamlorg_package.Version.to_string v.version;
+               version = Rocqproverorg_package.Version.to_string v.version;
                publication = v.publication;
              })
 
   let search_index_digest ~kind state name =
     let open Lwt.Syntax in
     let* search_index_digest =
-      Ocamlorg_package.search_index_digest ~kind state name
+      Rocqproverorg_package.search_index_digest ~kind state name
     in
     search_index_digest |> Option.map Dream.to_base64url |> Lwt.return
 
   let frontend_package ?on_latest_url ?documentation_status state
-      (package : Ocamlorg_package.t) : Ocamlorg_frontend.Package.package =
-    let name = Ocamlorg_package.name package
-    and version = Ocamlorg_package.version package
-    and info = Ocamlorg_package.info package in
+      (package : Rocqproverorg_package.t) : Rocqproverorg_frontend.Package.package =
+    let name = Rocqproverorg_package.name package
+    and version = Rocqproverorg_package.version package
+    and info = Rocqproverorg_package.info package in
     let versions = versions state name in
     let latest_version =
       Option.map
-        (fun (p : Ocamlorg_package.t) -> Ocamlorg_package.version p)
-        (Ocamlorg_package.get_latest state name)
+        (fun (p : Rocqproverorg_package.t) -> Rocqproverorg_package.version p)
+        (Rocqproverorg_package.get_latest state name)
     in
     package_info_to_frontend_package ~name ~version ?on_latest_url
       ?documentation_status ~latest_version ~versions info
 
   let of_name_version t name version =
     let package =
-      if version = "latest" then Ocamlorg_package.get_latest t name
+      if version = "latest" then Rocqproverorg_package.get_latest t name
       else
         try
-          Ocamlorg_package.get t name
-            (Ocamlorg_package.Version.of_string version)
+          Rocqproverorg_package.get t name
+            (Rocqproverorg_package.Version.of_string version)
         with _ -> None
     in
     package
@@ -896,34 +896,34 @@ module Package_helper = struct
   let package_sidebar_data ~kind t package =
     let open Lwt.Syntax in
     let* package_documentation_status =
-      Ocamlorg_package.documentation_status ~kind t package
+      Rocqproverorg_package.documentation_status ~kind t package
     in
     let readme_filename =
       Option.fold ~none:None
-        ~some:(fun (s : Ocamlorg_package.Documentation_status.t) ->
+        ~some:(fun (s : Rocqproverorg_package.Documentation_status.t) ->
           s.otherdocs.readme)
         package_documentation_status
     in
     let changes_filename =
       Option.fold ~none:None
-        ~some:(fun (s : Ocamlorg_package.Documentation_status.t) ->
+        ~some:(fun (s : Rocqproverorg_package.Documentation_status.t) ->
           s.otherdocs.changes)
         package_documentation_status
     in
     let license_filename =
       Option.fold ~none:None
-        ~some:(fun (s : Ocamlorg_package.Documentation_status.t) ->
+        ~some:(fun (s : Rocqproverorg_package.Documentation_status.t) ->
           s.otherdocs.license)
         package_documentation_status
     in
     let documentation_status =
       match package_documentation_status with
-      | Some { failed = false; _ } -> Ocamlorg_frontend.Package.Success
+      | Some { failed = false; _ } -> Rocqproverorg_frontend.Package.Success
       | Some { failed = true; _ } -> Failure
       | None -> Unknown
     in
     Lwt.return
-      Ocamlorg_frontend.Package_overview.
+      Rocqproverorg_frontend.Package_overview.
         {
           documentation_status;
           readme_filename;
@@ -931,12 +931,12 @@ module Package_helper = struct
           license_filename;
         }
 
-  let frontend_toc (xs : Ocamlorg_package.Documentation.toc list) :
-      Ocamlorg_frontend.Toc.t =
+  let frontend_toc (xs : Rocqproverorg_package.Documentation.toc list) :
+      Rocqproverorg_frontend.Toc.t =
     let rec aux acc = function
       | [] -> List.rev acc
-      | Ocamlorg_package.Documentation.{ title; href; children } :: rest ->
-          Ocamlorg_frontend.Toc.{ title; href; children = aux [] children }
+      | Rocqproverorg_package.Documentation.{ title; href; children } :: rest ->
+          Rocqproverorg_frontend.Toc.{ title; href; children = aux [] children }
           :: aux acc rest
     in
     aux [] xs
@@ -957,38 +957,38 @@ let is_ocaml_yet t id req =
     |> List.concat_map (fun (category : Data.Is_ocaml_yet.category) ->
            category.packages)
     |> List.filter_map (fun (p : Data.Is_ocaml_yet.package) ->
-           let name = Ocamlorg_package.Name.of_string p.name in
+           let name = Rocqproverorg_package.Name.of_string p.name in
            (* FIXME: Failure *)
-           match Ocamlorg_package.get_latest t name with
+           match Rocqproverorg_package.get_latest t name with
            | Some x -> Some x
            | None ->
                if p.extern = None then
                  Dream.error (fun log ->
                      log ~request:req "Package not found: %s"
-                       (Ocamlorg_package.Name.to_string name));
+                       (Rocqproverorg_package.Name.to_string name));
                None)
     |> List.map (Package_helper.frontend_package t)
-    |> List.map (fun pkg -> (pkg.Ocamlorg_frontend.Package.name, pkg))
+    |> List.map (fun pkg -> (pkg.Rocqproverorg_frontend.Package.name, pkg))
     |> List.to_seq |> Hashtbl.of_seq
   in
-  Dream.html (Ocamlorg_frontend.is_ocaml_yet ~tutorials ~packages meta)
+  Dream.html (Rocqproverorg_frontend.is_ocaml_yet ~tutorials ~packages meta)
 
 let packages state _req =
-  let package { Ocamlorg_package.Statistics.name; version; info } =
+  let package { Rocqproverorg_package.Statistics.name; version; info } =
     let versions = Package_helper.versions state name in
     let latest_version =
       Option.map
-        (fun (p : Ocamlorg_package.t) -> Ocamlorg_package.version p)
-        (Ocamlorg_package.get_latest state name)
+        (fun (p : Rocqproverorg_package.t) -> Rocqproverorg_package.version p)
+        (Rocqproverorg_package.get_latest state name)
     in
     Package_helper.package_info_to_frontend_package ~name ~version
       ~latest_version ~versions info
   in
   let package_pair (pkg, snd) = (package pkg, snd) in
   let stats =
-    Ocamlorg_package.stats state
-    |> Option.map (fun (t : Ocamlorg_package.Statistics.t) ->
-           Ocamlorg_frontend.Package.
+    Rocqproverorg_package.stats state
+    |> Option.map (fun (t : Rocqproverorg_package.Statistics.t) ->
+           Rocqproverorg_frontend.Package.
              {
                nb_packages = t.nb_packages;
                nb_update_week = t.nb_update_week;
@@ -998,7 +998,7 @@ let packages state _req =
                most_revdeps = List.map package_pair t.most_revdeps;
              })
   in
-  Dream.html (Ocamlorg_frontend.packages stats)
+  Dream.html (Rocqproverorg_frontend.packages stats)
 
 let is_author_match name pattern =
   let match_opt = function
@@ -1010,14 +1010,14 @@ let is_author_match name pattern =
   | Some { name; email; github_username; _ } ->
       match_opt (Some name) || match_opt email || match_opt github_username
 
-let documentation_status_of_package t (pkg : Ocamlorg_package.t) =
+let documentation_status_of_package t (pkg : Rocqproverorg_package.t) =
   let open Lwt.Syntax in
   let* package_documentation_status =
-    Ocamlorg_package.documentation_status ~kind:`Package t pkg
+    Rocqproverorg_package.documentation_status ~kind:`Package t pkg
   in
   Lwt.return
     (match package_documentation_status with
-    | Some { failed = false; _ } -> Ocamlorg_frontend.Package.Success
+    | Some { failed = false; _ } -> Rocqproverorg_frontend.Package.Success
     | Some { failed = true; _ } -> Failure
     | None -> Unknown)
 
@@ -1036,9 +1036,9 @@ let packages_search t req =
   let packages =
     match Dream.query req "q" with
     | Some search ->
-        Ocamlorg_package.search ~is_author_match ~sort_by_popularity:true t
+        Rocqproverorg_package.search ~is_author_match ~sort_by_popularity:true t
           search
-    | None -> Ocamlorg_package.all_latest t
+    | None -> Rocqproverorg_package.all_latest t
   in
   let total = List.length packages in
 
@@ -1051,7 +1051,7 @@ let packages_search t req =
     paginate ~req ~n:50 packages
   in
   let pagination_info =
-    Ocamlorg_frontend.Pagination.
+    Rocqproverorg_frontend.Pagination.
       {
         total_page_count;
         page_number;
@@ -1064,13 +1064,13 @@ let packages_search t req =
   let* results = prepare_search_result_packages t current_items in
 
   Dream.html
-    (Ocamlorg_frontend.packages_search ~total ~search ~pagination_info results)
+    (Rocqproverorg_frontend.packages_search ~total ~search ~pagination_info results)
 
 let packages_autocomplete_fragment t req =
   match Dream.query req "q" with
   | Some search when search <> "" ->
       let packages =
-        Ocamlorg_package.search ~is_author_match ~sort_by_popularity:true t
+        Rocqproverorg_package.search ~is_author_match ~sort_by_popularity:true t
           search
       in
 
@@ -1082,13 +1082,13 @@ let packages_autocomplete_fragment t req =
       let search = Dream.from_percent_encoded search in
 
       Dream.html
-        (Ocamlorg_frontend.packages_autocomplete_fragment ~search
+        (Rocqproverorg_frontend.packages_autocomplete_fragment ~search
            ~total:(List.length packages) top_5)
   | _ -> Dream.html ""
 
 let package_overview t kind req =
   let</>? name =
-    Ocamlorg_package.Name.of_string_opt @@ Dream.param req "name"
+    Rocqproverorg_package.Name.of_string_opt @@ Dream.param req "name"
   in
   let version_from_url = Dream.param req "version" in
   let</>? package, frontend_package =
@@ -1106,24 +1106,24 @@ let package_overview t kind req =
     Package_helper.search_index_digest ~kind t package
   in
 
-  let package_info = Ocamlorg_package.info package in
+  let package_info = Rocqproverorg_package.info package in
   let rev_dependencies =
-    package_info.Ocamlorg_package.Info.rev_deps
+    package_info.Rocqproverorg_package.Info.rev_deps
     |> List.map (fun (name, x, version) ->
-           Ocamlorg_frontend.Package_overview.
+           Rocqproverorg_frontend.Package_overview.
              {
-               name = Ocamlorg_package.Name.to_string name;
+               name = Rocqproverorg_package.Name.to_string name;
                cstr = x;
-               version = Some (Ocamlorg_package.Version.to_string version);
+               version = Some (Rocqproverorg_package.Version.to_string version);
              })
   in
   let dependencies :
-      Ocamlorg_frontend.Package_overview.dependency_or_conflict list =
-    package_info.Ocamlorg_package.Info.dependencies
+      Rocqproverorg_frontend.Package_overview.dependency_or_conflict list =
+    package_info.Rocqproverorg_package.Info.dependencies
     |> List.map (fun (name, x) ->
-           Ocamlorg_frontend.Package_overview.
+           Rocqproverorg_frontend.Package_overview.
              {
-               name = Ocamlorg_package.Name.to_string name;
+               name = Rocqproverorg_package.Name.to_string name;
                cstr = x;
                version = None;
              })
@@ -1132,16 +1132,16 @@ let package_overview t kind req =
     dependencies
     |> List.partition
          (fun
-           (item : Ocamlorg_frontend.Package_overview.dependency_or_conflict) ->
+           (item : Rocqproverorg_frontend.Package_overview.dependency_or_conflict) ->
            let s = Option.value ~default:"" item.cstr in
            String.contains_s s "with-" || String.contains_s s "dev")
   in
   let conflicts =
-    package_info.Ocamlorg_package.Info.conflicts
+    package_info.Rocqproverorg_package.Info.conflicts
     |> List.map (fun (name, x) ->
-           Ocamlorg_frontend.Package_overview.
+           Rocqproverorg_frontend.Package_overview.
              {
-               name = Ocamlorg_package.Name.to_string name;
+               name = Rocqproverorg_package.Name.to_string name;
                cstr = x;
                version = None;
              })
@@ -1150,7 +1150,7 @@ let package_overview t kind req =
     title ^ if number > 0 then " (" ^ string_of_int number ^ ")" else ""
   in
   let deps_and_conflicts :
-      Ocamlorg_frontend.Package_overview.dependencies_and_conflicts list =
+      Rocqproverorg_frontend.Package_overview.dependencies_and_conflicts list =
     [
       {
         title = title_with_number "Dependencies" (List.length dependencies);
@@ -1183,31 +1183,31 @@ let package_overview t kind req =
     match sidebar_data.readme_filename with
     | Some path ->
         let* maybe_readme =
-          Ocamlorg_package.file ~kind package (path ^ ".html")
+          Rocqproverorg_package.file ~kind package (path ^ ".html")
         in
         Lwt.return
           (Option.map
-             (fun (readme : Ocamlorg_package.Documentation.t) -> readme.content)
+             (fun (readme : Rocqproverorg_package.Documentation.t) -> readme.content)
              maybe_readme)
     | None -> Lwt.return None
   in
   let toc =
-    Ocamlorg_frontend.Toc.
+    Rocqproverorg_frontend.Toc.
       [ { title = "Description"; href = "#description"; children = [] } ]
     @ (match readme with
       | None -> []
       | Some _ ->
           [
-            Ocamlorg_frontend.Toc.
+            Rocqproverorg_frontend.Toc.
               { title = "Readme"; href = "#readme"; children = [] };
           ])
     @ (deps_and_conflicts
       |> List.map
            (fun
              (section :
-               Ocamlorg_frontend.Package_overview.dependencies_and_conflicts)
+               Rocqproverorg_frontend.Package_overview.dependencies_and_conflicts)
            ->
-             Ocamlorg_frontend.Toc.
+             Rocqproverorg_frontend.Toc.
                {
                  title = section.title;
                  href = "#" ^ section.slug;
@@ -1215,22 +1215,22 @@ let package_overview t kind req =
                }))
   in
   Dream.html
-    (Ocamlorg_frontend.package_overview ~sidebar_data ~readme
+    (Rocqproverorg_frontend.package_overview ~sidebar_data ~readme
        ~search_index_digest ~toc ~deps_and_conflicts frontend_package)
 
 let package_versions t _kind req =
   let</>? name =
-    Ocamlorg_package.Name.of_string_opt @@ Dream.param req "name"
+    Rocqproverorg_package.Name.of_string_opt @@ Dream.param req "name"
   in
   let version_from_url = Dream.param req "version" in
   let</>? _package, frontend_package =
     Package_helper.of_name_version t name version_from_url
   in
-  Dream.html (Ocamlorg_frontend.package_versions frontend_package)
+  Dream.html (Rocqproverorg_frontend.package_versions frontend_package)
 
 let package_documentation t kind req =
   let</>? name =
-    Ocamlorg_package.Name.of_string_opt @@ Dream.param req "name"
+    Rocqproverorg_package.Name.of_string_opt @@ Dream.param req "name"
   in
   let version_from_url = Dream.param req "version" in
   let</>? package, frontend_package =
@@ -1246,37 +1246,37 @@ let package_documentation t kind req =
   let hash = match kind with `Package -> None | `Universe u -> Some u in
   let root =
     Url.Package.documentation ?hash ~page:""
-      ?version:(Ocamlorg_frontend.Package.url_version frontend_package)
-      (Ocamlorg_package.Name.to_string name)
+      ?version:(Rocqproverorg_frontend.Package.url_version frontend_package)
+      (Rocqproverorg_package.Name.to_string name)
   in
-  let* docs = Ocamlorg_package.documentation_page ~kind package path in
+  let* docs = Rocqproverorg_package.documentation_page ~kind package path in
   match docs with
   | None ->
       let response_404_page =
         Dream.html ~code:404
-          (Ocamlorg_frontend.package_documentation_not_found ~page:path
+          (Rocqproverorg_frontend.package_documentation_not_found ~page:path
              ~search_index_digest:None
-             ~path:(Ocamlorg_frontend.Package_breadcrumbs.Documentation Index)
+             ~path:(Rocqproverorg_frontend.Package_breadcrumbs.Documentation Index)
              frontend_package)
       in
       if version_from_url = "latest" then
         let* latest_documented_version =
-          Ocamlorg_package.latest_documented_version t name
+          Rocqproverorg_package.latest_documented_version t name
         in
         match latest_documented_version with
         | None -> response_404_page
         | Some version ->
             Dream.redirect req ~code:302
               (Url.Package.documentation ?hash
-                 ~version:(Ocamlorg_package.Version.to_string version)
+                 ~version:(Rocqproverorg_package.Version.to_string version)
                  ~page:path
-                 (Ocamlorg_package.Name.to_string name))
+                 (Rocqproverorg_package.Name.to_string name))
       else response_404_page
   | Some doc ->
-      let module Package_info = Ocamlorg_package.Package_info in
+      let module Package_info = Rocqproverorg_package.Package_info in
       let rec toc_of_module ~root
-          (module' : Ocamlorg_package.Package_info.Module.t) :
-          Ocamlorg_frontend.Navmap.toc =
+          (module' : Rocqproverorg_package.Package_info.Module.t) :
+          Rocqproverorg_frontend.Navmap.toc =
         let title = Package_info.Module.name module' in
         let kind = Package_info.Module.kind module' in
         let href = Some (root ^ Package_info.Module.path module') in
@@ -1286,7 +1286,7 @@ let package_documentation t kind req =
         in
         let kind =
           match (kind : Package_info.Kind.t) with
-          | Page -> Ocamlorg_frontend.Navmap.Page
+          | Page -> Rocqproverorg_frontend.Navmap.Page
           | Module -> Module
           | LeafPage -> Leaf_page
           | ModuleType -> Module_type
@@ -1295,10 +1295,10 @@ let package_documentation t kind req =
           | ClassType -> Class_type
           | File -> File
         in
-        Ocamlorg_frontend.Navmap.{ title; href; kind; children }
+        Rocqproverorg_frontend.Navmap.{ title; href; kind; children }
       in
-      let toc_of_map ~root (map : Ocamlorg_package.Package_info.t) :
-          Ocamlorg_frontend.Navmap.t =
+      let toc_of_map ~root (map : Rocqproverorg_package.Package_info.t) :
+          Rocqproverorg_frontend.Navmap.t =
         let libraries = map.libraries in
         String.Map.bindings libraries
         |> List.map (fun (_, (library : Package_info.library)) ->
@@ -1308,26 +1308,26 @@ let package_documentation t kind req =
                  String.Map.bindings library.modules
                  |> List.map (fun (_, module') -> toc_of_module ~root module')
                in
-               Ocamlorg_frontend.Navmap.
+               Rocqproverorg_frontend.Navmap.
                  { title; href; kind = Library; children })
       in
-      let* module_map = Ocamlorg_package.module_map ~kind package in
+      let* module_map = Rocqproverorg_package.module_map ~kind package in
       let* search_index_digest =
         Package_helper.search_index_digest ~kind t package
       in
       let toc = Package_helper.frontend_toc doc.toc in
-      let (maptoc : Ocamlorg_frontend.Navmap.toc list) =
+      let (maptoc : Rocqproverorg_frontend.Navmap.toc list) =
         toc_of_map ~root module_map
       in
-      let (breadcrumb_path : Ocamlorg_frontend.Package_breadcrumbs.path) =
+      let (breadcrumb_path : Rocqproverorg_frontend.Package_breadcrumbs.path) =
         let breadcrumbs = doc.breadcrumbs in
         if breadcrumbs != [] then
           let first_path_item = List.hd breadcrumbs in
           let doc_breadcrumb_to_library_path_item
-              (p : Ocamlorg_package.Documentation.breadcrumb) =
+              (p : Rocqproverorg_package.Documentation.breadcrumb) =
             match p.kind with
             | Module ->
-                Ocamlorg_frontend.Package_breadcrumbs.Module
+                Rocqproverorg_frontend.Package_breadcrumbs.Module
                   { name = p.name; href = p.href }
             | ModuleType -> ModuleType { name = p.name; href = p.href }
             | Parameter i ->
@@ -1340,33 +1340,33 @@ let package_documentation t kind req =
 
           match first_path_item.kind with
           | Page | LeafPage | File ->
-              Ocamlorg_frontend.Package_breadcrumbs.Documentation
+              Rocqproverorg_frontend.Package_breadcrumbs.Documentation
                 (Page first_path_item.name)
           | Module | ModuleType | Parameter _ | Class | ClassType ->
               let library =
                 List.find_opt
-                  (fun (toc : Ocamlorg_frontend.Navmap.toc) ->
+                  (fun (toc : Rocqproverorg_frontend.Navmap.toc) ->
                     List.exists
-                      (fun (t : Ocamlorg_frontend.Navmap.toc) ->
+                      (fun (t : Rocqproverorg_frontend.Navmap.toc) ->
                         t.title = first_path_item.name)
                       toc.children)
                   maptoc
               in
 
-              Ocamlorg_frontend.Package_breadcrumbs.Documentation
+              Rocqproverorg_frontend.Package_breadcrumbs.Documentation
                 (Library
                    ( (match library with Some l -> l.title | None -> "unknown"),
                      List.map doc_breadcrumb_to_library_path_item breadcrumbs ))
-        else Ocamlorg_frontend.Package_breadcrumbs.Documentation Index
+        else Rocqproverorg_frontend.Package_breadcrumbs.Documentation Index
       in
       Dream.html
-        (Ocamlorg_frontend.package_documentation ~page:(Some path)
+        (Rocqproverorg_frontend.package_documentation ~page:(Some path)
            ~search_index_digest ~path:breadcrumb_path ~toc ~maptoc
            ~content:doc.content frontend_package)
 
 let package_file t kind req =
   let</>? name =
-    Ocamlorg_package.Name.of_string_opt @@ Dream.param req "name"
+    Rocqproverorg_package.Name.of_string_opt @@ Dream.param req "name"
   in
   let version_from_url = Dream.param req "version" in
   let</>? package, frontend_package =
@@ -1383,17 +1383,17 @@ let package_file t kind req =
   let* search_index_digest =
     Package_helper.search_index_digest ~kind t package
   in
-  let* maybe_doc = Ocamlorg_package.file ~kind package path in
+  let* maybe_doc = Rocqproverorg_package.file ~kind package path in
   let</>? doc = maybe_doc in
   let content = doc.content in
   let toc = Package_helper.frontend_toc doc.toc in
   Dream.html
-    (Ocamlorg_frontend.package_overview_file ~sidebar_data ~content
+    (Rocqproverorg_frontend.package_overview_file ~sidebar_data ~content
        ~search_index_digest ~content_title:path ~toc frontend_package)
 
 let package_search_index t kind req =
   let</>? name =
-    Ocamlorg_package.Name.of_string_opt @@ Dream.param req "name"
+    Rocqproverorg_package.Name.of_string_opt @@ Dream.param req "name"
   in
   let version_from_url = Dream.param req "version" in
   let</>? package, _ = Package_helper.of_name_version t name version_from_url in
@@ -1403,7 +1403,7 @@ let package_search_index t kind req =
     | Package -> `Package
     | Universe -> `Universe (Dream.param req "hash")
   in
-  let* maybe_search_index = Ocamlorg_package.search_index ~kind package in
+  let* maybe_search_index = Rocqproverorg_package.search_index ~kind package in
   let</>? search_index = maybe_search_index in
   Lwt.return
     (Dream.response
@@ -1422,4 +1422,4 @@ let sitemap _request =
       let* _ = Lwt_seq.iter_s (Dream.write stream) Sitemap.data in
       Dream.flush stream)
 
-let logos _req = Dream.html (Ocamlorg_frontend.logos ())
+let logos _req = Dream.html (Rocqproverorg_frontend.logos ())

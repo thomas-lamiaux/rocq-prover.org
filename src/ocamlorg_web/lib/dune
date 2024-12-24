@@ -1,14 +1,14 @@
 (library
- (name ocamlorg_web)
+ (name rocqproverorg_web)
  (libraries
-  ocamlorg.global
-  ocamlorg_package
-  ocamlorg_frontend
+  rocqproverorg.global
+  rocqproverorg_package
+  rocqproverorg_frontend
   dream
   dream-accept
   dream-encoding
   cmarkit
-  ocamlorg.data
+  rocqproverorg.data
   timedesc
   mirage-kv-mem))
 

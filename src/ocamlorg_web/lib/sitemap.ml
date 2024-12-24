@@ -1,4 +1,4 @@
-module Url = Ocamlorg.Url
+module Url = Rocqproverorg.Url
 
 type urlable = Urlable : 'a list * ('a -> string) -> urlable
 

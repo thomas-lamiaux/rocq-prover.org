@@ -2,7 +2,7 @@
 
 (using directory-targets 0.1)
 
-(name ocamlorg-playground)
+(name rocqproverorg-playground)
 
 (documentation "https://ocaml.github.io/ocaml.org/")
 
@@ -27,7 +27,7 @@
 (using mdx 0.1)
 
 (package
- (name ocamlorg-playground)
+ (name rocqproverorg-playground)
  (synopsis "Playground for the official OCaml website")
  (description
   "This repository contains the playground served on https://ocaml.org/play.")
