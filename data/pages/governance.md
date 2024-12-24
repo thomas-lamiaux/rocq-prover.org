@@ -18,7 +18,8 @@ collective endeavors aimed at supporting, extending, and enriching the language
 and its user base. This document provides governance details for:
 
 1. The rocq-prover.org *domain name* and its associated projects.
-2. The Rocq Platform - the recommended set of tools for the Rocq Prover.
+2. The Rocq Prover software.
+3. The Rocq Platform - the recommended set of tools for the Rocq Prover.
 
 The document outlines the reporting structure, details the roles involved, and
 delineates the responsibilities of each project that falls under this
@@ -38,8 +39,8 @@ things are.
 
 ### D. Guiding Principles
 
-The Rocq governance, inclusive of rocq-prover.org and the Rocq Platform, is guided
-by key principles such as openness, community focus, and compatibility. Each
+The Rocq governance, inclusive of the Rocq Prover, the Rocq Platform and rocq-prover.org,
+is guided by key principles such as openness, community focus, and compatibility. Each
 project that falls under the Rocq governance should align with these
 principles, fostering a community that is open, collaborative, and dedicated to
 the continued development and advancement of the Rocq Prover and its
@@ -49,18 +50,18 @@ applications.
 
 ### A. Owner, Coordination Team and Core Team
 
-The Owner of the rocq-prover.org domain and the Rocq Prover software and the 
+The Owner of the Rocq Prover software, the rocq-prover.org domain and the 
 Rocq Platform is Matthieu Sozeau, the lead developer of the Rocq Prover. The Owner can 
-appoint a team of [Rocq Coordinators]("/governance/governance#coordination")
+appoint a team of [Rocq Coordinators](/governance/governance#Coordination)
 to help with coordination tasks, who have the right to act in the name of the Owner 
 in all matters of coordination. 
 
 * Currently, Matthieu Sozeau has appointed Théo Zimmermann, Nicolas Tabareau and Yves Bertot
 as Rocq Coordinators, who have accepted this Role *
 
-The [Rocq Core]("/governance/governance#core") team is composed of the Rocq Coordinators and 
+The [Rocq Core](/governance/governance#Core) team is composed of the Rocq Coordinators and 
 a set of voluntary, co-opted Maintainers that govern the development of the rocq-prover.org 
-domain and the Rocq Prover software. The [Rocq Platform]("/governance/distribution") team is 
+domain and the Rocq Prover software. The [Rocq Platform](/governance/distribution#Rocq%20Platform) team is 
 composed of voluntary, co-opted Maintainers that govern the development of the Rocq Platform.
 
 Projects under rocq-prover.org sub-domains and within the Rocq Platform are managed
