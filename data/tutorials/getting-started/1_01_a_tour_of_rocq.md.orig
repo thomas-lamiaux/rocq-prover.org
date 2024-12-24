@@ -5,12 +5,12 @@ Instructions to generate 1_01_a_tour_of_rocq.md from 1_01_a_tour_of_rocq.md.orig
    $ opam install coq-serapi.8.20.0+0.20.0
 2. Install `alectryon` and `myst_parser` in your virtual environment:
    $ python3 -m venv .venv
-    $ source .venv/bin/activate
-    $ pip install alectryon myst_parser
+   $ source .venv/bin/activate
+   $ pip install alectryon myst_parser
 3. Run the following command:
-    $ alectryon --frontend md --backend webpage data/tutorials/getting-started/1_01_a_tour_of_rocq.md.orig -o data/tutorials/getting-started/1_01_a_tour_of_rocq.md
+   $ alectryon --frontend md --backend webpage data/tutorials/getting-started/1_01_a_tour_of_rocq.md.orig -o data/tutorials/getting-started/1_01_a_tour_of_rocq.md
 4. Remove the untracked generated files:
-    $ rm data/tutorials/getting-started/alectryon.css data/tutorials/getting-started/alectryon.js data/tutorials/getting-started/docutils_basic.css data/tutorials/getting-started/pygments.css
+   $ rm data/tutorials/getting-started/alectryon.css data/tutorials/getting-started/alectryon.js data/tutorials/getting-started/docutils_basic.css data/tutorials/getting-started/pygments.css
 5. Remove the last `</div>`, `</body>`, and `</html>` closing tags of the generated 1_01_a_tour_of_rocq.md file.
 6. Remove everything before the following in the generated 1_01_a_tour_of_rocq.md file (as well as the closing comment marker):
 ---
