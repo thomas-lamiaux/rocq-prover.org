@@ -23,13 +23,6 @@ let learn _req =
   let latest_platform_version = Data.Release.latest_platform.version in
   Dream.html (Rocqproverorg_frontend.learn ~papers ~latest_version ~latest_platform_version)
 
-let learn_get_started req =
-  let tutorials =
-    Data.Tutorial.all
-    |> List.filter (fun (t : Data.Tutorial.t) -> t.section = GetStarted)
-  in
-  Dream.redirect req (Url.tutorial (List.hd tutorials).slug)
-
 let learn_docs req =
   let tutorials =
     Data.Tutorial.all
