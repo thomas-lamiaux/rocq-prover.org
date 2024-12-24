@@ -7,20 +7,21 @@ description: |
 category: "First Steps"
 ---
 
-This guide will walk you through a minimum installation of Rocq. That includes installing a package manager and the  Rocq Prover itself. We'll also install some platform tools like a build system, support for your editor, and a few other important ones.
+This guide will walk you through a minimal installation of Rocq. That includes installing a package manager and the Rocq Prover itself. We'll also install some support for your editor.
 
-On this page, you'll find installation instructions for Linux, macOS, Windows, and &ast;BSD for recent OCaml versions. For Docker, Linux instructions apply, except when setting up opam.
+On this page, you'll find installation instructions for Linux, macOS, and Windows.
 
 **Note**: You'll be installing Rocq and its tools through a [command line interface (CLI), or shell](https://www.youtube.com/watch?v=0PxTAn4g20U). 
 
 Beginners are encouraged to install the [Rocq Platform](/install#rocq_platform) using one of the binary installers: we provide binary installers for Windows and macOS.
+Installation scripts are also available for all operating systems and abstract over the installation process that is presented here.
 
 
 ## Install opam
 
-Rocq and OCaml has an official package manager, [opam](https://opam.ocaml.org/), which allows users to download and install Rocq tools and libraries. Opam also makes it practical to deal with different projects which require different versions of the Rocq Prover.
+[opam](https://opam.ocaml.org/), the official package manager of OCaml and the Rocq Prover, allows users to download and install Rocq tools and libraries. Opam also makes it practical to deal with different projects which require different versions of the Rocq Prover.
 
-Opam also installs the OCaml compiler and the Rocq Prover. 
+Opam can be used to install the OCaml compiler and the Rocq Prover.
 
 To install opam, you can [use your system package manager](https://opam.ocaml.org/doc/Install.html#Using-your-distribution-39-s-package-system) or download the [binary distribution](https://opam.ocaml.org/doc/Install.html#Binary-distribution). The details are available in these links, but for convenience, we use package distributions:
 
@@ -37,8 +38,6 @@ Or if you're using [MacPorts](https://www.macports.org/):
 ```shell
 $ port install opam
 ```
-
-**Note**: While it's rather straightforward to install opam using macOS, it's possible you'll run into problems later with Homebrew because it has changed the way it installs. The executable files cannot be found in ARM64, the M1 processor used in newer Macs. Addressing this can be a rather complicated procedure, so we've made [a short ARM64 Fix doc](/docs/arm64-fix) explaining this so as not to derail this installation guide.
 
 **For Linux**
 
@@ -81,8 +80,6 @@ On Windows, the winget package is maintained by opam's developers and uses the b
 ```powershell
 Invoke-Expression "& { $(Invoke-RestMethod https://opam.ocaml.org/install.ps1) }"
 ```
-
-**Advanced Windows Users**: If you are familiar with Cygwin or WSL2, there are other installation methods described on the [OCaml on Windows](/docs/ocaml-on-windows) page.
 
 ## Initialise opam
 

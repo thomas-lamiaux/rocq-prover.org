@@ -83,7 +83,7 @@ Layout.render
             <h3>Install the opam package manager</h3>
 
             <p>
-            <a target="_blank" href="https://opam.ocaml.org">OCaml's and Rocq's package manager, opam,</a> installs both the OCaml compiler, the Rocq prover, 
+            <a target="_blank" href="https://opam.ocaml.org">opam,</a> the package manager for both OCaml and Rocq, can install the OCaml compiler, the Rocq prover,
             as well as any additional packages.
             Ensure <code>gcc</code>, <code>build-essential</code>, <code>curl</code>, <code>unzip</code>, and <code>bubblewrap</code> are installed on your system, then
             run the following in your terminal to download and install the newest version of opam:
@@ -135,10 +135,10 @@ Layout.render
 
 
           <li>
-            <h3>Installing Rocq</h3>
+            <h3>Installing the Rocq Prover</h3>
             <p>
-              To install Rocq, simply run the following command. It will pin the Rocq package to version 9.0.0 and install it.
-              Note that installing Rocq using opam will build it from sources, 
+              To install the Rocq Prover, simply run the following command. It will pin the Rocq package to version 9.0.0 and install it.
+              Note that installing the Rocq Prover using opam will build it from sources,
               which will take several minutes to complete:
             </p>
  
@@ -166,17 +166,20 @@ Layout.render
       </div>
       <div>
         <div class="prose dark:prose-invert">
-          <h2>Set Up a Rocq Development Environment</h2>
+          <h2>Set Up a VS Code for using Rocq</h2>
 
           <p>
             VsRocq is an extension for <a href="https://code.visualstudio.com/">Visual Studio Code</a> (VS Code) and <a href="https://vscodium.com/">VSCodium</a> which provides support for the Rocq prover. 
             It is built around a language server which natively speaks the <a href="https://learn.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol?view=vs-2022"> LSP protocol</a>.
-            To install it in your current opam switch, run this command:
+            To install the language server in your current opam switch, run this command:
           </p>
 
           <%s! Copy_to_clipboard.small_code_snippet ~id:"install-platform-tools" "opam install vsrocq-language-server" %>
 
-          <p> You can alternatively install <a href="https://github.com/ejgallego/coq-lsp">rocq-lsp</a>. </p>
+          <p>You can alternatively install <a href="https://github.com/ejgallego/coq-lsp">rocq-lsp</a> (and its corresponding VS Code extension).</p>
+
+          <p>If you would like to use a different editor, several alternatives (including Emacs and Vim) are supported.
+          Check the corresponding <a href="/docs/set-up-editor#emacs-and-vim">documentation</a> for more information.</p>
 
           <p>Now you are ready to write some Rocq code and proofs!</p>
         </div>
@@ -196,7 +199,7 @@ Layout.render
 
         <ol>
           <li>
-            Rocq is available through many package managers, including most Linux distribution package managers. 
+            The Rocq Prover is available through many package managers, including most Linux distribution package managers.
             However, in many cases, the available version is not the latest version. More importantly, these distributions 
             might provide only a fraction of all the external packages available for Rocq, thus requiring some manual compilation 
             and installation to add additional packages.

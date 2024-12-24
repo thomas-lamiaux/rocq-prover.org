@@ -48,6 +48,6 @@ NeoVim users can also test the experimental support for [VsCoq's `vscoqtop` serv
 
 ## Standalone interfaces
 
-Alternatively, you can use [CoqIDE](https://coq.inria.fr/refman/practical-tools/coqide.html), a standalone desktop application which is developed and distributed alongside Rocq.
+Alternatively, you can use [RocqIDE](https://coq.inria.fr/refman/practical-tools/coqide.html), a standalone desktop application which is developed and distributed alongside the Rocq Prover.
 
-As a way to try Rocq without installing anything, you can use [JsCoq](https://jscoq.github.io/). JsCoq loads Rocq entirely in your browser.
+As a way to try Rocq without installing anything, you can use [JsRocq](https://jscoq.github.io/). JsRocq loads Rocq entirely in your browser.
