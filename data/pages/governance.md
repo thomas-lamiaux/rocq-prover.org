@@ -56,8 +56,8 @@ appoint a team of [Rocq Coordinators](/governance/governance#Coordination)
 to help with coordination tasks, who have the right to act in the name of the Owner 
 in all matters of coordination. 
 
-* Currently, Matthieu Sozeau has appointed Théo Zimmermann, Nicolas Tabareau and Yves Bertot
-as Rocq Coordinators, who have accepted this Role *
+* Currently, Matthieu Sozeau has appointed Yves Bertot, Paul-André Mélies, 
+Nicolas Tabareau and Théo Zimmermann as Rocq Coordinators, who have accepted this Role *
 
 The [Rocq Core](/governance/governance#Core) team is composed of the Rocq Coordinators and 
 a set of voluntary, co-opted Maintainers that govern the development of the rocq-prover.org 
