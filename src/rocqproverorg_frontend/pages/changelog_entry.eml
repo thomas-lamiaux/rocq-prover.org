@@ -1,6 +1,6 @@
 let render (change : Data.Changelog.t) =
 Layout.render
-~title:(Printf.sprintf "%s • OCaml Changelog" change.title)
+~title:(Printf.sprintf "%s • Rocq Changelog" change.title)
 ~description:change.title @@
 <div class="bg-background dark:bg-dark-background pt-12 pb-10 lg:py-24">
   <div class="container-fluid">
