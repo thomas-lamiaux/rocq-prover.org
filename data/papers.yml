@@ -352,6 +352,8 @@ papers:
     volume: 108
     tags: 
       - PCUIC
+    abstract: >
+      In order to avoid well-known paradoxes associated with self-referential definitions, higher-order dependent type theories stratify the theory using a countably infinite hierarchy of universes (also known as sorts), Type_0 : Type_1 : *s. Such type systems are called cumulative if for any type A we have that A : Type_i implies A : Type_{i+1}. The Predicative Calculus of Inductive Constructions (pCIC) which forms the basis of the Coq proof assistant, is one such system. In this paper we present the Predicative Calculus of Cumulative Inductive Constructions (pCuIC) which extends the cumulativity relation to inductive types. We discuss cumulative inductive types as present in Coq 8.7 and their application to formalization and definitional translations.
   - author:
     - family: Martin-Löf
       given: Per
@@ -362,16 +364,20 @@ papers:
     url: https://archive-pml.github.io/martin-lof/pdfs/An-Intuitionistic-Theory-of-Types-1972.pdf
     tags:
       - MLTT
+    abstract: >
+      The theory of types with which we shall be concerned is intended to be a full scale system for formalizing intuitionistic mathematics as developed, for example, in the book by Bishop 1967. The language of the theory is richer than the language of first order predicate logic. This makes it possible to strengthen the axioms for existence and disjunction. In the case of existence, the possibility of strengthening the usual elimination rule seems first to have been indicated by Howard 1969, whose proposed axioms are special cases of the existential elimination rule of the present theory. Furthermore, there is a reflection principle which links the generation of objects and types and plays somewhat the same role for the present theory as does the replacement axiom for Zermelo-Fraenkel set theory. An earlier, not yet conclusive, attempt at formulating a theory of this kind was made by Scott 1970. Also related, although less closely, are the type and logic free theories of constructions of Kreisel 1962 and 1965 and Goodman 1970. In its first version, the present theory was based on the strongly impredicative axiom that there is a type of all types whatsoever, which is at the same time a type and an object of that type. This axiom had to be abandoned, however, after it was shown to lead to a contradiction by Jean Yves Girard. I am very grateful to him for showing me his paradox. The change that it necessitated is so drastic that my theory no longer contains intuitionistic simple type theory as it originally did. Instead, its proof theoretic strength should be close to that of predicative analysis.      
   - author:
     - family: Girard
       given: J.-Y.
     genre: PhD thesis
     id: "Girard:1972fk"
     issued: 1972
+    month: June
     publisher: Université Paris 7
     title: Interprétation fonctionnelle et élimination des coupures de
       l'arithmétique d'ordre supérieur
     type: thesis
+    url: https://girard.perso.math.cnrs.fr/These.pdf
   - author:
     - family: Whitehead
       given: Alfred North
