@@ -45,10 +45,10 @@ Layout.render
             Why Rocq?
           </a>
         </div>
-        <div class="mt-6">
+        <div class="mt-8">
           <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_release.version %>">Latest Rocq Prover release: <%s latest_release.version %></a>
         </div>
-        <div class="mt-6">
+        <div class="mt-2">
           <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_platform_release.version %>">Latest Rocq Platform release: <%s latest_platform_release.version %></a>
         </div>
         <!--<div class="mt-2">
@@ -229,9 +229,7 @@ Layout.render
           </div>
           <div class="lg:flex-1  bg-black/100 lg:mt-0 mt-10 flex justify-center">
             <div class="grid grid-cols-1">
-              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/type-cumul-const.png" %>" alt=""/></div>
-              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/lemma-red-confluence.png" %>" alt=""/></div>
-              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/subject-reduction-proof.png" %>" alt=""/></div>
+              <div><img src="<%s Rocqproverorg_static.Asset.url "img/home/trustworthy.jpg" %>" alt="trustworthy"/></div>
             </div>
           </div>
         </div>
@@ -305,7 +303,6 @@ Layout.render
             </div>
           </div>
         </div>
-
         <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between items-center">
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
             <div class="iris-container">
