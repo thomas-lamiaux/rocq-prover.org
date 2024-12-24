@@ -359,8 +359,7 @@ Layout.render
             </div>
           </div>
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            TODO by PMP: Perf graph to his glory
-            <!-- <img src="<%s Rocqproverorg_static.Asset.url "img/home/workfaster.svg" %>" alt=""> -->
+            <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf.png" %>" alt="">
           </div>
         </div>
       </div>
