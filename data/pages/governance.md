@@ -1,21 +1,24 @@
 ---
-title: OCaml Governance
-description: The structure of the OCaml projects, the roles involved and the responsibilities.
-meta_title: Governance of the OCaml projects and domain
-meta_description: Read about the structure of the OCaml projects, the roles involved and the responsibilities.
+title: Rocq Governance ⋅ 🚧 Draft 🚧
+description: The structure of the Rocq projects, the roles involved and the responsibilities.
+meta_title: Governance of the Rocq projects and domain
+meta_description: Read about the structure of the Rocq projects, the roles involved and the responsibilities.
 ---
+
+<img src="/img/global/warning-icon.svg" class="w-40"/>
+  Warning: this Rocq Governance "constitution" is a draft and has not yet been 
+  reviewed or approved by the Rocq Core team
 
 ## I. Introduction
 
 ### A. Overview and Scope
 
-The OCaml ecosystem is continually expanding, encompassing a growing number of
+The Rocq ecosystem is continually expanding, encompassing a growing number of
 collective endeavors aimed at supporting, extending, and enriching the language
 and its user base. This document provides governance details for:
 
-1. The OCaml.org *domain name* and its associated projects.
-2. The OCaml Platform - the recommended set of tools for the OCaml programming
-   language.
+1. The rocq-prover.org *domain name* and its associated projects.
+2. The Rocq Platform - the recommended set of tools for the Rocq Prover.
 
 The document outlines the reporting structure, details the roles involved, and
 delineates the responsibilities of each project that falls under this
@@ -35,27 +38,41 @@ things are.
 
 ### D. Guiding Principles
 
-The OCaml governance, inclusive of OCaml.org and the OCaml Platform, is guided
+The Rocq governance, inclusive of rocq-prover.org and the Rocq Platform, is guided
 by key principles such as openness, community focus, and compatibility. Each
-project that falls under the OCaml governance should align with these
+project that falls under the Rocq governance should align with these
 principles, fostering a community that is open, collaborative, and dedicated to
-the continued development and advancement of the OCaml language and its
+the continued development and advancement of the Rocq Prover and its
 applications.
 
 ## II. Roles and responsibilities
 
-### A. Owner and Delegates
+### A. Owner, Coordination Team and Core Team
 
-The Owner of the OCaml.org domain and the OCaml Platform is Xavier Leroy, the
-lead developer of the OCaml language. Projects under OCaml.org sub-domains and
-within the OCaml Platform are managed by the community, meaning that it is the
-community that actively contributes to the day-to-day maintenance of these
-initiatives, but the general strategic direction is drawn by the Owner.
+The Owner of the rocq-prover.org domain and the Rocq Prover software and the 
+Rocq Platform is Matthieu Sozeau, the lead developer of the Rocq Prover. The Owner can 
+appoint a team of [Rocq Coordinators]("/governance/governance#coordination")
+to help with coordination tasks, who have the right to act in the name of the Owner 
+in all matters of coordination. 
 
-It is the role of the Owner to resolve disputes that may arise in relation to
-OCaml.org or the OCaml Platform, specifically to ensure that the projects within
-these domains are able to progress in a coordinated way. It is the community's
-role to guide the decisions of the Owner through active engagement,
+* Currently, Matthieu Sozeau has appointed Théo Zimmermann, Nicolas Tabareau and Yves Bertot
+as Rocq Coordinators, who have accepted this Role *
+
+The [Rocq Core]("/governance/governance#core") team is composed of the Rocq Coordinators and 
+a set of voluntary, co-opted Maintainers that govern the development of the rocq-prover.org 
+domain and the Rocq Prover software. The [Rocq Platform]("/governance/distribution") team is 
+composed of voluntary, co-opted Maintainers that govern the development of the Rocq Platform.
+
+Projects under rocq-prover.org sub-domains and within the Rocq Platform are managed
+by the community, meaning that it is the community that actively contributes to the 
+day-to-day maintenance of these initiatives, but the general strategic direction is 
+drawn by the Core team and the Plaform team.
+
+It is the role of the Owner and the Core team to resolve disputes that may arise in relation to
+rocq-prover.org, the Rocq Prover or the Rocq Platform, specifically to ensure that 
+the projects within these domains are able to progress in a coordinated way. 
+
+It is the community's role to guide the decisions of the Owner through active engagement,
 contributions, and discussions. To foster a healthy and growing community, the
 Owner will make the goals and decisions clear and public.
 
@@ -65,18 +82,15 @@ the Owner needs to become involved, he/she will act as arbitrator.
 
 ### B. Delegates
 
-The Owner may choose to delegate authority to others to manage the domain and
+The Owner may choose to delegate authority to others to manage a subproject and
 act in the Owner's name, though ownership remains with the Owner. Those
 Delegates are free to choose how they arrange themselves, in agreement with the
 Owner. In the specific case of disputes, the Delegate(s) will consult with the
 Owner, who will act as arbitrator if required.
 
-*Currently, Xavier Leroy has delegated responsibility for OCaml.org and the
-OCaml Platform to Anil Madhavapeddy, who has accepted this Role.*
-
 ### C. Maintainers
 
-Projects under OCaml governance will have their own Maintainers, who have commit
+Projects under Rocq governance will have their own Maintainers, who have commit
 access to relevant repositories and are responsible for:
 
 - Managing the specific project.
@@ -93,7 +107,7 @@ a Project will be invited to become Maintainers.
 ### D. Contributors
 
 Contributors are wider members of the OCaml community who make valuable
-contributions to projects under OCaml governance, but generally do not have
+contributions to projects under Rocq governance, but generally do not have
 authority to make direct changes to a Project's codebase or documentation.
 Anyone can become a Contributor and there is no expectation of commitment, no
 specific skill requirement, and no selection process. The only necessary step is
@@ -124,34 +138,34 @@ Project will likely go on to become Contributors.
 It should be noted that these Roles are not mutually exclusive, for example
 Maintainers and Contributors are necessarily also Users.
 
-## III. OCaml.org
+## III. rocq-prover.org
 
-**Definition** - A Project within OCaml.org is characterised by its subdomain.
+**Definition** - A Project within rocq-prover.org is characterised by its subdomain.
 It is expected that the majority of new work will fall under an existing
 subdomain and will therefore already have a set of Maintainers and Contributors
 (as described above).
 
 **Communication** - All Maintainers of Projects must monitor the
-[`ocaml/infrastructure`](https://github.com/ocaml/infrastructure/) GitHub issue
+[`rocq-prover/rocq-prover.org`](https://github.com/rocq-prover/rocq-prover.org/) GitHub issue
 tracker. The issue tracker is the primary mode of exchanging information and
-decisions concerning OCaml.org Projects. In case Projects wish to establish
+decisions concerning rocq-prover.org Projects. In case Projects wish to establish
 their own issue trackers, they are free to do so on GitHub (see below).
 
 **Governance** - Projects are free to choose their mode of governance provided
-it is compatible with the governance and guiding principles of OCaml governance.
+it is compatible with the governance and guiding principles of Rocq governance.
 
-### A. Disambiguation - The Meaning of OCaml.org
+### A. Disambiguation - The Meaning of rocq-prover.org
 
-When using the term 'OCaml.org', there is the potential for a number of
+When using the term 'rocq-prover.org', there is the potential for a number of
 different interpretations. To reduce confusion, these are described below, and
 the meaning of the term *for this document* is also explained.
 
 *Second-level domain name* - This is the domain name we are familiar with,
-'OCaml.org', which has associated sub-domains and records (NB: Just for clarity
+'rocq-prover.org', which has associated sub-domains and records (NB: Just for clarity
 and edification, the top-level domain here is '.org').
 
 *Community website* - This is the community-facing website, which can be found
-at [ocaml.org](//ocaml.org) and is often referred to as simply 'OCaml.org'.
+at [rocq-prover.org](https://rocq-prover.org) and is often referred to as simply 'rocq-prover.org'.
 
 *Infrastructure* - This may refer to virtual machines (VMs), services, or
 other things that are somehow routed via the second-level domain name itself. An
@@ -160,17 +174,17 @@ the VMs and systems that host the tarballs and files used by the Opam package
 manager tool.
 
 For the purposes of this document, we take the first meaning — that this
-document relates to the governance of the second-level domain, 'OCaml.org'.
+document relates to the governance of the second-level domain, 'rocq-prover.org'.
 Therefore, anything that involves use of the domain name in some form is
 affected by the governance of the domain name itself. That includes any public
 facing webpages, URLs, and other resources. This is important because, in a way,
-OCaml.org is the sum of the Projects it hosts.
+rocq-prover.org is the sum of the Projects it hosts.
 
 To avoid confusion between the domain name itself and the community website
-Project, the term 'OCaml.org' in this document refers *only* to the second-level
+Project, the term 'rocq-prover.org' in this document refers *only* to the second-level
 domain name itself. Any references to the domain of the community website
-project will include the sub-domain 'www.ocaml.org', even though this is set to
-redirect to [ocaml.org](//ocaml.org).
+project will include the sub-domain 'www.rocq-prover.org', even though this is set to
+redirect to [rocq-prover.org](https://rocq-prover.org).
 
 ### B. Initiating a Project 
 
@@ -213,169 +227,14 @@ Projects are referred to by their **subdomain**, and summaries of the current
 Projects are maintained on the Infrastructure wiki page:
 <https://github.com/ocaml/infrastructure/wiki>
 
-## IV. OCaml Platform
+## IV. Rocq Platform
 
-The OCaml Platform is the recommended set of tools for the OCaml programming
-language. It is designed to provide a stable and consistent environment for
-OCaml developers, allowing them to focus on building high-quality software. The
-tools in The OCaml Platform each have their independent lifecycle.
-
-The purpose of this section is to outline the process and criteria for
-incubating, promoting, and deprecating tools within the OCaml Platform. It
-provides guidelines for the lifecycle of tools.
-
-### A. General requirements for OCaml Platform tools
-
-In addition to the requirements for each stage of the tool lifecycle, some
-general requirements must be met by all tools in the OCaml Platform. These
-requirements ensure that the tools are consistent with the quality and standards
-of the Platform.
-
-- The OCaml Platform only contains tools. Libraries that these tools use will be
-  supported by their transitive dependencies. Each tool takes its own decision
-  about what libraries they use. By doing so, it commits to supporting these
-  libraries for as long as necessary.
-- Tools must be well-documented, including clear installation instructions and
-  usage examples.
-- Tools must have a permissive open-source license that is compatible with the
-  OCaml Platform. Compatible licenses include licenses that allow modifications
-  to be distributed under different terms and without source code. In
-  particular, licenses that enforce that the complete source code of the
-  modified version must be made available are incompatible with the OCaml
-  Platform. Examples of compatible licenses include MIT, ISC, Apache License.
-  Licenses that are incompatible with the OCaml Platform include GPL v2 and v3.
-- Platform tools must adopt the OCaml Code of Conduct and strictly abide by its
-  guidelines.
-- Tools must be tested and compatible with the latest version of OCaml and
-  commit to following the OCaml release readiness process, which includes
-  releasing compatible or preview versions of Platform tools during the alpha
-  releases of new compiler releases.
-- The tools must have backward compatibility in mind and be fully
-  backwards-compatible after their first stable release.
-
-### B. Tool Lifecycle Stages
-
-#### 1. Incubate
-
-**Definition:**
-
-The Incubate stage is the first stage of the tool lifecycle in the OCaml
-Platform. New tools that fill a gap in the OCaml ecosystem but are not yet ready
-for wide-scale release and adoption are incubated in this stage. The tools in
-this stage have a quick iterative development cycle and may have unreliable
-backward compatibility, before their first major release.
-
-**Requirements for incubation:**
-
-Tools must meet the following requirements to be considered for incubation in
-the OCaml Platform:
-
-- At least two maintainers who are committed to long-term maintenance of the
-  tool
-- A well-defined purpose and scope - the tool must fill a gap in the OCaml
-  developer workflows or provide a different way of doing an existing workflow.
-  In the case of duplication with an Active tool, the maintainers of both tools
-  should talk and resolve the duplication
-- A clear plan for future development and maintenance, including the
-  establishment of a migration path and a clear community need to get promoted
-  to Active
-- A functioning implementation and adequate documentation and testing
-
-**Removing a Tool from Incubate:**
-
-In the event that the criteria for incubation are no longer met, a tool may be
-removed from the Incubate stage. Note that not all Incubate tools will be
-promoted to Active, but the community will still have learned something useful
-about the features that are needed or useful.
-
-#### 2. Active
-
-**Definition:**
-
-The Active stage is the second stage of the tool lifecycle in the OCaml
-Platform, and it's the home for workhorse tools that are used daily by the OCaml
-community. These tools are the cornerstone projects that are heavily relied upon
-and recommended for new projects and newcomers alike. Active tools are known for
-their strong backwards compatibility guarantees and minimal disruption to users'
-workflow.
-
-Any changes to Active tools will come with complete update instructions, and
-their metadata files are versioned reliably to allow users to control when they
-upgrade to new versions. The development community for Active tools is always
-open, and anyone is encouraged to become a maintainer.
-
-Active tools maintainers run regular developer meetings. Anyone from the
-community who is interested in contributing to a project is welcome to join the
-developer meetings. Meeting notes for these developer meetings are recorded and
-available on GitHub.
-
-Tools that enter the Active stage can be hosted on the OCaml GitHub organization
-and permissions are managed through GitHub teams which only lead maintainers of
-the projects and OCaml GitHub organization administrators can update.
-
-**Requirements for promotion from Incubate to Active:**
-
-To be promoted from the Incubate stage to the Active stage, a tool must meet the
-following requirements:
-
-- The tool must not duplicate any functionality that is already provided by
-  another Active tool in the Platform. Any duplication and overlap with other
-  tools in the Platform must have been resolved during the Incubate stage.
-- The tool must have reached a stable release as signaled by a version above 1.0
-  and strong backward compatibility enforcements.
-- The tool must be well-documented and have a clear roadmap for future
-  development.
-- The tool must have a strong and active development community.
-
-The decision to promote a tool is ultimately made by the Owner and Delegate(s),
-in consultation with the development community, based on the tool's overall
-stability, adoption by the OCaml community, and adherence to the principles of
-the Platform.
-
-#### 3. Sustain
-
-**Definition:**
-
-Sustain tools are projects that have been in use for many years and are
-considered to be extremely stable. They provide essential functionality to the
-OCaml community, and while they are not actively developed, they can continue to
-be used reliably for a long time.
-
-Sustain tools are an important part of the OCaml Platform ecosystem as they
-serve their purpose exceptionally well. Although newer alternatives might exist,
-Sustain tools are maintained to support newer compiler releases. If
-functionality provided by a Sustain tool has an alternative in the Active stage,
-it is recommended to use the Active alternative as it might offer performance or
-usability benefits.
-
-**Requirements for promotion from Active to Sustain:**
-
-To be promoted from the Active stage to the Sustain stage, a tool must meet the
-following requirements:
-
-- The tool has been in the Active stage for a significant amount of time,
-  typically several years.
-- The tool entered a maintenance stage where no new features are being
-  developed.
-
-#### 4. Deprecated
-
-**Definition:**
-
-The Deprecated stage is a phase in the OCaml Platform where tools are gradually
-being phased out, with clear paths to better workflows. These tools are no
-longer actively maintained within the Platform but might still be maintained by
-community maintainers.
-
-**Requirements for promotion from Sustain to Deprecated:**
-
-To be considered for deprecation, a tool must meet the following requirements:
-
-- The tool has been replaced by an Active alternative with clear migration
-  paths.
-- The tool must have been in the Sustain stage for a sufficient amount of time
-  and adequate notice has been given to users to allow for migration at their
-  own pace.
+The Rocq Platform is the recommended set of tools and libraris for the Rocq Prover. 
+It is designed to provide a stable and consistent environment for
+Rocq developers, allowing them to focus on building high-quality developments. The
+tools in The Rocq Platform each have their independent lifecycle.
+The [Rocq Platform](/platform) pages describe the organization of the Rocq Platform,
+including package inclusion guidelines.
 
 ## V. Processes
 
@@ -383,25 +242,25 @@ To be considered for deprecation, a tool must meet the following requirements:
 
 The preferred approach for most discussions is through
 [rough consensus and running code](http://en.wikipedia.org/wiki/Rough_consensus).
-Discussions should be public and take place on either the OCaml Discuss forum,
+Discussions should be public and take place on either the Rocq Zulip chat,
 the relevant Project mailing-list, or on relevant issue trackers. Users and
 Contributors are encouraged to take part and voice their opinions. Typically,
 the Maintainers of a Project will make the final decision, having accounted for
 wider views.
 
-All Projects under the OCaml governance are to be documented such that Users can
+All Projects under the Rocq governance are to be documented such that Users can
 find out about them and understand both the purpose and how they can contribute.
 
 ### B. Contribution Process and Licensing
 
-Each Project under the OCaml governance needs to define a clear contribution
+Each Project under the Rocq governance needs to define a clear contribution
 process and licensing agreement so that Contributors understand how to engage
 with the Maintainers. Typically, this will cover where communication occurs and
 the process for submitting patches. Contributions from the community are
 encouraged and can take many forms including, bug fixes, new features, content,  
 or documentation.
 
-All Projects under the OCaml governance are expected to be open source, and the
+All Projects under the Rocq governance are expected to be open source, and the
 licensing arrangements should reflect this.
 
 ### C. Dispute Resolution
@@ -415,8 +274,8 @@ forward, the following approach is suggested:
 
 - The specific issue(s) will need to be articulated, so it is clear what needs
   to be discussed.
-- Other Maintainers of OCaml Projects will be asked for their views.
-- If the discussion still cannot be resolved, the Owner (or their Delegate) will
+- Other Maintainers of Rocq Projects will be asked for their views.
+- If the discussion still cannot be resolved, the Owner (or their Delegates) will
   act as arbitrator.
 
 During the above, it is expected that all people will be reasonable and be
@@ -433,26 +292,8 @@ Best wishes,
 Amir
 -->
 
-**Version 1.0.0 - September 2015**
+**Version 0.1 - December 24th 2024**
 
-This first version of the document was agreed upon by the incumbent set of
-Maintainers in September 2015. You can look back at the
-[discussion](https://lists.ocaml.org/pipermail/infrastructure/2015-August/000518.html)
-or see the [related issue](https://github.com/ocaml/v2.ocaml.org/issues/700).
-
-***Version 1.0.1 — March 2022***
-
-- Addressed consistency in title case and grammar.
-
-***Version 2.0.0 — June 2023***
-
-- Include the OCaml Platform governance.
-- Rename the document "OCaml Governance" to reflect the inclusion of the OCaml
-  Platform.
-- Update the governance of OCaml.org to reflect the use of the
-  `ocaml/infrastructure` GitHub issue tracker in place of the infrastructure
-  mailing list.
-
-***Version 2.0.1 — October 2023***
-
-- Remove requirement of Active tools to be hosted on the OCaml GitHub organisation.
+- This first version of the document was adapted from the [OCaml governance](https://ocaml.org/policies/governance/)
+  by Matthieu Sozeau, attempting to describe the current reality of the Rocq governance
+  for discussion by the Rocq Core team. 

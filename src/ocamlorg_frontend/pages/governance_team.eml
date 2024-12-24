@@ -74,7 +74,7 @@ let flatten_subteams (team : Data.Governance.team) =
          })
 
 let render_subteam (team : Data.Governance.team) =
-  <div class="border-b last:border-b-0 border-separator_20 dark:border-dark-separator_30">
+  <div class="border-b last:border-b-0 border-separator_20 dark:border-dark-separator_30" id="<%s team.name %>">
     <h3 class="gradient font-semibold text-3xl mb-4 text-title dark:text-dark-title"><%s team.name %></h3>
     <p class="text-content dark:text-dark-content my-4"><%s team.description %></p>
     <% (if List.length team.contacts > 0 then %>

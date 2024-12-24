@@ -56,7 +56,7 @@ let job_card (job: Data.Job.t) =
 let render () =
 Layout.render
 ~use_swiper:true
-~title:"OCaml in Industry"
+~title:"Rocq in Industry"
 ~description:"With its strong safety guarantees, several \
 companies rely on Rocq to verify software or build certified tools. 
 On this page, you can get an overview of the companies in \
