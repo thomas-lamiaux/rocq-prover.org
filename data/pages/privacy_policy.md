@@ -5,7 +5,7 @@ meta_title: Rocq Privacy Policy
 meta_description: Rocq.org doesn’t use cookies and doesn’t collect personal data. Your data is your data, period.
 ---
 
-The Rocq [team](https://rocq-prover.org/governance) is committed to complying with GDPR, CCPA, PECR, and other privacy regulations on this website.
+The Rocq [team](/governance) is committed to complying with GDPR, CCPA, PECR, and other privacy regulations on this website.
 
 ## Data Collection
 

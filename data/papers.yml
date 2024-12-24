@@ -280,6 +280,11 @@ papers:
       Assistants"
     type: article-journal
     url: "https://nantes-universite.hal.science/hal-04801739"
+    tags:
+      - POPL
+      - Universes
+    abstract: >
+      Proof assistants based on dependent type theory, such as Coq, Lean and Agda, use different universes to classify types, typically combining a predicative hierarchy of universes for computationally-relevant types, and an impredicative universe of proof-irrelevant propositions. In general, a universe is characterized by its sort, such as Type or Prop, and its level, in the case of a predicative sort. Recent research has also highlighted the potential of introducing more sorts in the type theory of the proof assistant as a structuring means to address the coexistence of different logical or computational principles, such as univalence, exceptions, or definitional proof irrelevance. This diversity raises concrete and subtle issues from both theoretical and practical perspectives. In particular, in order to avoid duplicating definitions to inhabit all (combinations of) universes, some sort of polymorphism is needed. Universe level polymorphism is well-known and effective to deal with hierarchies, but the handling of polymorphism between sorts is currently ad hoc and limited in all major proof assistants, hampering reuse and extensibility. This work develops sort polymorphism and its metatheory, studying in particular monomorphization, large elimination, and parametricity. We implement sort polymorphism in Coq and present examples from a new sort-polymorphic prelude of basic definitions and automation. Sort polymorphism is a natural solution that effectively addresses the limitations of current approaches and prepares the ground for future multi-sorted type theories.
   - abstract: Motivated by applications to proof assistants based on
       dependent types, we develop and prove correct a strong reducer and
       β-equivalence checker for the λ-calculus with
@@ -326,8 +331,7 @@ papers:
     issued: 2004
     month: 7
     publisher: Université Paris-Sud
-    title: "Programmation fonctionnelle certifiée: L'extraction de
-      programmes dans l'assistant Coq"
+    title: "Programmation fonctionnelle certifiée: L'extraction de programmes dans l'assistant Coq"
     title-short: Programmation fonctionnelle certifiée
     type: thesis
     url: "http://www.pps.jussieu.fr/~letouzey/download/these_letouzey.pdf"
@@ -386,3 +390,58 @@ papers:
     issued: 1910
     publisher: Cambridge University Press
     title: Principia Mathematica
+  - author:
+    - family: Paulin-Mohring
+      given: Christine
+    genre: PhD thesis
+    id: "DBLP:phd/hal/PaulinMohring89"
+    issued: 1989
+    publisher: Paris Diderot University, France
+    title: Extraction de programmes dans le calcul des constructions.
+      (Program extraction in the calculus of constructions)
+    type: thesis
+    url: "https://tel.archives-ouvertes.fr/tel-00431825"
+  - author:
+    - family: Paulin-Mohring
+      given: Christine
+    title: Extracting Fω's Programs from Proofs in the Calculus of Constructions
+    publication: ACM Symposium on Principles of Programming Languages
+    location: Austin, Texas, USA
+    month: January
+    day: 11-13
+    year: 1989
+    pages: 89-104
+    publisher: ACM Press
+    doi: 10.1145/75277.75285
+    abstract: >
+      We define in this paper a notion of realizability for the Calculus of Constructions. The extracted programs are terms of the Calculus that do not contain dependent types. We introduce a distinction between informative and non-informative propositions. This distinction allows the removal of the “logical” part in the development of a program. We show also how to use our notion of realizability in order to interpret various axioms like the axiom of choice or the induction on integers. A practical example of development of program is given in the appendix.
+  - author:
+    - family: Herbelin
+      given: Hugo
+    id: HerbelinUniverses
+    issued: 2005
+    publication: Manuscript
+    title: Type Inference with Algebraic Universes in the Calculus of Inductive Constructions
+    type: article-journal
+    url: "http://pauillac.inria.fr/\\~herbelin/publis/univalgcci.pdf"
+    abstract: >
+      We describe an algebraic system of universes and a typechecking algorithm for universe constraints in a version of the extended calculus of constructions with inductive types. The use of algebraic universes ensures that the graph of constraints only contains universes already present in the term to type. This algorithm, used in the typechecker of the Coq proof assistant, refines Huet and Harper-Pollack algorithms for typical ambiguity.
+  - author:
+    - family: Huet
+      given: Gérard
+    year: 1988
+    publication: Unpublished draft
+    title: Extending the Calculus of Constructions with Type:Type
+    abstract: >
+      The Calculus of Constructions is a higher-order formalism for writing constructive proofs in a natural deduction style, inspired from work of de Bruijn, Girard and Martin-Löf. The calculus and its syntactic theory were presented in Coquand’s thesis, and an implementation by the author was used to mechanically verify a substantial number of proofs demonstrating the power of expression of the formalism. The Calculus of Constructions is proposed as a foundation for the design of programming environments where programs are developed consistently with formal specifications.
+    url: https://pauillac.inria.fr/~huet/PUBLIC/typtyp.pdf
+
+  - author:
+    - family: Coquand
+      given: Thierry
+    year: 1985
+    publisher: PhD Thesis, Université Paris 7
+    title: Une théorie des constructions
+    abstract: >
+      On propose une synthèse de différents systèmes de types: la théorie des types de Martin-Löf, le calcul d'ordre supérieur de Girard, et le calcul automath de De Bruijn. Le résultat fondamental de ce travail est une preuve de cohérence du calcul ainsi obtenu (la théorie des constructions). D'après les résultats de Girard, ce système a la puissance d'expression de l'arithmétique d'ordre supérieure. Les exemples développes sont de deux ordres: en logique (on retrouve les différents systèmes logiques connus) et en informatique (le type étant alors la spécification du programme)
+    url: https://theses.fr/1985PA07F126

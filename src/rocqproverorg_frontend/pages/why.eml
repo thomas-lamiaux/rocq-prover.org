@@ -46,11 +46,15 @@ Layout.render
             formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
             and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
             and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
+          </p>
+          <p>
             The Calculus of Constructions<%s! Citations.footcite cite "the-calculus-of-constructions" %>, due to Thierry Coquand and Gérard Huet,
             was born out of a generalization of the polymorphic λ-calculus (a.k.a. System F<sup>ω</sup><%s! Citations.footcite cite "interprtation-fonctionnelle-et-limination-des-coupures-de-larithmtique-dordre-suprieur" %>)
             and Martin-Löf Type Theory<%s! Citations.footcite cite "an-intuitionistic-theory-of-types" %>,
             integrating an infinite, predicative and cumulative hierarchy of universes <code class="language-{coq}">Type@{i}</code> for computational types
             and an impredicative universe of propositions <code class="language-{coq}">Prop</code> for proof-irrelevant propositions.
+          </p>
+          <p>
             Based on this distinction between computations and proofs, PCUIC supports a well-behaved notion of erasure
             used by its extraction mechanisms, allowing to produce efficient programs in standard programming languages from formal 
             developments. While being based on programming language theory and constructive mathematical foundations, PCUIC also 
@@ -65,15 +69,22 @@ Layout.render
           <ul>
             <li>
               <strong>Universes, Typical Ambiguity, and Implicit Cumulativity:</strong>
-              The Gallina surface language of the Rocq Prover supports the notion of typical ambiguity for universe levels,
-              going back to the seminal work of Whitehead and Russell in Principia Mathematica<%s! Citations.footcite cite "principia-mathematica" %>,
-              which allows implicit handling of the relation between universe levels (in their case, ordinals of sets/classes). 
+              <p>The Gallina surface language of the Rocq Prover supports the notion of typical ambiguity for universe levels,
+                going back to the seminal work of Whitehead and Russell in Principia Mathematica<%s! Citations.footcite cite "principia-mathematica" %>,
+                which allows implicit handling of the relation between universe levels (in their case, ordinals of sets/classes). 
+              </p>
+              <p>
               An anonymous <code class="language-{coq}">Type</code> occurrence represents a <emph>floating</emph> universe variable that can get constrained 
               depending on its use in the rest of the definitions. The predicative universe hierarchy <code class="language-{coq}">Type@{i}</code> is 
               cumulative, hence uses of universes can results in inclusion constraints, e.g. <code class="language-{coq}">Type@{i} <= Type@{j}</code>.
               The Rocq Prover handles this graph of universes and constraints incrementaly and checks that the 
-              universe graph is acyclic at all times, ensuring consistency of the definitions. The user can hence write formal 
+              universe graph is acyclic at all times ensuring consistency of the definitions. The user can hence write formal 
               developments without ever needing to annotate universes, letting the Rocq elaboration engine take care of it.
+              </p>
+              <p>This system was first designed by Huet<%s! Citations.footcite cite "extending-the-calculus-of-constructions-with-typetype" %>
+                and evolved over the years with Hugo Herbelin<%s! Citations.footcite cite "type-inference-with-algebraic-universes-in-the-calculus-of-inductive-constructions" %>
+                extending it to handle algebraic universes and a limited form of polymorphism.
+              </p>
             </li>
             <li>
               <strong>Universe and Sort Polymorphism:</strong>
@@ -86,42 +97,56 @@ Layout.render
             <li>
               <strong>(Co-)Inductive Type Families, mutual and nested:</strong>
               PCUIC is an evolution of the Calculus of Inductive Constructions introduced by 
-              Thierry Coquand and Christine Paulin-Mohring<%s! Citations.footcite cite "inductively-defined-types" %><sup>,</sup><%s! Citations.footcite cite "inductive-definitions-in-the-system-coq---rules-and-properties" %>
+              Thierry Coquand<%s! Citations.footcite cite "une-thorie-des-constructions" %> and Christine Paulin-Mohring<%s! Citations.footcite cite "inductively-defined-types" %><sup>,</sup><%s! Citations.footcite cite "inductive-definitions-in-the-system-coq---rules-and-properties" %>
               as an extension of the Calculus of Constructions with schemes for inductive types and families.
-              Cumulativity (co)-inductive types were added later <%s! Citations.footcite cite "cumulative-inductive-types-in-coq" %>, allowing to lift cumulativity through inductive definitions.
+              Cumulativity for (co)-inductive types was added later by Amin Timany and Matthieu Sozeau<%s! Citations.footcite cite "cumulative-inductive-types-in-coq" %>, allowing to lift cumulativity through inductive definitions.
               Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
               like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.
               In the Gallina language, inductive types can be consumed by fixpoint computations that are checked to be terminating thanks 
               to a so-called syntactic guard condition. The Rocq tactics allow to perform induction and inversion reasoning on these 
               inductive structures. Co-inductive types and co-recursion are also available to model infinite structures and judgments, 
-              like bisimulation relations. A high-level dependent pattern-matching compiler is available through the Equations package
-              as part of the Rocq Platform.
+              like bisimulation relations. A high-level dependent pattern-matching compiler is available through the 
+              <a href="/p/coq-equations/latest">Equations</a><%s! Citations.footcite cite "equations-reloaded-high-level-dependently-typed-functional-programming-and-proving-in-coq" %>
+              package as part of the Rocq Platform.
+            </li>
+            <li>
+              <strong>Extraction:</strong>
+              The separation of propositions and types in PCUIC enables the sound erasure of computationally-irrelevant 
+              information such as type annotations and proof terms from Rocq terms. This process results in terms of the
+              pure untyped λ-calculus extended with (co)-datatypes representing (co-)inductive values. The Rocq prover 
+              is a pioneer in developing this mechanism to extract relatively efficient programs from (constructive) proofs.
+              Extraction for the Calculus of Constructions was first introduced by Paulin-Mohring<%s! Citations.footcite cite "extracting-fs-programs-from-proofs-in-the-calculus-of-constructions" %>
+              and continually refined with extensions of the calculus to culminate in the landmark PhD of 
+              Pierre Letouzey<%s! Citations.footcite cite "programmation-fonctionnelle-certifie-lextraction-de-programmes-dans-lassistant-coq" %>, 
+              which provides both operational and semantic results on extraction and comes with an implementation 
+              that can target the OCaml, Haskell and Scheme languages. Extraction can be used to develop reasonably
+              efficient programs. For example, the extracted <a href="https://compcert.org/">CompCert</a> compiler runs 
+              in time comparable to the GCC compiler in many cases, while providing an incomparable correctness guarantee!
             </li>
             <li>
               <strong>Definitional Proof Irrelevance:</strong>
               The <code class="language-{coq}">SProp</code> sort refines the orginal <code class="language-{coq}">Prop</code> sort of the Calculus of Constructions 
               by providing a definitionally proof-irrelevant universe of propositions, that is closed under the 
-              standard type formers. Thanks to <code class="language-{coq}">SProp</code>, proofs of propositions really are indistinguishable and 
+              standard type formers<%s! Citations.footcite cite "definitional-proof-irrelevance-without-k" %>. 
+              Thanks to <code class="language-{coq}">SProp</code>, proofs of propositions really are indistinguishable and 
               do not need to be reduced at any point during a proof or computation, resulting in a more comfortable 
               experience in formalizations mixing computations and proofs. 
             </li>
             <li>
               <strong>Efficient Definitional Equality and Recuction Machines:</strong>
               The Rocq Prover includes two efficient definitional equality checkers: <code class="language-{coq}">vm_compute</code> and <code class="language-{coq}">native_compute</code>.
-              The <a href="/papers/a-compiled-implementation-of-strong-reduction"><code class="language-{coq}">vm_compute</code> checker</a> uses a tailor-made compilation of 
-              call-by-value strong reduction to bytecode close to OCaml's bytecode interpreter. 
-              The <a href="/papers/tude-formelle-dalgorithmes-efficaces-en-algbre-linaire"><code class="language-{coq}">native_compute</code> checker</a> uses a 
-              compilation scheme that directly links to the native OCaml compiler, for heavy-duty computations. 
-            </li>
-            <li>
-              <strong>Extraction:</strong>
-              
+              The <code class="language-{coq}">vm_compute</code> checker uses a tailor-made compilation of 
+              call-by-value strong reduction to bytecode close to OCaml's bytecode interpreter, designed by 
+              Benjamin Grégoire and Xavier Leroy<%s! Citations.footcite cite "a-compiled-implementation-of-strong-reduction" %>.
+              The <code class="language-{coq}">native_compute</code> checker</a> uses a 
+              compilation scheme that directly links to the native OCaml compiler, for heavy-duty computations, designed 
+              by Maxime Dénès<%s! Citations.footcite cite "tude-formelle-dalgorithmes-efficaces-en-algbre-linaire" %>.
             </li>
             <li>
               <strong>Certified Type Theory:</strong>
               The Rocq Prover is based on the formal verification of its type theory implementation and extraction system,
-              developed in the <a href="metacoq.github.io">MetaRocq</a> project, which provides an alternative, certified 
-              proof checker that minimize the trusted code base and increases user confidence in its results.
+              developed in the <a href="https://metacoq.github.io">MetaRocq</a> project. It provides<%s! Citations.footcite cite "correct-and-complete-type-checking-and-certified-erasure-for-coq-in-coq" %> 
+              alternative certified proof checkers and erasure procedures that minimize the trusted code base and increases user confidence in its results.
             </li>
             <li>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
@@ -134,12 +159,12 @@ Layout.render
                 As part of the Rocq Platform, two additional metaprogramming languages are available:
                 <ul>
                   <li>
-                    A low level of abstraction is provided by the MetaRocq project which uses Rocq itself 
+                    A low level of abstraction is provided by the <a href="https://metacoq.github.io">MetaRocq</a> project which uses Rocq itself 
                     as the metaprogramming language. It allows directly working with the core term syntax 
                     and prove meta-theorems on the typing judgments of Rocq inside Rocq.
                   </li>
                   <li>
-                    An alternative high-level language is provided by Rocq-Elpi, 
+                    An alternative high-level language is provided by <a href="https://github.com/LPCIC/coq-elpi">Rocq-Elpi</a>, 
                     which interfaces Rocq with λ-prolog, a logic programming language allowing to naturally 
                     express proof-search, unification and elaboration problems. Rocq-Elpi is at the core of 
                     Hierarchy-Builder, a metaprogramming tool that allows the effective development of 
