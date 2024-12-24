@@ -88,15 +88,18 @@ Layout.render
           </p>
           <h2 id="Name">An Overview of the Name's Evolution</h2>
           <p>
-          The Rocq Prover was formerly known as the Coq proof assistant. 
+          The Rocq Prover was formerly known as the Coq Proof Assistant. 
           The name "Coq" referenced the Calculus of Constructions (CoC), 
           the foundational system it is based on, as well as one of its creators, Thierry Coquand. 
           Additionally, it paid homage to the French national symbol, the rooster.
           </p>
           <p>
-          The new name, "the Rocq Prover," honors Inria Rocquencourt, the original site where the prover was developed. 
+          The new name, "the Rocq Prover", honors Inria Rocquencourt, the original site where the prover was developed. 
           It also alludes to the mythological bird Roc (or Rokh), symbolizing strength and not so disconnected to a rooster. 
           Furthermore, the name conveys a sense of solidity, and its unintended connection to music adds a pleasant resonance.
+          The new name was chosen by the <a href="/governance/governance#Core">Core team</a> after a poll of the users, see 
+          <a href="https://coq.discourse.group/t/coq-community-survey-2022-results-part-iv-and-itp-paper-announcement/2001#renaming-coq-8">this page</a>
+          for a detailed breakdown of the results.
           </p>
 <!--
           <h2 id="features">Additional Features</h2>
