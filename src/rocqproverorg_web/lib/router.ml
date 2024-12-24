@@ -140,7 +140,7 @@ let router t =
         [ Dream_encoding.compress ]
         [ Dream.get "/doc/**" (Dream.static Config.doc_path) ];
       Dream.scope ""
-        [ Dream_encoding.compress ]
+        [ ]
         [ Dream.get "/media/**" (Dream.static ~loader:media_loader "") ];
       Dream.scope ""
         [ Dream_encoding.compress ]
