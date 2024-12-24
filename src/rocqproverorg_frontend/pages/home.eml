@@ -323,7 +323,7 @@ Layout.render
                 </div>
               </h3>
               <p class="my-4 font-normal text-lg text-content dark:text-dark-content">
-                Developping formal proofs and verified programs often requires extending the core 
+                Developing formal proofs and verified programs often requires extending the core 
                 language with domain-specific notations, proof strategies and application-specific 
                 structures. The Rocq Prover provides many mechanisms to tailor the environment to one's 
                 requirements and structure developments. Rocq comes with a built-in lightweight scoped 
