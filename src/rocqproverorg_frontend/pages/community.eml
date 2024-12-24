@@ -27,7 +27,7 @@ Community_layout.single_column_layout
               </p>
               <div class="md:flex-row flex-col flex w-full md:max-w-[70%]">
                <div class="flex lg:flex-row mt-8 mr-4">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.zulip "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Meet</b>") ~text:("With the Community") ~href:("https://coq.discourse.group/") "" %>
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.zulip "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Meet</b>") ~text:("With the Community") ~href:("https://coq.zulipchat.com/") "" %>
                </div>
                <!-- <div class="flex lg:flex-row mt-8 mr-4">
                 <%s!  Hero_section.hero_button ~left_icon:(Icons.peertube "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Watch</b>") ~text:("Rocq Videos") ~href:("https://watch.ocaml.org/") "" %>
@@ -206,7 +206,7 @@ Community_layout.single_column_layout
 <div class="w-full section-blue-gradient dark:dark-no-mild-contrast">
   <div class="container-fluid pt-6 pb-12">
     <p class="uppercase text-sm  dark:text-dark-content tracking-widest font-medium my-4">CODE OF CONDUCT</p>
-    <h2 class="font-bold text-2xl dark:text-dark-title mb-8">OCaml's Code of Conduct: Online & Event Guidelines</h2>
+    <h2 class="font-bold text-2xl dark:text-dark-title mb-8">Rocq's Code of Conduct: Online & Event Guidelines</h2>
     <div class="flex justify-between flex-wrap md:flex-nowrap gap-5">
         <div class="flex flex-col">
           <div class="flex items-center">
