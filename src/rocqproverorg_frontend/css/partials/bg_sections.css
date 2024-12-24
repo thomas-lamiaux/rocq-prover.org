@@ -53,12 +53,12 @@
   }
   
   .intro-section-simple {
-    background: url(/img/global/innerbottombg.svg) 0 100%/23% no-repeat ,url(/img/global/innertopbg.svg) 100% 0/23% no-repeat;
+    background: url(/img/global/innerbottombg.svg) 0 100% / 23% no-repeat, url(/img/global/innertopbg.svg) 100% 0 / 23% no-repeat, radial-gradient(#fff, #fcece5);
     @apply pt-16 pb-16 bg-sand;
   }
 
   .dark-intro-section-simple {
-    background: linear-gradient(45deg, #010105, #10162D);
+    background: url(/img/global/innerbottombg-dark.svg) 0 100% / 23% no-repeat, url(/img/global/innertopbg-dark.svg) 100% 0 / 23% no-repeat, radial-gradient(#010105, #10162D);
   }
 
   .dark-section-navigation {
