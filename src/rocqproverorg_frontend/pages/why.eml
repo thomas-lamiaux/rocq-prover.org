@@ -46,39 +46,27 @@ Layout.render
             formal language for constructive mathematics that allows to express complex, higher-order mathematical statements 
             and functional programs. PCUIC includes general schemes for the definition of families of mutual or nested inductive 
             and coinductive types, that can be used to model and program with finite or infinite data structures and predicates. 
-            The Calculus of Constructions <sup><a class="font-bold" href="<%s Citations.cite cite "the-calculus-of-constructions" %>">1</a></sup>, due to Thierry Coquand and Gérard Huet,
-            is a generalization of simply-typed λ-calculus, at the basis of most type theories, 
-            with a infinite, predicative and cumulative hierarchy of universes Type@{i} for computational types
-            and two impredicative propositional universes, Prop and SProp for proof-irrelevant and definitionally proof-irrelevant 
-            propositions. Based on this distinction between computations and proofs, PCUIC supports a well-behaved notion of erasure
+            The Calculus of Constructions<%s! Citations.footcite cite "the-calculus-of-constructions" %>, due to Thierry Coquand and Gérard Huet,
+            was born out of a generalization of the polymorphic λ-calculus (a.k.a. System F<sup>ω</sup><%s! Citations.footcite cite "interprtation-fonctionnelle-et-limination-des-coupures-de-larithmtique-dordre-suprieur" %>)
+            and Martin-Löf Type Theory<%s! Citations.footcite cite "an-intuitionistic-theory-of-types" %>,
+            integrating an infinite, predicative and cumulative hierarchy of universes <code class="language-{coq}">Type@{i}</code> for computational types
+            and an impredicative universe of propositions <code class="language-{coq}">Prop</code> for proof-irrelevant propositions.
+            Based on this distinction between computations and proofs, PCUIC supports a well-behaved notion of erasure
             used by its extraction mechanisms, allowing to produce efficient programs in standard programming languages from formal 
-            developments. While being based on constructive mathematical foundations, PCUIC also accomodates using classical axioms 
-            in its propositional universes without affecting its good theoretical properties. PCUIC supports sort and universe polymorphism
-            allowing to write generic definitions depending on universes. Beyond this, the system supports a notion of primitive types 
-            including 63-bit integers, IEEE-754 floats, persistent arrays and strings for efficient computation with primitive values.
-            The following section details these features in more details.
+            developments. While being based on programming language theory and constructive mathematical foundations, PCUIC also 
+            accomodates using classical axioms in its propositional universes without affecting its good theoretical properties. 
+            PCUIC supports sort and universe polymorphism allowing to write generic definitions depending on universes. Beyond this, 
+            the system supports a notion of primitive types including 63-bit integers, IEEE-754 floats, persistent arrays and strings
+            for efficient computation with primitive values. The following section details these features in more details.
           </p>
         </div>
         <h2 id="features">Features</h2>
         <div class="space-y-10">
           <ul>
             <li>
-              <strong>(Co-)Inductive Type Families, mutual and nested:</strong>
-              PCUIC is an evolution of the Calculus of Inductive Constructions introduced by 
-              Thierry Coquand and Christine Paulin-Mohring in <sup><a class="font-bold" href="<%s Citations.cite cite "inductively-defined-types" %>">2</a></sup>, <sup><a class="font-bold" href="<%s Citations.cite cite "inductive-definitions-in-the-system-coq---rules-and-properties" %>">3</a></sup>
-              as an extension of the Calculus of Constructions with schemes for inductive types and families.
-              Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
-              like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.
-              In the Gallina language, inductive types can be consumed by fixpoint computations that are checked to be terminating thanks 
-              to a so-called syntactic guard condition. The Rocq tactics allow to perform induction and inversion reasoning on these 
-              inductive structures. Co-inductive types and co-recursion are also available to model infinite structures and judgments, 
-              like bisimulation relations. A high-level dependent pattern-matching compiler is available through the Equations package
-              as part of the Rocq Platform.
-            </li>
-            <li>
               <strong>Universes, Typical Ambiguity, and Implicit Cumulativity:</strong>
               The Gallina surface language of the Rocq Prover supports the notion of typical ambiguity for universe levels,
-              going back to the seminal work of Alfred North Whitehead and Bertrand Russell in Principia Mathematica (1910-1913),
+              going back to the seminal work of Whitehead and Russell in Principia Mathematica<%s! Citations.footcite cite "principia-mathematica" %>,
               which allows implicit handling of the relation between universe levels (in their case, ordinals of sets/classes). 
               An anonymous <code class="language-{coq}">Type</code> occurrence represents a <emph>floating</emph> universe variable that can get constrained 
               depending on its use in the rest of the definitions. The predicative universe hierarchy <code class="language-{coq}">Type@{i}</code> is 
@@ -96,6 +84,20 @@ Layout.render
               for example uses of custom sorts.
             </li>
             <li>
+              <strong>(Co-)Inductive Type Families, mutual and nested:</strong>
+              PCUIC is an evolution of the Calculus of Inductive Constructions introduced by 
+              Thierry Coquand and Christine Paulin-Mohring<%s! Citations.footcite cite "inductively-defined-types" %><sup>,</sup><%s! Citations.footcite cite "inductive-definitions-in-the-system-coq---rules-and-properties" %>
+              as an extension of the Calculus of Constructions with schemes for inductive types and families.
+              Cumulativity (co)-inductive types were added later <%s! Citations.footcite cite "cumulative-inductive-types-in-coq" %>, allowing to lift cumulativity through inductive definitions.
+              Inductive types are a central modeling tool in the language: they allow to represent both computational data structures 
+              like natural numbers and lists as well as logical judgments like predicates, relations and typing systems.
+              In the Gallina language, inductive types can be consumed by fixpoint computations that are checked to be terminating thanks 
+              to a so-called syntactic guard condition. The Rocq tactics allow to perform induction and inversion reasoning on these 
+              inductive structures. Co-inductive types and co-recursion are also available to model infinite structures and judgments, 
+              like bisimulation relations. A high-level dependent pattern-matching compiler is available through the Equations package
+              as part of the Rocq Platform.
+            </li>
+            <li>
               <strong>Definitional Proof Irrelevance:</strong>
               The <code class="language-{coq}">SProp</code> sort refines the orginal <code class="language-{coq}">Prop</code> sort of the Calculus of Constructions 
               by providing a definitionally proof-irrelevant universe of propositions, that is closed under the 
@@ -110,9 +112,13 @@ Layout.render
               call-by-value strong reduction to bytecode close to OCaml's bytecode interpreter. 
               The <a href="/papers/tude-formelle-dalgorithmes-efficaces-en-algbre-linaire"><code class="language-{coq}">native_compute</code> checker</a> uses a 
               compilation scheme that directly links to the native OCaml compiler, for heavy-duty computations. 
-            </li>        
+            </li>
             <li>
-              <strong>Certified Type Theory and Extraction:</strong>
+              <strong>Extraction:</strong>
+              
+            </li>
+            <li>
+              <strong>Certified Type Theory:</strong>
               The Rocq Prover is based on the formal verification of its type theory implementation and extraction system,
               developed in the <a href="metacoq.github.io">MetaRocq</a> project, which provides an alternative, certified 
               proof checker that minimize the trusted code base and increases user confidence in its results.
@@ -153,10 +159,13 @@ Layout.render
       <div class="prose dark:prose-invert lg:prose-lg mx-auto max-w-5xl">
         <h4 class="pt-12 pb-4">Bibliography</h4> <!-- FIXME -->
         <% Citations.citations cite |> List.iter (fun (number, label, slug) ->
-          let paper = Data.Paper.get_by_slug slug in  %>
+          let paper = Data.Paper.get_by_slug slug in
+          match paper with
+          | None -> %> Paper <%s slug %> not found in database
+        <% | Some paper -> %>
           <div id="<%s label %>" class="mb-4 ">
             <sup class="font-bold"><%s number %></sup> <div class="text-sm mb-2 inline">
-              <a class="font-bold" href="/papers/<%s slug %>"><%s! (Option.get paper).title %></a>, <%s! Paper.build_citation (Option.get paper) %>
+              <a class="font-bold" href="/papers/<%s slug %>"><%s! paper.title %></a>, <%s! Paper.build_citation paper %>
             </div>
           </div>
         <% ); %>

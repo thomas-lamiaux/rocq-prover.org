@@ -21,14 +21,19 @@ struct
       | Some i -> nitems - i
     in pos
 
-    let cite_label pos = "cite" ^ string_of_int pos
+  let cite_label pos = "cite" ^ string_of_int pos
 
-    let cite cs slug = 
-      let pos = push cs slug in
-      "#" ^ cite_label pos
+  let cite cs slug = 
+    let pos = push cs slug in
+    "#" ^ cite_label pos
 
-    let citations cs =
-      let (items, _nitems) = !cs in
-      let cite i s = (string_of_int (succ i), cite_label (succ i), s) in
-      List.mapi cite (List.rev items)
+  let citations cs =
+    let (items, _nitems) = !cs in
+    let cite i s = (string_of_int (succ i), cite_label (succ i), s) in
+    List.mapi cite (List.rev items)
+
+  let footcite cite slug =
+    let pos = push cite slug in
+    "<sup><a class=\"font-bold\" href=\"#" ^ cite_label pos ^ "\">" ^ string_of_int pos ^ "</a></sup>"
+  
 end

@@ -317,4 +317,66 @@ papers:
     publisher: Université Nice Sophia Antipolis
     title: "Étude formelle d'algorithmes efficaces en algèbre linéaire"
     type: thesis
-    url: "https://theses.hal.science/tel-00945775"    
+    url: "https://theses.hal.science/tel-00945775"
+  - author:
+    - family: Letouzey
+      given: Pierre
+    genre: Thèse de Doctorat
+    id: LetouzeyPhd
+    issued: 2004
+    month: 7
+    publisher: Université Paris-Sud
+    title: "Programmation fonctionnelle certifiée: L'extraction de
+      programmes dans l'assistant Coq"
+    title-short: Programmation fonctionnelle certifiée
+    type: thesis
+    url: "http://www.pps.jussieu.fr/~letouzey/download/these_letouzey.pdf"
+  - author: 
+    - family: Timany
+      given: Amin
+    - family: Sozeau
+      given: Matthieu
+    collection-title: LIPIcs
+    container-title: FSCD
+    doi: 10.4230/LIPIcs.FSCD.2018.29
+    editor:
+    - family: Kirchner
+      given: Hélène
+    id: DBLP.conf/rta/TimanyS18
+    isbn: 978-3-95977-077-4
+    issued: 2018
+    page: 1-16
+    title: Cumulative Inductive Types in Coq
+    type: paper-conference
+    url: "https://doi.org/10.4230/LIPIcs.FSCD.2018.29"
+    volume: 108
+    tags: 
+      - PCUIC
+  - author:
+    - family: Martin-Löf
+      given: Per
+    id: Martin-Lof-1972
+    issued: 1972
+    title: An Intuitionistic Theory of Types
+    publisher: University of Stockholm
+    url: https://archive-pml.github.io/martin-lof/pdfs/An-Intuitionistic-Theory-of-Types-1972.pdf
+    tags:
+      - MLTT
+  - author:
+    - family: Girard
+      given: J.-Y.
+    genre: PhD thesis
+    id: "Girard:1972fk"
+    issued: 1972
+    publisher: Université Paris 7
+    title: Interprétation fonctionnelle et élimination des coupures de
+      l'arithmétique d'ordre supérieur
+    type: thesis
+  - author:
+    - family: Whitehead
+      given: Alfred North
+    - family: Russell
+      given: Bertrand
+    issued: 1910
+    publisher: Cambridge University Press
+    title: Principia Mathematica
