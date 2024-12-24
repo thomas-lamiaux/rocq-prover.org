@@ -1,47 +1,15 @@
 ---
 title: "CoqPL 2025"
-location: "Denver, Co, USA"
 event_type: conference
 country: "USA"
+city: "Denver"
+url: https://popl25.sigplan.org/home/CoqPL-2025
 starts:
   yyyy_mm_dd: "2025-01-25"
 submission_deadline:
   yyyy_mm_dd: "2024-10-25"
 author_notification_date:
   yyyy_mm_dd: "2024-11-22"
-important_dates:
-  - date:
-    info: Abstract submission deadline 
-  - date: 2024-11-22
-    info: Author notification
-  - date: 2025-01-25
-    info: CoqPL
-presentations: []
-url: https://popl25.sigplan.org/home/CoqPL-2025
-organising_committee: []
-program_committee: 
-  - name: Benjamin Delaware
-    role: co-chair
-    affiliation: Purdue University
-  - name: Lourdes del Carmen González-Huesca
-    affiliation: National Autonomous University of Mexico
-  - name: Yao Li
-    affiliation: Portland State University
-  - name: Gregory Malecha
-    affiliation: BedRock Systems
-  - name: Piotr Polesiuk
-    affiliation: University of Wrocław
-  - name: Bas Spitters
-    affiliation: Aarhus University
-  - name: Kathrin Stark
-    role: co-chair
-    affiliation: Heriot-Watt University
-  - name: Romain Tetley
-    affiliation: Rocq Consortium
-  - name: Qianchuan Ye
-    affiliation: University at Buffalo, SUNY
-  - name: Irene Yoon
-    affiliation: Inria
 ---
 
 The Eleventh International Workshop on Coq for Programming Languages: [CoqPL](https://popl25.sigplan.org/home/CoqPL-2025)
@@ -57,4 +25,3 @@ Topics in scope include:
 - IDEs, profilers, tracers, debuggers, and testing tools
 - Reports on ongoing proof efforts conducted via (or in the context of) the Coq proof assistant
 - Experience reports from Coq usage in educational or industrial contexts
-
