@@ -1,6 +1,6 @@
 ---
 title: "Coq'Art"
-slug: "coqart"
+slug: "coq-art"
 description: >
   Coq'Art is the familiar name for the first book on the Rocq Prover (at the time called Coq) and its underlying theory the Calculus of Inductive Constructions.
 recommendation: >
@@ -14,10 +14,12 @@ cover: books/coqart.jpg
 language:
   - english
 links:
-  - description: Read Online
-    uri: https://www.labri.fr/perso/casteran/CoqArt/
+  - description: Publisher's Book Website
+    uri: https://doi.org/10.1007/978-3-662-07964-5
+  - description: Examples and Exercises
+    uri: https://coq-community.org/coq-art
 difficulty: beginner
-pricing: free
+pricing: paid
 ---
 
 **Coq'Art: The Calculus of Inductive Constructions** is a foundational book that introduces readers to the Rocq Prover and its underlying formal system, the Calculus of Inductive Constructions (CIC).
