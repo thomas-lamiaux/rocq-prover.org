@@ -30,7 +30,7 @@ Layout.render
           </div>
           <p class="text-black"><a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/SVG/logo-rocq-blue_orange.svg">svg</a> | <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/PNG/logo-rocq-blue_orange.png">png</a> | <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/JPG/logo-rocq-blue_orange.jpg">jpg</a> | <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/">more</a></p>
           <h2 id="license">License</h2>
-          <p>The Rocq logo is released under a <a href='https://github.com/coq/rocq-prover.org/tree/main/rocq-id/'>liberal license ???</a>.</p>
+          <p>The Rocq logo is released under the <a href='https://github.com/coq/rocq-prover.org/tree/main/rocq-id/#license'>UNLICENSE</a>.</p>
         </div>
       </div>
     </div>
