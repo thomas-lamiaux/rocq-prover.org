@@ -41,6 +41,19 @@ make deps
 
 Opam will likely ask questions about installing system dependencies. For the project to work, you will have to answer yes to installing these.
 
+### Building the Documentation
+
+We use a git submodule to refer to the documentation. Use:
+
+``` 
+git submodule init
+git submodule --depth 1 update
+```
+
+This will fetch the latest version of the rocq-docs. Beware that this is large: 8GB of data 
+for a shallow clone. This step is currently optional unless you want to test integration with the documentation 
+or build a fully working Docker image.
+
 ### Running the Server
 
 After building the project, you can run the server with:
