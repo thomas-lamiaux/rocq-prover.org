@@ -91,4 +91,5 @@
      %{target}
      (run %{gen_feed} job))))))
 
-(data_only_dirs playground data practice)
+(dirs :standard \ rocq-doc)
+(data_only_dirs playground data practice rocq-opam-repository)

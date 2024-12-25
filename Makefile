@@ -52,7 +52,7 @@ doc: ## Generate odoc documentation
 fmt: ## Format the codebase with ocamlformat
 	opam exec -- dune build --root . --auto-promote @fmt
 
-DOC_PATH=`pwd`/../doc/
+DOC_PATH=`pwd`/rocq-doc/
 	
 .PHONY: watch
 watch: ## Watch for the filesystem and rebuild on every change

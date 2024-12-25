@@ -23,6 +23,7 @@ let t =
   Dream.scope "" []
     ([
        make ~permanent:true [ ("feed.xml", "planet.xml") ];
+       make ~permanent:true [ ("roadmap.html", "/roadmap") ];
        make [ ("/blog", "/ocaml-planet") ];
        make ~permanent:true [ ("/opportunities", "/jobs") ];
        make ~permanent:true [ ("/privacy-policy", "/policies/privacy-policy") ];

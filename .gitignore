@@ -14,3 +14,6 @@ _opam/
 .nova
 
 .venv/
+
+# Copied documentation
+rocq-doc/
