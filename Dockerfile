@@ -33,7 +33,7 @@ RUN chmod -R 755 /var
 COPY --from=build /home/opam/package.state /var/package.state
 COPY --from=build /home/opam/rocq-opam-repository /var/opam-repository
 COPY --from=build /home/opam/_build/default/src/rocqproverorg_web/bin/main.exe /bin/server
-COPY rocq-doc /doc
+COPY --from=build /home/opam/rocq-doc /doc
 
 COPY playground/asset playground/asset
 
