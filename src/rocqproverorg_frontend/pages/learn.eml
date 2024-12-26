@@ -86,7 +86,7 @@ Learn_layout.single_column_layout
 
     <div class="grid gap-6 mt-6 lg:grid-cols-2">
       <%s! Learn_components.book_recommendation
-        (Data.Book.get_by_slug "coqart" |> Option.get)
+        (Data.Book.get_by_slug "coq-art" |> Option.get)
         ~link:{href = Url.books; title = "See More Books"} %>
       <%s! Learn_components.book_recommendation
         (Data.Book.get_by_slug "software-foundations-1" |> Option.get)
