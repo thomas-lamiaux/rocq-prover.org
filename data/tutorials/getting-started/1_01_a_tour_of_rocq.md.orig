@@ -131,7 +131,7 @@ Fixpoint plus (n m:nat) {struct n} : nat :=
 where "p + m" := (plus p m).
 ```
 
-Rocq can now be used as an interactive evaluator. Issuing the command
+The Rocq Prover can now be used as an interactive evaluator. Issuing the command
 
 ```{coq}
 Eval compute in (43+55).

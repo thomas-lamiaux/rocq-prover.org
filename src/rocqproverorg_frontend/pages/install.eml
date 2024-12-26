@@ -45,7 +45,7 @@ Layout.render
           Install Rocq using the Rocq Platform (recommended)
         </h2>
         <p>
-          Rocq has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
+          The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
           The Rocq Platform provides an easy way to install Rocq and a consistent set of packages on Windows, macOS and Linux.
         </p>
 
@@ -213,7 +213,7 @@ Layout.render
           </li>
 
           <li>
-            Rocq is also available as a
+            The Rocq Prover is also available as a
            <p>
             <a target="_blank" href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
             </p>

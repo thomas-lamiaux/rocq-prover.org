@@ -7,7 +7,7 @@ category: "Tooling"
 ---
 While the toplevel is great for interactively trying out the language, we will shortly need to write Rocq files in an editor. 
 
-Rocq has plugins for many editors, but the most actively maintained are for Visual Studio Code, Emacs and Vim.
+The Rocq Prover has plugins for many editors, but the most actively maintained are for Visual Studio Code, Emacs and Vim.
 
 ## Visual Studio Code
 

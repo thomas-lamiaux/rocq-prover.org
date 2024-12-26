@@ -46,7 +46,7 @@ on the user's machine, and as well binary installers (prebuilt) for users
 to quickly get a working environment.
 
 **The Platform is the final product users will get** in this new model;
-Rocq is a core component of it.
+the Rocq Prover is a core component of it.
 
 # Detailed design
 

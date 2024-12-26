@@ -6,7 +6,7 @@ next-generation proof assistant. The Rocq Prover is designed to
 empower a diverse range of users, from mathematicians seeking 
 formal rigor to software engineers building high-assurance systems.
 
-Rocq builds upon the rich heritage and diverse ecosystem of Coq. We
+The Rocq Prover builds upon the rich heritage and diverse ecosystem of Coq. We
 promote a fast-paced development methodology to deliver impactful
 changes frequently, supporting academic and industrial research, and
 continuously improving user experience. At the same time, we are
@@ -60,7 +60,7 @@ key pillars:
 
 ## 1. Open and Accessible
 
-- **Accessibilty:** The Rocq/Coq Platform delivers easy installation
+- **Accessibilty:** The Rocq Platform delivers easy installation
   and package integration. We are also actively working on IDE
   improvements for the various usages of the Rocq Prover (all audiences).
 
@@ -72,7 +72,7 @@ key pillars:
   mechanisms, proof search, information retrieval, error reporting,
   and visualization (A, B, C, E).
 
-- **Community:** Meet us at the CoqPL, Coq Workshops, and CUDW
+- **Community:** Meet us at the RocqPL, Rocq Workshops, and Rocq Users and Developers Workshop (RUDW)
   meetings! We will also continue fostering a strong and collaborative
   community through initiatives like rocq/coq-community (all
   audiences).
