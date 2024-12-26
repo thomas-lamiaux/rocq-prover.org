@@ -28,7 +28,7 @@ Some Ressources:
 We welcome contributions, and there are plenty to do depending on how
 much available time you have:
 
--   Give feedbacks on the existing tutorial and how-to guides on
+-   Give feedback on the existing tutorial and how-to guides on
     [Zulip](https://coq.zulipchat.com/#narrow/stream/437203-Platform-docs)
 -   Answer people's questions and share folklore that should be known
     by all on
