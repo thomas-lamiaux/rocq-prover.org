@@ -1,6 +1,6 @@
 ---
 title: "Computer Arithmetic and Formal Proofs: Verifying Floating-point Algorithms with the Coq System"
-slug: "computer_arithmetics"
+slug: "computer-arithmetic"
 description: >
   This book provides a comprehensive view of how to formally specify and verify tricky floating-point algorithms with the Coq proof assistant.
 recommendation: >
@@ -14,10 +14,10 @@ cover: books/computer_arithmetic.jpg
 language:
   - english
 links:
-  - description: Read Online
-    uri: https://iste.co.uk/book.php?id=1238
+  - description: Publisher's Book Website
+    uri: https://www.sciencedirect.com/book/9781785481123/computer-arithmetic-and-formal-proofs
 difficulty: advanced
-pricing: Paid
+pricing: paid
 ---
 
 Floating-point arithmetic is ubiquitous in modern computing, as it is the tool of choice to approximate real numbers. Due to its limited range and precision, its use can become quite involved and potentially lead to numerous failures. One way to greatly increase confidence in floating-point software is by computer-assisted verification of its correctness proofs.
