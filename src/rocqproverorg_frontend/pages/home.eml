@@ -303,12 +303,12 @@ Layout.render
             </div>
           </div>
         </div>
-        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between items-center">
+        <div class="flex gap-10 lg:gap-24 flex-col lg:flex-row justify-between items-center flex-col-reverse lg:flex-row">
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <div class="iris-container">
-              <div class="iris-logo"><img src="<%s Rocqproverorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" /></div> 
-              <div class="iris-proof-script"><img src="<%s Rocqproverorg_static.Asset.url "img/home/iris-proof-script.png" %>" alt="Iris Proof Script" /></div>
-              <div class="iris-proof-goal"><img src="<%s Rocqproverorg_static.Asset.url "img/home/iris-proof-goal.png" %>" alt="Iris Proof Goal" /></div>
+            <div class="w-[80%] relative pt-5">
+              <div class="md:absolute right-[-90px] top-2 w-[140px] z-10"><img src="<%s Rocqproverorg_static.Asset.url "logos/iris.svg" %>" alt="Iris" /></div> 
+              <div class="z-0"><img src="<%s Rocqproverorg_static.Asset.url "img/home/iris-proof-script.png" %>" alt="Iris Proof Script" /></div>
+              <div class="z-10 absolute top-[44%] left-10 lg:left-1/4"><img src="<%s Rocqproverorg_static.Asset.url "img/home/iris-proof-goal.png" %>" alt="Iris Proof Goal" /></div>
             </div>
           </div>
           <div class="lg:flex-1 mt-10 lg:mt-0">
