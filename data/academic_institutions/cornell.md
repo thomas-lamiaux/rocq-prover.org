@@ -15,7 +15,7 @@ courses:
       year: 2020
       teacher: 
       lecture_notes: true
-      video_recordings: true
+      video_recordings: false # Video recordings exist for this course but are not publicly available
 location:
      lat: 42.4534
      long: -76.4735

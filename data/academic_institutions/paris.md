@@ -13,7 +13,15 @@ courses:
       acronym: MPRI
       url: https://wikimpri.dptinfo.ens-cachan.fr/doku.php?id=cours:c-2-7-2
       year: 2024
-
+      lecture_notes: true
+      exercises: true
+    - name: Functional programming and formal proofs in Coq
+      url: https://master.math.u-paris.fr/en/modules/m2lmfi-preuveform/
+    - name: Preuves assistées par ordinateur
+      year: 2024
+      url: https://github.com/herbelin/cours-preuves-ordinateur/
+      teacher: Hugo Herbelin
+      exercises: true
 location:
      lat: 48.8276
      long: 2.3822

@@ -14,7 +14,8 @@ courses:
       url: https://www.seas.upenn.edu/~cis5000/current/index.html
       teacher: "Steve Zdancewic"
       year: 2024
-      lecture_notes: false
+      lecture_notes: true
+      exercises: true
       video_recordings: false
 location:
      lat: 42.3770
