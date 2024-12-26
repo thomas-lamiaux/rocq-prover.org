@@ -21,6 +21,6 @@ pricing: free
 
 **The Software Foundations series is a broad introduction to the mathematical underpinnings of reliable software.**
 
-The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq prover. 
+The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq Prover.
 
 QuickChick: Property-Based Testing in Rocq introduces tools for combining randomized property-based testing with formal specification and proof in the Rocq ecosystem.

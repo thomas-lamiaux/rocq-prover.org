@@ -22,7 +22,7 @@ pricing: free
 
 **The Software Foundations series is a broad introduction to the mathematical underpinnings of reliable software.**
 
-The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq prover. 
+The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq Prover.
 
 Logical Foundations is the entry-point to the series. It covers functional programming, basic concepts of logic, 
   computer-assisted theorem proving, and Rocq.

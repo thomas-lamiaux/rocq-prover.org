@@ -21,6 +21,6 @@ pricing: free
 
 **The Software Foundations series is a broad introduction to the mathematical underpinnings of reliable software.**
 
-The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq prover. 
+The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq Prover.
 
 Verified Functional Algorithms shows how a variety of fundamental data structures can be specified and mechanically verified.

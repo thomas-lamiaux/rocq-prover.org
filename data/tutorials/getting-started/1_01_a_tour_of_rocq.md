@@ -2,7 +2,7 @@
 id: tour-of-rocq
 title: A Tour of Rocq
 description: >
-  Hop on the Rocq sightseeing bus. This absolute beginner tutorial will drive you through the marvels and wonders of the Rocq prover. 
+  Hop on the Rocq sightseeing bus. This absolute beginner tutorial will drive you through the marvels and wonders of the Rocq Prover.
 category: "First Steps"
 recommended_next_tutorials:
 ---
@@ -10,7 +10,7 @@ recommended_next_tutorials:
 <div class="alectryon-root alectryon-centered">
 <div class="document">
 <div class="alectryon-container docutils container">
-<p>The Rocq prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.</p>
+<p>The Rocq Prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.</p>
 <p>Properties, programs and proofs are formalized in the same language called the Calculus of Inductive Constructions (CIC). Then, all logical judgments in Rocq are typing judgments: the very heart of Rocq is in fact a type-checking algorithm.</p>
 <div class="section" id="the-language-of-rocq">
 <h1>The language of Rocq</h1>

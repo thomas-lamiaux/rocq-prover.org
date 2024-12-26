@@ -39,7 +39,7 @@ let render
 books =
 Learn_layout.single_column_layout
 ~title:"Rocq Books"
-~description:"A selection of books to learn how to write programs and proofs with the Rocq prover."
+~description:"A selection of books to learn how to write programs and proofs with the Rocq Prover."
 ~canonical:Url.books
 ~current:Books @@
 <div class="bg-background dark:bg-dark-background">

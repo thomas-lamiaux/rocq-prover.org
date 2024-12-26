@@ -119,7 +119,7 @@ Learn_layout.three_column_layout
       </p>
       <p>        
         To work on these problems, we
-        recommend you first <a href="<%s Url.getting_started %>">install the Rocq prover</a> or use it <a
+        recommend you first <a href="<%s Url.getting_started %>">install the Rocq Prover</a> or use it <a
           href="<%s Url.playground %>">inside
           your browser</a>. The source of the following
         problems is available on

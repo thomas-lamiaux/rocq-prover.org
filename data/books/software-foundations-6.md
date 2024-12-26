@@ -21,6 +21,6 @@ pricing: free
 
 **The Software Foundations series is a broad introduction to the mathematical underpinnings of reliable software.**
 
-The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq prover.
+The principal novelty of the series is that every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a "proof script" for the Rocq Prover.
 
 Separation Logic Foundations is an in-depth introduction to separation logic—a practical approach to modular verification of imperative programs—and how to build program verification tools on top of it.

@@ -134,7 +134,7 @@ let lang_manual_banner =
           Reference Manual
         </h3>
         <p class="mt-4 text-white font-normal max-w-xl text-base leading-7">
-          The reference manual is the authoritative source of documentation for the Rocq prover. It contains a changelog describing updates to Rocq, which we recommend you read when you upgrade.
+          The reference manual is the authoritative source of documentation for the Rocq Prover. It contains a changelog describing updates to Rocq, which we recommend you read when you upgrade.
         </p>
         <div class="w-full md:w-80 mt-6 py-2 bg-white rounded-xl text-center text-primary dark:text-dark-primary hover:underline font-bold text-lg">
           Take Me There

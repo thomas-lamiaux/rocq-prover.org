@@ -180,10 +180,10 @@ teams:
       kind: github
   - id: coqide-maintainers
     name: RocqIDE
-    description: The historical standalone IDE for the Rocq prover.
+    description: The historical standalone IDE for the Rocq Prover.
 - id: extensions
   name: Extensions
-  description: The official extensions to the Rocq prover.
+  description: The official extensions to the Rocq Prover.
   subteams:
   - id: stdlib-maintainers
     name: Rocq Standard Library
@@ -215,7 +215,7 @@ teams:
       name: rtauto
 - id: tools
   name: Tools
-  description: The official tools for working with the Rocq prover.
+  description: The official tools for working with the Rocq Prover.
   subteams:
   - id: coqdoc-maintainers
     name: rocq doc
@@ -232,12 +232,12 @@ teams:
       role: Team leader
 - id: distribution
   name: Packaging and Distribution
-  description: The Packaging and Distribution team is responsible for the packaging and distribution of the Rocq prover.
+  description: The Packaging and Distribution team is responsible for the packaging and distribution of the Rocq Prover.
   contacts: []
   subteams:
   - id: platform-maintainers
     name: Rocq Platform
-    description: The Rocq Platform is the official distribution of the Rocq prover and curated packages.
+    description: The Rocq Platform is the official distribution of the Rocq Prover and curated packages.
     contacts:
     - name: GitHub
       link: https://github.com/coq/platform
@@ -272,7 +272,7 @@ teams:
     description: The Reference Manual team is responsible for the development and maintenance of the Rocq reference manual.
   - id: platform-docs
     name: Rocq Platform Docs
-    description: A collection of short, action-oriented tutorials and how-to guides for the Rocq prover and its Platform.
+    description: A collection of short, action-oriented tutorials and how-to guides for the Rocq Prover and its Platform.
     contacts:
     - name: GitHub
       link: https://github.com/coq/platform-docs

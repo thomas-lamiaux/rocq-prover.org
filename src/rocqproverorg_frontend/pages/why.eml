@@ -113,7 +113,7 @@ Layout.render
               <strong>Extraction:</strong>
               The separation of propositions and types in PCUIC enables the sound erasure of computationally-irrelevant 
               information such as type annotations and proof terms from Rocq terms. This process results in terms of the
-              pure untyped λ-calculus extended with (co)-datatypes representing (co-)inductive values. The Rocq prover 
+              pure untyped λ-calculus extended with (co)-datatypes representing (co-)inductive values. The Rocq Prover
               is a pioneer in developing this mechanism to extract relatively efficient programs from (constructive) proofs.
               Extraction for the Calculus of Constructions was first introduced by Paulin-Mohring<%s! Citations.footcite cite "extracting-fs-programs-from-proofs-in-the-calculus-of-constructions" %>
               and continually refined with extensions of the calculus to culminate in the landmark PhD of 

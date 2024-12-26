@@ -5,7 +5,7 @@ meta_title: Rocq Code of Conduct
 meta_description: The Code of Conduct that applies to official Rocq online spaces and physical events.
 ---
 
-The Rocq prover team and the user community are made up of a mixture of
+The Rocq Prover team and the user community are made up of a mixture of
 professionals and volunteers from all over the world.
 Diversity brings variety of perspectives that can be very valuable, but it can
 also lead to communication issues and unhappiness. Therefore, we have a few
@@ -14,10 +14,10 @@ participation in our community a positive experience for
 everyone.
 These rules apply equally to core developers (who should lead by example),
 occasional contributors and those seeking help and guidance.
-Their goal is that everyone feels safe and welcome when contributing to the Rocq prover or
+Their goal is that everyone feels safe and welcome when contributing to the Rocq Prover or
 interacting with others in Rocq-related forums.
 
-These rules apply to all spaces managed by the Rocq prover team.
+These rules apply to all spaces managed by the Rocq Prover team.
 This includes the GitHub repository, the Discourse forum, the Zulip chat, the mailing lists,
 physical events like Rocq working groups and workshops, and any other forums
 created or managed by the team which the community uses for

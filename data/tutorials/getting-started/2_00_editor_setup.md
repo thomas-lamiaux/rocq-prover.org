@@ -2,7 +2,7 @@
 id: set-up-editor
 title: Configuring Your Editor
 description: |
-  This page will show you how to set up your editor for the Rocq prover. 
+  This page will show you how to set up your editor for the Rocq Prover.
 category: "Tooling"
 ---
 While the toplevel is great for interactively trying out the language, we will shortly need to write Rocq files in an editor. 

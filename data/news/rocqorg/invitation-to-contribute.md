@@ -9,7 +9,7 @@ tags: [rocqorg]
 
 Hello fellow Rocq enthusiasts!
 
-Are you passionate about the Rocq prover and eager to showcase your exciting projects, share your insights, or highlight Rocq-related opportunities? Or are you a newcomer to Rocq wanting to learn more, develop your skills, and become active in the community? Look no further! We invite you to become an active contributor to rocq-prover.org, the thriving hub for Rocq developers and learners.
+Are you passionate about the Rocq Prover and eager to showcase your exciting projects, share your insights, or highlight Rocq-related opportunities? Or are you a newcomer to Rocq wanting to learn more, develop your skills, and become active in the community? Look no further! We invite you to become an active contributor to rocq-prover.org, the thriving hub for Rocq developers and learners.
 
 ![](/media/news/contribute.jpg)
 
