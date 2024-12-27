@@ -7,7 +7,6 @@ category: "First Steps"
 recommended_next_tutorials:
 ---
 
-<div class="alectryon-root alectryon-centered">
 <div class="document">
 <div class="alectryon-container docutils container">
 <p>The Rocq Prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.</p>
@@ -130,5 +129,6 @@ Using Σ-types, a sorting function over lists of natural numbers can be given th
             <span class="o">(</span><span class="n">refl_equal</span> <span class="o">(</span><span class="n">S</span> <span class="n">n0</span><span class="o">))</span> <span class="n">IHs</span><span class="o">)</span> <span class="n">n</span> <span class="n">s</span>
   <span class="o">:</span> <span class="kr">forall</span> <span class="o">(</span><span class="nv">n</span> <span class="o">:</span> <span class="n">nat</span><span class="o">)</span> <span class="o">(</span><span class="nv">s</span> <span class="o">:</span> <span class="n">seq</span> <span class="n">n</span><span class="o">),</span> <span class="n">length</span> <span class="n">n</span> <span class="n">s</span> <span class="o">=</span> <span class="n">n</span>
 </pre>
+</div>
 </div>
 </div>
