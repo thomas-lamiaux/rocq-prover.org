@@ -149,7 +149,7 @@ Learn_layout.single_column_layout
   -->
     <div class="grid gap-6 mt-6 lg:grid-cols-2">
       <%s! Learn_components.book_recommendation
-        (Data.Book.get_by_slug "cpdt" |> Option.get)
+        (Data.Book.get_by_slug "mathcomp" |> Option.get)
         ~link:{href = Url.books; title = "See More Books"} %>
       <%s! Learn_components.book_recommendation
         (Data.Book.get_by_slug "mechanized-rocq" |> Option.get)
@@ -176,7 +176,7 @@ Learn_layout.single_column_layout
 
     <div class="grid gap-6 mt-6 lg:grid-cols-2">
       <%s! Learn_components.book_recommendation
-        (Data.Book.get_by_slug "mathcomp" |> Option.get)
+        (Data.Book.get_by_slug "cpdt" |> Option.get)
         ~link:{href = Url.books; title = "See More Books"} %>
       <%s! Learn_components.book_recommendation
         (Data.Book.get_by_slug "computer-arithmetic" |> Option.get)
