@@ -14,7 +14,7 @@ language:
 links:
   - description: Read Online
     uri: http://adam.chlipala.net/cpdt/
-difficulty: intermediate
+difficulty: advanced
 pricing: free
 ---
 
