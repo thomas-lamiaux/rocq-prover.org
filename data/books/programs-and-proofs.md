@@ -1,6 +1,6 @@
 ---
 title: "Programs and Proofs: Mechanizing Mathematics with Dependent Types"
-slug: "mechanized-rocq"
+slug: "programs-and-proofs"
 description: >
   These lecture notes are the result of the author's personal experience of learning how to structure formal reasoning using the Rocq Prover and employ Rocq in large-scale research projects. The present manuscript offers a brief and practically-oriented introduction to the basic concepts of mechanized reasoning and interactive theorem proving.
 recommendation: >
@@ -14,7 +14,7 @@ language:
 links:
   - description: Read Online
     uri: https://ilyasergey.net/pnp/
-difficulty: intermediate
+difficulty: beginner
 pricing: free
 ---
 
