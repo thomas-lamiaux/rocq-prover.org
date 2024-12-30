@@ -11,7 +11,7 @@ let social_list_item ?(extra_html="") ?(text="") ?(href="") ~left_icon ~title _c
         </div>
   </li>
 
-let render ?(selected_event = "All") ~old_conferences ~(events: Data.Event.t list * string list) ~outreachy_latest_project (jobs_with_count : Data.Job.t list * int) =
+let render ?(selected_event = "All") ~old_conferences ~(events: Data.Event.t list * string list) (jobs_with_count : Data.Job.t list * int) =
 Community_layout.single_column_layout
 ~title:"The Rocq Community"
 ~description:"Looking to interact with people who are also interested in Rocq? Find out about upcoming events, sign up for Rocq's Zulip and discover even more places to engage with people from the community!"
@@ -82,10 +82,6 @@ Community_layout.single_column_layout
           </p>|}
           ) ~left_icon:(Icons.mastodon "h-8 mr-0") ~title:("Mastodon") "" %>   
       </ul>
-      <!-- <ul>
-        <p class="text-title text-xl font-mono dark:text-dark-title mb-2">Mailing Lists</p>
-        <%s! social_list_item ~text:("Share experience, exchange ideas and code, and report on applications - ") ~href:("https://inbox.vuxu.org/caml-list") ~left_icon:(Icons.email "w-10 h-10") ~title:("Caml User's Mailing List") "" %>
-      </ul> -->
   </div>
 </div>
 <%s! Cards.Event.script %>
@@ -157,30 +153,7 @@ Community_layout.single_column_layout
         <% ); %>
         <a href="/conferences" class="text-primary dark:text-dark-white hover:text-primary pr-2 flex mt-4 items-center dark:hover:text-dark-primary hover:underline group dark:underline"> View Conferences <%s! Icons.arrow_small_right "h-5 w-5 ml-2 text-primary  dark:text-dark-white group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %>
         </a> 
-      </div> 
-      <!-- <div class="flex flex-col">
-        <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium my-4">Internships</p>
-        <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-4">OCaml Outreachy Internships</h2>
-        <p class="text-content dark:text-dark-content mb-6">Outreachy provides internships in open source and open science to people subject to systemic bias and  impacted by underrepresentation in the technical industry where they are  living.This is a record of OCaml Community Outreachy Internship projects.</p>
-        <p class="text-content dark:text-dark-content">This is a record of OCaml Community Outreachy Internship projects.</p>
-      <% outreachy_latest_project |> List.iter (fun (round_name, (project : Data.Outreachy.project)) -> %>
-        <a href="<%s Url.outreachy %>" class="card dark:dark-card p-5 overflow-hidden rounded-xl mt-4">
-          <p class="text-title dark:text-dark-title mb-2"><%s project.title %></p></p>
-          <div class="flex items-center space-x-2 mb-3">
-              <%s! Icons.map_pin "h-5 w-5 text-primary dark:text-dark-primary mr-2" %>
-              <p class="text-content dark:text-dark-content">Remote Worldwide</p>
-          </div>
-          <div class="flex items-center space-x-2 mb-4">
-              <%s! Icons.calendar "h-5 w-5 text-primary dark:text-dark-primary mr-2" %>
-              <p class="text-content dark:text-dark-content"><%s round_name %></p>
-          </div> 
-          <div class="bg-primary dark:bg-dark-primary hover:bg-primary_dark dark:hover:bg-dark-primary_40 text-white dark:text-white py-1 px-2 rounded font-bold text-center w-32">Read More</div>
-        </a>
-        <% ); %>
-        <a href="<%s Url.outreachy %>" class="text-primary dark:text-dark-white hover:text-primary pr-2 flex mt-4 items-center dark:hover:text-dark-primary hover:underline group dark:underline"> View Internship <%s! Icons.arrow_small_right "h-5 w-5 ml-2 text-primary dark:text-dark-white group-hover:text-primary group-hover-underline dark:group-hover:text-dark-primary" %>
-        </a> 
-      </div> -->
-     
+      </div>
   </div>
  </div>
 </div>

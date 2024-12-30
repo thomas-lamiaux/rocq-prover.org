@@ -9,17 +9,14 @@ let term_templates =
     ("book", Book.template);
     ("changelog", Changelog.template);
     ("code_examples", Code_example.template);
-    ("cookbook", Cookbook.template);
     ("event", Event.template);
     ("exercises", Exercise.template);
     ("governance", Governance.template);
     ("industrial_user", Industrial_user.template);
     ("industrial_businesses", Industrial_user.template);
-    ("is_ocaml_yet", Is_ocaml_yet.template);
     ("job", Job.template);
     ("news", News.template);
     ("opam_user", Opam_user.template);
-    ("outreachy", Outreachy.template);
     ("pages", Page.template);
     ("paper", Paper.template);
     ("planet", Planet.template);

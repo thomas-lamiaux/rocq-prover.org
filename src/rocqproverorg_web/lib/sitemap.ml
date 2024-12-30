@@ -12,6 +12,7 @@ let urls =
     Url.books;
     Url.changelog;
     Url.code_of_conduct;
+    Url.conferences;
     Url.community;
     Url.consortium;
     Url.events;
@@ -25,7 +26,6 @@ let urls =
     Url.jobs;
     Url.learn;
     Url.news;
-    Url.outreachy;
     Url.packages;
     Url.packages_search;
     Url.papers;
@@ -33,10 +33,9 @@ let urls =
     Url.playground;
     Url.privacy_policy;
     Url.releases;
-    Url.conferences;
   ]
 
-let to_url u = "\n<url><loc>https://ocaml.org" ^ u ^ "</loc></url>"
+let to_url u = "\n<url><loc>https://rocq-prover.org" ^ u ^ "</loc></url>"
 
 let urlables =
   let open Data in
@@ -45,7 +44,6 @@ let urlables =
       Urlable (urls, to_url);
       Urlable (Changelog.all, fun r -> to_url @@ Url.changelog_entry r.slug);
       Urlable (Governance.teams, fun r -> to_url @@ Url.governance_team r.id);
-      Urlable (Is_ocaml_yet.all, fun r -> to_url @@ Url.is_ocaml_yet r.id);
       Urlable (News.all, fun r -> to_url @@ Url.news_post r.slug);
       Urlable (Release.all, fun r -> to_url @@ Url.release r.version);
       Urlable (Success_story.all, fun r -> to_url @@ Url.success_story r.slug);

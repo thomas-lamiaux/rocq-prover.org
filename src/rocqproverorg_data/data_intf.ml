@@ -323,32 +323,6 @@ module Industrial_user = struct
   [@@deriving show]
 end
 
-module Is_ocaml_yet = struct
-  type external_package = { url : string; synopsis : string }
-  [@@deriving of_yaml, show]
-
-  type package = { name : string; extern : external_package option }
-  [@@deriving of_yaml, show]
-
-  type category = {
-    name : string;
-    status : string;
-    description : string;
-    packages : package list;
-    slug : string;
-  }
-  [@@deriving show]
-
-  type t = {
-    id : string;
-    question : string;
-    answer : string;
-    categories : category list;
-    body_html : string;
-  }
-  [@@deriving show]
-end
-
 module Job = struct
   type t = {
     title : string;
@@ -393,21 +367,6 @@ module Opam_user = struct
     avatar : string option;
   }
   [@@deriving of_yaml, show]
-end
-
-module Outreachy = struct
-  type project = {
-    title : string;
-    description : string;
-    mentee : string;
-    blog : string option;
-    source : string;
-    mentors : string list;
-    video : string option;
-  }
-  [@@deriving of_yaml, show]
-
-  type t = { name : string; projects : project list } [@@deriving of_yaml, show]
 end
 
 module Page = struct

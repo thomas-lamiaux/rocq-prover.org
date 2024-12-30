@@ -24,7 +24,6 @@ We've provided a list of community-driven content below. When adding content to 
 - [Success Stories](#content-success-story)
 - [Academic and Industrial Users](#content-user)
 - [OCaml Books](#content-book)
-- [OCaml Cookbook Recipes](#content-cookbook)
 - [Recurring Events](#content-recurring-event)
 - [Upcoming Events](#content-upcoming_event)
 - [The OCaml Changelog](#content-changelog)
@@ -117,44 +116,6 @@ You can add a new academic user by creating a new Markdown file in [data/academi
 > Contribute to the [OCaml Books](https://ocaml.org/books).
 
 Add a new OCaml book by creating a new Markdown file in [data/books/](data/books/). For instance: [ocaml-from-the-very-beginning.md](data/books/ocaml-from-the-very-beginning.md).
-
-### <a name="content-cookbook"></a>Add a Recipe to the OCaml Cookbook
-
-The OCaml Cookbook is a place where OCaml developers share how to solve common
-tasks in OCaml using packages from the OCaml ecosystem.
-
-Here are the steps to contribute a recipe for an existing task:
-* Find the task in the [data/cookbook/tasks.yml](data/cookbook/tasks.yml) file.
-* Go to the task folder inside [data/cookbook/](data/cookbook/) that has the
-  same name as the task's `slug`.
-* Create a `.ml` file containing the recipe and a YAML header with metadata about
-  the recipe.
-
-If the recipe does not fit into any existing task, you also need to create a
-task. Add a `task:` entry in [data/cookbook/tasks.yml](data/cookbook/tasks.yml)
-file. Fields `title`, `description`, and `slug` are mandatory. The task must be
-located under a relevant `category:` field.
-
-Finally, it is also possible to create and organise groups of tasks by creating
-new categories. Categories are recursive and may have subcategories, which are
-full categories too. A task listed in
-[data/cookbook/tasks.yml](data/cookbook/tasks.yml) may have no recipes yet. On the 
-other hand, it is not allowed to have a task folder in
-[data/cookbook/](data/cookbook/) that does not correspond to a task from the
-[data/cookbook/tasks.yml](data/cookbook/tasks.yml) file because it triggers a
-compilation error.
-
-Each recipe is a way to perform a task using a combination of open-source
-libraries.
-
-#### OCaml Cookbook Recipe Review Checklist
-
-Checklist for reviewing OCaml cookbook submissions:
-
-1. does this recipe implement the task it's assigned to?
-2. if this recipe is creating a new task: (1) is the new task substantially different from existing tasks, (2) there is no existing task that this recipe solves, (3) is the new task description very clear on what the task is (be specific!)
-3. is the code explained sufficiently without overexplaining (be short and focus on what matters)?
-4. is the code such that you would put it into production? I.e. are the libraries used stable enough and is the code readable?
 
 ### <a name="content-recurring-event"></a>Add A Recurring Event
 

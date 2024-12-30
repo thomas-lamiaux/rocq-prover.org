@@ -3,7 +3,6 @@ type section =
   | Jobs
   | Events
   | Resources
-  | Outreachy
   | Conferences
 
 let tabs
@@ -13,7 +12,6 @@ let tabs
     | Jobs -> Url.jobs
     | Events -> Url.events
     | Resources -> Url.resources
-    | Outreachy -> Url.outreachy
     | Conferences -> Url.conferences
   in
   let title_of_section = function
@@ -21,7 +19,6 @@ let tabs
     | Jobs -> "Jobs"
     | Events -> "Events"
     | Resources -> "Resources"
-    | Outreachy -> "Outreachy Internships"
     | Conferences -> "Conferences"
   in
   Layout.subnav_tabs ~title:"Community" ~current ~sections:[Overview; Jobs; Events; Conferences] ~url_of_section ~title_of_section

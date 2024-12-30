@@ -104,16 +104,8 @@ let community _req =
     | a :: b :: c :: _ -> [ a; b; c ]
   in
   let jobs_with_count = (jobs, List.length Data.Job.all) in
-  let outreachy_latest_project =
-    match Data.Outreachy.all with
-    | [] -> []
-    | first_round :: _ -> (
-        match first_round.projects with
-        | [] -> []
-        | first_project :: _ -> [ (first_round.name, first_project) ])
-  in
   Dream.html
-    (Rocqproverorg_frontend.community ~old_conferences ~outreachy_latest_project
+    (Rocqproverorg_frontend.community ~old_conferences
        ?selected_event:query ~events jobs_with_count)
 
 type common_event =
@@ -767,34 +759,6 @@ let exercises req =
   in
   Dream.html (Rocqproverorg_frontend.exercises ?difficulty_level filtered_exercises)
 
-let cookbook _req =
-  let categories = Data.Cookbook.top_categories in
-  Dream.html (Rocqproverorg_frontend.cookbook categories)
-
-let cookbook_task req =
-  let task_slug = Dream.param req "task_slug" in
-  let</>? task =
-    List.find_opt
-      (fun (t : Data.Cookbook.task) -> t.slug = task_slug)
-      Data.Cookbook.tasks
-  in
-  let recipe_list = Data.Cookbook.get_by_task ~task_slug in
-  Dream.html (Rocqproverorg_frontend.cookbook_task task recipe_list)
-
-let cookbook_recipe req =
-  let task_slug = Dream.param req "task_slug" in
-  let slug = Dream.param req "slug" in
-  let</>? recipe = Data.Cookbook.get_by_slug ~task_slug slug in
-  let other_recipes_for_this_task =
-    Data.Cookbook.all
-    |> List.filter (fun (c : Data.Cookbook.t) ->
-           c.task.slug = recipe.task.slug && c.slug <> recipe.slug)
-  in
-  Dream.html
-    (Rocqproverorg_frontend.cookbook_recipe recipe other_recipes_for_this_task)
-
-let outreachy _req = Dream.html (Rocqproverorg_frontend.outreachy Data.Outreachy.all)
-
 type package_kind = Package | Universe
 
 module Package_helper = struct
@@ -934,37 +898,6 @@ module Package_helper = struct
     in
     aux [] xs
 end
-
-let is_ocaml_yet t id req =
-  let</>? meta =
-    List.find_opt
-      (fun (x : Data.Is_ocaml_yet.t) -> x.id = id)
-      Data.Is_ocaml_yet.all
-  in
-  let tutorials =
-    Data.Tutorial.all
-    |> List.filter (fun (t : Data.Tutorial.t) -> t.section = Guides)
-  in
-  let packages =
-    meta.categories
-    |> List.concat_map (fun (category : Data.Is_ocaml_yet.category) ->
-           category.packages)
-    |> List.filter_map (fun (p : Data.Is_ocaml_yet.package) ->
-           let name = Rocqproverorg_package.Name.of_string p.name in
-           (* FIXME: Failure *)
-           match Rocqproverorg_package.get_latest t name with
-           | Some x -> Some x
-           | None ->
-               if p.extern = None then
-                 Dream.error (fun log ->
-                     log ~request:req "Package not found: %s"
-                       (Rocqproverorg_package.Name.to_string name));
-               None)
-    |> List.map (Package_helper.frontend_package t)
-    |> List.map (fun pkg -> (pkg.Rocqproverorg_frontend.Package.name, pkg))
-    |> List.to_seq |> Hashtbl.of_seq
-  in
-  Dream.html (Rocqproverorg_frontend.is_ocaml_yet ~tutorials ~packages meta)
 
 let packages state _req =
   let package { Rocqproverorg_package.Statistics.name; version; info } =

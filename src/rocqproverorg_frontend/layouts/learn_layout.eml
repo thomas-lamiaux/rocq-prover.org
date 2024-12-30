@@ -4,7 +4,6 @@ type section =
   | Language
   | Platform
   | Guides
-  | Cookbook
   | Exercises
   | Books
 
@@ -16,7 +15,6 @@ let tabs
     | Language -> Url.learn_docs
     | Platform -> Url.tutorial "platform-docs"
     | Guides -> Url.learn_guides
-    | Cookbook -> Url.cookbook
     | Exercises -> Url.exercises
     | Books -> Url.books
   in
@@ -26,7 +24,6 @@ let tabs
     | Language -> "Language"
     | Platform -> "Documentation"
     | Guides -> "Guides"
-    | Cookbook -> "Cookbook"
     | Exercises -> "Exercises"
     | Books -> "Books"
   in

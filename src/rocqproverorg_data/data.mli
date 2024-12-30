@@ -34,20 +34,6 @@ module Code_example : sig
   val get : string -> t
 end
 
-module Cookbook : sig
-  include module type of Cookbook
-
-  val top_categories : category list
-  val tasks : task list
-  val all : t list
-  val get_task_path_titles : category list -> string list -> string list
-  val get_tasks_by_category : category_slug:string -> task list
-  val get_by_task : task_slug:string -> t list
-  val get_by_slug : task_slug:string -> string -> t option
-  val full_title_of_recipe : t -> string
-  val main_package_of_recipe : t -> string
-end
-
 module Event : sig
   include module type of Event
 
@@ -86,12 +72,6 @@ module Industrial_user : sig
   val get_by_slug : string -> t option
 end
 
-module Is_ocaml_yet : sig
-  include module type of Is_ocaml_yet
-
-  val all : t list
-end
-
 module Job : sig
   include module type of Job
 
@@ -125,12 +105,6 @@ module Opam_user : sig
     t
 
   val find_by_name : string -> t option
-end
-
-module Outreachy : sig
-  include module type of Outreachy
-
-  val all : t list
 end
 
 module Page : sig

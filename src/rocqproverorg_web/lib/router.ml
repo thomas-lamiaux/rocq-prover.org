@@ -19,7 +19,7 @@ let playground_loader =
     ~digest:(fun _root path ->
       Option.map Dream.to_base64url @@ Rocqproverorg_static.Playground.digest path)
 
-let page_routes t =
+let page_routes _t =
   Dream.scope ""
     [ Dream_encoding.compress ]
     [
@@ -28,11 +28,6 @@ let page_routes t =
       Dream.get Url.learn Handler.learn;
       Dream.get Url.learn_docs Handler.learn_docs;
       Dream.get Url.learn_guides Handler.learn_guides;
-      Dream.get Url.cookbook Handler.cookbook;
-      Dream.get (Url.cookbook_task ":task_slug") Handler.cookbook_task;
-      Dream.get
-        (Url.cookbook_recipe ~task_slug:":task_slug" ":slug")
-        Handler.cookbook_recipe;
       Dream.get Url.community Handler.community;
       Dream.get Url.consortium Handler.consortium;
       Dream.get (Url.consortium_page ":id") (Handler.consortium_page Commit.hash);
@@ -57,7 +52,6 @@ let page_routes t =
       Dream.get Url.news Handler.news;
       Dream.get (Url.news_post ":id") Handler.news_post;
       Dream.get Url.jobs Handler.jobs;
-      Dream.get Url.outreachy Handler.outreachy;
       Dream.get Url.privacy_policy Handler.privacy_policy;
       Dream.get Url.code_of_conduct Handler.code_of_conduct;
       Dream.get Url.governance Handler.governance;
@@ -68,8 +62,6 @@ let page_routes t =
       Dream.get Url.exercises Handler.exercises;
       Dream.get Url.platform Handler.platform;
       Dream.get (Url.platform_page ":id") (Handler.platform_page Commit.hash);
-      Dream.get (Url.tutorial "is-ocaml-web-yet") (Handler.is_ocaml_yet t "web");
-      Dream.get (Url.tutorial "is-ocaml-gui-yet") (Handler.is_ocaml_yet t "gui");
       Dream.get Url.tutorial_search Handler.learn_documents_search;
       Dream.get (Url.tutorial ":id") (Handler.tutorial Commit.hash);
       Dream.get Url.playground Handler.playground;
