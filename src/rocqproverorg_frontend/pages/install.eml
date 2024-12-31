@@ -1,49 +1,62 @@
-let render () =
+let render ~latest_platform_version =
 Layout.render
 ~use_swiper:true
-~title:"Install Rocq"
+~title:"Install the Rocq Prover"
 ~description:"Quick setup instructions to install Rocq on your system."
 ~canonical:"" @@
 <div class="lg:py-8 py-6">
   <div class="container-fluid" x-data='{ operating_system: persist_os_link() }'>
     <div class="prose dark:prose-invert mb-6">
       <h1 class="sr-only ">
-        Install Rocq
+        Install the Rocq Prover
       </h1>
       <div class="hidden lg:flex gap-2">
-        <button class="btn flex gap-2" :class='operating_system == "rocq_platform"? "": "btn-ghost"' @click='operating_system = "rocq_platform"; change_anchor("rocq_platform"); '>
-          The Rocq Platform
+        <button class="btn flex gap-2" :class='operating_system == "linux"? "": "btn-ghost"' @click='operating_system = "linux"; change_anchor("linux"); '>
+          Linux
         </button>
-        <button class="btn flex gap-2" :class='operating_system == "opam"? "": "btn-ghost"' @click='operating_system = "opam"; change_anchor("opam"); '>
-          Using Opam
+        <button class="btn flex gap-2" :class='operating_system == "mac"? "": "btn-ghost"' @click='operating_system = "mac"; change_anchor("mac"); '>
+          macOS
         </button>
-        <button class="btn flex gap-2" :class='operating_system == "other"? "": "btn-ghost"' @click='operating_system = "other"; change_anchor("other"); '>
-          Other Installation Methods
+        <button class="btn flex gap-2" :class='operating_system == "windows"? "": "btn-ghost"' @click='operating_system = "windows"; change_anchor("windows"); '>
+          Windows
         </button>
       </div>
       <div class="w-full flex md:hidden">
 % let render_multi_button ~title ~active_tab ~class_ =
       <button x-on:click='operating_system = "<%s active_tab %>"' class="flex flex-auto justify-center py-4 text-sm border <%s class_ %>" :class='operating_system === "<%s active_tab %>" ? "bg-primary dark:bg-dark-primary text-white dark:text-dark-title border-primary dark:border-dark-primary" : "text-content dark:text-dark-separator_30 border-card_border dark:border-dark-separator_30"'><%s title %></button>
 % in
-        <% render_multi_button ~title:"The Rocq Platform" ~active_tab:"rocq_platform" ~class_:"rounded-l rounded-l-lg border-r-0"; %>
-        <% render_multi_button ~title:"Using Opam" ~active_tab:"opam" ~class_:"rounded-r rounded-r-lg"; %>
-        <% render_multi_button ~title:"Other Installation Methods" ~active_tab:"other" ~class_:"rounded-r rounded-r-lg"; %>
+        <% render_multi_button ~title:"Linux" ~active_tab:"linux" ~class_:"rounded-l rounded-l-lg border-r-0"; %>
+        <% render_multi_button ~title:"macOS" ~active_tab:"mac" ~class_:"rounded-r rounded-r-lg"; %>
+        <% render_multi_button ~title:"Windows" ~active_tab:"windows" ~class_:"rounded-r rounded-r-lg"; %>
       </div>
     </div>
-
-    <div class="prose dark:prose-invert my-6">
-      <p>If you need more explicit instructions than provided on this quick-install page, you can find
-        <a href="<%s Url.installing_rocq %>">a more detailed explanation of the installation process here</a>.
-      </p>
-    </div>
-
     <div
       class="grid gap-6 xl:grid-cols-2 xl:gap-16"
-      x-show="(operating_system == 'rocq_platform')">
+      x-show="(operating_system == 'linux')">
       <div class="prose dark:prose-invert">
         <h2>
-          Install Rocq using the Rocq Platform (recommended)
+          Install the Rocq Prover on Linux
         </h2>
+        <h3>
+          Using your system's package manager
+        </h3>
+        <p>
+          The Rocq Prover is available through many package managers, including most Linux distribution package managers.
+          While this is currently the easiest way to install the Rocq Prover, it has the following limitations:
+        </p>
+        <ul>
+          <li>
+            Depending on the distribution, the available version may not be the latest version.
+            See <a href="https://repology.org/project/coq/versions">Repology</a> to know which version is available in your distribution.
+          </li>
+          <li>
+            The available packages may not include all the external packages available for the Rocq Prover.
+            Installing additional packages may require manual compilation and installation.
+          </li>
+        </ul>
+        <h3>
+          Using the Rocq Platform (recommended)
+        </h3>
         <p>
           The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
           The Rocq Platform provides an easy way to install Rocq and a consistent set of packages on Windows, macOS and Linux.
@@ -52,178 +65,172 @@ Layout.render
         <ol>
 
           <li>
-            Beginners are encouraged to use one of the binary installers: we provide binary installers for Windows and macOS. 
-            <p>
-            <a href="<%s Url.release Data.Release.latest_platform.version %>#recommended-binary-installers" >Windows and macOS installers</a>
-            </p>
+            Currently, there is no longer a Rocq Platform binary installer for Linux.
           </li>
 
           <li>
-            Experienced users (and Linux users) are advised to run the Rocq Platform scripts to install from sources, 
-            as this will allow them to install additional packages with opam.
-           <p>
-            <a target="_blank" href="https://github.com/coq/platform#installation">Platform scripts</a>
-            </p>
-
+            The Rocq Platform scripts install the Rocq Prover and its packages from sources,
+            while abstracting over the details of running opam.
+            This provides the flexibility to install additional packages with opam later on.
+            It also supports installing multiple versions of the Rocq Platform and switching between them.
           </li>
 
         </ol>
+        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
 
-        <p>Congratulations, you have now installed Rocq!</p>
+        <h3>
+          Using Opam
+        </h3>
+        <p>
+          If you want some finer-grained control over the installation process, you can install the Rocq Prover by running opam commands directly.
+        </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.installing_rocq %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <h3>
+          Using Nix
+        </h3>
+        <p>
+          Nix support for the Rocq Prover is well-maintained and provides a way to install the Rocq Prover and its packages on any Linux distribution, or on macOS.
+          See the <a href="https://nixos.org/download/">Nix installation instructions</a>
+          and the <a href="https://nixos.org/manual/nixpkgs/unstable/#sec-language-coq">Nixpkgs manual section on Rocq</a> for more information.
+        </p>
+        <h3>
+          Using Docker
+        </h3>
+        <p>
+          The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
+        </p>
+      </div>
+      <div class="prose dark:prose-invert">
+        <h2>
+          Set Up your Editor for Rocq
+        </h2>
+        <p>
+          Congratulations, you have now installed Rocq!
+          Now, you can set up your editor to write Rocq code and proofs.
+        </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "set-up-editor" %>">Set up your editor <%s! Icons.arrow_small_right "h-6 w-6" %></a>
       </div>
     </div>
 
-    <div x-show="(operating_system == 'opam')">
+    <div
+      class="grid gap-6 xl:grid-cols-2 xl:gap-16" 
+      x-show="(operating_system == 'mac')">
       <div class="prose dark:prose-invert">
         <h2>
-          Install Rocq using Opam
+          Install the Rocq Prover on macOS
         </h2>
+        <h3>
+          Using the Rocq Platform (recommended)
+        </h3>
+        <p>
+          The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
+          The Rocq Platform provides an easy way to install Rocq and a consistent set of packages on Windows, macOS and Linux.
+        </p>
         <ol>
           <li>
-            <h3>Install the opam package manager</h3>
-
-            <p>
-            <a target="_blank" href="https://opam.ocaml.org">opam,</a> the package manager for both OCaml and Rocq, can install the OCaml compiler, the Rocq Prover,
-            as well as any additional packages.
-            Ensure <code>gcc</code>, <code>build-essential</code>, <code>curl</code>, <code>unzip</code>, and <code>bubblewrap</code> are installed on your system, then
-            run the following in your terminal to download and install the newest version of opam:
-            </p>
-
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"install-opam" "bash -c \"sh <(curl -fsSL https://opam.ocaml.org/install.sh)\"" %>
-
-            <details>
-              <summary class="flex items-center gap-2 font-semibold">
-                Other Installation Methods
-                <%s! Icons.chevron_down "h-4 w-4" %>
-              </summary>
-              You can also <a href="<%s Url.installing_rocq %>#1-install-opam">install opam using your operating system's package manager</a>
-              - however, you may get an older version of opam that does not support the most recent OCaml compiler version.
-
-              If you need the most recent version,
-              you can build opam from sources, following the instructions at
-              <a target="_blank" href="https://github.com/ocaml/opam">opam's GitHub repository</a>.
-            </details>
-          </li>
-
-          <li>
-            <h3>Initialise opam</h3>
-
-            <p>
-              Opam needs to be initialised, which will create a default
-              <a href="<%s Url.tutorial "opam-switch-introduction" %>">opam switch</a>.
-              An opam switch is an isolated environment for the OCaml compiler
-              and any packages you install.
-            </p>
-
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"init-opam" "opam init" %>
-
-            <p>
-            During <code>opam init</code>, you will be asked if you want to add a hook
-            to your shell to put the tools available in the current opam switch
-            on your PATH.
-            </p>
-
+            Beginners and users who want to get started quickly should use the Rocq Platform binary installer for macOS.
           </li>
           <li>
-            <h3>Activate the opam switch</h3>
-            <p>
-              If you answered no when prompted in the previous step, you need to activate the opam switch
-              by running <code>eval $(opam env)</code> or explicitly execute commands within the switch by using
-              <code>opam exec -- [CMD]</code>.
-            </p>
+            The Rocq Platform scripts install the Rocq Prover and its packages from sources,
+            while abstracting over the details of running opam.
+            This provides the flexibility to install additional packages with opam later on.
+            It also supports installing multiple versions of the Rocq Platform and switching between them.
           </li>
-
-
-          <li>
-            <h3>Installing the Rocq Prover</h3>
-            <p>
-              To install the Rocq Prover, simply run the following command. It will pin the Rocq package to version 9.0.0 and install it.
-              Note that installing the Rocq Prover using opam will build it from sources,
-              which will take several minutes to complete:
-            </p>
- 
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"install-rocq" "opam pin add rocq 9.0.0" %>
-
-            <p>
-            Pinning prevents opam from upgrading Rocq automatically, to avoid causing inadvertent breakage in your Rocq projects. 
-            You can upgrade Rocq explicitly to <code>$NEW_VERSION</code> with essentially the same command:
-            </p>
-
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"pin" "opam pin add rocq $NEW_VERSION" %>
-
-            <p>
-            To ensure that installation was successful, check that <code>rocq -v</code> prints the expected version of Rocq.
-            </p>
-
-
-          </li>
-
         </ol>
-
-        <p>Congratulations, you have now installed Rocq!</p>
-
-        <p> </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <h3>
+          Using Homebrew
+        </h3>
+        <p>
+          The Rocq Prover is also available through Homebrew, a package manager for macOS.
+          Similar to the Linux package managers, this presents the limitations of not having all the external packages available for Rocq.
+        </p>
+        <%s! Copy_to_clipboard.small_code_snippet ~id:"brew" "brew install coq" %>
+        <h3>
+          Using Opam
+        </h3>
+        <p>
+          If you want some finer-grained control over the installation process, you can install the Rocq Prover by running opam commands directly.
+        </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.installing_rocq %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <h3>
+          Using Nix
+        </h3>
+        <p>
+          Nix support for the Rocq Prover is well-maintained and provides a way to install the Rocq Prover and its packages on any Linux distribution, or on macOS.
+          See the <a href="https://nixos.org/download/">Nix installation instructions</a>
+          and the <a href="https://nixos.org/manual/nixpkgs/unstable/#sec-language-coq">Nixpkgs manual section on Rocq</a> for more information.
+        </p>
+        <h3>
+          Using Docker
+        </h3>
+        <p>
+          The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
+        </p>
       </div>
-      <div>
-        <div class="prose dark:prose-invert">
-          <h2>Set Up a VS Code for using Rocq</h2>
-
-          <p>
-            VsRocq is an extension for <a href="https://code.visualstudio.com/">Visual Studio Code</a> (VS Code) and <a href="https://vscodium.com/">VSCodium</a> which provides support for the Rocq Prover.
-            It is built around a language server which natively speaks the <a href="https://learn.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol?view=vs-2022"> LSP protocol</a>.
-            To install the language server in your current opam switch, run this command:
-          </p>
-
-          <%s! Copy_to_clipboard.small_code_snippet ~id:"install-platform-tools" "opam install vsrocq-language-server" %>
-
-          <p>You can alternatively install <a href="https://github.com/ejgallego/coq-lsp">rocq-lsp</a> (and its corresponding VS Code extension).</p>
-
-          <p>If you would like to use a different editor, several alternatives (including Emacs and Vim) are supported.
-          Check the corresponding <a href="/docs/set-up-editor#emacs-and-vim">documentation</a> for more information.</p>
-
-          <p>Now you are ready to write some Rocq code and proofs!</p>
-        </div>
-        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "tour-of-rocq" %>">Take A Tour of Rocq <%s! Icons.arrow_small_right "h-6 w-6" %></a>
+      <div class="prose dark:prose-invert">
+        <h2>
+          Set Up your Editor for Rocq
+        </h2>
+        <p>
+          Congratulations, you have now installed Rocq!
+          Now, you can set up your editor to write Rocq code and proofs.
+        </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "set-up-editor" %>">Set up your editor <%s! Icons.arrow_small_right "h-6 w-6" %></a>
       </div>
-
-
     </div>
 
         <div
       class="grid gap-6 xl:grid-cols-2 xl:gap-16"
-      x-show="(operating_system == 'other')">
+      x-show="(operating_system == 'windows')">
       <div class="prose dark:prose-invert">
         <h2>
-        Other Installation Methods
+          Install the Rocq Prover on Windows
         </h2>
-
+        <h3>
+          Using the Rocq Platform (recommended)
+        </h3>
+        <p>
+          The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
+          The Rocq Platform provides an easy way to install Rocq and a consistent set of packages on Windows, macOS and Linux.
+        </p>
         <ol>
           <li>
-            The Rocq Prover is available through many package managers, including most Linux distribution package managers.
-            However, in many cases, the available version is not the latest version. More importantly, these distributions 
-            might provide only a fraction of all the external packages available for Rocq, thus requiring some manual compilation 
-            and installation to add additional packages.
+            Beginners and users who want to get started quickly should use the Rocq Platform binary installer for Windows.
           </li>
-
           <li>
-            Advanced users who want to install Rocq and extend it with external packages can rely on Nix.
-            <p>
-            <a target="_blank" href="https://nixos.org/manual/nixpkgs/unstable/#sec-language-coq">Nixpkgs manual section on Rocq</a>
-            </p>
+            The Rocq Platform scripts install the Rocq Prover and its packages from sources,
+            while abstracting over the details of running opam.
+            This provides the flexibility to install additional packages with opam later on.
+            It also supports installing multiple versions of the Rocq Platform and switching between them.
           </li>
-
-          <li>
-            The Rocq Prover is also available as a
-           <p>
-            <a target="_blank" href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
-            </p>
-
-          </li>
-
         </ol>
-
-        <p>Congratulations, you have now installed Rocq!</p>
+        <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <h3>
+          Using Opam
+        </h3>
+        <p>
+          If you want to be able to run opam commands directly, it is recommended to first install the Rocq Platform using the scripts.
+          This will set up the environment variables needed to run opam commands.
+        </p>
+        <h3>
+          Using WSL (Windows Subsystem for Linux) or a VM
+        </h3>
+        <p>
+          All the installation methods for Linux are available on Windows Subsystem for Linux (WSL) or in a virtual machine running Linux.
+        </p>
       </div>
+      <div class="prose dark:prose-invert">
+        <h2>
+          Set Up your Editor for Rocq
+        </h2>
+        <p>
+          Congratulations, you have now installed Rocq!
+          Now, you can set up your editor to write Rocq code and proofs.
+        </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "set-up-editor" %>">Set up your editor <%s! Icons.arrow_small_right "h-6 w-6" %></a>
     </div>
 
   </div>
@@ -231,10 +238,13 @@ Layout.render
 <script>
 function detect_os() {
   const agent = navigator.userAgent;
-  if (agent.includes('opa')) {
-    return "opam";
+  if (agent.includes('Win')) {
+    return "windows";
   }
-  return "rocq_platform";
+  if (agent.includes('Mac')) {
+    return "mac";
+  }
+  return "linux";
 }
 
 function change_anchor (os_str) {
@@ -250,8 +260,9 @@ function anchor_os_loc() {
 
 function persist_os_link () {
   const hash_to_system = {
-    "#opam": "opam",
-    "#rocq_platform": "rocq_platform"
+    "#linux": "linux",
+    "#mac": "mac",
+    "#windows": "windows"
   };
   if (window.location.hash) {
     return hash_to_system[window.location.hash]

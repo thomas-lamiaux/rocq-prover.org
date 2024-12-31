@@ -15,13 +15,14 @@ let index _req =
        ~releases:(List.take 2 Data.Release.all)
        ~changelogs:(List.take 3 Data.Changelog.all))
 
-let install _req = Dream.html (Rocqproverorg_frontend.install ())
+let install _req =
+  let latest_platform_version = Data.Release.latest_platform.version in
+  Dream.html (Rocqproverorg_frontend.install ~latest_platform_version)
 
 let learn _req =
   let papers = Data.Paper.featured in
-  let latest_version = Data.Release.latest.version in
   let latest_platform_version = Data.Release.latest_platform.version in
-  Dream.html (Rocqproverorg_frontend.learn ~papers ~latest_version ~latest_platform_version)
+  Dream.html (Rocqproverorg_frontend.learn ~papers ~latest_platform_version)
 
 let learn_docs req =
   let tutorials =
