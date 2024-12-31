@@ -1,0 +1,11 @@
+services:
+  web:
+    restart: always
+    build: .
+    ports:
+      - "127.0.0.1:8000:8080"
+    volumes:
+      - type: bind
+        source: ./rocq-doc
+        target: /doc
+        read_only: true
