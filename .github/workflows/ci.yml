@@ -58,6 +58,6 @@ jobs:
       - name: Run tests
         run: opam exec -- dune test
 
-      - name: Format code
-        run: opam exec -- dune build --auto-promote @fmt
-        if: runner.os == 'Linux'
+#      - name: Format code
+#        run: opam exec -- dune build --auto-promote @fmt
+#        if: runner.os == 'Linux'

@@ -1,4 +1,5 @@
 .DEFAULT_GOAL := all
+DOC_PATH=`pwd`/rocq-doc/
 
 .PHONY: all
 all:
@@ -32,8 +33,18 @@ playground:
 install: all ## Install the packages on the system
 	opam exec -- dune install --root .
 
+.PHONY: local-doc
+local-doc:
+	if [ -d rocq-doc ]; then cd rocq-doc && git pull; \
+	else git clone --depth 1 https://github.com/coq/doc.git rocq-doc; fi
+
+.PHONY: update-local-doc
+update-local-doc:
+	@if [ -d rocq-doc ]; then cd rocq-doc && git pull; \
+	else echo "No local doc copy, use \"make local-doc\" to get a local copy (~ 8 GB)"; fi
+
 .PHONY: start
-start: all ## Run the produced executable
+start: all update-local-doc ## Run the produced executable
 	opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
 
 .PHONY: test
@@ -51,11 +62,9 @@ doc: ## Generate odoc documentation
 .PHONY: fmt
 fmt: ## Format the codebase with ocamlformat
 	opam exec -- dune build --root . --auto-promote @fmt
-
-DOC_PATH=`pwd`/rocq-doc/
 	
 .PHONY: watch
-watch: ## Watch for the filesystem and rebuild on every change
+watch: update-local-doc ## Watch for the filesystem and rebuild on every change
 	DOC_PATH=${DOC_PATH} opam exec -- dune build @run -w --force --no-buffer
 
 .PHONY: utop
