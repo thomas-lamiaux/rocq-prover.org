@@ -1,3 +1,0 @@
-[submodule "rocq-doc"]
-	path = rocq-doc
-	url = https://github.com/coq/doc
