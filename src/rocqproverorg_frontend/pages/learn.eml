@@ -64,10 +64,9 @@ Learn_layout.single_column_layout
               ~icon:Learn_components.beginner_section_icon ~title:"GET STARTED" ~heading:"Introduction To Rocq"
               ~description:"Install Rocq and gain a high-level understanding of the language"
               ~tutorial_links:[
-                  {href = Url.tutorial "installing-rocq"; title = "Installing Rocq"};
+                  {href = Url.install; title = "Installing the Rocq Prover"};
                   {href = Url.tutorial "set-up-editor"; title = "Configuring Your Editor"};
                   {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"}
-(*                {href = Url.tutorial "opam-switch-introduction"; title = "Introduction to opam Switches"} *)
               ]
               ~see_more:{href = Url.getting_started; title = "Get Started"}
               %>

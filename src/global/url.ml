@@ -99,8 +99,7 @@ let platform_page name = platform ^ "/" ^ name
 let consortium_page name = consortium ^ "/" ^ name
 let tutorial name = "/docs/" ^ name
 let tutorial_search = "/docs/search"
-let installing_rocq = "/docs/installing-rocq"
-let getting_started = installing_rocq
+let getting_started = learn ^ "#beginner_section"
 let exercises = "/exercises"
 let logos = "/logo"
 

@@ -90,7 +90,7 @@ Platform_layout.three_column_layout
     <p>
       Detailed instructions to install Rocq and the
       Platform are available in <a class="text-primary"
-      href="<%s Url.installing_rocq %>">Installing Rocq</a>.
+      href="<%s Url.install %>">Installing Rocq</a>.
     <h2 class="font-bold mt-8 text-title dark:text-dark-title">Packages of the Rocq Platform</h2>
     <p>
       Here is a list of all Platform packages sorted by their status.
