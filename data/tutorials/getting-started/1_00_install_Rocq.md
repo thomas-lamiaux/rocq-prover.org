@@ -13,7 +13,7 @@ On this page, you'll find installation instructions for Linux, macOS, and Window
 
 **Note**: You'll be installing Rocq and its tools through a [command line interface (CLI), or shell](https://www.youtube.com/watch?v=0PxTAn4g20U). 
 
-Beginners are encouraged to install the [Rocq Platform](/install#rocq_platform) using one of the binary installers: we provide binary installers for Windows and macOS.
+Beginners are encouraged to install the [Rocq Platform](/install) using one of the binary installers: we provide binary installers for Windows and macOS.
 Installation scripts are also available for all operating systems and abstract over the installation process that is presented here.
 
 
