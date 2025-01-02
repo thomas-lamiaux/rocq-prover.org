@@ -51,6 +51,9 @@ Layout.render
         <div class="mt-2">
           <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_platform_release.version %>">Latest Rocq Platform release: <%s latest_platform_release.version %></a>
         </div>
+        <div class="mt-8">
+          The Rocq Prover was formerly known as the Coq Proof Assistant (see more on <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="about#Name">the name evolution</a>).
+        </div>
         <!--<div class="mt-2">
           <a class="text-2xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release lts_release.version %>">Long Term Support release: <%s lts_release.version %></a>
         </div>
