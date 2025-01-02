@@ -35,12 +35,12 @@ Learn_layout.single_column_layout
   <div class="w-full bg:white dark:bg-dark-background_navigation border-b border-color-separator_20 dark:border-color-separator_30">
     <div class="container-fluid">
       <div class="hidden md:grid md:gap-6 md:grid-cols-3">
-        <a href="#beginner_section" class="py-3 lg:py-6 flex items-center gap-2 text-secondary dark:text-dark-secondary font-bold hover:underline">
+        <a href="#beginner_section" class="py-3 lg:py-6 flex items-center gap-2 text-secondary dark:text-dark-white font-bold hover:underline">
           <%s! Learn_components.beginner_section_icon %>
           <span class="hidden lg:inline">Jump to</span> Beginner Section
           <%s! Learn_components.little_down_arrow_icon %>
         </a>
-        <a href="#intermediate_section" class="py-3 lg:py-6 flex items-center gap-2 text-tertiary dark:text-dark-tertiary font-bold hover:underline">
+        <a href="#intermediate_section" class="py-3 lg:py-6 flex items-center gap-2 text-gray-700 dark:text-dark-tertiary font-bold hover:underline">
           <%s! Learn_components.intermediate_section_icon %>
           <span class="hidden lg:inline">Jump to</span> Intermediate Section
           <%s! Learn_components.little_down_arrow_icon %>
@@ -55,7 +55,7 @@ Learn_layout.single_column_layout
   </div>
   <div class="container-fluid">
     <h2 id="beginner_section" class="mt-16 mb-8 text-content dark:text-dark-title text-3xl font-regular leading-9 tracking-widest">
-    <span class="text-secondary dark:text-dark-secondary font-bold">FOUNDATIONS</span>
+    <span class="text-secondary dark:text-dark-white font-bold">FOUNDATIONS</span>
       FOR BEGINNERS
     </h2>
 
@@ -116,7 +116,7 @@ Learn_layout.single_column_layout
 
   <div class="container-fluid">
     <h2 id="intermediate_section" class="mt-16 mb-8 text-content dark:text-dark-title text-3xl font-regular leading-9 tracking-widest">
-      <span class="text-tertiary dark:text-dark-tertiary font-bold">EXPLORING</span>
+      <span class="text-gray-700 dark:text-dark-tertiary font-bold">EXPLORING</span>
       THE INTERMEDIATE LEVEL
     </h2>
   <!--

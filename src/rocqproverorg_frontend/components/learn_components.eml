@@ -17,12 +17,12 @@ let skill_tag difficulty =
 
 let beginner_section_icon =
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="10" cy="10" r="10" class="fill-secondary dark:fill-dark-secondary"/>
+    <circle cx="10" cy="10" r="10" class="fill-secondary dark:fill-dark-white"/>
   </svg>
 
 let intermediate_section_icon =
   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5H18.5C21.8137 0.5 24.5 3.18629 24.5 6.5V18.5C24.5 21.8137 21.8137 24.5 18.5 24.5H6.5C3.18629 24.5 0.5 21.8137 0.5 18.5V6.5Z" class="fill-tertiary dark:fill-dark-tertiary"/>
+    <path d="M0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5H18.5C21.8137 0.5 24.5 3.18629 24.5 6.5V18.5C24.5 21.8137 21.8137 24.5 18.5 24.5H6.5C3.18629 24.5 0.5 21.8137 0.5 18.5V6.5Z" class="fill-gray-700 dark:fill-dark-tertiary"/>
   </svg>
 
 let advanced_section_icon =
