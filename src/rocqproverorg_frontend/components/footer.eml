@@ -32,7 +32,7 @@ let ecosystem = [
   ]
 
 let policies = [
-  (Url.governance, "Rocq team");
+  (Url.governance, "Rocq Team");
   (Url.governance_policy, "Governance");
   (Url.privacy_policy, "Privacy");
   (Url.code_of_conduct, "Code of Conduct");
