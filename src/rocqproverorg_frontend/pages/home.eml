@@ -185,7 +185,7 @@ Layout.render
           <%s! Icons.acm_logo "ml-auto mt-5 mx-auto w-40" %>
         </div>
         <div class="space-y-6 flex-1">
-        <h2 class="md:text-3xl text-xl font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious SIGPLAN Programming Languages Software and Software System Awards.</h2>
+        <h2 class="md:text-3xl text-xl font-regular dark:text-white">The <strong>Rocq Prover</strong> has been <strong>recognised</strong> by the <strong>ACM</strong> for their prestigious <strong>Software System Award</strong>.</h2>
         <div class="sm:text-sm text-lg dark:text-white mt-3">
           The recipients of the awards are thanking all developers who contributed to the success of the Rocq Prover, 
           the users who illustrated how to use Rocq for so many impressive projects in formal certification, programming, logic,
@@ -193,7 +193,7 @@ Layout.render
           type theory, programming languages, interactive theorem proving.
         </div>
           <div class="inline-flex md:flex gap-8">
-            <a class="btn btn-outline rounded-3xl" href=news/sigplan_announcement>Read more</a>
+            <a class="btn btn-outline rounded-3xl" href=about#awards>Read more</a>
           </div>
         </div>
       </div>
