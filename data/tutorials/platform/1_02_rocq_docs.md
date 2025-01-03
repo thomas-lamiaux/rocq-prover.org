@@ -9,10 +9,12 @@ category: "Documentation"
 
 ## Writing Proofs
 
+- Introducing Hypothesis with Intro Patterns to Factorize proofs
+  [interactive version](https://coq.inria.fr/platform-docs/Tutorial_intro_patterns.html)
+  and [source code](https://coq.inria.fr/platform-docs/Tutorial_intro_patterns.v)
 - Chaining Tactics to Simplify and Factorize proofs [interactive
   version](https://coq.inria.fr/platform-docs/Tutorial_Chaining_Tactics.html)
-  and [source
-  code](https://coq.inria.fr/platform-docs/Tutorial_Chaining_Tactics.v)
+  and [source code](https://coq.inria.fr/platform-docs/Tutorial_Chaining_Tactics.v)
 
 ## Rocq Features
 
@@ -21,13 +23,11 @@ category: "Documentation"
   [source code](https://coq.inria.fr/platform-docs/SearchTutorial.v)
 - Basic Library Files and Module Management [interactive
   version](https://coq.inria.fr/platform-docs/RequireImportTutorial.html)
-  and [source
-  code](https://coq.inria.fr/platform-docs/RequireImportTutorial.v)
+  and [source code](https://coq.inria.fr/platform-docs/RequireImportTutorial.v)
 
 ## Rocq's Theory
 
 - Template Polymorphism vs. Universe Polymorphism: [interactive
   version](https://coq.inria.fr/platform-docs/Explanation_Template_Polymorphism.html)
-  and [source
-  code](https://coq.inria.fr/platform-docs/Explanation_Template_Polymorphism.v)
+  and [source code](https://coq.inria.fr/platform-docs/Explanation_Template_Polymorphism.v)
 
