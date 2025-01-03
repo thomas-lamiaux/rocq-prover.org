@@ -189,8 +189,8 @@ Learn_layout.single_column_layout
     <div class="mt-10 lg:mt-20">
       <h3 class="font-bold text-title dark:text-dark-title">Papers</h3>
       <div class="mt-6 text-content dark:text-dark-content text-lg">
-        Aspiring towards greater understanding of the language? Want to push the limits and discover brand new things?
-        Check out papers written by leading Rocq researchers:
+        Aspiring towards greater understanding of Rocq and its underlying theory?
+        Check out papers written by Rocq researchers:
       </div>
 
       <div class="flex flex-col lg:flex-row mt-8 space-y-4 lg:space-y-0 lg:space-x-6">
