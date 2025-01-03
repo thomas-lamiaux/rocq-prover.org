@@ -29,6 +29,15 @@ Layout.render
         <div>
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
+            href="#awards"
+          >
+            <%s! Icons.price_icon "h-10 w-10 mb-4 m-auto mt-6" %>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Awards</div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
             href="#Name"
           >
             <%s! Icons.quote_icon "h-10 w-10 mb-4 m-auto mt-6" %>
@@ -85,6 +94,22 @@ Layout.render
           </p>
           <p>
             The Rocq Prover is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
+          </p>
+          <h2 id="awards">Awards</h2>
+          <p>
+            In 2013, when the Rocq Prover was known as Coq, the  ACM Software System Award were given 
+            to the initial Coq development team (Thierry Coquand, Gérard Huet, Christine Paulin-Mohring, 
+            Bruno Barras, Jean-Christophe Filliâtre, Hugo Herbelin, Chet Murthy, Yves Bertot, Pierre Castéran) 
+            for their work on the Coq proof assistant.  This is the highest distinction for research software.
+          </p>
+          <p>
+            The same year, the initial Coq development team also received the ACM SIGPLAN Programming Languages Software Award.
+          </p> 
+          <p>
+            In 2022, during the European Open Science Days, the Open Science Prize for Free and Open Research Software was announced. 
+            In the Scientific and Technical category, the awarded software was the Coq Proof Assistant, for which Théo Zimmermann 
+            represented the development team on this occasion. The video of the ceremony can be found <a href="https://www.canal-u.tv/chaines/ouvrirlascience/ceremonie-de-remise-des-prix-de-la-science-ouverte-et-conclusions-claire">here</a>, with the segment 
+            dedicated to Coq starting at 11:51 and lasting until 16:30.
           </p>
           <h2 id="Name">An Overview of the Name's Evolution</h2>
           <p>
