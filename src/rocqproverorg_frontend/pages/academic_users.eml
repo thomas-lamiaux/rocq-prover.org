@@ -47,7 +47,7 @@ Layout.render
 </div>
 <div class="w-full bg-background dark:dark-section-navigation py-8 border-b border-separator_20 dark:border-separator_30">
   <div class="container-fluid">
-    <p class="font-bold dark:text-dark-title text-2xl">Top Universities Teach Rocq</p>
+    <p class="font-bold dark:text-dark-title text-2xl">Selected Universities Teaching Rocq</p>
     <div 
       class="flex flex-col w-full" 
       x-data="{swiper: null, activeIndex: 0}" 
