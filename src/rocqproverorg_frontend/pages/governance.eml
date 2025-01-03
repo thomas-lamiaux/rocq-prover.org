@@ -39,7 +39,7 @@ Layout.render
       <div class="flex md:flex-row flex-col">
         <div class="w-full m-auto mb-4 md:mb-0">
           <h1 class="font-bold mb-2 text-title dark:text-dark-title">Governance</h1>
-          <p class="text-title dark:text-dark-title">The projects running under Rocq and the awesome people behind it
+          <p class="text-title dark:text-dark-title">The projects running under Rocq and the people behind it
           </p>
         </div>
         <div class="flex h-max flex-col lg:flex-row lg:space-x-6 space-y-5 lg:space-y-0 md:space-y-5 w-full lg:w-auto mt-8 md:mt-0">
