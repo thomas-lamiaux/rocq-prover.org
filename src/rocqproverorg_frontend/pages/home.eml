@@ -509,7 +509,7 @@ Layout.render
         <a href="<%s Url.books %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.book "h-16 w-16 mb-8" %>
           <p class="font-semibold text-xl mb-3">Books</p>
-          <p>Discover Rocq books from expert programmers and researchers - from beginner level to advanced topics.</p>
+          <p>Discover books on Rocq for both computer science and mathematics - from complete beginner level to advanced topics.</p>
         </a>
         <a href="<%s Url.stdlib %>" class="card dark:dark-card p-4 text-title dark:text-dark-white">
           <%s! Icons.command_line "h-16 w-16 mb-8" %>
