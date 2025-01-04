@@ -7,8 +7,8 @@ Layout.render
   <div class="container-fluid">
     <div class="text-center w-full lg:w-2/3 m-auto">
       <h1 class="font-bold mb-6 text-title dark:text-dark-title">About The Rocq Prover</h1>
-      <div class="flex items-center justify-center space-x-8 mt-11 lg:space-x-24">
-        <div>
+      <div class="flex items-center justify-center lg:flex-nowrap flex-wrap mt-11 lg:space-x-24">
+        <div class="w-1/2 lg:w-auto">
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
             href="#strength"
@@ -17,7 +17,7 @@ Layout.render
             <div class="font-semibold text-lg text-content dark:text-dark-content">In a Nutshell</div>
           </a>
         </div>
-        <div>
+        <div class="w-1/2 lg:w-auto">
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
             href="#history"
@@ -26,7 +26,7 @@ Layout.render
             <div class="font-semibold text-lg text-content dark:text-dark-content">History</div>
           </a>
         </div>
-        <div>
+        <div class="w-1/2 lg:w-auto">
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
             href="#awards"
@@ -35,7 +35,7 @@ Layout.render
             <div class="font-semibold text-lg text-content dark:text-dark-content">Awards</div>
           </a>
         </div>
-        <div>
+        <div class="w-1/2 lg:w-auto">
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
             href="#Name"
