@@ -97,19 +97,21 @@ Layout.render
           </p>
           <h2 id="awards">Awards</h2>
           <p>
-            In 2013, when the Rocq Prover was known as Coq, the  ACM Software System Award were given 
+            In 2013, when the Rocq Prover was known as Coq,
+            the <a href="https://awards.acm.org/software-system">ACM Software System Award</a> was given
             to the initial Coq development team (Thierry Coquand, Gérard Huet, Christine Paulin-Mohring, 
             Bruno Barras, Jean-Christophe Filliâtre, Hugo Herbelin, Chet Murthy, Yves Bertot, Pierre Castéran) 
             for their work on the Coq proof assistant.  This is the highest distinction for research software.
           </p>
           <p>
-            The same year, the initial Coq development team also received the ACM SIGPLAN Programming Languages Software Award.
+            The same year, the initial Coq development team also received the
+            <a href="https://www.sigplan.org/Awards/Software/">ACM SIGPLAN Programming Languages Software Award</a>.
           </p> 
           <p>
-            In 2022, during the European Open Science Days, the Open Science Prize for Free and Open Research Software was announced. 
-            In the Scientific and Technical category, the awarded software was the Coq Proof Assistant, for which Théo Zimmermann 
-            represented the development team on this occasion. The video of the ceremony can be found <a href="https://www.canal-u.tv/chaines/ouvrirlascience/ceremonie-de-remise-des-prix-de-la-science-ouverte-et-conclusions-claire">here</a>, with the segment 
-            dedicated to Coq starting at 11:51 and lasting until 16:30.
+            In 2022, the Coq Proof Assistant was awarded the
+            <a href="https://www.ouvrirlascience.fr/category/openscience-prices/open-source-software-prices/">Open Science Free Software Award</a>
+            (<a href="https://www.ouvrirlascience.fr/category/prix-science-ouverte/prix-logiciel-libre/"><em>prix science ouverte du logiciel libre de la recherche</em></a>)
+            in the Scientific and Technical category by the French ministry of higher education and research.
           </p>
           <h2 id="Name">An Overview of the Name's Evolution</h2>
           <p>
