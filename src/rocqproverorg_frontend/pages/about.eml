@@ -29,19 +29,19 @@ Layout.render
         <div class="w-1/2 lg:w-auto">
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
-            href="#awards"
+            href="#Name"
           >
-            <%s! Icons.price_icon "h-10 w-10 mb-4 m-auto mt-6" %>
-            <div class="font-semibold text-lg text-content dark:text-dark-content">Awards</div>
+            <%s! Icons.quote_icon "h-10 w-10 mb-4 m-auto mt-6" %>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Name</div>
           </a>
         </div>
         <div class="w-1/2 lg:w-auto">
           <a
             class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
-            href="#Name"
+            href="#awards"
           >
-            <%s! Icons.quote_icon "h-10 w-10 mb-4 m-auto mt-6" %>
-            <div class="font-semibold text-lg text-content dark:text-dark-content">Name</div>
+            <%s! Icons.price_icon "h-10 w-10 mb-4 m-auto mt-6" %>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Awards</div>
           </a>
         </div>
       </div>
@@ -95,6 +95,21 @@ Layout.render
           <p>
             The Rocq Prover is written in OCaml. It is distributed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public Licence Version 2.1 (LGPL)</a>.
           </p>
+          <h2 id="Name">An Overview of the Name's Evolution</h2>
+          <p>
+          The Rocq Prover was formerly known as the Coq Proof Assistant.
+          The name "Coq" referenced the Calculus of Constructions (CoC),
+          the foundational system it is based on, as well as one of its creators, Thierry Coquand.
+          Additionally, it paid homage to the French national symbol, the rooster.
+          </p>
+          <p>
+          The new name, "the Rocq Prover", honors Inria Rocquencourt, the original site where the prover was developed.
+          It also alludes to the mythological bird Roc (or Rokh), symbolizing strength and not so disconnected to a rooster.
+          Furthermore, the name conveys a sense of solidity, and its unintended connection to music adds a pleasant resonance.
+          The new name was chosen by the <a href="/governance/governance#Core">Core team</a> after a poll of the users, see
+          <a href="https://coq.discourse.group/t/coq-community-survey-2022-results-part-iv-and-itp-paper-announcement/2001#renaming-coq-8">this page</a>
+          for a detailed breakdown of the results.
+          </p>
           <h2 id="awards">Awards</h2>
           <p>
             In 2013, when the Rocq Prover was known as Coq,
@@ -113,40 +128,6 @@ Layout.render
             (<a href="https://www.ouvrirlascience.fr/category/prix-science-ouverte/prix-logiciel-libre/"><em>prix science ouverte du logiciel libre de la recherche</em></a>)
             in the Scientific and Technical category by the French ministry of higher education and research.
           </p>
-          <h2 id="Name">An Overview of the Name's Evolution</h2>
-          <p>
-          The Rocq Prover was formerly known as the Coq Proof Assistant. 
-          The name "Coq" referenced the Calculus of Constructions (CoC), 
-          the foundational system it is based on, as well as one of its creators, Thierry Coquand. 
-          Additionally, it paid homage to the French national symbol, the rooster.
-          </p>
-          <p>
-          The new name, "the Rocq Prover", honors Inria Rocquencourt, the original site where the prover was developed. 
-          It also alludes to the mythological bird Roc (or Rokh), symbolizing strength and not so disconnected to a rooster. 
-          Furthermore, the name conveys a sense of solidity, and its unintended connection to music adds a pleasant resonance.
-          The new name was chosen by the <a href="/governance/governance#Core">Core team</a> after a poll of the users, see 
-          <a href="https://coq.discourse.group/t/coq-community-survey-2022-results-part-iv-and-itp-paper-announcement/2001#renaming-coq-8">this page</a>
-          for a detailed breakdown of the results.
-          </p>
-<!--
-          <h2 id="features">Additional Features</h2>
-          <ul>
-            <li>
-              <strong>Certified Type Theory and Extraction:</strong>
-              The Rocq Prover is based on the formal verification of its type theory implementation and extraction system, 
-              minimizing the trusted code base and increasing user confidence in results.
-            </li>
-            <li>
-              <strong>Universe and Sort Polymorphism:</strong>
-            </li>
-            <li>
-              <strong>Implicit Cumulativity:</strong>
-            </li>
-            <li>
-              <strong>Definitional Proof Irrelevance:</strong>
-            </li>
-          </ul>
-          -->
         </div>
       </div>
     </div>
