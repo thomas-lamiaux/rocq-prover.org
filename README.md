@@ -71,7 +71,7 @@ make start
 The rocq-prover.org maintainer's team is composed of the following community members:
 
 - Matthieu Sozeau [mattam82](https:/github.com/mattam82), Owner (Inria)
-- Nicolas Tabareau [ntabareau](https:/github.com/tabareau), Owner (Inria)
+- Nicolas Tabareau [tabareau](https:/github.com/tabareau), Owner (Inria)
 - Théo Zimmermann [Zimmi48](https:/github.com/Zimmi48), Owner (Télécom Paris)
 
 The original graphic design and Rocq Prover identity are due to Bastien Sozeau [BastienSozeau](https://github.com/bastiensozeau), 
