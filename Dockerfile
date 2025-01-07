@@ -12,14 +12,15 @@ WORKDIR /home/opam
 ADD rocqproverorg.opam rocqproverorg.opam
 RUN opam install . --deps-only
 
+# Fetch the opam repository
+RUN git clone https://github.com/coq/opam.git rocq-opam-repository
+RUN cd rocq-opam-repository && git checkout master && git pull origin master
+
 # Build project
 COPY --chown=opam:opam . .
 RUN opam exec -- dune build @install --profile=release
 
 # Launch project in order to generate the package state cache
-RUN git clone https://github.com/coq/opam.git rocq-opam-repository
-RUN cd rocq-opam-repository && git checkout master && git pull origin master
-
 ENV ROCQPROVERORG_REPO_PATH=rocq-opam-repository
 ENV ROCQPROVERORG_PKG_STATE_PATH=package.state
 RUN touch package.state && ./init-cache package.state
