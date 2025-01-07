@@ -161,6 +161,12 @@ Layout.render
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://certik.com">
+        <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/ctk-black.svg" %>" alt="CertiK"/>
+        <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/ctk-white.svg" %>" alt="CertiK"/>
+        </a>
+      </div>
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://formalv.com">
           <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
           <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
