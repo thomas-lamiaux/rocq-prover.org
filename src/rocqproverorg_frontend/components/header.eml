@@ -148,8 +148,8 @@ in
           <a aria-label="The Rocq Prover on GitHub" href="https://github.com/coq/coq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.github "w-6 h-6" %>
           </a>
-          <a aria-label="The Rocq Prover Twitter Account" href="https://twitter.com/coq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
-            <%s! Icons.twitter "w-6 h-6" %>
+          <a aria-label="The Rocq Prover on Mastodon" rel="me" href="https://mastodon.acm.org/@RocqProver" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+            <%s! Icons.mastodon "w-6 h-6" %>
           </a>
         </div>
       </li>

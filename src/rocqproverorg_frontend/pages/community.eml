@@ -70,17 +70,13 @@ Community_layout.single_column_layout
         <!-- 
         <%s! social_list_item ~text:("Community videos such as previous Coq Conference presentations - ") ~href:("https://watch.ocaml.org/videos/recently-added") ~left_icon:(Icons.peertube "w-10 h-10") ~title:("Watch") "" %>
         <%s! social_list_item ~text:("Live Streams about Coq - ") ~href:("https://twitch.tv/search?term=ocaml") ~left_icon:(Icons.twitch "w-10 h-10") ~title:("Twitch") "" %> -->
-        <%s! social_list_item ~text:("Coq on YouTube - ") ~href:("https://www.youtube.com/results?search_query=Coq") ~left_icon:(Icons.youtube "w-10 h-10") ~title:("YouTube") "" %>
+        <%s! social_list_item ~text:("Rocq on YouTube - ") ~href:("https://www.youtube.com/results?search_query=Coq") ~left_icon:(Icons.youtube "w-10 h-10") ~title:("YouTube") "" %>
       </ul>
       <ul>
         <p class="text-title dark:text-dark-title font-mono text-xl mb-2">Microblogging</p>
-        <%s! social_list_item ~text:("Latest announcements and events from the community - ") ~href:("https://twitter.com/CoqLang") ~left_icon:(Icons.twitter "w-10 h-10") ~title:("Twitter") "" %>
+        <!-- <%s! social_list_item ~text:("Latest announcements and events from the community - ") ~href:("https://twitter.com/CoqLang") ~left_icon:(Icons.twitter "w-10 h-10") ~title:("Twitter") "" %> -->
         <!-- <%s! social_list_item ~text:("Rocq on Bluesky - ") ~href:("https://bsky.app/profile/ocaml.org") ~left_icon:(Icons.bluesky "w-10 h-10") ~title:("Bluesky") "" %> -->
-        <%s! social_list_item ~extra_html:({|
-          <p class='text-content dark:text-dark-content'> Both the <a class='text-primary dark:text-dark-primary hover:underline' href='https://types.pl/'>types.pl</a>
-          and <a class='text-primary dark:text-dark-primary hover:underline' href='https://discuss.systems/'>discuss.systems</a> Mastodon servers are home to Rocq-related discussions.
-          </p>|}
-          ) ~left_icon:(Icons.mastodon "h-8 mr-0") ~title:("Mastodon") "" %>   
+        <%s! social_list_item ~text:("The Rocq Prover on Mastodon - ") ~href:"https://mastodon.acm.org/@RocqProver" ~left_icon:(Icons.mastodon "h-8 mr-0") ~title:("Mastodon") "" %>   
       </ul>
   </div>
 </div>
