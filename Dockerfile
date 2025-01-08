@@ -12,13 +12,18 @@ WORKDIR /home/opam
 ADD rocqproverorg.opam rocqproverorg.opam
 RUN opam install . --deps-only
 
-# Fetch the opam repository
-RUN git clone https://github.com/coq/opam.git rocq-opam-repository
-RUN cd rocq-opam-repository && git checkout master && git pull origin master
+ARG GIT_COMMIT
+RUN echo "Based on commit: $GIT_COMMIT"
+ENV GIT_COMMIT=${GIT_COMMIT}
+LABEL rocqproverorg=${GIT_COMMIT}
 
 # Build project
 COPY --chown=opam:opam . .
 RUN opam exec -- dune build @install --profile=release
+
+# Fetch the opam repository
+RUN git clone https://github.com/coq/opam.git rocq-opam-repository
+RUN cd rocq-opam-repository && git checkout master && git pull origin master
 
 # Launch project in order to generate the package state cache
 ENV ROCQPROVERORG_REPO_PATH=rocq-opam-repository
@@ -26,6 +31,11 @@ ENV ROCQPROVERORG_PKG_STATE_PATH=package.state
 RUN touch package.state && ./init-cache package.state
 
 FROM alpine:3.20 AS run
+
+ARG GIT_COMMIT
+RUN echo "Based on commit: $GIT_COMMIT"
+ENV GIT_COMMIT=${GIT_COMMIT}
+LABEL rocqproverorg=${GIT_COMMIT}
 
 RUN apk update && apk add --update libev gmp git
 

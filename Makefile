@@ -78,7 +78,7 @@ scrape: ## Generate the po files
 
 .PHONY: docker
 docker: ## Generate docker container
-	docker build -f Dockerfile . -t rocqproverorg:latest
+	docker build --build-arg GIT_COMMIT=`git rev-parse HEAD` -f Dockerfile . -t rocqproverorg:latest
 
 .PHONY: linkcheck
 linkcheck:
