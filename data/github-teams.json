@@ -1727,12 +1727,20 @@
               "members": {
                 "nodes": [
                   {
+                    "login": "mattam82",
+                    "name": "Matthieu Sozeau"
+                  },
+                  {
                     "login": "palmskog",
                     "name": "Karl Palmskog"
                   },
                   {
                     "login": "Zimmi48",
                     "name": "Théo Zimmermann"
+                  },
+                  {
+                    "login": "tabareau",
+                    "name": "nicolas tabareau"
                   },
                   {
                     "login": "Alizter",
