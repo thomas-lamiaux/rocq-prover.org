@@ -102,7 +102,7 @@ let render_subteam (team : Data.Governance.team) =
 
 let render (t : Data.Governance.team) =
 Layout.render
-~title:(Printf.sprintf "%s · OCaml Governance" t.name)
+~title:(Printf.sprintf "%s · Rocq Governance" t.name)
 ~description:t.description @@
 <div class="w-full">
   <div class="lg:col-span-8 lg:text-left intro-section-simple dark:dark-intro-section-simple w-full">
