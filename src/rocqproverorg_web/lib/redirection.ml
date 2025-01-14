@@ -22,16 +22,7 @@ let package_docs req =
 let t =
   Dream.scope "" []
     ([
-       make ~permanent:true [ ("feed.xml", "planet.xml") ];
        make ~permanent:true [ ("roadmap.html", "/roadmap") ];
-       make [ ("/blog", "/ocaml-planet") ];
-       make ~permanent:true [ ("/opportunities", "/jobs") ];
-       make ~permanent:true [ ("/privacy-policy", "/policies/privacy-policy") ];
-       make ~permanent:true
-         [ ("/code-of-conduct", "/policies/code-of-conduct") ];
-       make ~permanent:true [ ("/opportunities", "/jobs") ];
-       (* make ~permanent:false [ (Url.conferences, Url.community ^
-          "#conferences") ]; *)
        Dream.get "/p/:name" package;
        Dream.get "/u/:hash/p/:name" package;
        Dream.get "/p/:name/doc" package_docs;
