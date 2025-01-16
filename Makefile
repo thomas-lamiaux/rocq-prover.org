@@ -1,9 +1,16 @@
 .DEFAULT_GOAL := all
 DOC_PATH=`pwd`/rocq-doc/
+GIT_HEAD=`git rev-parse HEAD`
+GIT_COMMIT=${GIT_HEAD}`git diff --quiet HEAD || echo "-dirty"`
 
 .PHONY: all
 all:
 	opam exec -- dune build --root .
+
+.PHONY: show-config
+show-config:
+	@echo "DOC_PATH="${DOC_PATH}
+	@echo "GIT_COMMIT="${GIT_COMMIT}
 
 .PHONY: deps
 deps: create_switch ## Install development dependencies
@@ -65,7 +72,7 @@ fmt: ## Format the codebase with ocamlformat
 	
 .PHONY: watch
 watch: update-local-doc ## Watch for the filesystem and rebuild on every change
-	DOC_PATH=${DOC_PATH} opam exec -- dune build @run -w --force --no-buffer
+	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT} opam exec -- dune build @run -w --force --no-buffer
 
 .PHONY: utop
 utop: ## Run a REPL and link with the project's libraries

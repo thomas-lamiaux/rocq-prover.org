@@ -142,9 +142,12 @@ let primary_footer () =
       <%s! icon "h-6 w-6" %>
     </a>
   in
+  let link ~href ~name =
+    <a href="<%s href %>" class="text-base leading-6 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary"><%s name %></a>
+  in
   let footer_link ~href ~name =
     <li>
-      <a href="<%s href %>" class="text-base leading-6 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary"><%s name %></a>
+      <%s! link ~href ~name %>
     </li>
   in
   
@@ -152,8 +155,8 @@ let primary_footer () =
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
       <div class="flex w-full items-center justify-between mb-8">
-        <a href="<%s Url.index %>"><img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="OCaml">
-          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-white.svg" %>" alt="OCaml">
+        <a href="<%s Url.index %>"><img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq">
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-white.svg" %>" alt="Rocq">
         </a>
         <div class="hidden md:flex">
           <%s! LightDarkModeSwitch.render %>
@@ -169,6 +172,11 @@ let primary_footer () =
           </div>
           <div class="flex w-full md:hidden">
             <%s! LightDarkModeSwitch.render %>
+          </div>
+          <div class="flex mt-6 space-y-4">
+            <% let commit = try Sys.getenv "GIT_COMMIT" with Not_found -> failwith "Environment variable GIT_COMMIT is not set" in %>
+            <%s! link ~href:("https://github.com/coq/rocq-prover.org/commit/" ^ commit) ~name:"GitHub Source" %>
+            <% ; %>
           </div>
         </div>
         <div class="mt-8 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -227,8 +235,8 @@ let secondary_footer () =
   <footer x-data class="flex flex-col gap-3 md:gap-5 pt-5 mt-6 border-separator_20 dark:border-dark-separator_30 border-t">
     <div class="flex w-full items-center justify-between">
       <a href="<%s Url.index %>">
-        <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="OCaml">
-        <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-white.svg" %>" width="132" alt="OCaml logo" class="h-8 hidden dark:inline">
+        <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="Rocq">
+        <img src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-white.svg" %>" width="132" alt="Rocq logo" class="h-8 hidden dark:inline">
       </a>
       <div class="hidden md:flex">
         <%s! LightDarkModeSwitch.render %>
