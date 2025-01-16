@@ -29,7 +29,6 @@ let language_manual_version next_handler request =
   in
   let tweak_base u =
     match List.rev u with
-    | _ :: "notes" :: _ -> u
     | base :: _ when String.contains base '.' -> u
     | htap -> List.rev ("index.html" :: htap)
   in
