@@ -1,8 +1,12 @@
 .DEFAULT_GOAL := all
-DOC_PATH=`pwd`/rocq-doc/
-GIT_HEAD=`git rev-parse HEAD`
-GIT_COMMIT=${GIT_HEAD}`git diff --quiet HEAD || echo "-dirty"`
-GIT_BRANCH=`git branch --show-current`
+DOC_PATH=$(shell pwd)/rocq-doc/
+GIT_HEAD=$(shell git rev-parse HEAD)
+GIT_DIRTY=$(shell git diff --quiet HEAD || echo "-dirty")
+GIT_COMMIT=${GIT_HEAD}${GIT_DIRTY}
+GIT_BRANCH=$(shell git branch --show-current)
+
+export GIT_COMMIT
+export GIT_BRANCH
 
 .PHONY: all
 all:
@@ -12,6 +16,7 @@ all:
 show-config:
 	@echo "DOC_PATH="${DOC_PATH}
 	@echo "GIT_COMMIT="${GIT_COMMIT}
+	@echo "GIT_BRANCH="${GIT_BRANCH}
 
 .PHONY: deps
 deps: create_switch ## Install development dependencies
@@ -53,7 +58,7 @@ update-local-doc:
 
 .PHONY: start
 start: all update-local-doc ## Run the produced executable
-	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT} GIT_BRANCH=${GIT_BRANCH} opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
+	opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
 
 .PHONY: test
 test: ## Run the unit tests
@@ -73,7 +78,7 @@ fmt: ## Format the codebase with ocamlformat
 	
 .PHONY: watch
 watch: update-local-doc ## Watch for the filesystem and rebuild on every change
-	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT} GIT_BRANCH=${GIT_BRANCH} opam exec -- dune build @run -w --force --no-buffer
+	opam exec -- dune build @run -w --force --no-buffer
 
 .PHONY: utop
 utop: ## Run a REPL and link with the project's libraries
@@ -86,7 +91,7 @@ scrape: ## Generate the po files
 
 .PHONY: docker
 docker: ## Generate docker container
-	docker build --build-arg GIT_COMMIT=`git rev-parse HEAD` -f Dockerfile . -t rocqproverorg:latest
+	docker build --build-arg GIT_COMMIT=${GIT_COMMIT} --build-arg GIT_BRANCH=${GIT_BRANCH} -f Dockerfile . -t rocqproverorg:latest
 
 .PHONY: linkcheck
 linkcheck:
