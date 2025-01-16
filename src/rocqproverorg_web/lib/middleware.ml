@@ -15,18 +15,6 @@ let language_manual_version next_handler request =
   let open Data in
   let init_path = request |> Dream.target |> String.split_on_char '/' in
   let patch (release : Release.t) = Rocqproverorg.Url.patch release.version in
-  let release str =
-    str |> Release.get_by_version
-    |> Option.value ~default:Release.latest
-    |> patch
-  in
-  let release_path = function
-    | [] -> (patch Release.latest, [ "index.html" ])
-    | x :: u -> (
-        match Release.get_by_version x with
-        | None -> (patch Release.latest, x :: u)
-        | Some v -> (patch v, u))
-  in
   let tweak_base u =
     match List.rev u with
     | base :: _ when String.contains base '.' -> u
@@ -43,19 +31,6 @@ let language_manual_version next_handler request =
           path) ->
         let version = patch Release.latest in
         "" :: "doc" :: ("V" ^ version) :: tweak_base path
-    | [ ""; "releases"; version; "index.html" ] -> [ ""; "releases"; version ]
-    | [ ""; "releases"; something ]
-      when String.ends_with ~suffix:".html" something ->
-        let prefix = String.(sub something 0 (length something - 5)) in
-        "" :: "releases" :: (if prefix = "index" then [] else [ prefix ])
-    | "" :: "releases" :: version :: ("htmlman" | "manual") :: tl ->
-        "" :: "manual" :: release version
-        :: (if tl = [] then [ "index.html" ] else tl)
-    | "" :: "releases" :: version :: (("notes" | "api") as folder) :: tl ->
-        "" :: "manual" :: release version :: folder
-        :: (if tl = [] && folder = "api" then [ "index.html" ] else tl)
-    | [ ""; "releases"; version; man ] when String.contains_s man "refman" ->
-        [ ""; "manual"; release version; man ]
     | u -> u
   in
   if init_path = path then next_handler request
