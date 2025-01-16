@@ -52,7 +52,7 @@ update-local-doc:
 
 .PHONY: start
 start: all update-local-doc ## Run the produced executable
-	opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
+	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT}	opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
 
 .PHONY: test
 test: ## Run the unit tests
