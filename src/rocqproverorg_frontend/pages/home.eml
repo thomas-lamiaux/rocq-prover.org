@@ -161,6 +161,12 @@ Layout.render
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://certik.com">
+        <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/ctk-black.svg" %>" alt="CertiK"/>
+        <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/ctk-white.svg" %>" alt="CertiK"/>
+        </a>
+      </div>
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://formalv.com">
           <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
           <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/formalv_logo.svg" %>" alt="Formal Vindication"/>
@@ -266,7 +272,7 @@ Layout.render
           </div>
           <!--<div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center" style="max-width: calc(50vw - 5rem);">  Other fix max width calculation-->
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
-            <div class="swiper mySwiper">
+            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div>
@@ -305,7 +311,6 @@ Layout.render
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -361,23 +366,9 @@ Layout.render
               </p>
             </div>
           </div>
-
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-                    <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf.png" %>" alt="perf">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-                    <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf2.png" %>" alt="profiler">
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+            <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf.png" %>" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -568,25 +559,23 @@ Layout.render
 </div>
 <script>
   var swiper = new Swiper(".mySwiper", {
+    loop: true,
     autoHeight: true,
-    autoplay : {
-      delay: 99999999,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 'auto',
+    spaceBetween: 10
+  });
+  var swiper_simple = new Swiper(".mySwiper_simple", {
+    loop: false,
+    autoHeight: true,
+    autoplay: {
+      delay: 5000,
       disableOnInteraction: true,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
     slidesPerView: 1,
-    spaceBetween: 0,
-    breakpoints: {
-      768: {
-        autoHeight: false,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: true,
-        },
-      }
-    }
+    spaceBetween: 10,
   });
 </script>
