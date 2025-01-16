@@ -1,33 +1,37 @@
 type section =
   | Overview
-  | GetStarted
-  | Language
   | Platform
   | Guides
   | Exercises
   | Books
+  | Papers
 
 let tabs
 ~current =
   let url_of_section = function
     | Overview -> Url.learn
-    | GetStarted -> Url.getting_started
-    | Language -> Url.learn_docs
-    | Platform -> Url.tutorial "platform-docs"
+    | Platform -> Url.learn_platform
     | Guides -> Url.learn_guides
     | Exercises -> Url.exercises
     | Books -> Url.books
+    | Papers -> Url.papers
   in
   let title_of_section = function
     | Overview -> "Overview"
-    | GetStarted -> "Get Started"
-    | Language -> "Language"
-    | Platform -> "Documentation"
-    | Guides -> "Guides"
+    | Platform -> "Rocq Prover and Platform features"
+    | Guides -> "Supporting tools"
     | Exercises -> "Exercises"
     | Books -> "Books"
+    | Papers -> "Papers"
   in
-  Layout.subnav_tabs ~title:"Learn" ~current ~sections:[Overview; GetStarted; Platform ; Guides; Exercises; Books] ~url_of_section ~title_of_section
+  Layout.subnav_tabs ~title:"Learn" ~current ~url_of_section ~title_of_section ~sections:[
+    Overview;
+    Platform;
+    Guides;
+    Exercises;
+    Books;
+    Papers
+  ]
 
 let render_sidebar
   ~current_tutorial

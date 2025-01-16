@@ -657,11 +657,9 @@ end
 
 module Tutorial = struct
   module Section = struct
-    type t = GetStarted | Language | Platform | Guides [@@deriving show]
+    type t = Platform | Guides [@@deriving show]
 
     let of_string = function
-      | "getting-started" -> Ok GetStarted
-      | "language" -> Ok Language
       | "platform" -> Ok Platform
       | "guides" -> Ok Guides
       | s -> Error (`Msg ("Unknown section: " ^ s))
