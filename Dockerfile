@@ -12,10 +12,16 @@ WORKDIR /home/opam
 ADD rocqproverorg.opam rocqproverorg.opam
 RUN opam install . --deps-only
 
+# Git commit and branch information
 ARG GIT_COMMIT
 RUN echo "Based on commit: $GIT_COMMIT"
 ENV GIT_COMMIT=${GIT_COMMIT}
 LABEL rocqproverorg=${GIT_COMMIT}
+
+ARG GIT_BRANCH
+RUN echo "Based on branch: $GIT_BRANCH"
+ENV GIT_BRANCH=${GIT_BRANCH}
+LABEL rocqproverorg_branch=${GIT_BRANCH}
 
 # Build project
 COPY --chown=opam:opam . .
@@ -36,6 +42,11 @@ ARG GIT_COMMIT
 RUN echo "Based on commit: $GIT_COMMIT"
 ENV GIT_COMMIT=${GIT_COMMIT}
 LABEL rocqproverorg=${GIT_COMMIT}
+
+ARG GIT_BRANCH
+RUN echo "Based on branch: $GIT_BRANCH"
+ENV GIT_BRANCH=${GIT_BRANCH}
+LABEL rocqproverorg_branch=${GIT_BRANCH}
 
 RUN apk update && apk add --update libev gmp git
 

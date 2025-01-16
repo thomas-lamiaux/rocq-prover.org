@@ -2,6 +2,7 @@
 DOC_PATH=`pwd`/rocq-doc/
 GIT_HEAD=`git rev-parse HEAD`
 GIT_COMMIT=${GIT_HEAD}`git diff --quiet HEAD || echo "-dirty"`
+GIT_BRANCH=`git branch --show-current`
 
 .PHONY: all
 all:
@@ -52,7 +53,7 @@ update-local-doc:
 
 .PHONY: start
 start: all update-local-doc ## Run the produced executable
-	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT}	opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
+	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT} GIT_BRANCH=${GIT_BRANCH} opam exec -- dune exec src/rocqproverorg_web/bin/main.exe
 
 .PHONY: test
 test: ## Run the unit tests
@@ -72,7 +73,7 @@ fmt: ## Format the codebase with ocamlformat
 	
 .PHONY: watch
 watch: update-local-doc ## Watch for the filesystem and rebuild on every change
-	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT} opam exec -- dune build @run -w --force --no-buffer
+	DOC_PATH=${DOC_PATH} GIT_COMMIT=${GIT_COMMIT} GIT_BRANCH=${GIT_BRANCH} opam exec -- dune build @run -w --force --no-buffer
 
 .PHONY: utop
 utop: ## Run a REPL and link with the project's libraries

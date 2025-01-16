@@ -27,6 +27,10 @@ let url_of_nav_item = function
 
 let nav_items = [ Learn; Platform; Packages; Community; Consortium; News; Playground ]
 
+let git_branch = try Sys.getenv "GIT_BRANCH" with Not_found -> failwith "Environment variable GIT_BRANCH is not set"
+let git_commit = try Sys.getenv "GIT_COMMIT" with Not_found -> failwith "Environment variable GIT_COMMIT is not set"
+let git_short_commit = if String.length git_commit > 6 then String.sub git_commit 0 7 else git_commit
+
 let menu_link
 ~(active: bool)
 ~href
@@ -51,7 +55,7 @@ let search_dropdown () =
 in
 <header
   class="fixed top-0 z-50 w-full h-20 flex items-center "
-  x-data="{ open: false }">
+  x-data="{ open: false }">  
   <nav class="bg-background container-fluid dark:bg-dark-background_navigation flex gap-5 h-20 header items-center justify-between rounded-b-lg shadow-sm wide xl:gap-8">
     <ul class="order-0 space space-x-5 xl:space-x-8 items-center flex text-content font-medium dark:text-title dark:text-opacity-60 dark:font-semibold">
       <li style="width:170px">
@@ -102,7 +106,7 @@ in
   <nav class="z-50 h-full fixed right-0 top-0 max-w-full w-96 bg-background dark:bg-dark-background shadow-lg" x-show="open" x-cloak
     @click.away="open = false" x-transition:enter="transition duration-200 ease-out"
     x-transition:enter-start="translate-x-full" x-transition:leave="transition duration-100 ease-in"
-    x-transition:leave-end="translate-x-full">
+    x-transition:leave-end="translate-x-full">    
     <ul class="text-content p-6 font-semibold">
       <li class="flex justify-between items-center">
         <a href="<%s Url.index %>">
@@ -155,5 +159,24 @@ in
       </li>
     </ul>
   </nav>
+  <% if git_branch <> "main" then %>
+  <div id="alert-border-2" class="flex items-center p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800" role="alert">
+    <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <div class="ms-3 text-sm font-medium">
+      You are viewieng the <a class="font-semibold underline hover:no-underline" href="https://github.com/coq/rocq-prover.org/tree/<%s git_branch %>"><%s git_branch %> branch</a> of the website @
+      <a class="font-semibold underline hover:no-underline" href="https://github.com/coq/rocq-prover.org/commit/<%s git_commit %>"><%s git_short_commit %></a>,
+      not the <a class="font-semibold underline hover:no-underline" href="https://rocq-prover.org">live version</a>.
+    </div>
+    <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-2" aria-label="Close">
+      <span class="sr-only">Dismiss</span>
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+    </button>
+  </div>
 </header>
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+<script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
 <%s! Search.script %>
