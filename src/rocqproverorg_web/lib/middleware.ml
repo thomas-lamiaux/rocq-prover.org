@@ -40,8 +40,8 @@ let language_manual_version next_handler request =
     | "" :: "stdlib" :: path ->
         let version, path = release_path path in
         "" :: "doc" :: ("V" ^ version) :: "stdlib" :: tweak_base path
-    | [ ""; "doc"; version; ("refman" | "stdlib" | "api" | "doc") as path ] ->
-        "" :: "doc" :: version :: path :: [ "index.html" ]
+    | "" :: "doc" :: version :: path ->
+        "" :: "doc" :: version :: tweak_base path
     | "" :: "api" :: path ->
         let version, path = release_path path in
         "" :: "doc" :: ("V" ^ version) :: "api" :: tweak_base path
