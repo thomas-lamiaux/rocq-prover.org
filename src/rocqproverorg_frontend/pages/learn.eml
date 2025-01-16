@@ -67,14 +67,12 @@ Learn_layout.single_column_layout
                   {href = Url.install; title = "Installing the Rocq Prover"};
                   {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"}
               ]
-              ~see_more:{href = Url.getting_started; title = "Get Started"}
               %>
       <%s! Learn_components.tutorial_block ~icon:Learn_components.beginner_section_icon ~title:"Documentation" ~heading:"The Rocq Prover" 
               ~description:"An in-depth explanation of language features and data structures from the Standard Library" 
               ~tutorial_links:[
                   {href = Url.tutorial "platform-docs"; title = "Rocq Platform Docs"};
               ]
-              ~see_more:{href = Url.tutorial "platform-docs"; title = "Documentation"}
               %>
     </div>
 
@@ -133,7 +131,6 @@ Learn_layout.single_column_layout
                   {href = Url.tutorial "error-handling"; title = "Error Handling"};
                   {href = Url.tutorial "profiling"; title = "Profiling"}
               ]
-              ~see_more:{href = Url.learn_guides; title = "See More Guides"}
               %>
       <%s! Learn_components.tutorial_block ~icon:Learn_components.intermediate_section_icon ~title:"PLATFORM" ~heading:"The OCaml Platform" 
           ~description:"Learn to leverage the tooling around OCaml and create your own projects and libraries" 
@@ -143,7 +140,6 @@ Learn_layout.single_column_layout
               {href = Url.tutorial "install-a-specific-ocaml-compiler-version"; title = "Install a Specific Compiler Version"};
               {href = Url.tutorial "configuring-your-editor"; title = "Configuring Your Editor"}
           ]
-          ~see_more:{href = Url.learn_platform; title = "Platform Tools Documentation"}
           %>
     </div>
 
