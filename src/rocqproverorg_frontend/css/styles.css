@@ -83,8 +83,14 @@ body.dark {
   max-width: 100vw;
 }
 
-.swiper-bullet-active {
-  background-color: #C24F1E !important;
+.swiper-pagination-bullet-active {
+    background-color: #ff540a !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: #e9e9e94d !important;
+    border: 1px solid #ff540a6e;
+    opacity: 1 !important;
 }
 
 .swiper-separator_30 {
