@@ -34,17 +34,15 @@ let language_manual_version next_handler request =
   in
   let path =
     match init_path with
-    | "" :: ("manual" | "refman") :: path ->
-        let version, path = release_path path in
-        "" :: "doc" :: ("V" ^ version) :: "refman" :: tweak_base path
-    | "" :: "stdlib" :: path ->
-        let version, path = release_path path in
-        "" :: "doc" :: ("V" ^ version) :: "stdlib" :: tweak_base path
+    (* When using the /doc/ path, a version is always already provided. *)
     | "" :: "doc" :: version :: path ->
         "" :: "doc" :: version :: tweak_base path
-    | "" :: "api" :: path ->
-        let version, path = release_path path in
-        "" :: "doc" :: ("V" ^ version) :: "api" :: tweak_base path
+    (* We provide shorter paths that always redirect to the latest version. *)
+    | ""
+      :: (("api" | "corelib" | "refman" | "stdlib" | "refman-stdlib") :: _ as
+          path) ->
+        let version = patch Release.latest in
+        "" :: "doc" :: ("V" ^ version) :: tweak_base path
     | [ ""; "releases"; version; "index.html" ] -> [ ""; "releases"; version ]
     | [ ""; "releases"; something ]
       when String.ends_with ~suffix:".html" something ->
