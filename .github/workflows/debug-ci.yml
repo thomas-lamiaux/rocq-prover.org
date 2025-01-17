@@ -49,7 +49,7 @@ jobs:
         run: opam exec -- dune build @install
 
       - name: Run tests
-        run: opam exec -- dune test
+        run: opam exec -- make test
 
       - name: Format code
         run: opam exec -- dune build --auto-promote @fmt

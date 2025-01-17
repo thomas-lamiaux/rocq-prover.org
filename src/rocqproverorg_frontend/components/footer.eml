@@ -173,9 +173,13 @@ let primary_footer () =
           <div class="flex w-full md:hidden">
             <%s! LightDarkModeSwitch.render %>
           </div>
-          <div class="flex mt-6 space-y-4">
-            <% let commit = try Sys.getenv "GIT_COMMIT" with Not_found -> failwith "Environment variable GIT_COMMIT is not set" in %>
-            <%s! link ~href:("https://github.com/coq/rocq-prover.org/commit/" ^ commit) ~name:"GitHub Source" %>
+          <div class="flex mt-6 space-y-4 hidden">
+            <% let commit = try Sys.getenv "GIT_COMMIT" with Not_found -> failwith "Environment variable GIT_COMMIT is not set" in 
+               let branch = try Sys.getenv "GIT_BRANCH" with Not_found -> failwith "Environment variable GIT_BRANCH is not set" in %>
+            <div class="text-base leading-6 text-content dark:text-dark-title">
+              GitHub <a href="https://github.com/coq/rocq-prover.org/tree/<%s branch %>" class="text-base leading-6 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">branch</a>
+                and <a href="https://github.com/coq/rocq-prover.org/commit/<%s commit %>">commit</a>.
+            </div>
             <% ; %>
           </div>
         </div>
