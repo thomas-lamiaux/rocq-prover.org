@@ -1,9 +1,9 @@
 let render ?(search = "") ~(recommended_papers : Data.Paper.t list) (papers : Data.Paper.t list) =
-Layout.render
+Learn_layout.single_column_layout
 ~title:"Rocq Papers"
 ~description:"A selection of papers grouped by popular categories."
 ~canonical:Url.papers
-~active_top_nav_item:Header.Learn @@
+~current:Papers @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="w-full m-auto">
