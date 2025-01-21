@@ -25,7 +25,7 @@ let url_of_nav_item = function
   | News -> Url.changelog
   | Playground -> Url.playground
 
-let nav_items = [ Learn; Platform; Packages; Community; Consortium; News; Playground ]
+let nav_items = [ Learn; Platform; Packages; Community; Consortium; News ] (* ; Playground *)
 
 let git_branch = try Sys.getenv "GIT_BRANCH" with Not_found -> failwith "Environment variable GIT_BRANCH is not set"
 let git_commit = try Sys.getenv "GIT_COMMIT" with Not_found -> failwith "Environment variable GIT_COMMIT is not set"
