@@ -85,12 +85,14 @@ Layout.render
           <div style="flex: 1 1 50%" class="py-2 px-6 text-opacity-50 overflow-auto bg-code_window dark:bg-dark-code_window">
               <%s! Home_snippet.render %>
             </div>
+<!--
             <div class="flex-1 flex  dark:text-white dark:text-opacity-50">
               <a href="<%s Url.playground %>" class="border border-opacity-50 dark:border-gray-100 dark:text-white flex h-10 items-center mt-5 px-4 rounded-lg text-sm">
                 <%s! Icons.edit "h-5 w-5 mr-2" %>
                 Try the Playground
               </a>
             </div>
+-->
           </div>
         </div>
       </div>
