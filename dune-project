@@ -2,7 +2,7 @@
 
 (name rocqproverorg)
 
-(documentation "https://rocq-prover.github.io/rocq-prover.org/")
+(documentation "https://rocq-prover.org/")
 
 (source
  (github rocq-prover/rocq-prover.org))

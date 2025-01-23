@@ -50,7 +50,7 @@ Community_layout.single_column_layout
       </ul>
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Development</p>
-        <%s! social_list_item ~text:("Submit bug reports and feature requests for the Rocq Prover - ") ~href:("https://github.com/rocq") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
+        <%s! social_list_item ~text:("Submit bug reports and feature requests for the Rocq Prover - ") ~href:("https://github.com/rocq-prover/rocq/issues") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
         <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://stackoverflow.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stack Overflow") "" %>        
       </ul>
       <!-- 
