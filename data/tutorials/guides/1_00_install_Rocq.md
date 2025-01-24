@@ -129,7 +129,7 @@ Note that installing Rocq using opam will build it from sources,
 which will take several minutes to complete:
  
  ```shell
-$ opam pin add rocq 9.0+rc1
+$ opam pin add rocq-prover 9.0+rc1
 ```
 
 Pinning prevents opam from upgrading Rocq automatically, to avoid causing inadvertent breakage in your Rocq projects. 
@@ -150,6 +150,8 @@ It is built around a language server which natively speaks the
 [LSP protocol](https://learn.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol?view=vs-2022).
 
 To install it in your current opam switch, run this command:
+
+⚠️ Beware these commands do not work as of today, waiting on releases of these packages compatible with the 9.0+rc1 release ⚠️
 
  ```shell
 $ opam install vsrocq-language-server
