@@ -19,7 +19,7 @@ Please include images and browser-specific information if the bug is related to 
 We've provided a list of community-driven content below. When adding content to any of these sections, it's best to fork the repo, add your file, and open a pull request (PR).
 
 - [Images](#images)
-- [The OCaml Planet](#ocaml-planet)
+- [The OCaml Planet](#rocq-planet)
 - [Job Board](#content-job)
 - [Success Stories](#content-success-story)
 - [Academic and Industrial Users](#content-user)
@@ -40,9 +40,9 @@ For example, to add a university logo associated with an academic institution, y
 
 Videos or other media should not be added to the OCaml.org GitHub repository.
 
-### <a name="ocaml-planet"></a>Add Your RSS Feed or YouTube Channel to the OCaml Planet
+### <a name="rocq-planet"></a>Add Your RSS Feed or YouTube Channel to the OCaml Planet
 
-Anyone can contribute to the [OCaml Planet](https://ocaml.org/ocaml-planet), which is composed of three types of content:
+Anyone can contribute to the [Rocq Planet](https://rocq-prover.org/rocq-planet), which is composed of three types of content:
 
 - Community blog posts fetched from RSS feeds
 - Videos fetched from YouTube channels

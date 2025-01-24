@@ -122,14 +122,14 @@ Note that installing Rocq using opam will build it from sources,
 which will take several minutes to complete:
  
  ```shell
-$ opam pin add rocq 9.0.0
+$ opam pin add rocq-prover 9.0.0
 ```
 
 Pinning prevents opam from upgrading Rocq automatically, to avoid causing inadvertent breakage in your Rocq projects. 
 You can upgrade Rocq explicitly to `$NEW_VERSION` with essentially the same command:
 
  ```shell
-$ opam pin add rocq $NEW_VERSION
+$ opam pin add rocq-prover $NEW_VERSION
 ```
 
 To ensure that installation was successful, check that `rocq -v` prints the expected version of Rocq.
@@ -172,4 +172,4 @@ Rocq > Eval compute in 2*10.
 
 ## Join the Community
 
-Make sure you [join the Rocq community](/community). You'll find many community members on [Discuss](https://discuss.rocq.org/) or [Discord](https://discord.com/invite/cCYQbqN). These are great places to ask for help if you have any issues.
+Make sure you [join the Rocq community](/community). You'll find many community members on [Discuss](https://discourse.rocq-prover.org/) or [Discord](https://discord.com/invite/cCYQbqN). These are great places to ask for help if you have any issues.
