@@ -116,13 +116,20 @@ Opam initialisation may take several minutes. While waiting for its installation
 
 ## Install the Rocq Prover
 
+⚠️ These instructions are written for a release candidate version of the Rocq Prover ⚠️
 
-To install Rocq, simply run the following command. It will pin the Rocq package to version 9.0.0 and install it.
+To access release candidate versions one must inform `opam` to use package definitions from the Coq `core-dev` opam repository, using:
+
+```shell
+$ opam repo add coq-core-dev https://coq.inria.fr/opam/core-dev
+```
+
+To install the Rocq Prover, simply run the following commands. It will pin the Rocq package to version 9.0+rc1 and install it.
 Note that installing Rocq using opam will build it from sources, 
 which will take several minutes to complete:
  
  ```shell
-$ opam pin add rocq-prover 9.0.0
+$ opam pin add rocq-prover 9.0+rc1
 ```
 
 Pinning prevents opam from upgrading Rocq automatically, to avoid causing inadvertent breakage in your Rocq projects. 
@@ -144,6 +151,8 @@ It is built around a language server which natively speaks the
 
 To install it in your current opam switch, run this command:
 
+⚠️ Beware these commands do not work as of today, waiting on releases of these packages compatible with the 9.0+rc1 release ⚠️
+
  ```shell
 $ opam install vsrocq-language-server
 ```
@@ -156,7 +165,7 @@ Now you are ready to write some Rocq code and proofs!
 To check that everything is working properly, you can start the Rocq toplevel:
 ```shell
 $ rocq repl
-Welcome to Rocq 9.0.O
+Welcome to Rocq 9.0+rc1
 
 Rocq <
 ```
