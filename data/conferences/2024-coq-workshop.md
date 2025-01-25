@@ -38,8 +38,6 @@ program_committee:
     affiliation: Inria Lyon
 ---
 
-OCaml Workshop 2023 took place during ICFP 2023, in Seattle, Washington, United States.
-
-[Coq Workskop 2023](https://coq-workshop.gitlab.io/2024/) took place during ITP 2024, in Tbilisi, Georgia.
+[Coq Workskop 2024](https://coq-workshop.gitlab.io/2024/) took place during ITP 2024, in Tbilisi, Georgia.
 
 The Coq Workshop 2024 is the 15th instalment of the Coq Workshop series. The workshop brings together developers, contributors, and users of the Coq proof assistant. The Coq Workshop focuses on strengthening the Coq community and providing a forum for discussing practical issues, including the future of the Coq software and its associated ecosystem of libraries and tools. Thus, rather than serving as a venue for traditional research papers, the workshop is organised around informal presentations and discussions.
