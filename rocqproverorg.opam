@@ -19,7 +19,7 @@ authors: [
 ]
 license: "ISC"
 homepage: "https://github.com/rocq-prover/rocq-prover.org"
-doc: "https://rocq-prover.github.io/rocq-prover.org/"
+doc: "https://rocq-prover.org/"
 bug-reports: "https://github.com/rocq-prover/rocq-prover.org/issues"
 depends: [
   "ocaml" {>= "4.14.0"}
