@@ -124,7 +124,7 @@ To access release candidate versions one must inform `opam` to use package defin
 $ opam repo add coq-core-dev https://coq.inria.fr/opam/core-dev
 ```
 
-To install Rocq, simply run the following commands. It will pin the Rocq package to version 9.0+rc1 and install it.
+To install the Rocq Prover, simply run the following commands. It will pin the Rocq package to version 9.0+rc1 and install it.
 Note that installing Rocq using opam will build it from sources, 
 which will take several minutes to complete:
  
