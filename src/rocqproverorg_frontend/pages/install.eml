@@ -135,24 +135,8 @@ Layout.render
           </li>
           <li>
             <p>
-            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover.
-            It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=ejgallego.coq-lsp">Visual Studio Code Marketplace</a>
-            and on <a href="https://open-vsx.org/extension/ejgallego/coq-lsp">Open VSX</a>.
-            To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
-            </p>
-
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"install-coq-lsp" "opam install coq-lsp" %>
-
-            <p>
-            Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
-            </p>
-
-            <p>
-            The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.coq-lsp">Nix package</a>.
-            </p>
-
-            <p>
-            For now, <a href="https://repology.org/project/coq-lsp/versions">Rocq LSP</a> is not available in all Linux distributions that have the Rocq Prover. If you have used your Linux distribution's package manager to install the Rocq Prover and it does not include the language server, you can fall back to using VsCoq Legacy (see below).
+            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+hybrid Rocq/markdown document support.
             </p>
           </li>
           <li>
@@ -273,24 +257,8 @@ Layout.render
           </li>
           <li>
             <p>
-            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover.
-            It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=ejgallego.coq-lsp">Visual Studio Code Marketplace</a>
-            and on <a href="https://open-vsx.org/extension/ejgallego/coq-lsp">Open VSX</a>.
-            To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
-            </p>
-
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"install-coq-lsp" "opam install coq-lsp" %>
-
-            <p>
-            Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
-            </p>
-
-            <p>
-            The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.coq-lsp">Nix package</a>.
-            </p>
-
-            <p>
-            If you have used Homebrew to install the Rocq Prover, there is no language server available yet. You can fall back to using VsCoq Legacy (see below).
+            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+hybrid Rocq/markdown document support.
             </p>
           </li>
           <li>
@@ -379,10 +347,10 @@ Layout.render
             To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
           </li>
           <li>
-            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover.
-            It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=ejgallego.coq-lsp">Visual Studio Code Marketplace</a>
-            and on <a href="https://open-vsx.org/extension/ejgallego/coq-lsp">Open VSX</a>.
-            To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
+            <p>
+            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+hybrid Rocq/markdown document support.
+            </p>
           </li>
           <li>
             <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
