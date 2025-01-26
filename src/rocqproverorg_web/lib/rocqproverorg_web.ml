@@ -6,7 +6,7 @@ module Graphql = Graphql
 (* Set up basic logging for logs that would happen before Dream is set up. *)
 let () =
   Logs.set_reporter (Logs.format_reporter ());
-  Logs.set_level (Some Info)
+  Logs.set_level ~all:true (Some Debug)
 
 let run () =
   Mirage_crypto_rng_lwt.initialize (module Mirage_crypto_rng.Fortuna);

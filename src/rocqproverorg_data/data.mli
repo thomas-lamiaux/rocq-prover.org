@@ -133,6 +133,7 @@ module Release : sig
   val all : t list
   val get_by_version : string -> t option
   val latest : t
+  val latest_prerelease : t option
   val latest_platform : t
   val lts : t
 end

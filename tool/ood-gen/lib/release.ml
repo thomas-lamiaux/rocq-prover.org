@@ -5,6 +5,7 @@ type metadata = {
   version : string;
   date : string;
   is_latest : bool option;
+  is_prerelease : bool option;
   is_lts : bool option;
   intro : string;
   highlights : string;
@@ -12,7 +13,7 @@ type metadata = {
 [@@deriving
   of_yaml,
     stable_record ~version:t ~remove:[ intro; highlights ]
-      ~modify:[ is_latest; is_lts ]
+      ~modify:[ is_latest; is_prerelease; is_lts ]
       ~add:
         [
           intro_md;
@@ -32,6 +33,7 @@ let of_metadata m =
       (m.highlights |> Markdown.Content.of_string
       |> Markdown.Content.render ~syntax_highlighting:true)
     ~modify_is_latest:(Option.value ~default:false)
+    ~modify_is_prerelease:(Option.value ~default:false)
     ~modify_is_lts:(Option.value ~default:false)
 
 let sort_by_decreasing_version (x : t) (y : t) =
@@ -54,17 +56,19 @@ let all () =
 
 let is_coq_or_rocq (r : t) = r.kind == `Coq || r.kind == `Rocq
 let is_coq_or_rocq_platform (r : t) = r.kind == `CoqPlatform || r.kind == `RocqPlatform
+let is_rocq (r : t) = r.kind == `Rocq
 
 let template () =
   let all = all () in
   let latest =
-    try List.find (fun (r : t) -> is_coq_or_rocq r && r.is_latest) all
+    try List.find (fun (r : t) -> is_coq_or_rocq r && r.is_latest && not r.is_prerelease) all
     with Not_found ->
       raise
         (Invalid_argument
            "none of the Coq/Rocq releases in data/releases is marked with is_latest: \
             true")
   in
+  let latest_prerelease = List.find_opt (fun (r : t) -> is_rocq r && r.is_prerelease && r.is_latest) all in
   let latest_platform =
     try List.find (fun (r : t) -> is_coq_or_rocq_platform r && r.is_latest) all
     with Not_found ->
@@ -85,8 +89,9 @@ let template () =
 include Data_intf.Release
 let all = %a
 let latest = %a
+let latest_prerelease = %a
 let latest_platform = %a
 let lts = %a
 |}
     (Fmt.brackets (Fmt.list pp ~sep:Fmt.semi))
-    all pp latest pp latest_platform pp lts
+    all pp latest (Fmt.option ~none:(Fmt.const Fmt.string "None") (Fmt.append (Fmt.const Fmt.string "Some ") (Fmt.parens pp))) latest_prerelease pp latest_platform pp lts

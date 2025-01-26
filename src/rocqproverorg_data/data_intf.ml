@@ -527,6 +527,7 @@ module Release = struct
     version : string;
     date : string;
     is_latest : bool;
+    is_prerelease : bool;
     is_lts : bool;
     intro_md : string;
     intro_html : string;

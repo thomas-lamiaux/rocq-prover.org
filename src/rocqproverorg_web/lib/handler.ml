@@ -10,9 +10,10 @@ let ( let</>? ) opt = http_or_404 opt
 let index _req =
   Dream.html
     (Rocqproverorg_frontend.home ~latest_release:Data.Release.latest
+       ~latest_prerelease:Data.Release.latest_prerelease
        ~latest_platform_release:Data.Release.latest_platform
        ~lts_release:Data.Release.lts
-       ~releases:(List.take 2 Data.Release.all)
+       ~releases:(List.take 3 Data.Release.all)
        ~changelogs:(List.take 3 Data.Changelog.all))
 
 let install _req =
@@ -508,6 +509,8 @@ let releases req =
 
 let release req =
   let version = Dream.param req "id" in
+  Logs.info (fun f -> f "version string: %s" version);
+  Logs.info (fun f -> f "decoded version string: %s" (Dream.from_percent_encoded version));
   let</>? version = Data.Release.get_by_version version in
   Dream.html (Rocqproverorg_frontend.release version)
 

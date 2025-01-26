@@ -3,7 +3,7 @@ let render (release : Data.Release.t) =
 Layout.render
 ~title:(Printf.sprintf "%s %s Release Notes" name release.version)
 ~description:(Printf.sprintf "%s %s was released on %s. Learn more about this in the release notes." name release.version release.date)
-~canonical:(Url.release release.version) @@
+~canonical:(Url.release (Dream.to_percent_encoded release.version)) @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple">
     <div class="container-fluid">
         <div class="flex md:flex-row lg:px-6 items-center md:space-x-36 flex-col-reverse">

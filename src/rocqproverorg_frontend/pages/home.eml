@@ -13,6 +13,7 @@ let package_card ~href ~img_path ~name description =
 
 let render
   ~(latest_release: Data.Release.t)
+  ~(latest_prerelease: Data.Release.t option)
   ~(latest_platform_release : Data.Release.t)
   ~(lts_release: Data.Release.t)
   ~(releases : Data.Release.t list)
@@ -48,6 +49,9 @@ Layout.render
         <div class="mt-8">
           <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_release.version %>">Latest Rocq Prover release: <%s latest_release.version %></a>
         </div>
+        <% begin match latest_prerelease with | Some latest_prerelease -> %><div class="mt-2">
+          <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release (Dream.to_percent_encoded latest_prerelease.version) %>">Latest Rocq Prover release candidate: <%s latest_prerelease.version %></a>
+        </div><% | None -> () end; %>
         <div class="mt-2">
           <a class="text-1xl text-primary dark:text-dark-primary font-semibold" href="<%s Url.release latest_platform_release.version %>">Latest Rocq Platform release: <%s latest_platform_release.version %></a>
         </div>
