@@ -37,7 +37,8 @@ let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list)
             </div>
         </div>
     </div>
-    <details>
+    <div>
+    <details id="search-details">
     <summary style="font-size: 1.6em; font-weight: normal; float: left; margin-left: 5em; margin-bottom:1em">
             More Papers
     </summary>
@@ -128,6 +129,16 @@ let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list)
         </div>
     </div>
     </details>
+
+    <script>
+        // Check if there's a query string in the URL
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('q')) {
+        document.getElementById('search-details').setAttribute('open', 'true');
+        }
+    </script>
+
+    </div>
     <div style="clear: both;"></div>
 
 
