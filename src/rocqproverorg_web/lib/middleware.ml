@@ -23,13 +23,22 @@ let language_manual_version next_handler request =
   let path =
     match init_path with
     (* When using the /doc/ path, a version is always already provided. *)
-    | "" :: "doc" :: version :: path ->
+    | "" :: "doc" :: version :: (_ :: _ as path) ->
         "" :: "doc" :: version :: tweak_base path
     (* We provide shorter paths that always redirect to the latest version. *)
     | ""
-      :: (("api" | "corelib" | "refman" | "stdlib" | "refman-stdlib") :: _ as
+      :: (("api" | "corelib" | "refman" | "stdlib" | "refman-stdlib") as head :: tail as
           path) ->
         let version = patch Release.latest in
+        let path = 
+          match Release.latest.kind with
+          | `Rocq -> path
+          | `Coq -> (match head with 
+              | "refman-stdlib" -> "refman" :: tail
+              | "corelib" -> "stdlib" :: tail
+              | _ -> path)
+          | _ -> assert false
+        in
         "" :: "doc" :: version :: tweak_base path
     | u -> u
   in

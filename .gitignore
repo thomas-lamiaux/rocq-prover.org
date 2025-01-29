@@ -16,4 +16,4 @@ _opam/
 .venv/
 
 # Copied documentation
-rocq-doc/
+rocq-doc
