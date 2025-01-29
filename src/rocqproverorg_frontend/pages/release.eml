@@ -23,10 +23,10 @@ Layout.render
                 </div>
                 <div class="flex flex-row gap-4 md:gap-6 md:w-80">
                     <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Reference Manual") ~href:(Url.manual_with_version release.version) "" %>
-                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Core Library API") ~href:(Url.corelib_with_version release.version) "" %>
+                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Corelib API") ~href:(Url.corelib_with_version release.version) "" %>
                     <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("OCaml API") ~href:(Url.api_with_version release.version) "" %>
-                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Standard Library Manual") ~href:(Url.stdlib_manual_with_version release.version) "" %>
-                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Standard Library API") ~href:(Url.stdlib_with_version release.version) "" %>
+                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Stdlib Manual") ~href:(Url.stdlib_manual_with_version release.version) "" %>
+                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Stdlib API") ~href:(Url.stdlib_with_version release.version) "" %>
                   </div>
             </div>
         </div>
