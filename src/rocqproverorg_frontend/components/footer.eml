@@ -11,11 +11,9 @@ let about_rocq = [
 let resources = [
   (Url.install, "Install Rocq");
   (Url.getting_started, "Get Started");
-  (Url.learn_platform, "Documentation");
-  (Url.manual, "Reference Manual");
-  (Url.stdlib, "Standard Library");
+  (Url.learn, "Documentation");
   (Url.books, "Books");
-  (Url.exercises, "Exercises");
+(*  (Url.exercises, "Exercises"); *)
   (Url.papers, "Papers");
   (Url.playground, "Rocq Playground");
   (Url.logos, "Logo");
