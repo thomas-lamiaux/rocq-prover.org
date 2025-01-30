@@ -17,7 +17,6 @@ let resources = [
   (Url.books, "Books");
   (Url.exercises, "Exercises");
   (Url.papers, "Papers");
-  (Url.playground, "Rocq Playground");
   (Url.logos, "Logo");
   ]
 
