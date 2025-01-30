@@ -75,12 +75,26 @@ Platform_layout.single_column_layout
                                 <a href="<%s (base_of_kind release) ^ Url.Package.overview (Data.Release.string_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Opam Package
                                 </a>
-                                <a href="<%s Url.manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">
-                                    Reference Manual
-                                </a>
-                                <a href="<%s Url.stdlib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium block">
-                                    Standard Library
-                                </a>
+                                <div class="block">
+                                    <% if release.kind = `Rocq then ( %>
+                                    <a href="<%s Url.corelib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
+                                        Corelib |
+                                    </a>
+                                    <a href="<%s Url.manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
+                                    Manual
+                                    </a>
+                                    <% ); %>
+                                </div>
+                                <div class="block">
+                                    <a href="<%s Url.stdlib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
+                                        Stdlib
+                                    </a>
+                                    <% if release.kind = `Rocq then ( %>
+                                    <a href="<%s Url.stdlib_manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
+                                        | Manual
+                                    </a>
+                                    <% ); %>
+                                </div>
                             </div>
                         </div>
                     </div>
