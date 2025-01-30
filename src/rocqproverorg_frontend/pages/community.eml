@@ -7,7 +7,7 @@ let social_list_item ?(extra_html="") ?(text="") ?(href="") ~left_icon ~title _c
             <p class="text-lg text-title dark:text-dark-title font-bold"><%s title %></p>
           </div>
           <p class=""><%s! extra_html %></p>
-          <p class="text-content dark:text-dark-content"> <%s text %><a href="<%s href %>" class="text-primary dark:text-dark-primary hover:underline"><%s href %></a></p>
+          <p class="break-all text-content dark:text-dark-content"> <%s text %><a href="<%s href %>" class="text-primary dark:text-dark-primary hover:underline"><%s href %></a></p>
         </div>
   </li>
 
