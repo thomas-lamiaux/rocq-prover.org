@@ -30,4 +30,6 @@ category: "Documentation"
 - Template Polymorphism vs. Universe Polymorphism: [interactive
   version](https://coq.inria.fr/platform-docs/Explanation_Template_Polymorphism.html)
   and [source code](https://coq.inria.fr/platform-docs/Explanation_Template_Polymorphism.v)
+- Explanation of bidirectionality hints: [interactive version](https://coq.inria.fr/platform-docs/Explanation_Bidirectionality_Hints.html)
+  and [source code](https://coq.inria.fr/platform-docs/Explanation_Bidirectionality_Hints.v)
 
