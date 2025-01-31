@@ -56,18 +56,18 @@ let minor v =
   | _ -> invalid_arg (v ^ ": invalid  version")
 
 let patch v =
-  let pre, version = 
+  let branch, version = 
     match String.split_on_char '.' v with
     | x :: y :: z :: _ -> false, x ^ "." ^ y ^ "." ^ z
     | x :: y :: [] -> 
       (match String.split_on_char '+' y with
       | [] -> assert false
       | [y] -> false, x ^ "." ^ y
-      | y :: _ -> true, x ^ "." ^ y)
+      | y :: z :: [] -> false, x ^ "." ^ y ^ "+" ^ z
+      | _ -> invalid_arg (v ^ ": invalid version"))
+    | ["master"] -> true, v
     | _ -> invalid_arg (v ^ ": invalid  version")
-  in
-  if pre then "v" ^ version
-  else "V" ^ version
+  in if branch then version else "V" ^ version
 
 let v2 = "https://v2.ocaml.org"
 let manual_with_version v = "/doc/" ^ patch v ^ "/refman/index.html"

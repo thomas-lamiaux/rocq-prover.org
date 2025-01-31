@@ -7,6 +7,7 @@ GIT_BRANCH=$(shell git branch --show-current)
 
 export GIT_COMMIT
 export GIT_BRANCH
+export DOC_PATH
 
 .PHONY: all
 all:
