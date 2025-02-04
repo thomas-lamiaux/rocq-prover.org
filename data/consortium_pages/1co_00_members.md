@@ -8,7 +8,7 @@ category: "Rocq Consortium"
 
 # Gold Members 
 
-Curren gold members are: 
+Current gold members are: 
 
 <div class="flex">
   <div class="mx-4 my-4 py-4 px-4">
