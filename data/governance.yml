@@ -226,10 +226,13 @@ teams:
   - id: action
     name: Docker Opam Action
     description: The Docker Opam Action helps users to build and test their projects with Rocq using GitHub Actions.
+    default_role: Maintainer
     members:
     - name: Erik Martin-Dorel
       github: erikmd
       role: Team leader
+    - name: Théo Zimmermann
+      github: Zimmi48
 - id: distribution
   name: Packaging and Distribution
   description: The Packaging and Distribution team is responsible for the packaging and distribution of the Rocq Prover.
@@ -259,10 +262,13 @@ teams:
   - id: docker
     name: Docker
     description: The Docker team maintains the Rocq Docker images.
+    default_role: Maintainer
     members:
     - name: Erik Martin-Dorel
       github: erikmd
       role: Team leader
+    - name: Jaime Arias
+      github: himito
 - id: documentation
   name: Documentation
   description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.
