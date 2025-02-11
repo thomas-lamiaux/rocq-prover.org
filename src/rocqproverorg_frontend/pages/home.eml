@@ -125,6 +125,12 @@ Layout.render
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://www.ls2n.fr/">
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/universite-nantes-black.svg" %>" alt="Université de Nantes"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/universite-nantes-white.svg" %>" alt="Université de Nantes"/>
+        </a>
+      </div>
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.college-de-france.fr">
           <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/college-de-france-logo.svg" %>" alt="Collège de France"/>
           <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/college-de-france-logo-white.svg" %>" alt="Collège de France"/>
