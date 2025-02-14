@@ -131,6 +131,12 @@ Layout.render
         </a>
       </div>
       <div class="mx-4 my-4 py-4 px-4">
+        <a href="https://www.telecom-paris.fr/en/research/labs/information-processing-ltci">
+          <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/ipparis.png" %>" alt="Polytechnic Institute of Paris"/>
+          <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/ipparis.png" %>" alt="Polytechnic Institute of Paris"/>
+        </a>
+      </div>
+      <div class="mx-4 my-4 py-4 px-4">
         <a href="https://www.college-de-france.fr">
           <img class="h-8 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/lightmode/college-de-france-logo.svg" %>" alt="Collège de France"/>
           <img class="h-8 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/darkmode/college-de-france-logo-white.svg" %>" alt="Collège de France"/>
