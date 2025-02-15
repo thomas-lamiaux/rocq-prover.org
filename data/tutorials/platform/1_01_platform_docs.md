@@ -45,9 +45,9 @@ This is a demo, so not everything is working perfectly yet:
 -   In the future, the documentation is planned to be indexed on the Coq
     Platform's version, but as of yet, it is only guaranteed to fully
     work with the latest version of the [Coq
-    Platform](https://github.com/coq/platform/blob/main/doc/README~8.19~2024.10.md)
-    for Coq 8.19.2.
+    Platform](https://github.com/coq/platform/blob/main/doc/README~8.20~2025.01.md)
+    for Coq 8.20.1.
 -   The interactive interface is relying on JsCoq1 that only supports
-    Coq up to 8.17 so it may fail on some content requiring Coq 8.19. We
+    Coq up to 8.17 so it may fail on some content requiring Coq 8.20. We
     are working towards switching to JsCoq2.
 
