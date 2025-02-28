@@ -59,36 +59,31 @@ things are.
 
 ### C. Guiding Principles
 
-The Rocq governance
-is guided by key principles such as openness, community focus, and compatibility. Each
-project that falls under the Rocq governance should align with these
+The Rocq governance is guided by key principles such as openness, community focus, 
+and compatibility. Each project that falls under the Rocq governance should align with these
 principles, fostering a community that is open, collaborative, and dedicated to
 the continued development and advancement of the Rocq Prover and its
 applications.
 
 ## II. Roles and responsibilities
 
-### A. Project Leader, Coordination Team and Core Team
+### A. Core Team and Project Leader
 
-The Project Leader of the official Rocq Projects is Matthieu Sozeau. The Project Leader can
-appoint a team of [Rocq Coordinators](/governance/governance#Coordination)
-to help with coordination tasks, who have the right to act in the name of the Project Leader
-in all matters of coordination.
-
-*Currently, Matthieu Sozeau has appointed Yves Bertot, Paul-André Mélies,
-Nicolas Tabareau and Théo Zimmermann as Rocq Coordinators, who have accepted this Role.*
-
-The [Rocq Core](/governance/governance#Core) team is composed of the Rocq Coordinators and 
-a set of voluntary, co-opted Maintainers that govern the development of the Rocq Prover
-and official Rocq Projects.
-
-It is the role of the Project Leader and the Core team to resolve disputes that may arise in relation to
+The [Rocq Core](/governance/governance#Core) team is composed of a set of voluntary, co-opted 
+Maintainers that govern the development of the Rocq Prover and official Rocq Projects.
+It is the role of the Core team to resolve disputes that may arise in relation to
 the official Rocq Projects, specifically to ensure that
 these projects are able to progress in a coordinated way.
+
 The Rocq Core team has a formal [voting process](https://github.com/coq/coq/wiki/Core-Team-Voting-Process) 
 that can be used to resolve conflicts in case consensus cannot be reached.
 
-It is the community's role to guide the decisions of the Project Leader through active engagement,
+Yearly, the Core Team designate a Project Leader among them, who is in charge of representing the 
+Core Team and maintaing the long term vision of the Rocq Prover and official Rocq Projects. 
+The Project Leader is tacitly reconducted each calendar year, unless a Core Team member asks for a vote
+or the Project Leader decides to resign. The current Project Leader is Matthieu Sozeau.
+
+It is the community's role to guide the decisions of the Core Team through active engagement,
 contributions, and discussions. To foster a healthy and growing community, the
 Project Leader will make the goals and decisions clear and public.
 
@@ -213,6 +208,11 @@ role by the [Code of Conduct enforcement team](/governance/community#Code%20of%2
 The version number should be changed for *any* edits that are made to this
 document, even typos. Otherwise disambiguating between versions is awkward.
 -->
+
+**Version 0.2 - February 28th 2025**
+
+- This version is simplifying the organization by removing the informal Rocq Coordination team, to
+  better reflect the desired horizontal organization of the Rocq team, with a potentially changing Project Lead.
 
 **Version 0.1 - December 24th 2024**
 

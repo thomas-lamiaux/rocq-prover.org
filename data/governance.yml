@@ -1,29 +1,13 @@
 teams:
 - id: governance
   name: Governance
-  description: The governance is ensured by the Project Leader, with the help of the
-    Coordination team, and by the Core team.
+  description: The governance is ensured by the Core team and its Project Leader.
   subteams:
-  - id: coordination
-    name: Coordination
-    description: The Coordination team is appointed by the Rocq project leader to help
-      coordinate the activities of the other teams, and the project roadmap.
-    default_role: Coordinator
-    members:
-    - name: Matthieu Sozeau
-      github: mattam82
-      role: Project Leader
-    - name: Yves Bertot
-      github: ybertot
-    - name: Paul-André Melliés
-      github: pamellies
-    - name: Nicolas Tabareau
-      github: tabareau
-    - name: Théo Zimmermann
-      github: Zimmi48
   - id: core
     name: Core
-    description: The Core team is composed of long-term, significant contributors to the Rocq project.
+    description: The Core team is composed of co-opted, long-term and significant 
+      contributors to the Rocq project and its scientific underpinnings.
+      It is responsible for the Rocq Prover and all official Rocq Projects.
     default_role: Core developer
     dev_meeting:
       date: Every Tuesday
