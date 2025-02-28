@@ -23,6 +23,7 @@ let t =
   Dream.scope "" []
     ([
        make ~permanent:true [ ("roadmap.html", "/roadmap") ];
+       make ~permanent:true [ ("favicon.ico"), "/logos/favicon.ico"];
        Dream.get "/p/:name" package;
        Dream.get "/u/:hash/p/:name" package;
        Dream.get "/p/:name/doc" package_docs;
