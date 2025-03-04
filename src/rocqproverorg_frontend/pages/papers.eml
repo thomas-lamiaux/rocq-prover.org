@@ -3,9 +3,10 @@ let filter_tags (papers : Data.Paper.t list) (tags : string list) =
         List.exists (fun tag -> List.mem tag paper.tags) tags
     ) papers
 
-let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list) 
+let display_papers ?(search : string option) ~(recommended_papers : Data.Paper.t list) 
     (papers : Data.Paper.t list) (cat : string) =
-    <div class="section-blue-gradient dark:dark-section-blue-gradient lg:py-12 py-8">
+    <% if search = None then ( %>
+    <div id="recommended" class="section-blue-gradient dark:dark-section-blue-gradient lg:py-12 py-8">
         <div class="container-fluid">
             <div class=" ">
                 <div class="">
@@ -37,19 +38,17 @@ let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list)
             </div>
         </div>
     </div>
-    <div>
-    <details id="search-details">
-    <summary style="font-size: 1.6em; font-weight: normal; float: left; margin-left: 5em; margin-bottom:1em">
-            More Papers
-    </summary>
+    <% ); %>
+    <div id="results">
     <div style="clear: both;"></div>
     <div class="bg-background dark:bg-dark-background">
         <div class="py-10 lg:py-28">
             <div class="container-fluid">
+                <% let search = Option.value ~default:"" search in %>
                 <div class="flex justify-between items-center flex-col md:flex-row">
                     <% let paper_num = match List.length papers with 0 -> "No Paper" | 1 -> "1 Paper" | l -> Printf.sprintf "%i Papers" l in %>
                     <h5 class="font-bold text-title dark:text-dark-title mb-5 md:mb-0"><%s paper_num %></h5>
-                    <form action="<%s Url.papers %>" method="GET">
+                    <form action="<%s Url.papers %>#results" method="GET">
                         <%s! Forms.search_input
                             ~name:"q"
                             ~label:"Search for a paper"
@@ -128,22 +127,13 @@ let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list)
             </div>
         </div>
     </div>
-    </details>
-
-    <script>
-        // Check if there's a query string in the URL
-        const params = new URLSearchParams(window.location.search);
-        if (params.has('q')) {
-        document.getElementById('search-details').setAttribute('open', 'true');
-        }
-    </script>
 
     </div>
     <div style="clear: both;"></div>
 
 
 
-let render ?(search = "") ~(recommended_papers : Data.Paper.t list) (papers : Data.Paper.t list) =
+let render ?search ~(recommended_papers : Data.Paper.t list) (papers : Data.Paper.t list) =
 Learn_layout.single_column_layout
 ~title:"Rocq Papers"
 ~description:"A selection of papers grouped by popular categories."
@@ -165,6 +155,6 @@ Learn_layout.single_column_layout
 <%s! let tags = ["Theory and Implementation of Rocq"] in 
      let recommended_papers = filter_tags recommended_papers tags in 
      let papers = filter_tags papers tags in 
-     display_papers ~search ~recommended_papers papers 
+     display_papers ?search ~recommended_papers papers 
         "Theory and Implementation of Rocq"  
 %>
