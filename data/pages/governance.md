@@ -75,7 +75,7 @@ It is the role of the Core team to resolve disputes that may arise in relation t
 the official Rocq Projects, specifically to ensure that
 these projects are able to progress in a coordinated way.
 
-The Rocq Core team has a formal [voting process](https://github.com/coq/coq/wiki/Core-Team-Voting-Process) 
+The Rocq Core team has a formal [voting process](#a1-voting-process)
 that can be used to resolve conflicts in case consensus cannot be reached.
 
 The Core Team elects a Project Leader among them, who is in charge of representing the 
