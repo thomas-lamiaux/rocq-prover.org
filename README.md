@@ -86,7 +86,7 @@ being composed of the following community members:
 - Cuihtlauac Alvarado ([@cuihtlauac](https://github.com/cuihtlauac)), Maintainer (Tarides)
 - Sabine Schmaltz ([@sabine](https://github.com/sabine)), Maintainer (Tarides)
 
-The roles and responsibilities are explained in the governance, don't hesitate to [have a look](https://rocq-prover.org/governance) for more details.
+The roles and responsibilities are explained in the governance, don't hesitate to [have a look](https://rocq-prover.org/rocq-team) for more details.
 
 We're always looking for new maintainers! If you're interested in helping us make rocq-prover.org the best resource to learn Rocq and discover the ecosystem, [reach out to us](mailto:rocq-website@rocq-prover.org)!
 

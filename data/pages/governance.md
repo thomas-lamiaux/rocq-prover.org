@@ -69,7 +69,7 @@ applications.
 
 ### A. Core Team and Project Leader
 
-The [Rocq Core](/governance/governance#Core) team is composed of a set of voluntary, co-opted 
+The [Rocq Core](/rocq-team/governance#Core) team is composed of a set of voluntary, co-opted
 Maintainers that govern the development of the Rocq Prover and official Rocq Projects.
 It is the role of the Core team to resolve disputes that may arise in relation to
 the official Rocq Projects, specifically to ensure that
@@ -199,7 +199,7 @@ generate consensus among the community to resolve conflicts.
 
 The [Code of Conduct](/code-of-conduct) should be followed at all times.
 Maintainers that do not follow the Code of Conduct may be removed from their
-role by the [Code of Conduct enforcement team](/governance/community#Code%20of%20Conduct%20Enforcement)
+role by the [Code of Conduct enforcement team](/rocq-team/community#Code%20of%20Conduct%20Enforcement)
 (acting on behalf of the Project Leader).
 
 ****
