@@ -1,7 +1,7 @@
 teams:
-- id: governance
-  name: Governance
-  description: The governance is ensured by the Core team and its Project Leader.
+- id: core-team
+  name: Core Team
+  description: The Core team and its Project Leader govern the project.
   subteams:
   - id: core
     name: Core
