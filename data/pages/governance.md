@@ -112,7 +112,7 @@ Each Core Team member has a vote (including the project leader).
 - Decision to take a vote is taken by the project leader, taking input from the core team members.
 - In case a majority of >= 2/3 cannot be reached, the project leader can decide to launch a second 
   vote with the same announcement conditions and same rules except it is to be decided by > 50% majority. 
-  The project leaders's vote is decisive in case of a tie in this second round.
+  The project leader's vote is decisive in case of a tie in this second round.
 
 ### B. Delegates
 
