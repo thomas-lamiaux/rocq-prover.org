@@ -1,24 +1,21 @@
 teams:
-- id: core-team
+- id: core
   name: Core Team
   description: The Core team and its Project Leader govern the project.
-  subteams:
-  - id: core
-    name: Core
-    description: The Core team is composed of co-opted, long-term and significant 
-      contributors to the Rocq project and its scientific underpinnings.
-      It is responsible for the Rocq Prover and all official Rocq Projects.
-    default_role: Core developer
-    dev_meeting:
-      date: Every Tuesday
-      time: 4:00 PM CET (see wiki) Open to all
-      calendar: https://github.com/coq/coq/wiki/Coq-Calls
-      link: https://rendez-vous.renater.fr/coq-call
-      notes: https://github.com/coq/coq/wiki/Coq-Calls
-    members:
-    - name: Matthieu Sozeau
-      github: mattam82
-      role: Project Leader
+    The Core team is composed of co-opted, long-term and significant 
+    contributors to the Rocq project and its scientific underpinnings.
+    It is responsible for the Rocq Prover and all official Rocq Projects.
+  default_role: Core developer
+  dev_meeting:
+    date: Every Tuesday
+    time: 4:00 PM CET (see wiki) Open to all
+    calendar: https://github.com/coq/coq/wiki/Coq-Calls
+    link: https://rendez-vous.renater.fr/coq-call
+    notes: https://github.com/coq/coq/wiki/Coq-Calls
+  members:
+  - name: Matthieu Sozeau
+    github: mattam82
+    role: Project Leader
 - id: community
   name: Community
   description: The Community team is responsible for managing forums, social media, and community events.
