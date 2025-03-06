@@ -21,6 +21,7 @@ let resources = [
 let ecosystem = [
   (Url.platform, "Platform");
   (Url.packages, "Packages");
+  (Url.rocq_team None, "Rocq Team");
   (Url.community, "Community");
   (Url.consortium, "Consortium");
   (Url.events, "Events");
@@ -29,7 +30,6 @@ let ecosystem = [
   ]
 
 let policies = [
-  (Url.governance, "Rocq Teams");
   (Url.governance_policy, "Governance");
   (Url.privacy_policy, "Privacy");
   (Url.code_of_conduct, "Code of Conduct");

@@ -18,7 +18,7 @@ let urls =
     Url.events;
     Url.exercises;
     Url.getting_started;
-    Url.governance;
+    Url.rocq_team None;
     Url.governance_policy;
     Url.index;
     Url.industrial_users;
@@ -43,7 +43,7 @@ let urlables =
     [
       Urlable (urls, to_url);
       Urlable (Changelog.all, fun r -> to_url @@ Url.changelog_entry r.slug);
-      Urlable (Governance.teams, fun r -> to_url @@ Url.governance_team r.id);
+      Urlable (Governance.teams, fun r -> to_url @@ Url.rocq_team (Some r.id));
       Urlable (News.all, fun r -> to_url @@ Url.news_post r.slug);
       Urlable (Release.all, fun r -> to_url @@ Url.release r.version);
       Urlable (Success_story.all, fun r -> to_url @@ Url.success_story r.slug);

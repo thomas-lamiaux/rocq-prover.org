@@ -89,7 +89,7 @@ Layout.render
             All in all, more than 200 people have contributed to the development of Rocq.
           </p>
           <p>
-            The <a href="<%s Url.governance %>">Rocq Team</a> is responsible for the development of
+            The <a href="<%s Url.rocq_team None %>">Rocq Team</a> is responsible for the development of
             Rocq and integration of contributions. See <a href="/refman/changes.html">the changelog</a> for a detailed list of contributors in each release of Rocq and <a href="/refman/history.html">the history page in the reference manual</a> for the early history of Rocq.
           </p>
           <p>
@@ -106,7 +106,7 @@ Layout.render
           The new name, "the Rocq Prover", honors Inria Rocquencourt, the original site where the prover was developed.
           It also alludes to the mythological bird Roc (or Rokh), symbolizing strength and not so disconnected to a rooster.
           Furthermore, the name conveys a sense of solidity, and its unintended connection to music adds a pleasant resonance.
-          The new name was chosen by the <a href="<%s Url.governance_team "governance" %>#Core">Core team</a> after a poll of the users, see
+          The new name was chosen by the <a href="<%s Url.rocq_team (Some "governance") %>#Core">Core team</a> after a poll of the users, see
           <a href="https://coq.discourse.group/t/coq-community-survey-2022-results-part-iv-and-itp-paper-announcement/2001#renaming-coq-8">this page</a>
           for a detailed breakdown of the results.
           </p>

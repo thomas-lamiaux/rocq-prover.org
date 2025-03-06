@@ -113,7 +113,7 @@ Layout.render
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
           </path>
         </svg>
-        <a href="<%s Url.governance %>" class="hover:underline">Back to Governance</a>
+        <a href="<%s Url.rocq_team None %>" class="hover:underline">Back to Governance</a>
       </div>
       <div class="flex flex-col md:flex-row gap-8 mb-8 md:items-center">
         <div class="md:max-w-[70%]">

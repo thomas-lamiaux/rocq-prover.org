@@ -54,8 +54,8 @@ let page_routes _t =
       Dream.get Url.jobs Handler.jobs;
       Dream.get Url.privacy_policy Handler.privacy_policy;
       Dream.get Url.code_of_conduct Handler.code_of_conduct;
-      Dream.get Url.governance Handler.governance;
-      Dream.get (Url.governance_team ":id") Handler.governance_team;
+      Dream.get (Url.rocq_team None) Handler.governance;
+      Dream.get (Url.rocq_team (Some ":id")) Handler.governance_team;
       Dream.get Url.governance_policy Handler.governance_policy;
       Dream.get Url.papers Handler.papers;
       Dream.get (Url.paper ":id") Handler.paper;
