@@ -97,8 +97,6 @@ the Project Leader needs to become involved, he/she will act as arbitrator.
 
 #### A.1 Voting process
 
-These rules were approved by the Coq Core Team on ???.
-
 To resolve certain conflicting situations, the Core Team can proceed to vote on a binary decision, 
 as an ultimate recourse in case consensus cannot be reached. The result binds the core team only 
 and it is its responsibility to enforce the decision.
@@ -231,6 +229,10 @@ role by the [Code of Conduct enforcement team](/rocq-team/community#Code%20of%20
 The version number should be changed for *any* edits that are made to this
 document, even typos. Otherwise disambiguating between versions is awkward.
 -->
+
+**Version 0.3 - March 6th 2025**
+
+- Precised the Leader renewal process and incorporated the voting processes in this file, for ratification by the Core team.
 
 **Version 0.2 - February 28th 2025**
 
