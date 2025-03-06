@@ -75,13 +75,17 @@ It is the role of the Core team to resolve disputes that may arise in relation t
 the official Rocq Projects, specifically to ensure that
 these projects are able to progress in a coordinated way.
 
-The Rocq Core team has a formal [voting process](https://github.com/coq/coq/wiki/Core-Team-Voting-Process) 
+The Rocq Core team has a formal [voting process](#a1-voting-process)
 that can be used to resolve conflicts in case consensus cannot be reached.
 
-Yearly, the Core Team designate a Project Leader among them, who is in charge of representing the 
-Core Team and maintaing the long term vision of the Rocq Prover and official Rocq Projects. 
-The Project Leader is tacitly reconducted each calendar year, unless a Core Team member asks for a vote
-or the Project Leader decides to resign. The current Project Leader is Matthieu Sozeau.
+The Core Team elects a Project Leader among them, who is in charge of representing the 
+Core Team and maintaing the long term roadmap of the Rocq Prover and official Rocq Projects. 
+The current Project Leader is Matthieu Sozeau. The Project Leader's mandate is for one year, 
+renewable each year. The Project Leader is elected each calendar year on the anniversary date 
+of the Rocq 9.0 release, or the date of the previous Project Leader's resignation. If there is 
+a single candidate among the Core Team members, he or she is automatically elected. Otherwise
+the Core Team must proceed with a Condorcet vote on [Belenios](https://vote.belenios.org), 
+with a two weeks notice and 72hr voting window.
 
 It is the community's role to guide the decisions of the Core Team through active engagement,
 contributions, and discussions. To foster a healthy and growing community, the
@@ -90,6 +94,25 @@ Project Leader will make the goals and decisions clear and public.
 It is anticipated that the Projects themselves will be self-managing and will
 resolve issues within their communities, without recourse to the Project Leader. Where
 the Project Leader needs to become involved, he/she will act as arbitrator.
+
+#### A.1 Voting process
+
+These rules were approved by the Coq Core Team on ???.
+
+To resolve certain conflicting situations, the Core Team can proceed to vote on a binary decision, 
+as an ultimate recourse in case consensus cannot be reached. The result binds the core team only 
+and it is its responsibility to enforce the decision.
+
+Each Core Team member has a vote (including the project leader).
+
+- Abstention and delegation of a vote are allowed.
+- Majority of >= 2/3 of casted votes (in Q)
+- Votes take place online, anonymously, within a 72hr voting window, using the [Belenios](https://vote.belenios.org) system.
+- The vote must be announced with precise options 2 weeks in advance by the project leader.
+- Decision to take a vote is taken by the project leader, taking input from the core team members.
+- In case a majority of >= 2/3 cannot be reached, the project leader can decide to launch a second 
+  vote with the same announcement conditions and same rules except it is to be decided by > 50% majority. 
+  The project leader's vote is decisive in case of a tie in this second round.
 
 ### B. Delegates
 

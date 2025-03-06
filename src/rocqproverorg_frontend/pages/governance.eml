@@ -10,7 +10,7 @@ let render_working_group (team : Data.Governance.team) member_label btn_class =
     </div>
     <p class="mb-2 text-white dark:text-dark-title"><%s team.description %></p>
     <div class="font-semibold my-6 text-white dark:text-dark-title"><%i count_members team %> <%s member_label %></div>
-    <a href="<%s Url.governance_team team.id %>" class="btn-transparent <%s btn_class %>">
+    <a href="<%s Url.rocq_team (Some team.id) %>" class="btn-transparent <%s btn_class %>">
       <span>Details</span>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
         stroke="currentColor">
@@ -24,7 +24,7 @@ let render_team_card (team: Data.Governance.team) member_label =
     <p class="text-title dark:text-dark-title text-lg mb-5"><%s team.name %></p>
     <p class="text-content dark:text-dark-content flex-grow text-base mb-5"><%s team.description %></p>
     <p class="text-content dark:text-dark-content text-base font-bold mb-2"><%i count_members team %> <%s member_label %></p>
-    <a href="<%s Url.governance_team team.id %>" class="flex gap-2 items-center text-base text-primary hover:text-primary-dark hover:underline dark:text-dark-primary dark:hover:underline py-2">
+    <a href="<%s Url.rocq_team (Some team.id) %>" class="flex gap-2 items-center text-base text-primary hover:text-primary-dark hover:underline dark:text-dark-primary dark:hover:underline py-2">
       Details
       <%s! Icons.arrow_right_circle "h-5 w-5" %>
     </a>

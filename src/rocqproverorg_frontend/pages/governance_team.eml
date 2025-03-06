@@ -113,7 +113,7 @@ Layout.render
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
           </path>
         </svg>
-        <a href="<%s Url.governance %>" class="hover:underline">Back to Governance</a>
+        <a href="<%s Url.rocq_team None %>" class="hover:underline">Back to Governance</a>
       </div>
       <div class="flex flex-col md:flex-row gap-8 mb-8 md:items-center">
         <div class="md:max-w-[70%]">
@@ -134,16 +134,16 @@ Layout.render
   </div>
 </div>
 <div class="bg-background dark:bg-dark-background">
-  <div class="py-8">
+  <div class="py-2">
     <div class="container-fluid">
       <% (match t.dev_meeting with | None -> () | Some dev_meeting -> %>
-      <h2 class="font-bold gradient mb-6 mt-12 md:mt-16 text-4xl text-title dark:text-dark-title">Dev Meeting</h2>
+      <h2 class="font-bold gradient mb-6 mt-6 md:mt-8 text-4xl text-title dark:text-dark-title">Dev Meeting</h2>
       <%s! render_dev_meeting dev_meeting "text-white mb-6" %>
       <% ); %>
 
       <% (match List.length t.members with | 0 -> () | _ -> %>
      <div class="">
-      <h2 class="font-bold gradient mb-6 mt-12 md:mt-16 text-4xl text-title dark:text-dark-title">People</h2>
+      <h2 class="font-bold gradient mb-6 mt-6 md:mt-8 text-4xl text-title dark:text-dark-title">People</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-4">
         <%s! t.members |> List.map (fun (member : Data.Governance.Member.t) -> render_team_member ~default_role:t.default_role member ) |> String.concat "\n" %>
       </div>
@@ -151,7 +151,7 @@ Layout.render
       <% ); %>
 
       <% (match List.length t.subteams with | 0 -> () | _ -> %>
-      <h2 class="font-bold gradient mb-6 mt-12 md:mt-16 text-4xl text-title dark:text-dark-title">Teams</h2>
+      <h2 class="font-bold gradient mb-6 mt-6 md:mt-8 text-4xl text-title dark:text-dark-title">Teams</h2>
       <div class="flex flex-col gap-12">
         <% t.subteams |> List.iter (fun (team : Data.Governance.team) -> %>
         <%s! render_subteam team %>

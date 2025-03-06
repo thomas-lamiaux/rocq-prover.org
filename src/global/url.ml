@@ -94,8 +94,10 @@ let news = "/news"
 let news_post v = "/news/" ^ v
 let jobs = "/jobs"
 let donation = "/donation"
-let governance = "/rocq-team"
-let governance_team id = "/rocq-team/" ^ id
+let rocq_team id =
+  match id with
+  | None -> "/rocq-team"
+  | Some id -> "/rocq-team/" ^ id
 let privacy_policy = "/policies/privacy-policy"
 let governance_policy = "/policies/governance"
 let code_of_conduct = "/policies/code-of-conduct"
