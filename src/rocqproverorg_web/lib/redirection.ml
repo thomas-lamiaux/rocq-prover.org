@@ -19,6 +19,9 @@ let package_docs req =
   let package = Dream.param req "name" in
   Dream.redirect req (Url.Package.documentation package)
 
+let opam req =
+  Dream.redirect req ("https://coq.github.io/" ^ Dream.target req)
+
 let t =
   Dream.scope "" []
     ([
@@ -27,4 +30,5 @@ let t =
        Dream.get "/p/:name" package;
        Dream.get "/u/:hash/p/:name" package;
        Dream.get "/p/:name/doc" package_docs;
+       Dream.get "/opam/**" opam
      ])
