@@ -133,8 +133,22 @@ module Release = struct
       | [] -> None
       | [ release ] -> Some release
       | u :: v ->
+          let int_of_version_tail s =
+            match s with
+            | None -> 0
+            | Some "rc1" -> -1
+            | Some "beta1" -> -2
+            | _ -> min_int
+          in
           let version r =
-            r.version |> String.split_on_char '.' |> List.map int_of_string
+            let version, tail = 
+              r.version |> String.split_on_char '+' |> 
+                function [s] -> (s, None) 
+                  | hd :: [tl] -> hd, Some tl
+                  | _ -> failwith ("Unparsable version " ^ r.version)
+            in 
+            let version = version |> String.split_on_char '.' |> List.map int_of_string in
+            version @ [int_of_version_tail tail]
           in
           Some
             (List.fold_left
