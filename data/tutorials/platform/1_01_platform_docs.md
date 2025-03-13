@@ -38,7 +38,7 @@ much available time you have:
 -   Help to improve and write tutorial and how-to guides
 -   Help with the technical aspects of the project
 
-## Small Disclamer
+## Small Disclaimer
 
 This is a demo, so not everything is working perfectly yet:
 
