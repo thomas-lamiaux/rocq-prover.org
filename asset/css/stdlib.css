@@ -1806,6 +1806,10 @@ td.revision-current {
   scroll-margin-top: 90px;
 }
 
+.prose [name] {
+  scroll-margin-top: 90px;
+}
+
 /* Hides from IE-mac \*/
 * html .clear-block {
   height: 1%;
