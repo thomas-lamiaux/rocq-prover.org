@@ -1802,6 +1802,10 @@ td.revision-current {
   display: inline-block;
 }
 
+.prose [id] {
+  scroll-margin-top: 90px;
+}
+
 /* Hides from IE-mac \*/
 * html .clear-block {
   height: 1%;
