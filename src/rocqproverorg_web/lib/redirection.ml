@@ -45,6 +45,8 @@ let distrib req =
   in
   http_or_404 newurl (Dream.redirect req)
 
+let old_sites_modules req =
+  Dream.redirect req ("https://coq.github.io" ^ Dream.target req)
 let t =
   Dream.scope "" []
     ([
@@ -54,5 +56,7 @@ let t =
        Dream.get "/u/:hash/p/:name" package;
        Dream.get "/p/:name/doc" package_docs;
        Dream.get "/opam/**" opam;
-       Dream.get "/distrib/**" distrib
+       Dream.get "/distrib/**" distrib;
+       Dream.get "/sites/**" old_sites_modules;
+       Dream.get "/modules/**" old_sites_modules;
      ])
