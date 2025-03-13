@@ -22,6 +22,29 @@ let package_docs req =
 let opam req =
   Dream.redirect req ("https://coq.github.io" ^ Dream.target req)
 
+let http_or_404 ?(not_found = Rocqproverorg_frontend.not_found) opt f =
+  Option.fold ~none:(Dream.html ~code:404 (not_found ())) ~some:f opt
+
+let distrib req =
+  let target = Dream.target req in
+  let path = String.split_on_char '/' target in
+  let newurl = match path with
+  | "" :: "distrib" :: version :: component :: tail ->
+    (match version with 
+    | "current" -> (match component with
+      | "refman" -> Some ("/refman" ^ String.concat "/" tail)
+    |   "stdlib" -> Some ("/stdlib" ^ String.concat "/" tail)
+      | _ ->  None)
+    | version -> 
+      (match component with
+      | "refman" -> Some ("/doc/" ^ version ^ "/refman/" ^ String.concat "/" tail)
+    |   "stdlib" -> Some ("/doc/" ^ version ^ "/stdlib/" ^ String.concat "/" tail)
+      | _ ->  None))
+  | "" :: "library" :: tail -> Some ("/stdlib" ^ String.concat "/" tail)
+  | _ -> None
+  in
+  http_or_404 newurl (Dream.redirect req)
+
 let t =
   Dream.scope "" []
     ([
@@ -30,5 +53,6 @@ let t =
        Dream.get "/p/:name" package;
        Dream.get "/u/:hash/p/:name" package;
        Dream.get "/p/:name/doc" package_docs;
-       Dream.get "/opam/**" opam
+       Dream.get "/opam/**" opam;
+       Dream.get "/distrib/**" distrib
      ])
