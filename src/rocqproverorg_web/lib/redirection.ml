@@ -57,7 +57,10 @@ let documentation req =
 let opam_packaging req =
   Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
   
-
+let platform_docs req =
+  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+    
+  
 let t =
   Dream.scope "" []
     ([
@@ -75,5 +78,6 @@ let t =
        Dream.get "/modules/**" old_sites_modules;
        Dream.get "/documentation" documentation;
        Dream.get "/opam-packaging.html" opam_packaging;
-       Dream.get "/opam-packaging" opam_packaging
+       Dream.get "/opam-packaging" opam_packaging;
+       Dream.get "/platform-docs/**" platform_docs;
      ])
