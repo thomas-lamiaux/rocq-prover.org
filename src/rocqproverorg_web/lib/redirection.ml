@@ -52,7 +52,7 @@ let old_sites_modules req =
   Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
 
 let documentation req =
-  Dream.(redirect ~status:`Moved_Permanently req "/learn")
+  Dream.(redirect ~status:`Moved_Permanently req "/docs")
 
 let opam_packaging req =
   Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
