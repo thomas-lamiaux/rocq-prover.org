@@ -20,10 +20,10 @@ let package_docs req =
   Dream.redirect req (Url.Package.documentation package)
 
 let opam_www req =
-  Dream.redirect req "/packages"
+  Dream.(redirect ~status:`Moved_Permanently req "/packages")
 
 let opam req =
-  Dream.redirect req ("https://coq.github.io" ^ Dream.target req)
+  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
 
 let http_or_404 ?(not_found = Rocqproverorg_frontend.not_found) opt f =
   Option.fold ~none:(Dream.html ~code:404 (not_found ())) ~some:f opt
@@ -46,10 +46,18 @@ let distrib req =
   | "" :: "library" :: tail -> Some ("/stdlib" ^ String.concat "/" tail)
   | _ -> None
   in
-  http_or_404 newurl (Dream.redirect req)
+  http_or_404 newurl Dream.(redirect ~status:`Found req)
 
 let old_sites_modules req =
-  Dream.redirect req ("https://coq.github.io" ^ Dream.target req)
+  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+
+let documentation req =
+  Dream.(redirect ~status:`Moved_Permanently req "/learn")
+
+let opam_packaging req =
+  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+  
+
 let t =
   Dream.scope "" []
     ([
@@ -65,4 +73,7 @@ let t =
        Dream.get "/distrib/**" distrib;
        Dream.get "/sites/**" old_sites_modules;
        Dream.get "/modules/**" old_sites_modules;
+       Dream.get "/documentation" documentation;
+       Dream.get "/opam-packaging.html" opam_packaging;
+       Dream.get "/opam-packaging" opam_packaging
      ])
