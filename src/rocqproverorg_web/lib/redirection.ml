@@ -80,4 +80,5 @@ let t =
        Dream.get "/opam-packaging.html" opam_packaging;
        Dream.get "/opam-packaging" opam_packaging;
        Dream.get "/platform-docs/**" platform_docs;
+       make ~permanent:true [ "/platform-docs", "/docs/platform-docs" ] ;
      ])
