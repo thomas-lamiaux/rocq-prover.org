@@ -23,7 +23,7 @@ let opam_www req =
   Dream.redirect req "/packages"
 
 let opam req =
-  Dream.redirect req ("https://coq.github.io" ^ Dream.target req)  
+  Dream.redirect req ("https://coq.github.io" ^ Dream.target req)
 
 let http_or_404 ?(not_found = Rocqproverorg_frontend.not_found) opt f =
   Option.fold ~none:(Dream.html ~code:404 (not_found ())) ~some:f opt
