@@ -19,6 +19,9 @@ let package_docs req =
   let package = Dream.param req "name" in
   Dream.redirect req (Url.Package.documentation package)
 
+let opam_www req =
+  Dream.redirect req "/packages"
+
 let opam req =
   Dream.redirect req ("https://coq.github.io" ^ Dream.target req)
 
@@ -55,6 +58,9 @@ let t =
        Dream.get "/p/:name" package;
        Dream.get "/u/:hash/p/:name" package;
        Dream.get "/p/:name/doc" package_docs;
+       Dream.get "/opam/www" opam_www;
+       Dream.get "/opam/www/**" opam_www;
+       Dream.get "/coq-package-index" opam_www;
        Dream.get "/opam/**" opam;
        Dream.get "/distrib/**" distrib;
        Dream.get "/sites/**" old_sites_modules;
