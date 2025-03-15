@@ -34,16 +34,17 @@ let distrib req =
   let newurl = match path with
   | "" :: "distrib" :: version :: component :: tail ->
     (match version with 
-    | "current" -> (match component with
-      | "refman" -> Some ("/refman" ^ String.concat "/" tail)
-    |   "stdlib" -> Some ("/stdlib" ^ String.concat "/" tail)
+    | "current" -> 
+      (match component with
+      | "refman" -> Some ("/refman/" ^ String.concat "/" tail)
+      | "stdlib" -> Some ("/stdlib/" ^ String.concat "/" tail)
       | _ ->  None)
     | version -> 
       (match component with
       | "refman" -> Some ("/doc/" ^ version ^ "/refman/" ^ String.concat "/" tail)
-    |   "stdlib" -> Some ("/doc/" ^ version ^ "/stdlib/" ^ String.concat "/" tail)
+      | "stdlib" -> Some ("/doc/" ^ version ^ "/stdlib/" ^ String.concat "/" tail)
       | _ ->  None))
-  | "" :: "library" :: tail -> Some ("/stdlib" ^ String.concat "/" tail)
+  | "" :: "library" :: tail -> Some ("/stdlib/" ^ String.concat "/" tail)
   | _ -> None
   in
   http_or_404 newurl Dream.(redirect ~status:`Found req)
@@ -53,7 +54,7 @@ let old_sites_modules req =
 
 let documentation req =
   Dream.(redirect ~status:`Moved_Permanently req "/docs")
-
+  
 let opam_packaging req =
   Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
   
@@ -74,6 +75,8 @@ let t =
        Dream.get "/coq-package-index" opam_www;
        Dream.get "/opam/**" opam;
        Dream.get "/distrib/**" distrib;
+       Dream.get "/library" distrib;
+       Dream.get "/library/**" distrib;
        Dream.get "/sites/**" old_sites_modules;
        Dream.get "/modules/**" old_sites_modules;
        Dream.get "/documentation" documentation;
