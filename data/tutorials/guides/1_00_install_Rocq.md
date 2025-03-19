@@ -181,4 +181,4 @@ Rocq > Eval compute in 2*10.
 
 ## Join the Community
 
-Make sure you [join the Rocq community](/community). You'll find many community members on [Discuss](https://discourse.rocq-prover.org/) or [Discord](https://discord.com/invite/cCYQbqN). These are great places to ask for help if you have any issues.
+Make sure you [join the Rocq community](/community). You'll find many community members on [Zulip](https://coq.zulipchat.com/), which is a great place to ask for help if you have any issues.
