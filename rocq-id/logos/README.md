@@ -25,6 +25,14 @@
 
 [SVG](SVG/logo-rocq-white.svg) | [PNG](PNG/logo-rocq-white.png) | [JPG](JPG/logo-rocq-white.jpg) | [EPS](EPS/logo-rocq-white.eps)
 
+<img src="SVG/logo-rocq-blue_white.svg" width="46%" >
+
+[SVG](SVG/logo-rocq-blue_white.svg) | [PNG](PNG/logo-rocq-blue_white.png) | [EPS](EPS/logo-rocq-blue_white.eps)
+
+<img src="SVG/logo-rocq-orange_white.svg" width="46%" >
+
+[SVG](SVG/logo-rocq-orange_white.svg) | [PNG](PNG/logo-rocq-orange_white.png) | [EPS](EPS/logo-rocq-orange_white.eps)
+
 ## ROCQ icon logo 
 
 <img src="SVG/icon-rocq-blue.svg" width="20%" >
@@ -65,6 +73,14 @@
 
 [SVG](SVG/logo-rocq-vertical-white.svg) | [PNG](PNG/logo-rocq-vertical-white.png) | [JPG](JPG/logo-rocq-vertical-white.jpg) | [EPS](EPS/logo-rocq-vertical-white.eps)
 
+<img src="SVG/logo-rocq-vertical-blue_white.svg" width="46%" >
+
+[SVG](SVG/logo-rocq-vertical-blue_white.svg) | [PNG](PNG/logo-rocq-vertical-blue_white.png) | [EPS](EPS/logo-rocq-vertical-blue_white.eps)
+
+<img src="SVG/logo-rocq-vertical-orange_white.svg" width="46%" >
+
+[SVG](SVG/logo-rocq-vertical-orange_white.svg) | [PNG](PNG/logo-rocq-vertical-orange_white.png) | [EPS](EPS/logo-rocq-vertical-orange_white.eps)
+
 ## ROCQ vertical logo with baseline
 
 <img src="SVG/logo-rocq-vertical_TRP-blue_orange.svg" width="20%" >
@@ -90,3 +106,11 @@
 <img src="SVG/logo-rocq-vertical_TRP-white.svg" width="20%" >
 
 [SVG](SVG/logo-rocq-vertical_TRP-white.svg) | [PNG](PNG/logo-rocq-vertical_TRP-white.png) | [JPG](JPG/logo-rocq-vertical_TRP-white.jpg) | [EPS](EPS/logo-rocq-vertical_TRP-white.eps)
+
+<img src="SVG/logo-rocq-vertical_TRP-blue_white.svg" width="46%" >
+
+[SVG](SVG/logo-rocq-vertical_TRP-blue_white.svg) | [PNG](PNG/logo-rocq-vertical_TRP-blue_white.png) | [EPS](EPS/logo-rocq-vertical_TRP-blue_white.eps)
+
+<img src="SVG/logo-rocq-vertical_TRP-orange_white.svg" width="46%" >
+
+[SVG](SVG/logo-rocq-vertical_TRP-orange_white.svg) | [PNG](PNG/logo-rocq-vertical_TRP-orange_white.png) | [EPS](EPS/logo-rocq-vertical_TRP-orange_white.eps)
