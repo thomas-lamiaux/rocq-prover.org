@@ -85,4 +85,6 @@ let t =
        Dream.get "/platform-docs/**" platform_docs;
        make ~permanent:true [ "/platform-docs", "/docs/platform-docs" ] ;
        make ~permanent:true [ "/about-coq", "/about" ] ;
+       make ~permanent:true [ "/about-coq.html", "/about" ] ;
+       make ~permanent:true [ "/community.html", "/community" ] ;
      ])
