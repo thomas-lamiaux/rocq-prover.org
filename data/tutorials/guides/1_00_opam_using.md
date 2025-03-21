@@ -10,7 +10,6 @@ category: Opam
 
 Opam is the package manager for the OCaml programming language, the language
 in which Rocq is implemented.
-Opam 2.1 is the recommended version, and is assumed below.
 Instructions on
 [how to install opam](https://opam.ocaml.org/doc/Install.html)
 itself are available on the opam website.
@@ -50,7 +49,7 @@ If you do, you can skip directly to [Using opam to install Rocq packages](#insta
 the initial package set provided by the Platform.
 
 Note that the Platform scripts are compatible with existing `opam`
-installations. They will create a fresh [switch.](#switch)
+installations. They will create a fresh [switch](managing-versions#switches).
 
 If you prefer to do a fully manual installation, you can proceed to
 the next section.
@@ -72,8 +71,8 @@ every time a new shell is opened you have to type in the
 
 By default, opam will use the global installation of OCaml. You can
 initialize opam with an explicit compiler version, for example
-4.14.1, with the option
-`--compiler=ocaml-base-compiler.4.41.1`.
+4.14.2, with the option
+`--compiler=ocaml-base-compiler.4.14.2`.
 See also the section on [managing different versions of OCaml and Rocq](/docs/managing-versions),
 about switches and roots.
 
@@ -119,7 +118,7 @@ the link for instructions on how to install them.
 
 Rocq packages live in a repository separate from the standard OCaml
 opam repository. The following command adds that repository to the
-current opam [switch](#switch) (you can skip this step if
+current opam [switch](managing-versions#switches) (you can skip this step if
 you used the [Platform scripts](#platform)):
 
 ```console

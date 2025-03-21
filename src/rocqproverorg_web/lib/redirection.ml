@@ -84,6 +84,9 @@ let t =
        Dream.get "/opam-packaging" opam_packaging;
        Dream.get "/platform-docs/**" platform_docs;
        make ~permanent:true [ "/platform-docs", "/docs/platform-docs" ] ;
+       make ~permanent:true [ "/docs/installing-rocq", "/docs/using-opam" ] ;
+       make ~permanent:true [ "/opam-using.html", "/docs/using-opam" ] ;
+       make ~permanent:true [ "/user-interfaces.html", "/install" ] ;
        make ~permanent:true [ "/about-coq", "/about" ] ;
        make ~permanent:true [ "/about-coq.html", "/about" ] ;
        make ~permanent:true [ "/community.html", "/community" ] ;
