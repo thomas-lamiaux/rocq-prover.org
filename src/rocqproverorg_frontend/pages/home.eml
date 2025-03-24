@@ -354,7 +354,7 @@ Layout.render
                 notation system, a coercion system and typeclass systems that allow user-defined extension
                 of the elaboration phases. This support is essential for developing embedded domain-specific logics and languages, 
                 as exemplified in the <a href="iris-project.org">Iris</a> project which allows to reason about
-                effectul programs in languages like <a href="https://www.rust-lang.org">Rust</a> 
+                effectful programs in languages like <a href="https://www.rust-lang.org">Rust</a> 
                 using sophisticated variants of separation logic.
               </p>
             </div>
