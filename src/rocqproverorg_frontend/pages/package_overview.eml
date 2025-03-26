@@ -186,7 +186,7 @@ let render
   let version = Package.url_version package in
   let specific_version = Package.specific_version package in
   Package_layout.render
-  ~title:(Printf.sprintf "%s %s · OCaml Package" package.name (Package.render_version package))
+  ~title:(Printf.sprintf "%s %s · Rocq Package" package.name (Package.render_version package))
   ~description:(Printf.sprintf "%s %s: %s" package.name (Package.render_version package) package.synopsis)
   ~canonical:(Url.Package.overview package.name ~version:specific_version)
   ~package
@@ -252,7 +252,7 @@ let render_file
 let version = Package.url_version package in
 let specific_version = Package.specific_version package in
 Package_layout.render
-~title:(Printf.sprintf "%s %s · OCaml Package" package.name (Package.render_version package))
+~title:(Printf.sprintf "%s %s · Rocq Package" package.name (Package.render_version package))
 ~description:(Printf.sprintf "%s %s: %s" package.name (Package.render_version package) package.synopsis)
 ~canonical:(Url.Package.overview package.name ~version:specific_version)
 ~package
