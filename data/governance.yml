@@ -9,9 +9,9 @@ teams:
   dev_meeting:
     date: Every Tuesday
     time: 4:00 PM CET (see wiki) Open to all
-    calendar: https://github.com/coq/coq/wiki/Coq-Calls
-    link: https://rendez-vous.renater.fr/coq-call
-    notes: https://github.com/coq/coq/wiki/Coq-Calls
+    #calendar: https://github.com/coq/coq/wiki/Rocq-Calls
+    link: https://rendez-vous.renater.fr/rocq-call
+    notes: https://github.com/coq/coq/wiki/Rocq-Calls
   members:
   - name: Matthieu Sozeau
     github: mattam82
