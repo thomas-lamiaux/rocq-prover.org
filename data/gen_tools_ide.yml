@@ -1,0 +1,14 @@
+  - name: coqide.8.20.1
+    source: https://coq.inria.fr/" rel="nofollow
+    license: https://spdx.org/licenses/LGPL-2.1-only.html
+    synopsis:  The Coq Proof Assistant --- GTK3 IDE
+    description: >
+      Coq is a formal proof management system. It providesa formal language to write mathematical definitions, executablealgorithms and theorems together with an environment forsemi-interactive development of machine-checked proofs.This package provides the CoqIDE, a graphical user interface for thedevelopment of interactive proofs.
+    lifecycle: ide
+  - name: vscoq-language-server.2.2.3
+    source: https://github.com/coq-community/vscoq
+    license: https://spdx.org/licenses/MIT.html
+    synopsis:  VSCoq language server
+    description: >
+      LSP based language server for Coq and its VSCoq user interface
+    lifecycle: ide

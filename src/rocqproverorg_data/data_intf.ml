@@ -575,12 +575,14 @@ module Success_story = struct
 end
 
 module Tool = struct
-  type lifecycle = [ `Extended | `Full | `Optional | `Dependency ]
+  type lifecycle = [ `Base | `Extended | `Full | `Ide | `Optional | `Dependency ]
   [@@deriving show]
 
   let lifecycle_of_string = function
+    | "base" -> Ok `Base
     | "extended" -> Ok `Extended
     | "full" -> Ok `Full
+    | "ide" -> Ok `Ide
     | "optional" -> Ok `Optional
     | "dependency" -> Ok `Dependency
     | s -> Error (`Msg ("Unknown lifecycle type: " ^ s))

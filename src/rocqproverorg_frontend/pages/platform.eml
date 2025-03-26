@@ -116,6 +116,33 @@ Platform_layout.three_column_layout
   <div class="flex flex-col mb-12">
     <div>
       <hr class="mt-12 mb-6 border-separator_20 border-t border-separator_30">
+      <h4 class="text-title dark:text-dark-title font-bold">Base Level</h4>
+      <div class="text-content dark:text-dark-content mt-3">
+        The base level is mostly intended as a basis for custom installations using opam.
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
+        <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Base) |> List.iter (fun (item : Data.Tool.t) -> %>
+          <%s! render_tool_card ~item %>
+        <% ); %>
+      </div>
+    </div>
+    <div>
+      <hr class="mt-12 mb-6 border-separator_20 border-t border-separator_30">
+      <h4 class="text-title dark:text-dark-title font-bold">IDE Level</h4>
+      <div class="text-content dark:text-dark-content mt-3">
+        The IDE level adds an interactive development environment to the base level.
+        <br>
+        For beginners, e.g., following introductory tutorials, this level is usually sufficient. If you install the IDE level, 
+        you can later add additional packages individually via opam install 'package-name' or rerun the Coq Platform installation script and choose the full or extended level.
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:pr-20 mt-8 items-start">
+        <% tools |> List.filter (fun (item : Data.Tool.t) -> item.lifecycle = `Ide) |> List.iter (fun (item : Data.Tool.t) -> %>
+          <%s! render_tool_card ~item %>
+        <% ); %>
+      </div>
+    </div>
+    <div>
+      <hr class="mt-12 mb-6 border-separator_20 border-t border-separator_30">
       <h4 class="text-title dark:text-dark-title font-bold">Full Level</h4>
       <div class="text-content dark:text-dark-content mt-3">
         The full level adds many commonly used Rocq libraries, plugins and developments.

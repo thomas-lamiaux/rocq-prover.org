@@ -1,19 +1,19 @@
-  - name: coq-compcert.3.13.1
-    source: http://compcert.inria.fr/
+  - name: coq-compcert.3.15
+    source: https://compcert.org/" rel="nofollow
     license: Unknown
     synopsis:  The CompCert C compiler (64 bit)
     description: >
       
     lifecycle: optional
-  - name: coq-unimath.20240331
+  - name: coq-unimath.20240923
     source: https://github.com/UniMath/UniMath
     license: Unknown
     synopsis:  Library of Univalent Mathematics
     description: >
       
     lifecycle: optional
-  - name: coq-vst.2.14
-    source: http://vst.cs.princeton.edu/
+  - name: coq-vst.2.15
+    source: http://vst.cs.princeton.edu/" rel="nofollow
     license: https://spdx.org/licenses/BSD-2-Clause.html
     synopsis:  Verified Software Toolchain
     description: >
