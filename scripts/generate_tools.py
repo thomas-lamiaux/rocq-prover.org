@@ -12,7 +12,7 @@ def extract_details_from_html(html_content,lifecycle):
 
     for block in details_blocks:
         name_match = re.search(r'<summary><a .*?>(.*?)<', block)
-        source_match = re.search(r'<summary><a href=\'(.*?)\'>', block)
+        source_match = re.search(r'<summary><a href=\"(.*?)\">', block)
         license_match = re.search(r'<dt><b>license</b></dt><dd> <a href=\"(.*?)\"', block)
         synopsis_match = re.search(r'\(.*?\)(.*?)</summary>', block)
         description_match = re.search(r'<dt><b>description</b></dt><dd>(.*?)</dd>', block, re.DOTALL)
