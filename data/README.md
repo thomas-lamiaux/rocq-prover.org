@@ -35,3 +35,15 @@ jq '{
   })
 }' data/github-teams.json > data/github-teams-simplified.json
 ```
+
+## Platform Packages
+
+To generate the list of platform packages, get the list of packages on the last readme of the platform
+(e.g., https://github.com/coq/platform/blob/2025.01.0/doc/README~8.20~2025.01.md) and place it 
+in the following files (by level): 
+gen_tools_base.html gen_tools_ide.html gen_tools_full.html gen_tools_extended.html gen_tools_optional.html gen_tools_dependency.html
+
+Then run the script from the `data` folder
+```bash
+../scripts/cat_tools.sh 
+```
