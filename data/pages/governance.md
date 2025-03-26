@@ -69,7 +69,7 @@ applications.
 
 ### A. Core Team and Project Leader
 
-The [Rocq Core](/rocq-team/governance#Core) team is composed of a set of voluntary, co-opted
+The [Rocq Core](/rocq-team/core) team is composed of a set of voluntary, co-opted
 Maintainers that govern the development of the Rocq Prover and official Rocq Projects.
 It is the role of the Core team to resolve disputes that may arise in relation to
 the official Rocq Projects, specifically to ensure that

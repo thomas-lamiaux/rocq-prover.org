@@ -90,4 +90,5 @@ let t =
        make ~permanent:true [ "/about-coq", "/about" ] ;
        make ~permanent:true [ "/about-coq.html", "/about" ] ;
        make ~permanent:true [ "/community.html", "/community" ] ;
+       make ~permanent:true [ "/coq-team.html", "/rocq-team" ] ;
      ])

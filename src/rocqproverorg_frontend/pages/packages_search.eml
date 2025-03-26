@@ -1,5 +1,5 @@
-let render ~total ~search ~(pagination_info : Pagination.t) (packages : Package.package list) = Layout.render ~title:"OCaml Packages · Search Result"
-~description:"Find the package you need to build your application in the thousands of available OCaml packages."
+let render ~total ~search ~(pagination_info : Pagination.t) (packages : Package.package list) = Layout.render ~title:"Rocq Packages · Search Result"
+~description:"Find the package you need to build your application in the hundreds of available Rocq packages."
 ~canonical:(Url.packages_search ^ "?q=" ^ search)
 ~active_top_nav_item:Header.Packages @@
 <div class="bg-background dark:bg-dark-background">
@@ -9,7 +9,7 @@ let render ~total ~search ~(pagination_info : Pagination.t) (packages : Package.
         <form action="/packages/search" method="GET">
           <%s! Forms.search_input
             ~name:"q"
-            ~label:"Search OCaml packages"
+            ~label:"Search Rocq packages"
             ~button_attrs:{|type="submit"|}
             ~input_attrs:("value=\"" ^ Dream.html_escape search ^ "\"")
             ""
