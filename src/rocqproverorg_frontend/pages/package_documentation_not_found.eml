@@ -4,7 +4,7 @@ let render
 (package : Package.package)
 =
 Package_layout.render
-~title:(Printf.sprintf "%s %s · OCaml Package" package.name (Package.render_version package))
+~title:(Printf.sprintf "%s %s · Rocq Package" package.name (Package.render_version package))
 ~description:(Printf.sprintf "%s %s: %s" package.name (Package.render_version package) package.synopsis)
 ~package
 ~path
@@ -26,7 +26,7 @@ Package_layout.render
           class="btn">
           Go To Package Overview
         </a>
-        <a href="https://github.com/ocaml/ocaml.org/issues"
+        <a href="https://github.com/rocq-prover/rocq-prover.org/issues"
           class="btn btn-ghost">
           Open an Issue
         </a>
