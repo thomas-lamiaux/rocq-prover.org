@@ -93,4 +93,8 @@ let t =
        make ~permanent:true [ "/coq-team.html", "/rocq-team" ] ;
        make ~permanent:true [ "/download", "/install" ] ;
        make ~permanent:true [ "/download.html", "/install" ] ;
+       make ~permanent:true [ "/related-tools", "https://github.com/rocq-community/awesome-coq?tab=readme-ov-file#tools" ];
+       make ~permanent:true [ "/related-tools.html", "https://github.com/rocq-community/awesome-coq?tab=readme-ov-file#tools" ];
+       make ~permanent:true [ "/faq", "https://github.com/rocq-prover/rocq/wiki/The-Rocq-FAQ" ];
+       make ~permanent:true [ "/faq.html", "https://github.com/rocq-prover/rocq/wiki/The-Rocq-FAQ" ];
      ])
