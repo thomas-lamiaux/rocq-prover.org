@@ -50,7 +50,7 @@ let distrib req =
   http_or_404 newurl Dream.(redirect ~status:`Found req)
 
 let old_sites_modules req =
-  Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
+  Dream.(redirect ~status:`Found req ("/css/coq-stdlib/" ^ target req))
 
 let documentation req =
   Dream.(redirect ~status:`Moved_Permanently req "/docs")
