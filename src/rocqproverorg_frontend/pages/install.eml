@@ -191,7 +191,8 @@ Layout.render
           on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
           In which case, please mention:
           <ul>
-            <li> your operating system (Linus), </li>
+            <li> your operating system (Linux), </li>
+
             <li> the version of Rocq and of the language server you have installed, </li>
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
@@ -382,7 +383,8 @@ Layout.render
           on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
           In which case, please mention:
           <ul>
-            <li> your operating system (macOs), </li>
+            <li> your operating system (macOS), </li>
+
             <li> the version of Rocq and of the language server you have installed, </li>
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
