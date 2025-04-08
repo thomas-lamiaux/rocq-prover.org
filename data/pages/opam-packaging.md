@@ -19,7 +19,7 @@ contains a `Makefile` providing the following commands:
     make          # Build the package
     make install  # Install the package
 
-Click here to see a minimal example `Makefile`.
+Below is a minimal example `Makefile`.
 
     build: Makefile.rocq
         $(MAKE) -f Makefile.rocq
@@ -51,7 +51,7 @@ You can then record its checksum which will be used in the package definition us
     YOURHASH=`shasum -a 512 1.0.0.tar.gz`
 
 Finally, you must upload the archive on GitHub as an asset of your release (using Edit Release).
-This is necessary as github does not guarantee the checksum stability of auto-generated `/archive/` 
+This is necessary as GitHub does not guarantee the checksum stability of auto-generated `/archive/` 
 tarballs. One can also use the [`gh` CLI tool](https://cli.github.com/) to upload an archive to 
 a release (`gh release upload tag archive.tar.gz`). Your release will then have an url of shape:
 
@@ -140,8 +140,8 @@ is a template for `released/packages/rocq-foo/rocq-foo.1.0.0/opam`:
     ]
 
     url {
-      src: "https://github.com/$YOU/foo/archive/1.0.0.tar.gz"
-      checksum: "sha512=YOURHASH"
+      src: "https://github.com/$YOU/foo/releases/download/1.0.0/1.0.0.tar.gz"
+      checksum: "sha512=$YOURHASH"
     }
 
     tags: [
@@ -165,12 +165,8 @@ For a description of the other fields, see the [relevant section of the
 Opam
 Manual](https://opam.ocaml.org/doc/Manual.html#Package-definitions).
 
-The checksum can be obtained with:
-
-    curl -L https://github.com/$YOU/foo/releases/download/1.0.0/1.0.0.tar.gz | shasum -a 512
-
 In the `opam` file, the checksum must be prefixed with the hashing
-algorithm, here `sha512=`. (`sha256=`, and `md5=` are also supported.)
+algorithm, here `sha512=`. (`sha256=`, and `md5=` are also supported, but the latter should be avoided.)
 
 Commit the new `opam` file:
 
@@ -205,7 +201,7 @@ First push your changes to your personal fork:
     git push origin rocq-foo.1.0.0
 
 Then visit the GitHub page of your personal fork and click on the *new
-pull request* button.
+pull request* button, or simply click the link printed in the console when pushing.
 
 ## Making good packages
 
@@ -226,7 +222,7 @@ pull request* button.
 ### Rules of thumb
 
 The released repository shall contain software that works with a stable
-version of Rocq. Packages are maintained by their corresponding authors
+version of the Rocq Prover. Packages are maintained by their corresponding authors
 or by the Rocq team. Dependencies must be expressed in a conservative way
 providing both lower and upper bounds to version numbers. This way all
 installable packages (i.e. with satisfiable constraints) shall compile
