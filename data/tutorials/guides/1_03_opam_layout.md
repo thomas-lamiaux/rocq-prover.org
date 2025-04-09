@@ -1,8 +1,8 @@
 ---
+id: opam-layout
 title: Opam Layout
 description: "Opam Repository Layout."
-meta_title: Opam Repository Layout
-meta_description: How-to create Rocq Opam packages.
+category: Opam
 ---
 
 ## Layout of the Rocq Package Index

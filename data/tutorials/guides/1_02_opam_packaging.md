@@ -1,8 +1,8 @@
 ---
+id: opam-packaging
 title: Opam Packaging
 description: "Opam Packaging Howto."
-meta_title: Opam Packaging
-meta_description: How-to create Rocq Opam packages.
+category: Opam
 ---
 
 ## Creating and Submitting a Package
@@ -207,7 +207,7 @@ pull request* button, or simply click the link printed in the console when pushi
 
 ### Conventions
 
-1.  The archive follows a [layout](opam-layout.html). Regular packages
+1.  The archive follows a [layout](opam-layout). Regular packages
     shall be placed in the `released` directory. One can also write
     packages that install development branches of a software. In that
     case `extra-dev` directory has to be used and the version has to end

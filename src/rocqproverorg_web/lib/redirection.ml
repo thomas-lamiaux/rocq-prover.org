@@ -97,8 +97,8 @@ let t =
        Dream.get "/modules/**" old_sites_modules;
        Dream.get "/documentation" documentation;
        Dream.get "/doc" documentation;
-       make ~permanent:true [ ("/opam-packaging.html", opam_packaging) ];
-       make ~permanent:true [ ("/opam-layout.html", opam_layout) ];
+       make ~permanent:true [ ("/opam-packaging.html", Url.opam_packaging) ];
+       make ~permanent:true [ ("/opam-layout.html", Url.opam_layout) ];
        Dream.get "/platform-docs/**" platform_docs;
        Dream.get "/cocorico" cocorico;
        Dream.get "/cocorico.html" cocorico;
