@@ -152,7 +152,7 @@ Layout.render
           </h3>
           <p>
           The renaming of VsCoq to VsRocq is in progress.
-          <p>
+          </p>
           <p>
           <a href="https://github.com/rocq-prover/vscoq">VsCoq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq">Visual Studio Code Marketplace</a>
@@ -347,7 +347,7 @@ Layout.render
           <p>
           <p>
             The renaming of VsCoq to VsRocq is in progress.
-          <p>
+          </p>
           <a href="https://github.com/rocq-prover/vscoq">VsCoq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vscoq">Open VSX</a>.
@@ -527,7 +527,7 @@ Layout.render
           </h3>
           <p>
             The renaming of VsCoq to VsRocq is in progress.
-          <p>
+          </p>
           <p>
           <a href="https://github.com/rocq-prover/vscoq">VsCoq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq">Visual Studio Code Marketplace</a>
