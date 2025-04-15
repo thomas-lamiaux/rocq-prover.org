@@ -14,20 +14,27 @@ Layout.render
                     <div>All Releases</div>
                 </a>
                 <h2 class="font-bold text-title dark:text-dark-title pb-6"><%s name %> <%s release.version %></h2>
-                <div class="prose dark:prose-invert prose-orange lg:prose-lg mx-auto max-w-5xl">
+                <div class="prose dark:prose-invert prose-orange lg:prose-lg mx-auto max-w-5xl mb-[20px]">
                     <%s! release.intro_html %>
                 </div>
-                <div class="font-bold pb-6">
-                    <a href="<%s! Data.Release.github_release release %>">
-                    <%s! Icons.github "h-5 w-5 inline-block" %>Github release</a>                        
-                </div>
-            <div class="flex flex-col lg:flex-row gap-4 md:gap-6 md:w-80">
-                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Reference Manual") ~href:(Url.manual_with_version release.version) "" %>
-                    <%s! if release.kind = `Rocq then Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Corelib Theories") ~href:(Url.corelib_with_version release.version) "" else "" %>
-                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("OCaml API") ~href:(Url.api_with_version release.version) "" %>
-                    <%s! if release.kind = `Rocq then Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Stdlib Manual") ~href:(Url.stdlib_manual_with_version release.version) "" else "" %>
-                    <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Stdlib Theories") ~href:(Url.stdlib_with_version release.version) "" %>
-                  </div>
+                <% (match release.kind with
+                  | `Rocq | `Coq -> %>
+                    <div class="font-bold pb-6">
+                        <a href="<%s! Data.Release.github_release release %>">
+                        <%s! Icons.github "h-5 w-5 inline-block" %>Github release</a>                        
+                    </div>
+                    <div class="flex flex-col lg:flex-row gap-4 md:gap-6 md:w-80">
+                        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Reference Manual") ~href:(Url.manual_with_version release.version) "" %>
+                        <%s! if release.kind = `Rocq then Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Corelib Theories") ~href:(Url.corelib_with_version release.version) "" else "" %>
+                        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("OCaml API") ~href:(Url.api_with_version release.version) "" %>
+                        <%s! if release.kind = `Rocq then Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Stdlib Manual") ~href:(Url.stdlib_manual_with_version release.version) "" else "" %>
+                        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Stdlib Theories") ~href:(Url.stdlib_with_version release.version) "" %>
+                    </div>
+                <% | _  -> %>
+                    <div class="flex flex-col lg:flex-row gap-4 md:gap-6 md:w-80">
+                        <%s!  Hero_section.hero_button ~left_icon:(Icons.github "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("GitHub release") ~href:(Data.Release.github_release release) "" %>
+                    </div>
+                <% ); %>
             </div>
         </div>
     </div>
