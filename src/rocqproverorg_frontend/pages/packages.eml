@@ -52,8 +52,9 @@ in
     <div class="container-fluid pt-6 pb-12">
         <p class="uppercase text-sm text-content dark:text-dark-content font-medium mb-2 tracking-widest">opam</p>
         <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-2">The OCaml and Rocq Package Manager</h2>
-        <p class="text-xl text-content dark:text-dark-content mb-6 md:mb-12">Opam is a source-based package manager for OCaml and Rocq. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow</p>
-        <ul class="flex flex-col md:flex-row w-full justify-between gap-8">
+        <p class="text-xl text-content dark:text-dark-content mb-2"><a href="https://opam.ocaml.org">opam</a> is a source-based package manager that supports OCaml and Rocq packages. With opam installed, released Rocq packages can be accessed by adding the official Rocq opam repository:</p>
+        <%s! Copy_to_clipboard.small_code_snippet ~id:"opam-add-released" "opam repo add rocq-released https://rocq-prover.org/opam/released" %>
+        <ul class="flex flex-col md:flex-row w-full justify-between gap-8 mt-12">
 % let render_number_stat label number =
             <li class="border border-card_border dark:border-dark-card_hover rounded-[0.625rem] w-full flex flex-col justify-center items-center p-7">
                 <p class="font-bold text-3xl text-primary dark:text-dark-primary"><%d number %></p>
