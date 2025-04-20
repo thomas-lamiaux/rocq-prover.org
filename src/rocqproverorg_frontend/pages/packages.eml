@@ -40,9 +40,13 @@ in
                 </div>
             </div>
             <div class="flex flex-col gap-4 md:gap-6 md:w-80 pt-8 md:pt-0">
-                <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Publish a Package") ~href:Url.opam_packaging "" %>
+                <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Install Rocq Packages") ~href:(Url.tutorial "using-opam#installing-rocq-packages") "" %>
                 <div class="text-sm text-content dark:text-dark-content">
-                    Learn how to publish your first opam package today and make it available to the rest of the community
+                    Learn how to install and search for Rocq packages using opam, including extensions, libraries, and tools
+                </div>
+                <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Publish a Rocq Package") ~href:Url.opam_packaging "" %>
+                <div class="text-sm text-content dark:text-dark-content">
+                    Learn how to publish your first Rocq opam package today and make it available to the rest of the community
                 </div>
             </div>
         </div>    
@@ -51,8 +55,8 @@ in
 <div class="w-full border-b">
     <div class="container-fluid pt-6 pb-12">
         <p class="uppercase text-sm text-content dark:text-dark-content font-medium mb-2 tracking-widest">opam</p>
-        <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-2">The OCaml and Rocq Package Manager</h2>
-        <p class="text-xl text-content dark:text-dark-content mb-2"><a href="https://opam.ocaml.org">opam</a> is a source-based package manager that supports OCaml and Rocq packages. With opam installed, released Rocq packages can be accessed by adding the official Rocq opam repository:</p>
+        <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-2">Package Manager for OCaml and Rocq</h2>
+        <p class="text-xl text-content dark:text-dark-content mb-2">The source-based package manager <a href="https://opam.ocaml.org" class="text-primary dark:text-dark-white hover:dark:text-dark-primary dark:underline hover:underline">opam</a> supports OCaml and Rocq packages. With opam installed, released Rocq packages can be accessed by adding the official Rocq opam repository:</p>
         <%s! Copy_to_clipboard.small_code_snippet ~id:"opam-add-released" "opam repo add rocq-released https://rocq-prover.org/opam/released" %>
         <ul class="flex flex-col md:flex-row w-full justify-between gap-8 mt-12">
 % let render_number_stat label number =
@@ -136,9 +140,9 @@ in
         <div class="flex flex-col w-full md:max-w-[50%]">
             <p class="uppercase text-sm text-white opacity-60 dark:text-dark-content font-medium mb-2 tracking-widest">community</p>
             <h2 class="font-bold text-2xl text-white dark:text-dark-title mb-2">Start Contributing</h2>
-            <p class="text-xl text-white dark:text-dark-title mb-5">Learn how to publish your first Opam package today and make it available to the rest of the community.</p>
+            <p class="text-xl text-white dark:text-dark-title mb-5">Learn how to publish your first Rocq opam package today and make it available to the rest of the community.</p>
             <div class="flex max-w-[17rem]">
-              <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Publish a Package") ~href:Url.opam_packaging "" %>
+              <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Publish a Rocq Package") ~href:Url.opam_packaging "" %>
             </div>
         </div>
         <div class="hidden md:flex w-[18rem] h-[18rem] mr-16 py-8">
