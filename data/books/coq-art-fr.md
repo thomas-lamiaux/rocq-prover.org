@@ -17,7 +17,7 @@ links:
   - description: Lire en ligne
     uri: https://www.labri.fr/perso/casteran/CoqArt/coqartF.pdf
   - description: Exemples et exercices
-    uri: https://coq-community.org/coq-art
+    uri: https://rocq-community.org/coq-art
 difficulty: beginner
 pricing: free
 ---
