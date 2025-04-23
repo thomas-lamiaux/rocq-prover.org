@@ -72,9 +72,11 @@ Platform_layout.single_column_layout
                                 <a href="<%s Url.release release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Release Notes
                                 </a>
-                                <a href="<%s (base_of_kind release) ^ Url.Package.overview (Data.Release.string_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
-                                    Opam Package
-                                </a>
+                                <% if release.kind = `Rocq || release.kind = `Coq then ( %>
+                                    <a href="<%s (base_of_kind release) ^ Url.Package.overview (Data.Release.package_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
+                                        Opam Package
+                                    </a>
+                                <% ); %>
                                 <div class="block">
                                     <% if release.kind = `Rocq then ( %>
                                     <a href="<%s Url.corelib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
@@ -86,9 +88,11 @@ Platform_layout.single_column_layout
                                     <% ); %>
                                 </div>
                                 <div class="block">
+                                    <% if release.kind = `Rocq || release.kind = `Coq then ( %>
                                     <a href="<%s Url.stdlib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
                                         Stdlib
                                     </a>
+                                    <% ); %>
                                     <% if release.kind = `Rocq then ( %>
                                     <a href="<%s Url.stdlib_manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
                                         | Manual

@@ -501,17 +501,17 @@ module Release = struct
     | `String s -> kind_of_string s
     | _ -> Error (`Msg "Expected a string for release type")
 
-  let string_of_kind = function
+  let package_of_kind = function
   | `Compiler -> "ocaml"
   | `Coq -> "coq"
-  | `Rocq -> "rocq"
+  | `Rocq -> "rocq-prover"
   | `CoqPlatform -> "coq-platform"
   | `RocqPlatform -> "rocq-platform"
 
   let name_of_kind = function
   | `Compiler -> "OCaml"
   | `Coq -> "Coq"
-  | `Rocq -> "Rocq"
+  | `Rocq -> "Rocq Prover"
   | `CoqPlatform -> "Coq Platform"
   | `RocqPlatform -> "Rocq Platform"
 
