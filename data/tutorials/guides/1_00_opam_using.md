@@ -76,7 +76,7 @@ initialize opam with an explicit compiler version, for example
 See also the section on [managing different versions of OCaml and Rocq](/docs/managing-versions),
 about switches and roots.
 
-Beware, using an OCaml 5.0 + ocamlfind system installations is [known](https://github.com/ocaml/ocamlfind/issues/107) 
+Beware, using an OCaml 5 + ocamlfind system installations is [known](https://github.com/ocaml/ocamlfind/issues/107) 
 to break installation of the Rocq Prover. One must use a specific independent switch in that case. 
 
 ## Installing Rocq
