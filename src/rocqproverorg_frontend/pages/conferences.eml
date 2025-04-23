@@ -2,7 +2,7 @@ let upcoming_conference_card (conference: Data.Event.t) =
   <div class="hidden lg:flex flex-col rounded-lg p-4 border border-card_border dark:border-none bg-[#00000003] dark:bg-dark-card mb-4">  
     <p class="font-bold text-2xl text-title dark:text-dark-title"><%s conference.title %></p>
     <div class="grid grid-cols-1 pb-8 lg:grid-cols-3 mt-2 gap-1">
-      <div class='flex mr-2 <%s Option.value ~default:"col-span-2" (Option.map (fun _ -> "") conference.author_notification_date) %>'>
+      <div class='flex mr-2 <%s Option.value ~default:"hidden" (Option.map (fun _ -> "") conference.submission_deadline) %>'>
         <%s! Icons.calendar "h-5 text-primary dark:text-dark-primary mr-3" %>    
         <div class="flex flex-col w-[100%]">
           <div class="flex">
@@ -28,6 +28,20 @@ let upcoming_conference_card (conference: Data.Event.t) =
             </div>   
           </div>
           <p class="text-sm text-content dark:text-dark-content">Author/Speaker notification</p>
+        </div>
+      </div>
+      <div class='flex mr-2 <%s Option.value ~default:"hidden" (Option.map (fun _ -> "") conference.registration_deadline) %>'>
+        <%s! Icons.calendar "h-5 text-primary dark:text-dark-primary mr-3" %>    
+        <div class="flex flex-col w-[100%]">
+          <div class="flex">
+            <p class="text-title dark:text-dark-title" x-data="{ registration_deadline: '' }" x-init='registration_deadline = $store.dateUtils.convertDate("<%s Cards.Event.format_date_opt conference.registration_deadline %>")'><span x-text="registration_deadline"></span></p>
+            <div class="relative ml-4 flex-grow">
+                <div class="absolute w-1 h-1 bg-separator_20 dark:bg-dark-separator_30 rounded-full left-[-3.5px] top-[9.6px]"></div>
+                <hr class="absolute border-t border-separator_20 dark:border-dark-separator_30 w-full top-[0.67rem]"></hr>
+                <div class="absolute w-1 h-1 bg-separator_20 dark:bg-dark-separator_30 rounded-full right-[-3.5px] top-[9.6px]"></div>
+            </div>   
+          </div>
+          <p class="text-sm text-content dark:text-dark-content">Registration deadline</p>
         </div>
       </div>
       <div class="flex">

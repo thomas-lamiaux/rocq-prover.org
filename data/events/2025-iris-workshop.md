@@ -1,17 +1,15 @@
 ---
 title: Iris Workshop 2025
-date: 2025-06-02
-location: Paris, France
-important_dates:
-  - date: 2025-06-02
-    info: Iris Workshop 2025
-presentations: []
-organising_committee: []
-program_committee:
-  - name: Jacques-Henri Jourdan
-    affiliation: CNRS
-  - name: François Pottier
-    affiliation: Inria Paris
+event_type: conference
+country: France
+city: Paris
+starts:
+  yyyy_mm_dd: "2025-06-02"
+url: https://iris-project.org/workshop-2025/
+submission_deadline:
+  yyyy_mm_dd: 2025-04-25
+registration_deadline:
+  yyyy_mm_dd: 2025-05-19
 ---
 
 The [Fifth Iris Workskop](https://iris-project.org/workshop-2025/)

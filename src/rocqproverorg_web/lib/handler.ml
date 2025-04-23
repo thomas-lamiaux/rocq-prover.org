@@ -59,6 +59,7 @@ let community _req =
     Format.asprintf "%04d-%02d-%02d" (tm.tm_year + 1900) (tm.tm_mon + 1)
       tm.tm_mday
   in
+  Dream.log "current date: %s" current_date;
   let upcoming_events =
     List.filter
       (fun (e : Data.Event.t) ->

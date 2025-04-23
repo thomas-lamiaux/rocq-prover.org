@@ -215,6 +215,7 @@ module Event = struct
     location : location option;
     starts : utc_datetime;
     submission_deadline : utc_datetime option;
+    registration_deadline : utc_datetime option;
     author_notification_date : utc_datetime option;
     ends : utc_datetime option;
     body_md : string;

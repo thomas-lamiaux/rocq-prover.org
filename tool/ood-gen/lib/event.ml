@@ -10,6 +10,7 @@ type metadata = {
   city : string;
   location : location option;
   submission_deadline : utc_datetime option;
+  registration_deadline : utc_datetime option;
   author_notification_date : utc_datetime option;
   starts : utc_datetime;
   ends : utc_datetime option;
