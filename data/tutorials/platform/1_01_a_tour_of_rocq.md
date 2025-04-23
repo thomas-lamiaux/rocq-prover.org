@@ -59,11 +59,9 @@ Using Σ-types, a sorting function over lists of natural numbers can be given th
 <pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><input class="alectryon-toggle" id="a-tour-of-rocq-md-orig-chk1" style="display: none" type="checkbox"><label class="alectryon-input" for="a-tour-of-rocq-md-orig-chk1"><span class="kn">Fixpoint</span> <span class="nf">plus</span> (<span class="nv">n</span> <span class="nv">m</span>:nat) {<span class="nv">struct</span> <span class="nv">n</span>} : nat :=
   <span class="kr">match</span> n <span class="kr">with</span>
   | O =&gt; m
-  | S p =&gt; S (p + m)
-  <span class="kr">end</span>
-<span class="kn">where</span> <span class="s2">&quot;p + m&quot;</span> := (plus p m).</label><small class="alectryon-output"><div><div class="alectryon-messages"><blockquote class="alectryon-message">Not a truly recursive fixpoint.
-[non-recursive,fixpoints,default]</blockquote></div></div></small></span></pre><p>The Rocq Prover can now be used as an interactive evaluator. Issuing the command</p>
-<pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><input class="alectryon-toggle" id="a-tour-of-rocq-md-orig-chk2" style="display: none" type="checkbox"><label class="alectryon-input" for="a-tour-of-rocq-md-orig-chk2"><span class="kn">Eval</span> <span class="nb">compute</span> <span class="kr">in</span> (<span class="mi">43</span>+<span class="mi">55</span>).</label><small class="alectryon-output"><div><div class="alectryon-messages"><blockquote class="alectryon-message">= <span class="mi">98</span>
+  | S p =&gt; S (plus p m)
+  <span class="kr">end</span>.</label></span></pre><p>The Rocq Prover can now be used as an interactive evaluator. Issuing the command</p>
+<pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><input class="alectryon-toggle" id="a-tour-of-rocq-md-orig-chk2" style="display: none" type="checkbox"><label class="alectryon-input" for="a-tour-of-rocq-md-orig-chk2"><span class="kn">Eval</span> <span class="nb">compute</span> <span class="kr">in</span> (plus <span class="mi">43</span> <span class="mi">55</span>).</label><small class="alectryon-output"><div><div class="alectryon-messages"><blockquote class="alectryon-message">= <span class="mi">98</span>
 : nat</blockquote></div></div></small></span></pre><p>(where 43 and 55 denote the natural numbers with respectively 43 and 55 successors) returns</p>
 <pre class="code coq literal-block">
  <span class="mi">98</span> <span class="o">:</span> <span class="n">nat</span>
