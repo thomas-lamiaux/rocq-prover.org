@@ -34,9 +34,12 @@ much available time you have:
     by all on
     [Zulip](https://rocq-prover.zulipchat.com/#narrow/stream/437203-Platform-docs)
 -   Help to review tutorials and how-to guides, whether you are an
-    expert or not
--   Help to improve and write tutorial and how-to guides
+    expert or not.
+-   Help to improve and write tutorial and how-to guides.
 -   Help with the technical aspects of the project
+
+If you want to help writing or improving the documentation, before making a PR
+please contact us on Zulip to ensure that no one is already working on it.
 
 ## Small Disclaimer
 

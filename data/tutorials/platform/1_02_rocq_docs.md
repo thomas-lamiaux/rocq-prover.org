@@ -16,6 +16,20 @@ category: "Documentation"
   version](https://rocq-prover.org/platform-docs/Tutorial_Chaining_Tactics.html)
   and [source code](https://rocq-prover.org/platform-docs/Tutorial_Chaining_Tactics.v)
 
+## Ltac2
+
+- <a href="https://github.com/rocq-prover/platform-docs/issues/97" style="color:red">A Brief Introduction to ML like languages</a>
+- A brief introduction to manipulating tactics and thunking in Ltac2 [interactive
+  version](https://rocq-prover.org/platform-docs/Tutorial_Ltac2_types_and_thunking.html) and
+  [source code](https://rocq-prover.org/platform-docs/Tutorial_Ltac2_types_and_thunking.v)
+- <a href="https://github.com/rocq-prover/platform-docs/issues/92" style="color:red">Introduction to Ltac2</a>
+- <a href="https://github.com/rocq-prover/platform-docs/issues/93" style="color:red">Quoting in Ltac2</a>
+- <a href="https://github.com/rocq-prover/platform-docs/issues/96" style="color:red">Matching Terms and Goals in Ltac2</a>
+- Backtracking in Ltac2 [interactive
+  version](https://rocq-prover.org/platform-docs/Tutorial_Ltac2_backtracking.html) and
+  [source code](https://rocq-prover.org/platform-docs/Tutorial_Ltac2_backtracking.v)
+- <a href="https://github.com/rocq-prover/platform-docs/issues/95" style="color:red">Notations in Ltac2</a>
+
 ## Rocq Features
 
 - Searching for Definitions and Lemma [interactive
