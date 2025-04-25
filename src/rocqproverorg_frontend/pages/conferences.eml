@@ -91,7 +91,7 @@ let upcoming_conference_card_mobile (conference: Data.Event.t) =
             <div class="absolute border-l border-separator_20 dark:border-dark-separator_30 h-[80%] top-[17%] right-[-0.67rem]"></div>
             <div class="absolute w-2 h-2 bg-separator_20 dark:bg-dark-separator_30 rounded-full right-[-0.9rem] bottom-[-13.5%]"></div>
           </div>
-          <p class="text-content dark:text-dark-content ml-8 mt-1 flex-grow">Submission deadline for talk proposal</p>
+          <p class="text-content dark:text-dark-content ml-8 mt-1 flex-grow">Author notification date</p>
         </div>
     </div> 
     <div class="flex flex-col">
@@ -100,7 +100,7 @@ let upcoming_conference_card_mobile (conference: Data.Event.t) =
           <p class="text-title dark:text-dark-title text-right" x-data="{ start_date: '' }" x-init='start_date = $store.dateUtils.convertDate("<%s Cards.Event.format_date_req conference.starts %>")'><span x-text="start_date"></span></p>
         </div>
         <div class="flex items-center">
-          <p class="text-content dark:text-dark-content ml-8 mt-1 flex-grow">Submission deadline for talk proposal</p>
+          <p class="text-content dark:text-dark-content ml-8 mt-1 flex-grow">Conference</p>
         </div>
     </div>  
     <div class="flex flex-col">
