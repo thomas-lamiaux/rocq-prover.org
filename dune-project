@@ -70,7 +70,8 @@
     (>= 1.10.0)))
   olinkcheck
   ; tools/ood-gen
-  ppx_deriving_yaml
+  (ppx_deriving_yaml
+    (>= 0.4.0))
   ppx_stable
   ezjsonm
   lambdasoup
