@@ -14,4 +14,8 @@ courses:
       url: https://cs.uwaterloo.ca/~plragde/798/
       teacher: Prabhakar Ragde
       year: 2018
+    - name: "Math 145: Algebra"
+      url: https://djao.math.uwaterloo.ca/w/Math_145:_Algebra_%28Fall_2021%29
+      teacher: David Jao
+      year: 2021
 ---
