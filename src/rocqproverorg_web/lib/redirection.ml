@@ -52,6 +52,9 @@ let distrib req =
 let old_sites_modules req =
   Dream.(redirect ~status:`Found req ("/css/coq-stdlib/" ^ target req))
 
+let old_sites_files req =
+  Dream.(redirect ~status:`Moved_Permanently req ("https://github.com/rocq-prover/coq.github.io/blob/master" ^ target req))
+
 let documentation req =
   Dream.(redirect ~status:`Moved_Permanently req "/docs")
 
@@ -95,6 +98,7 @@ let t =
        Dream.get "/library/**" distrib;
        Dream.get "/sites/**" old_sites_modules;
        Dream.get "/modules/**" old_sites_modules;
+       Dream.get "/files/**" old_sites_files;
        Dream.get "/documentation" documentation;
        Dream.get "/doc" documentation;
        make ~permanent:true [ ("/opam-packaging.html", Url.opam_packaging) ];
