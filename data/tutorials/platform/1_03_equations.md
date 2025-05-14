@@ -17,18 +17,18 @@ function and its associated elimination principle.
 ## Documentation of Equations
 
 -   The Basics of Equations [interactive
-    version](https://coq.inria.fr/platform-docs/Tutorial_Equations_basics.html)
+    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_basics.html)
     and [source
-    code](https://coq.inria.fr/platform-docs/Tutorial_Equations_basics.v)
+    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_basics.v)
 -   Equations and Obligations [interactive
-    version](https://coq.inria.fr/platform-docs/Tutorial_Equations_Obligations.html)
+    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_Obligations.html)
     and [source
-    code](https://coq.inria.fr/platform-docs/Tutorial_Equations_Obligations.v)
+    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_Obligations.v)
 -   Equations and Well-founded Recursion [interactive
-    version](https://coq.inria.fr/platform-docs/Tutorial_Equations_wf.html)
+    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_wf.html)
     and [source
-    code](https://coq.inria.fr/platform-docs/Tutorial_Equations_wf.v)
+    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_wf.v)
 -   Equations and Indexed inductive types, and tactics [interactive
-    version](https://coq.inria.fr/platform-docs/Tutorial_Equations_indexed.html)
+    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_indexed.html)
     and [source
-    code](https://coq.inria.fr/platform-docs/Tutorial_Equations_indexed.v)
+    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_indexed.v)
