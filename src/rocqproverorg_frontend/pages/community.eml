@@ -167,7 +167,7 @@ Community_layout.single_column_layout
         <div>   
           <p class="uppercase text-sm text-white dark:text-dark-white tracking-widest font-medium my-4">Blog</p>
           <h2 class="font-bold text-2xl text-white dark:text-dark-white mb-4">Rocq Planet</h2>
-          <p class="text-sm text-white dark:text-dark-white font-medium my-4">Read Blog Posts and Watch Videos from the OCaml community!</p>   
+          <p class="text-sm text-white dark:text-dark-white font-medium my-4">Read Blog Posts and Watch Videos from the Rocq community!</p>
         </div>
         <div>
           <div class="h-11 items-center mt-12 inline-flex py-1 px-4 bg-white rounded-xl text-center text-primary dark:text-dark-primary hover:underline text-lg ">

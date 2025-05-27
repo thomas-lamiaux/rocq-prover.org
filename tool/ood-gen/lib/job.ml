@@ -14,7 +14,7 @@ module JobFeed = struct
            (String.concat ", " job.locations))
     in
     let id = Uri.of_string job.link in
-    let authors = (Syndic.Atom.author "Job Listings on OCaml.org", []) in
+    let authors = (Syndic.Atom.author "Job Listings on https://rocq-prover.org/jobs", []) in
     let updated =
       match job.publication_date with
       | Some date_str -> Syndic.Date.of_rfc3339 (date_str ^ "T00:00:00-00:00")
@@ -29,7 +29,7 @@ module JobFeed = struct
     let open Rss in
     () |> all
     |> create_entries ~create_entry
-    |> entries_to_feed ~id:"jobs.xml" ~title:"OCaml Jobs"
+    |> entries_to_feed ~id:"jobs.xml" ~title:"Rocq Jobs"
     |> feed_to_string
 end
 
