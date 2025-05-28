@@ -10,8 +10,8 @@ let render
 upcoming_event_locations
 recurring_event_locations =
 Community_layout.single_column_layout
-~title:"Upcoming OCaml Events"
-~description:"Discover OCaml Events all around the world!"
+~title:"Upcoming Rocq Events"
+~description:"Discover Rocq Events all around the world!"
 ~canonical:Url.events
 ~current:Events @@
 <div class="lg:-mt-32 lg:pt-44 intro-section-simple dark:dark-intro-section-simple py-6 border-b border-solid border-separator_20 dark:border-none">
@@ -22,10 +22,10 @@ Community_layout.single_column_layout
       </h1>
     </div>
     <div class="leading-5 text-content dark:text-dark-content">
-      <p class="text-lg text-content dark:text-dark-content mt-4">This page lists upcoming meetups, retreats, and conferences that are of interest to OCaml developers.</p>
+      <p class="text-lg text-content dark:text-dark-content mt-4">This page lists upcoming meetups, retreats, and conferences that are of interest to Rocq users.</p>
     </div>
     <div class="flex lg:flex-row mt-6 mr-4 md:w-60">
-       <%s!  Hero_section.hero_button ~left_icon:(Icons.event "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add an Event") ~href:("https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md") ""%>
+       <%s!  Hero_section.hero_button ~left_icon:(Icons.event "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add an Event") ~href:("https://github.com/rocq-prover/rocq-prover.org/blob/main/CONTRIBUTING.md") ""%>
     </div>
   </div>
 </div>

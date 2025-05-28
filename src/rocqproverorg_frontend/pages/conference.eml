@@ -151,12 +151,12 @@ conference.presentations in (match List.length videos with | 0 -> () | _ -> %>
       </div>
       <% ); %>
     </div>
-    <div class="flex justify-end mt-12">
+    <!--<div class="flex justify-end mt-12">
       <a href="https://watch.ocaml.org" target="_blank" class="btn btn-ghost w-full md:w-auto">
         More videos at watch.ocaml.org
         <%s! Icons.chevron_right "h-5 w-5 inline-block" %>
       </a>
-    </div>
+    </div>-->
   </div>
 </div>
 <% ); %>

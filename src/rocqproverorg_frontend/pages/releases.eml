@@ -1,9 +1,3 @@
-let base_of_kind r =
-  let open Data.Release in
-  match r.kind with
-  | `Compiler | `Coq | `Rocq -> Url.ocaml_org
-  | `CoqPlatform | `RocqPlatform -> Url.rocq_org
-
 let render ?(search = "") (releases : Data.Release.t list) =
 Platform_layout.single_column_layout
 ~title:"Rocq Prover and Rocq Platform releases"
@@ -73,7 +67,7 @@ Platform_layout.single_column_layout
                                     Release Notes
                                 </a>
                                 <% if release.kind = `Rocq || release.kind = `Coq then ( %>
-                                    <a href="<%s (base_of_kind release) ^ Url.Package.overview (Data.Release.package_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
+                                    <a href="<%s "https://ocaml.org" ^ Url.Package.overview (Data.Release.package_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                         Opam Package
                                     </a>
                                 <% ); %>

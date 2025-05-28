@@ -4,10 +4,6 @@ let packages = "/packages"
 let packages_search = "/packages/search"
 let packages_autocomplete_fragment = "/packages/autocomplete"
 
-let ocaml_org = "https://ocaml.org"
-
-let rocq_org = "https://rocq-prover.org"
-
 module Package : sig
   val overview : ?hash:string -> ?version:string -> string -> string
   val versions : ?hash:string -> ?version:string -> string -> string
@@ -69,7 +65,6 @@ let patch v =
     | _ -> invalid_arg (v ^ ": invalid  version")
   in if branch then version else "V" ^ version
 
-let v2 = "https://v2.ocaml.org"
 let manual_with_version v = "/doc/" ^ patch v ^ "/refman/index.html"
 let manual = "/refman"
 let corelib_with_version v = "/doc/" ^ patch v ^ "/corelib/index.html"
