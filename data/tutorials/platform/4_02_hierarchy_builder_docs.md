@@ -1,9 +1,9 @@
 ---
-id: "hierarchy-builder-docs"
+id: "platform-hierarchy-builder-docs"
 title: "Documentation of Hierarchy Builder"
 description: |
   Documentation of Hierarchy Builder
-category: "Documentation"
+category: "Platform"
 ---
 
 ## What is Hierarchy Builder?
