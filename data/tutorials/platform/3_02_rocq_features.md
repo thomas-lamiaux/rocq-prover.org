@@ -6,9 +6,11 @@ description: |
 category: "Rocq"
 ---
 
+## Tutorials
+
 - Searching for Definitions and Lemma [interactive
-  version](https://rocq-prover.org/platform-docs/SearchTutorial.html) and
-  [source code](https://rocq-prover.org/platform-docs/SearchTutorial.v)
+  version](https://rocq-prover.org/platform-docs/features/tutorial_search.html) and
+  [source code](https://rocq-prover.org/platform-docs/features/tutorial_search.v)
 - Basic Library Files and Module Management [interactive
-  version](https://rocq-prover.org/platform-docs/RequireImportTutorial.html)
-  and [source code](https://rocq-prover.org/platform-docs/RequireImportTutorial.v)
+  version](https://rocq-prover.org/platform-docs/features/tutorial_requiere_import.html)
+  and [source code](https://rocq-prover.org/platform-docs/features/tutorial_requiere_import.v)

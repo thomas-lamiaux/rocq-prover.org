@@ -1,6 +1,6 @@
 ---
 id: "platform-equations"
-title: "Documentation of Equations"
+title: "Equations Plugin"
 description: |
   Documentation of Equations
 category: "Platform"
@@ -16,19 +16,15 @@ function and its associated elimination principle.
 
 ## Documentation of Equations
 
--   The Basics of Equations [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_basics.html)
-    and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_basics.v)
--   Equations and Obligations [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_Obligations.html)
-    and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_Obligations.v)
--   Equations and Well-founded Recursion [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_wf.html)
-    and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_wf.v)
--   Equations and Indexed inductive types, and tactics [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_indexed.html)
-    and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_indexed.v)
+- The Basics of Equations
+  [interactive version](https://rocq-prover.org/platform-docs/equations/tutorial_basics.html)
+  and [source code](https://rocq-prover.org/platform-docs/equations/tutorial_basics.v)
+- Equations and Obligations
+  [interactive version](https://rocq-prover.org/platform-docs/equations/tutorial_obligations.html)
+  and [source code](https://rocq-prover.org/platform-docs/equations/tutorial_obligations.v)
+- Equations and Well-founded Recursion
+  [interactive version](https://rocq-prover.org/platform-docs/equations/tutorial_wf_recursion.html)
+  and [source code](https://rocq-prover.org/platform-docs/equations/tutorial_wf_recursion.v)
+- Equations and Indexed inductive types, and tactics
+  [interactive version](https://rocq-prover.org/platform-docs/equations/tutorial_indexed.html)
+  and [source code](https://rocq-prover.org/platform-docs/equations/tutorial_indexed.v)

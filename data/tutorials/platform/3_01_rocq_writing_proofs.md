@@ -6,9 +6,11 @@ description: |
 category: "Rocq"
 ---
 
+## Tutorials
+
 - Introducing Hypothesis with Intro Patterns to Factorize proofs
-  [interactive version](https://rocq-prover.org/platform-docs/Tutorial_intro_patterns.html)
-  and [source code](https://rocq-prover.org/platform-docs/Tutorial_intro_patterns.v)
+  [interactive version](https://rocq-prover.org/platform-docs/writing-proofs/tutorial_intro_patterns.html)
+  and [source code](https://rocq-prover.org/platform-docs/writing-proofs/tutorial_intro_patterns.v)
 - Chaining Tactics to Simplify and Factorize proofs [interactive
-  version](https://rocq-prover.org/platform-docs/Tutorial_Chaining_Tactics.html)
-  and [source code](https://rocq-prover.org/platform-docs/Tutorial_Chaining_Tactics.v)
+  version](https://rocq-prover.org/platform-docs/writing-proofs/tutorial_chaining_tactics.html)
+  and [source code](https://rocq-prover.org/platform-docs/writing-proofs/tutorial_chaining_tactics.v)
