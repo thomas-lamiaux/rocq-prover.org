@@ -3,7 +3,7 @@ id: "rocq-theory"
 title: "Theory of Rocq"
 description: |
   Theory of Rocq
-category: "Rocq"
+category: "Rocq Prover"
 ---
 
 ## Explanations

@@ -8,7 +8,7 @@ category: "Platform"
 
 ## What is Equations?
 
-Equations is a function definition plugin for Coq, that allows the
+Equations is a function definition plugin for Rocq, that allows the
 definition of functions by dependent pattern-matching and well-founded,
 mutual or nested structural recursion and compiles them into core
 terms. It automatically derives the clauses equations, the graph of the

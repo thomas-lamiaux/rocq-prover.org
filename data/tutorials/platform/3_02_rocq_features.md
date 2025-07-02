@@ -3,7 +3,7 @@ id: "rocq-features"
 title: "Features of Rocq"
 description: |
   Features of Rocq
-category: "Rocq"
+category: "Rocq Prover"
 ---
 
 ## Tutorials
