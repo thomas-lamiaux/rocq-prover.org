@@ -3,7 +3,7 @@ id: "rocq-writing-proofs"
 title: "Writing Proofs"
 description: |
   Writing Proofs in Rocq
-category: "Rocq"
+category: "Rocq Prover"
 ---
 
 ## Tutorials
