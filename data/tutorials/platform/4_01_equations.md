@@ -3,7 +3,7 @@ id: "equations-docs"
 title: "Equations Plugin"
 description: |
   Documentation of Equations
-category: "Platform"
+category: "Programming"
 ---
 
 ## What is Equations?

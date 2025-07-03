@@ -3,7 +3,7 @@ id: "hierarchy-builder-docs"
 title: "Hierarchy Builder Plugin"
 description: |
   Documentation of Hierarchy Builder
-category: "Platform"
+category: "Structures"
 ---
 
 ## What is Hierarchy Builder?
