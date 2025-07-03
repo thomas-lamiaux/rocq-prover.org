@@ -1,5 +1,5 @@
 ---
-id: "rocq-features"
+id: "rocq-docs"
 title: "Features of Rocq"
 description: |
   Features of Rocq

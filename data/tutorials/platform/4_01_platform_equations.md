@@ -1,5 +1,5 @@
 ---
-id: "platform-equations"
+id: "equations-docs"
 title: "Equations Plugin"
 description: |
   Documentation of Equations

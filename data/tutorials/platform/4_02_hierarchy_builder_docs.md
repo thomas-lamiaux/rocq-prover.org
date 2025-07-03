@@ -1,5 +1,5 @@
 ---
-id: "platform-hierarchy-builder-docs"
+id: "hierarchy-builder-docs"
 title: "Hierarchy Builder Plugin"
 description: |
   Documentation of Hierarchy Builder
