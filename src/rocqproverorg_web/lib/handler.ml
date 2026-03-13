@@ -86,7 +86,8 @@ let community _req =
            | Conference -> "Conference"
            | Seminar -> "Seminar"
            | Hackathon -> "Hackathon"
-           | Retreat -> "Retreat")
+           | Retreat -> "Retreat"
+           | SummerSchool -> "Summer School")
     |> List.sort_uniq String.compare
   in
   let events = (upcoming_events, event_types) in
@@ -143,6 +144,7 @@ let events _req =
     | Data.Event.Seminar -> "Seminar"
     | Data.Event.Hackathon -> "Hackathon"
     | Data.Event.Retreat -> "Retreat"
+    | Data.Event.SummerSchool -> "Summer School"
   in
   let extract_event_types (type a) (events : a list)
       (get_event_type : a -> Data.Event.event_type) =

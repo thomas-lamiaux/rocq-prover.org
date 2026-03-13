@@ -33,10 +33,12 @@ let string_from_event_type = function
   | Seminar -> "Seminar"
   | Hackathon -> "Hackathon"
   | Retreat -> "Retreat"
+  | SummerSchool -> "Summer School"
 
 let color_for_event_type = function
   | Data.Event.Meetup -> "bg-avatar-6"
   | Conference -> "bg-avatar-0"
+  | SummerSchool -> "bg-avatar-4"
   | Seminar -> "bg-avatar-11"
   | Hackathon -> "bg-avatar-8"
   | Retreat -> "bg-avatar-9"

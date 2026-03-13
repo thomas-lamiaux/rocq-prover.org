@@ -175,7 +175,7 @@ module Cookbook = struct
 end
 
 module Event = struct
-  type event_type = Meetup | Conference | Seminar | Hackathon | Retreat
+  type event_type = Meetup | Conference | Seminar | Hackathon | Retreat | SummerSchool
   [@@deriving show]
 
   let event_type_of_string = function
@@ -184,6 +184,7 @@ module Event = struct
     | "seminar" -> Ok Seminar
     | "hackathon" -> Ok Hackathon
     | "retreat" -> Ok Retreat
+    | "summerschool" -> Ok SummerSchool
     | s -> Error (`Msg ("Unknown event type: " ^ s))
 
   let event_type_of_yaml = function
