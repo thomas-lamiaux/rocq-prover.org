@@ -83,17 +83,27 @@ to break installation of the Rocq Prover. One must use a specific independent sw
 
 To install Rocq, simply run the following command. Note that
 installing Rocq using opam will build it from sources, which will take
-several minutes to complete. The following command will pin the rocq-prover
-package to version 9.0.0 and install it.
-
+several minutes to complete. The following command will install the latest
+version with the standard library.
 
 ```console
-opam pin add rocq-prover 9.0.0
+opam install rocq-prover
 ```
 
-Pinning prevents opam from upgrading Rocq automatically, to avoid
-causing inadvertent breakage in your Rocq projects. You can upgrade Rocq
-explicitly to
+To install a particular version of Rocq, you can specify the version using:
+```console
+opam install rocq-prover rocq-core=$VERSION
+```
+
+To see available versions, one can use:
+```console
+opam info rocq-core
+```
+
+Finally, `opam` supports a notion of pinning (see `opam help pin`). Pinning
+`rocq-core` prevents `opam` from upgrading Rocq automatically if a new package
+installation necessitates it. It can be used to avoid causing inadvertent
+breakage in your Rocq projects. You can upgrade Rocq explicitly to a
 `$NEW_VERSION` with essentially the same command:
 
 ```console

@@ -68,7 +68,7 @@ OPAMROOT=~/.opam-rocq.9.0.0
 opam init -n --compiler=ocaml-base-compiler.4.14.2
 
 # Install Rocq in this new root (same commands as above)
-opam pin add rocq-prover 9.0.0
+opam install rocq-prover rocq-core=9.0.0
 ```
 
 Every time a new shell is opened, or you want to use a different
