@@ -79,6 +79,11 @@ about switches and roots.
 Beware, using an OCaml 5 + ocamlfind system installations is [known](https://github.com/ocaml/ocamlfind/issues/107) 
 to break installation of the Rocq Prover. One must use a specific independent switch in that case. 
 
+To refresh the package definitions and get their latest versions use:
+```console
+opam update
+```
+
 ## Installing Rocq
 
 To install Rocq, simply run the following command. Note that
@@ -107,7 +112,7 @@ breakage in your Rocq projects. You can upgrade Rocq explicitly to a
 `$NEW_VERSION` with essentially the same command:
 
 ```console
-opam pin add rocq-prover $NEW_VERSION
+opam pin add rocq-core $NEW_VERSION
 ```
 
 To ensure that installation was successful, check that `rocq -v` prints the expected version of Rocq.
