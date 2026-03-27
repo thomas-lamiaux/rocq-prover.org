@@ -148,15 +148,12 @@ Layout.render
           </p>
 
           <h3>
-            VsCoq (Recommended)
+            VsRocq (Recommended)
           </h3>
           <p>
-          The renaming of VsCoq to VsRocq is in progress.
-          </p>
-          <p>
-          <a href="https://github.com/rocq-prover/vscoq">VsCoq</a> is the official Rocq extension for Visual Studio Code.
-          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq">Visual Studio Code Marketplace</a>
-          and on <a href="https://open-vsx.org/extension/maximedenes/vscoq">Open VSX</a>.
+          <a href="https://github.com/rocq-prover/vsrocq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=rocq-prover.vsrocq">Visual Studio Code Marketplace</a>
+          and on <a href="https://open-vsx.org/extension/rocq-prover/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server.
           </p>
           <p>
@@ -165,7 +162,7 @@ Layout.render
           </p>
 
           <h4>
-            Install VsCoq
+            Install VsRocq
           </h4>
           <p>
           Starting from version 2025.01, the language server should already be installed
@@ -176,14 +173,14 @@ Layout.render
           If you are using opam, you can install the language server with the following command:
           </p>
 
-          <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vscoq" "opam install vscoq-language-server" %>
+          <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
 
           <p>
-          The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
+          The language server is also available as a <a href="https://search.nixos.org/packages?show=rocqPackages.vsrocq-language-server">Nix package</a>.
           </p>
 
           <p>
-          For now, <a href="https://repology.org/project/vscoq-language-server/versions">vscoq-language-server</a> is not available in all Linux distributions that have the Rocq Prover. If you have used your Linux distribution's package manager to install the Rocq Prover and it does not include the language server, you can fall back to using VsCoq Legacy (see below).
+          For now, <a href="https://repology.org/project/vsrocq-language-server/versions">vsrocq-language-server</a> is not available in all Linux distributions that have the Rocq Prover. If you have used your Linux distribution's package manager to install the Rocq Prover and it does not include the language server, you can fall back to using VsCoq Legacy (see below).
           </p>
 
           <h4>
@@ -207,7 +204,7 @@ Layout.render
           Coq LSP
           </h3>
           <p>
-          <a href="https://github.com/ejgallego/coq-lsp">Coq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+          <a href="https://github.com/rocq-community/rocq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
   hybrid Rocq/markdown document support.
           </p>
 
@@ -342,15 +339,12 @@ Layout.render
             VS Codium to write Rocq code and proofs.
           </p>
           <h3>
-            VsCoq (Recommended)
+            VsRocq (Recommended)
           </h3>
           <p>
-          <p>
-            The renaming of VsCoq to VsRocq is in progress.
-          </p>
-          <a href="https://github.com/rocq-prover/vscoq">VsCoq</a> is the official Rocq extension for Visual Studio Code.
-          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq">Visual Studio Code Marketplace</a>
-          and on <a href="https://open-vsx.org/extension/maximedenes/vscoq">Open VSX</a>.
+          <a href="https://github.com/rocq-prover/vsrocq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=rocq-prover.vsrocq">Visual Studio Code Marketplace</a>
+          and on <a href="https://open-vsx.org/extension/rocq-prover/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server.
           </p>
           <p>
@@ -359,7 +353,7 @@ Layout.render
           </p>
 
           <h4>
-            Install VsCoq
+            Install VsRocq
           </h4>
           <p>
           Starting from version 2025.01, the language server should already be installed
@@ -370,10 +364,10 @@ Layout.render
           If you are using opam, you can install the language server with the following command:
           </p>
 
-          <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vscoq" "opam install vscoq-language-server" %>
+          <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
 
           <p>
-          The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
+          The language server is also available as a <a href="https://search.nixos.org/packages?show=rocqPackages.vsrocq-language-server">Nix package</a>.
           </p>
 
           <p>
@@ -399,10 +393,10 @@ Layout.render
           </p>
 
           <h3>
-          Coq LSP
+          Rocq LSP
           </h3>
           <p>
-          <a href="https://github.com/ejgallego/coq-lsp">Coq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+          <a href="https://github.com/rocq-community/rocq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
   hybrid Rocq/markdown document support.
           </p>
 
@@ -523,15 +517,12 @@ Layout.render
             VS Codium to write Rocq code and proofs.
           </p>
           <h3>
-            VsCoq (Recommended)
+            VsRocq (Recommended)
           </h3>
           <p>
-            The renaming of VsCoq to VsRocq is in progress.
-          </p>
-          <p>
-          <a href="https://github.com/rocq-prover/vscoq">VsCoq</a> is the official Rocq extension for Visual Studio Code.
-          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq">Visual Studio Code Marketplace</a>
-          and on <a href="https://open-vsx.org/extension/maximedenes/vscoq">Open VSX</a>.
+          <a href="https://github.com/rocq-prover/vsrocq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=rocq-prover.vsrocq">Visual Studio Code Marketplace</a>
+          and on <a href="https://open-vsx.org/extension/rocq-prover/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server.
           </p>
           <p>
@@ -540,7 +531,7 @@ Layout.render
           </p>
 
           <h4>
-            Install VsCoq
+            Install VsRocq
           </h4>
           <p>
           Starting from version 2025.01, the language server should already be installed
@@ -570,10 +561,10 @@ Layout.render
           </p>
 
           <h3>
-          Coq LSP
+          Rocq LSP
           </h3>
           <p>
-          <a href="https://github.com/ejgallego/coq-lsp">Coq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+          <a href="https://github.com/rocq-community/rocq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
   hybrid Rocq/markdown document support.
           </p>
 
