@@ -8,9 +8,8 @@
 
       .cls-2 {
         fill: #ff540a;
-        font-family: InstrumentRocqVariable-Medium, 'Instrument Rocq';
+        font-family: InstrumentRocq-Medium, 'Instrument Rocq';
         font-size: 33.23px;
-        font-variation-settings: 'wdth' 100, 'wght' 500, 'ital' 0;
         font-weight: 500;
       }
 
