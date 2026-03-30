@@ -488,7 +488,7 @@ module Paper = struct
 end
 
 module Release = struct
-  type kind = [ `Compiler | `Coq | `Rocq | `CoqPlatform | `RocqPlatform ] [@@deriving show]
+  type kind = [ `Compiler | `Coq | `Rocq | `Stdlib | `CoqPlatform | `RocqPlatform ] [@@deriving show]
 
   let kind_of_string = function
     | "compiler" -> Ok `Compiler
@@ -496,6 +496,7 @@ module Release = struct
     | "rocq" -> Ok `Rocq
     | "coq-platform" -> Ok `CoqPlatform
     | "rocq-platform" -> Ok `RocqPlatform
+    | "stdlib" -> Ok `Stdlib
     | s -> Error (`Msg ("Unknown release type: " ^ s))
 
   let kind_of_yaml = function
@@ -508,6 +509,7 @@ module Release = struct
   | `Rocq -> "rocq-prover"
   | `CoqPlatform -> "coq-platform"
   | `RocqPlatform -> "rocq-platform"
+  | `Stdlilb -> "stdlib"
 
   let name_of_kind = function
   | `Compiler -> "OCaml"
@@ -515,6 +517,7 @@ module Release = struct
   | `Rocq -> "Rocq Prover"
   | `CoqPlatform -> "Coq Platform"
   | `RocqPlatform -> "Rocq Platform"
+  | `Stdlib -> "Rocq Standard Library"
 
   let id x = x
   let github_of_kind = function 
@@ -523,6 +526,7 @@ module Release = struct
   | `Rocq -> "https://github.com/rocq-prover/rocq", (fun x -> "V" ^ x)
   | `CoqPlatform -> "https://github.com/rocq-prover/platform", id
   | `RocqPlatform -> "https://github.com/rocq-prover/platform", id
+  | `Stdlib -> "https://github.com/rocq-prover/stdlib", id
 
   type t = {
     kind : kind;
