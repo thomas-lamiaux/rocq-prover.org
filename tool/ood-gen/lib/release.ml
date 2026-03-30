@@ -3,6 +3,7 @@ open Data_intf.Release
 type metadata = {
   kind : kind;
   version : string;
+  stdlib_version : string option;
   date : string;
   is_latest : bool option;
   is_prerelease : bool option;
@@ -16,6 +17,7 @@ type metadata = {
       ~modify:[ is_latest; is_prerelease; is_lts ]
       ~add:
         [
+          stdlib_version;
           intro_md;
           intro_html;
           highlights_md;
@@ -60,6 +62,7 @@ let all () =
 let is_coq_or_rocq (r : t) = r.kind == `Coq || r.kind == `Rocq
 let is_coq_or_rocq_platform (r : t) = r.kind == `CoqPlatform || r.kind == `RocqPlatform
 let is_rocq (r : t) = r.kind == `Rocq
+let is_rocq_stdlib (r : t) = r.kind == `Stdlib
 
 let template () =
   let all = all () in
@@ -72,6 +75,14 @@ let template () =
             true")
   in
   let latest_prerelease = List.find_opt (fun (r : t) -> is_rocq r && r.is_prerelease && r.is_latest) all in
+  let latest_stdlib =
+    try List.find (fun (r : t) -> is_rocq_stdlib r && r.is_latest) all 
+    with Not_found -> 
+      raise
+        (Invalid_argument
+          "none of the Stdlib releases in data/releases is marked with is_latest: \
+           true")
+  in
   let latest_platform =
     match List.sort sort_by_date (List.find_all (fun (r : t) -> is_coq_or_rocq_platform r) all) with
     | hd :: _ -> hd
@@ -94,8 +105,10 @@ include Data_intf.Release
 let all = %a
 let latest = %a
 let latest_prerelease = %a
+let latest_stdlib = %a
 let latest_platform = %a
 let lts = %a
 |}
     (Fmt.brackets (Fmt.list pp ~sep:Fmt.semi))
-    all pp latest (Fmt.option ~none:(Fmt.const Fmt.string "None") (Fmt.append (Fmt.const Fmt.string "Some ") (Fmt.parens pp))) latest_prerelease pp latest_platform pp lts
+    all pp latest (Fmt.option ~none:(Fmt.const Fmt.string "None") (Fmt.append (Fmt.const Fmt.string "Some ") (Fmt.parens pp))) latest_prerelease pp 
+      latest_stdlib pp latest_platform pp lts

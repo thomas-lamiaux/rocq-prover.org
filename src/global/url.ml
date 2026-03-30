@@ -69,9 +69,15 @@ let manual_with_version v = "/doc/" ^ patch v ^ "/refman/index.html"
 let manual = "/refman"
 let corelib_with_version v = "/doc/" ^ patch v ^ "/corelib/index.html"
 let corelib = "/corelib"
-let stdlib_with_version v = "/doc/" ^ patch v ^ "/stdlib/index.html"
+let stdlib_with_version v stdlibv =
+  match stdlibv with
+  | None -> "/doc/" ^ patch v ^ "/stdlib/index.html"
+  | Some v -> "/doc/" ^ patch v ^ "/stdlib/index.html"  
 let stdlib = "/stdlib"
-let stdlib_manual_with_version v = "/doc/" ^ patch v ^ "/refman-stdlib/index.html"
+let stdlib_manual_with_version v stdlibv =
+  match stdlibv with
+  | None -> "/doc/" ^ patch v ^ "/refman-stdlib/index.html"
+  | Some v -> "/doc/" ^ patch v ^ "/refman-stdlib/index.html"
 let stdlib_manual = "/refman-stdlib"
 let api_with_version v = "/doc/" ^ patch v ^ "/api/index.html"
 let api = "/api"

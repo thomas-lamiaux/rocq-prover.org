@@ -29,7 +29,13 @@ let language_manual_version next_handler request =
     | ""
       :: (("api" | "corelib" | "refman" | "stdlib" | "refman-stdlib") as head :: tail as
           path) ->
-        let version = patch Release.latest in
+        let version = 
+          match Release.latest.stdlib_version with
+          | None -> patch Release.latest 
+          | Some v -> (match head with
+            | "stdlib" | "refman-stdlib" -> Rocqproverorg.Url.patch v
+            | _ -> patch Release.latest)
+        in
         let path = 
           match Release.latest.kind with
           | `Rocq -> path
