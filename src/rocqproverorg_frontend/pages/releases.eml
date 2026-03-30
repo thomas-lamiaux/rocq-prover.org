@@ -63,14 +63,20 @@ Platform_layout.single_column_layout
                                 <%s release.date %>
                             </div>
                             <div class="py-4 px-6 align-top lg:w-1/2 w-full">
+                                <% (match release.kind with `Rocq | `Coq | `RocqPlatform | `CoqPlatform -> %>
                                 <a href="<%s Url.release release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                     Release Notes
                                 </a>
-                                <% if release.kind = `Rocq || release.kind = `Coq then ( %>
+                                <% | _ -> ()); %>
+                                <% (match release.kind with `Rocq  | `Coq -> %>
                                     <a href="<%s "https://ocaml.org" ^ Url.Package.overview (Data.Release.package_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
                                         Opam Package
                                     </a>
-                                <% ); %>
+                                <% | `Stdlib -> %>
+                                    <a href="<%s "https://rocq-prover.org" ^ Url.Package.overview (Data.Release.package_of_kind release.kind) ~version:release.version %>" class="text-primary dark:text-dark-primary font-medium block">
+                                        Opam Package
+                                    </a>
+                                <% | _ -> ()); %>
                                 <div class="block">
                                     <% if release.kind = `Rocq then ( %>
                                     <a href="<%s Url.corelib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
@@ -82,13 +88,13 @@ Platform_layout.single_column_layout
                                     <% ); %>
                                 </div>
                                 <div class="block">
-                                    <% if release.kind = `Rocq || release.kind = `Coq then ( %>
-                                    <a href="<%s Url.stdlib_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
+                                    <% if release.kind = `Rocq || release.kind = `Coq || release.kind = `Stdlib then ( %>
+                                    <a href="<%s Url.stdlib_with_version release.version release.stdlib_version %>" class="text-primary dark:text-dark-primary font-medium">
                                         Stdlib
                                     </a>
                                     <% ); %>
-                                    <% if release.kind = `Rocq then ( %>
-                                    <a href="<%s Url.stdlib_manual_with_version release.version %>" class="text-primary dark:text-dark-primary font-medium">
+                                    <% if release.kind = `Rocq || release.kind = `Stdlib then ( %>
+                                    <a href="<%s Url.stdlib_manual_with_version release.version release.stdlib_version %>" class="text-primary dark:text-dark-primary font-medium">
                                         | Manual
                                     </a>
                                     <% ); %>

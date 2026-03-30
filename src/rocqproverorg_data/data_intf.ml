@@ -509,7 +509,7 @@ module Release = struct
   | `Rocq -> "rocq-prover"
   | `CoqPlatform -> "coq-platform"
   | `RocqPlatform -> "rocq-platform"
-  | `Stdlilb -> "stdlib"
+  | `Stdlib -> "rocq-stdlib"
 
   let name_of_kind = function
   | `Compiler -> "OCaml"
@@ -531,6 +531,7 @@ module Release = struct
   type t = {
     kind : kind;
     version : string;
+    stdlib_version : string option;
     date : string;
     is_latest : bool;
     is_prerelease : bool;
