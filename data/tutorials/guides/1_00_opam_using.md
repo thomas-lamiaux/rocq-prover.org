@@ -79,6 +79,16 @@ about switches and roots.
 Beware, using an OCaml 5 + ocamlfind system installations is [known](https://github.com/ocaml/ocamlfind/issues/107) 
 to break installation of the Rocq Prover. One must use a specific independent switch in that case. 
 
+Rocq packages live in a repository separate from the standard OCaml
+opam repository. The following command adds that repository to the
+current opam [switch](managing-versions#switches):
+
+```console
+opam repo add rocq-released https://rocq-prover.org/opam/released
+```
+
+You can browse the package database [here](https://rocq-prover.org/packages),
+
 To refresh the package definitions and get their latest versions use:
 ```console
 opam update
@@ -133,8 +143,8 @@ the link for instructions on how to install them.
 
 ## Installing Rocq packages
 
-Rocq packages live in a repository separate from the standard OCaml
-opam repository. The following command adds that repository to the
+If you didn't do it already, ensure that the current switch has access to the Rocq 
+packages repository. The following command adds that repository to the
 current opam [switch](managing-versions#switches) (you can skip this step if
 you used the [Platform scripts](#platform)):
 
