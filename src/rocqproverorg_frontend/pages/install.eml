@@ -4,6 +4,23 @@ Layout.render
 ~title:"Install the Rocq Prover"
 ~description:"Quick setup instructions to install Rocq on your system."
 ~canonical:"" @@
+% let render_platform_starter () =
+  <h3>
+    Using the Rocq Platform Starter (Experimental)
+  </h3>
+
+  <p>
+    Rocq Platform Starter is an experimental graphical installer designed to simplify
+    the setup of the Rocq Platform and its development environment.
+    It helps users install the Rocq Platform, VS Code, the VsRocq extension, and configure them
+    to quickly get started on Windows, macOS and Linux.
+  </p>
+
+  <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/rocq-platform-starter">
+    Try Rocq Platform Starter
+    <%s! Icons.arrow_small_right "h-6 w-6" %>
+  </a>
+% in
 <div class="lg:py-8 py-6">
   <div class="container-fluid" x-data='{ operating_system: persist_os_link(), editor: persist_editor_link() }'>
     <div class="hidden xl:grid gap-6 xl:grid-cols-2 xl:gap-16">
@@ -81,6 +98,8 @@ Layout.render
           </li>
           <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         </ol>
+
+        <% render_platform_starter (); %>
 
         <h3>
           Using Opam
@@ -258,8 +277,6 @@ Layout.render
       </div>
     </div>
 
-
-
     <div class="grid gap-6 xl:grid-cols-2 xl:gap-16" x-show="(operating_system == 'mac')">
       <div class="prose dark:prose-invert">
         <h2>
@@ -285,6 +302,8 @@ Layout.render
           </li>
           <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         </ol>
+
+        <% render_platform_starter (); %>
 
         <h3>
           Using Opam
@@ -451,8 +470,6 @@ Layout.render
       </div>
     </div>
 
-
-
     <div class="grid gap-6 xl:grid-cols-2 xl:gap-16" x-show="(operating_system == 'windows')">
       <div class="prose dark:prose-invert">
         <h2>
@@ -479,6 +496,9 @@ Layout.render
           </li>
           <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         </ol>
+
+        <% render_platform_starter (); %>
+
         <h3>
           Using Opam
         </h3>
