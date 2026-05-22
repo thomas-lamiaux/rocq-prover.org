@@ -566,10 +566,6 @@
           "name": "Gaëtan Gilbert"
         },
         {
-          "github": "ybertot",
-          "name": "Yves Bertot"
-        },
-        {
           "github": "proux01",
           "name": "Pierre Roux"
         },
@@ -675,6 +671,22 @@
         {
           "github": "SkySkimmer",
           "name": "Gaëtan Gilbert"
+        }
+      ]
+    },
+    {
+      "id": "equations-maintainers",
+      "name": "equations-maintainers",
+      "description": "Maintainers of the Equations plugin for Rocq",
+      "contacts": [],
+      "members": [
+        {
+          "github": "mattam82",
+          "name": "Matthieu Sozeau"
+        },
+        {
+          "github": "ppedrot",
+          "name": "Pierre-Marie Pédrot"
         }
       ]
     },
@@ -1189,8 +1201,8 @@
           "name": ""
         },
         {
-          "github": "rtetley",
-          "name": "Romain Tetley"
+          "github": "Justme0606",
+          "name": "Sylvain Borgogno"
         }
       ]
     },
