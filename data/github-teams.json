@@ -2,7 +2,7 @@
   "data": {
     "organization": {
       "teams": {
-        "totalCount": 64,
+        "totalCount": 65,
         "nodes": [
           {
             "slug": "archlinux-packaging",
@@ -584,10 +584,6 @@
                   "name": "Gaëtan Gilbert"
                 },
                 {
-                  "login": "ybertot",
-                  "name": "Yves Bertot"
-                },
-                {
                   "login": "proux01",
                   "name": "Pierre Roux"
                 },
@@ -698,6 +694,23 @@
                 {
                   "login": "SkySkimmer",
                   "name": "Gaëtan Gilbert"
+                }
+              ]
+            }
+          },
+          {
+            "slug": "equations-maintainers",
+            "name": "equations-maintainers",
+            "description": "Maintainers of the Equations plugin for Rocq",
+            "members": {
+              "nodes": [
+                {
+                  "login": "mattam82",
+                  "name": "Matthieu Sozeau"
+                },
+                {
+                  "login": "ppedrot",
+                  "name": "Pierre-Marie Pédrot"
                 }
               ]
             }
@@ -1236,8 +1249,8 @@
                   "name": null
                 },
                 {
-                  "login": "rtetley",
-                  "name": "Romain Tetley"
+                  "login": "Justme0606",
+                  "name": "Sylvain Borgogno"
                 }
               ]
             }
