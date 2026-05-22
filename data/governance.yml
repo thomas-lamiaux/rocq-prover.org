@@ -251,11 +251,11 @@ teams:
     description: The Docker team maintains the Rocq Docker images.
     default_role: Maintainer
     members:
+    - name: Sylvain Borgogno
+      github: Justme0606
     - name: Erik Martin-Dorel
       github: erikmd
-      role: Team leader
-    - name: Jaime Arias
-      github: himito
+      role: (emeritus)
 - id: documentation
   name: Documentation
   description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.
