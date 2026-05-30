@@ -39,16 +39,15 @@ much available time you have:
 If you want to help writing or improving the documentation, before making a PR
 please contact us on Zulip to ensure that no one is already working on it.
 
-## Small Disclaimer
+## Disclaimer
 
-This is a demo, so not everything is working perfectly yet:
+Not everything is perfect yet:
 
 -   In the future, the documentation is planned to be indexed on the Rocq
     Platform's version, but as of yet, it is only guaranteed to fully
-    work with the latest version of the [Rocq
-    Platform](https://github.com/rocq-prover/platform/releases/tag/2025.08.2)
+    work with the latest version of the [Rocq Platform](https://github.com/rocq-prover/platform/releases/tag/2025.08.2)
     for Rocq 9.0.1.
--   The interactive interface is relying on JsCoq1 that only supports
-    Coq up to 8.17 so it may fail on some content requiring a more recent version. 
+-   *The interactive interface only supports Rocq 8.17** as it relies on JsCoq1. 
+    *It is likely to fail on many tutorials* that require a more recent version.
     We are working towards switching to JsCoq2.
 
