@@ -79,7 +79,7 @@ The Rocq Core team has a formal [voting process](#a1-voting-process)
 that can be used to resolve conflicts in case consensus cannot be reached.
 
 The Core Team elects a Project Leader among them, who is in charge of representing the 
-Core Team and maintaing the long term roadmap of the Rocq Prover and official Rocq Projects. 
+Core Team and maintaining the long term roadmap of the Rocq Prover and official Rocq Projects. 
 The current Project Leader is Matthieu Sozeau. The Project Leader's mandate is for one year, 
 renewable each year. The Project Leader is elected each calendar year on the anniversary date 
 of the Rocq 9.0 release, or the date of the previous Project Leader's resignation. If there is 
